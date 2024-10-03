@@ -1,0 +1,21 @@
+[[bridges]]
+name = "Postmoogle"
+maintainer = "etke.cc"
+summary = """
+An Email to Matrix bridge. 1 room = 1 mailbox.
+Postmoogle is an actual SMTP server that allows you to send and receive emails on your matrix server.
+"""
+maturity = "Stable"
+language = "Go"
+license = "GPL-3.0"
+docs = "https://gitlab.com/etke.cc/postmoogle/-/blob/main/README.md"
+repo = "https://gitlab.com/etke.cc/postmoogle"
+room = "#postmoogle:etke.cc"
+featured = false
+privilege.platform = "Admin" # Free text
+privilege.matrix = "Homeserver Admin" # Any of Homeserver Admin, Room Admin, None
+[bridges.supports]
+sending_mail = true
+receiving_mail = true
+attachments = true
+multi_domain = true

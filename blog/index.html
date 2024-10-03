@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Blog" />
+    
+    
+    
+    <meta property="og:description" content="The Matrix.org Foundation blog is where the Matrix.org Foundation and Community
+post updates on their activity. Every Friday evening they publish This Week In
+Matrix, a digest of the past week activity.
+" />
+    <meta name="description" content="The Matrix.org Foundation blog is where the Matrix.org Foundation and Community
+post updates on their activity. Every Friday evening they publish This Week In
+Matrix, a digest of the past week activity.
+" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Blog</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        <div class="content">
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;09&#x2F;13&#x2F;this-week-in-matrix-2024-09-13&#x2F;" title="This Week in Matrix 2024-09-13">This Week in Matrix 2024-09-13</a></h1>
+            <span>
+                13.09.2024 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/thib-m-org">
+                    Thib (m.org)
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<h2 id="dept-of-spec-scroll">Dept of Spec 📜</h2>
+<p><a href="https://matrix.to/#/@andrewm:element.io">Andrew Morgan (anoa) {he/him}</a> says</p>
+<blockquote>
+<p>Here's your weekly spec update! The heart of Matrix is the specification - and this is modified by Matrix Spec Change (MSC) proposals. Learn more about how the process works at https://spec.matrix.org/proposals.</p>
+<h3 id="msc-status">MSC Status</h3>
+<p><strong>New MSCs:</strong></p>
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4192">Comparison of proposals for ignoring invites</a></li>
+<li><a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4191">MSC4191: Account management deep-linking</a></li>
+<li><a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4190">MSC4190: Device management for application services</a></li>
+</ul>
+<p><strong>MSCs in Final Comment Period:</strong></p>
+<ul>
+<li><em>No MSCs are in FCP.</em></li>
+</ul>
+<p><strong>Accepted MSCs:</strong></p>
+<ul>
+<li><em>No MSCs were accepted this week.</em></li>
+</ul>
+<p><strong>Closed MSCs:</strong></p>
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4018">MSC4018: Reliable call membership</a>
+<ul>
+<li>Succeeded by <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4140">MSC4140: Cancellable delayed events</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="spec-updates">Spec Updates</h3>
+<p>A further call to developers, protocol designers, and future MSC writers to attend the <a href="https://cfp.matrix.org/matrixconf2024/talk/P9KPFG/">"Authenticated media &amp; how to ship spec features"</a> and <a href="https://cfp.matrix.org/matrixconf2024/talk/VJVF3T/">MSC Process Guidance</a> talks in LAB 4 at this year's Matrix Conference! We'll be discussing the spec process itself, as well as how large features (and breaking changes in the spec) get designed, developed, and deployed with support from the MSC process.</p>
+<p>If you're thinking about how to get your idea for a feature out in the hands of users, these talks are for you!</p>
+</blockquote>
+
+            <p><a href="/blog/2024/09/13/this-week-in-matrix-2024-09-13/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;09&#x2F;06&#x2F;this-week-in-matrix-2024-09-06&#x2F;" title="This Week in Matrix 2024-09-06">This Week in Matrix 2024-09-06</a></h1>
+            <span>
+                06.09.2024 19:30
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/thib-m-org">
+                    Thib (m.org)
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=7ejLV7VABkk">https://youtube.com/watch?v=7ejLV7VABkk</a></noscript>
+<youtube-player video-id="7ejLV7VABkk"></youtube-player>
+<h2 id="dept-of-spec-scroll">Dept of Spec 📜</h2>
+<p><a href="https://matrix.to/#/@travis:t2l.io">TravisR</a> announces</p>
+<blockquote>
+<p>Earlier in the week matrix.org started requiring authentication to access media, and it looks like most users didn't notice (a good thing)! Smooth rollouts like this are thanks in large part to the developer ecosystem preparing users for the change with code - thank you to everyone who has been working hard at improving how media is shared in Matrix ❤️.</p>
+<p>There's always going to be problems which reveal themselves <em>after</em> the deployment happens, and it looks like most of the issues we're tracking have workarounds or patches on the way. If you're seeing errors for images/files, please update your client. Web users may need to refresh the page multiple times before things start working because of how browsers (don't) work. If you're still seeing issues, it may be a bug in your client: please report it to the developers so they can take a look.</p>
+<p>Developers, protocol designers, and future MSC writers may also be interested in <a href="https://cfp.matrix.org/matrixconf2024/talk/P9KPFG/">"Authenticated media &amp; how to ship spec features"</a> in LAB 4 at this year's Matrix Conference in just a couple of weeks! We'll be discussing how such a massive feature (and technically breaking change in the spec) gets designed, developed, and deployed with support from the MSC process - if you're thinking about how to get your idea for a feature out in the hands of users, this talk is for you. The advice should be transferable to features smaller than authenticated media too, hopefully 😇</p>
+</blockquote>
+
+            <p><a href="/blog/2024/09/06/this-week-in-matrix-2024-09-06/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;08&#x2F;30&#x2F;this-week-in-matrix-2024-08-30&#x2F;" title="This Week in Matrix 2024-08-30">This Week in Matrix 2024-08-30</a></h1>
+            <span>
+                30.08.2024 19:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/thib">
+                    Thib
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=dmUi4ZoYRWc">https://youtube.com/watch?v=dmUi4ZoYRWc</a></noscript>
+<youtube-player video-id="dmUi4ZoYRWc"></youtube-player>
+<h2 id="dept-of-status-of-matrix-thermometer">Dept of <em>Status of Matrix</em> 🌡️</h2>
+<p><a href="https://matrix.to/#/@travis:t2l.io">TravisR</a> announces</p>
+<blockquote>
+<p>Something we're excited to see is several servers have already enacted their media freeze for unauthenticated media! Matrix.org is doing so on <strong>Wednesday, September 4th, 2024</strong> (just a few days away) during UK business hours. Other Synapse admins can enable this freeze on their servers by setting <code>enable_authenticated_media: True</code> in their <code>homeserver.yaml</code>. Admins using other server projects should consult their documentation, though please note that some projects are actively working on adding relevant support.</p>
+<p>For those interested in statistics, matrix.org is seeing about 80% of requests being authenticated so far. We anticipate this number will rise before Wednesday, but not significantly.</p>
+<p>For more information on the media freeze, check out our blog post: <a href="https://matrix.org/blog/2024/06/26/sunsetting-unauthenticated-media/">https://matrix.org/blog/2024/06/26/sunsetting-unauthenticated-media/</a></p>
+</blockquote>
+
+            <p><a href="/blog/2024/08/30/this-week-in-matrix-2024-08-30/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;08&#x2F;libolm-deprecation&#x2F;" title="Libolm Deprecation">Libolm Deprecation</a></h1>
+            <span>
+                27.08.2024 14:00
+                —
+                <a href="/category/cryptography">
+                    Cryptography
+                </a>
+                —
+                
+                <a href="/author/neil-johnson">
+                    Neil Johnson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>It’s been a few weeks since we announced the <a href="https://gitlab.matrix.org/matrix-org/olm/-/blob/master/README.md?ref_type=heads#important-libolm-is-now-deprecated">deprecation of libolm</a>. Since then, we’ve fielded some questions on the subject and thought it would be helpful to collect this context in a blog post.</p>
+<p>First up, a recap. We first introduced the idea that <a href="https://matrix.org/blog/2022/05/16/independent-public-audit-of-vodozemac-a-native-rust-reference-implementation-of-matrix-end-to-end-encryption/">libolm would make way for vodozemac</a> in 2022, following the <a href="https://www.gematik.de/">Gematik</a> sponsored audit from <a href="https://leastauthority.com/">Least Authority</a>.</p>
+<p>Since then, various client implementations have migrated to <a href="https://github.com/matrix-org/vodozemac">vodozemac</a>. Notably, all versions of Element, Element X, Fractal, iamb and other <a href="https://github.com/matrix-org/matrix-rust-sdk">matrix-rust-sdk</a> based clients and their forks already use vodozemac, and platforms using matrix-js-sdk can also use vodozemac instead of libolm.</p>
+<p>In <a href="https://matrix.org/blog/2024/08/02/this-week-in-matrix-2024-08-02/#vodozemac-website">This Week in Matrix 2024-08-02</a> <a href="https://matrix.to/#/@matthew:matrix.org">Matthew</a> formally announced the deprecation of libolm in favour of vodozemac.</p>
+<blockquote>
+<p>Heads up that we have officially marked the original C/C++ libolm implementation as deprecated, as warned back in <a href="https://matrix.org/blog/2022/05/16/independent-public-audit-of-vodozemac-a-native-rust-reference-implementation-of-matrix-end-to-end-encryption/">May 2022</a> when we announced the Rust vodozemac implementation as the successor to libolm. The rationale for doing so now is that all of the SDKs maintained by the core team at <a href="https://github.com/matrix-org">github.com/matrix-org</a> now support vodozemac, and the majority of apps built on top of them have now successfully switched over to vodozemac. Meanwhile, we simply don't have bandwidth to maintain and support both vodozemac and libolm, so our maintenance will be focused on vodozemac going forwards. You can find the official deprecation notice <a href="https://gitlab.matrix.org/matrix-org/olm/-/blob/master/README.md?ref_type=heads#important-libolm-is-now-deprecated">here</a>.</p>
+</blockquote>
+<p>Matthew then followed up in <a href="https://matrix.org/blog/2024/08/16/this-week-in-matrix-2024-08-16/#dept-of-encryption-closed-lock-with-key">This Week in Matrix 2024-08-16</a> in light of the coordinated disclosure by security researcher Soatok of <a href="https://soatok.blog/2024/08/14/security-issues-in-matrixs-olm-library/">potential security weaknesses in libolm</a> underpinned by the primitives employed by the library.</p>
+<p>Quoting selectively:</p>
+<blockquote>
+<p>We're not aware of any way to actually exploit these weaknesses over the network, but we continue to strongly recommend developers to migrate to <a href="https://github.com/matrix-org/vodozemac">vodozemac</a> (or fork libolm to add better primitives). We should have done a better job of explicitly deprecating libolm sooner (and/or improving its primitives) – but all of our focus has been on ensuring that vodozemac is excellent, to the detriment of libolm. Apologies to those who are now finding themselves expediting libolm replacement.</p>
+</blockquote>
+<p><strong>So what does this mean if you are building an app that has a dependency on libolm?</strong></p>
+<ul>
+<li>We have been public from the outset that that libolm's primitives are functionally correct, but not resilient to timing attacks
+<ul>
+<li><a href="https://github.com/matrix-org/olm/issues/3">Repository issue</a></li>
+<li><a href="https://gitlab.matrix.org/matrix-org/olm/-/blob/master/lib/crypto-algorithms/README.md">Project README</a></li>
+<li><a href="https://matrix.org/blog/2016/11/21/matrix-s-olm-end-to-end-encryption-security-assessment-released-and-implemented-cross-platform-on-riot-at-last/">An audit from NCC Group</a></li>
+</ul>
+</li>
+<li>We do not believe this to be a high-severity issue for Matrix because an attack would require sending very large volumes of messages with very accurate timings targeting the same key material – while in practice Matrix implementations have short-lived AES key material (due to ratcheting), very noisy timings (due to traffic topology being client ↔ server ↔ server ↔ client, with persistence steps at each hop), as well as traffic rate-limiting. As a result, we do not believe that an attack over the network is feasible. It is possible that a local attack might work – but if the attacker has local access to your device, we consider you to already be compromised.</li>
+<li>Even though it is a theoretical rather than practical weakness, we still wanted to fix it. We chose to do so with the shift to vodozemac, which provides both first-class, audited cryptographic primitives provided by Rust, while also avoiding the possibility of an entire class of weaknesses, such as the <a href="https://matrix.org/blog/2021/12/13/disclosure-buffer-overflow-in-libolm-and-matrix-js-sdk/">buffer overflows</a> previously found and mitigated in libolm.</li>
+</ul>
+<p>We've deprecated libolm simply because we do not have the bandwidth to replace its primitives as well as maintain and <a href="https://github.com/matrix-org/vodozemac/pull/171">evolve</a> vodozemac.</p>
+<p>Given the above, in the context of Matrix, libolm is currently safe to use in a practical sense (with the above caveats). However, we strongly encourage all app developers to chart a path away from libolm in favour of vodozemac.</p>
+<p>Additionally, we have registered three CVEs to track recently highlighted vulnerabilities.</p>
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45191">CVE-2024-45191 - AES implementation is vulnerable to cache-timing attacks</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45192">CVE-2024-45192 - Base64 implementation used for decoding sensitive data has a timing side-channel</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45193">CVE-2024-45193 - Ed25519 signatures are malleable</a></li>
+</ul>
+<p>Note: The CVEs have since been edited post-submission to conflate libolm with the Olm protocol itself. A genuine protocol vulnerability would be much more serious so we are working with MITRE to clarify.</p>
+<p>The good news is that if you are building on matrix-rust-sdk or matrix-js-sdk they are already vodozemac backed. However, libolm is still a dependency of both libraries, and it is worth explaining why.</p>
+<p><strong>matrix-rust-sdk</strong></p>
+<ul>
+<li>libolm is used only in testing and is not an operational dependency (it is used to check that <code>PkEncryption</code> in matrix-sdk-crypto is compatible with libolm's). <a href="https://github.com/matrix-org/matrix-rust-sdk/pull/3860/files">We have updated</a> its dependency specification to make this clearer. We do not intend to remove this dependency in the short term.</li>
+</ul>
+<p><strong>matrix-js-sdk</strong></p>
+<ul>
+<li>libolm is referenced <a href="https://github.com/matrix-org/matrix-js-sdk/blob/c408c0d1d517eeac98c7ee11d99a6a8a874ecda5/src/crypto/backup.ts#L666">here</a>, as a hangover from recent work to migrate from libolm to vodozemac. This file will be <a href="https://github.com/element-hq/element-web/issues/26922">removed</a>.</li>
+</ul>
+<p>Additionally, the legacy mobile SDKs, <a href="https://github.com/matrix-org/matrix-android-sdk2">matrix-android-sdk2</a> and <a href="https://github.com/matrix-org/matrix-ios-sdk">matrix-ios-sdk</a>, also have dependencies on libolm. It is used there for the following:</p>
+<ul>
+<li>To encrypt the bodies of the requests for the Element maintained <a href="https://github.com/element-hq/matrix-content-scanner-python">content scanner</a> project. These references are unused in any publicly available application and will be removed.</li>
+<li>To support migration of users from legacy crypto to Rust crypto. Given the adoption of Rust crypto in March 2023 for iOS and July 2023 for Android we will remove this support in the near future, once we have confirmed that the vast majority of users have migrated.</li>
+<li>For unused legacy QR code log-in functionality in matrix-android-sdk2. This will be removed shortly.</li>
+</ul>
+<p>To conclude, we see the deprecation as a natural step in a multi-year process. In retrospect, we could've been a lot more explicit in explaining the context of the libolm deprecation and offer our apologies. Hopefully, this post makes things clearer.</p>
+<p>However, by formally deprecating libolm we make the direction of travel extremely clear and we recommend all projects adopt a vodozemac-backed solution promptly or alternatively fork libolm and upgrade the primitives.</p>
+<p>If you have any questions or concerns, please reach out to <a href="mailto:security@matrix.org">security@matrix.org</a>.</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;08&#x2F;23&#x2F;this-week-in-matrix-2024-08-23&#x2F;" title="This Week in Matrix 2024-08-23">This Week in Matrix 2024-08-23</a></h1>
+            <span>
+                23.08.2024 10:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/thib">
+                    Thib
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=7o8FxGdQ1IM">https://youtube.com/watch?v=7o8FxGdQ1IM</a></noscript>
+<youtube-player video-id="7o8FxGdQ1IM"></youtube-player>
+<h2 id="dept-of-status-of-matrix-thermometer">Dept of <em>Status of Matrix</em> 🌡️</h2>
+<p><a href="https://matrix.to/#/@josh:josh.tel">Josh Simmons (he/they)</a> says</p>
+<blockquote>
+<p>The Foundation has updated its policy for accepting upstream contributions to our projects. We no longer require the use of "real" or "legal" names as part of the <a href="https://en.wikipedia.org/wiki/Developer_Certificate_of_Origin">Developer Certificate of Origin</a> (DCO). We thank the community members who reached out to let us know that our policy was a barrier for them, and we are excited to welcome contributions from people who were previously excluded.</p>
+</blockquote>
+
+            <p><a href="/blog/2024/08/23/this-week-in-matrix-2024-08-23/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;08&#x2F;16&#x2F;this-week-in-matrix-2024-08-16&#x2F;" title="This Week in Matrix 2024-08-16">This Week in Matrix 2024-08-16</a></h1>
+            <span>
+                16.08.2024 18:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/mtrnord">
+                    MTRNord
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=w3yq2Wz7XS0">https://youtube.com/watch?v=w3yq2Wz7XS0</a></noscript>
+<youtube-player video-id="w3yq2Wz7XS0"></youtube-player>
+<h2 id="dept-of-status-of-matrix-thermometer">Dept of <em>Status of Matrix</em> 🌡️</h2>
+<p><a href="https://matrix.to/#/@josh:josh.tel">Josh Simmons (he/they)</a> reports</p>
+<blockquote>
+<p>I’m pleased to report I've been busily onboarding the elected Governing Board members, and we've already started having important conversations about how we continue to move the Foundation forward to support the Matrix ecosystem.</p>
+<p>This week Matthew and I published a <a href="https://matrix.org/blog/2024/08/heart-of-matrix/">blog post</a>, significantly informed by community conversations and work with the Governing Board, on a process to define a governance framework for the projects we steward. Of note, in this post we are also drawing a line in the sand and making it clear: some projects, like the spec, test suites, SDKs, and shared cryptographic libraries, are so important that they require ongoing stewardship, under a permissive open source licence, by an organisation that is accountable to the ecosystem. To put a point on it: the Foundation will seek to fund and coordinate maintenance and development of core projects even if faced with a competing fork.</p>
+<p>Learn more in our blog post. We’d love to hear from you as we work together to update our project governance, and encourage you to reach out to <a href="https://matrix.org/foundation/governing-board-elections/#elected-representatives">your representatives on the Governing Board</a> along the way.</p>
+</blockquote>
+
+            <p><a href="/blog/2024/08/16/this-week-in-matrix-2024-08-16/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;08&#x2F;heart-of-matrix&#x2F;" title="Protecting the projects at the heart of the Matrix ecosystem">Protecting the projects at the heart of the Matrix ecosystem</a></h1>
+            <span>
+                15.08.2024 19:00
+                —
+                <a href="/category/foundation">
+                    Foundation
+                </a>
+                —
+                
+                <a href="/author/josh-simmons">
+                    Josh Simmons
+                </a>, 
+                
+                <a href="/author/matthew-hodgson">
+                    Matthew Hodgson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>There have been many changes at the Foundation in the last couple of years. We’ve added independent leadership, attracted members, continued working towards sustainability, and expanded our open governance to establish a Governing Board to become better and more capable stewards of the protocol and ecosystem. We’re still in a period of organisational transition, getting into the groove with the Governing Board, focusing on the Spec Core Team, and building the technical and financial foundation for independence.</p>
+<p>We’ve also been asking ourselves what it means for a project to be “core” to the Foundation, and how the Foundation should relate to and work with the people who maintain those projects. These are fundamental questions for any open source foundation, and they’ve become even more pressing for us since Element switched developing Synapse and several other projects to AGPLv3, rather than contributing under the Foundation as Apache v2.</p>
+<p>This blog post explores our context and sets out to start a discussion on how we should move forward. Already, we’ve been having these discussions in Foundation rooms and on the Governing Board, and we look forward to bringing more people into this discussion so that we can ship a framework that delivers on our mission and meets the needs of the Matrix ecosystem.</p>
+
+            <p><a href="/blog/2024/08/heart-of-matrix/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;08&#x2F;09&#x2F;this-week-in-matrix-2024-08-09&#x2F;" title="This Week in Matrix 2024-08-09">This Week in Matrix 2024-08-09</a></h1>
+            <span>
+                09.08.2024 18:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/mtrnord">
+                    MTRNord
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="dept-of-spec-scroll">Dept of Spec 📜</h2>
+<h3 id="authenticated-media">Authenticated Media</h3>
+<p><a href="https://matrix.to/#/@travis:t2l.io">TravisR</a> says</p>
+<blockquote>
+<p>Progress on authenticated media continues! As of today, beta.matrix.org has now frozen its media to allow client and server developers, as well as homeserver owners, to test how their stuff responds when a media freeze is in place. This milestone brings us one step closer to matrix.org itself freezing unauthenticated media, described in more detail on the blog: <a href="https://matrix.org/blog/2024/06/26/sunsetting-unauthenticated-media/">https://matrix.org/blog/2024/06/26/sunsetting-unauthenticated-media/</a></p>
+<p>The happy path for interacting with beta.matrix.org <em>should</em> be:</p>
+<ol>
+<li>Log in or register a new account</li>
+<li>Note that media from before today (August 7th) loaded fine</li>
+<li>Upload something new</li>
+<li>Still loads fine (including over federation)</li>
+</ol>
+<p>If you run into issues or bugs, let us know in the <a href="https://matrix.to/#/#matrix-client-developers:matrix.org">#matrix-client-developers:matrix.org</a> or <a href="https://matrix.to/#/#homeservers-dev:matrix.org">#homeservers-dev:matrix.org</a> rooms on Matrix. We're around to help make this as smooth of a transition as possible!</p>
+</blockquote>
+<h3 id="weekly-spec-update">Weekly spec update</h3>
+<blockquote>
+<p>Here's your weekly spec update! The heart of Matrix is the specification - and this is modified by Matrix Spec Change (MSC) proposals. Learn more about how the process works at <a href="https://spec.matrix.org/proposals">https://spec.matrix.org/proposals</a>.</p>
+<p><strong>New MSCs:</strong></p>
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4175">MSC4175: Profile field for user time zone</a></li>
+</ul>
+<p>MSCs in Final Comment Period:</p>
+<p><em>No new MSCs entered FCP this week.</em></p>
+<p><strong>Accepted MSCs:</strong></p>
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4163">MSC4163: Make ACLs apply to EDUs</a></li>
+</ul>
+<p><strong>Closed MSCs:</strong></p>
+<p><em>No MSCs were closed this week.</em></p>
+<p><strong>Spec Updates</strong></p>
+<p>If you are a client or homeserver developer, make sure you read up on the upcoming authenticated media!</p>
+<p>Apart from that the spec team has been busy combing through the general spec backlog. Identifying MSCs which appear stuck waiting for SCT input is particularly helpful - drop some links in <a href="https://matrix.to/#/%23sct-office%3Amatrix.org">Office of the Matrix Spec Core Team</a> with a description of how it appears stuck.</p>
+</blockquote>
+
+            <p><a href="/blog/2024/08/09/this-week-in-matrix-2024-08-09/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;08&#x2F;02&#x2F;this-week-in-matrix-2024-08-02&#x2F;" title="This Week in Matrix 2024-08-02">This Week in Matrix 2024-08-02</a></h1>
+            <span>
+                02.08.2024 19:30
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/thib">
+                    Thib
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="dept-of-spec-scroll">Dept of Spec 📜</h2>
+<p><a href="https://matrix.to/#/@andrewm:element.io">Andrew Morgan (anoa) {he/him}</a> says</p>
+<blockquote>
+<p>Here's your weekly spec update! The heart of Matrix is the specification - and this is modified by Matrix Spec Change (MSC) proposals. Learn more about how the process works at <a href="https://spec.matrix.org/proposals">https://spec.matrix.org/proposals</a>.</p>
+<h3 id="msc-status">MSC Status</h3>
+<p><strong>New MSCs:</strong></p>
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4174">MSC4174: webpush push kind</a></li>
+<li><a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4173">MSC4173: test pusher</a></li>
+</ul>
+<p><strong>MSCs in Final Comment Period:</strong></p>
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4163">MSC4163: Make ACLs apply to EDUs</a> (merge)</li>
+</ul>
+<p><strong>Accepted MSCs:</strong></p>
+<ul>
+<li><em>No MSCs were accepted this week.</em></li>
+</ul>
+<p><strong>Closed MSCs:</strong></p>
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3464">MSC3464: Allow Users to Post on Behalf of Other Users</a></li>
+</ul>
+<h3 id="spec-updates">Spec Updates</h3>
+<p>It's another week, and there's been steady progress on a few MSCs. Other than those listed above, there was <a href="https://github.com/element-hq/synapse/pull/17488/">a partial implementation</a> of <a href="https://github.com/matrix-spec-proposals/pull/4133">MSC4133: Support for custom profile fields</a> for Synapse. Personally I find the prospect of finally being able to attach arbitrary profile information to users. Very exciting!</p>
+</blockquote>
+
+            <p><a href="/blog/2024/08/02/this-week-in-matrix-2024-08-02/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;08&#x2F;matrix-conf-schedule&#x2F;" title="The Matrix Conference Has an Exciting Lineup">The Matrix Conference Has an Exciting Lineup</a></h1>
+            <span>
+                01.08.2024 12:00
+                —
+                <a href="/category/conference">
+                    Conference
+                </a>
+                —
+                
+                <a href="/author/thib">
+                    Thib
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p><img src="/img/matrix-conference-opengraph.png" alt="" /></p>
+<p>We imagined The Matrix Conference as a gathering place for hackers, project managers, digital sovereignty leaders, and innovators. I’m proud to announce that we definitely succeeded in building a schedule covering that range of topics!</p>
+<p>We received more than 60 high-quality proposals and ended up building 5 tracks over the course of 2 “core” conference days. The tracks cover everything from sovereignty and collaboration in the public sector to digital rights, Matrix internals, the social impact of Matrix, and Matrix as the foundation for products.</p>
+
+            <p><a href="/blog/2024/08/matrix-conf-schedule/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <nav class="pagination">
+    <div class="prev">
+        
+    </div>
+    <span class="page-number">1 / 79</span>
+    <div class="prev">
+        
+        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;page&#x2F;2&#x2F;">Next ›</a>
+        
+    </div>
+</nav>
+
+</div>
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

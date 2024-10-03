@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;ecosystem&#x2F;hosting&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Hosting" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Hosting</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<meta name="description" content="Everyone can host their Matrix server, but not everybody wants to. These are the providers the Matrix.org Foundation knows about. 
+">
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            ">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                checked>
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<div class="page-header">
+    <div class="hero-block">
+        <h1>Hosting</h1>
+        <p>Everyone can host their Matrix server, but not everybody wants to. These are the providers the Matrix.org Foundation knows about. 
+</p>
+    </div>
+</div>
+
+<div class="content hosting_page">
+
+    <h2 id="why-not-matrix-org">Why not matrix.org?</h2>
+<p>Matrix could be described as what happens when email, instant messaging and
+encryption meet. To be able to use Matrix, you need a Matrix account which is
+provided by... a provider! The matrix accounts identifiers look like
+<code>@username:example.com</code>. People on different providers can talk to one another,
+in the same way you can send emails to someone using another email provider.</p>
+<p>Matrix.org is the largest, free provider of Matrix accounts. Many people have an
+identifier like <code>@username:matrix.org</code>. This also means that the Matrix.org
+servers are crowded. Using your own provider <strong>as an individual</strong> can not only
+make your Matrix experience snappier, but also give you access to a set of
+pre-configured <a href="/ecosystem/bridges/">bridges</a> to talk to friends on other networks such as Signal
+or WhatsApp.</p>
+<p><strong>Organisations and community managers</strong> will be interested in providers for two
+main reasons: they can proudly display their identity with their own domain
+in username and rooms identifiers, and their administrators remain in control
+of the data of their organisation.</p>
+<p>The following providers have been brought to the attention of the Matrix.org
+Foundation. Please note that the Matrix.org Foundation doesn't endorse them,
+nor provides any warranties for using them.</p>
+<h2 id="known-providers">Known providers</h2>
+
+<div class="hosting_providers">
+    
+    <div class="provider_card">
+        <div class="details">
+            <div class="provider_logo_container">
+                <img src="/ecosystem/hosting/communick.png" alt="Logo of Communick" />
+            </div>
+            <h3>Communick</h3>
+            <div class="operating_since">Operating since 2018</div>
+        </div>
+        <p><p>Communick is a service provider for open source messaging and social media platforms. Hosted in Germany, it provides fully managed Synapse homeservers for those looking to be in control of their media presence and also provides a flagship instance at <a href="https://matrix.communick.com">matrix.communick.com</a> for subscribers that value decentralization and are just looking for a stable, less popular server. As a form to support open source, Communick pledges to give 20% of its profits to the open source projects that it offers, so by becoming a customer you'll be also directly ensuring the continued development of the Matrix ecosystem.</p>
+<p>For information about different hosting plans, please check our <a href="https://communick.com/services/matrix">Matrix service webpage</a>.</p>
+</p>
+        <a href="https:&#x2F;&#x2F;communick.com" class="call-to-action">Try Communick</a>
+    </div>
+    
+    <div class="provider_card">
+        <div class="details">
+            <div class="provider_logo_container">
+                <img src="/ecosystem/hosting/fairkom_4c_quer.svg" alt="Logo of fairkom" />
+            </div>
+            <h3>fairkom</h3>
+            <div class="operating_since">Operating since 2015</div>
+        </div>
+        <p><ul>
+<li>Hosting (large) homeservers</li>
+<li>Consulting for Matrix based messenger solutions</li>
+<li>Customization of clients and apps</li>
+<li>Voice &amp; video call integration</li>
+<li>Standard and custom bridges</li>
+<li>Scalable deployments on kubernetes</li>
+<li>On premise deployment and operations support</li>
+<li>Integration with Identity Management Systems</li>
+</ul>
+<p>fairkom has been building and hosting chat solutions with various open source frameworks. We are now focussing on Matrix based solutions as interoperability is a key demand of customers and users. Our largest deployment scales for half a million pupils, for whom we developed an app for smartphones with additional educational features. Hosting is climate neutral and GDPR compliant.
+<a href="https://www.fairkom.eu/fairmatrix">Try fairmatrix</a></p>
+</p>
+        <a href="https:&#x2F;&#x2F;fairkom.eu" class="call-to-action">Try fairkom</a>
+    </div>
+    
+    <div class="provider_card">
+        <div class="details">
+            <div class="provider_logo_container">
+                <img src="/ecosystem/hosting/logo-ems-primary.svg" alt="Logo of Element Matrix Services" />
+            </div>
+            <h3>Element Matrix Services</h3>
+            <div class="operating_since">Operating since 2018</div>
+        </div>
+        <p><ul>
+<li>Hosted Homeservers</li>
+<li><a href="https://element.io/element-matrix-store">Hosted Integrations including Slack, IRC, Github bridging</a></li>
+</ul>
+<p>Brought to you by the creators of Matrix, who have been running the biggest homeserver in the network since 2014. Every homeserver comes with a custom instance of Element.</p>
+</p>
+        <a href="https:&#x2F;&#x2F;ems.element.io" class="call-to-action">Try Element Matrix Services</a>
+    </div>
+    
+    <div class="provider_card">
+        <div class="details">
+            <div class="provider_logo_container">
+                <img src="/ecosystem/hosting/ungleich_zerocarbonmatrix.jpg" alt="Logo of Ungleich.ch" />
+            </div>
+            <h3>Ungleich.ch</h3>
+            <div class="operating_since">Operating since 2020</div>
+        </div>
+        <p><ul>
+<li>Hosted Homeservers</li>
+<li><a href="https://ungleich.ch/en-us/cms/matterbridge-matrix/">Bridge solutions: bridging Slack, Telegram, Whatsapp, IRC and more</a></li>
+<li><a href="https://ungleich.ch/u/products/matrix-custom-development/">Customised Matrix development: Custom Authentication/Login, Integration into private networks</a></li>
+</ul>
+<p>Zero Carbon Matrix is provided by ungleich.ch in Switzerland, in their own
+Datacenter (datacenterlight.ch) with a strong focus on sustainability. Operating
+within a repurposed historic building, they utilise pre-owned server systems,
+passive cooling techniques, and 100% renewable energy. ungleich.ch also
+specialises in customised Matrix development for communities and organisations.</p>
+</p>
+        <a href="https:&#x2F;&#x2F;matrix.zerocarbon.shop" class="call-to-action">Try Ungleich.ch</a>
+    </div>
+    
+    <div class="provider_card">
+        <div class="details">
+            <div class="provider_logo_container">
+                <img src="/ecosystem/hosting/etke.cc.png" alt="Logo of etke.cc" />
+            </div>
+            <h3>etke.cc</h3>
+            <div class="operating_since">Operating since 2021</div>
+        </div>
+        <p><ul>
+<li>Hosted Homeservers</li>
+<li>Cloud or on-premises (BYOS)</li>
+<li>Fully <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">FOSS</a> (based on <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a>). See <a href="https://gitlab.com/etke.cc">our code</a></li>
+<li><a href="https://etke.cc/news/lnyorh4ggeh9xadrob_rtuuqu_jj-s-ojfvvfzlmxpm/#pricing-model-changes">Per-complexity</a> pricing (not per-user)</li>
+<li>15+ <a href="https://etke.cc/order/#matrix-bridges">Matrix bridges &amp; bots</a></li>
+<li><a href="https://etke.cc/order/#matrix-addons">Matrix addons</a> (S3, SSO, workers, etc.)</li>
+<li>15+ <a href="https://etke.cc/order/#non-matrix-addons">Non-Matrix addons</a> (email, VPN, etc.)</li>
+<li>Fully-managed, but still yours (root SSH)</li>
+</ul>
+<p>etke.cc is the only fully FOSS-based Matrix Hosting service. It's operated by a <a href="https://etke.cc/about/">team</a> of active members of the self-hosting community. Based on <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a>, but hassle-free (SaaS) and contains improvements, extra addons and <a href="https://etke.cc/services/support/">support</a>. Get hosted on rented servers or use your own infra (on any provider) in a non-vendor-lock-in way.</p>
+<p><a href="https://matrix.to/#/#service:etke.cc">Matrix Space</a> | <a href="https://matrix.to/#/#news:etke.cc">Announcements on Matrix</a></p>
+</p>
+        <a href="https:&#x2F;&#x2F;etke.cc" class="call-to-action">Try etke.cc</a>
+    </div>
+    
+    <div class="provider_card">
+        <div class="details">
+            <div class="provider_logo_container">
+                <img src="/ecosystem/hosting/ossrox.svg" alt="Logo of Ossrox" />
+            </div>
+            <h3>Ossrox</h3>
+            <div class="operating_since">Operating since TBC</div>
+        </div>
+        <p><ul>
+<li>Hosted Homeservers</li>
+</ul>
+<p>Ossrox is a company from Germany dedicated to hosting open-source services. Not only has the company name been derived from the motto "Open-Source Software Rocks", but also their corporate culture. The three most important principles of the company are security, privacy and sustainability - thanks to open-source software. In addition to Matrix, Ossrox also provides many other solutions e.g. in the messaging, groupware and web meeting segments.</p>
+</p>
+        <a href="https:&#x2F;&#x2F;ossrox.org" class="call-to-action">Try Ossrox</a>
+    </div>
+    
+    <div class="provider_card">
+        <div class="details">
+            <div class="provider_logo_container">
+                <img src="/ecosystem/hosting/federated.png" alt="Logo of Federated Computer" />
+            </div>
+            <h3>Federated Computer</h3>
+            <div class="operating_since">Operating since 2022</div>
+        </div>
+        <p><ul>
+<li>Hosted Homeservers</li>
+</ul>
+<p>Federated Computer provides Element and Matrix hosting as part of a team collaboration suite (including Nextcloud, Jitsi, Listmonk, Vaultwarden, Baserow, Gitea, Caddy, Castopod, Wireguard, and single-sign-on LDAP).</p>
+</p>
+        <a href="https:&#x2F;&#x2F;federated.computer" class="call-to-action">Try Federated Computer</a>
+    </div>
+    
+    <div class="provider_card">
+        <div class="details">
+            <div class="provider_logo_container">
+                <img src="/ecosystem/hosting/indiehosters.png" alt="Logo of IndieHosters" />
+            </div>
+            <h3>IndieHosters</h3>
+            <div class="operating_since">Operating since 2016</div>
+        </div>
+        <p><ul>
+<li>Hosted Homeservers</li>
+<li>Hosted collaborative tools</li>
+</ul>
+<p>We are a French collective specialized in hosting FOSS software and aimed at building a digital common, with a particular emphasis on collaboration.</p>
+</p>
+        <a href="https:&#x2F;&#x2F;indiehosters.net" class="call-to-action">Try IndieHosters</a>
+    </div>
+    
+    <div class="provider_card">
+        <div class="details">
+            <div class="provider_logo_container">
+                <img src="/ecosystem/hosting/datanauten.png" alt="Logo of Datanauten" />
+            </div>
+            <h3>Datanauten</h3>
+            <div class="operating_since">Operating since 2022</div>
+        </div>
+        <p><ul>
+<li>Hosted Homeservers</li>
+<li>Bridge Solutions: Installation and configuration of Bridges including Slack, Teams, Telegram, and WhatsApp.</li>
+</ul>
+<p>The Datanauten Matrix Homeserver offers an easy entry into the open and interoperable communication system of the future.</p>
+</p>
+        <a href="https:&#x2F;&#x2F;datanauten.de&#x2F;" class="call-to-action">Try Datanauten</a>
+    </div>
+    
+</div>
+
+
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

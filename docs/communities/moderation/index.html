@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Community Moderation" />
+    
+    
+    
+    <meta property="og:description" content="Matrix allows communities to stay safe thanks to moderation tools. Mjolnir is
+the recommended solution for community managers who want to fight abuse on
+Matrix.
+" />
+    <meta name="description" content="Matrix allows communities to stay safe thanks to moderation tools. Mjolnir is
+the recommended solution for community managers who want to fight abuse on
+Matrix.
+" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Community Moderation</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/d3.v3.min.js"></script>
+<script src="/js/how-it-works.js"></script>
+<script src="/js/docs.js"></script>
+
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            ">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            current">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+
+
+
+
+
+
+
+<div class="docs-body">
+    <div class="docs-menu">
+        <div class="docs-menu-inner">
+            
+            
+            
+            
+            
+            <div>
+                <input id="Chat basics-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Chat basics-submenu-checkbox" class="submenu-title">Chat basics
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;chat_basics&#x2F;matrix-for-im&#x2F;" class="toclink">Matrix for Instant Messaging</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;matrix-for-im&#x2F;#what-is-it" class="toclink">
+                                <li>What is it?</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;matrix-for-im&#x2F;#creating-a-matrix-account" class="toclink">
+                                <li>Creating a Matrix account</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;" class="toclink">Private Group Chat</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;#sending-your-first-messages" class="toclink">
+                                <li>Sending your first messages</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;#inviting-people" class="toclink">
+                                <li>Inviting people</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;#keeping-the-group-safe" class="toclink">
+                                <li>Keeping the group safe</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;" class="toclink">Public Rooms</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;#joining-a-specific-room" class="toclink">
+                                <li>Joining a specific room</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;#browsing-the-public-directory" class="toclink">
+                                <li>Browsing the public directory</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;#spaces" class="toclink">
+                                <li>Spaces</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Communities-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" checked>
+                <label for="Communities-submenu-checkbox" class="submenu-title">Communities
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;" class="toclink">Getting Started</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#creating-sharing-a-space" class="toclink">
+                                <li>Creating &amp; sharing a Space</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#adding-rooms" class="toclink">
+                                <li>Adding rooms</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#history-visibility" class="toclink">
+                                <li>History visibility</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#basic-moderation" class="toclink">
+                                <li>Basic Moderation</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#advanced-moderation" class="toclink">
+                                <li>Advanced moderation</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#moving-to-another-provider" class="toclink">
+                                <li>Moving to another provider</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;" class="toclink">Community Moderation</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#power-levels" class="toclink">
+                                <li>Power levels</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#your-community-s-security-guard" class="toclink">
+                                <li>Your community&#x27;s security guard</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#getting-moderation-reports" class="toclink">
+                                <li>Getting moderation reports</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#enforcing-moderation" class="toclink">
+                                <li>Enforcing moderation</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;" class="toclink">Switching Providers</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;#why-switching-providers" class="toclink">
+                                <li>Why switching providers?</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;#picking-a-new-provider" class="toclink">
+                                <li>Picking a new provider</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;#transferring-ownership" class="toclink">
+                                <li>Transferring ownership</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;bridging&#x2F;" class="toclink">Bridging</a>
+                        <ul>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Matrix concepts-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Matrix concepts-submenu-checkbox" class="submenu-title">Matrix concepts
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;" class="toclink">Elements of Matrix</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#homeserver" class="toclink">
+                                <li>Homeserver</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#client" class="toclink">
+                                <li>Client</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#appservice-bridges-and-some-bots" class="toclink">
+                                <li>AppService (bridges and some bots)</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#the-specification" class="toclink">
+                                <li>The Specification</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;matrix-concepts&#x2F;rooms_and_events&#x2F;" class="toclink">Rooms &amp; Events</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;rooms_and_events&#x2F;#local-copies" class="toclink">
+                                <li>Local copies</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;rooms_and_events&#x2F;#administration-privileges" class="toclink">
+                                <li>Administration &amp; privileges</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;" class="toclink">End-to-End Encryption implementation guide</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;#implementing-end-to-end-encryption-in-matrix-clients" class="toclink">
+                                <li>Implementing End-to-End Encryption in Matrix clients</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;#encrypted-attachments" class="toclink">
+                                <li>Encrypted attachments</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;#key-sharing" class="toclink">
+                                <li>Key sharing</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Spec guides-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Spec guides-submenu-checkbox" class="submenu-title">Spec guides
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;spec-guides&#x2F;authed-media-servers&#x2F;" class="toclink">Authenticated Media for Servers</a>
+                        <ul>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Older documentation-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Older documentation-submenu-checkbox" class="submenu-title">Older documentation
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    <li>
+                        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;older&#x2F;#all-past-documentation" class="toclink">All past documentation</a>
+                        
+                    </li>
+                    
+                    
+                    </li>
+                </ul>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="docs-content">
+        <article class="content">
+            <header>
+                <h1>Community Moderation</h1>
+                
+                <div class="metadata">
+                    Last updated: <time datetime="2023-01-25"> 2023-01-25</time>
+                </div>
+                
+            </header>
+
+            <h2 id="power-levels">Power levels</h2>
+<p>Matrix has a basic system of roles, sometimes also called Power Levels. It is a
+number usually going from 0 to 100. Advanced users can decide to use a different
+range, but we will not cover it here for the sake of simplicity.</p>
+<p>By default, there are three roles in Matrix:</p>
+<table><thead><tr><th>Power Level</th><th>Role</th></tr></thead><tbody>
+<tr><td>0</td><td>User</td></tr>
+<tr><td>50</td><td>Moderator</td></tr>
+<tr><td>100</td><td>Administrator</td></tr>
+</tbody></table>
+<p>With the recommended default:</p>
+<ul>
+<li><strong>Users</strong> can send messages, media, reactions and redact their own messages in
+a room.</li>
+<li><strong>Moderators</strong> can also change the room name, address, topic, remove users
+from the room (temporarily or permanently), redact other's messages and send a
+notification to everyone in the room at once using <code>@room</code>.</li>
+<li><strong>Administrators</strong> can also change the history visibility (whether people can
+see messages from before they joined or not), enable encryption in the room,
+remove entire servers from the room, and promote others to Moderator or
+Administrator.</li>
+</ul>
+<p>Most people in your community are just going to be regular users. Usually
+Moderators are appointed to handle the ad-hoc moderation issues. Note that this
+can be an issue if you want to preserve the anonymity of your Trust &amp; Safety
+team for their own security. The moderation bot mjolnir brings a good answer to
+this.</p>
+<p>If you're taking over a community  previously managed by someone with a high
+level of technical expertise in Matrix and strongly opinionated on power levels, the
+roles may not be the same. In that case, we recommend you to email
+<a href="mailto:support@matrix.org">support@matrix.org</a> for help.</p>
+<h2 id="your-community-s-security-guard">Your community's security guard</h2>
+<p>The tools built into Matrix are good for small group moderation, but they are
+limited for now: removing a user (temporarily or permanently) is only possible
+at the room level, and banning an entire server from a room is not exposed in
+the UI.</p>
+<p>Fortunately, a tool exists to step up your moderation game: a security guard
+robot you add to all of your public rooms that can enforce your moderation
+decisions on all the rooms at once.</p>
+<p>And that's really what mjolnir is: a security guard for your rooms. Because of
+the decentralised nature of Matrix, you need to add the robot to guard the door
+of each of your rooms, and you need to grant it the Administrator role so it can
+do its job properly.</p>
+<h3 id="getting-mjolnir">Getting mjolnir</h3>
+<p>At the moment, to get mjolnir for your community you need either to pay someone
+to run mjolnir for you, or to <a href="https://github.com/matrix-org/mjolnir/tree/main/docs">run it yourself on your own infrastructure</a>
+if you have the technical knowledge to do it. We're aware this situation is
+suboptimal and are working on a service so people get can mjolnir bots much more
+easily.</p>
+<h3 id="setting-it-up-in-your-rooms">Setting it up in your rooms</h3>
+<p>Once you have performed the technical set-up of mjolnir, you need to:</p>
+<ol>
+<li>Make sure your moderation staff is in the control room of your community</li>
+<li>Invite mjolnir the security guard bot in all your rooms</li>
+<li>Make the mjolnir bot Administrator in all your rooms (so it can enforce
+moderation decisions).</li>
+</ol>
+<p>To do so you need to invite the moderation bot in each room. You can do so
+either by opening the right panel, opening the members list and clicking on
+Invite, or you can type the following message in the message bar at the bottom:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>/invite @yourMjolnirBot:example.com
+</span></code></pre>
+<p>The bot will join, and you can then promote it Administrator by finding it in
+the list of members and changing its role, or you can type the following message
+in the message bar at the bottom:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>/op @yourMjolnirBot:example.com 100
+</span></code></pre>
+<p>You should spend some time thinking about what privileges you want to give to your Mjolnir. A common setup is to give the Mjolnir user power level 100. This gives Mjolnir the permissions to kick and ban people from the rooms it protects. This has a couple of implications. First, anyone with access to the Mjolnir has power level 100 in the rooms it protects. Also, Mjolnir is the de-facto owner of those community rooms. For more advanced set-ups, read the <a href="https://spec.matrix.org/v1.5/client-server-api/#mroompower_levels">spec covering power levels</a>.</p>
+<h2 id="getting-moderation-reports">Getting moderation reports</h2>
+<p>By default, the moderation reports go to the reporter's homeserver
+administrator. If you are the homeserver admin, you can choose to send the reports to the Mjolnir management room. Those reports look like this:</p>
+<p><img src="https://tune-your-chat.github.io/docs/communities/moderation/./mjolnir_report.png" alt="" /></p>
+<p>The report gives you some information about the reported message. Underneath, there are some buttons that you can use to take action on the report.</p>
+<p>We'll talk about moderation actions in a moment. If you want to set up these reports, please follow the documentation <a href="https://github.com/matrix-org/mjolnir#enabling-readable-abuse-reports">here</a>.</p>
+<h2 id="enforcing-moderation">Enforcing moderation</h2>
+<h3 id="redacting-a-specific-message">Redacting a specific message</h3>
+<p>There are two ways to redact a message. You can click the <span class="mjolnir_button">🗍 Redact</span>
+ button underneath a report, if you are using those reports. You can also redact a particular message by sending a message in Mjolnir's control room. This method is useful when you haven't received a report about a message, but you want to redact it.</p>
+<p>To redact a specific message, you need to find its permalink. You can find the permalink by hovering the message you want to delete, clicking on the <code>…</code>, then on <code>Share</code>.</p>
+<p><img src="https://tune-your-chat.github.io/docs/communities/moderation/./share_message.png" alt="" /></p>
+<p>This will open a pop-up window from which you can copy the permalink.</p>
+<p><img src="https://tune-your-chat.github.io/docs/communities/moderation/./copy_permalink.png" alt="" /></p>
+<p>Once you have the permalink, you can use it in mjolnir's redaction command</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir redact &lt;event permalink&gt; 
+</span></code></pre>
+<p>For example</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir redact https://matrix.to/#/!yOatELRSQXzfQMmxjH:matrix.org/$F76L2figPEC240TFaUkHoKPxxhJ3P54vP4hi14Sd8xw?via=matrix.org&amp;via=t2bot.io
+</span></code></pre>
+<p>One important feature of Mjolnir is to protect individual moderators from retaliation. If you redact a message using the client UI, that redaction appears with your user id. When you use Mjolnir, it shows Mjolnir's id. This can help to reduce direct retaliation against moderators for their moderation actions. Your management room will record who took the action.</p>
+<h3 id="redacting-a-user-s-last-messages">Redacting a user's last messages</h3>
+<p>Offensive users can sometimes try to spam messages before they are caught.
+Finding the permalinks for these messages would be tedious and would make
+moderation particularly inefficient.</p>
+<p>If such a user has been identified, it's possible to redact their last n
+messages, either globally or in a specific room. To do so, grab the user's
+Matrix ID and issue a command following this pattern:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir redact &lt;user ID&gt; [room alias/ID] [limit] 
+</span></code></pre>
+<p>For example to redact the last 100 messages of <code>@john:example.com</code> in
+<code>#matrix:matrix.org</code>:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir redact @john:example.com #matrix:matrix.org 100
+</span></code></pre>
+<p>Or to redact the last 100 messages from <code>@john:example.com</code> globally:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir redact @john:example.com 100
+</span></code></pre>
+<p>Note that this command will redact the last messages of the user, but will not
+take any measure to prevent them from posting more abusive messages. Most of the
+time you will want to also remove this person temporarily or permanently from
+your community.</p>
+<h3 id="removing-someone-temporarily-kick">Removing someone temporarily (kick)</h3>
+<p>If you have moderation reports enabled and click on the
+<span class="mjolnir_button">⚽️ Kick</span>
+ button below it, mjolnir will kick the user
+from the room where they were reported.</p>
+<p>If you don't have moderation reports enabled, you can also kick a user either
+from a specific room or globally with the following command.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir kick &lt;glob&gt; [room alias/ID] [reason]
+</span></code></pre>
+<p>For example</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir kick @john:example.com #matrix:matrix.org Inappropriate interactions with other people.
+</span></code></pre>
+<h3 id="removing-someone-definitely-ban">Removing someone definitely (ban)</h3>
+<p>Some people may not stop after their messages have been redacted and they have
+been kicked. In that case you need to be able to remove them permanently from
+your community.</p>
+<p>If you have reports enabled, and click on the
+<span class="mjolnir_button">🚫 Ban</span>
+ button below it, mjolnir will ban the user
+from all the rooms it protects. The user will be banned not only from the room
+where they were reported, but from your whole community.</p>
+<p>If you don't have moderation reports enabled, you can also ban either a user
+with the following command</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir ban &lt;list shortcode&gt; &lt;user|room|server&gt; &lt;glob&gt; [reason]
+</span></code></pre>
+<p>For example, to remove <code>@john:example.com</code> permanently from your community for
+infringement to the code of conduct, you can issue the following command in
+mjolnir's control room.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir ban coc user @john:example.com User keeps insulting people
+</span></code></pre>
+<p>That's a complex command, let's try to understand what it does.</p>
+<ul>
+<li><code>!mjolnir ban</code> tells mjolnir we want it to perform a ban</li>
+<li><code>coc</code> tells mjolnir we want to add the person to the ban list with shortname
+<code>coc</code>. We'll explore what ban lists are a little further below.</li>
+<li><code>user</code> tells mjolnir it needs to ban a user. It is not strictly mandatory, but
+it's a good practice to add it in order to avoid banning a whole server when
+trying to ban a single user, in case of typo.</li>
+<li><code>@john:example.com</code> is the Matrix ID of the person we want to ban</li>
+<li><code>User keeps insulting people</code> is the reason why we are banning them. Their
+client will be able to display that message.</li>
+</ul>
+<p>Mjolnir then adds the user we're banning to the ban list we specified. Mjolnir
+keeps watching one or several ban lists, and will ban all the users present on
+those lists from all the rooms it protects.</p>
+<p>Note that this command will likely fail if it's the first time you are trying to
+ban someone. Indeed, you need to create one or more ban lists before adding
+users or servers on them. See the section <a href="https://tune-your-chat.github.io/docs/communities/moderation/#creating-ban-lists">Creating ban lists</a>
+below for more information on how to create them.</p>
+<h3 id="removing-a-server-definitely">Removing a server definitely</h3>
+<p>Matrix is a federated network. This means people can set up new servers
+specifically to harm some communities. This allows them to create a virtually
+infinite number of users, making it possible to raid other communities easily.</p>
+<p>Fortunately, all these malicious users have one thing in common: they come from
+the same homeserver. This means if you block the malicious homeserver entirely,
+all the malicious users are going to be banned at once.</p>
+<p>To do so, you can issue a variant of the command used to ban an individual user.
+The command was</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir ban &lt;list shortcode&gt; &lt;user|room|server&gt; &lt;glob&gt; [reason]
+</span></code></pre>
+<p>As you probably guessed, you are not going to ban a user but a server this once.
+For example, to ban the <code>maliciousdomain.tld</code> domain:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir ban spam server maliciousdomain.tld
+</span></code></pre>
+<p>Mjolnir is going to add the domain to the <code>spam</code> ban list, and whenever someone
+from that homeserver tries to join your community they are going to be banned.</p>
+<h3 id="creating-ban-lists">Creating ban lists</h3>
+<p>Mjolnir allows you to create several ban lists that it can later watch. Those
+ban lists can also be watched by third parties if you make them public.</p>
+<p>The command to issue in mjolnir's control room to create a list is the
+following</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir list create &lt;shortcode&gt; &lt;alias localpart&gt;
+</span></code></pre>
+<ul>
+<li><code>shortcode</code> is a short name given to this list. It should be short and easy to
+type, since you are likely to type it a lot when banning users.</li>
+<li><code>alias localpart</code> is the local part of the address mjolnir is going to create
+for this list. This is useful if you ever want to share your ban list with
+other communities.</li>
+</ul>
+<p>For example, assuming the server mjolnir is deployed against is <code>example.com</code>,
+the following command will create a ban list with the short code <code>spam</code> and the
+address <code>#my-community-spam-ban-list:example.com</code></p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir list create spam my-community-spam-ban-list
+</span></code></pre>
+<p>You only need to create a ban list once, and can then add as many users and
+servers as you want to that ban list. You can also create as many ban lists as
+you want.</p>
+<p>Communities often create two ban lists: one for spam, and one for code of
+conduct infringements.</p>
+<p>It is also possible to configure a default ban list mjolnir will use for bans if
+no short code is specified. For example, to use the ban list with short code
+<code>spam</code> by default, issue the following command:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir default spam
+</span></code></pre>
+<p>Finally, from a technical perspective, a ban list is just a regular Matrix room
+filled with moderation hidden messages, technically called events. As such, you
+can give it a public address, and make it publicly accessible like you would for
+any other room.</p>
+<h3 id="subscribing-to-ban-lists">Subscribing to ban lists</h3>
+<p>Ban lists are a clever mechanism that allows moderation teams to ban users for
+different motives (e.g. one list for <code>spam</code> and one for <code>coc</code>). Such a
+distinction can be useful when several communities want to collaborate together.</p>
+<p>Not all communities will share a similar Code of Conduct, but a lot of them will
+agree on what is spam. Being able to subscribe to another community's spam list
+means your own community will be protected from spammers the other community has
+already met, all while observing different code of conducts.</p>
+<p>To subscribe to a public ban list, you need to retrieve the address of this
+list. That list being technically nothing more than a Matrix room, its address
+follows the usual <code>#room_name:server.tld</code> format.</p>
+<p>Then to make mjolnir follow this list, you need to issue the following command
+in its control room</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir watch &lt;room alias/ID&gt;
+</span></code></pre>
+<p>For example to subscribe to the <code>#matrix-org-hs-tos-bl:matrix.org</code> ban list
+maintained by the Matrix.org Foundation, you would issue the following command</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>!mjolnir watch #matrix-org-hs-tos-bl:matrix.org
+</span></code></pre>
+
+        </article>
+    </div>
+</div>
+<button id="docs-menu-button">Table of Contents</button>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;01&#x2F;19&#x2F;this-week-in-matrix-2024-01-19&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="This Week in Matrix 2024-01-19" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;img&#x2F;91c38cc78477b571f0628e95a07b8ca525e3d2191747390913107197952.png" />
+    
+    <title>Matrix.org - This Week in Matrix 2024-01-19</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "This Week in Matrix 2024-01-19",
+    "datePublished": "2024-01-19T00:00+00:00",
+    
+    
+    "image": [
+        "https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;img&#x2F;91c38cc78477b571f0628e95a07b8ca525e3d2191747390913107197952.png"
+    ],
+    
+    "author": [
+    
+    {
+        "@type": "Person",
+        "name": "Thib",
+        "url": "https://tune-your-chat.github.io/authors/thib"
+    }
+    
+    ]
+}
+</script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<article class="content post with-sidebar">
+    <header>
+        <h1>This Week in Matrix 2024-01-19</h1>
+        <span>
+            19.01.2024 00:00
+            
+            —
+            <a href="/category/this-week-in-matrix">This Week in Matrix</a>
+            
+            —
+            <a
+                href="/author/thib">Thib</a>
+            
+        </span>
+        
+    </header>
+    <div class="post-main">
+        <div class="post-content">
+            <h2 id="matrix-live">Matrix Live</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=yCQX1IckgaE">https://youtube.com/watch?v=yCQX1IckgaE</a></noscript>
+<youtube-player video-id="yCQX1IckgaE"></youtube-player>
+<h2 id="dept-of-status-of-matrix-thermometer">Dept of <em>Status of Matrix</em> 🌡️</h2>
+<p><a href="https://matrix.to/#/@josh:josh.tel">Josh Simmons</a> announces</p>
+<blockquote>
+<p>Have you seen the <a href="https://survey.stackoverflow.co/2023/#section-admired-and-desired-synchronous-tools">Stack Overflow Developer Survey results</a> for 2023?!</p>
+<p>Of the 83,830 folks surveyed, Matrix was the #1 chat tool in terms of current users' satisfaction. It was also rated as the most desirable among the open source tools with open governance, but there is a lot of room for improvement in awareness. We’re excited to build on this 2024! 🚀
+<img src="/blog/img/91c38cc78477b571f0628e95a07b8ca525e3d2191747390913107197952.png" alt="" /></p>
+</blockquote>
+<span id="continue-reading"></span><h2 id="dept-of-bridges-bridge-at-night">Dept of Bridges 🌉</h2>
+<p><a href="https://matrix.to/#/@em:shema.lv">Emīlija</a> announces</p>
+<blockquote>
+<p><strong>Matrix-Zulip bridge</strong></p>
+<p>I have made a bridge for Zulip.</p>
+<p>It can:</p>
+<ul>
+<li>Send text messages</li>
+<li>Use Matrix puppeting</li>
+<li>Translate between Zulip topics and Matrix threads</li>
+<li>Bridge multiple organizations and streams</li>
+<li>Bridge all topics from a stream to a single room</li>
+</ul>
+<p><a href="https://github.com/GearKite/MatrixZulipBridge#matrixzulipbridge">More details on GitHub</a></p>
+</blockquote>
+<h2 id="dept-of-clients-iphone">Dept of Clients 📱</h2>
+<h3 id="schildichat-website">SchildiChat (<a href="https://schildi.chat">website</a>)</h3>
+<p>SchildiChat is a fork of Element that focuses on UI changes such as message bubbles and a unified chat list for both direct messages and groups, which is a more familiar approach to users of other popular instant messengers.</p>
+<p><a href="https://matrix.to/#/@spiritcroc:spiritcroc.de">SpiritCroc</a> says</p>
+<blockquote>
+<p>It's been a while since I last posted here, so it's about time I tell you more about the current state of SchildiChat for Android!</p>
+<p>Last year was rather eventless when it comes to new features.
+Since Element switched to maintenance mode for our upstream codebase, it didn't make much sense to keep developing new features for it, since we'll want to benefit from Element X's performance improvements and the advantages of using Jetpack Compose as UI toolkit as well.
+On the other hand, for most of last year, Element X didn't feature enough basic functionality to start tweaking it to our likes.</p>
+<p>This situation has changed towards the end of last year, and work has started on <a href="https://github.com/SchildiChat/schildichat-android-next">SchildiChat Next</a>, a SchildiChat fork of Element X for Android.
+It's still very much work-in-progress (it even still welcomes you to "Element" during onboarding) and misses lots of our original features found in the old codebase.
+Not all of these features will come back, but we may add some new ones in return.
+Like usually, we focus on whatever makes sense to us and that we wished that Element had that's in our scope to implement.</p>
+<p>Now, since everybody will ask anyway what changes exactly we make, I'll try to maintain an updated list <a href="https://github.com/SchildiChat/schildichat-android-next/blob/main/FEATURES.md">here</a>.
+Some highlights of what has been done so far, apart from some mandatory theme and design changes to better match our taste:</p>
+<ul>
+<li>Floating date header while scrolling messages</li>
+<li>Sort room list by unread rooms first</li>
+<li>Render media captions in accordance to <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/2530">MSC2530</a></li>
+<li>Render server-reported unread counts, including support for <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/2654">MSC2654</a> (if both your homeserver and your sliding-sync proxy support this MSC)</li>
+</ul>
+<p>Furthermore, I'm currently working on filtering the room list by spaces, since this feature has become a must-have for me, but upstream space support is not expected to land soon.
+I already added some basic implementation for hierarchical space filtering as experimental feature in current test builds.
+However, there's still work remaining, like properly reporting the filtered room list to the sliding window for sliding sync, respecting the user-chosen space sort order, and fixing <a href="https://github.com/SchildiChat/schildichat-android-next/issues/4">remaining bugs</a>.</p>
+<p>If you already want to try out SchildiChat Next before it's ready for a stable release, it's currently available in my <a href="https://s2.spiritcroc.de/testing/fdroid/repo/">F-Droid testing repository</a>.
+For discussion, you can visit our matrix room at <a href="https://matrix.to/#/#android:schildi.chat">#android:schildi.chat</a> .
+<img src="/blog/img/NBYAUpxlauPpxooEBNVRPCor.png" alt="" />
+<img src="/blog/img/NXLBTXdPxiHZhdoJMkzKgWqC.png" alt="" /></p>
+</blockquote>
+<h3 id="fractal-website">Fractal (<a href="https://gitlab.gnome.org/World/fractal">website</a>)</h3>
+<p>Matrix messaging app for GNOME written in Rust.</p>
+<p><a href="https://matrix.to/#/@zecakeh:tedomum.net">Kévin Commaille</a> says</p>
+<blockquote>
+<p>Fractal 6 is up and ready!</p>
+<p>That's right, barely 2 months after Fractal 5, we feel there have been enough improvements to grant a new stable release. You have probably noticed that we have adopted a version scheme similar to GNOME and will bump the major version with each new release.</p>
+<p>The list of goodies:</p>
+<ul>
+<li>Fractal can open Matrix URIs, it is even registered as a handler for the <code>matrix</code> scheme</li>
+<li>The verification flow was rewritten, hopefully solving most verification issues</li>
+<li>Room members can be kicked, banned or ignored from their profile</li>
+<li>More notifications settings, global or per-room, were added</li>
+<li>Times follow the format (12h or 24h) from the system settings</li>
+<li>Tab auto-completion also works for mentioning public rooms, just start your query with <code>#</code></li>
+</ul>
+<p>It is available right now on <a href="https://flathub.org/apps/org.gnome.Fractal">Flathub</a>.</p>
+<p>This version is fully translated into 6 languages 🙌️ and we hope to get even more 📈 for the next one! Head over to <a href="https://l10n.gnome.org/module/fractal/">Damned Lies</a> if you want to give a hand.</p>
+<p>We would also like to thank our new and returning contributors and our upstream projects.</p>
+<p>For our next iteration, we already have a bunch of accessibility improvements waiting, and we plan to continue improving the room settings and the moderation features. Any extra work <a href="https://gitlab.gnome.org/GNOME/fractal/-/issues/?label_name%5B%5D=4.%20Newcomers">from you 🫵️</a> will be highly valued!</p>
+<p><img src="/blog/img/7386389379feef250a2fd74bf892217d743b48bc1748042859015045120.png" alt="" /></p>
+</blockquote>
+<h3 id="element-x-android-website">Element X Android (<a href="https://github.com/vector-im/element-x-android">website</a>)</h3>
+<p>Android Matrix messenger application using the Matrix Rust Sdk and Jetpack Compose</p>
+<p><a href="https://matrix.to/#/@benoit.marty:matrix.org">benoit</a> announces</p>
+<blockquote>
+<ul>
+<li>We have released the version 0.4.1, more details about what's new in the <a href="https://github.com/element-hq/element-x-android/releases/tag/v0.4.1">release notes</a>. Will be in production next week.</li>
+<li>Also working to publish the application to F-Droid, with support for push with UnifiedPush.</li>
+</ul>
+</blockquote>
+<h2 id="dept-of-sdks-and-frameworks-toolbox">Dept of SDKs and Frameworks 🧰</h2>
+<h3 id="matrix-rust-sdk">Matrix Rust SDK</h3>
+<p><a href="https://matrix.to/#/@bnjbvr:delire.party">bnjbvr</a> reports</p>
+<blockquote>
+<ul>
+<li>Support for notifications in invited rooms has been added, thanks to zecakeh.</li>
+<li>Failing to toggle a reaction will now properly report the error to the caller.</li>
+<li>Many fixes and improvements in the crypto crates, notably for better Web support with indexeddb.</li>
+<li>Read statuses for rooms are now properly computed client-side, giving better counts than homeservers can compute, viz. for encrypted rooms.</li>
+<li>New commit and pull requests guidelines have been added to the contribution guidelines.</li>
+</ul>
+</blockquote>
+<h3 id="matrix-nio">matrix-nio</h3>
+<p><a href="https://matrix.to/#/@me:shahpaarth.com">Paarth Shah</a> says</p>
+<blockquote>
+<p>New release of <code>matrix-nio</code>! Most notable change is that some minimum dependencies have been bumped (for compatibility/security purposes), and as a result <code>python3.12</code> is now fully supported and tested!
+Full changelog <a href="https://github.com/poljar/matrix-nio/blob/main/CHANGELOG.md#0240---2024-01-18">here</a></p>
+</blockquote>
+<h3 id="trixnity-website">Trixnity (<a href="https://gitlab.com/trixnity/trixnity">website</a>)</h3>
+<p>Multiplatform Kotlin SDK for Matrix</p>
+<p><a href="https://matrix.to/#/@benedict:imbitbu.de">Benedict</a> reports</p>
+<blockquote>
+<p>Trixnity v4.2.0 has been released with some polishing.</p>
+<p>features/improvements:</p>
+<ul>
+<li><code>loginWith</code> automatically gets profile information, which makes custom login easier</li>
+<li>allow gracefully stopping ongoing sync request</li>
+<li>BREAKING: cleaner hierarchy of <code>RoomMessageEventContent</code></li>
+<li>introduced <code>FileBasedInfo</code></li>
+<li><code>ActiveVerifications</code> as interface to allow mocking</li>
+<li>don't force type in MessageBuilder extensions</li>
+</ul>
+</blockquote>
+<h2 id="dept-of-ops-tools">Dept of Ops 🛠</h2>
+<h3 id="dendrite-admin-interface-website">Dendrite-Admin-Interface (<a href="https://github.com/jjj333-p/dendrite-admin-interface">website</a>)</h3>
+<p><a href="https://matrix.to/#/@jjj333:pain.agency">jjj333_p (any pronouns)</a> announces</p>
+<blockquote>
+<p><strong>Dendrite-Admin-Interface</strong> is in its third release, <a href="https://github.com/jjj333-p/dendrite-admin-interface/releases/tag/v0.0.3">v0.0.3</a>, and what I consider <em>useful</em> to some public/group instances of Dendrite.</p>
+<p><strong>What this includes</strong>: Along with the evacuate user/room command previously announced, there is now a convenient reset password command as well as a deactivate user command. The deactivate user command is particularly useful as this feature does not exist natively in the Dendrite admin api, and it is able to set the user display name and profile image to something sanatized and indicative of a deactivated user for clarity--on par with industry standard chat platforms. Oh and I finally wrote up proper documentation for setting it up lol.</p>
+<p><strong>What is to come?</strong></p>
+<ul>
+<li>Media moderation - audo deletion, as well as manual deletion of users. when added to deactivate user command, this should comply with as close to a gdpr delete as we will get on the matrix platform.</li>
+<li>Regex based user listing and deactivation - as per popular demand, one of the soon coming features for the interface to be able to fetch active users from the database (read only) and then perform mass actions on those, useful in situations such as spam bot attacks.</li>
+</ul>
+<p>Remember to drop by our <a href="https://github.com/jjj333-p/dendrite-admin-interface">Github</a> and throw your feature requests into an issue!</p>
+</blockquote>
+<h3 id="matrix-docker-ansible-deploy-website">matrix-docker-ansible-deploy (<a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">website</a>)</h3>
+<p>Matrix server setup using Ansible and Docker</p>
+<p><a href="https://matrix.to/#/@slavi:devture.com">Slavi</a> announces</p>
+<blockquote>
+<p>After an insane amount of work, which we had been procrastinating on since <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a>'s initial <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/dbebe7c59825ad439ccf0939acf94bd01efbedbc/CHANGELOG.md#traefik-is-the-default-reverse-proxy-now">migration to Traefik</a> last year, we're finally <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/dbebe7c59825ad439ccf0939acf94bd01efbedbc/CHANGELOG.md#goodbye-matrix-nginx-proxy-">saying goodbye to the <code>matrix-nginx-proxy</code> component</a>.</p>
+<p>This change represents a huge refactoring, not only in how services get exposed publicly (reverse-proxy-wise), but also in cross-container networking, Prometheus-metrics exposure, and other areas.</p>
+<p><code>matrix-nginx-proxy</code> has been very central to the Ansible playbook during its 7 years of life, performing at least 7 different roles and thus going against the <a href="https://en.wikipedia.org/wiki/Unix_philosophy">UNIX philosophy</a> of "doing one thing and doing it well". We're happy to have untangled that whole mess and to finally see it gone! May it rest in peace! 🪦</p>
+</blockquote>
+<h2 id="dept-of-bots-robot">Dept of Bots 🤖</h2>
+<h3 id="draupnir-website">Draupnir (<a href="https://github.com/the-draupnir-project/Draupnir">website</a>)</h3>
+<p><a href="https://matrix.to/#/@gnu_ponut:matrix.org">Gnuxie 💜🐝</a> announces</p>
+<blockquote>
+<p><a href="https://github.com/the-draupnir-project/Draupnir">Draupnir</a>, which is a moderation bot
+that Matrix communities use to collaboratively protect each other,
+is now licensed under the <a href="https://github.com/the-draupnir-project/Draupnir/blob/main/LICENSE">AFL-3.0</a>
+which is an OSI approved license.
+Previously Draupnir was licensed under the <a href="https://github.com/the-draupnir-project/Draupnir/blob/e4c02b96cdde2059abf907bdb486246f70357cf0/LICENSE">Cooperative Software License</a>,
+details for the license change can be found <a href="https://github.com/the-draupnir-project/Draupnir/issues/176">here</a>.
+Docker images are now built with Node 20, though using Draupnir with Node 18 from source is still supported
+and will be for the foreseeable future.
+Both these changes come with the release of Draupnir 1.86.0, the full details of which can be found
+<a href="https://github.com/the-draupnir-project/Draupnir/releases/tag/v1.86.0">here</a>.</p>
+<p>You have probably noticed that it has been three months since the last release, and this is because
+I have been extracting and rearchitecting the core of Draupnir (and Mjolnir) into a TypeScript library
+which Draupnir will depend upon in an upcoming release.
+This library is called the <a href="https://github.com/Gnuxie/matrix-protection-suite">matrix-protection-suite</a>
+and is being developed specifically to express Draupnir's core concepts concisely.
+In my view, it has become necessary to create this library because it has been very difficult to
+maintain or consider adding features which lay on a foundation that is limiting,
+and it is simpler to attempt to remedy that before addressing the bigger issues that Draupnir and
+Mjolnir have. Each change to Draupnir can (and often does) exacerbate or complicate existing issues,
+and this is mostly natural to software as it ages.</p>
+<p>With that, you can come find us in <a href="https://matrix.to/#/#draupnir:matrix.org">https://matrix.to/#/#draupnir:matrix.org</a>.
+I also want to thank everyone who has been providing support for others using Draupnir both
+within <a href="https://matrix.to/#/#draupnir:matrix.org">https://matrix.to/#/#draupnir:matrix.org</a> and elsewhere.</p>
+</blockquote>
+<h2 id="dept-of-events-and-talks-speaking-head">Dept of Events and Talks 🗣️</h2>
+<p><a href="https://matrix.to/#/@kim:sosnowkadub.de">HarHarLinks</a> announces</p>
+<blockquote>
+<p>It is This Week in Matrix 2024-01-19, and that means it is only 2 more TWIMs until FOSDEM 2024!</p>
+<p>This is a reminder that on Friday (2024-02-02) afternoon leading up to FOSDEM, the Matrix Foundation and Community will host a <a href="https://fosdem.org/2024/fringe/">FOSDEM Fringe</a> event called <a href="https://matrix.to/#/#fosdem2024-foundation-community-meetup:matrix.org">#fosdem2024-foundation-community-meetup:matrix.org</a> at and with the support of <a href="https://hsbxl.be/enter/">Hackerspace Brussels</a>!</p>
+<p>Further, there will be a booth on the floor and a main track talk on Sunday morning followed by a whole afternoon of Matrix presentations in the <a href="https://fosdem.org/2024/schedule/track/matrix/">Matrix devroom</a>.</p>
+<p>So, in case you haven't yet, this is your reminder to book your journey and accommodation, and meet you in Brussels!</p>
+<p>Read Thib's blog post for all the details at <a href="https://matrix.org/blog/2024/01/matrix-presence-fosdem/">https://matrix.org/blog/2024/01/matrix-presence-fosdem/</a>.</p>
+</blockquote>
+<h2 id="dept-of-guides-compass">Dept of Guides 🧭</h2>
+<h3 id="matrix-client-tutorial">Matrix Client Tutorial</h3>
+<p><a href="https://matrix.to/#/@hubert:uhoreg.ca">uhoreg</a> reports</p>
+<blockquote>
+<p>I've completed the initial draft of the <a href="https://uhoreg.gitlab.io/matrix-tutorial/tying_together_megolm.html#encrypting-room-events">Megolm encryption section</a> of my client tutorial.  In contrast to the previous section I wrote on Megolm encryption, this section is higher-level, and shows how outbound Megolm sessions are managed and sent.  Up next will be a section on properly handling <code>m.room.encryption</code> events, and a simple example bot that handles encryption.</p>
+</blockquote>
+<h2 id="matrix-federation-stats">Matrix Federation Stats</h2>
+<p><a href="https://matrix.to/#/@aine:etke.cc">Aine</a> announces</p>
+<blockquote>
+<p>collected by <a href="https://matrixrooms.info">MatrixRooms.info</a> - an <a href="https://gitlab.com/etke.cc/mrs/api">MRS</a> instance by <a href="https://etke.cc?utm_source=twim&amp;utm_medium=matrix&amp;utm_campaign=federation-stats">etke.cc</a></p>
+<p>As of today, <code>8492</code> Matrix federateable servers have been discovered by matrixrooms.info, <code>2323</code> (<code>27.4%</code>) of them are publishing their rooms directory over federation.
+The published directories contain <code>167178</code> rooms.</p>
+<p><a href="https://gitlab.com/etke.cc/mrs/api/-/blob/main/docs/indexing.md">How to add your server</a> | <a href="https://gitlab.com/etke.cc/mrs/api/-/blob/main/docs/deindexing.md">How to remove your server</a></p>
+</blockquote>
+<h2 id="dept-of-ping">Dept of Ping</h2>
+<p>Here we reveal, rank, and applaud the homeservers with the lowest ping, as measured by <a href="https://github.com/maubot/echo">pingbot</a>, a <a href="https://github.com/maubot/maubot">maubot</a> that you can host on your own server.</p>
+<h3 id="ping-maunium-net"><a href="https://matrix.to/#/#ping:maunium.net">#ping:maunium.net</a></h3>
+<p>Join <a href="https://matrix.to/#/#ping:maunium.net">#ping:maunium.net</a> to experience the fun live, and to find out how to add YOUR server to the game.</p>
+<table><thead><tr><th style="text-align: center">Rank</th><th style="text-align: center">Hostname</th><th style="text-align: center">Median MS</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">envs.net</td><td style="text-align: center">221.5</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">nerdhouse.io</td><td style="text-align: center">294</td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center">plocki.org</td><td style="text-align: center">324</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">fostered.uk</td><td style="text-align: center">348</td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">ilmari.org</td><td style="text-align: center">514.5</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">sulian.eu</td><td style="text-align: center">543</td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">shema.lv</td><td style="text-align: center">752</td></tr>
+<tr><td style="text-align: center">8</td><td style="text-align: center">matrix.sp-codes.de</td><td style="text-align: center">802</td></tr>
+<tr><td style="text-align: center">9</td><td style="text-align: center">rom4nik.pl</td><td style="text-align: center">922</td></tr>
+<tr><td style="text-align: center">10</td><td style="text-align: center">herkinf.de</td><td style="text-align: center">932</td></tr>
+</tbody></table>
+<h3 id="ping-no-synapse-maunium-net"><a href="https://matrix.to/#/#ping-no-synapse:maunium.net">#ping-no-synapse:maunium.net</a></h3>
+<p>Join <a href="https://matrix.to/#/#ping-no-synapse:maunium.net">#ping-no-synapse:maunium.net</a> to experience the fun live, and to find out how to add YOUR server to the game.</p>
+<table><thead><tr><th style="text-align: center">Rank</th><th style="text-align: center">Hostname</th><th style="text-align: center">Median MS</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">nerdhouse.io</td><td style="text-align: center">127.5</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">dendrite.s3cr3t.me</td><td style="text-align: center">159</td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center">matrix.its-tps.fr</td><td style="text-align: center">182</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">matrix.maymundere.org</td><td style="text-align: center">219</td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">dendrite.matrix.org</td><td style="text-align: center">305.5</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">inu.is</td><td style="text-align: center">310</td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">neshweb.chat</td><td style="text-align: center">324</td></tr>
+<tr><td style="text-align: center">8</td><td style="text-align: center">darkness.services</td><td style="text-align: center">531</td></tr>
+<tr><td style="text-align: center">9</td><td style="text-align: center">herkinf.de</td><td style="text-align: center">936.5</td></tr>
+<tr><td style="text-align: center">10</td><td style="text-align: center">jpeg.city</td><td style="text-align: center">1011.5</td></tr>
+</tbody></table>
+<h2 id="that-s-all-i-know">That's all I know</h2>
+<p>See you next week, and be sure to stop by <a href="https://matrix.to/#/#twim:matrix.org">#twim:matrix.org</a> with your updates!</p>
+
+            <div class="callout">
+                <div class="left-col">
+                    <h2>The Foundation needs you</h2>
+                </div>
+                <div class="right-col">
+                    <p>
+                        The Matrix.org Foundation is a non-profit and only relies
+                        on donations to operate. Its core mission is to maintain
+                        the Matrix Specification, but it does much more than that.
+                    </p>
+                    <p>
+                        It maintains the matrix.org homeserver and hosts several
+                        bridges for free. It fights for our collective rights to
+                        digital privacy and dignity.
+                    </p>
+                    <a class="call-to-action plausible-event-name=BlogPostCtaSupportUs" href="/support">Support us</a>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Post Contents</h3>
+
+            <ul style="list-style: none; padding-left: 0px;">
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#matrix-live">Matrix Live</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#dept-of-status-of-matrix-thermometer">Dept of Status of Matrix 🌡️</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#dept-of-bridges-bridge-at-night">Dept of Bridges 🌉</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#dept-of-clients-iphone">Dept of Clients 📱</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#schildichat-website">SchildiChat (website)</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#fractal-website">Fractal (website)</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#element-x-android-website">Element X Android (website)</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#dept-of-sdks-and-frameworks-toolbox">Dept of SDKs and Frameworks 🧰</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#matrix-rust-sdk">Matrix Rust SDK</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#matrix-nio">matrix-nio</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#trixnity-website">Trixnity (website)</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#dept-of-ops-tools">Dept of Ops 🛠</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#dendrite-admin-interface-website">Dendrite-Admin-Interface (website)</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#matrix-docker-ansible-deploy-website">matrix-docker-ansible-deploy (website)</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#dept-of-bots-robot">Dept of Bots 🤖</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#draupnir-website">Draupnir (website)</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#dept-of-events-and-talks-speaking-head">Dept of Events and Talks 🗣️</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#dept-of-guides-compass">Dept of Guides 🧭</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#matrix-client-tutorial">Matrix Client Tutorial</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#matrix-federation-stats">Matrix Federation Stats</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#dept-of-ping">Dept of Ping</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#ping-maunium-net">#ping:maunium.net</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#ping-no-synapse-maunium-net">#ping-no-synapse:maunium.net</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/19/this-week-in-matrix-2024-01-19/#that-s-all-i-know">That&#x27;s all I know</a>
+                    
+                </li>
+                
+            </ul>
+        </aside>
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

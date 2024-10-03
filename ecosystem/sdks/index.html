@@ -1,0 +1,3603 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;ecosystem&#x2F;sdks&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="SDKs" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - SDKs</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<meta name="description" content="Develop great apps, bots, and bridges. Focus on what you do best. Let the SDKs
+do all the heavy lifting.
+">
+<noscript>
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/no-js.css?h=e41dbbcea1829a97c602 />
+</noscript>
+<script type="module" src=https://tune-your-chat.github.io/js/sdks.js?h=9d00370d308a90c22b97></script>
+<script type="module" src=https://tune-your-chat.github.io/js/panel-selector.js?h=09ab4c3f9d22fd07ccda></script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            ">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                checked>
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<div class="page-header">
+    <div class="hero-block">
+        <h1>SDKs</h1>
+        <p>Develop great apps, bots, and bridges. Focus on what you do best. Let the SDKs
+do all the heavy lifting.
+</p>
+    </div>
+</div>
+
+<div class="content sdks-page">
+
+    <p>SDKs are pieces of software meant for developers, that take care of the
+technical Matrix protocol calls behind the scenes. They allow them to focus on
+where they can add the most value. If you're not a developer, this section of
+the website is probably not for you.</p>
+<p>There are two fundamental types of SDKs: clients and appservices. This
+distinction is quite academical, and we went for a more pragmatic approach. You
+will find below SDKs by type of product you may want to create (namely: clients,
+bots, bridges). Don't be surprised if the same SDK appears in several sections!</p>
+<p>If you are a developer and are not sure what the difference between clients and
+appservices is, please head to <a href="/docs/matrix-concepts/">the developers documentation</a>.</p>
+<fieldset id="sdk-purpose-selector">
+    <input type="radio" name="sdk-purpose" id="purpose-client" checked />
+    <label for="purpose-client">Client SDKs</label>
+
+    <input type="radio" name="sdk-purpose" id="purpose-bot" />
+    <label for="purpose-bot">Bot SDKs</label>
+
+    <input type="radio" name="sdk-purpose" id="purpose-bridge">
+    <label for="purpose-bridge">Bridge SDKs</label>
+</fieldset>
+
+<div id="sdks-panels">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="purpose-client-panel" class="panel">
+    <p>
+        <p>Client SDKs are used to develop clients humans will interact with. They handle
+all the Matrix heavy lifting and leave it up to the developer to implement a UI.</p>
+
+    </p>
+
+    <div id="client-sdks-filters" class="filters">
+        <div class="filter-wrap">
+            <button id="client-sdks-filter-maturity" class="filter">
+                Maturity
+                <div class="divider"></div>
+                <img src="/assets/down-arrow.svg" alt="Downward facing arrow">
+            </button>
+            <div id="client-sdks-filter-maturity-menu" class="filter-menu">
+                <p>The SDK can support any of the maturity levels checked.</p>
+                <div class="filter-option">
+                    <input id="maturity-stable" type="checkbox" checked>
+                    <label for="maturity-stable">Stable</label>
+                </div>
+                <div class="filter-option">
+                    <input id="maturity-beta" type="checkbox" checked>
+                    <label for="maturity-beta">Beta</label>
+                </div>
+                <div class="filter-option">
+                    <input id="maturity-alpha" type="checkbox" checked>
+                    <label for="maturity-alpha">Alpha</label>
+                </div>
+                <div class="filter-option">
+                    <input id="maturity-obsolete" type="checkbox">
+                    <label for="maturity-obsolete">Obsolete</label>
+                </div>
+                <div class="reset-links">Select <button>all</button> - <button>none</button></div>
+            </div>
+        </div>
+        <div class="filter-wrap">
+            <button id="client-sdks-filter-licence" class="filter">
+                Licence
+                <div class="divider"></div>
+                <img src="/assets/down-arrow.svg" alt="Downward facing arrow">
+            </button>
+            <div id="client-sdks-filter-licence-menu" class="filter-menu">
+                <p>The client can support any of the licences checked.</p>
+                
+                <div class="filter-option">
+                    <input id="licence-agpl-3-0" type="checkbox" checked>
+                    <label for="licence-agpl-3-0">AGPL-3.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-agpl-3-0-only" type="checkbox" checked>
+                    <label for="licence-agpl-3-0-only">AGPL-3.0-only</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-agpl-3-0-or-later" type="checkbox" checked>
+                    <label for="licence-agpl-3-0-or-later">AGPL-3.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-apache-2-0" type="checkbox" checked>
+                    <label for="licence-apache-2-0">Apache-2.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-artistic2" type="checkbox" checked>
+                    <label for="licence-artistic2">Artistic2</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-cc0-1-0" type="checkbox" checked>
+                    <label for="licence-cc0-1-0">CC0-1.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-eupl-1-2" type="checkbox" checked>
+                    <label for="licence-eupl-1-2">EUPL-1.2</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-1-0-or-later" type="checkbox" checked>
+                    <label for="licence-gpl-1-0-or-later">GPL-1.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-3-0" type="checkbox" checked>
+                    <label for="licence-gpl-3-0">GPL-3.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-3-0-only" type="checkbox" checked>
+                    <label for="licence-gpl-3-0-only">GPL-3.0-only</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-3-0-or-later" type="checkbox" checked>
+                    <label for="licence-gpl-3-0-or-later">GPL-3.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-isc" type="checkbox" checked>
+                    <label for="licence-isc">ISC</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-lgpl-2-1-only" type="checkbox" checked>
+                    <label for="licence-lgpl-2-1-only">LGPL-2.1-only</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-lgpl-3-0-or-later" type="checkbox" checked>
+                    <label for="licence-lgpl-3-0-or-later">LGPL-3.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-mit" type="checkbox" checked>
+                    <label for="licence-mit">MIT</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-mpl-2-0" type="checkbox" checked>
+                    <label for="licence-mpl-2-0">MPL-2.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-none" type="checkbox" checked>
+                    <label for="licence-none">None</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-unknown" type="checkbox" checked>
+                    <label for="licence-unknown">Unknown</label>
+                </div>
+                
+                <div class="reset-links">Select <button>all</button> - <button>none</button></div>
+            </div>
+        </div>
+        <div class="filter-wrap">
+            <button id="client-sdks-filter-language" class="filter">
+                Language
+                <div class="divider"></div>
+                <img src="/assets/down-arrow.svg" alt="Downward facing arrow">
+            </button>
+            <div id="client-sdks-filter-language-menu" class="filter-menu">
+                <p>The client must support any of the languages checked.</p>
+                
+                <div class="filter-option">
+                    <input id="language-c" type="checkbox" checked>
+                    <label for="language-c">C</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-c" type="checkbox" checked>
+                    <label for="language-c">C#</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-c" type="checkbox" checked>
+                    <label for="language-c">C++</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-dart" type="checkbox" checked>
+                    <label for="language-dart">Dart</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-elm" type="checkbox" checked>
+                    <label for="language-elm">Elm</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-erlang" type="checkbox" checked>
+                    <label for="language-erlang">Erlang</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-go" type="checkbox" checked>
+                    <label for="language-go">Go</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-haxe" type="checkbox" checked>
+                    <label for="language-haxe">Haxe</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-java" type="checkbox" checked>
+                    <label for="language-java">Java</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-javascript" type="checkbox" checked>
+                    <label for="language-javascript">JavaScript</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-kotlin" type="checkbox" checked>
+                    <label for="language-kotlin">Kotlin</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-lisp" type="checkbox" checked>
+                    <label for="language-lisp">Lisp</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-objective-c" type="checkbox" checked>
+                    <label for="language-objective-c">Objective-C</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-php" type="checkbox" checked>
+                    <label for="language-php">PHP</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-perl" type="checkbox" checked>
+                    <label for="language-perl">Perl</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-python" type="checkbox" checked>
+                    <label for="language-python">Python</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-racket" type="checkbox" checked>
+                    <label for="language-racket">Racket</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-raku" type="checkbox" checked>
+                    <label for="language-raku">Raku</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-ruby" type="checkbox" checked>
+                    <label for="language-ruby">Ruby</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-rust" type="checkbox" checked>
+                    <label for="language-rust">Rust</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-swift" type="checkbox" checked>
+                    <label for="language-swift">Swift</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-typescript" type="checkbox" checked>
+                    <label for="language-typescript">TypeScript</label>
+                </div>
+                
+                <div class="reset-links">Select <button>all</button> - <button>none</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="client-sdks" class="projects-card-deck">
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mit language-java">
+                <div class="title-row">
+                    <h3>matrix-communication-client</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Réda Housni Alaoui</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">Java</div>
+                </div>
+                <p>A java client for the Matrix protocol.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;Cosium&#x2F;matrix-communication-client">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-apache-2-0 language-kotlin">
+                <div class="title-row">
+                    <h3>Trixnity</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Trixnity Team</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Kotlin</div>
+                </div>
+                <p>Multiplatform Kotlin SDK for developing Clients, Bots, Appservices and Servers.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;gitlab.com&#x2F;trixnity&#x2F;trixnity">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-agpl-3-0 language-dart">
+                <div class="title-row">
+                    <h3>Matrix Dart SDK</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Famedly GmBH</div>
+                <div class="licence-language">
+                    <div class="pill">AGPL-3.0</div>
+                    <div class="pill">Dart</div>
+                </div>
+                <p>Matrix SDK written in dart.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;famedly&#x2F;matrix-dart-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mpl-2-0 language-python">
+                <div class="title-row">
+                    <h3>mautrix-python</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Tulir</div>
+                <div class="licence-language">
+                    <div class="pill">MPL-2.0</div>
+                    <div class="pill">Python</div>
+                </div>
+                <p>A Python 3 asyncio Matrix framework.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;mautrix&#x2F;python">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mpl-2-0 language-go">
+                <div class="title-row">
+                    <h3>mautrix-go</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Tulir</div>
+                <div class="licence-language">
+                    <div class="pill">MPL-2.0</div>
+                    <div class="pill">Go</div>
+                </div>
+                <p>A Golang Matrix framework.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;mautrix&#x2F;go">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-isc language-python">
+                <div class="title-row">
+                    <h3>matrix-nio</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">poljar</div>
+                <div class="licence-language">
+                    <div class="pill">ISC</div>
+                    <div class="pill">Python</div>
+                </div>
+                <p>A Python Matrix client library, designed according to sans I&#x2F;O principles.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;poljar&#x2F;matrix-nio">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mit language-rust">
+                <div class="title-row">
+                    <h3>Ruma</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Ruma team</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">Rust</div>
+                </div>
+                <p>A set of Rust crates for interacting with the Matrix chat network.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;ruma">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-apache-2-0 language-javascript">
+                <div class="title-row">
+                    <h3>Matrix.org JS SDK</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Matrix.org team</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">JavaScript</div>
+                </div>
+                <p>Matrix Client-Server SDK for JavaScript.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-obsolete licence-apache-2-0 language-go">
+                <div class="title-row">
+                    <h3>gomatrix</h3>
+                    <div class="maturity obsolete">Obsolete</div>
+                </div>
+                <div class="author">Matrix.org</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Go</div>
+                </div>
+                <p>A Golang Matrix client.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;gomatrix">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-gpl-3-0-or-later language-c">
+                <div class="title-row">
+                    <h3>matrix_dotnet</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Greenscreener</div>
+                <div class="licence-language">
+                    <div class="pill">GPL-3.0-or-later</div>
+                    <div class="pill">C#</div>
+                </div>
+                <p>Matrix client SDK in C#
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;gitlab.com&#x2F;Greenscreener&#x2F;matrix-dotnet">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-apache-2-0 language-swift">
+                <div class="title-row">
+                    <h3>Matrix.swift</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">cvwright</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Swift</div>
+                </div>
+                <p>Matrix client SDK in Swift
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;gitlab.futo.org&#x2F;circles&#x2F;matrix.swift">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-eupl-1-2 language-elm">
+                <div class="title-row">
+                    <h3>Elm SDK</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Bram Noordstar</div>
+                <div class="licence-language">
+                    <div class="pill">EUPL-1.2</div>
+                    <div class="pill">Elm</div>
+                </div>
+                <p>A more consistent alternative to the matrix-js-sdk written in Elm.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;noordstar&#x2F;elm-matrix-sdk-beta">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-lgpl-2-1-only language-c">
+                <div class="title-row">
+                    <h3>libcmatrix</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author"></div>
+                <div class="licence-language">
+                    <div class="pill">LGPL-2.1-only</div>
+                    <div class="pill">C</div>
+                </div>
+                <p>A matrix client client library written in GObjectified C
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;source.puri.sm&#x2F;Librem5&#x2F;libcmatrix">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-agpl-3-0 language-c">
+                <div class="title-row">
+                    <h3>Rory&amp;::LibMatrix</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Rory&amp; and other contributors</div>
+                <div class="licence-language">
+                    <div class="pill">AGPL-3.0</div>
+                    <div class="pill">C#</div>
+                </div>
+                <p>A .NET 8 library for interacting with Matrix.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;cgit.rory.gay&#x2F;matrix&#x2F;LibMatrix.git">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-apache-2-0 language-python">
+                <div class="title-row">
+                    <h3>µtrix</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Dominik George; Project Hack&#x27;n&#x27;Fun @ Teckids e.V.</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Python</div>
+                </div>
+                <p>Matrix client library for MicroPython.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;edugit.org&#x2F;Teckids&#x2F;hacknfun&#x2F;libs&#x2F;mytrix">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-apache-2-0 language-rust">
+                <div class="title-row">
+                    <h3>matrix-rust-sdk</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">poljar</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Rust</div>
+                </div>
+                <p>An implementation of a Matrix client-server library in Rust.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-rust-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-apache-2-0 language-kotlin">
+                <div class="title-row">
+                    <h3>matrix-kt</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Dominic Fischer</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Kotlin</div>
+                </div>
+                <p>Kotlin libraries for Matrix.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;Dominaezzz&#x2F;matrix-kt">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-agpl-3-0-or-later language-c">
+                <div class="title-row">
+                    <h3>libkazv</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">The Kazv Project</div>
+                <div class="licence-language">
+                    <div class="pill">AGPL-3.0-or-later</div>
+                    <div class="pill">C++</div>
+                </div>
+                <p>A matrix client sdk built upon lager and the value-oriented design it enables.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;lily-is.land&#x2F;kazv&#x2F;libkazv">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-agpl-3-0 language-kotlin">
+                <div class="title-row">
+                    <h3>Trixnity Messenger</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">connect2x GmbH</div>
+                <div class="licence-language">
+                    <div class="pill">AGPL-3.0</div>
+                    <div class="pill">Kotlin</div>
+                </div>
+                <p>Multiplatform Kotlin SDK for developing messengers on top of Trixnity
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;gitlab.com&#x2F;connect2x&#x2F;trixnity-messenger">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-mit language-ruby">
+                <div class="title-row">
+                    <h3>Ruby Matrix SDK</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Ananace</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">Ruby</div>
+                </div>
+                <p>Ruby SDK for the Matrix communication protocol.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;ananace&#x2F;ruby-matrix-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-lgpl-2-1-only language-c">
+                <div class="title-row">
+                    <h3>Quotient</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">The Quotient team</div>
+                <div class="licence-language">
+                    <div class="pill">LGPL-2.1-only</div>
+                    <div class="pill">C++</div>
+                </div>
+                <p>A Qt5 library to write cross-platform clients for Matrix
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;quotient-im">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-apache-2-0 language-objective-c">
+                <div class="title-row">
+                    <h3>Matrix.org iOS SDK</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Matrix.org team</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Objective-C</div>
+                </div>
+                <p>The Matrix SDK for iOS.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-unknown language-java">
+                <div class="title-row">
+                    <h3>Matrix-ClientServer-API-java</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Jojii</div>
+                <div class="licence-language">
+                    <div class="pill">Unknown</div>
+                    <div class="pill">Java</div>
+                </div>
+                <p>A small and simple java API for the Matrix ClientServer Protocol.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;JojiiOfficial&#x2F;Matrix-ClientServer-API-java">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-mit language-c">
+                <div class="title-row">
+                    <h3>Matrix C# SDK</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Baking Bad</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">C#</div>
+                </div>
+                <p>Build .NET apps compatible with the Matrix Protocol.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;baking-bad&#x2F;matrix-dotnet-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-alpha licence-apache-2-0 language-kotlin">
+                <div class="title-row">
+                    <h3>dial-phone</h3>
+                    <div class="maturity alpha">Alpha</div>
+                </div>
+                <div class="author">mtorials</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Kotlin</div>
+                </div>
+                <p>A Matrix client-server SDK written in Kotlin.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;mtorials&#x2F;dial-phone">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="purpose-bot-panel" class="panel">
+    <p>
+        <p>Bot SDKs are used to develop bots no humans will interact with. They handle all
+the Matrix heavy lifting so the developer can focus on what the bot is actually
+useful for.</p>
+
+    </p>
+
+    <div id="bot-sdks-filters" class="filters">
+        <div class="filter-wrap">
+            <button id="bot-sdks-filter-maturity" class="filter">
+                Maturity
+                <div class="divider"></div>
+                <img src="/assets/down-arrow.svg" alt="Downward facing arrow">
+            </button>
+            <div id="bot-sdks-filter-maturity-menu" class="filter-menu">
+                <p>The SDK can support any of the maturity levels checked.</p>
+                <div class="filter-option">
+                    <input id="maturity-stable" type="checkbox" checked>
+                    <label for="maturity-stable">Stable</label>
+                </div>
+                <div class="filter-option">
+                    <input id="maturity-beta" type="checkbox" checked>
+                    <label for="maturity-beta">Beta</label>
+                </div>
+                <div class="filter-option">
+                    <input id="maturity-alpha" type="checkbox" checked>
+                    <label for="maturity-alpha">Alpha</label>
+                </div>
+                <div class="filter-option">
+                    <input id="maturity-obsolete" type="checkbox">
+                    <label for="maturity-obsolete">Obsolete</label>
+                </div>
+                <div class="reset-links">Select <button>all</button> - <button>none</button></div>
+            </div>
+        </div>
+        <div class="filter-wrap">
+            <button id="bot-sdks-filter-licence" class="filter">
+                Licence
+                <div class="divider"></div>
+                <img src="/assets/down-arrow.svg" alt="Downward facing arrow">
+            </button>
+            <div id="bot-sdks-filter-licence-menu" class="filter-menu">
+                <p>The client can support any of the licences checked.</p>
+                
+                <div class="filter-option">
+                    <input id="licence-agpl-3-0" type="checkbox" checked>
+                    <label for="licence-agpl-3-0">AGPL-3.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-agpl-3-0-only" type="checkbox" checked>
+                    <label for="licence-agpl-3-0-only">AGPL-3.0-only</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-agpl-3-0-or-later" type="checkbox" checked>
+                    <label for="licence-agpl-3-0-or-later">AGPL-3.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-apache-2-0" type="checkbox" checked>
+                    <label for="licence-apache-2-0">Apache-2.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-artistic2" type="checkbox" checked>
+                    <label for="licence-artistic2">Artistic2</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-cc0-1-0" type="checkbox" checked>
+                    <label for="licence-cc0-1-0">CC0-1.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-eupl-1-2" type="checkbox" checked>
+                    <label for="licence-eupl-1-2">EUPL-1.2</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-1-0-or-later" type="checkbox" checked>
+                    <label for="licence-gpl-1-0-or-later">GPL-1.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-3-0" type="checkbox" checked>
+                    <label for="licence-gpl-3-0">GPL-3.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-3-0-only" type="checkbox" checked>
+                    <label for="licence-gpl-3-0-only">GPL-3.0-only</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-3-0-or-later" type="checkbox" checked>
+                    <label for="licence-gpl-3-0-or-later">GPL-3.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-isc" type="checkbox" checked>
+                    <label for="licence-isc">ISC</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-lgpl-2-1-only" type="checkbox" checked>
+                    <label for="licence-lgpl-2-1-only">LGPL-2.1-only</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-lgpl-3-0-or-later" type="checkbox" checked>
+                    <label for="licence-lgpl-3-0-or-later">LGPL-3.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-mit" type="checkbox" checked>
+                    <label for="licence-mit">MIT</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-mpl-2-0" type="checkbox" checked>
+                    <label for="licence-mpl-2-0">MPL-2.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-none" type="checkbox" checked>
+                    <label for="licence-none">None</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-unknown" type="checkbox" checked>
+                    <label for="licence-unknown">Unknown</label>
+                </div>
+                
+                <div class="reset-links">Select <button>all</button> - <button>none</button></div>
+            </div>
+        </div>
+        <div class="filter-wrap">
+            <button id="bot-sdks-filter-language" class="filter">
+                Language
+                <div class="divider"></div>
+                <img src="/assets/down-arrow.svg" alt="Downward facing arrow">
+            </button>
+            <div id="bot-sdks-filter-language-menu" class="filter-menu">
+                <p>The client must support any of the languages checked.</p>
+                
+                <div class="filter-option">
+                    <input id="language-c" type="checkbox" checked>
+                    <label for="language-c">C</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-c" type="checkbox" checked>
+                    <label for="language-c">C#</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-c" type="checkbox" checked>
+                    <label for="language-c">C++</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-dart" type="checkbox" checked>
+                    <label for="language-dart">Dart</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-elm" type="checkbox" checked>
+                    <label for="language-elm">Elm</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-erlang" type="checkbox" checked>
+                    <label for="language-erlang">Erlang</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-go" type="checkbox" checked>
+                    <label for="language-go">Go</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-haxe" type="checkbox" checked>
+                    <label for="language-haxe">Haxe</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-java" type="checkbox" checked>
+                    <label for="language-java">Java</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-javascript" type="checkbox" checked>
+                    <label for="language-javascript">JavaScript</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-kotlin" type="checkbox" checked>
+                    <label for="language-kotlin">Kotlin</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-lisp" type="checkbox" checked>
+                    <label for="language-lisp">Lisp</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-objective-c" type="checkbox" checked>
+                    <label for="language-objective-c">Objective-C</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-php" type="checkbox" checked>
+                    <label for="language-php">PHP</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-perl" type="checkbox" checked>
+                    <label for="language-perl">Perl</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-python" type="checkbox" checked>
+                    <label for="language-python">Python</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-racket" type="checkbox" checked>
+                    <label for="language-racket">Racket</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-raku" type="checkbox" checked>
+                    <label for="language-raku">Raku</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-ruby" type="checkbox" checked>
+                    <label for="language-ruby">Ruby</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-rust" type="checkbox" checked>
+                    <label for="language-rust">Rust</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-swift" type="checkbox" checked>
+                    <label for="language-swift">Swift</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-typescript" type="checkbox" checked>
+                    <label for="language-typescript">TypeScript</label>
+                </div>
+                
+                <div class="reset-links">Select <button>all</button> - <button>none</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bot-sdks" class="projects-card-deck">
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mit language-java">
+                <div class="title-row">
+                    <h3>matrix-communication-client</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Réda Housni Alaoui</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">Java</div>
+                </div>
+                <p>A java client for the Matrix protocol.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;Cosium&#x2F;matrix-communication-client">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-apache-2-0 language-kotlin">
+                <div class="title-row">
+                    <h3>Trixnity</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Trixnity Team</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Kotlin</div>
+                </div>
+                <p>Multiplatform Kotlin SDK for developing Clients, Bots, Appservices and Servers.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;gitlab.com&#x2F;trixnity&#x2F;trixnity">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mpl-2-0 language-python">
+                <div class="title-row">
+                    <h3>mautrix-python</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Tulir</div>
+                <div class="licence-language">
+                    <div class="pill">MPL-2.0</div>
+                    <div class="pill">Python</div>
+                </div>
+                <p>A Python 3 asyncio Matrix framework.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;mautrix&#x2F;python">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mpl-2-0 language-go">
+                <div class="title-row">
+                    <h3>mautrix-go</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Tulir</div>
+                <div class="licence-language">
+                    <div class="pill">MPL-2.0</div>
+                    <div class="pill">Go</div>
+                </div>
+                <p>A Golang Matrix framework.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;mautrix&#x2F;go">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-isc language-python">
+                <div class="title-row">
+                    <h3>matrix-nio</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">poljar</div>
+                <div class="licence-language">
+                    <div class="pill">ISC</div>
+                    <div class="pill">Python</div>
+                </div>
+                <p>A Python Matrix client library, designed according to sans I&#x2F;O principles.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;poljar&#x2F;matrix-nio">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mit language-rust">
+                <div class="title-row">
+                    <h3>Ruma</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Ruma team</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">Rust</div>
+                </div>
+                <p>A set of Rust crates for interacting with the Matrix chat network.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;ruma">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mit language-python">
+                <div class="title-row">
+                    <h3>Simple-Matrix-Bot-Lib</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">KrazyKirby99999</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">Python</div>
+                </div>
+                <p>An easy to use bot library for the Matrix ecosystem written in Python.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;codeberg.org&#x2F;imbev&#x2F;simplematrixbotlib">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mit language-c">
+                <div class="title-row">
+                    <h3>MatrixBot .NET Core SDK</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">enimatek-nl</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">C#</div>
+                </div>
+                <p>Build .NET chat bots compatible with the Matrix Protocol. It has support for a limited subset of the APIs.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;enimatek-nl&#x2F;matrixbot-dotnet-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-apache-2-0 language-javascript">
+                <div class="title-row">
+                    <h3>Matrix.org JS SDK</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Matrix.org team</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">JavaScript</div>
+                </div>
+                <p>Matrix Client-Server SDK for JavaScript.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-apache-2-0 language-javascript">
+                <div class="title-row">
+                    <h3>Matrix.org AS Node SDK</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Matrix.org team</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">JavaScript</div>
+                </div>
+                <p>Matrix Application Service framework in Node.js.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-node">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-gpl-3-0-or-later language-c">
+                <div class="title-row">
+                    <h3>matrix_dotnet</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Greenscreener</div>
+                <div class="licence-language">
+                    <div class="pill">GPL-3.0-or-later</div>
+                    <div class="pill">C#</div>
+                </div>
+                <p>Matrix client SDK in C#
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;gitlab.com&#x2F;Greenscreener&#x2F;matrix-dotnet">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-gpl-3-0 language-python">
+                <div class="title-row">
+                    <h3>mxbt</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">kulebyaka</div>
+                <div class="licence-language">
+                    <div class="pill">GPL-3.0</div>
+                    <div class="pill">Python</div>
+                </div>
+                <p>Yet another matrix bot library.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;codeberg.org&#x2F;librehub&#x2F;mxbt">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-agpl-3-0 language-c">
+                <div class="title-row">
+                    <h3>Rory&amp;::LibMatrix</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Rory&amp; and other contributors</div>
+                <div class="licence-language">
+                    <div class="pill">AGPL-3.0</div>
+                    <div class="pill">C#</div>
+                </div>
+                <p>A .NET 8 library for interacting with Matrix.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;cgit.rory.gay&#x2F;matrix&#x2F;LibMatrix.git">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-apache-2-0 language-python">
+                <div class="title-row">
+                    <h3>µtrix</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Dominik George; Project Hack&#x27;n&#x27;Fun @ Teckids e.V.</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Python</div>
+                </div>
+                <p>Matrix client library for MicroPython.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;edugit.org&#x2F;Teckids&#x2F;hacknfun&#x2F;libs&#x2F;mytrix">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-apache-2-0 language-rust">
+                <div class="title-row">
+                    <h3>matrix-rust-sdk</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">poljar</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Rust</div>
+                </div>
+                <p>An implementation of a Matrix client-server library in Rust.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-rust-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-apache-2-0 language-kotlin">
+                <div class="title-row">
+                    <h3>matrix-kt</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Dominic Fischer</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Kotlin</div>
+                </div>
+                <p>Kotlin libraries for Matrix.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;Dominaezzz&#x2F;matrix-kt">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-mit language-typescript">
+                <div class="title-row">
+                    <h3>matrix-bot-sdk</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Travis Ralston</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">TypeScript</div>
+                </div>
+                <p>TypeScript&#x2F;JavaScript SDK for Matrix bots.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;turt2live&#x2F;matrix-bot-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-agpl-3-0-or-later language-c">
+                <div class="title-row">
+                    <h3>libkazv</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">The Kazv Project</div>
+                <div class="licence-language">
+                    <div class="pill">AGPL-3.0-or-later</div>
+                    <div class="pill">C++</div>
+                </div>
+                <p>A matrix client sdk built upon lager and the value-oriented design it enables.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;lily-is.land&#x2F;kazv&#x2F;libkazv">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-mit language-ruby">
+                <div class="title-row">
+                    <h3>Ruby Matrix SDK</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Ananace</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">Ruby</div>
+                </div>
+                <p>Ruby SDK for the Matrix communication protocol.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;ananace&#x2F;ruby-matrix-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-lgpl-2-1-only language-c">
+                <div class="title-row">
+                    <h3>Quotient</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">The Quotient team</div>
+                <div class="licence-language">
+                    <div class="pill">LGPL-2.1-only</div>
+                    <div class="pill">C++</div>
+                </div>
+                <p>A Qt5 library to write cross-platform clients for Matrix
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;quotient-im">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-unknown language-java">
+                <div class="title-row">
+                    <h3>Matrix-ClientServer-API-java</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Jojii</div>
+                <div class="licence-language">
+                    <div class="pill">Unknown</div>
+                    <div class="pill">Java</div>
+                </div>
+                <p>A small and simple java API for the Matrix ClientServer Protocol.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;JojiiOfficial&#x2F;Matrix-ClientServer-API-java">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-mit language-c">
+                <div class="title-row">
+                    <h3>Matrix C# SDK</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Baking Bad</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">C#</div>
+                </div>
+                <p>Build .NET apps compatible with the Matrix Protocol.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;baking-bad&#x2F;matrix-dotnet-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-alpha licence-apache-2-0 language-kotlin">
+                <div class="title-row">
+                    <h3>dial-phone</h3>
+                    <div class="maturity alpha">Alpha</div>
+                </div>
+                <div class="author">mtorials</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Kotlin</div>
+                </div>
+                <p>A Matrix client-server SDK written in Kotlin.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;mtorials&#x2F;dial-phone">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="purpose-bridge-panel" class="panel">
+    <p>
+        <p>Bridge SDKs are used to develop appservices meant to either connect a Matrix
+community to a third party chat platform, or to exchange data with another
+platform.</p>
+
+    </p>
+
+    <div id="bridge-sdks-filters" class="filters">
+        <div class="filter-wrap">
+            <button id="bridge-sdks-filter-maturity" class="filter">
+                Maturity
+                <div class="divider"></div>
+                <img src="/assets/down-arrow.svg" alt="Downward facing arrow">
+            </button>
+            <div id="bridge-sdks-filter-maturity-menu" class="filter-menu">
+                <p>The SDK can support any of the maturity levels checked.</p>
+                <div class="filter-option">
+                    <input id="maturity-stable" type="checkbox" checked>
+                    <label for="maturity-stable">Stable</label>
+                </div>
+                <div class="filter-option">
+                    <input id="maturity-beta" type="checkbox" checked>
+                    <label for="maturity-beta">Beta</label>
+                </div>
+                <div class="filter-option">
+                    <input id="maturity-alpha" type="checkbox" checked>
+                    <label for="maturity-alpha">Alpha</label>
+                </div>
+                <div class="filter-option">
+                    <input id="maturity-obsolete" type="checkbox">
+                    <label for="maturity-obsolete">Obsolete</label>
+                </div>
+                <div class="reset-links">Select <button>all</button> - <button>none</button></div>
+            </div>
+        </div>
+        <div class="filter-wrap">
+            <button id="bridge-sdks-filter-licence" class="filter">
+                Licence
+                <div class="divider"></div>
+                <img src="/assets/down-arrow.svg" alt="Downward facing arrow">
+            </button>
+            <div id="bridge-sdks-filter-licence-menu" class="filter-menu">
+                <p>The client can support any of the licences checked.</p>
+                
+                <div class="filter-option">
+                    <input id="licence-agpl-3-0" type="checkbox" checked>
+                    <label for="licence-agpl-3-0">AGPL-3.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-agpl-3-0-only" type="checkbox" checked>
+                    <label for="licence-agpl-3-0-only">AGPL-3.0-only</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-agpl-3-0-or-later" type="checkbox" checked>
+                    <label for="licence-agpl-3-0-or-later">AGPL-3.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-apache-2-0" type="checkbox" checked>
+                    <label for="licence-apache-2-0">Apache-2.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-artistic2" type="checkbox" checked>
+                    <label for="licence-artistic2">Artistic2</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-cc0-1-0" type="checkbox" checked>
+                    <label for="licence-cc0-1-0">CC0-1.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-eupl-1-2" type="checkbox" checked>
+                    <label for="licence-eupl-1-2">EUPL-1.2</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-1-0-or-later" type="checkbox" checked>
+                    <label for="licence-gpl-1-0-or-later">GPL-1.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-3-0" type="checkbox" checked>
+                    <label for="licence-gpl-3-0">GPL-3.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-3-0-only" type="checkbox" checked>
+                    <label for="licence-gpl-3-0-only">GPL-3.0-only</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-gpl-3-0-or-later" type="checkbox" checked>
+                    <label for="licence-gpl-3-0-or-later">GPL-3.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-isc" type="checkbox" checked>
+                    <label for="licence-isc">ISC</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-lgpl-2-1-only" type="checkbox" checked>
+                    <label for="licence-lgpl-2-1-only">LGPL-2.1-only</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-lgpl-3-0-or-later" type="checkbox" checked>
+                    <label for="licence-lgpl-3-0-or-later">LGPL-3.0-or-later</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-mit" type="checkbox" checked>
+                    <label for="licence-mit">MIT</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-mpl-2-0" type="checkbox" checked>
+                    <label for="licence-mpl-2-0">MPL-2.0</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-none" type="checkbox" checked>
+                    <label for="licence-none">None</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="licence-unknown" type="checkbox" checked>
+                    <label for="licence-unknown">Unknown</label>
+                </div>
+                
+                <div class="reset-links">Select <button>all</button> - <button>none</button></div>
+            </div>
+        </div>
+        <div class="filter-wrap">
+            <button id="bridge-sdks-filter-language" class="filter">
+                Language
+                <div class="divider"></div>
+                <img src="/assets/down-arrow.svg" alt="Downward facing arrow">
+            </button>
+            <div id="bridge-sdks-filter-language-menu" class="filter-menu">
+                <p>The client must support any of the languages checked.</p>
+                
+                <div class="filter-option">
+                    <input id="language-c" type="checkbox" checked>
+                    <label for="language-c">C</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-c" type="checkbox" checked>
+                    <label for="language-c">C#</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-c" type="checkbox" checked>
+                    <label for="language-c">C++</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-dart" type="checkbox" checked>
+                    <label for="language-dart">Dart</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-elm" type="checkbox" checked>
+                    <label for="language-elm">Elm</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-erlang" type="checkbox" checked>
+                    <label for="language-erlang">Erlang</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-go" type="checkbox" checked>
+                    <label for="language-go">Go</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-haxe" type="checkbox" checked>
+                    <label for="language-haxe">Haxe</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-java" type="checkbox" checked>
+                    <label for="language-java">Java</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-javascript" type="checkbox" checked>
+                    <label for="language-javascript">JavaScript</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-kotlin" type="checkbox" checked>
+                    <label for="language-kotlin">Kotlin</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-lisp" type="checkbox" checked>
+                    <label for="language-lisp">Lisp</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-objective-c" type="checkbox" checked>
+                    <label for="language-objective-c">Objective-C</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-php" type="checkbox" checked>
+                    <label for="language-php">PHP</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-perl" type="checkbox" checked>
+                    <label for="language-perl">Perl</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-python" type="checkbox" checked>
+                    <label for="language-python">Python</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-racket" type="checkbox" checked>
+                    <label for="language-racket">Racket</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-raku" type="checkbox" checked>
+                    <label for="language-raku">Raku</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-ruby" type="checkbox" checked>
+                    <label for="language-ruby">Ruby</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-rust" type="checkbox" checked>
+                    <label for="language-rust">Rust</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-swift" type="checkbox" checked>
+                    <label for="language-swift">Swift</label>
+                </div>
+                
+                <div class="filter-option">
+                    <input id="language-typescript" type="checkbox" checked>
+                    <label for="language-typescript">TypeScript</label>
+                </div>
+                
+                <div class="reset-links">Select <button>all</button> - <button>none</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bridge-sdks" class="projects-card-deck">
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-apache-2-0 language-kotlin">
+                <div class="title-row">
+                    <h3>Trixnity</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Trixnity Team</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Kotlin</div>
+                </div>
+                <p>Multiplatform Kotlin SDK for developing Clients, Bots, Appservices and Servers.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;gitlab.com&#x2F;trixnity&#x2F;trixnity">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mpl-2-0 language-python">
+                <div class="title-row">
+                    <h3>mautrix-python</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Tulir</div>
+                <div class="licence-language">
+                    <div class="pill">MPL-2.0</div>
+                    <div class="pill">Python</div>
+                </div>
+                <p>A Python 3 asyncio Matrix framework.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;mautrix&#x2F;python">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mpl-2-0 language-go">
+                <div class="title-row">
+                    <h3>mautrix-go</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Tulir</div>
+                <div class="licence-language">
+                    <div class="pill">MPL-2.0</div>
+                    <div class="pill">Go</div>
+                </div>
+                <p>A Golang Matrix framework.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;mautrix&#x2F;go">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-apache-2-0 language-typescript">
+                <div class="title-row">
+                    <h3>matrix-appservice-bridge</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Matrix.org</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">TypeScript</div>
+                </div>
+                <p>Bridging infrastructure for Application Services.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-bridge">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-mit language-rust">
+                <div class="title-row">
+                    <h3>Ruma</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Ruma team</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">Rust</div>
+                </div>
+                <p>A set of Rust crates for interacting with the Matrix chat network.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;ruma">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-apache-2-0 language-javascript">
+                <div class="title-row">
+                    <h3>Matrix.org JS SDK</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Matrix.org team</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">JavaScript</div>
+                </div>
+                <p>Matrix Client-Server SDK for JavaScript.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-stable licence-apache-2-0 language-javascript">
+                <div class="title-row">
+                    <h3>Matrix.org AS Node SDK</h3>
+                    <div class="maturity stable">Stable</div>
+                </div>
+                <div class="author">Matrix.org team</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">JavaScript</div>
+                </div>
+                <p>Matrix Application Service framework in Node.js.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-node">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-agpl-3-0 language-c">
+                <div class="title-row">
+                    <h3>Rory&amp;::LibMatrix</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Rory&amp; and other contributors</div>
+                <div class="licence-language">
+                    <div class="pill">AGPL-3.0</div>
+                    <div class="pill">C#</div>
+                </div>
+                <p>A .NET 8 library for interacting with Matrix.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;cgit.rory.gay&#x2F;matrix&#x2F;LibMatrix.git">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-apache-2-0 language-rust">
+                <div class="title-row">
+                    <h3>matrix-rust-sdk</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">poljar</div>
+                <div class="licence-language">
+                    <div class="pill">Apache-2.0</div>
+                    <div class="pill">Rust</div>
+                </div>
+                <p>An implementation of a Matrix client-server library in Rust.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-rust-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <div
+                class="project-card maturity-beta licence-mit language-typescript">
+                <div class="title-row">
+                    <h3>matrix-bot-sdk</h3>
+                    <div class="maturity beta">Beta</div>
+                </div>
+                <div class="author">Travis Ralston</div>
+                <div class="licence-language">
+                    <div class="pill">MIT</div>
+                    <div class="pill">TypeScript</div>
+                </div>
+                <p>TypeScript&#x2F;JavaScript SDK for Matrix bots.
+</p>
+                <div class="server-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;turt2live&#x2F;matrix-bot-sdk">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.61719 18.8899V16.6399L10.6172 12.6768V15.2656L4.45526 17.7393L4.53835 17.6051V17.9247L4.45526 17.7905L10.6172 20.2642V22.853L1.61719 18.8899ZM19.0227 9.29545L14.804 24.9688H12.4581L16.6768 9.29545H19.0227ZM29.8652 18.8899L20.8652 22.853V20.2642L27.0272 17.7905L26.9441 17.9247V17.6051L27.0272 17.7393L20.8652 15.2656V12.6768L29.8652 16.6399V18.8899Z" fill="black"/>
+</svg>
+
+                        Repository
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+</div>
+
+<div id="filters-overlay"></div>
+
+
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

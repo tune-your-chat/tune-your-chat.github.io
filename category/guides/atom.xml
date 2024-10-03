@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - Guides</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/guides/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-01-04T17:00:00+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/guides/atom.xml</id>
+    
+    
+    
+<entry xml:lang="en">
+    <title>Migrating from EMS to self-hosted Matrix</title>
+    <published>2024-01-04T17:00:00+00:00</published>
+    <updated>2024-01-04T17:00:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/</id>
+    <content type="html">&lt;h2 id=&quot;running-my-own-matrix-homeserver&quot;&gt;Running my own Matrix homeserver&lt;&#x2F;h2&gt;
+&lt;p&gt;I confess I&#x27;m awfully chuffed with myself as we return from the holiday break. I just completed a successful migration of my main Matrix account from managed hosting to a homeserver that I run for myself on a virtual private server (VPS).&lt;&#x2F;p&gt;
+&lt;p&gt;The whole experience has been illuminating, and there are some specific details that are timely for people like me who needed to migrate off of Element Matrix Services (EMS) as they pivot to focus on enterprise.&lt;&#x2F;p&gt;
+&lt;p&gt;Thus, this blog post. I&#x27;m going to share my experience in hopes that it&#x27;ll help some folks with that migration!&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;beware-the-gotchas&quot;&gt;Beware the gotchas&lt;&#x2F;h2&gt;
+&lt;p&gt;Homeserver migration is a high stakes process, as there&#x27;s a point past which mistakes will permanently wreck your ability to communicate with other people on the open federation. At that point, the resolution is to create a new account!&lt;&#x2F;p&gt;
+&lt;p&gt;The reason it&#x27;s high stakes is that we&#x27;re talking about a secure, decentralized system which requires encryption keys to be exchanged, keys which change over time. That, combined with the fact that an EMS homeserver will resume running after it completes your export, means you have to take specific measures to disable interactions with all the accounts on your homeserver during the migration. I&#x27;ve consulted some of the brightest people in the Matrix ecosystem to account for this in my process, so &lt;strong&gt;if you&#x27;re using this blog post to navigate your own EMS migration, &lt;em&gt;read very carefully&lt;&#x2F;em&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Migration is typically not this tricky, and the initial setup of a fresh homeserver can be a breeze with the right tools!&lt;&#x2F;p&gt;
+&lt;p&gt;The other thing you need to know before you take any of my advice: I&#x27;m not a Matrix developer or expert, just a vintage web developer who likes to host some of my own infrastructure for reasons of privacy and flexibility ... and to keep my skills sharp. &lt;strong&gt;This guidance does &lt;em&gt;not&lt;&#x2F;em&gt; stand alone, it only makes sense if you&#x27;ve done your homework and read the documentation of the relevant projects.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;get-yourself-prepared&quot;&gt;Get yourself prepared&lt;&#x2F;h2&gt;
+&lt;p&gt;The specific path to migration I&#x27;m following today is moving from EMS to self-hosting with the matrix-docker-ansible-deploy project (which I&#x27;ll refer to as the &quot;MDAD project&quot; going forward). I found myself reading lots of docs but the two critical starting points are &lt;a href=&quot;https:&#x2F;&#x2F;ems-docs.element.io&#x2F;books&#x2F;element-cloud-documentation&#x2F;page&#x2F;migrate-from-ems-to-self-hosted&quot;&gt;Element&#x27;s own migration docs&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;spantaleev&#x2F;matrix-docker-ansible-deploy&#x2F;blob&#x2F;master&#x2F;docs&#x2F;README.md&quot;&gt;the MDAD project docs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I found it very helpful to play with the MDAD project on a fresh machine and an unused domain name. That got me to read the docs and get a feel for things before layering in the complexity of a migration.&lt;&#x2F;p&gt;
+&lt;p&gt;I deployed my new Matrix homeserver on a VPS running Ubuntu 22.04, which I was already using to host some other things. All my local work was done by command line on my MacBook. This meant I already had a server with most of the dependencies already in place, and I could readily SSH into it. It also means that I&#x27;ve already got Nginx listening on ports 80 and 443, so I had to get a little creative and dig deeper into the docs to set up &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;spantaleev&#x2F;matrix-docker-ansible-deploy&#x2F;blob&#x2F;master&#x2F;examples&#x2F;nginx&#x2F;README.md&quot;&gt;Nginx as a reverse proxy in front of Traefik&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;A few more important facts: EMS runs the Synapse homeserver alongside the matrix-media-repo (MMR) project, I&#x27;m doing the same to make this migration possible. And EMS, when I did my export, ran Synapse v1.97 whereas the latest release is v1.98. I confirmed there were no database schema changes between those two versions, so the difference in version number was immaterial, but typically your migration target should be the same version as your export.&lt;&#x2F;p&gt;
+&lt;p&gt;This migration will involve some downtime, and a period of low performance. Messages sent in encrypted rooms during that downtime will likely be unreadable, even if you do everything right. Having an alternate account can be useful, or just ask people to resend important messages. In my specific case, with a single-user homeserver that had been active for 13 months, I started my migration at 10am and by 12:30pm I could log back in but things weren&#x27;t really usable until evening. To be on the safe side, plan for it to take longer.&lt;&#x2F;p&gt;
+&lt;p&gt;Since this is a high stakes migration, let&#x27;s also be clear on the order of operations before we begin. I cannot stress enough how important this is – &lt;em&gt;read carefully, do not cut corners&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Every user account on your homeserver needs to dedicate a little time to these steps, to ensure their accounts remain usable after the migration:
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ems-docs.element.io&#x2F;books&#x2F;element-cloud-documentation&#x2F;page&#x2F;set-up-cross-signing&quot;&gt;Export a Recovery Key&lt;&#x2F;a&gt; so they can log back in without cross-verifying a device.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ems-docs.element.io&#x2F;books&#x2F;element-cloud-documentation&#x2F;page&#x2F;export-and-import-e2e-room-keys&quot;&gt;Export E2E room keys&lt;&#x2F;a&gt; from every client they have logged in.&lt;&#x2F;li&gt;
+&lt;li&gt;Use a client they can access to sign out of sessions on devices they don&#x27;t have access to, and any bridges that are registered in the sessions list.&lt;&#x2F;li&gt;
+&lt;li&gt;Log out of all the remaining clients. This reduces risk of things changing or becoming undecryptable after the migration is complete.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;After all users have completed those steps, cut over your DNS and .well-known files. This stops traffic from being directed to your EMS host.&lt;&#x2F;li&gt;
+&lt;li&gt;Wait twice as long as your old DNS TTL values were set to, to allow for propagation with a fudge factor.&lt;&#x2F;li&gt;
+&lt;li&gt;Request a backup from EMS. It took about 2 hours from the time I requested my export for the database export to be ready, and 2.5 hours for the media repo export to be ready.&lt;&#x2F;li&gt;
+&lt;li&gt;Import key configuration values, do initial setup of your homeserver, and import your database. Do not start Synapse until the database is imported! &lt;strong&gt;The &quot;set up your homeserver&quot; instructions below are primarily focused on this step.&lt;&#x2F;strong&gt;
+&lt;ol&gt;
+&lt;li&gt;If this goes badly wrong, restore DNS and fix.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Turn your Synapse on. It&#x27;ll roar to life and eat a bunch of CPU as it catches up, but that&#x27;s fine.&lt;&#x2F;li&gt;
+&lt;li&gt;Wait for things to catch up. In this time, ask your key contacts to re-send any messages they may have sent while you&#x27;ve been offline.&lt;&#x2F;li&gt;
+&lt;li&gt;Also while waiting, import your media.&lt;&#x2F;li&gt;
+&lt;li&gt;If things look good after about 2-4 hours, cancel and delete your EMS homeserver (it&#x27;ll now be too far behind to roll back to).&lt;&#x2F;li&gt;
+&lt;li&gt;Rotate your signing key at your convenience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;set-up-your-homeserver&quot;&gt;Set up your homeserver&lt;&#x2F;h2&gt;
+&lt;p&gt;These instructions are focused on setting up your homeserver, importing your database, and importing your media. Here are some assumptions I&#x27;m making in what I&#x27;ve written:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dependencies are already addressed locally and remotely.&lt;&#x2F;li&gt;
+&lt;li&gt;You don&#x27;t have any bridges setup on EMS. (Their &lt;a href=&quot;https:&#x2F;&#x2F;ems-docs.element.io&#x2F;books&#x2F;element-cloud-documentation&#x2F;page&#x2F;migrate-from-ems-to-self-hosted&quot;&gt;docs&lt;&#x2F;a&gt; cover what to do if you do have bridges.)&lt;&#x2F;li&gt;
+&lt;li&gt;You&#x27;ve cloned the MDAD project locally and configured your playbook.
+&lt;ul&gt;
+&lt;li&gt;You&#x27;re using the default profile (Synapse, Element, Postgres, Coturn, Traefik, Let&#x27;s Encrypt, and Exim) and, of the optional services, have opted to use matrix-media-repo (MMR).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;You&#x27;ve already set your target host in the MDAD project.&lt;&#x2F;li&gt;
+&lt;li&gt;You&#x27;ve already put the &lt;code&gt;macaroon&lt;&#x2F;code&gt; and &lt;code&gt;pepper&lt;&#x2F;code&gt; keys from your EMS export into the MDAD project&#x27;s &lt;code&gt;vars.yml&lt;&#x2F;code&gt;, under &lt;code&gt;matrix_synapse_macaroon_secret_key&lt;&#x2F;code&gt; and &lt;code&gt;matrix_synapse_password_config_pepper&lt;&#x2F;code&gt; respectively.&lt;&#x2F;li&gt;
+&lt;li&gt;You&#x27;re using a bare domain for your account handles (as in, not using a subdomain).&lt;&#x2F;li&gt;
+&lt;li&gt;You&#x27;ve already handled the SSL certificates and prepared your DNS.&lt;&#x2F;li&gt;
+&lt;li&gt;You&#x27;ll store your EMS exports locally at &lt;code&gt;~&#x2F;dev&#x2F;migration&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;You&#x27;ve got a directory setup on the host server at &lt;code&gt;&#x2F;root&#x2F;migration&lt;&#x2F;code&gt; – and you run commands on the host as root.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;OK, with all that scene setting done, let&#x27;s walk through the steps you&#x27;ll need to take to set up your homeserver and import your data!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;run-your-ansible-playbook&quot;&gt;Run your Ansible playbook&lt;&#x2F;h3&gt;
+&lt;p&gt;From your local machine, run the Ansible playbook. All of the commands we run from the local machine are within the base directory of the MDAD project. Critically, we&#x27;re only installing things – not starting any services yet.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; just roles
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; ansible-playbook -i inventory&#x2F;hosts setup.yml --tags=install-all
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;import-your-signing-key&quot;&gt;Import your signing key&lt;&#x2F;h3&gt;
+&lt;p&gt;On your remote host, edit &lt;code&gt;&#x2F;matrix&#x2F;synapse&#x2F;config&#x2F;matrix.DOMAIN.signing.key&lt;&#x2F;code&gt; and replace the autogenerated signing key with the one from your EMS export.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;upload-your-exports&quot;&gt;Upload your exports&lt;&#x2F;h3&gt;
+&lt;p&gt;Upload your database and media exports to your remote host by running these commands on your local machine.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; rsync -Pav ~&#x2F;dev&#x2F;migration&#x2F;DOMAIN-synapse-database.zip root@REMOTEHOST:&#x2F;root&#x2F;migration&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; rsync -Pav ~&#x2F;dev&#x2F;migration&#x2F;DOMAIN-media-DOMAIN.zip root@REMOTEHOST:&#x2F;root&#x2F;migration&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;prepare-your-database-for-import&quot;&gt;Prepare your database for import&lt;&#x2F;h3&gt;
+&lt;p&gt;On your remote host, run the following sequence of commands. These will convert the EMS database export to the format that the MDAD project supports importing, and prepares Postgres for the import.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; cd ~&#x2F;migration
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; unzip DOMAIN-synapse-database.zip
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Take note of the name of the directory that&#x27;s extracted from the archive. It will be of the format &lt;code&gt;UNIQUEID-live-DOMAIN-synapse-database.dir&lt;&#x2F;code&gt; and that unique ID will be something we need to refer back to several times.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; rm DOMAIN-synapse-database.zip
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; pg_restore –file=ems-export.sql UNIQUEID-live-DOMAIN-synapse-database.dir&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; rm -fr UNIQUEID-live-DOMAIN-synapse-database.dir&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now that you&#x27;ve converted the EMS database export, let&#x27;s prepare Postgres for some of the minor differences it will encounter when we run the import.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; systemctl start matrix-postgres
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &#x2F;matrix&#x2F;postgres&#x2F;bin&#x2F;cli
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &amp;gt; CREATE ROLE rdsadmin;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &amp;gt; CREATE ROLE UNIQUEID;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &amp;gt; \q
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;import-your-database&quot;&gt;Import your database&lt;&#x2F;h3&gt;
+&lt;p&gt;On your local machine, run this command to begin the import process on your remote host:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; just run-tags import-postgres --extra-vars=server_path_postgres_dump=&#x2F;root&#x2F;migration&#x2F;ems-export.sql --extra-vars=postgres_default_import_database=synapse
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now, going back to the remote machine, let&#x27;s make one change to the database to make sure the imported data is owned by the correct user:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; &#x2F;matrix&#x2F;postgres&#x2F;bin&#x2F;cli
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &amp;gt; \c synapse
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &amp;gt; REASSIGN OWNED BY UNIQUEID TO synapse;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &amp;gt; \q
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then you&#x27;re done importing the database!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;import-your-media&quot;&gt;Import your media&lt;&#x2F;h3&gt;
+&lt;p&gt;You can afford to delay the media import if that&#x27;s convenient for you, but people might notice some missing images so I recommend doing it promptly. All of these commands should be run on the remote host.&lt;&#x2F;p&gt;
+&lt;p&gt;This step differs in key ways from the database import. The database import we did from our local machine, by telling the remote host to import a database file that was stored on the remote host outside of the Docker container that the database runs in. In this case, we are running these commands on the remote host and we are placing the media archive in a place that is mounted into the Docker container that matrix-media-repo is running in.&lt;&#x2F;p&gt;
+&lt;p&gt;Here we go:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; mv ~&#x2F;migration&#x2F;DOMAIN-media-DOMAIN.zip &#x2F;matrix&#x2F;matrix-media-repo&#x2F;data&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; cd &#x2F;matrix&#x2F;matrix-media-repo&#x2F;data&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; unzip DOMAIN-media-DOMAIN.zip
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; chown -R matrix:matrix *
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; rm DOMAIN-media-DOMAIN.zip
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; systemctl start matrix-media-repo
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; docker exec -it matrix-media-repo &#x2F;usr&#x2F;local&#x2F;bin&#x2F;gdpr_import -directory &#x2F;data&#x2F;UNIQUEID-live-DOMAIN-media-DOMAIN
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The import process will ask for a Machine ID. As it suggests, you can just enter 1.&lt;&#x2F;p&gt;
+&lt;p&gt;To test if the import was successful, run the following command:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; docker exec -it matrix-media-repo &#x2F;usr&#x2F;local&#x2F;bin&#x2F;gdpr_import -directory &#x2F;data&#x2F;UNIQUEID-live-DOMAIN-media-DOMAIN -verify
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;rotate-your-signing-key&quot;&gt;Rotate your signing key&lt;&#x2F;h3&gt;
+&lt;p&gt;This is not a step I&#x27;ve taken myself, but you may be keen to do this. The high level guidance I was given is as follows:&lt;&#x2F;p&gt;
+&lt;p&gt;First, create a new key with the &lt;code&gt;generate_signing_key.py&lt;&#x2F;code&gt; script that comes with Synapse.&lt;&#x2F;p&gt;
+&lt;p&gt;Then, list your old public key under &lt;code&gt;old_signing_keys&lt;&#x2F;code&gt; in your &lt;code&gt;homeserver.yaml&lt;&#x2F;code&gt; file (&lt;a href=&quot;https:&#x2F;&#x2F;element-hq.github.io&#x2F;synapse&#x2F;latest&#x2F;usage&#x2F;configuration&#x2F;config_documentation.html?highlight=old_signing_key#old_signing_keys&quot;&gt;docs&lt;&#x2F;a&gt;). If you&#x27;re using the MDAD project as I am, you&#x27;ll want to make this change using the &lt;code&gt;matrix_synapse_configuration_extension_yaml&lt;&#x2F;code&gt; variable locally in the &lt;code&gt;vars.yml&lt;&#x2F;code&gt; file.&lt;&#x2F;p&gt;
+&lt;p&gt;Lastly, replace the contents of the &lt;code&gt;&#x2F;matrix&#x2F;synapse&#x2F;config&#x2F;matrix.DOMAIN.signing.key&lt;&#x2F;code&gt; file on your remote host with your new key.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;fire-things-up&quot;&gt;Fire things up&lt;&#x2F;h3&gt;
+&lt;p&gt;If your database and media imports have gone over successfully, you can safely start your homeserver! If not, you&#x27;ll need to do some troubleshooting.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the command to start your homeserver, which is meant to be run from your local machine:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; ansible-playbook -i inventory&#x2F;hosts setup.yml --tags=start
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;have-fun&quot;&gt;Have fun!&lt;&#x2F;h2&gt;
+&lt;p&gt;In my case, I had a pretty vanilla setup on EMS – no bridges or anything. But since migrating, I&#x27;ve started customizing things! There&#x27;s a lot you can do with Matrix and the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;spantaleev&#x2F;matrix-docker-ansible-deploy&#x2F;tree&#x2F;master&quot;&gt;MDAD project&lt;&#x2F;a&gt; makes it fairly painless to experiment.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are a few of the additional things I&#x27;ve set up alongside my Synapse homeserver:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Etherpad&lt;&#x2F;li&gt;
+&lt;li&gt;Synapse Admin&lt;&#x2F;li&gt;
+&lt;li&gt;Sliding Sync Proxy&lt;&#x2F;li&gt;
+&lt;li&gt;Synapse Auto Compressor&lt;&#x2F;li&gt;
+&lt;li&gt;Shared Secret Auth&lt;&#x2F;li&gt;
+&lt;li&gt;Prometheus and Grafana&lt;&#x2F;li&gt;
+&lt;li&gt;Hookshot&lt;&#x2F;li&gt;
+&lt;li&gt;Bridges for IRC, Discord, LinkedIn, Facebook, and Instagram&lt;&#x2F;li&gt;
+&lt;li&gt;Matrix Reminder Bot&lt;&#x2F;li&gt;
+&lt;li&gt;Maubot&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I&#x27;ve also found the need to do some performance tuning – while the out-of-the-box setup on my homeserver could handle most rooms, it could not handle resource intensive rooms like Matrix HQ.&lt;&#x2F;p&gt;
+&lt;p&gt;However, I&#x27;m still working this out for myself. Performance tuning, such as enabling and tuning workers, is a topic for another day and another blog post. I&#x27;ll be collaborating with Tom Foster on such a post in the near future!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;&#x2F;h2&gt;
+&lt;p&gt;It took quite a lot of help for me to puzzle out this process. I am endlessly grateful to Travis Ralston, Tom Foster, Slavi Pantaleev, Cat, Richard van der Hoff, and many others for their support.&lt;&#x2F;p&gt;
+&lt;p&gt;As you embark on your own journey, I highly recommend reading the docs before you take any actions, and joining these rooms for peer support:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#matrix-docker-ansible-deploy:devture.com&quot;&gt;Docker + Ansible = Matrix&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#ems:matrix.org&quot;&gt;EMS (Element Matrix Services)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#synapse:matrix.org&quot;&gt;Synapse Admins&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#synapse-extreme-tuning:fostered.uk&quot;&gt;Synapse Extreme Tuning&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Onwards and upwards!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+</feed>

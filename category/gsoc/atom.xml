@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - GSOC</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/gsoc/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2021-05-20T00:00:00+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/gsoc/atom.xml</id>
+    
+    
+    
+    
+<entry xml:lang="en">
+    <title>Google Summer of Code 2021</title>
+    <published>2021-05-20T00:00:00+00:00</published>
+    <updated>2021-05-20T00:00:00+00:00</updated>
+    <author>
+      <name>Ben Parsons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2021/05/20/google-summer-of-code-2021/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2021/05/20/google-summer-of-code-2021/</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&quot;&gt;Google Summer of Code 2021&lt;&#x2F;a&gt; participants have been announced! This year &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6691635666092032&#x2F;&quot;&gt;Matrix has been assigned &lt;em&gt;seven&lt;&#x2F;em&gt; students&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;projects&quot;&gt;Projects&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;r-midhun-suresh-right-sidebar-for-hydrogen-client&quot;&gt;R Midhun Suresh: &lt;em&gt;Right Sidebar for Hydrogen client&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;R Midhun Suresh from the Mar Baselios College of Engineering &amp;amp; Technology in Trivandrum, India will be working on Hydrogen this summer, mentored by Bruno Windels. He will be working on adding a right panel to the room view, including a member list and room information. He will be blogging at https:&#x2F;&#x2F;midhunsureshr.github.io throughout the project.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;devin-ragotzy-ruma-s-automated-checks&quot;&gt;Devin Ragotzy: &lt;em&gt;Ruma&#x27;s Automated Checks&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;My name is Devin Ragotzy. I am a student at Western Michigan University in Kalamazoo, Michigan, studying computer science. I was lucky enough to work last summer on Ruma and have continued to contribute to the project. I was accepted to work on Ruma&#x27;s automated checks project, mentored by Isaiah Inuwa, Jonas Platte, Timo Kösters. The goal of the project is to create a linter capable of enforcing Ruma-specific style and practices. I hope to get this tool to a working state by the end of this summers GSoC!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;abhinav-krishna-c-k-first-class-email-bridge&quot;&gt;Abhinav Krishna C K: &lt;em&gt;First-Class Email Bridge&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Abhinav Krishna C K from NSS College of Engineering in Palakkad, India will be working on Building First-Class email bridge for Matrix this summer mentored by Half-Shot and tulir. This will enable Matrix to be connected with Email by translating incoming SMTP traffic to Matrix messages, and then bridging Matrix messages back into emails.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;frinksy-extend-ruma-s-api-coverage&quot;&gt;Frinksy: &lt;em&gt;Extend Ruma&#x27;s API coverage&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;My name is Adam Blanchet, and I am a student from the University of York in the UK.&lt;br &#x2F;&gt;
+I am happy to say that I have quite a few mentors: Isaiah Inuwa, Jonas Platte, Timo Kösters and Nico from Nheko.&lt;br &#x2F;&gt;
+My project is to extend Ruma&#x27;s API coverage. I&#x27;ll be doing a few things: finishing coverage of the Identity Service API, adding the &quot;knock&quot; feature to Ruma and finishing the implementation of QR code verification. If time allows it I will also work on implementing other MSCs or features such as &quot;Event notification attributes and actions&quot;. I hope that my work will help enable other Rust-based Matrix projects, such as Conduit and Fractal, to implement more features.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Timo added:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hello, I am Timo Kösters. I study Computer Science in Germany and spend most of the remaining time developing Conduit, a Matrix homeserver built on top of Ruma. I use Ruma all the time and will be mentoring Adam Blanchet to make it even better.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;vladyslav-hnatiuk-pyquotient&quot;&gt;Vladyslav Hnatiuk: &lt;em&gt;PyQuotient&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;My name is Vladyslav Hnatiuk, I&#x27;m a student  of Vienna University of Technology and my project is PyQuotient.&lt;br &#x2F;&gt;
+The aim is to simplify creating of a Matrix Qt-based clients in Python by providing Qt-based SDK and avoid writing a large part of functionality manually. And to not reinvent the wheel PyQuotient will be bindings for the existing library libQuotient that provides SDK for Matrix for C++ applications. I&#x27;ll be mentored by kitsune, the author of libQuotient and also libQuotient-based Matrix IM client Quaternion. I hope PyQuotient will facilitate the development of Matrix clients in Python with Qt, and it will be a small contribution to the promotion of Matrix, especially in Python world.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;kitsune added:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If this experience proves to be successful, there’s a good chance Quaternion will eventually switch to Python.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;callum-brown-token-authenticated-registration&quot;&gt;Callum Brown: &lt;em&gt;Token Authenticated Registration&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hi there, I&#x27;m Callum, a Londoner who&#x27;ll be starting a physics degree in September. For GSoC I&#x27;ll be working on adding Token Authenticated Registration to Matrix. This will allow homeserver admins to restrict who can sign-up by requiring a token to be submitted during registration. I run a small homeserver for friends and family, but don&#x27;t have the resources to make registration public, so I have wanted this feature integrated into Matrix servers and clients for quite a while! I&#x27;ll be working with Nico, anoa, and red_sky to write an MSC, implement the server side in Synapse, and the client side in Nheko. Thanks to the mentors and Matrix.org for the opportunity to work on this!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;You can follow along with this project&#x27;s progress throughout the program at https:&#x2F;&#x2F;calcuode.com&#x2F;matrix-gsoc&#x2F;.&lt;&#x2F;p&gt;
+&lt;p&gt;Nico, mentor added:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nico here, one of the Mentors. Personally I am super excited about this project! I have been using Matrix for a while now and I think Nheko is pretty good by now. But there is still a barrier, if I want my friends and family to use Matrix: They can&#x27;t easily sign up! I have tried creating them accounts and telling them to change their passwords, having a dedicated registration page or just telling them to just use a different server, but nothing of that made me happy and it added friction to the already hard process of getting someone to try a new messenger! As such I am super excited for this, because it will make signing up your friends and family to your personal instance, without it having to be public, sooooo much simpler!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;jaiwanth-exporting-conversations-from-element&quot;&gt;Jaiwanth: &lt;em&gt;Exporting Conversations From Element&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Jaiwanth Vemula from the IIT Kharagpur University in India will be working on Exporting Conversations in Element this summer, mentored by Michael (t3chguy). This work will enable users to easily export their conversations for archival or sharing, this is a feature which has been missed in Element for a very long time!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;fractal&quot;&gt;Fractal&lt;&#x2F;h2&gt;
+&lt;p&gt;There are also &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;5276176043474944&#x2F;&quot;&gt;two projects under the GNOME organisation&lt;&#x2F;a&gt; with students working on Fractal, a Matrix client for GNOME.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Alejandro Domínguez: &lt;em&gt;Fractal: Multi account support&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Kai A. Hiller: &lt;em&gt;Fractal NEXT&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;students-become-mentors&quot;&gt;Students become Mentors&lt;&#x2F;h2&gt;
+&lt;p&gt;I asked: &lt;em&gt;how many of those who are mentors this year have ever been GSOC students?&lt;&#x2F;em&gt; The answer is that this year four of the mentors were once GSoC students themselves!&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Half-Shot (2016): &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;archive&#x2F;2016&#x2F;projects&#x2F;4516500366950400&#x2F;&quot;&gt;Bark: Microblogging in Matrix&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Michael Telatynski (2017): &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;archive&#x2F;2017&#x2F;projects&#x2F;6077083444838400&#x2F;&quot;&gt;Improving Riot (+Analytics) and Matrix Discoverability&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Andrew Morgan (2017): &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;archive&#x2F;2017&#x2F;projects&#x2F;6673641785786368&#x2F;&quot;&gt;Qubes MIME Handlers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Julian Sparber (2018): &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;archive&#x2F;2018&#x2F;projects&#x2F;5853012987740160&#x2F;&quot;&gt;Improve the Fractal UI&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;eof&quot;&gt;EOF&lt;&#x2F;h2&gt;
+&lt;p&gt;That&#x27;s all! &lt;em&gt;Seven projects&lt;&#x2F;em&gt; in 2021 is awesome, and we&#x27;re looking forward to seeing updates from the students!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>GSOC report: Moving matrix-ircd to async&#x2F;await and futures 0.3</title>
+    <published>2020-09-18T13:05:13+00:00</published>
+    <updated>2020-09-18T13:05:13+00:00</updated>
+    <author>
+      <name>Brooks Karlik</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2020/09/18/gsoc-report-moving-matrix-ircd-to-async-await-and-futures-0-3/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2020/09/18/gsoc-report-moving-matrix-ircd-to-async-await-and-futures-0-3/</id>
+    <content type="html">&lt;p&gt;This is part of a series of reports on the &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&quot;&gt;&lt;em&gt;six&lt;&#x2F;em&gt; projects&lt;&#x2F;a&gt; assigned to Matrix for Google Summer of Code 2020.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&#x2F;#5911643604647936&quot;&gt;View project: Moving &lt;code&gt;matrix-ircd&lt;&#x2F;code&gt; to async&#x2F;await and &lt;code&gt;futures&lt;&#x2F;code&gt; 0.3&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;The goal of this project was to port &lt;code&gt;matrix-ircd&lt;&#x2F;code&gt; from the outdated combinators style of &lt;code&gt;futures&lt;&#x2F;code&gt; 0.1 to the new-and-improved style of &lt;code&gt;futures&lt;&#x2F;code&gt; 0.3. As initially proposed, this greatly improves code readability and removes the convoluted compiler errors that were pervasive in &lt;code&gt;futures&lt;&#x2F;code&gt; 0.1&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;matrix-ircd&quot;&gt;matrix-ircd&lt;&#x2F;h2&gt;
+&lt;p&gt;The matrix-ircd project functions as a bridge between two chat platforms: Internet relay chat (irc) and Matrix. matrix-ircd lets you use any standard IRC Client to communicate with Matrix chatrooms and direct messages.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;mentors&quot;&gt;Mentors&lt;&#x2F;h2&gt;
+&lt;p&gt;This project is mentored by Philipp Mandler (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phlmn&quot;&gt;@phlmn&lt;&#x2F;a&gt;) and Jonas Platte (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jplatte&quot;&gt;@jplatte&lt;&#x2F;a&gt;). I would like to thank them for the helpful advice and code reviews they have given me over the course of GSoC 2020.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;project-results&quot;&gt;Project Results&lt;&#x2F;h2&gt;
+&lt;p&gt;Since much of the code was written in late 2016, there were many portions of the code that were unidiomatic and produced compiler errors. The first step I made was to remove all compiler errors from &lt;code&gt;cargo&lt;&#x2F;code&gt; and &lt;code&gt;clippy&lt;&#x2F;code&gt; in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;64&quot;&gt;#64&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Additional tests were then written in various parts of the codebase to ensure that the upgrade would produce the same results. These changes were made in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;65&quot;&gt;#64&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;66&quot;&gt;#66&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Since the project master branch currently used a custom http implementation, I moved it to use &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt;, a fast and correct http implementation that already supported async&#x2F;await. Additionally, I moved the module that most utilized http, &lt;code&gt;matrix&lt;&#x2F;code&gt;, to async-await and the new &lt;code&gt;hyper&lt;&#x2F;code&gt; code. Not only did these changes shrink the code by ~700 lines, they also removed a lot of unnecessary complexity. These changes were made in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;67&quot;&gt;#67&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The last large module remaining, &lt;code&gt;irc&lt;&#x2F;code&gt;, was then ported to &lt;code&gt;irc&lt;&#x2F;code&gt;, along with its dependencies in &lt;code&gt;stream_fold.rs&lt;&#x2F;code&gt; and its upstream user in the &lt;code&gt;bridge&lt;&#x2F;code&gt; module. The most exciting part of these changes was the removal of the &lt;code&gt;futures&lt;&#x2F;code&gt; 0.1 dependency. All code was now running in &lt;code&gt;futures&lt;&#x2F;code&gt; 0.3! These changes also moved away from &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;erikjohnston&#x2F;tasked-futures&quot;&gt;tasked-futures&lt;&#x2F;a&gt; which further improved code readability. This PR was in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;71&quot;&gt;#71&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Since the bulk of the changes were now complete, I moved onto bug fixes. As &lt;a href=&quot;https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2020&#x2F;09&#x2F;18&#x2F;gsoc-report-moving-matrix-ircd-to-async-await-and-futures-0-3&#x2F;github.com&#x2F;jplatte&quot;&gt;@jplatte&lt;&#x2F;a&gt; mentioned in #71, the current single threaded approach to the application was not ideal. In &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;72&quot;&gt;#72&lt;&#x2F;a&gt; I updated all code to be multithreaded-compatible.&lt;&#x2F;p&gt;
+&lt;p&gt;Lastly, In &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;77&quot;&gt;#77&lt;&#x2F;a&gt; I included more tests to functions with heavy changes, added additional logging, removed unnecessary complexity that was introduced to keep code as &quot;1:1&quot; as possible, and added TLS support to &lt;code&gt;hyper&lt;&#x2F;code&gt; so that https would work. This patch also fixed a rather difficult bug regarding the irc TCP streams and the buffer they were reading into.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;remaining-work&quot;&gt;Remaining Work&lt;&#x2F;h2&gt;
+&lt;p&gt;Based on my personal testing there is &lt;em&gt;no additional work&lt;&#x2F;em&gt; to be done in the realm of updating to async&#x2F;await. All tests pass and the IRC server and matrix bridge function as expected. @jplatte kindly announced in the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;category&#x2F;this-week-in-matrix#matrix-ircd---call-for-testing&quot;&gt;This Week In Matrix&lt;&#x2F;a&gt; blog that we will be conducting public testing of the &lt;code&gt;async_await&lt;&#x2F;code&gt; branch on github. Barring any issues the async&#x2F;await code should be merged into the master branch in the next few weeks.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;pull-request-list&quot;&gt;Pull request list&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;64&lt;&#x2F;li&gt;
+&lt;li&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;65&lt;&#x2F;li&gt;
+&lt;li&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;66&lt;&#x2F;li&gt;
+&lt;li&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;67&lt;&#x2F;li&gt;
+&lt;li&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;71&lt;&#x2F;li&gt;
+&lt;li&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;72&lt;&#x2F;li&gt;
+&lt;li&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&#x2F;pull&#x2F;77&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>GSOC report: 	Ruma procedural macro refactoring and more</title>
+    <published>2020-09-16T16:35:54+00:00</published>
+    <updated>2020-09-16T16:35:54+00:00</updated>
+    <author>
+      <name>Devin Ragotzy</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2020/09/16/gsoc-report-ruma-procedural-macro-refactoring-and-more/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2020/09/16/gsoc-report-ruma-procedural-macro-refactoring-and-more/</id>
+    <content type="html">&lt;p&gt;This is part of a series of reports on the &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&quot;&gt;&lt;em&gt;six&lt;&#x2F;em&gt; projects&lt;&#x2F;a&gt; assigned to Matrix for Google Summer of Code 2020.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&#x2F;#4756651216732160&quot;&gt;View project: 	Ruma procedural macro refactoring and more&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Wow the summer has flown by, it feels like just yesterday I was learning how to rebase and what exactly it is Ruma does. I exaggerate slightly, but it is a big library with lots of public API surface. I have learned more in the last few months than in two years of school. I have been able to observe and participate in a project with a community growing around it, been a part of discussions about design and best practices, given and received numerous code reviews as well as learned the process of addressing the feedback, and working from a specification. In short, this has been an amazing opportunity to gain experience in all the things that are hard to obtain in a classroom.&lt;&#x2F;p&gt;
+&lt;p&gt;My project goal was to improve the existing macros in ruma-events-macros and ruma-api-macros. It became clear early on that this would include some major API changes and that improving the macros as they were was pointless without also moving to a new public API. While improving the durability and readability of the macro code I also rewrote entire sections to accommodate the new design.&lt;&#x2F;p&gt;
+&lt;p&gt;A quick overview of the Matrix protocol for reference: a client sends content that is interpreted by the server as events. The server distributes those events out to other clients and other servers (the server case is known as federation). Ruma groups these events by kind Message, State, Ephemeral, ToDevice and Basic which are represented as generic structs (&lt;code&gt;StateEvent&amp;lt;C&amp;gt;&lt;&#x2F;code&gt;). Each event kind needs to be able to hold many different content types, for state events there is room creation, room name, and membership events to name a
+few. Using the macros, enums are generated to represent all state event possibilities, so a variant for membership, room name, etc. These types exist to support the core API request and response types for each endpoint that is defined by the Matrix specification.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;gsoc-starts-and-i-start-with-ruma-events&quot;&gt;GSoC Starts and I start with ruma-events&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma-events&#x2F;pull&#x2F;85&quot;&gt;remove old ruma-events macros&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma-events&#x2F;pull&#x2F;86&quot;&gt;start work for event content derive, move to generic Event structs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma-events&#x2F;pull&#x2F;101&quot;&gt;collect all content types into enum&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma-events&#x2F;pull&#x2F;107&quot;&gt;add more types, making sure the macro works&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma-events&#x2F;pull&#x2F;108&quot;&gt;work on Event custom macro derive&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma-events&#x2F;pull&#x2F;111&quot;&gt;remove raw modules and FromRaw trait&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma-events&#x2F;pull&#x2F;119&quot;&gt;add each events enum&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma-events&#x2F;pull&#x2F;122&quot;&gt;add trybuild tests for ruma-events&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;more-work-on-ruma-events-now-a-part-of-the-new-mono-repo&quot;&gt;More work on ruma-events, now a part of the new mono-repo&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;52&quot;&gt;deserialization optimization for Any*Event, and benchmarking to verify&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;68&quot;&gt;reverting the removal of enum_enum macro, learning a lot of git along the way&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;69&quot;&gt;it took me awhile but I got the hang of it, only one review issue!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;97&quot;&gt;add accessor methods to the enums, making them much nicer to use&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;work-on-ruma-client-api&quot;&gt;Work on ruma-client-api&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;104&quot;&gt;refactoring the Api::to_tokens code helped me get my head around this crate&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;105&quot;&gt;notice my commit messages are starting to looking better&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;108&quot;&gt;not everything works out...&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;109&quot;&gt;but you get it eventually&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;111&quot;&gt;deep dive into rust features, I learned a lot about them&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;back-to-ruma-events&quot;&gt;Back to ruma-events&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;130&quot;&gt;a ruma events and client-api rename&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;138&quot;&gt;add code to generate redact method in event_enum!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;139&quot;&gt;adding to existing code without breaking everything is hard&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;155&quot;&gt;converting to and from the rusty way&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;179&quot;&gt;I love writing proc_macros, this was a fun one! Adding lifetimes in the req&#x2F;resp macro&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;continuing-maintenance&quot;&gt;Continuing maintenance&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;190&quot;&gt;quality of life stuff, the day to day work of a maintainer&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;201&quot;&gt;allow the internal macros to be used outside of the ruma crate more easily&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;213&quot;&gt;adding small needed features to the macros&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;pull&#x2F;234&quot;&gt;good ol&#x27; fashioned closing issues!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;One of my personal goals was to become more familiar with git. With the help of my mentor I now feel more confident using this tool that is so essential to developers. I became fairly adept at merging, rebasing, and navigating all the headaches that come with that. I learned plenty of new commands. A few highlights: &lt;code&gt;cherry-pick&lt;&#x2F;code&gt; and specific uses of &lt;code&gt;reset&lt;&#x2F;code&gt; to avoid copy-pasting fixes and adding more commits. I used the &lt;code&gt;reset&lt;&#x2F;code&gt; command to craft good commits, splitting work into appropriate chunks. I am glad that I had the opportunity to hone my git skills. I feel like I have accomplished my goal and then some!&lt;&#x2F;p&gt;
+&lt;p&gt;I am proud of the work that I have done: Being part of moving ruma-events much closer to the &lt;code&gt;0.22&lt;&#x2F;code&gt; release and creating macros to generate types specific to the Matrix specification. Working with the community that has grown around Ruma has been rewarding and I plan on sticking around.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>GSOC report: HTML Embeddable Matrix Chat Rooms</title>
+    <published>2020-09-15T16:04:04+00:00</published>
+    <updated>2020-09-15T16:04:04+00:00</updated>
+    <author>
+      <name>Arnav Tiwari</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2020/09/15/gsoc-report-html-embeddable-matrix-chat-rooms/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2020/09/15/gsoc-report-html-embeddable-matrix-chat-rooms/</id>
+    <content type="html">&lt;p&gt;This is part of a series of reports on the &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&quot;&gt;&lt;em&gt;six&lt;&#x2F;em&gt; projects&lt;&#x2F;a&gt; assigned to Matrix for Google Summer of Code 2020.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&#x2F;#5751467312414720&quot;&gt;View project: HTML Embeddable Matrix Chat Rooms&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;My name is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;arnav-t&#x2F;&quot;&gt;Arnav Tiwari&lt;&#x2F;a&gt; and I am a prefinal year undergraduate student from &lt;a href=&quot;http:&#x2F;&#x2F;www.iitkgp.ac.in&#x2F;&quot;&gt;IIT Kharagpur&lt;&#x2F;a&gt; and I wanted to share my amazing journey with Matrix. I am a budding open-source enthusiast and this was my first experience with Google Summer of Code. For the past few months, I had been working on a project to develop an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;arnav-t&#x2F;riot-embedded&quot;&gt;HTML embeddable chat client&lt;&#x2F;a&gt; under the GSoC program for Matrix. Matrix provides a highly versatile SDK for making custom clients that can be leveraged for a variety of applications, one of which is using Matrix to power an embeddable chat client. A chat client itself can have numerous forms, whether it being a live chat to a simple comments section. This project was intended to provide an easy-to-use and yet highly customizable client that can be deployed on a website with minimal effort.&lt;&#x2F;p&gt;
+&lt;p&gt;My goal for the project was to have a useable project by the end of the coding period, however, as it turned out, the project was going to be tested in the real world far sooner than that. The need for an embeddable client and the feasibility of the project to fulfill this role was demonstrated during the second month of the coding period itself. The client was &lt;a href=&quot;https:&#x2F;&#x2F;2020.commcon.xyz&#x2F;live&#x2F;&quot;&gt;deployed on the website of CommCon 2020&lt;&#x2F;a&gt;, a virtual conference on communication technologies (an apt place to be tested, coincidentally). On the days leading up to the conference and during the conference itself, I helped the organizers to set up, integrate, and troubleshoot the client when required. While the process went mostly without any hiccups, there was one small incident when the client broke during production. Since the project was still pretty early in development, I didn’t expect it to be bug-free and had anticipated the possibility of this happening. I was keeping an eye on things, which proved to be a prudent decision as I was able to fix this problem quickly and with minimal downtime. The rest of the conference went smoothly and the client performed quite well even when the number of users was quite large (A testament to Matrix’s scalability). Getting to experience this was a pleasant surprise since I never expected to have real users so soon, much less so many at once. Seeing the client being used out in the wild was a very fulfilling thing to witness. I also gained some very valuable feedback, courtesy of Dan, CommCon’s master of ceremonies.&lt;&#x2F;p&gt;
+&lt;p&gt;Over the next month or so, I kept on steadily adding features and building up the client. The next big break for the project came in the form of another conference. &lt;a href=&quot;https:&#x2F;&#x2F;akademy.kde.org&#x2F;2020&quot;&gt;KDE Akademy 2020&lt;&#x2F;a&gt;. This was a big surprise as I genuinely didn’t expect to see another large conference using the project so soon. The conference was scheduled to be held after a week or so after the end of the coding period. This time, however, the integration was almost completely handled by the conference organizers themselves since it had to be integrated with their version of BigBlueButton, a web conferencing system. As the conference drew nearer, things seemed to be working out well and there was no sign of trouble. When the day of the conference finally came, however, many things seem to break simultaneously due to an apparent incompatibility with BBB. In the end, despite the numerous attempts by the conference organizers and myself to remedy the issues, they had to roll back to an older version of the chat since the risk would be too great. The organizers were understandably disappointed since they had spent a while working on the integration and had seen the great potential of using this client in place of their old chat system.. Even though It was a sad conclusion to the journey, there were still many lessons to be learned. Most importantly, even though the client might work well in standalone circumstances, ease of integration might have some room for improvement. Open-source development never truly stops and I don’t intend to give up on this project. I look forward to constantly improving it and seeing more people adopt it.&lt;&#x2F;p&gt;
+&lt;p&gt;These past few months were a spectacular experience. Even before starting this journey, I knew I would learn a lot but this still managed to exceed all my expectations. I got to learn things I never would have thought I would be able to experience under GSoC. I met some awesome people along the way, I’m extremely grateful to my mentors Ben Parsons and Travis Ralston for being the best mentors anyone could ever ask for. They were always approachable and friendly throughout the entire program and I never hesitated before asking for their help. Without their guidance, all of this would’ve certainly not been possible. Lastly, I want to express my gratitude to Matrix for believing in me and giving me the opportunity to undertake this project. The Matrix community is full of talented people who will go the extra mile if you ask them for help. It has truly been a pleasure working with them and I hope to continue working with them in the future. Cheers and hope to see continue seeing you all!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>GSOC report: Enabling E2EE in Opsdroid Matrix Connector</title>
+    <published>2020-09-10T14:50:50+00:00</published>
+    <updated>2020-09-10T14:50:50+00:00</updated>
+    <author>
+      <name>Tyagraj Desigar</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2020/09/10/gsoc-report-enabling-e2ee-in-opsdroid-matrix-connector/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2020/09/10/gsoc-report-enabling-e2ee-in-opsdroid-matrix-connector/</id>
+    <content type="html">&lt;p&gt;This is part of a series of reports on the &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&quot;&gt;&lt;em&gt;six&lt;&#x2F;em&gt; projects&lt;&#x2F;a&gt; assigned to Matrix for Google Summer of Code 2020.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&#x2F;#6107552447725568&quot;&gt;View project: Enabling E2EE in Opsdroid Matrix Connector&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;I&#x27;m &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Tyagdit&quot;&gt;Tyagraj Desigar&lt;&#x2F;a&gt; and I worked on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opsdroid&#x2F;opsdroid&quot;&gt;Opsdroid&lt;&#x2F;a&gt; with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Cadair&quot;&gt;Stuart Mumford&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SolarDrew&quot;&gt;Drew Leonard&lt;&#x2F;a&gt;. Opsdroid is a python framework for creating platform agnostic bots usable with multiple chat services including matrix.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-plan&quot;&gt;The Plan&lt;&#x2F;h2&gt;
+&lt;p&gt;The project&#x27;s focus was on the interaction layer (called a connector) between opsdroid and matrix. As it stood, the connector used the deprecated &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-python-sdk&quot;&gt;matrix-python-sdk&lt;&#x2F;a&gt; and had no support for encryption. The aim was to change this by moving over to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;poljar&#x2F;matrix-nio&quot;&gt;matrix-nio&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I had planned to work on some other features as well:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;A database module for opsdroid using matrix state events&lt;&#x2F;li&gt;
+&lt;li&gt;Support for unused matrix events&lt;&#x2F;li&gt;
+&lt;li&gt;Homeserver lookup using &lt;code&gt;.well-known&lt;&#x2F;code&gt; API requests&lt;&#x2F;li&gt;
+&lt;li&gt;Device verification process for the bot&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Porting to nio and adding encryption support was the bulk of the project, and the &lt;strong&gt;minimum&lt;&#x2F;strong&gt; I wanted to accomplish by the end of the project. I wanted to have a connector that worked as it did already with support for encrypted rooms which needed minimal extra configuration.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-process&quot;&gt;The Process&lt;&#x2F;h2&gt;
+&lt;p&gt;The process began with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;opsdroid&#x2F;opsdroid&#x2F;pull&#x2F;1418&quot;&gt;This PR&lt;&#x2F;a&gt; which gave us a head start with the migration to matrix-nio. Through helping to review the PR I got to understand how matrix-nio and opsdroid work.&lt;&#x2F;p&gt;
+&lt;p&gt;The implementation of encryption support was a little tricky in that it was tough to figure out the process required to do that in the context of the connector. One problem we faced was the installation of dependencies. Installing &lt;code&gt;libolm&lt;&#x2F;code&gt;, a C library which nio uses for encryption was a less than smooth process. This spawned a couple side projects that dealt with the CI, testing and installation of opsdroid. In the end we found a solution and had a working connector on our hands.&lt;&#x2F;p&gt;
+&lt;p&gt;Next we shifted focus to the database module. It was based on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SolarDrew&#x2F;database-matrix&quot;&gt;this project&lt;&#x2F;a&gt;. I rewrote it with nio and added a few features. The idea was straightforward but the implementation had many catches since we were working under some constraints for the interfacing with opsdroid. It went through several iterations before we settled on the final product.&lt;&#x2F;p&gt;
+&lt;p&gt;The encryption and database took longer than I had initially expected which meant we didn&#x27;t get to work on adding support for more events and homeserver lookups. I had a go at adding device verification steps while working on the encryption support but that turned out to be quite complicated and would introduce some breaking changes, besides cross-signing had just been introduced so we decided to drop that till nio implemented some way to leverage cross-signing.&lt;&#x2F;p&gt;
+&lt;p&gt;Along the way some issues cropped up with the testing frameworks and CI that were hard to pinpoint and caused further delays but were solved eventually.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-conclusion&quot;&gt;The Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;I am extremely happy with what I&#x27;ve accomplished and hope that I have been able to achieve the standards set by the matrix community. It was a challenging and exhilarating experience. I have learned more in this project than I could&#x27;ve imagined and gained a ton of invaluable experience with software development thanks to my mentors who pushed me forward and guided me throughout. This journey was beyond amazing and I will be sure to contribute to matrix moving forward.&lt;&#x2F;p&gt;
+&lt;p&gt;You can find complete details of everything I worked on during GSoC &lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;Tyagdit&#x2F;0e6feb332fc33c540db728092cc7ae7f&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>GSOC report: Adding Features in End-to-End encryption for Nheko-Reborn</title>
+    <published>2020-09-09T00:00:00+00:00</published>
+    <updated>2020-09-09T00:00:00+00:00</updated>
+    <author>
+      <name>CH Chethan Reddy</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2020/09/09/gsoc-report-adding-features-in-end-to-end-encryption-for-nheko-reborn/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2020/09/09/gsoc-report-adding-features-in-end-to-end-encryption-for-nheko-reborn/</id>
+    <content type="html">&lt;p&gt;This is part of a series of reports on the &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&quot;&gt;&lt;em&gt;six&lt;&#x2F;em&gt; projects&lt;&#x2F;a&gt; assigned to Matrix for Google Summer of Code 2020.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&#x2F;#6274781747347456&quot;&gt;View project: Adding Features in End-to-End encryption for Nheko-Reborn&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is a re-publishing of Chetan&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;chethan2k1.github.io&#x2F;blog&#x2F;working-with-matrix.html&quot;&gt;original blog post&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;whoami&quot;&gt;whoami?&lt;&#x2F;h2&gt;
+&lt;p&gt;I&#x27;m &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Chethan2k1&quot;&gt;CH Chethan Reddy&lt;&#x2F;a&gt;. I&#x27;m currently pursuing Bachelors in Electronics and Communication Engineering at the &lt;a href=&quot;https:&#x2F;&#x2F;www.nitt.edu&#x2F;&quot;&gt;National Institute of Technology, Trichy in India&lt;&#x2F;a&gt;. In my free time I like to swim, work on projects I find interesting, watch movies and do a lot of other &quot;interesting&quot; stuff. This summer I have interned in Matrix.org for around 3-4 months under GSoC and in this blog I&#x27;ll be sharing my experience.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-matrix-org&quot;&gt;Why Matrix.org?&lt;&#x2F;h2&gt;
+&lt;p&gt;Being passionate about privacy, I wanted to select an organization that actively works on that, and clearly, Matrix.org topped my list. For anyone who doesn&#x27;t know what Matrix is, in simple words, It is a decentralized communication protocol that supports many awesome features like messaging, end-to-end encryption, voip&#x2F;video calls support, etc. It uses simple RESTful http APIs which keeps things very simple. The best part of the protocol is, it is decentralized, so if you have a custom domain name, you can setup a synapse server in a jiffy. Knowing all these who wouldn&#x27;t choose Matrix?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;my-work&quot;&gt;My Work&lt;&#x2F;h2&gt;
+&lt;p&gt;I worked on Desktop Client called &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Nheko-Reborn&#x2F;nheko&quot;&gt;Nheko&lt;&#x2F;a&gt;. It is a light-weight Desktop Client that uses Qt Framework in the frontend and also uses a mtxclient library that implements Matrix-client server API written in C++. The scope of my project involved implementing Device-Verification and Cross-Signing in Nheko.&lt;&#x2F;p&gt;
+&lt;p&gt;For people who have not used Matrix before, it is important to note that every device of a particular user is considered as a separate unit rather than user itself. For end-to-end encrypted chat to be viewable from a device, that particular device should be trusted by the sender&#x27;s device. Device-verification and Cross-Signing are methods used for verifying.&lt;&#x2F;p&gt;
+&lt;p&gt;Coming to &lt;a href=&quot;https:&#x2F;&#x2F;chethan2k1.github.io&#x2F;blog&#x2F;final-report.html&quot;&gt;the work I have implemented&lt;&#x2F;a&gt;, Device-verification is completely implemented in Nheko. As of now, SAS verification with to-device and room message verification is supported in Nheko. As far as Cross-Signing is concerned, verifying signatures of Cross-Signing keys and showing the verified status of devices have been implemented. The only remaining unfinished parts are SSSS and signing the keys after verification. After that Cross-signing should be feature-complete.&lt;&#x2F;p&gt;
+&lt;p&gt;I wished to implement SSSS during my GSoC period, but I couldn&#x27;t because I did not anticipate the additional things which came with verification while making my proposal. The additional works included : implementing the UI, changes to the userprofile dialog, working on the caching of verified users, and user keys. Moreover, due to the current pandemic, there were a few sudden changes in my academic schedule, which interrupted my work to some extent. While contributing at times I was stuck on some bugs like verifying the signatures, some random crashes in UserProfile and setting up relations in Room-Verification. However, with the help of my mentors, I was able to fix these bugs.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m really happy about the work I have done. I am hoping to further work on Nheko in the future, complete Cross-Signing and work on additional features for Nheko.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;community-and-mentors&quot;&gt;Community and Mentors&lt;&#x2F;h2&gt;
+&lt;p&gt;The best part of my experience this summer was the the Matrix community and the learning I had. I am really lucky to be part of the Matrix community which has many passionate people collectively working on really cool projects with clients, bridges, servers, bots and the spec. A special thanks to Uhoreg and Sorunome who have helped me in navigating through the spec.&lt;&#x2F;p&gt;
+&lt;p&gt;Last but not the least, a big shout-out to both my mentors, Nico and red_sky, who were always there to help me with any issue in the project in spite of their personal commitments and dealt with my stupid questions with utmost patience and kindness. Without their active help and guidance this experience definitely would not have been so fun and great, they have clearly surpassed the expectations I had from mentors.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>GSOC report: E2E encryption for go-neb</title>
+    <published>2020-09-08T17:37:43+00:00</published>
+    <updated>2020-09-08T17:37:43+00:00</updated>
+    <author>
+      <name>Nikolaos Filippakis</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2020/09/08/gsoc-report-e2e-encryption-for-go-neb/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2020/09/08/gsoc-report-e2e-encryption-for-go-neb/</id>
+    <content type="html">&lt;p&gt;This is part of a series of reports on the &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&quot;&gt;&lt;em&gt;six&lt;&#x2F;em&gt; projects&lt;&#x2F;a&gt; assigned to Matrix for Google Summer of Code 2020.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&#x2F;#5910277670830080&quot;&gt;View project: E2E encryption for go-neb&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Hello! I am &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nikofil&quot;&gt;Nikos&lt;&#x2F;a&gt;, an MSc student in Computer Security. My original goal for this GSoC was to implement the basics of end-to-end encryption for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&quot;&gt;Go-NEB&lt;&#x2F;a&gt;, which is a popular and easily extendable bot for the Matrix protocol. I chose this project because it ticked off a lot of the boxes that I look for in a project: The Matrix protocol is very interesting and the e2e specification is fascinating, Go-NEB is written in Go which I wanted to learn better, plus I believe personally that crypto should be easy for everyone to use and adopted more.&lt;&#x2F;p&gt;
+&lt;p&gt;My initial plan was to first create bindings in gomatrix for libolm, the C library that implements most of the necessary algorithms for Olm&#x2F;Megolm, the protocols used in Matrix&#x27; end-to-end encryption. Then, I was going to write some nice APIs around those bindings so that most of the work done is hidden from the client that uses the library, and finally I would call these APIs from &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&quot;&gt;Go-NEB&lt;&#x2F;a&gt; when needed to set up the encrypted sessions between devices in a room and use them to encrypt&#x2F;decrypt messages as necessary. What we found out soon after GSoC started was that another library called &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tulir&#x2F;mautrix-go&quot;&gt;mautrix-go&lt;&#x2F;a&gt; that was based on gomatrix already did most of these things. My task then became to change the uses of gomatrix in Go-NEB for mautrix-go and make some slight changes to the latter if there were some incompatibilities. A month later, that task was done.&lt;&#x2F;p&gt;
+&lt;p&gt;With two months to go in GSoC, my mentors came up with a new task: to implement a service for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&quot;&gt;Go-NEB&lt;&#x2F;a&gt; that allows other client developers to test their e2ee implementations easily. That resulted in a service called &quot;cryptotest&quot; which allows other clients in a specified room to execute some Neb commands which would trigger functions like the forwarding of keys between clients, another feature that had to be implemented in mautrix. Something else that I wanted to add and grabbed my interest was SAS device verification, a multi-step process that involves users comparing a string of numbers or emojis out-of-band to configure they are indeed talking to each other and not to a MITM. These were my main tasks during the second month and I was happy to have achieved them and made a decent verification API for clients to use. They were soon merged into mautrix and Go-NEB.&lt;&#x2F;p&gt;
+&lt;p&gt;For my third month I proposed to implement a new Matrix feature called cross-signing, which was similar to SAS verification but dealt with verifying other users instead of their devices who would in turn verify their own devices, creating a graph of trust between users and devices. This functionality was strongly coupled with SSSS, another new feature that allows clients to store their encrypted secrets (in this case the multiple necessary signing keys) on the server, as well as in-room verification which allows verification between users. This task was more challenging as it uses multiple algorithms (some of which not in libolm) for deriving the keys, using them to encrypt other keys which in turn sign other keys. It was also more satisfying when I finally managed to generate the keys, store and retrieve them and then use them to sign another user and when I was done I felt like my understanding of cryptography levelled up.&lt;&#x2F;p&gt;
+&lt;p&gt;All in all, I&#x27;m very satisfied with the overall experience. The spec was very clear in most cases and when it wasn&#x27;t the community was always helpful and responsive. They were also happy to discuss the spec with me and explain the more intricate details. For that reason I wasn&#x27;t asking questions directly to my mentors (besides for defining my tasks) but to the overall community. I&#x27;m also very grateful to my mentors, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;uhoreg&quot;&gt;@uhoreg&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kegsay&quot;&gt;@Kegan&lt;&#x2F;a&gt; for picking me for this project and helping me with the planning aspect and reviewing my PRs. I&#x27;d lastly like to thank the maintainer of mautrix, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tulir&#x2F;&quot;&gt;@tulir&lt;&#x2F;a&gt;, for reviewing and merging a lot of my work into his library.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Announcing GSOC 2020 Participants!</title>
+    <published>2020-05-11T00:00:00+00:00</published>
+    <updated>2020-05-11T00:00:00+00:00</updated>
+    <author>
+      <name>Ben Parsons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2020/05/11/announcing-gsoc-2020-participants/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2020/05/11/announcing-gsoc-2020-participants/</id>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;gsoc.png&quot; alt=&quot;GSOC Logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;&quot;&gt;Google Summer of Code&lt;&#x2F;a&gt; participants were announced last week. &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&#x2F;&quot;&gt;This year Matrix was assigned SIX students!&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is the most students we&#x27;ve have taken on in a single year, made possible by Matrix now acting as an umbrella organisation for multiple projects - this year that&#x27;s Ruma, Nheko and OpsDroid. There are also students working on projects from the core team: go-neb, matrix-js-sdk and matrix-ircd.&lt;&#x2F;p&gt;
+&lt;p&gt;We received dozens of applications this year, which made narrowing our focus to six students difficult, but we are proud to announce:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Devin Ragotzy&lt;&#x2F;strong&gt;, who has been involved with the Ruma project in the past, will work on &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#4756651216732160&quot;&gt;Ruma procedural macro refactoring and more&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Arnav Tiwari&lt;&#x2F;strong&gt; will work with Travis and myself to create &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#5751467312414720&quot;&gt;HTML Embeddable Matrix Chat Rooms&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Nikolaos Filippakis&lt;&#x2F;strong&gt; will work to support &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#5910277670830080&quot;&gt;E2E encryption for go-neb&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;. Kegan, one of the original go-neb authors is particularly excited about this one&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Brooks Karlik&lt;&#x2F;strong&gt; will update matrix-ircd: &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#5911643604647936&quot;&gt;Move matrix-ircd to async&#x2F;await&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;. This will be a welcome upgrade for anyone using that project!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Tyagdit&lt;&#x2F;strong&gt; will work with Cadair and the &lt;a href=&quot;&#x2F;blog&#x2F;2020&#x2F;05&#x2F;01&#x2F;this-week-in-matrix-2020-05-01&quot;&gt;OpsDroid team&lt;&#x2F;a&gt; on &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#6107552447725568&quot;&gt;Enabling E2EE in Opsdroid Matrix Connector&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Chethan Reddy&lt;&#x2F;strong&gt;, last but not least, will work with Nico and the Nheko gang on &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#6274781747347456&quot;&gt;Adding Features in End-to-End encryption for Nheko-Reborn&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Congratulations all, and also congratulations and thank you to the projects the students will be working on!&lt;&#x2F;p&gt;
+&lt;p&gt;Find out all about &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6060943798173696&#x2F;&quot;&gt;Matrix @ GSoC on Google&#x27;s dedicated site&lt;&#x2F;a&gt;, and keep reading the Matrix blog where we&#x27;ll have updates from the students.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;PS &lt;strong&gt;Alejandro Domínguez&lt;&#x2F;strong&gt; has a Matrix related project too: they&#x27;ll be working under the GNOME organisation to &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#6726209787920384&quot;&gt;add Multi account support to Fractal&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Qt-based clients end-to-end encryption support -- final report (GSoC 2019)</title>
+    <published>2019-09-20T02:10:21+00:00</published>
+    <updated>2019-09-20T02:10:21+00:00</updated>
+    <author>
+      <name>Alexey Andreyev</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/09/20/qt-based-clients-end-to-end-encryption-support-final-report-g-so-c-2019/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/09/20/qt-based-clients-end-to-end-encryption-support-final-report-g-so-c-2019/</id>
+    <content type="html">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;*&lt;em&gt;libQMatrixClient was &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quotient-im&#x2F;libQuotient&#x2F;issues&#x2F;325&quot;&gt;renamed&lt;&#x2F;a&gt; to libQuotient&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The project aimed at adding end-to-end encryption to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quotient-im&#x2F;libQuotient&quot;&gt;libQuotient&lt;&#x2F;a&gt; for future support in Qt&#x2F;libQuotient-based clients like &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;projects&#x2F;client&#x2F;quaternion&quot;&gt;Quaternion&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;projects&#x2F;client&#x2F;spectral&quot;&gt;Spectal&lt;&#x2F;a&gt;, or even &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;TelepathyIM&#x2F;telepathy-tank&quot;&gt;Telepathy IM&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-work-done&quot;&gt;The work done&lt;&#x2F;h2&gt;
+&lt;p&gt;Regarding my initial &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quotient-im&#x2F;libQuotient&#x2F;wiki&#x2F;_GSoC-2019-E2EE-proposal&quot;&gt;proposal&lt;&#x2F;a&gt;, I’ve completed tasks enough for message receiving, and not finished tasks related to message sending.&lt;&#x2F;p&gt;
+&lt;p&gt;Focused on libQuotient, I&#x27;ve also &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quotient-im&#x2F;Quaternion&#x2F;commits&#x2F;aa13q-e2ee&quot;&gt;added changes to Quaternion client&lt;&#x2F;a&gt; to support the proposed API and test the results.
+I&#x27;ve reused libQtOlm, which is a Qt wrapper to the matrix olm library and &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;b0&#x2F;libqtolm&#x2F;merge_requests?scope=all&amp;amp;utf8=%E2%9C%93&amp;amp;state=all&amp;amp;author_username=aa13q&quot;&gt;contributed to provide better compatibility during its building and deployment&lt;&#x2F;a&gt;.
+This also required to dive into the olm library itself and provide &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;matrix-org&#x2F;olm&#x2F;commit&#x2F;aa0c9ab6b51d182cb78ab4cc75c81c0054765bde&quot;&gt;minor patch&lt;&#x2F;a&gt; for the olm CMake files too.&lt;&#x2F;p&gt;
+&lt;p&gt;So, the basic structure of the project changed a bit, libQtOlm was added as a dependency to support libolm:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;                              +--------------------------------------------+
+&lt;&#x2F;span&gt;&lt;span&gt;                              |   Quaternion&#x2F;Spectral&#x2F;Telepathy|Tank&#x2F;etc   |
+&lt;&#x2F;span&gt;&lt;span&gt;+------------------+          +--------------------------------------------+
+&lt;&#x2F;span&gt;&lt;span&gt;|      CS API      |  &amp;lt;----&amp;gt;  |                  libQuotient               |
+&lt;&#x2F;span&gt;&lt;span&gt;+------------------+          +-------------------------------+------------+
+&lt;&#x2F;span&gt;&lt;span&gt;|Synapse homeserver|          |               Qt              |  libQtOlm  |
+&lt;&#x2F;span&gt;&lt;span&gt;+------------------+          +--------------------------------------------+
+&lt;&#x2F;span&gt;&lt;span&gt;                                                              |   libolm   |
+&lt;&#x2F;span&gt;&lt;span&gt;                                                              +------------+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;During the coding period, I&#x27;ve resorted to &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;latest&quot;&gt;the specification&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;guides&#x2F;end-to-end-encryption-implementation-guide&quot;&gt;the guide&lt;&#x2F;a&gt; and the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Zil0&#x2F;matrix-python-sdk&#x2F;wiki&quot;&gt;last year GSoC python implementation&lt;&#x2F;a&gt; actively. And added &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;pull&#x2F;2157&quot;&gt;minor fix for the documentation&lt;&#x2F;a&gt; about names constants at the documentation examples.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;demonstration&quot;&gt;Demonstration&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;gGykLh4mVDg&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;i.imgur.com&#x2F;BKmhvni.jpg&quot; alt=&quot;Imgur&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;future-work&quot;&gt;Future work&lt;&#x2F;h2&gt;
+&lt;p&gt;Talking about future work, the status is going to be captured at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quotient-im&#x2F;libQuotient&#x2F;projects&quot;&gt;libQuotient project board&lt;&#x2F;a&gt;. Next steps are:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Managing devices list for users in the room&lt;&#x2F;li&gt;
+&lt;li&gt;Sending encrypted messages&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;While olm account management architecture and &lt;code&gt;device_one_time_keys_count&lt;&#x2F;code&gt; sync data handling is here, such tasks as session management after a restart and device verification still requires additional efforts. After that encrypted attachments support and key backups could also be added.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m going to take care about that, but it definitely will be harder as just a side project. I still have enthusiasm though :)&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;To take part in the Google Summer of Code project was my dream. I&#x27;m very happy I&#x27;ve managed to took part this year, since it was the last year of my study, while I had doubts about my personal results until I&#x27;ve received final confirmation and the review.&lt;&#x2F;p&gt;
+&lt;p&gt;From the beginning of the project, I&#x27;ve realized I&#x27;m very lucky since I&#x27;ve got all the chances to provide perfect results. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kaffeine&quot;&gt;@Kaffeine&lt;&#x2F;a&gt; helped me a lot with my TelepathyIM contribution. He helped me to evolve my CMake, git and Qt&#x2F;C++ skills and that&#x27;s how I&#x27;ve started contributing to the libQuotient before GSoC. After that, it turns out that I&#x27;ve accepted and received even two mentors. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;uhoreg&quot;&gt;@uhoreg&lt;&#x2F;a&gt; from the Matrix team, who helped me with End-to-End Encryption logic and olm&#x2F;megolm understanding. And &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;KitsuneRal&quot;&gt;@kitsune&lt;&#x2F;a&gt; from the Quotient project, who helped me a lot with the code review, with the architecture decisions and the library logic, and even with the time management (he was the one who watched carefully about my results). The last year GSoC python implementation and guide from &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Zil0&quot;&gt;@Zil0&lt;&#x2F;a&gt; were also here, and it turns out that Spectral developer &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;encombhat&quot;&gt;@BHat&lt;&#x2F;a&gt; provided QtOlm wrapper right before GSoC stated.&lt;&#x2F;p&gt;
+&lt;p&gt;However, planning and updating the plan were my weak points, where I&#x27;ve made key mistakes, such as poor combination with my regular part-time job. And I definitely should have reserved a small vacation at least for the final period of the project to handle tasks better.&lt;&#x2F;p&gt;
+&lt;p&gt;In the end, I&#x27;ve managed to debug the mistakes and provided encrypted messages receiving that could already be used at the clients. Also, I evolved my skills and dived into the megolm E2EE subject. I&#x27;m willing to continue my contribution to develop libQuotient as full-featured Qt-based Matrix library.&lt;&#x2F;p&gt;
+&lt;p&gt;In general, I am not disappointed. I&#x27;m wishing luck to all the future students who are reading this. I&#x27;m happy to receive support and contribute to an international open project not only for myself, but also for the other developers and users.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;appendix-additional-links&quot;&gt;Appendix: Additional links&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;GSoC project page&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;6624344617254912&#x2F;#5821516577505280&quot;&gt;link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Mentors&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@kitsune:matrix.org&quot;&gt;Alexey Rusakov&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@uhoreg:matrix.org&quot;&gt;Hubert Chathi&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;GSoC Matrix room&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#gsoc:matrix.org&quot;&gt;link&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Contribution&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quotient-im&#x2F;libQuotient&#x2F;issues?q=author%3Aa-andreyev+label%3AGSoC2019&quot;&gt;libQuotient GSoC E2EE PRs list&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quotient-im&#x2F;libQuotient&#x2F;wiki&#x2F;_GSoC-2019-E2EE-final-evaluation&quot;&gt;full final report at the project wiki&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Dendrite development final report (GSoC 2019)</title>
+    <published>2019-09-10T18:21:51+00:00</published>
+    <updated>2019-09-10T18:21:51+00:00</updated>
+    <author>
+      <name>Alex Chen</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/09/10/dendrite-development-final-report-g-so-c-2019/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/09/10/dendrite-development-final-report-g-so-c-2019/</id>
+    <content type="html">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;During GSoC 2019, I participated in and pushed forward the development of
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&quot;&gt;Dendrite&lt;&#x2F;a&gt;, a high-performance, scalable &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;guides&#x2F;introduction&quot;&gt;Matrix
+homeserver&lt;&#x2F;a&gt; implementation written
+in Go.&lt;&#x2F;p&gt;
+&lt;p&gt;Like many others passionate about Dendrite, I&#x27;ve been eager to see the day when
+it finally joins the decentralised, federated &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;&quot;&gt;Matrix
+network&lt;&#x2F;a&gt;, so I worked on the project to see how much I
+could do to bridge the gap between it and the current reference homeserver
+implementation, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&quot;&gt;Synapse&lt;&#x2F;a&gt;, in terms of
+feature completeness.&lt;&#x2F;p&gt;
+&lt;p&gt;Working on Dendrite in just one area would be insufficient to propel it, so my
+work covers various
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;blob&#x2F;master&#x2F;WIRING.md&quot;&gt;components&lt;&#x2F;a&gt;
+in the project, including the Client&#x2F;Server API, Sync Server, Room Server,
+and Federation Component. I also spent time refining the project&#x27;s
+documentation, improving its testing&#x2F;continuous integration process, as well as
+reviewing pull requests from Matrix.org members and the community.&lt;&#x2F;p&gt;
+&lt;p&gt;Below is the major portion of my work presented as pull requests, categorised by
+the components they belong to; a list of links to all the pull requests I
+created&#x2F;reviewed is also available at the end of this report.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;work-in-component-client-server-api&quot;&gt;Work in Component: Client&#x2F;Server API&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;This component is the main handler of HTTP requests from the clients, except for
+&lt;code&gt;&#x2F;sync&lt;&#x2F;code&gt; requests - see next part.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Work done:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;693&quot;&gt;Implement client single event retrieval (#693)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;726&quot;&gt;Implement profile retrieval over federation (#726)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;732&quot;&gt;Add missing servers field in &#x2F;directory&#x2F;room&#x2F;:alias response (#732)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;754&quot;&gt;Implement room creation content (#754)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;...and other fixes and improvements&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Work left:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;issues&#x2F;668&quot;&gt;Implement guest access (#668)&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;This was removed from the plan for GSoC so work with higher priorities
+according to the
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;milestone&#x2F;5&quot;&gt;milestone&lt;&#x2F;a&gt; could be
+done first.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;work-in-component-sync-server&quot;&gt;Work in Component: Sync Server&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;The Sync Server is responsible for handling the long polling notification
+requests (&lt;code&gt;&#x2F;sync&lt;&#x2F;code&gt; requests) and some other related requests from the clients.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Work done:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;718&quot;&gt;Add EDU support and typing notifications to &#x2F;sync (#718)&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;EDU stands for Ephemeral Data Units; they are events carrying short-term
+status in the room, for example typing notifications.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;751&quot;&gt;Implement &quot;full_state&quot; query parameter for &#x2F;sync (#751)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;...and other fixes and improvements&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Work left:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for other types of EDUs&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;work-in-component-room-server&quot;&gt;Work in Component: Room Server&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;The Room Server is, as its name suggests, where room events, state, etc. are
+handled.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Work done:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;768&quot;&gt;Implement event redaction (#768)&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;This also includes a relatively large chunk of changes in the Sync Server.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;706&quot;&gt;Fix permission and 404 response for alias deletion (#706)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;...and other fixes and improvements&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Work left:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for alias deletion by admins&lt;&#x2F;li&gt;
+&lt;li&gt;Discussion on and implementation of event retention policies&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;work-in-component-federation&quot;&gt;Work in Component: Federation&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;The Federation Component sends requests to and receives requests from other
+Matrix homeservers.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Work done:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;781&quot;&gt;Add joined hosts query APIs (#781)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;(In &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;gomatrixserverlib&quot;&gt;matrix-org&#x2F;gomatrixserverlib&lt;&#x2F;a&gt;) Support for more query
+types in Federation Client: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;gomatrixserverlib&#x2F;pull&#x2F;130&quot;&gt;Leave
+API&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;gomatrixserverlib&#x2F;pull&#x2F;129&quot;&gt;Public Rooms
+API&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;gomatrixserverlib&#x2F;pull&#x2F;128&quot;&gt;Profile Query
+API&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;...and other fixes and improvements&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Work left:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implementation of a &quot;Most Recent Transaction Sender&quot; In-Memory Cache
+&lt;ul&gt;
+&lt;li&gt;There is a delay in this part of work because some dependency problems
+took longer than expected to resolve, but this has been planned and will
+be worked on after GSoC.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Implementation of a component that handles backoff&#x2F;retries for federation requests&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;general-fixes-improvements-maintenance-work&quot;&gt;General Fixes, Improvements, Maintenance Work&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Data race fixes
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;748&quot;&gt;Fix data races reported by go test -race .&#x2F;... (#748)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;787&quot;&gt;Fix data race in clientapi&#x2F;routing&#x2F;register.go (#787)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Fixes for incorrect transaction ID scopes
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;772&quot;&gt;Fix transaction IDs in transaction cache have global scope (#772)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;789&quot;&gt;Associate transactions with session IDs instead of device IDs (#789)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Improvements for building&#x2F;testing process
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;714&quot;&gt;Refine config and docs for sytest (#714)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pull&#x2F;598&quot;&gt;Fix build conflict between docker environment and host (#598)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;links-to-all-pull-requests&quot;&gt;Links to All Pull Requests&lt;&#x2F;h2&gt;
+&lt;p&gt;Here is a list of links to all the pull requests I have created&#x2F;reviewed (by 26
+Aug, 2019):&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Repository&lt;&#x2F;th&gt;&lt;th&gt;Pull Requests&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&quot;&gt;matrix-org&#x2F;dendrite&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pulls?utf8=%E2%9C%93&amp;amp;q=is%3Apr+author%3ACnly+created%3A%3C2019-08-26&quot;&gt;Created (36)&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&#x2F;pulls?utf8=%E2%9C%93&amp;amp;q=is%3Apr+reviewed-by%3ACnly+-author%3ACnly+created%3A%3C2019-08-26&quot;&gt;Reviewed (27)&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;gomatrixserverlib&quot;&gt;matrix-org&#x2F;gomatrixserverlib&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;gomatrixserverlib&#x2F;pulls?utf8=%E2%9C%93&amp;amp;q=is%3Apr+author%3ACnly+created%3A%3C2019-08-26&quot;&gt;Created (12)&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;gomatrixserverlib&#x2F;pulls?utf8=%E2%9C%93&amp;amp;q=is%3Apr+reviewed-by%3ACnly+-author%3ACnly+created%3A%3C2019-08-26&quot;&gt;Reviewed (1)&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;sytest&quot;&gt;matrix-org&#x2F;sytest&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;sytest&#x2F;pulls?utf8=%E2%9C%93&amp;amp;q=is%3Apr+author%3ACnly+created%3A%3C2019-08-26&quot;&gt;Created (5)&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;appendix-on-dendrite-being-a-gsoc-project&quot;&gt;Appendix: On Dendrite Being a GSoC Project&lt;&#x2F;h2&gt;
+&lt;p&gt;I believe that Dendrite is a pretty special project to work on in the GSoC
+program.&lt;&#x2F;p&gt;
+&lt;p&gt;At its current state, Dendrite isn&#x27;t a complete homeserver yet. This has left a
+large portion of work on Dendrite wide open: As I worked on Dendrite, more than
+often I&#x27;d find myself in a place to answer questions related to topics like
+design or project architecture which, if not thoroughly thought through, might
+have consequences in the future development of the project. For this reason, I
+think working on Dendrite involves a set of challenges quite different from what
+attempting to improve an already functioning piece of software would have
+presented.&lt;&#x2F;p&gt;
+&lt;p&gt;For the same reason, I think what Dendrite has taught me during the
+summer was less about how to become more fluent in Go or more familiar with
+various tools, but more about developing the mindset that powers software
+projects behind the scenes. But this mindset, to myself, seems more valuable
+than the former, indeed.&lt;&#x2F;p&gt;
+&lt;p&gt;And at the end of this report, I&#x27;d like to thank my mentors
+&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@andrewm:amorgan.xyz&quot;&gt;anoa&lt;&#x2F;a&gt; and
+&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@brendan:abolivier.bzh&quot;&gt;Brendan&lt;&#x2F;a&gt;, as well as everyone else
+at Matrix who has answered my questions, discussed with me, and helped me
+understand the code, and at the same time being super responsive. Without your
+help, my GSoC experience wouldn&#x27;t have been this enjoyable! :)&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Matrix Visualisations final report (GSoC 2019)</title>
+    <published>2019-09-09T00:00:00+00:00</published>
+    <updated>2019-09-09T00:00:00+00:00</updated>
+    <author>
+      <name>Eisha Chen-yen-su</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/09/09/matrix-visualisations-final-report-g-so-c-2019/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/09/09/matrix-visualisations-final-report-g-so-c-2019/</id>
+    <content type="html">&lt;p&gt;The Google Summer of Code 2019 is coming to an end for me, so it means that it’s time for the final report.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-work-done&quot;&gt;The work done&lt;&#x2F;h2&gt;
+&lt;p&gt;I’ve been taking care of the project “Matrix Visualisations” during these past months. This project aimed at initiating the development of a tool which allows the real-time visualisation of the events DAG of a given Matrix room, as seen from the perspective of one or more homeservers (HS’s).&lt;&#x2F;p&gt;
+&lt;p&gt;Regarding my initial proposal, I’ve completed every task proposed and even implemented some additional functionalities. The application is not finished yet and there could be a lot of improvements added to it (especially regarding the design of the UI) but the core functionalities have been implemented.&lt;br&#x2F;&gt;
+I am going to precise what has been accomplished and then give some ideas of features to improve.&lt;&#x2F;p&gt;
+&lt;p&gt;During GSoC, I have used two separate repositories for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations&quot;&gt;the frontend&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations-backend&quot;&gt;the backend&lt;&#x2F;a&gt;. I will keep both of them because I’m referencing PRs from them (as PRs are easier to link than lengthy lists of commits).&lt;br&#x2F;&gt;
+However, this is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations-complete&quot;&gt;the repository&lt;&#x2F;a&gt; regrouping these two parts and this one will be moved to matrix-org for the continuation of this project.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;complete-the-implementation-of-the-cs-api-backend&quot;&gt;Complete the implementation of the CS API backend&lt;&#x2F;h3&gt;
+&lt;p&gt;During the application period, I wrote a prototype for this project. This prototype implemented some requests to the CS API (like &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;r0.5.0#get-matrix-client-r0-login&quot;&gt;&#x2F;login&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;r0.5.0#post-matrix-client-r0-logout&quot;&gt;&#x2F;logout&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;r0.5.0#get-matrix-client-r0-sync&quot;&gt;&#x2F;sync&lt;&#x2F;a&gt;) but there were more requests to implement in order to be able to fully use this API:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;In order for the application to automatically join (and leave at the end) a room if the provided account hasn’t already joined it, I implemented the requests to &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;r0.5.0#get-matrix-client-r0-joined-rooms&quot;&gt;&#x2F;joined_rooms&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;r0.5.0#post-matrix-client-r0-rooms-roomid-join&quot;&gt;&#x2F;join&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;r0.5.0#post-matrix-client-r0-rooms-roomid-leave&quot;&gt;&#x2F;leave&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;The request &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;r0.5.0#get-matrix-client-r0-rooms-roomid-messages&quot;&gt;&#x2F;messages&lt;&#x2F;a&gt; has been implemented to allow the application to fetch previous messages.&lt;&#x2F;li&gt;
+&lt;li&gt;For retrieving in real-time new events, I used the field &lt;code&gt;from&lt;&#x2F;code&gt; in the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;r0.5.0#get-matrix-client-r0-sync&quot;&gt;&#x2F;sync&lt;&#x2F;a&gt; request.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I also did a lot of clean up in the source code from the prototype during this task. You can have more details in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations&#x2F;pull&#x2F;1&quot;&gt;this PR&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;implement-the-first-ui-to-interact-with-the-dag&quot;&gt;Implement the first UI to interact with the DAG&lt;&#x2F;h3&gt;
+&lt;p&gt;First of all, a lot of work had to be made in order to properly update the displayed DAG when adding new events to it. At this point, I previously used the &lt;code&gt;setData&lt;&#x2F;code&gt; method of the &lt;code&gt;Network&lt;&#x2F;code&gt; object of &lt;a href=&quot;https:&#x2F;&#x2F;visjs.org&#x2F;&quot;&gt;the visjs library&lt;&#x2F;a&gt; (which is used for displaying the graph and interacting with it) each time a node was added, but it was resetting the display each time it was called.&lt;br&#x2F;&gt;
+The proper solution was to progressively add nodes and edges to the &lt;code&gt;DataSet&lt;&#x2F;code&gt; object passed to the constructor of the network (see the documentation of &lt;a href=&quot;https:&#x2F;&#x2F;visjs.github.io&#x2F;vis-data&#x2F;data&#x2F;index.html&quot;&gt;DataSet&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;visjs.github.io&#x2F;vis-network&#x2F;docs&#x2F;network&#x2F;&quot;&gt;Network&lt;&#x2F;a&gt; for more details).&lt;&#x2F;p&gt;
+&lt;p&gt;The DAG has been set to be displayed vertically, the events with the same depth are at the same level, the deepest events are at the bottom. The events which origin is the HS on which we are making the observation are in green, those which are coming from other servers are in orange.
+Here is a picture of what it looks like:
+&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Kagamihime&#x2F;gsoc-2019-final-report&#x2F;master&#x2F;events_display.png&quot; alt=&quot;Events display&quot; title=&quot;Events display&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;In the graph, there is a special node just after the earliest event which allows us to ask the application to load more events. Here is what it looks like:
+&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Kagamihime&#x2F;gsoc-2019-final-report&#x2F;master&#x2F;more_events_button.png&quot; alt=&quot;More Events button&quot; title=&quot;More Events button&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;When you double click on the node of an event, there is a text area on the right which displays its complete JSON body, like this:
+&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Kagamihime&#x2F;gsoc-2019-final-report&#x2F;master&#x2F;body_display.png&quot; alt=&quot;JSON body display&quot; title=&quot;JSON body display&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve also implemented the possibility to choose which particular fields of the event can be directly displayed in the labels of the nodes of the displayed graph:
+&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Kagamihime&#x2F;gsoc-2019-final-report&#x2F;master&#x2F;fields_selection.png&quot; alt=&quot;Fields selection&quot; title=&quot;Fields selection&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;synapse-postgresql-backend&quot;&gt;Synapse PostgreSQL backend&lt;&#x2F;h3&gt;
+&lt;p&gt;Next, I implemented a backend for retrieving events from the PostgreSQL database of a Synapse HS. It is a small HTTP server which receives requests from the frontend application and then makes queries to the Synapse database to get the requested events.&lt;br&#x2F;&gt;
+You can find details about the API for using this backend in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations-backend&#x2F;blob&#x2F;master&#x2F;README.md&quot;&gt;this readme&lt;&#x2F;a&gt;, in the “HTTP REST API” section.&lt;br&#x2F;&gt;
+You can find more details about this initial implementation: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations-backend&#x2F;pull&#x2F;1&quot;&gt;here&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations-backend&#x2F;pull&#x2F;2&quot;&gt;here&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations-backend&#x2F;pull&#x2F;3&quot;&gt;here&lt;&#x2F;a&gt; (my mentor helped me on this one, thanks to him), and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations-backend&#x2F;pull&#x2F;5&quot;&gt;here&lt;&#x2F;a&gt;.&lt;br&#x2F;&gt;
+I’ve added the support of this backend in the frontend application, as well as a way to choose which backend to use (between this one and the CS API) in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations&#x2F;pull&#x2F;4&quot;&gt;this PR&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;multiple-views&quot;&gt;Multiple views&lt;&#x2F;h3&gt;
+&lt;p&gt;I implemented the ability to observe the same DAG of a room from multiple HS’s. This is done with “views”.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Kagamihime&#x2F;gsoc-2019-final-report&#x2F;master&#x2F;backend_selection.png&quot; alt=&quot;View selection&quot; title=&quot;View selection&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;In the picture above, you can see that there is a drop down menu from which you can select the view. The fields under this line are used to control the selected view: indicate where it will be connecting, for which room (you could as well observe a different room in a different view), etc…&lt;br&#x2F;&gt;
+By default, there is only one view but you can add as many as you want by clicking “Add a view”.&lt;&#x2F;p&gt;
+&lt;p&gt;All the DAGs from the different views are displayed side-by-side within the same canvas, like this:
+&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Kagamihime&#x2F;gsoc-2019-final-report&#x2F;master&#x2F;multiple_dags.png&quot; alt=&quot;Multiple DAGs&quot; title=&quot;Multiple DAGs&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You can have a look at the details of the implementation in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations&#x2F;pull&#x2F;6&quot;&gt;this PR&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;add-federation-api-support&quot;&gt;Add Federation API support&lt;&#x2F;h3&gt;
+&lt;p&gt;The next major task I had to do was the implementation of a backend for retrieving events via the Federation API. I thought a lot about the possible options for the location of this backend and I decided to extend the web server created for the PostgreSQL Synapse backend, so that we could launch it in a “postgres mode” or “federation mode”. But the backend would offer the same HTTP API in both modes.&lt;&#x2F;p&gt;
+&lt;p&gt;The backend uses &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;server_server&#x2F;r0.1.3&quot;&gt;the Federation API&lt;&#x2F;a&gt; in the following way:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Before being able to retrieve events from a certain room, the backend must join it with &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;server_server&#x2F;r0.1.3#get-matrix-federation-v1-make-join-roomid-userid&quot;&gt;&#x2F;make_join&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;server_server&#x2F;r0.1.3#put-matrix-federation-v1-send-join-roomid-eventid&quot;&gt;&#x2F;send_join&lt;&#x2F;a&gt; requests, it creates an “imaginary user” in this room. The join event created during this process will be the one returned by the endpoint &lt;code&gt;&#x2F;deepest&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;To get earlier events, the backend uses &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;server_server&#x2F;r0.1.3#get-matrix-federation-v1-backfill-roomid&quot;&gt;&#x2F;backfill&lt;&#x2F;a&gt; requests.&lt;&#x2F;li&gt;
+&lt;li&gt;In order to get new events, the backend listens for pushed events from other HS’s with the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;server_server&#x2F;r0.1.3#put-matrix-federation-v1-send-txnid&quot;&gt;&#x2F;send&lt;&#x2F;a&gt; request.&lt;&#x2F;li&gt;
+&lt;li&gt;When the observation is done, the backend makes the “imaginary user” leave the room by sending &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;server_server&#x2F;r0.1.3#get-matrix-federation-v1-make-leave-roomid-userid&quot;&gt;&#x2F;make_leave&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;server_server&#x2F;r0.1.3#put-matrix-federation-v1-send-leave-roomid-eventid&quot;&gt;&#x2F;send_leave&lt;&#x2F;a&gt; requests.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The full details of the implementation are in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations-backend&#x2F;pull&#x2F;8&quot;&gt;this PR&lt;&#x2F;a&gt;. My mentor also helped me get the usage of the &lt;code&gt;Future&lt;&#x2F;code&gt;s  right thanks to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations-backend&#x2F;pull&#x2F;7&quot;&gt;this PR&lt;&#x2F;a&gt;.&lt;br&#x2F;&gt;
+There has been a small modification in the frontend too, because of the addition of the &lt;code&gt;&#x2F;stop&lt;&#x2F;code&gt; endpoint in the backend’s HTTP API, these modifications are in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations&#x2F;pull&#x2F;7&quot;&gt;this PR&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;display-the-state-of-the-room-for-a-given-event&quot;&gt;Display the state of the room for a given event&lt;&#x2F;h3&gt;
+&lt;p&gt;For each event, there is a state of the room associated with it, which describes what was the state of the room at the moment this event was accepted (the name of the room, its topic, its members and parameters, etc…).&lt;br&#x2F;&gt;
+So I’ve added a way to display this: when you have selected and displayed the JSON body of a given event, you can also request the associated room’s state. I have made it possible to use this feature with every backends: the CS API, the PostgreSQL database and the Federation API. You can have the full details of the implementation &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations-backend&#x2F;pull&#x2F;9&quot;&gt;here&lt;&#x2F;a&gt; (for the backend) and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations&#x2F;pull&#x2F;8&quot;&gt;here&lt;&#x2F;a&gt; (for the frontend).&lt;&#x2F;p&gt;
+&lt;p&gt;You can see the result of this feature in the picture below (there is a button “Room state at the selected event”, which allows to ask the application to fetch the state, and the text area under this button where the state is displayed):
+&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Kagamihime&#x2F;gsoc-2019-final-report&#x2F;master&#x2F;room_state.png&quot; alt=&quot;Room&amp;#39;s state display&quot; title=&quot;Room&amp;#39;s state display&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;additional-fixes&quot;&gt;Additional fixes&lt;&#x2F;h3&gt;
+&lt;p&gt;Lastly, I’ve applied small fixes to the code of the backend, you can see them in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kagamihime&#x2F;matrix-visualisations&#x2F;pull&#x2F;9&quot;&gt;this PR&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;possible-improvements&quot;&gt;Possible improvements&lt;&#x2F;h2&gt;
+&lt;p&gt;The objective of this project was to develop the core functionalities of this application, however there are a lot of improvements to bring to it, like:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adding the possibility to start the observation of a room from any events (provided that we have the ID of this events) instead of the latest one.&lt;&#x2F;li&gt;
+&lt;li&gt;These hasn’t been any UI&#x2F;UX work design, the CSS style sheet is minimal and the overall look isn’t beautiful or correctly organised. So there would be a lot of work to be done in this area by people with better knowledge in this field than me.&lt;&#x2F;li&gt;
+&lt;li&gt;The timestamps of the events are not displayed in a human readable format and would be written as dates and hours to greatly improve the readability.&lt;&#x2F;li&gt;
+&lt;li&gt;The application has been tested a lot, especially in situations of misusage. I’ve fixed some bugs which occurred when I was testing it but it was far from being an exhaustive testing, so there could be many improvements regarding the overall robustness of this software.&lt;&#x2F;li&gt;
+&lt;li&gt;The backend supports HTTPS connections but has no mechanism for controlling the access of the data behind it (in particular, it means that if you should not run on a production database as it would basically allow anyone to access any data on it). So more work would be needed to make it secure.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;This experience has been really rewarding for me. I could discover more about the Matrix community and how the Matrix ecosystem works (on a technical point of view). I want to thank my mentor, Erik Johnston, for his guidance during these past months, and the people in this community who gave me advice.&lt;&#x2F;p&gt;
+&lt;p&gt;GSoC has also allowed me to further improve my programming skills in general and discover many various things: the WASM technology, how to use Rust in this context thanks to the various existing libraries&#x2F;frameworks available, the practical usage of SQL requests as well as TLS certificates and how to apply cryptographic signatures.&lt;br&#x2F;&gt;
+It was sometimes challenging to use such experimental technologies (due to the lack of clear documentation) but also very exiting!&lt;&#x2F;p&gt;
+&lt;p&gt;Mid-September, I will start my class for my second and final year of my master degree (software engineering, specialised in distributed systems and applications) at Sorbonne Université so I will definitely have less free time. So I don’t think I’ll be able to actively continue to contribute but I will do my best to help other people to continue the work I’ve initiated.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Welcome to the 2019 GSoC Participants!</title>
+    <published>2019-05-07T00:00:00+00:00</published>
+    <updated>2019-05-07T00:00:00+00:00</updated>
+    <author>
+      <name>Andrew Morgan</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/05/07/welcome-to-the-2019-g-so-c-participants/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/05/07/welcome-to-the-2019-g-so-c-participants/</id>
+    <content type="html">&lt;p&gt;It’s that time of year again! Matrix.org is once again participating in the &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;&quot;&gt;Google Summer of Code&lt;&#x2F;a&gt; program. We have been allocated four student slots by Google this year, and narrowing the 18 proposals we received down to just four was a very difficult task.&lt;&#x2F;p&gt;
+&lt;p&gt;In the end, we have decided on the following four students and their proposed projects:&lt;&#x2F;p&gt;
+&lt;p&gt;Alexey Andreyev’s proposal involves adding end-to-end encryption to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;libqmatrixclient&quot;&gt;libQMatrixClient&lt;&#x2F;a&gt; for future support in Qt&#x2F;libQMatrixClient-based clients such as &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;Quaternion&quot;&gt;Quaternion&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;spectral-im&#x2F;spectral&#x2F;&quot;&gt;Spectral&lt;&#x2F;a&gt;. They will be mentored by &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@kitsune:matrix.org&quot;&gt;kitsune&lt;&#x2F;a&gt;, lead developer of libQMatrixClient, and our own end-to-end encryption expert, &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@uhoreg:matrix.org&quot;&gt;uhoreg&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Kai Hiller’s proposal for more reliable third-party protocol &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;projects&#x2F;bridges&quot;&gt;bridges&lt;&#x2F;a&gt; includes adding the ability to notify the user when a message fails to reach its final destination despite being accepted by the bridge. &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@half-shot:half-shot.uk&quot;&gt;Half-Shot&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Eisha Chen-yen-su’s proposal for Matrix Visualisations aims to “develop a tool which will visualise the event Directed Acyclic Graph data structure which describes the conversation history in a room. It will be a real-time visualisation of the DAG of a given Matrix room, as seen from the perspective of one or more HomeServers (HSes).” They state that “this tool will be useful for debugging or administration of Matrix HSes by making people able to easily see how the federation process works”. They have already posted prototypes of their tool in &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#gsoc:matrix.org&quot;&gt;#gsoc:matrix.org&lt;&#x2F;a&gt;, and it’s all written in Rust! Which makes their mentor, &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@erikj:jki.re&quot;&gt;erikj&lt;&#x2F;a&gt;, very happy.&lt;&#x2F;p&gt;
+&lt;p&gt;And finally, Cnly’s proposal for working towards completion of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;dendrite&quot;&gt;Dendrite&lt;&#x2F;a&gt;’s Client-Server API. The proposal also touches on general improvements to the codebase and increasing test coverage. Cnly will be mentored by &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@brendan:abolivier.bzh&quot;&gt;babolivier&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@andrewm:amorgan.xyz&quot;&gt;anoa&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Congratulations to the selected students. We look forward to participating with you on completing your project over the course of the summer holidays.&lt;&#x2F;p&gt;
+&lt;p&gt;If your proposal was not selected, do not give up hope! Being an active member of the Matrix community and having a deep understanding of the ecosystem and its projects is a big part of what we look for when choosing candidates. If you stick around, you have a strong chance of being chosen in a subsequent year.&lt;&#x2F;p&gt;
+&lt;p&gt;We will not be sharing individual’s proposal documents, but students are free to share them as they please.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>This Week In Matrix – 2018-04-27</title>
+    <published>2018-04-27T00:00:00+00:00</published>
+    <updated>2018-04-27T00:00:00+00:00</updated>
+    <author>
+      <name>Ben Parsons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2018/04/27/this-week-in-matrix-2018-04-27/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2018/04/27/this-week-in-matrix-2018-04-27/</id>
+    <content type="html">&lt;h2 id=&quot;big-news&quot;&gt;Big News&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;gsoc-students&quot;&gt;GSoC students&lt;&#x2F;h4&gt;
+&lt;p&gt;Google Summer of Code acceptees were announced, and we&#x27;re really excited to have FIVE Matrix-related projects to look forward to!&lt;&#x2F;p&gt;
+&lt;p&gt;Three of the students will be mentored by matrix.org folk, and two more will work on Fractal under the GNOME org.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Valentin D. (Zil0) will work on &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#5468043765874688&quot;&gt;adding E2E to matrix-python-sdk&lt;&#x2F;a&gt;, mentored by RichVDH &lt;&#x2F;li&gt;
+&lt;li&gt;Badrul Chowdhury will &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#5936132521459712&quot;&gt;develop an alternative to GCM&#x2F;FCM on Android and APNS on iOS&lt;&#x2F;a&gt; that provides the homeserver with facilities to push notifications, mentored by David Baker&lt;&#x2F;li&gt;
+&lt;li&gt;APwhitehat will work on &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#6239747115057152&quot;&gt;Dendrite (Federation and Sync Server APIs)&lt;&#x2F;a&gt;, mentored by erikj&lt;&#x2F;li&gt;
+&lt;li&gt;Eisha CHEN-YEN-SU will work on a &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#5159367150665728&quot;&gt;new UI for Fractal&lt;&#x2F;a&gt;, mentored by Daniel García Moreno&lt;&#x2F;li&gt;
+&lt;li&gt;Julian Sparber will work on &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;projects&#x2F;#5646994115133440&quot;&gt;Fractal UI improvements and some features like a user account settings and a spell checker&lt;&#x2F;a&gt;. Mentored by Daniel García Moreno&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;fractal-hackfest-2018&quot;&gt;Fractal Hackfest 2018&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wiki.gnome.org&#x2F;Hackfests&#x2F;Fractal2018&quot;&gt;Fractal Hackfest 2018&lt;&#x2F;a&gt; will take place next month in Strasbourg, hosted by Epitech. They&#x27;ll be planning a roadmap for the year, and working on their current focus areas.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wiki.gnome.org&#x2F;Hackfests&#x2F;Fractal2018&quot;&gt;https:&#x2F;&#x2F;wiki.gnome.org&#x2F;Hackfests&#x2F;Fractal2018&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;coverage-of-french-matrix-adoption&quot;&gt;Coverage of French Matrix adoption&lt;&#x2F;h4&gt;
+&lt;p&gt;After the blog post on matrix.org yesterday, lots of attention developed around the news. Take a look at this &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=16933736&quot;&gt;Hacker News&lt;&#x2F;a&gt; thread with lots of discussion, which has stayed on the front page for nearly 24 hours, and a megathread on &lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;linux&#x2F;comments&#x2F;8f3f30&#x2F;matrix_and_riot_confirmed_as_the_basis_for&#x2F;&quot;&gt;Reddit&#x2F;r&#x2F;linux&lt;&#x2F;a&gt;: nearly 1000 upvotes and growing.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;project-updates&quot;&gt;Project Updates&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;clients&quot;&gt;Clients&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;libqmatrixclient&quot;&gt;libqmatrixclient&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@kitsune:matrix.org&quot;&gt;kitsune&lt;&#x2F;a&gt; reports a new release of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;libqmatrixclient&quot;&gt;libqmatrixclient&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;libqmatrixclient&#x2F;releases&#x2F;tag&#x2F;v0.2.1&quot;&gt;v0.2.1&lt;&#x2F;a&gt;, this is mostly a bugfix release, fully backwards-compatible with v0.2. Check out the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;libqmatrixclient&#x2F;releases&#x2F;tag&#x2F;v0.2.1&quot;&gt;release notes&lt;&#x2F;a&gt; for details.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@kitsune:matrix.org&quot;&gt;kitsune&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;libqmatrixclient&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;libqmatrixclient&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#qmatrixclient:matrix.org&quot;&gt;#qmatrixclient:matrix.org&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;quaternion&quot;&gt;Quaternion&lt;&#x2F;h4&gt;
+&lt;p&gt;Staying in QMatrix-land, there is a pre-release of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;Quaternion&quot;&gt;Quaternion&lt;&#x2F;a&gt; available. Take a look at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;Quaternion&#x2F;releases&#x2F;tag&#x2F;v0.0.9&quot;&gt;v0.0.9&lt;&#x2F;a&gt;, improvements include &quot;redactions, file downloading, room creation and settings editing, better timeline visualisation and much more&quot;!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@kitsune:matrix.org&quot;&gt;kitsune&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;Quaternion&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;QMatrixClient&#x2F;Quaternion&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#qmatrixclient:matrix.org&quot;&gt;#qmatrixclient:matrix.org&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;neo&quot;&gt;neo&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@f0x:disroot.org&quot;&gt;f0x&lt;&#x2F;a&gt; has been beavering away on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;f0x52&#x2F;neo&#x2F;&quot;&gt;neo&lt;&#x2F;a&gt;, and has announced that &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;f0x52&#x2F;neo&#x2F;releases&#x2F;tag&#x2F;alpha0.01&quot;&gt;Alpha 0.01&lt;&#x2F;a&gt; is available now. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;f0x52&#x2F;neo&#x2F;&quot;&gt;neo&lt;&#x2F;a&gt; is a webclient in React, it feels really light and fast. I asked &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@f0x:disroot.org&quot;&gt;f0x&lt;&#x2F;a&gt; about the uptick in work, and he mentioned he got started with React recently, but likes it a lot.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@f0x:disroot.org&quot;&gt;f0x&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;f0x52&#x2F;neo&#x2F;&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;f0x52&#x2F;neo&#x2F;&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#neo_client:matrix.org&quot;&gt;#neo_client:matrix.org&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;fractal&quot;&gt;Fractal&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.gnome.org&#x2F;World&#x2F;fractal&quot;&gt;Fractal&lt;&#x2F;a&gt; released &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.gnome.org&#x2F;World&#x2F;fractal&#x2F;commit&#x2F;7373582cee7e040892f29b74d1da23b828e0929b&quot;&gt;0.1.27&lt;&#x2F;a&gt; with many new features and bugfixes. Lot&#x27;s going on but I&#x27;m most excited to see Markdown support land.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.gnome.org&#x2F;World&#x2F;fractal&quot;&gt;https:&#x2F;&#x2F;gitlab.gnome.org&#x2F;World&#x2F;fractal&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#fractal-gtk:matrix.org&quot;&gt;#fractal-gtk:matrix.org&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;bots&quot;&gt;Bots&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;matrix-trello-bot&quot;&gt;matrix-trello-bot&lt;&#x2F;h4&gt;
+&lt;p&gt;Says &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;turt2live&quot;&gt;TravisR&lt;&#x2F;a&gt;: &quot;I&#x27;ve whipped together a simple Trello notification bot for matrix: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;turt2live&#x2F;matrix-trello-bot&quot;&gt;matrix-trello-bot&lt;&#x2F;a&gt;. Future plans include the ability to create&#x2F;update&#x2F;delete cards and more granular control of what is notified about. Currently it acts very similar to how the Github notifications bot works.&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;turt2live&quot;&gt;TravisR&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;turt2live&#x2F;matrix-trello-bot&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;turt2live&#x2F;matrix-trello-bot&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#trellobot:t2bot.io&quot;&gt;#trellobot:t2bot.io&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;others&quot;&gt;Others&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;matrix-dsl&quot;&gt;Matrix DSL&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@MTRNord:matrix.ffslfl.net&quot;&gt;MTRNord&lt;&#x2F;a&gt; is working on a &quot;matrix DSL&quot;, basically a config file language that generates a project Template in multiple languages. The project is just now at the discussion stage, so join &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#matrix_dsl:matrix.ffslfl.net&quot;&gt;#matrix_dsl:matrix.ffslfl.net&lt;&#x2F;a&gt; to check out what&#x27;s going on. (DSL = Domain Specific Language.)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@MTRNord:matrix.ffslfl.net&quot;&gt;MTRNord&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#matrix_dsl:matrix.ffslfl.net&quot;&gt;#matrix_dsl:matrix.ffslfl.net&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;urllib-requests-adapter&quot;&gt;urllib-requests-adapter&lt;&#x2F;h4&gt;
+&lt;p&gt;Says &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@Coffee:matrix.org&quot;&gt;Coffee&lt;&#x2F;a&gt;: &quot;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Matrixcoffee&#x2F;urllib-requests-adapter&quot;&gt;urllib-requests-adapter&lt;&#x2F;a&gt; has been updated to work with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-python-sdk&quot;&gt;matrix-python-sdk&lt;&#x2F;a&gt; 0.2.0. urllib-requests-adapter is a lightweight replacement for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kennethreitz&#x2F;requests&quot;&gt;requests&lt;&#x2F;a&gt; and its dependencies, currently standing at 126 SLOC.&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@Coffee:matrix.org&quot;&gt;Coffee&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Matrixcoffee&#x2F;urllib-requests-adapter&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;Matrixcoffee&#x2F;urllib-requests-adapter&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;mxisd&quot;&gt;mxisd&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kamax-io&#x2F;mxisd&quot;&gt;mxisd&lt;&#x2F;a&gt;, the Identity Server from kamax, saw a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kamax-io&#x2F;mxisd&#x2F;releases&#x2F;tag&#x2F;v1.0.2&quot;&gt;v1.0.2&lt;&#x2F;a&gt; release, following the big one-point-zero last week. Changes include de-duplicated directory search results, plus bugfixes.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@max:kamax.io&quot;&gt;Max&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kamax-io&#x2F;mxisd&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;kamax-io&#x2F;mxisd&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;matrix-stfu&quot;&gt;matrix-stfu&lt;&#x2F;h4&gt;
+&lt;p&gt;Missed this one last week, but &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;xwiki-labs&#x2F;matrix-stfu&quot;&gt;matrix-stfu&lt;&#x2F;a&gt; from &lt;a href=&quot;https:&#x2F;&#x2F;www.xwiki.com&#x2F;&quot;&gt;xwiki&lt;&#x2F;a&gt; is a message filtering tool released recently, it can &quot;mass remove everything which was said by a particular user in a particular room&quot;. XWiki use matrix as their internal chat system for the ~30 people at the company.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.xwiki.com&#x2F;&quot;&gt;xwiki&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;xwiki-labs&#x2F;matrix-stfu&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;xwiki-labs&#x2F;matrix-stfu&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#xwiki:matrix.xwiki.com&quot;&gt;#xwiki:matrix.xwiki.com&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;riot-web&quot;&gt;Riot&#x2F;Web&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;We&#x27;re committing to 2-weekly releases come what may, to avoid another massive gap like the one between 0.13 and 0.14.&lt;&#x2F;li&gt;
+&lt;li&gt;RCs will get cut starting from Wednesday; actual release then happens on the Monday having given folks a chance to test the RC on &#x2F;staging (and to iterate on the RCs).&lt;&#x2F;li&gt;
+&lt;li&gt;Obviously this is flexible if we need to rush out fixes sooner.&lt;&#x2F;li&gt;
+&lt;li&gt;On that note, 0.14.2-rc1 was cut on Wednesday!  Please test it at riot.im&#x2F;staging. It&#x27;s mainly bugfixes but also the full relayering between riot-web and matrix-react-sdk.&lt;&#x2F;li&gt;
+&lt;li&gt;Dave&#x27;s working on finally hooking in Jitsi as the default conferencing system&lt;&#x2F;li&gt;
+&lt;li&gt;t3chguy&#x27;s been working on Replies, which continue to look awesome&lt;&#x2F;li&gt;
+&lt;li&gt;Next up: E2E cross-signing (at last!!!!)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;riot-mobile&quot;&gt;Riot&#x2F;Mobile&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;New releases are out! Mainly preparing for sticker viewing and trying to fix the Android push notification situation.  PLEASE TELL US IF YOU ARE STILL HAVING ANDROID PUSH NOTIFICATION PROBLEMS!&lt;&#x2F;li&gt;
+&lt;li&gt;Lots of review of Android by Benoit - adding in Kotlin support as of today and establishing a formal roadmap for Android work (we&#x27;ll show the blog post when we have it)&lt;&#x2F;li&gt;
+&lt;li&gt;Lots of Matrix-for-French-Government stuff.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;synapse&quot;&gt;Synapse&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&#x2F;blog&#x2F;2018&#x2F;04&#x2F;27&#x2F;synapse-0-28-0-released&#x2F;&quot;&gt;Synapse 28.0 was released!&lt;&#x2F;a&gt; A major bump mainly thanks to lots and lots of contributions from the wider community.&lt;&#x2F;li&gt;
+&lt;li&gt;Massive experimental work on GDPR in progress - doing the thought experiment of pseudonymising MXIDs throughout Matrix on a per-room basis so that it&#x27;s possible to redact MXIDs in the event of a “right-to-erasure” GDPR event.  Rich vdH is leading the work.&lt;&#x2F;li&gt;
+&lt;li&gt;The good news is that introducing an MXID abstraction layer like this could help us enormously with some of Matrix&#x27;s longest-term architectural issues - i.e. account migration and portability; improving on PERSPECTIVEs for managing server identity; future support for P2P Matrix; solving the domain name reuse problem; etc.&lt;&#x2F;li&gt;
+&lt;li&gt;The bad news is that it would obviously be a very significant change to the Matrix spec, although we&#x27;d be doing it in such a way which minimises impact to client implementers and keep the CS API looking as similar as possible.&lt;&#x2F;li&gt;
+&lt;li&gt;We&#x27;re not sure whether we need to rush this through or not yet; still waiting for final GDPR clarification from lawyers, but it feels like this might be a good opportunity to force us to finally tackle some of these harder problems.&lt;&#x2F;li&gt;
+&lt;li&gt;Meanwhile, Erik&#x27;s Delta State Resolution algorithm work is continuing well; we&#x27;re hoping to finish &amp; merge it asap in order to get back headroom on the server.&lt;&#x2F;li&gt;
+&lt;li&gt;Thankfully the matrix.org synapse itself has been relatively stable this week, other than being completely overloaded causing Freenode to be almost unusable.&lt;&#x2F;li&gt;
+&lt;li&gt;We&#x27;ve started using Ansible in production, although the playbooks need some iteration before we&#x27;re fully happy to announce them &amp; recommend folks use them as an official way of running Synapse in production.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;try-matrix-now&quot;&gt;try-matrix-now&lt;&#x2F;h4&gt;
+&lt;p&gt;There is a update out on &lt;a href=&quot;&#x2F;docs&#x2F;projects&#x2F;try-matrix-now.html&quot;&gt;try-matrix-now&lt;&#x2F;a&gt;, matrix.org&#x27;s central listing of projects. Try filtering and see whether &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@benpa:matrix.org&quot;&gt;benpa&lt;&#x2F;a&gt; mangled the metadata for &lt;em&gt;your&lt;&#x2F;em&gt; project. Submit any changes as markdown PRs on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;&quot;&gt;the repo&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;spec&quot;&gt;Spec&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@benpa:matrix.org&quot;&gt;benpa&lt;&#x2F;a&gt; is currently working on a Proposals page for the Spec to properly stack spec proposal status, at last!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;articles-around-the-web&quot;&gt;Articles around the web&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;riot-a-distributed-way-of-having-irc-and-voip-client-and-home-server&quot;&gt;Riot: A Distributed Way of Having IRC and VOIP Client and Home Server&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@uhoreg&quot;&gt;uhoreg&lt;&#x2F;a&gt; pointed to some charming coverage over on &lt;a href=&quot;itsfoss.com&quot;&gt;https:&#x2F;&#x2F;itsfoss.com&lt;&#x2F;a&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;itsfoss.com&#x2F;riot-desktop&#x2F;&quot;&gt;Riot: A Distributed Way of Having IRC and VOIP Client and Home Server&lt;&#x2F;a&gt;, by &lt;a href=&quot;https:&#x2F;&#x2F;itsfoss.com&#x2F;author&#x2F;shirish&#x2F;&quot;&gt;Shirish&lt;&#x2F;a&gt;. The article covers some details about riot-web and the open source ethos of Matrix, but my favourite quote by far:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;Without Matrix, Riot would be like a body without a soul.&quot;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;itsfoss.com&#x2F;author&#x2F;shirish&#x2F;&quot;&gt;Shirish&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;itsfoss.com&#x2F;riot-desktop&#x2F;&quot;&gt;https:&#x2F;&#x2F;itsfoss.com&#x2F;riot-desktop&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;service-notifs-with-matrix&quot;&gt;Service notifs with Matrix&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@Half-Shot:half-shot.uk&quot;&gt;Half-Shot&lt;&#x2F;a&gt; shared an article he wrote, &lt;a href=&quot;https:&#x2F;&#x2F;dev.to&#x2F;halfshot&#x2F;service-notifs-with-matrix-3fb5&quot;&gt;Service notifs with Matrix&lt;&#x2F;a&gt;, about using Matrix and Riot to deliver automated notifications to different types of end-user at his company.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@Half-Shot:half-shot.uk&quot;&gt;Half-Shot&lt;&#x2F;a&gt; - &lt;a href=&quot;https:&#x2F;&#x2F;dev.to&#x2F;halfshot&#x2F;service-notifs-with-matrix-3fb5&quot;&gt;https:&#x2F;&#x2F;dev.to&#x2F;halfshot&#x2F;service-notifs-with-matrix-3fb5&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;new-rooms-roundup&quot;&gt;New Rooms roundup&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#matrix_dsl:matrix.ffslfl.net&quot;&gt;#matrix_dsl:matrix.ffslfl.net&lt;&#x2F;a&gt; As mentioned above, MTRNord is looking at creating a DSL for matrix. In his words: &quot;A room to discuss about making a Matrix DSL to allow non coders to write simple as and bots. I would love to see some people discussing about syntax with me as this is my very first DSL and very first time trying JetBrains MSP. Anyone with Ideas what it should allow to do and how to have the syntax a welcome to join (and people who want to follow of course too)&quot;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#trellobot:t2bot.io&quot;&gt;#trellobot:t2bot.io&lt;&#x2F;a&gt; (from above) TravisR: &quot;a discussion&#x2F;developer room for Matrix Trello Bot (https:&#x2F;&#x2F;github.com&#x2F;turt2live&#x2F;matrix-trello-bot). This is a bot that notifies rooms of changes to tracked Trello boards, similar to how the Github bot works. Future enhancements include being able to create, update, and delete cards from within Matrix.&quot;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;lastly&quot;&gt;Lastly...&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=b3OuPFQ1ELg&quot;&gt;Matrix Live - Season 2, Episode 17: Apr 27th is now available!&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=b3OuPFQ1ELg&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=b3OuPFQ1ELg&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;b3OuPFQ1ELg&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;This Week in Matrix is printed fresh every week! There will be another post before you know it, so if you&#x27;d like to be included join us in &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#twim:matrix.org&quot;&gt;#twim:matrix.org&lt;&#x2F;a&gt; and let us know what you&#x27;ve been working on. See you next week!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Google Summer of Code 2017</title>
+    <published>2017-03-01T00:00:00+00:00</published>
+    <updated>2017-03-01T00:00:00+00:00</updated>
+    <author>
+      <name>Oddvar Lovaas</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2017/03/01/google-summer-of-code-2017/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2017/03/01/google-summer-of-code-2017/</id>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2017&#x2F;03&#x2F;GSoC-icon-192.png&quot; alt=&quot;&quot; width=&quot;192&quot; height=&quot;192&quot; class=&quot;alignleft size-full wp-image-2044&quot; &#x2F;&gt;We are very happy to &lt;a href=&quot;&#x2F;blog&#x2F;2016&#x2F;03&#x2F;08&#x2F;matrix-in-google-summer-of-code&#x2F;&quot;&gt;again&lt;&#x2F;a&gt; be one of the organisations selected for Google Summer of Code (GSoC)!&lt;&#x2F;p&gt;
+&lt;p&gt;Last year we had two students working on Matrix-projects over the summer - you can read the &lt;a href=&quot;&#x2F;blog&#x2F;2016&#x2F;11&#x2F;12&#x2F;the-matrix-autumn-special&#x2F;&quot;&gt;retrospective here&lt;&#x2F;a&gt; - and now we are again offering students to work on Matrix as part of GSoC! Currently we are in the &lt;a href=&quot;https:&#x2F;&#x2F;developers.google.com&#x2F;open-source&#x2F;gsoc&#x2F;timeline&quot;&gt;stage&lt;&#x2F;a&gt; where students can propose interesting project ideas to any of the &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;organizations&#x2F;&quot;&gt;open source organisations&lt;&#x2F;a&gt; picked by Google. Of course, we encourage students to get in touch with us and discuss their ideas before writing their application - please come say hi in the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#gsoc:matrix.org&quot;&gt;#gsoc:matrix.org&lt;&#x2F;a&gt; room!&lt;&#x2F;p&gt;
+&lt;p&gt;We are very eager to see what ideas students come up with. We have added our own ideas &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;GSoC&#x2F;blob&#x2F;master&#x2F;IDEAS.md&quot;&gt;here&lt;&#x2F;a&gt;, but students are expected to do some research and come up with their own ideas for projects. We have also written down some &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;GSoC&#x2F;blob&#x2F;master&#x2F;README.md#how-do-i-write-my-gsoc-application&quot;&gt;general tips&lt;&#x2F;a&gt; on what to include in the application.&lt;&#x2F;p&gt;
+&lt;p&gt;Applications can be submitted from March 20th, so there&#x27;s still plenty of time to have a play with Matrix and come up with a cool project idea!&lt;&#x2F;p&gt;
+&lt;p&gt;Good luck!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>The Matrix Autumn Special!</title>
+    <published>2016-11-12T00:00:00+00:00</published>
+    <updated>2016-11-12T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2016/11/12/the-matrix-autumn-special/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2016/11/12/the-matrix-autumn-special/</id>
+    <content type="html">&lt;p&gt;Another season has passed; the leaves are dropping from the trees in the northern hemisphere (actually, in the time it&#x27;s taken us to finish this post, most of them have dropped :-&#x2F;) and once again the Matrix team has been hacking away too furiously to properly update the blog. So without further delay here&#x27;s an update on all things Matrix!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;synapse-0-18&quot;&gt;Synapse 0.18&lt;&#x2F;h3&gt;
+&lt;p&gt;Back in September, we forgot to properly announce the 0.18 release of Synapse! This is a major oversight given that 0.18 was a huge update with some critical performance improvements, but hopefully everyone has upgraded by now anyway. If not, there&#x27;s never been a better time to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&quot;&gt;run your own homeserver&lt;&#x2F;a&gt;! The main improvement is that the Matrix room state updates are now stored as deltas in the database rather than snapshots, which reduces the size of the database footprint by around 5 - 7x. The first time you run synapse after upgrading to 0.18 it will go through your database deleting all the historical data, after which you can VACUUM the db to reclaim the freed diskspace.&lt;&#x2F;p&gt;
+&lt;p&gt;You can tell when it&#x27;s finished based on whether it&#x27;s stopped logging about the &#x27;background_deduplicate_state&#x27; task. There was a bug in 0.18.0 that meant this process was very slow (weeks) on sqlite DBs and chewed 100% CPU; this was fixed in 0.18.1, and subsequently we&#x27;ve also had 0.18.2 (various perf and bug fixes, and a new modular internal API for authentication) and the current release: 0.18.3 to address a &lt;a href=&quot;&#x2F;blog&#x2F;2016&#x2F;11&#x2F;08&#x2F;synapse-debian-pacakge-security-announcement&#x2F;&quot;&gt;major vulnerability&lt;&#x2F;a&gt; on deployments using LDAP with obsolete versions (0.9.x) of the python ldap3 library - e.g. Debian Stable. &lt;strong&gt;Folks using the Debian Stable packages must upgrade immediately.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Other big changes in Synapse 0.18 were:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Adding the final APIs required to support end-to-end encryption: specifically, a new store-and-forward API called &quot;to device messaging&quot;, which lets messages be passed between specific devices outside the context of a room or a room DAG. This is used for exchanging authentication tokens and sensitive end-to-end key data between devices (e.g. when a new device joins a room and needs to be looped in) and is not intended for general messaging.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Changing how remote directory servers are queried. Rather than constantly spidering them via the secondary_directory_servers option (which was causing a load crisis on the matrix.org server, as everyone else in Matrix kept polling it for directory updates), clients can now set a &#x27;server&#x27; parameter on the publicRooms request to ask their server to proxy the request through to a specific remote server. Element (the app formally known as Riot&#x2F;Web) implements this already. This is a stopgap until we have a proper global room discovery database of some kind.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Adding pagination support to the room directory API. We now have enough rooms in Matrix that downloading the full list every time the user searches for a room was getting completely untenable - we now support paginating and searching the list. Riot (now Element) and Riot-Android (now Element Android) are using the new APIs already.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Basic support for &#x27;direct room&#x27; semantics. When you create a room you can now state the intent for that room to be a 1:1 with someone via the is_direct parameter.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Making the &#x2F;notifications API work - this lets clients download a full list of all the notifications a user has been recently sent (highlights, mentions etc)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Spec for all of these new APIs are currently making their way into the official matrix spec; you can see the work in progress at &lt;a href=&quot;&#x2F;speculator&quot;&gt;https:&#x2F;&#x2F;matrix.org&#x2F;speculator&lt;&#x2F;a&gt;. Meanwhile, we&#x27;re waiting for the last bits of the end-to-end encryption APIs to land there before releasing 0.3 of the Matrix spec, which should happen any day now.
+&lt;p&gt;To find out more and get upgraded if you haven&#x27;t already, please check out &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;releases&#x2F;tag&#x2F;v0.18.3&quot;&gt;the full changelog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;synapse-scalability&quot;&gt;Synapse scalability&lt;&#x2F;h3&gt;
+&lt;p&gt;Something which we&#x27;ve been quietly adding over the last 6 months is support for running large synapse deployments like the Matrix.org homeserver. Matrix.org has around 500K accounts on it, 50k rooms, and relays around 500K messages per day and obviously the community expects it to have good performance and availability (even though we&#x27;d prefer if you ran your own server, for obvious reasons!)&lt;&#x2F;p&gt;
+&lt;p&gt;The current scaling approach for this is called &#x27;Workers&#x27; - where we&#x27;ve split out a whole bunch of different endpoints from the main Synapse process into child &#x27;worker&#x27; processes which replicate their state from the master Synapse process. These workers are designed to scale horizontally, adding as many as you like to handle the traffic load. It&#x27;s not full active&#x2F;active horizontal scalability in that you&#x27;re still limited by the performance of the master process and the database master you&#x27;re writing to, but it&#x27;s a great way to escape Python&#x27;s global interpreter lock limiting processes effectively to a single core, and in practice it&#x27;s a huge improvement and works pretty well as of Synapse 0.18.&lt;&#x2F;p&gt;
+&lt;p&gt;You can read more about the architecture and how to run your Synapse in worker-mode over at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;master&#x2F;docs&#x2F;workers.rst&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;master&#x2F;docs&#x2F;workers.rst&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;starting-a-riot-now-element&quot;&gt;Starting a Riot (now Element)&lt;&#x2F;h3&gt;
+&lt;p&gt;Meanwhile, the biggest news in Matrixland has probably been the renaming of Vector as Riot (now Element) and the &#x27;mass market&#x27; launch of Riot as a flagship Matrix client at the &lt;a href=&quot;http:&#x2F;&#x2F;pulverhwc.evolero.com&#x2F;monage&quot;&gt;MoNage&lt;&#x2F;a&gt; conference on Sept 19th in Boston. The reasons for renaming Vector have been done to death by now and hopefully folks have got over the shock, but the rationale is to have a more distinctive and memorable (and controversial!) name, which is more aligned with the idea of returning control of communication back to the people :) Amandine has the full story over at the &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@RiotChat&#x2F;lets-riot-f5b0aa99dc8e&quot;&gt;Riot blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Riot (now Element) itself is a fairly thin layer on top of the official client Matrix SDKs, and so 95% of the work for Riot (now Element) took the form of updates to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk&quot;&gt;matrix-js-sdk&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-react-sdk&quot;&gt;matrix-react-sdk&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-sdk&quot;&gt;matrix-ios-sdk&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-kit&quot;&gt;matrix-ios-kit&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-android-sdk&quot;&gt;matrix-android-sdk&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&quot;&gt;synapse&lt;&#x2F;a&gt; itself. There&#x27;s been a tonne of changes here since June, but the main highlights are:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;End-to-end encryption support landed in matrix-js-sdk and matrix-react-sdk (and thus Riot&#x2F;Web (now Element)) and in dev on matrix-ios-sdk and matrix-android-sdk using the Olm and Megolm ratchets. More about this later.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Hosted integrations, bots and bridges! More about this later too.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Direct Message UI landed in Riot&#x2F;Web (now Element) to tag rooms which exist for contacting a specific user. These get grouped now as the &#x27;People&#x27; list in Riot (now Element). It&#x27;s in dev on Riot&#x2F;iOS (now Element (iOS)) &amp; Android (now Element Android).&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Entirely new UI for starting conversations with people - no more creating a room and then inviting; you just say &quot;i want to talk with Bob&quot;.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Entirely new UI for inviting people into a room - no more confusion between searching the membership list and inviting users.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;FilePanel UI in Riot&#x2F;Web (now Element) to instantly view all the attachments posted in a room&lt;&#x2F;li&gt;
+ 	&lt;li&gt;NotificationPanel UI in Riot&#x2F;Web (now Element) to instantly view all your missed notifications and mentions in a single place&lt;&#x2F;li&gt;
+ 	&lt;li&gt;&quot;Volume control&quot; UI to have finer grained control over per-room notification noisiness&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Entirely re-worked Room Directory navigator - lazy-loading the directory from the server, and selecting rooms via bridge and remote server&lt;&#x2F;li&gt;
+ 	&lt;li&gt;It&#x27;s very exciting to see a wider audience discovering Matrix through Riot (now Element) - and Riot (now Element)&#x27;s usage stats have been growing steadily since launch, but there&#x27;s still a lot of room for improvement.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Stuff on the horizon includes:
+&lt;ul&gt;
+ 	&lt;li&gt;Formal beta-testing the full end-to-end encryption feature-set.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Performance and optimisation work on all platforms - there are huge improvements to be had.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Long-awaited poweruser features: &#x27;dark&#x27; colour scheme; more whitespace-efficient layout; collapsing consecutive joins&#x2F;parts...&lt;&#x2F;li&gt;
+ 	&lt;li&gt;&quot;Landing page&quot; to help explain what&#x27;s going on to new users and to show deployment-specific announcements and room lists.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support for arbitrary profile information.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Threading.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Riot (now Element) releases are announced on &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#riot:matrix.org&quot;&gt;#riot:matrix.org&lt;&#x2F;a&gt;, the &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@RiotChat&quot;&gt;Riot blog&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;twitter.com&#x2F;@RiotChat&quot;&gt;Twitter&lt;&#x2F;a&gt; - keep your eyes peeled for updates!
+&lt;h3 id=&quot;end-to-end-encryption&quot;&gt;End to End Encryption&lt;&#x2F;h3&gt;
+&lt;p&gt;Full cross-platform end-to-end encryption is incredibly close now, with the develop branches of iOS &amp;amp; Android SDKs and Riot (now Element) currently in internal testing as of Nov 7 - expect a Big Announcement very shortly.  We&#x27;re very optimistic based on how the initial implementation on Riot&#x2F;Web (now Element)has been behaving so far.&lt;&#x2F;p&gt;
+&lt;p&gt;When E2E first landed on Riot&#x2F;Web (now Element) in September we were missing mobile support, encrypted attachments, encrypted VoIP signalling, and the ability to retrieve encrypted history on new devices - as well as a formal audit of the underlying &lt;a href=&quot;&#x2F;docs&#x2F;spec&#x2F;olm.html&quot;&gt;Olm&lt;&#x2F;a&gt; and &lt;a href=&quot;&#x2F;docs&#x2F;spec&#x2F;megolm.html&quot;&gt;Megolm&lt;&#x2F;a&gt; libraries. Since then things have progressed enormously with most of the core team working since September on filling in the gaps, as well as getting audited and fixing all the weird and wonderful edge cases that the audit showed up. All the missing stuff has been landing on the develop branches over the last few weeks, with encrypted attachments landing on web on Nov 10; encrypted VoIP landing on Nov 11; etc. Watch this space for news on the upcoming cross-platform public beta!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;hosted-integrations-and-introducing-go-neb&quot;&gt;Hosted Integrations and introducing go-neb&lt;&#x2F;h3&gt;
+&lt;p&gt;One of the new features which arrived in Riot (now Element) is the ability to add &quot;single click&quot; integrations (i.e. bots, bridges, application services) into rooms from Riot&#x2F;Web (now Element) by clicking the &quot;Manage Integrations&quot; button in Room Settings. These integrations are hosted for free by Riot (now Element) in its production infrastructure (codenamed Scalar), but all the actual bots&#x2F;bridges&#x2F;services themselves are normal opensource Matrix apps and you can of course run them yourself too.&lt;&#x2F;p&gt;
+&lt;img class=&quot;aligncenter wp-image-1827&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;Screen-Shot-2016-11-12-at-11.47.29-1024x913.png&quot; alt=&quot;screen-shot-2016-11-12-at-11-47-29&quot; width=&quot;894&quot; height=&quot;797&quot; &#x2F;&gt;
+&lt;p&gt;The Bot integrations are all provided by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&quot;&gt;go-neb&lt;&#x2F;a&gt; - a complete rewrite in Golang and general reimagining of the old &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;Matrix-NEB&quot;&gt;python NEB bot&lt;&#x2F;a&gt; which old-timers will recall as the very first bot written for the Matrix ecosystem. Go-neb has effectively now become a general purpose golang bot&#x2F;integration framework for Matrix, with the various different services implemented as plugins for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;tree&#x2F;master&#x2F;src&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;services&#x2F;github&quot;&gt;Github&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;tree&#x2F;master&#x2F;src&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;services&#x2F;jira&quot;&gt;JIRA&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;tree&#x2F;master&#x2F;src&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;services&#x2F;giphy&quot;&gt;Giphy&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;tree&#x2F;master&#x2F;src&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;services&#x2F;guggy&quot;&gt;Guggy&lt;&#x2F;a&gt; etc. Critically it supports &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb#configuring-realms&quot;&gt;authenticating Matrix users through to the remote service&lt;&#x2F;a&gt;, letting normal Matrix users interact with Github and friends using their actual Github identity rather than via a bot user - this is a huge huge improvement over the original naive python NEB.&lt;&#x2F;p&gt;
+&lt;p&gt;If you like Go and you like Matrix, we&#x27;d strongly suggest having a go (hah) at adding new services into go-neb: anything implemented against go-neb will also magically be hosted and available as part of the &quot;Manage Integrations&quot; interface in Riot (now Element), as well as being available to anyone else running their own go-nebs. For full details of the architecture and how to implement new plugins, go check out the full &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&quot;&gt;README&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If Matrix is to provide a good FOSS alternative to systems like Slack it&#x27;s critical to have a large array of available integrations, so we really hope that the community will help us grow the list!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;building-bridges&quot;&gt;Building Bridges&lt;&#x2F;h3&gt;
+&lt;p&gt;There have been vast improvements to bridging over the last few months, including the ability to &quot;plumb&quot; bridges into arbitrary rooms (letting you link a single Matrix room through to multiple remote networks). Like go-neb, Riot (now Element) is providing free bridge hosting with the ability to add to rooms with a &quot;single click&quot; via the Manage Integrations button in Room Settings. For now, Riot (now Element) is hosting any bridges built on the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-bridge&quot;&gt;matrix-appservice-bridge&lt;&#x2F;a&gt; codebase.&lt;&#x2F;p&gt;
+&lt;p&gt;In short, this means that any user can go and take an existing Matrix room and link it through to Slack, IRC, Gitter, and more.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;matrix-appservice-irc&quot;&gt;matrix-appservice-irc&lt;&#x2F;h4&gt;
+&lt;p&gt;Huge amounts of work have gone into improving the IRC bridge - both adding new features to try to give the most IRC-friendly experience when bridging into IRC, as well as lots of maintenance and performance work to ensure that the matrix.org hosted bridges can scale to the large amounts of traffic we&#x27;re seeing going through Freenode and others. We&#x27;ve also added hosted bridges for OFTC and Snoonet, and turned on connecting via IPv6 by default for networks which support it.&lt;&#x2F;p&gt;
+&lt;p&gt;You can read the full changelogs for 0.5.0 and 0.6.0 at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-irc&#x2F;blob&#x2F;master&#x2F;CHANGELOG.md&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-irc&#x2F;blob&#x2F;master&#x2F;CHANGELOG.md&lt;&#x2F;a&gt;, but the main highlights are:&lt;&#x2F;p&gt;
+&lt;p&gt;matrix-appservice-irc 0.6.0&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Debouncing quits and netsplits: if IRC users quit there can be a window where they are shown as just offline rather than leaving the room, avoiding join&#x2F;part spam and creating unnecessary state events in Matrix.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Topic bridging: IRC topics can now be bridged to Matrix!&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support custom SSL CAs (thanks to @Waldteufel)&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support custom media repository URLs&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support the ability to quit your IRC user from the network entirely&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Fix rate limiting for traffic from privileged IRC users and services&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+matrix-appservice-irc 0.5.0:
+&lt;ul&gt;
+ 	&lt;li&gt;Support throttling reconnections to IRC servers to avoid triggering abuse thresholds&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support &quot;Third party lookup&quot;: mapping from IRC users &amp; rooms into Matrix IDs for discovery purposes&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support rate-limiting membership entries to avoid triggering abuse thresholds&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Require permission of an IRC chanop when plumbing an IRC channel into a Matrix room&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Prevent routing loops by advisory m.room.bridging events&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Better error messages&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Sync chanmode +s correctly&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Fix IPv6 support&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Next up is automating NickServ login, and generally continuing to make the IRC experience as good as we possibly can.
+&lt;h4 id=&quot;matrix-appservice-slack&quot;&gt;matrix-appservice-slack&lt;&#x2F;h4&gt;
+&lt;p&gt;Similarly, the Slack bridge has had loads of work. The main changes include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Ability to dynamically bridge (&quot;plumb&quot;) rooms on request&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Add Prometheus monitoring metrics&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Ability to discover slack team tokens via OAuth2&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Sync avatars both ways&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+We&#x27;re currently looking at shifting over to Slack&#x27;s RTM (Real Time Messaging) API rather than using webhooks in order to get an even better fit with Slack and support bridging DMs, but the current setup is still very usable. For more details: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-slack&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-slack&lt;&#x2F;a&gt;.
+&lt;h4 id=&quot;matrix-appservice-gitter&quot;&gt;matrix-appservice-gitter&lt;&#x2F;h4&gt;
+&lt;p&gt;The Gitter bridge has provided a lot of inspiration for the more recent work on the Slack bridge. Right now it provides straightforward bridging into Gitter rooms, albeit proxied via a &#x27;matrixbot&#x27; user on the Gitter side. We&#x27;re currently looking at letting also users authenticate using their Gitter credentials so they are bridged through to their &#x27;real&#x27; Gitter user - watch this space. For more details: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-gitter&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-gitter&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;community-updates&quot;&gt;Community updates&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;matrix-ircd&quot;&gt;matrix-ircd&lt;&#x2F;h4&gt;
+&lt;p&gt;matrix-ircd is a rewrite of the old PTO project (&lt;a href=&quot;http:&#x2F;&#x2F;pto.im&quot;&gt;pto.im&lt;&#x2F;a&gt;): a Rust application that turns Matrix into a single great big decentralised IRC network. PTO itself has unfortunately been on hiatus and is rather bitrotted, so Erik from the core Matrix Team picked it up to see if it could be resurrected. This ended up turning into a complete rewrite (switching from mio to tokio etc), and the new project can be found at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;matrix-ircd really is an incredibly promising way of getting folks onto Matrix, as it exposes the entirety of Matrix as a virtual IRC network. This means that IRC addicts can jack straight into Matrix, talking native IRC from their existing IRC clients - but interacting directly with Matrix rooms as if they were IRC channesls without going through a bridge. Obviously you lose all of the features and semantics which Matrix provides beyond IRC, but this is still a great way to get started.&lt;&#x2F;p&gt;
+&lt;p&gt;The project is currently alpha but provides a good functioning base to extend, and Erik&#x27;s explicitly asking for help from the Rust and Matrix community to fill in all the missing features. If you&#x27;re interested in helping, please come talk on &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#matrix-ircd:matrix.org&quot;&gt;#matrix-ircd:matrix.org&lt;&#x2F;a&gt;!.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;matrix-appservice-gitter-twisted&quot;&gt;matrix-appservice-gitter-twisted&lt;&#x2F;h4&gt;
+&lt;p&gt;Not to be confused with the Node-based &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-gitter&quot;&gt;matrix-appservice-gitter&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;remram44&#x2F;matrix-appservice-gitter-twisted&quot;&gt;matrix-appservice-gitter-twisted&lt;&#x2F;a&gt; is an entirely separate project written in Python&#x2F;Twisted by Remram (Remi Rampin) that has the opposite architecture: rather than bridging existing rooms into Matrix, matrix-appservice-gitter-twisted lets you provide your Gitter credentials and acts instead as a Gitter client, bridging your personal view of a Gitter room into a private Matrix room just for you.&lt;&#x2F;p&gt;
+&lt;p&gt;This obviously has some major advantages (your actions on Gitter use your real Gitter account rather than a bot), and some disadvantages too (you can&#x27;t use Matrix features when interacting with other Matrix users in the same room, and the Gitter channel itself is not decentralised into Matrix). However, it&#x27;s a really cool example of how the other model can work - and within the core team, we&#x27;ve been arguing back and forth for ages now on whether normal bridges or &quot;sidecar&quot; bridges like this one are a more preferable architecture. Thanks to Remram&#x27;s work we can try both side by side! Go check it out at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;remram44&#x2F;matrix-appservice-gitter-twisted&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;remram44&#x2F;matrix-appservice-gitter-twisted&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;telematrix&quot;&gt;telematrix&lt;&#x2F;h4&gt;
+&lt;p&gt;Telematrix is Telegram&amp;lt;-&amp;gt;Matrix bridge, written by Sijmen Schoon using python3 and asyncio. Right now it&#x27;s a fairly early alpha hardcoded to bridge a specific Telegram channel into a specific Matrix room, but it works and in use and could be an excellent base for folks interested in a more comprehensive Matrix&#x2F;Telegram bridge. Go check it out at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SijmenSchoon&#x2F;telematrix&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;SijmenSchoon&#x2F;telematrix&lt;&#x2F;a&gt;
+&lt;img class=&quot;aligncenter wp-image-1832&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;telematrix-1024x828.png&quot; alt=&quot;telematrix&quot; width=&quot;641&quot; height=&quot;518&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;ruma&quot;&gt;Ruma&lt;&#x2F;h4&gt;
+&lt;p&gt;Meanwhile, the Ruma project to write a Matrix homeserver in Rust has been progressing steadily, with more and more checkboxes appearing on the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;blob&#x2F;master&#x2F;STATUS.md&quot;&gt;status page&lt;&#x2F;a&gt;, with significant new contributions from mujx and farodin91. The best way to keep track of Ruma is to read Jimmy&#x27;s excellent &lt;a href=&quot;https:&#x2F;&#x2F;ruma.dev&#x2F;news&#x2F;&quot;&gt;This Week in Ruma&lt;&#x2F;a&gt; updates and of course hang out on &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#ruma:matrix.org&quot;&gt;#ruma:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;nachat&quot;&gt;NaChat&lt;&#x2F;h4&gt;
+&lt;p&gt;An entirely new client on the block since the last update is &lt;a href=&quot;http:&#x2F;&#x2F;github.com&#x2F;ralith&#x2F;nachat&quot;&gt;NaChat&lt;&#x2F;a&gt;, written by Ralith. NaChat is a pure cross-platform Qt&#x2F;C++ desktop client written from the ground up, supporting local history synchronisation, excellent performance, native Qt theming, and generally being a lean and mean Matrix client machine. It&#x27;s still alpha, but it&#x27;s easy to build and a lot of fun to play with.&lt;&#x2F;p&gt;
+&lt;img class=&quot;aligncenter wp-image-1828&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;Screen-Shot-2016-11-12-at-12.01.03-1024x664.png&quot; alt=&quot;screen-shot-2016-11-12-at-12-01-03&quot; width=&quot;1009&quot; height=&quot;654&quot; &#x2F;&gt;
+&lt;p&gt;Please give a spin, encourage Ralith to finish the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ralith&#x2F;nachat&#x2F;tree&#x2F;timeline-view-rewrite&quot;&gt;timeline-view-rewrite&lt;&#x2F;a&gt; branch (which is probably the one you want to be running!), and come hang out on &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#nachat:matrix.org&quot;&gt;#nachat:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;quaternion&quot;&gt;Quaternion&lt;&#x2F;h4&gt;
+&lt;p&gt;Meanwhile, the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fxrh&#x2F;quaternion&quot;&gt;Quaternion&lt;&#x2F;a&gt; Qt&#x2F;QML desktop client and its &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fxrh&#x2F;libqmatrixclient&quot;&gt;libqmatrixclient&lt;&#x2F;a&gt; library has been making sure and steady progress, with fxrh, kitsune, maralorn and others working away at it. The difference with NaChat here is using QML rather than native Qt widgets, and a focus on more advanced UX features like a custom infinite-scrolling scrollbar widget, unread message notifications, and read-up-to markers.  Recent developments include the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Fxrh&#x2F;Quaternion&#x2F;releases&#x2F;tag&#x2F;v0.0.1&quot;&gt;first official release (0.0.1)&lt;&#x2F;a&gt; on Sept 12, official Windows builds, lots of work on implementing better Read-up-to Markers, scrolling behaviour etc. Again, it&#x27;s worth keeping a checkout of Quaternion handy and playing with the client - it&#x27;s loads of fun!&lt;&#x2F;p&gt;
+&lt;img class=&quot;aligncenter size-large wp-image-1829&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;Screen-Shot-2016-11-12-at-12.12.48-1024x535.png&quot; alt=&quot;screen-shot-2016-11-12-at-12-12-48&quot; width=&quot;1024&quot; height=&quot;535&quot; &#x2F;&gt;
+&lt;h3 id=&quot;google-summer-of-code-2016-retrospective&quot;&gt;Google Summer of Code 2016 Retrospective&lt;&#x2F;h3&gt;
+&lt;p&gt;The summer is long gone now, and along with it Google Summer of Code. This was the first year we&#x27;ve &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;archive&#x2F;2016&#x2F;organizations&#x2F;6552738187968512&#x2F;&quot;&gt;participated in GSoC&lt;&#x2F;a&gt;, and it was an incredible experience - both judging all the applications, and then working with Aviral Dasgupta and Will Hunt (Half-Shot) who joined the core team as part of their GSoC endeavours.&lt;&#x2F;p&gt;
+&lt;p&gt;Aviral&#x27;s work has been widespread throughout Riot (now Element): adding consistent Emoji support throughout the app via Emoji One, implementing the beta Rich Text Editor (RTE) and all-new autocompletion UI, as well as a bunch of spec proposals for rich message semantics and an initial Slack Webhooks application service. You can read his wrap up at &lt;a href=&quot;http:&#x2F;&#x2F;www.aviraldg.com&#x2F;p&#x2F;gsoc-2016-wrapup&quot;&gt;http:&#x2F;&#x2F;www.aviraldg.com&#x2F;p&#x2F;gsoc-2016-wrapup&lt;&#x2F;a&gt; and use the code in Riot&#x2F;Web (now Element) today. We&#x27;re currently working on fixing the final issues on RTE and auto-complete and hope to enable them by default real soon now!&lt;&#x2F;p&gt;
+&lt;p&gt;Meanwhile, Half-Shot&#x27;s work ended up focusing on bridging through to Twitter and working on the Threading spec proposal for Matrix. You can find out all about the Twitter bridge at &lt;a href=&quot;https:&#x2F;&#x2F;half-shot.github.io&#x2F;matrix-appservice-twitter&quot;&gt;https:&#x2F;&#x2F;half-shot.github.io&#x2F;matrix-appservice-twitter&lt;&#x2F;a&gt;; it works incredibly well (arguably too well, given the amount of traffic it can bridge into Matrix! :S) - and we&#x27;re currently working on hosting a version of it on matrix.org for all your tweeting needs. You can see Half-Shot&#x27;s wrapup blog post over at &lt;a href=&quot;https:&#x2F;&#x2F;half-shot.uk&#x2F;gsoc16_evaulation&quot;&gt;https:&#x2F;&#x2F;half-shot.uk&#x2F;gsoc16_evaulation&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, as a bit of a wildcard, we discovered the other day that there was also another GSoC project using Matrix by Waqee Khalid, supported by the &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;archive&#x2F;2016&#x2F;organizations&#x2F;6488734048452608&#x2F;&quot;&gt;Berkman Center for Internet and Society&lt;&#x2F;a&gt; at Harvard to &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;archive&#x2F;2016&#x2F;projects&#x2F;5749069813121024&#x2F;&quot;&gt;switch Apache Wave (formerly Google Wave) over to using Matrix rather than XMPP&lt;&#x2F;a&gt; for federation!  The implementation looks a little curious here, as Wave used XMPP as a blunt pubsub layer for synchronising protobuf deltas - and it looks like this implementation uses Matrix similarly, thus killing any interop with the rest of Matrix, which is a bit of a shame.  If anyone knows more about the project we&#x27;d love to hear though!&lt;&#x2F;p&gt;
+&lt;p&gt;Either way, it&#x27;s been a pleasure to work with the GSoC community and we owe Aviral and Half-Shot (and Waqee!) a huge debt of gratitude for spending their summers (and more!) hacking away improving Matrix. So, thanks Google for making GSoC possible and thanks to the GSoCers for all their contributions, effort &amp;amp; enthusiasm! Watch this space for updates on RTE, new-autocomplete and the twitter bridge going live...&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;matrix-in-the-news&quot;&gt;Matrix in the news&lt;&#x2F;h3&gt;
+&lt;p&gt;Just in case you missed them, there have been a couple of high profile articles flying around about Matrix recently - we made the &lt;a href=&quot;http:&#x2F;&#x2F;www.linux-magazine.com&#x2F;Issues&#x2F;2016&#x2F;189&#x2F;Matrix&quot;&gt;front cover of Linux Magazine in August&lt;&#x2F;a&gt; with a comprehensive review of Matrix and Vector (now Riot (now Element)). Then when we launched Riot (now Element) itself we got a cautiously &lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2016&#x2F;09&#x2F;19&#x2F;riot-wants-to-be-like-slack-but-with-the-flexibility-of-an-underlying-open-source-platform&#x2F;&quot;&gt;positive write-up from Mike Butcher at Techcrunch&lt;&#x2F;a&gt;. We also wrote an guest column for Techcrunch about the &lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2016&#x2F;10&#x2F;09&#x2F;a-decentralized-web-would-give-power-back-to-the-people-online&#x2F;&quot;&gt;importance of bringing power back to the people via decentralisation&lt;&#x2F;a&gt;, which got a surprising amount of attention on &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=12670958&quot;&gt;HackerNews&lt;&#x2F;a&gt; and elsewhere.&lt;&#x2F;p&gt;
+&lt;p&gt;More recently, we were lucky enough to get an &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=LhCfI-xdvlE&quot;&gt;indepth video interview with Bryan Lunduke&lt;&#x2F;a&gt; as part of his &#x27;Linux &amp;amp; Whatnot&#x27; series, and also a &lt;a href=&quot;http:&#x2F;&#x2F;www.networkworld.com&#x2F;article&#x2F;3140014&#x2F;open-source-tools&#x2F;down-the-rabbit-hole-part-5-secure-and-private-instant-messaging.html#tk.twt_nww.&quot;&gt;write-up in NetworkWorld&lt;&#x2F;a&gt; alongside Signal &amp;amp; Wire as part of Bryan&#x27;s journeys in the land of encrypted messaging.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=LhCfI-xdvlE&quot;&gt;&lt;img class=&quot;aligncenter wp-image-1830 size-large&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;Screen-Shot-2016-11-12-at-12.31.34-1024x571.png&quot; alt=&quot;screen-shot-2016-11-12-at-12-31-34&quot; width=&quot;1024&quot; height=&quot;571&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Huge thanks to everyone who&#x27;s been nice enough to spread the word of Matrix!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;matrix-in-real-life&quot;&gt;Matrix In Real Life&lt;&#x2F;h3&gt;
+&lt;p&gt;Finally, we&#x27;ve been present at a slew of different events. In August we attended FOSSCON again in Philadelphia to give a general update on Matrix to the Freenode community...&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;It&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;fossconNE&quot;&gt;@fossconNE&lt;&#x2F;a&gt; time! Dave will be talking about Matrix at 1pm today. Come &amp; say hi! &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;KtfTVRnAVn&quot;&gt;pic.twitter.com&#x2F;KtfTVRnAVn&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Matrix (@matrixdotorg) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg&#x2F;status&#x2F;766998104369426432&quot;&gt;August 20, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;...and then Riot (now Element) was launched at Monage in Boston in September, with Matthew and Amandine respectively presenting Matrix and Riot (now Element):&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;Best &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;swag?src=hash&quot;&gt;#swag&lt;&#x2F;a&gt; of &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;MoNage?src=hash&quot;&gt;#MoNage&lt;&#x2F;a&gt;? The &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;RiotChat&quot;&gt;@RiotChat&lt;&#x2F;a&gt; stand is getting mobbed :) &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;NltlfO74Y9&quot;&gt;pic.twitter.com&#x2F;NltlfO74Y9&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Oisin Lunny (@oisinlunny) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;oisinlunny&#x2F;status&#x2F;778293579605213185&quot;&gt;September 20, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Whilst quite a small event, the quality of folks present was incredibly high - much fun was had comparing open communities to walled gardens with Nicola Greco from Tim Berners-Lee&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;solid.mit.edu&quot;&gt;Solid project&lt;&#x2F;a&gt;...&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;.&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;ara4n&quot;&gt;@ara4n&lt;&#x2F;a&gt; &amp; &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;AmandineLePape&quot;&gt;@AmandineLePape&lt;&#x2F;a&gt; showing off the new Riot (now Element) at &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;MoNage?src=hash&quot;&gt;#MoNage&lt;&#x2F;a&gt; in &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;Boston?src=hash&quot;&gt;#Boston&lt;&#x2F;a&gt;! &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;U0qSNjNLGs&quot;&gt;pic.twitter.com&#x2F;U0qSNjNLGs&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Riot (@RiotChat) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;RiotChat&#x2F;status&#x2F;778610558983634945&quot;&gt;September 21, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;...comparing notes with the founders of ICQ, hanging out with Alan from Wire...&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;A meeting of the messaging minds! &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;wire&quot;&gt;@Wire&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg&quot;&gt;@matrixdotorg&lt;&#x2F;a&gt; federating over a pint at &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;MoNage?src=hash&quot;&gt;#MoNage&lt;&#x2F;a&gt;. &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;uTUvWrKRqp&quot;&gt;pic.twitter.com&#x2F;uTUvWrKRqp&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Oisin Lunny (@oisinlunny) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;oisinlunny&#x2F;status&#x2F;778731058170736640&quot;&gt;September 21, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;...chatting to FireChat&#x27;s CTO, catching up with Dan York from the Internet Society, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;Then in October we spoke about scaling Python&#x2F;Twisted for Matrix at PyCon France in Rennes - this was really fun, albeit slightly embarrassing to be the only talk about Python&#x2F;Twisted in a track otherwise entirely about Python 3 and asyncio :D That said, the talk seemed to be well received and it was fantastic to meet some of the enthusiastic French Python community and see folks in the audience who were already up and running on Matrix!&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;Lots of fun at &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;pyconfr&quot;&gt;@pyconfr&lt;&#x2F;a&gt; today demoing Matrix, including a quick video conference with the audience &amp; &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;TADHack?src=hash&quot;&gt;#TADHack&lt;&#x2F;a&gt; London! &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;rwbA43X7wB&quot;&gt;pic.twitter.com&#x2F;rwbA43X7wB&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Matrix (@matrixdotorg) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg&#x2F;status&#x2F;787332779264602112&quot;&gt;October 15, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;The same weekend also featured TADHack Global - we were present at the London site; you can read all about it in our &lt;a href=&quot;&#x2F;blog&#x2F;2016&#x2F;10&#x2F;20&#x2F;tadhack-global-2016&#x2F;&quot;&gt;earlier blog post&lt;&#x2F;a&gt;. There was a really high standard of hacks on Matrix this year, and it was incredibly hard to judge the hackathon. In most ways this is a good problem to have though!&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;Dramatic prep for &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;maffydub&quot;&gt;@maffydub&lt;&#x2F;a&gt; and yinyee&#x27;s Matrix IoT demo with multiple ESP8266, proximity sensor, and &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;Tropo&quot;&gt;@tropo&lt;&#x2F;a&gt; ASR!! &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;eytG8QWFq6&quot;&gt;pic.twitter.com&#x2F;eytG8QWFq6&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Matrix (@matrixdotorg) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg&#x2F;status&#x2F;787639861696139264&quot;&gt;October 16, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Meanwhile, coming up on the horizon we have TADSummit in Lisbon next week, where we&#x27;ll be giving an update on Matrix to the global Telco Application Developer community, and then the week after we&#x27;ll be in Israel as part of the Geektime Techfest, Devfest and Chatbot Summit. So if you&#x27;re in Lisbon or Tel Aviv do give us a ping on Matrix and come hang out!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;matrixing-for-fun-and-profit&quot;&gt;Matrixing for fun and profit!&lt;&#x2F;h3&gt;
+&lt;p&gt;If you&#x27;ve read this far, we&#x27;re guessing you&#x27;re hopefully quite interested in Matrix (or just skipping to the end ;).  Something we don&#x27;t talk about as much as we should is that if you&#x27;re interested in being paid to work on Matrix full time, we&#x27;re always interested in expanding the core team.  Right now we&#x27;re particularly looking for:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Experienced front-end developers who can help build the next generation of matrix-react-sdk and vector-web&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Professional tech-writers to help keep &lt;a href=&quot;&#x2F;docs&#x2F;spec&quot;&gt;The Spec&lt;&#x2F;a&gt; and tutorials and other docs updated and as kick-ass as possible&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Backend Python&#x2F;Twisted or Golang wizards to help us improve and evolve Synapse&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Mobile developers (especially Android) to help keep the mobile SDKs and apps evolving as quickly as possible&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Integration fiends who&#x27;d like to be paid to build more bridges, bots and other integrations for the overall ecosystem!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Most of the core team hangs out in London or Rennes (France), but we&#x27;re also open to remote folks where it makes sense.  If this sounds interesting, please shoot us a mail to jobs@matrix.org.  Obviously it helps enormously if we already know you from the Matrix community, and you have a proven FOSS track record.
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h3&gt;
+&lt;p&gt;Apologies once again for an overdue and overlong update, but hopefully this gives a good taste of how Matrix is progressing. Just to give a different datapoint: this graph is quite interesting - showing the volume of events per day sent by native (i.e. non-bridged) Matrix users visible to the matrix.org homeserver since we turned the service on back in 2014:&lt;&#x2F;p&gt;
+&lt;img class=&quot;aligncenter wp-image-1833&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;Screen-Shot-2016-11-04-at-11.02.58-1-1024x778.png&quot; alt=&quot;screen-shot-2016-11-04-at-11-02-58-1&quot; width=&quot;958&quot; height=&quot;728&quot; &#x2F;&gt;
+&lt;p&gt;As you can see, things are accelerating quite nicely - and this is ignoring all the traffic in the rest of the Matrix ecosystem that happens not to be federated onto the matrix.org HS, not to mention the &lt;em&gt;huge&lt;&#x2F;em&gt; amounts of traffic due to bridging.&lt;&#x2F;p&gt;
+&lt;p&gt;Our plans over the next few months are going to involve:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Turning on end-to-end encryption by default for any rooms with private history - whilst ensuring it&#x27;s as easy to write Matrix clients, bots and bridges as it ever was.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Yet more scalability and performance work across the board, to ensure Synapse and the client SDKs can handle the growth curve we&#x27;re seeing here&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Releasing 0.3.0 of the matrix spec itself.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Making Riot (now Element)&#x27;s UX excellent.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Editable messages.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Threading.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;User groups, for applying permissions&#x2F;invites etc to groups of users as well as individuals.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Formalising the federation spec at last&lt;&#x2F;li&gt;
+ 	&lt;li&gt;As many bots, bridges and other integrations as possible!&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Making VoIP&#x2F;Video conferencing and calling awesome.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;More experiments with next-generation homeservers&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Starting to really think hard about decentralised identity and reputation&#x2F;spam management&lt;&#x2F;li&gt;
+ 	&lt;li&gt;...and a few new things we don&#x27;t want to talk about yet ;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+If you&#x27;ve got this far - congratulations! Thanks for reading, and thank you for supporting the Matrix ecosystem.
+&lt;p&gt;Now more than ever before we believe that it is absolutely critical to have a healthy and secure decentralised communications ecosystem on the &#x27;net (whether that&#x27;s Matrix, XMPP, Tox or whatever) - so thank you again for participating in our one :)  And if you don&#x27;t already run your server, please &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&quot;&gt;grab a Synapse&lt;&#x2F;a&gt; and have fun!&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Matthew, Amandine &amp;amp; the Matrix Team.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+</entry>
+
+    
+    
+</feed>

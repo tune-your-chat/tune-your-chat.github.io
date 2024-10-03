@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;category&#x2F;security&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Matrix.org" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Security</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://tune-your-chat.github.io/category/security/atom.xml">
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            ">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<div id="taxonomy-single">
+    <div class="content">
+        <header>
+            <h1>Security</h1>
+            39 posts tagged with "Security" <a href="/category">(See all Category)</a>
+            
+            <h2>
+                <small><a href="https://tune-your-chat.github.io/category/security/atom.xml">Atom Feed</a></small>
+            </h2>
+            
+        </header>
+
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;08&#x2F;bridges-vulnerability-disclosure&#x2F;" title="Disclosure: Bridges security issues">Disclosure: Bridges security issues</a></h2>
+                <span>
+                    04.08.2023 10:30
+                    —
+                    <a href="/category/bridges">
+                        Bridges
+                    </a>
+                    —
+                    <a
+                        href="/author/integrations-team">
+                        Integrations Team
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Hi folks. As previously mentioned on <a href="https://matrix.org/blog/2023/07/bridges-security-updates/">Monday</a>, we’re now disclosing the vulnerabilities patched for the IRC, Slack and Hookshot bridges. If you have not already done so, please ensure you are running the patched versions.</p>
+<p>Today we are disclosing the 3 vulnerabilities.</p>
+<h2 id="matrix-appservice-bridge-doesn-t-verify-the-sub-parameter-of-an-openid-token-exchange-cve-2023-38691">matrix-appservice-bridge doesn't verify the sub parameter of an openId token exchange (CVE-2023-38691)</h2>
+<p><a href="https://github.com/matrix-org/matrix-appservice-bridge/security/advisories/GHSA-vc7j-h8xg-fv5x">GHSA-vc7j-h8xg-fv5x</a> / <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38691">CVE-2023-38691</a></p>
+<p>The <code>POST /v1/exchange_openid</code> endpoint did not check that the servername part of the <code>sub</code> parameter (containing the user's <em>claimed</em> MXID) is the same as the servername we are talking to. This could allow a malicious actor to spin up a server on any given domain, respond with a <code>sub</code> parameter according to the user they want to act as and use the resulting token to perform provisioning requests.</p>
+<p>This is now patched so that the server part of the sub / user ID is checked against the server used to make the request.</p>
+<p>Discovered and reported by a community member.</p>
+<h2 id="irc-command-injection-via-admin-commands-containing-newlines-cve-2023-38690">IRC command injection via admin commands containing newlines (CVE-2023-38690)</h2>
+<p><a href="https://github.com/matrix-org/matrix-appservice-irc/security/advisories/GHSA-3pmj-jqqp-2mj3">GHSA-3pmj-jqqp-2mj3</a> / <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38690">CVE-2023-38690</a></p>
+<p>When the IRC bridge attempted to parse an admin command from a Matrix user, it would only split arguments by a literal space. For example, sending “!join #matrix\nfoobar” would treat the channel name as “#matrix\nfoobar”. This could then be exploited to inject any IRC command into the bridge to be run. Since the !join command first joins via the bridge bot user, it could be used to execute commands as the bridge bot.</p>
+<p>This is now patched so that both the command handler is more strict about its arguments, as well as channel names being explicitly validated when provided by users.</p>
+<p>Discovered and reported by <a href="https://valentin-lorentz.fr/">Val Lorentz</a>.</p>
+<h2 id="events-can-be-crafted-to-leak-parts-of-targeted-messages-from-other-bridged-rooms-cve-2023-38700">Events can be crafted to leak parts of targeted messages from other bridged rooms (CVE-2023-38700)</h2>
+<p><a href="https://github.com/matrix-org/matrix-appservice-irc/security/advisories/GHSA-c7hh-3v6c-fj4q">GHSA-c7hh-3v6c-fj4q</a> / <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38700">CVE-2023-38700</a></p>
+<p>The IRC bridge caches recent timeline messages in memory, so that when a reply is seen for a message it doesn’t need to request the event content from the homeserver. However the room ID was not validated when accessing this cache, so a malicious actor could craft a reply event in another room referencing any event ID (so long as it was still in the bridge cache) to trick the bridge into posting the message content into a bridged reply.</p>
+<p>Discovered and reported by <a href="https://valentin-lorentz.fr/">Val Lorentz</a>.</p>
+<p>If you have further questions, please reach out on <a href="mailto:security@matrix.org">security@matrix.org</a></p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;07&#x2F;bridges-security-updates&#x2F;" title="Bridges Security Update">Bridges Security Update</a></h2>
+                <span>
+                    31.07.2023 11:40
+                    —
+                    <a href="/category/bridges">
+                        Bridges
+                    </a>
+                    —
+                    <a
+                        href="/author/integrations-team">
+                        Integrations Team
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Today we are announcing security updates for several of our bridges.</p>
+<ul>
+<li>matrix-appservice-irc <a href="https://github.com/matrix-org/matrix-appservice-irc/releases/tag/1.0.1">1.0.1</a> affected by GHSA-vc7j-h8xg-fv5x <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38691">CVE-2023-38691</a>, GHSA-3pmj-jqqp-2mj3 / <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38690">CVE-2023-38690</a>, and GHSA-c7hh-3v6c-fj4q</li>
+<li>matrix-hookshot <a href="https://github.com/matrix-org/matrix-hookshot/releases/tag/4.4.1">4.4.1</a> affected by GHSA-vc7j-h8xg-fv5x / <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38691">CVE-2023-38691</a></li>
+<li>matrix-appservice-slack <a href="https://github.com/matrix-org/matrix-appservice-slack/releases/tag/2.1.2">2.1.2</a> affected by GHSA-vc7j-h8xg-fv5x / <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38691">CVE-2023-38691</a></li>
+</ul>
+<p>In addition we have released matrix-appservice-bridge <a href="https://github.com/matrix-org/matrix-appservice-bridge/releases/tag/9.0.1">9.0.1</a> (and backported to <a href="https://github.com/matrix-org/matrix-appservice-bridge/releases/tag/8.1.2">8.1.2</a>) which patches GHSA-vc7j-h8xg-fv5x.</p>
+<p>All mentioned bridges are affected by a vulnerability in the provisioning interfaces of these bridges. If you are unable to upgrade, please disable provisioning for now (which should be documented in the relevant bridge sample config).</p>
+
+                <p><a href="/blog/2023/07/bridges-security-updates/#continue-reading">Continue reading…</a></p>
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;07&#x2F;postponing-libera-chat-deportalling&#x2F;" title="Postponing the Libera.Chat deportalling">Postponing the Libera.Chat deportalling</a></h2>
+                <span>
+                    28.07.2023 14:00
+                    —
+                    <a href="/category/bridges">
+                        Bridges
+                    </a>
+                    —
+                    <a
+                        href="/author/thib">
+                        Thib
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>We have recently announced that <a href="https://matrix.org/blog/2023/07/deportalling-libera-chat/">we will be honouring Libera Chat’s request</a> to turn off portalled rooms on the Libera.Chat bridge maintained by the Matrix.org Foundation. The changes were originally scheduled to be effective on 31st July. In the meantime, we posted <a href="https://matrix.org/blog/2023/07/make-sure-libera-bridge-keeps-working/">instructions for people to turn their portalled rooms into plumbed ones</a> so the bridge keeps working for them.</p>
+<p>Some stability issues on the bridge have prevented people from turning their portalled rooms into plumbed ones. We have been actively working on resolving those issues since the first reports and the situation is gradually improving. However, at this point, we do not believe the plumbed mode can be considered sufficiently stable yet.</p>
+
+                <p><a href="/blog/2023/07/postponing-libera-chat-deportalling/#continue-reading">Continue reading…</a></p>
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;05&#x2F;24&#x2F;disclosing-synapse-security-advisories&#x2F;" title="Disclosing Synapse security advisories">Disclosing Synapse security advisories</a></h2>
+                <span>
+                    24.05.2023 13:44
+                    —
+                    <a href="/category/security">
+                        Security
+                    </a>
+                    —
+                    <a
+                        href="/author/denis-kasak">
+                        Denis Kasak
+                    </a>
+                </span>
+                <br>
+                <small>Last update: 24.05.2023 13:36</small>
+            </header>
+            <div>
+                
+                <p>Today we are retroactively publishing advisories for security bugs in <a href="https://github.com/matrix-org/synapse/">Synapse</a>. From oldest to most recent, they are:</p>
+<ul>
+<li><a href="https://github.com/matrix-org/synapse/security/advisories/GHSA-p9qp-c452-f9r7">GHSA-p9qp-c452-f9r7</a> (<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2022-39374">CVE-2022-39374</a>), fixed in Synapse 1.68.0 and affecting all prior versions since Synapse 1.62.0;</li>
+<li><a href="https://github.com/matrix-org/synapse/security/advisories/GHSA-45cj-f97f-ggwv">GHSA-45cj-f97f-ggwv</a> (<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2022-39335">CVE-2022-39335</a>), fixed in Synapse 1.69.0 and affecting all prior versions; and finally</li>
+<li><a href="https://github.com/matrix-org/synapse/security/advisories/GHSA-f3wc-3vxv-xmvr">GHSA-f3wc-3vxv-xmvr</a> (<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2023-32323">CVE-2023-32323</a>), fixed in Synapse 1.74.0 and affecting all prior versions.</li>
+</ul>
+<p>We strongly advise Synapse operators who are still on earlier Synapse versions to upgrade to the latest version (<a href="https://github.com/matrix-org/synapse/releases/tag/v1.84.0">v1.84.0</a>) or at the very least v1.74.0 (<a href="https://github.com/matrix-org/synapse/releases/tag/v1.74.0">released Dec 2022</a>), to prevent attacks based on these vulnerabilities. Please see the advisories for the full details, including a description of</p>
+<ul>
+<li>the vulnerability and potential attacks,</li>
+<li>exactly which deployments are vulnerable, and</li>
+<li>workarounds and mitigations.</li>
+</ul>
+<p>Because these bugs are either related to or exploitable over Matrix federation, we have delayed publishing these advisories until now out of caution. This allowed us to ensure that the majority of Synapse homeservers across the public federation have upgraded to a sufficiently patched version, based on the (opt-in) <a href="https://matrix-org.github.io/synapse/latest/usage/administration/monitoring/reporting_homeserver_usage_statistics.html">stats reporting</a> to the Matrix.org foundation.</p>
+<p>If you have any questions or comments about this announcement or any of the advisories, e-mail us at <a href="mailto:security@matrix.org">security@matrix.org</a>.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;03&#x2F;28&#x2F;security-releases-matrix-js-sdk-24-0-0-and-matrix-react-sdk-3-69-0&#x2F;" title="Security releases: matrix-js-sdk 24.0.0 and matrix-react-sdk 3.69.0">Security releases: matrix-js-sdk 24.0.0 and matrix-react-sdk 3.69.0</a></h2>
+                <span>
+                    28.03.2023 00:00
+                    —
+                    <a href="/category/releases">
+                        Releases
+                    </a>
+                    —
+                    <a
+                        href="/author/denis-kasak">
+                        Denis Kasak
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Today we are issuing security releases of matrix-js-sdk and matrix-react-sdk to
+patch a pair of High severity vulnerabilities
+(<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2023-28427">CVE-2023-28427</a>
+/ <a href="https://github.com/matrix-org/matrix-js-sdk/security/advisories/GHSA-mwq8-fjpf-c2gr">GHSA-mwq8-fjpf-c2gr</a>
+for matrix-js-sdk and
+<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2023-28103">CVE-2023-28103</a>
+/ <a href="https://github.com/matrix-org/matrix-react-sdk/security/advisories/GHSA-6g43-88cp-w5gv">GHSA-6g43-88cp-w5gv</a>
+for matrix-react-sdk).</p>
+<p>Affected clients include those which depend on the affected libraries, such as
+Element Web/Desktop and Cinny. Releases of the affected clients should follow
+shortly. We advise users of those clients to upgrade at their earliest
+convenience.</p>
+<p>The issues involve prototype pollution via events containing special strings in
+key locations, which can temporarily disrupt normal functioning of
+matrix-js-sdk and matrix-react-sdk, potentially impacting the consumer's
+ability to process data safely.</p>
+<p>Although we have only demonstrated a denial-of-service-style impact, we cannot
+completely rule out the possibility of a more severe impact due to the
+relatively extensive attack surface. We have therefore classified this as High
+severity and strongly recommend upgrading as a precautionary measure.</p>
+<p>We found these issues during a codebase audit that we had <a href="https://matrix.org/blog/2022/08/31/security-releases-matrix-js-sdk-19-4-0-and-matrix-react-sdk-3-53-0">previously
+announced</a>
+in an earlier security release of matrix-js-sdk and matrix-react-sdk. The
+earlier release had already addressed a set of similar vulnerabilities that
+were assigned
+<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE%2D2022%2D36059">CVE-2022-36059</a>
+/ <a href="https://github.com/matrix-org/matrix-js-sdk/security/advisories/GHSA-rfv9-x7hh-xc32">GHSA-rfv9-x7hh-xc32</a>
+and
+<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE%2D2022%2D36060">CVE-2022-36060</a>
+/ <a href="https://github.com/matrix-org/matrix-react-sdk/security/advisories/GHSA-2x9c-qwgf-94xr">GHSA-2x9c-qwgf-94xr</a>,
+which we had initially decided not to disclose until the completion of the
+audit. Now that the audit is finished, we are disclosing those previous
+advisories as well.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;28&#x2F;upgrade-now-to-address-encryption-vulns-in-matrix-sdks-and-clients&#x2F;" title="Upgrade now to address E2EE vulnerabilities in matrix-js-sdk, matrix-ios-sdk and matrix-android-sdk2">Upgrade now to address E2EE vulnerabilities in matrix-js-sdk, matrix-ios-sdk and matrix-android-sdk2</a></h2>
+                <span>
+                    28.09.2022 17:41
+                    —
+                    <a href="/category/security">
+                        Security
+                    </a>
+                    —
+                    <a
+                        href="/author/matthew-hodgson">
+                        Matthew Hodgson
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p><strong>TL;DR:</strong></p>
+<ul>
+<li>Two critical severity vulnerabilities in end-to-end encryption were found in
+the SDKs which power Element, Beeper, Cinny, SchildiChat, Circuli, Synod.im
+and any other clients based on matrix-js-sdk, matrix-ios-sdk or
+matrix-android-sdk2.</li>
+<li>These have now been fixed, and we have not seen evidence of them being
+exploited in the wild. All of the critical vulnerabilities require
+cooperation from a malicious homeserver to be exploited.</li>
+<li><strong>Please upgrade immediately in order to be protected against these
+vulnerabilities.</strong></li>
+<li>Clients with other encryption implementations (including Hydrogen, ElementX,
+Nheko, FluffyChat, Syphon, Timmy, Gomuks and Pantalaimon) are not affected;
+<strong>this is not a protocol bug</strong>.</li>
+<li>We take the security of our end-to-end encryption extremely seriously, and we
+have an ongoing series of public independent audits booked to help guard
+against future vulnerabilities.  We will also be making some protocol changes
+in the future to provide additional layers of protection.</li>
+<li>This resolves the <a href="https://matrix.org/blog/2022/09/23/pre-disclosure-upcoming-critical-security-release-of-matrix-sd-ks-and-clients">pre-disclosure</a> issued on September 23rd.</li>
+</ul>
+
+                <p><a href="/blog/2022/09/28/upgrade-now-to-address-encryption-vulns-in-matrix-sdks-and-clients/#continue-reading">Continue reading…</a></p>
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;23&#x2F;pre-disclosure-upcoming-critical-security-release-of-matrix-sd-ks-and-clients&#x2F;" title="Pre-disclosure: upcoming critical security release of Matrix SDKs and clients">Pre-disclosure: upcoming critical security release of Matrix SDKs and clients</a></h2>
+                <span>
+                    23.09.2022 14:53
+                    —
+                    <a href="/category/security">
+                        Security
+                    </a>
+                    —
+                    <a
+                        href="/author/matrix-security-team">
+                        Matrix Security Team
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>We will be releasing a security update to matrix-js-sdk, matrix-ios-sdk and matrix-android-sdk2 and clients which implement end-to-end encryption with these libraries, to patch <strong>critical</strong> security issues, on <strong>Wed, Sept 28th</strong>. The releases will be published in the afternoon, followed by the disclosure blog post around 16:00 UTC. The affected clients include Element Web, Desktop, iOS and Android.  We will also be working with downstream packagers and forks over the coming days to ensure a synchronised release to address affected clients.</p>
+<p>Clients using matrix-rust-sdk, hydrogen-sdk and matrix-nio are not affected by these critical issues.  We are also auditing third-party client SDKs and clients in advance of the release, and will work with the projects if action is needed. So far we've confirmed that other popular SDK/clients including mtxclient (nheko), Matrix Dart SDK (FluffyChat), Trixnity (Timmy), Syphon, mautrix-go (Gomuks) and mautrix-python are not affected by the issues in question.</p>
+<p>If you maintain or package a (potentially) affected E2EE-capable Matrix client and need to coordinate on the release, please contact <a href="mailto:security@matrix.org">security@matrix.org</a>.</p>
+<p><strong>We advise to upgrade as soon as possible after the patched versions are released.</strong></p>
+<p>Thank you for your patience while we work to resolve this issue.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;13&#x2F;security-release-of-matrix-appservice-irc-0-35-0-high-severity&#x2F;" title="Security release of matrix-appservice-irc 0.35.0 (High severity)">Security release of matrix-appservice-irc 0.35.0 (High severity)</a></h2>
+                <span>
+                    13.09.2022 16:56
+                    —
+                    <a href="/category/releases">
+                        Releases
+                    </a>
+                    —
+                    <a
+                        href="/author/denis-kasak">
+                        Denis Kasak
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>We've released a new version of matrix.org's node-irc 1.3.0 and
+matrix-appservice-irc 0.35.0, to patch several security issues:</p>
+<ul>
+<li>IRC mode operator confusion (Low, <a href="https://github.com/matrix-org/matrix-appservice-irc/security/advisories/GHSA-cq7q-5c67-w39w">GHSA-cq7q-5c67-w39w</a>)</li>
+<li>Parsing issue leading to room takeovers (High, <a href="https://github.com/matrix-org/matrix-appservice-irc/security/advisories/GHSA-xvqg-mv25-rwvw">GHSA-xvqg-mv25-rwvw</a>)</li>
+<li>Undisclosed issue (Moderate, <a href="https://github.com/matrix-org/matrix-appservice-irc/security/advisories/GHSA-r3p6-cg2c-c4qw">GHSA-r3p6-cg2c-c4qw</a>)</li>
+</ul>
+<p>The details of the final vulnerability will be released at a later date,
+pending an audit of the codebase to ensure it's not affected by other similar
+vulnerabilities.</p>
+<p>The vulnerabilities have been patched in node-irc version 1.3.0 and
+matrix-appservice-irc 0.35.0. You can get the release on
+<a href="https://github.com/matrix-org/matrix-appservice-irc/releases">Github</a>.</p>
+<p>The bridges running on the Libera Chat, OFTC and other networks bridged by the
+Matrix.org Foundation have been patched.</p>
+<p><strong>Please upgrade your IRC bridge as soon as possible.</strong></p>
+<p>The above vulnerabilities were reported by <a href="https://valentin-lorentz.fr/">Val
+Lorentz</a>. Thank you!</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;08&#x2F;31&#x2F;security-releases-matrix-js-sdk-19-4-0-and-matrix-react-sdk-3-53-0&#x2F;" title="Security releases: matrix-js-sdk 19.4.0 and matrix-react-sdk 3.53.0">Security releases: matrix-js-sdk 19.4.0 and matrix-react-sdk 3.53.0</a></h2>
+                <span>
+                    31.08.2022 18:13
+                    —
+                    <a href="/category/releases">
+                        Releases
+                    </a>
+                    —
+                    <a
+                        href="/author/denis-kasak">
+                        Denis Kasak
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Today we are issuing security releases of matrix-js-sdk and matrix-react-sdk to
+patch a couple of High severity vulnerabilities (reserved as
+<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE%2D2022%2D36059">CVE-2022-36059</a>
+for the matrix-js-sdk and
+<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE%2D2022%2D36060">CVE-2022-36060</a>
+for the matrix-react-sdk).</p>
+<p>Affected clients include those which depend on the affected libraries, such as
+Element Web/Desktop and Cinny. Releases of the affected clients will follow
+shortly. We advise users of those clients to upgrade at their earliest
+convenience.</p>
+<p>The vulnerabilities give an adversary who you share a room with the ability to
+carry out a denial-of-service attack against the affected clients, making it
+not show all of a user's rooms or spaces and/or causing minor temporary
+corruption.</p>
+<p>The full vulnerability details will be disclosed at a later date, to give
+people time to upgrade and us to perform a more thorough audit of the codebase.</p>
+<p>Note that while the vulnerability was to our knowledge never exploited
+maliciously, some unintentional public testing has left some people affected by
+the bug. We made a best effort to sanitize this to stop the breakage. If you
+are affected, you may still need to clear the cache and reload your Matrix
+client for it to take effect.</p>
+<p>We thank <a href="https://valentin-lorentz.fr/">Val Lorentz</a> who discovered and
+reported the vulnerability over the weekend.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;06&#x2F;28&#x2F;security-release-synapse-1-61-1&#x2F;" title="Security release: Synapse 1.61.1">Security release: Synapse 1.61.1</a></h2>
+                <span>
+                    28.06.2022 16:19
+                    —
+                    <a href="/category/releases">
+                        Releases
+                    </a>
+                    —
+                    <a
+                        href="/author/brendan-abolivier">
+                        Brendan Abolivier
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Hey everyone!</p>
+<p>Today we're exceptionally releasing <a href="https://github.com/matrix-org/synapse/releases/tag/v1.61.1">Synapse
+1.61.1</a>, which comes
+as a security release. <strong>Server administrators are encouraged to update as soon as
+possible.</strong></p>
+<p>This release fixes a vulnerability with Synapse's URL preview feature. URL
+previews of some web pages can lead to unbounded recursion, causing the request
+to either fail, or in some cases crash the running Synapse process.</p>
+<p>Homeservers with the <code>url_preview_enabled</code> configuration option set to <code>false</code>
+(the default value) are unaffected. Instances with the <code>enable_media_repo</code>
+configuration option set to <code>false</code> are also unaffected, as this also disables
+the URL preview functionality.</p>
+<p>Server administrators who are unable to update Synapse should disable URL
+previews by setting <code>url_preview_enabled: false</code> in their configuration file.
+They can also delegate URL preview to a separate, dedicated worker to ensure the
+process crashing does not impact other functionality of Synapse.</p>
+<p>Please see <a href="https://github.com/matrix-org/synapse/security/advisories/GHSA-22p3-qrh9-cx32">this security
+advisory</a>
+for more information.</p>
+
+                
+            </div>
+        </article>
+        
+        <nav class="pagination">
+    <div class="prev">
+        
+    </div>
+    <span class="page-number">1 / 4</span>
+    <div class="prev">
+        
+        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;category&#x2F;security&#x2F;page&#x2F;2&#x2F;">Next ›</a>
+        
+    </div>
+</nav>
+
+    </div>
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

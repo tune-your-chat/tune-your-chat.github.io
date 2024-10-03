@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - FOSDEM</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/fosdem/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-02-08T16:00:00+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/fosdem/atom.xml</id>
+    
+    
+    
+<entry xml:lang="en">
+    <title>FOSDEM 2024 Wrap Up</title>
+    <published>2024-02-08T16:00:00+00:00</published>
+    <updated>2024-02-08T16:00:00+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/02/fosdem-wrap-up/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/02/fosdem-wrap-up/</id>
+    <content type="html">&lt;p&gt;This year again the Matrix.org Foundation was at FOSDEM, and what a huge energy boost it has been for us! Between a Fringe Event for the Matrix community to gather, a booth where the vast majority of people came by to show their support for our work, a devroom with four hours of awesome Matrix content, and last but not least a main track talk where Matthew covered what we had been doing for the past year… It has been a very intense weekend!&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;fringe-event&quot;&gt;Fringe Event&lt;&#x2F;h2&gt;
+&lt;p&gt;The first stop in our FOSDEM journey was the Fringe Event on Friday afternoon at &lt;a href=&quot;https:&#x2F;&#x2F;hsbxl.be&#x2F;&quot;&gt;HSBXL&lt;&#x2F;a&gt;, a hackerspace that was very on-brand: you need to &lt;a href=&quot;https:&#x2F;&#x2F;hsbxl.be&#x2F;enter&#x2F;#walk-to-door-a&quot;&gt;follow the white rabbit to get in&lt;&#x2F;a&gt;. More than a 100 of us gathered in that disused factory to talk about everything Matrix.&lt;&#x2F;p&gt;
+&lt;p&gt;Thanks to the sponsorship of &lt;a href=&quot;https:&#x2F;&#x2F;nordeck.net&#x2F;&quot;&gt;Nordeck&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.famedly.com&#x2F;&quot;&gt;Famedly&lt;&#x2F;a&gt; and to the extensive efforts of Adrian and the rest of the HSBXL staff, the Foundation could offer 70 pizzas and crates and crates of drinks to the community. Not only was it great to meet people in the flesh: we could also have a tonne of interesting discussions around the Foundation’s governance, funding, trust &amp;amp; safety tooling, and plenty more that we’re going to factor into our roadmap. And look at this happy community!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;fosdem2024-fringe.jpg&quot; alt=&quot;A picture of several dozens of people smiling in a room. Some of them are holding a Matrix flag together.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-crowded-booth&quot;&gt;A crowded Booth&lt;&#x2F;h2&gt;
+&lt;p&gt;After an already successful Friday, it was time to head to FOSDEM itself: for two days the booth was manned by a tireless team, answering questions from a very enthusiastic community. What struck me the most this year was the number of Matrix t-shirts and hoodies people wore at the conference before even stopping by our booth.&lt;&#x2F;p&gt;
+&lt;p&gt;Needless to say, Matrix is &lt;em&gt;extremely popular&lt;&#x2F;em&gt; in OSS communities. Most people knew and already loved Matrix when coming to the booth, a few didn’t know Matrix, and even fewer people told us where we need to improve for them to consider using it.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;fosdem2024-booth.jpg&quot; alt=&quot;A picture of three persons standing behind a table. One of them has his arm stretched, the two others are looking at the camera smiling. There are folded t-shirts and stickers on the table.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;We brought a box of 100 t-shirts and several thousands of stickers with us this year. Some t-shirt sizes were sold out on the first day, and by the end of the weekend we had sold everything. Lesson learnt: bring much more next year!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-main-track-talk-selected-for-the-highlights&quot;&gt;A main track talk selected for the highlights&lt;&#x2F;h2&gt;
+&lt;p&gt;Matrix is well on its way to become the one ubiquitous protocol that will finally open up the communication silos. During the past year, a lot has been going on. As a testament to Matrix maturity, the majority of our work was around polishing the rough edges and stabilising the protocol, rather than launching plenty of new features.&lt;&#x2F;p&gt;
+&lt;p&gt;In &lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2024&#x2F;schedule&#x2F;event&#x2F;fosdem-2024-3345-opening-up-communication-silos-with-matrix-2-0-and-the-eu-digital-markets-act&#x2F;&quot;&gt;his main track talk&lt;&#x2F;a&gt;, Matthew covered the past year in Matrix, our implication in the Digital Markets Act (DMA), and how Matrix could possibly be part of the solution for WhatsApp to become interoperable and compliant with the regulation.&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=s5BrVVf0B1I&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=s5BrVVf0B1I&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;s5BrVVf0B1I&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;Both &lt;a href=&quot;https:&#x2F;&#x2F;www.wired.com&#x2F;story&#x2F;whatsapp-interoperability-messaging&#x2F;&quot;&gt;Wired&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2024&#x2F;02&#x2F;07&#x2F;whatsapp-is-preparing-to-roll-out-third-party-chat-support&#x2F;&quot;&gt;TechCrunch&lt;&#x2F;a&gt; picked up the news that Element has been experimenting with DMA interoperability with WhatsApp via Matrix.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-packed-devroom&quot;&gt;A packed devroom&lt;&#x2F;h2&gt;
+&lt;p&gt;This year again we had the opportunity to get a &lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2024&#x2F;schedule&#x2F;track&#x2F;matrix&#x2F;&quot;&gt;Matrix Devroom&lt;&#x2F;a&gt;: more than 4 hours of Matrix content for a delighted audience. Matrix State of the Union, DMA &amp;amp; Interoperability, MatrixRTC and more: there was a talk for everyone!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;fosdem2024-devroom.jpg&quot; alt=&quot;A picture of Matthew and Amandine in front of a classroom with a wide audience. Amandine is holding the mic for Matthew. Their slides are projected, and we can ready &amp;quot;5 years from now, everyone will communicate via Matrix&amp;quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The devroom happened in a room twice as big as last year’s: it was still packed most of the time. We couldn’t be happier about the enthusiasm for Matrix that we have seen this year again! If you missed a talk you were interested in, you can still catch up with our &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=s5BrVVf0B1I&amp;amp;list=PLl5dnxRMP1hWa_UHphXfOHvaw4B2JfSlx&quot;&gt;FOSDEM 2024 YouTube Playlist&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;remote-and-local-online-attendance&quot;&gt;Remote and local online attendance&lt;&#x2F;h2&gt;
+&lt;p&gt;The online side of the conference went very smoothly. It is a testament to the hard work of the Matrix team who got to adapt it to the &lt;a href=&quot;https:&#x2F;&#x2F;pretalx.fosdem.org&#x2F;&quot;&gt;FOSDEM Pretalx instance&lt;&#x2F;a&gt;, superseding the (in)famous &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nevs&#x2F;pentabarf&quot;&gt;Pentabarf&lt;&#x2F;a&gt; instance that it relied on so far.&lt;&#x2F;p&gt;
+&lt;p&gt;Unsurprisingly, with roughly 7,980 signups online and 4,000 daily active users the online attendance is very far from the levels we have seen at the peak of the pandemic when FOSDEM couldn’t happen in person (plus we collectively forgot to publish the FOSDEM space URL anywhere!). Most people who wanted to attend FOSDEM were there in person, but we were here for people who couldn’t make it for whatever reason.&lt;&#x2F;p&gt;
+&lt;p&gt;More surprisingly, I spotted a certain number of people sitting down in the hallways on their phones and laptops, in the middle of one of the largest European open source conferences. They were not catching a break from the conference: they were &lt;em&gt;attending&lt;&#x2F;em&gt; the conference online, even if they were on-site! With more than 10k visitors, some attendees couldn’t make it to the devrooms they wanted to attend… so they attended online. We even caught Amandine tuning into the EU Public Policy devroom from the Matrix devroom!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;you-re-making-this-possible&quot;&gt;You’re making this possible&lt;&#x2F;h2&gt;
+&lt;p&gt;This event was an enormous morale booster for the whole team, but we couldn’t make Matrix in the first place without your support. Whether you are an individual or an organisation who benefits from Matrix, please consider &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;support&#x2F;&quot;&gt;supporting the Foundation financially&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;becoming a member&lt;&#x2F;a&gt; to steer it in a direction that makes sense for you.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Meet us at FOSDEM</title>
+    <published>2024-01-11T00:00:00+00:00</published>
+    <updated>2024-01-11T00:00:00+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/01/matrix-presence-fosdem/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/01/matrix-presence-fosdem/</id>
+    <content type="html">&lt;p&gt;This year again the Matrix Foundation and Community will have &lt;em&gt;plenty&lt;&#x2F;em&gt; of opportunities to meet at FOSDEM! Together with our awesome community, we’re organising a FOSDEM Fringe Event before FOSDEM itself, we will have a booth to meet everyone and spread the word about Matrix, and a devroom to go more in depth on Matrix topics.&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=5F2V-7bQHaM&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=5F2V-7bQHaM&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;5F2V-7bQHaM&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;fringe-event&quot;&gt;Fringe Event&lt;&#x2F;h2&gt;
+&lt;p&gt;The fantastic folks of &lt;a href=&quot;https:&#x2F;&#x2F;hsbxl.be&#x2F;&quot;&gt;HSBXL&lt;&#x2F;a&gt; accepted to &lt;a href=&quot;https:&#x2F;&#x2F;hsbxl.be&#x2F;events&#x2F;byteweek&#x2F;2024&#x2F;matrix-community-meetup&#x2F;&quot;&gt;host us this year again&lt;&#x2F;a&gt; for a community “&lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2024&#x2F;fringe&#x2F;&quot;&gt;Fringe&lt;&#x2F;a&gt;” event the day before FOSDEM. We will meet on Friday 2, starting at 13:00 CET for a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;BarCamp&quot;&gt;BarCamp&lt;&#x2F;a&gt;. It’s a sort of informal conference where people can meet, talk, and decide informally of an agenda for the afternoon. There are excellent illustrated directions on &lt;a href=&quot;https:&#x2F;&#x2F;hsbxl.be&#x2F;enter&#x2F;&quot;&gt;hsbxl.be&#x2F;enter&lt;&#x2F;a&gt; to be sure you find the way to HSBXL, situated at Rue de la Petite Île 1, 1070 Anderlecht, Brussels. You can join us already in the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#fosdem2024-foundation-community-meetup:matrix.org&quot;&gt;#fosdem2024-foundation-community-meetup&lt;&#x2F;a&gt; room to talk about practical matters, or chat early.&lt;&#x2F;p&gt;
+&lt;p&gt;We will likely do a &lt;em&gt;Matrix Live Live&lt;&#x2F;em&gt;, live streamed from the hackerspace The format is not set in stone (it’s a BarCamp!) but it will very probably contain a presentation about the future of the Foundation, and potentially demos and more speakers from the audience. We’re looking forward to meeting you there and I’m sure we will have &lt;em&gt;plenty&lt;&#x2F;em&gt; of great conversations given how vibrant the ecosystem is.&lt;&#x2F;p&gt;
+&lt;p&gt;A warm thank you to &lt;a href=&quot;https:&#x2F;&#x2F;nordeck.net&#x2F;&quot;&gt;Nordeck&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;futo.org&#x2F;&quot;&gt;FUTO&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.famedly.com&#x2F;&quot;&gt;Famedly&lt;&#x2F;a&gt; who are sponsoring this event, allowing us to offer free drinks and pizzas to the audience! Massive thanks to the HSBXL gang, and to Kim and Yan who coordinated the organisation of the fringe event!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;booth-at-fosdem&quot;&gt;Booth at FOSDEM&lt;&#x2F;h2&gt;
+&lt;p&gt;We were granted a booth for Saturday 3 &amp;amp; Sunday 4 at FOSDEM, covering the whole conference. With a dozen volunteers on a stand from several organisations working on the Matrix ecosystem, we are more than ready to welcome you for a chat, to show you what cool things Matrix can do, or to help you around with Matrix. Come by our stand for a nice talk, or to buy some merch!&lt;&#x2F;p&gt;
+&lt;p&gt;You will be able to meet us, learn more about Matrix, or even talk about your projects with us in building K, level 2. The full list of stands is &lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2024&#x2F;stands&#x2F;&quot;&gt;published on FOSDEM’s website&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;devroom-at-fosdem&quot;&gt;Devroom at FOSDEM&lt;&#x2F;h2&gt;
+&lt;p&gt;Finally, in addition to the BarCamp and the booth, we have a devroom on Sunday 4 afternoon, starting at 13:00 CET. State of Matrix, Matrix as a potential answer to Digital Market Act, widgets, moving communities, and more: we have a full schedule covering all the hot Matrix topics!&lt;&#x2F;p&gt;
+&lt;p&gt;You can find the &lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2024&#x2F;schedule&#x2F;track&#x2F;matrix&#x2F;&quot;&gt;full schedule of the Matrix devroom on FOSDEM’s website&lt;&#x2F;a&gt;, and you can add it to your calendar automatically &lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2024&#x2F;schedule&#x2F;track&#x2F;matrix.ics&quot;&gt;with this ics&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;main-track-talk&quot;&gt;Main track talk&lt;&#x2F;h2&gt;
+&lt;p&gt;Finally, Matthew submitted a talk to the main track with his Spec Core Team lead hat on, and it was accepted! On Sunday 5, at 10:00 in Janson you will be able to hear him talk about how Matrix is “Opening up communication silos with Matrix 2.0 and the EU Digital Markets Act”&lt;&#x2F;p&gt;
+&lt;p&gt;The team is looking forward to seeing you in Brussels!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>FOSDEM 2023: Matrix’s first physical devroom</title>
+    <published>2023-02-09T21:12:10+00:00</published>
+    <updated>2023-02-09T17:02:40+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/02/09/finally-a-hybrid-conference-that-worked/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/02/09/finally-a-hybrid-conference-that-worked/</id>
+    <content type="html">&lt;p&gt;For the past two years, FOSDEM couldn’t happen in-person. Fortunately we could
+help, and Matrix hosted the world&#x27;s largest free &amp;amp; open source software
+conference online! This year we were finally back in-person… but not only.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2021&#x2F;02&#x2F;15&#x2F;how-we-hosted-fosdem-2021-on-matrix&quot;&gt;The set-up we have arranged in 2021&lt;&#x2F;a&gt;
+and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2022&#x2F;02&#x2F;07&#x2F;hosting-fosdem-2022-on-matrix&quot;&gt;polished in 2022&lt;&#x2F;a&gt;
+has proved to be robust and served us well during the pandemic. Returning to an
+in-person conference didn’t mean we had to throw it all away… quite the
+opposite!&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;This year the OSS community could gather in-person, go see each other’s stands,
+and attend all too few of all the fascinating talks the speakers had prepared
+for us… but the conference was yet more.. Some of us couldn’t make it in person
+but could attend FOSDEM online from its Matrix Space. Devrooms were broadcasted
+live into the Matrix rooms where devroom managers and speakers could interact
+with the online audience.&lt;&#x2F;p&gt;
+&lt;p&gt;In total, thousands of users joined us online, both locally and remotely as
+seen from the FOSDEM homeserver: an amazing audience given the possibility to be
+on site.&lt;&#x2F;p&gt;
+&lt;p&gt;For us, it was also an opportunity to announce Matrix 2.0 to a live audience!
+Matrix 2.0 doesn’t mean we’re making breaking changes in the spec. It’s more of
+a nickname we gave to the milestone &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2022&#x2F;08&#x2F;15&#x2F;the-matrix-summer-special-2022#matrix-20&quot;&gt;we had promised in summer to deliver by the
+end of the year&lt;&#x2F;a&gt;
+and had far too much giving the mother of all demos to a packed room of nearly
+1500 people.&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=eUPJ9zFV5IE&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=eUPJ9zFV5IE&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;eUPJ9zFV5IE&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;h2 id=&quot;the-first-ever-in-person-matrix-devroom&quot;&gt;The first ever in-person Matrix devroom&lt;&#x2F;h2&gt;
+&lt;p&gt;This year was also the first ever in-person devroom for the Matrix Foundation
+and Community. We had many proposals and could have used the whole day, but we
+had to share with many other deserving communities. We’re extremely grateful to
+FOSDEM organisers for the devroom… and it was a huge success! At many points the
+room was completely packed, with no seats left at all.&lt;&#x2F;p&gt;
+&lt;p&gt;We could &lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2023&#x2F;schedule&#x2F;track&#x2F;matrix&#x2F;&quot;&gt;shoehorn 8 talks&lt;&#x2F;a&gt; in
+the in-person devroom. Picking them was really difficult! When one of the
+speakers unfortunately called in sick, the devroom healed the wound and filled
+the gap very quickly.&lt;&#x2F;p&gt;
+&lt;p&gt;The devroom started with a quick intro to Matrix from Matthew &amp;amp; Amandine.&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=dPgYy-Y4f7w&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=dPgYy-Y4f7w&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;dPgYy-Y4f7w&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;Florian followed with a talk about MatrixRTC to explore what Matrix can do
+beyond instant messaging&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=P--LwIB3deA&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=P--LwIB3deA&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;P--LwIB3deA&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;Then Matthew did an awesome demo of Third Room and “3D widgets” (user generated
+content) that can be embedded into its worlds. Of course with a nice “The Matrix
+in Matrix” scene.&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=nG8qJ4on00Y&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=nG8qJ4on00Y&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;nG8qJ4on00Y&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;Stunning 3D worlds are great, but the most popular use case for Matrix today is
+instant messaging. And we did a lot as the Matrix Foundation to significantly
+improve the performance with Sliding Sync, using matrix-rust-sdk as the showcase
+implementation. Kegan and Ben covered Sliding Sync and matrix-rust-sdk
+respectively, while Mauro showed us how Element X, the first client to use it,
+doesn’t stop here and goes way beyond to provide a snappy, sturdy, polished
+client.&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=5iIs1zWuVOU&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=5iIs1zWuVOU&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;5iIs1zWuVOU&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;Kim and Oliver from Nordeck made an interesting presentation about how widgets
+can make Matrix a rich app creation environment.&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=hhEUe414scU&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=hhEUe414scU&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;hhEUe414scU&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;The Trixnity project then introduced their fast, multi-purpose, well-tested SDK.
+A talk you don’t want to miss, particularly if you’re into Kotlin.&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=zDftIZm-DZ0&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=zDftIZm-DZ0&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;zDftIZm-DZ0&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;Pierre from Technostructures introduced us to &lt;a href=&quot;https:&#x2F;&#x2F;technostructures.org&#x2F;projects&#x2F;kazarma&#x2F;&quot;&gt;Kazarma&lt;&#x2F;a&gt;
+a bridge between Matrix and ActivityPub. In Pierre’s own words: “we talked a lot
+about interoperability, and we found it sad that we talked about
+interoperability for proprietary platforms, not with alternative decentralised
+networks, so we tried doing that”. And they did. Bravo Pierre and the team!&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=D3olH1aUCkQ&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=D3olH1aUCkQ&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;D3olH1aUCkQ&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;Finally Yan concluded the in-person devroom with a speedrun of all the Matrix
+projects he could find around. The video is not out yet, so we’ll add it to the
+second follow-up blog post: the one with the online devroom conferences!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;matrix-for-more-than-remote-attendance&quot;&gt;Matrix for more than remote attendance&lt;&#x2F;h2&gt;
+&lt;p&gt;FOSDEM staff used the Matrix rooms for on-site support. Whether the camera was
+blurry, microphones didn’t work, or there was a missing power plug: staff could
+be notified and answer very quickly before sending someone to actually solve the
+issue. But it also allowed staff to notify devroom managers for small
+adjustments, if speakers ever disappeared from the scene.&lt;&#x2F;p&gt;
+&lt;p&gt;Staff also told us Matrix worked much more reliably than anything other than
+walkie talkies from a coordination perspective and was more versatile. They
+consider narrowing down their use of walkies next year in favour of a deeper
+integration with Matrix. We’re excited to see that Matrix was yet again a great
+solution in the stressful, high paced context of a conference that gathered
+several thousand people in-person and several thousand more online.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;attending-in-person&quot;&gt;Attending in-person&lt;&#x2F;h2&gt;
+&lt;p&gt;Finally, a large part of the joy of attending FOSDEM comes from the people you
+meet there. The least we can say is that our stand was busy. We ran out of
+stickers and medium size t-shirts early on Sunday morning, but above all we had
+plenty of interesting discussions.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;fosdem2023_stand_blurred.jpg&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A few people discovered Matrix during FOSDEM and were blown away by messages
+making it from Slack to Discord before their eyes, all thanks to Matrix and
+bridges. The overwhelming majority of people who came to us were already happy
+users willing to discuss architecture, our plans for the future, or even to
+verify each other with QR Codes or emoji.&lt;&#x2F;p&gt;
+&lt;p&gt;We want to thank the FOSDEM staff for organising this edition and using Matrix
+again: a successful return to the in-person format that builds on the online
+experience of the past two years. See you next year folks!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+</feed>

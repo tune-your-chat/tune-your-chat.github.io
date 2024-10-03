@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - Conference</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/conference/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-08-01T12:00:00+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/conference/atom.xml</id>
+    
+    
+    
+<entry xml:lang="en">
+    <title>The Matrix Conference Has an Exciting Lineup</title>
+    <published>2024-08-01T12:00:00+00:00</published>
+    <updated>2024-08-01T12:00:00+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/08/matrix-conf-schedule/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/08/matrix-conf-schedule/</id>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;matrix-conference-opengraph.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;We imagined The Matrix Conference as a gathering place for hackers, project managers, digital sovereignty leaders, and innovators. I’m proud to announce that we definitely succeeded in building a schedule covering that range of topics!&lt;&#x2F;p&gt;
+&lt;p&gt;We received more than 60 high-quality proposals and ended up building 5 tracks over the course of 2 “core” conference days. The tracks cover everything from sovereignty and collaboration in the public sector to digital rights, Matrix internals, the social impact of Matrix, and Matrix as the foundation for products.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;The conference will occur between September 19th and 22nd at &lt;a href=&quot;https:&#x2F;&#x2F;2024.matrix.org&#x2F;attend&#x2F;#getting-there&quot;&gt;Mitosis Labs in Berlin&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Thursday, 19, will be a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;BarCamp&quot;&gt;BarCamp&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; starting at 10 a.m. local time. It’s an informal workshop-like day where attendees can join, pitch a topic they want to discuss and vote for topics they are interested in. In the evening, we will have a buffet at the venue.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;The two core conference days are Friday, 20, and Saturday, 21.&lt;&#x2F;strong&gt; The full schedule is &lt;a href=&quot;https:&#x2F;&#x2F;2024.matrix.org&#x2F;schedule&#x2F;&quot;&gt;on the Matrix Conference Website&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Sunday 22&lt;&#x2F;strong&gt; will be dedicated to sprints: sessions where the attendees can gather to work together on ideas that emerged during the conference in a more relaxed atmosphere.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Tip: You can also view the schedule through pretalx-interoperable apps on your phone, such as &lt;a href=&quot;https:&#x2F;&#x2F;ggt.gaa.st&#x2F;#url=https:&#x2F;&#x2F;cfp.matrix.org&#x2F;matrixconf2024&#x2F;schedule&#x2F;export&#x2F;schedule.xml&quot;&gt;Giggity&lt;&#x2F;a&gt; on Android.&lt;&#x2F;p&gt;
+&lt;p&gt;We are particularly excited about the lineup of speakers:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Josh Simmons will open the conference, leaving the floor to Matthew Hodgson for a talk about Matrix 2.0 coming together and shaping the future of Matrix.&lt;&#x2F;li&gt;
+&lt;li&gt;Julie Ripa from DINUM will walk us through the past, present and future of Tchap.&lt;&#x2F;li&gt;
+&lt;li&gt;Jan Kohnert will explain how Matrix has become the foundation for a key communication service within Germany’s healthcare sector.&lt;&#x2F;li&gt;
+&lt;li&gt;Marco Holz will tell us how FITKO and the German Federal Ministry of the Interior joined efforts to pilot a Matrix-based next-generation communication infrastructure for digital government services.&lt;&#x2F;li&gt;
+&lt;li&gt;Renato Stalder will share the details of SwissPost creating a secure, nationwide communication system based on Matrix.&lt;&#x2F;li&gt;
+&lt;li&gt;Carla Griggio will give us an academic and nuanced perspective on walled gardens.&lt;&#x2F;li&gt;
+&lt;li&gt;Pavel Zoneff from the Tor Project will explain how encryption is a cornerstone of advancing human rights worldwide.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This is only a glimpse at the many eye-opening talks scheduled for the conference! Follow us on our socials (&lt;a href=&quot;https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;deck&#x2F;@matrix&quot;&gt;Fediverse&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;company&#x2F;matrix-org&quot;&gt;LinkedIn&lt;&#x2F;a&gt;) to hear about the speakers before the event.&lt;&#x2F;p&gt;
+&lt;p&gt;Remember to &lt;a href=&quot;https:&#x2F;&#x2F;2024.matrix.org&#x2F;register&#x2F;&quot;&gt;book a ticket&lt;&#x2F;a&gt;: the venue has a limited capacity of 200 people, and we’re well on our way to reach it. We also have &lt;a href=&quot;https:&#x2F;&#x2F;2024.matrix.org&#x2F;sponsor&#x2F;&quot;&gt;a few sponsor packages left&lt;&#x2F;a&gt;. Don’t miss your chance to give your company the visibility it deserves in the Matrix ecosystem. Reach out to us soon to secure a booth or an exclusive perk!&lt;&#x2F;p&gt;
+&lt;p&gt;We’re excited to see the enthusiasm surrounding the conference and look forward to meeting you all in Berlin.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Announcing The Matrix Conference</title>
+    <published>2024-06-12T13:15:00+00:00</published>
+    <updated>2024-06-18T15:00:00+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/06/matrix-conf-cfp/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/06/matrix-conf-cfp/</id>
+    <content type="html">&lt;p&gt;The Matrix.org Foundation is happy to &lt;a href=&quot;https:&#x2F;&#x2F;2024.matrix.org&quot;&gt;launch the first Matrix Conference&lt;&#x2F;a&gt;, this September 19th to 22nd in Berlin, Germany, at &lt;a href=&quot;https:&#x2F;&#x2F;mitosis.co&#x2F;en&#x2F;&quot;&gt;Mitosis Labs&lt;&#x2F;a&gt;! Click on the picture bellow to learn more!&lt;&#x2F;p&gt;
+&lt;a style=&quot;display: block; max-width: 600px; margin-inline: auto;&quot; href=&quot;https:&#x2F;&#x2F;2024.matrix.org&quot;&gt;
+ &lt;img src=&quot;&#x2F;img&#x2F;matrix-conference-opengraph.png&quot; alt=&quot;An picture with an abstract background made of lines, and the matrix conference logo that looks like the regular matrix logo.&quot;&gt;
+&lt;&#x2F;a&gt;
+&lt;p&gt;Building on the success of the Matrix Community Summit, the Foundation is joining forces with the Summit team to open the conference to wider audiences. This is the event that policy makers, public and private sector leaders, open source enthusiasts, and technologists attend to share knowledge and learn what’s next in the decentralised and secure communications sector.&lt;&#x2F;p&gt;
+&lt;p&gt;This is THE gathering place for hackers, project managers, digital sovereignty leaders and innovators. With several tracks covering everything from sovereignty &amp;amp; collaboration in the public sector to digital rights and advocacy, all profiles will find content for their interest. Outside of the tracks there will be plenty of time and space to get to know others from the ecosystem and exchange ideas.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;The conference will happen from September 19th to 22nd at &lt;a href=&quot;https:&#x2F;&#x2F;mitosis.co&#x2F;en&#x2F;&quot;&gt;Mitosis Labs&lt;&#x2F;a&gt;, in Berlin.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Thursday 19 will be a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;BarCamp&quot;&gt;BarCamp&lt;&#x2F;a&gt;: an informal workshop-like day where attendees can join, pitch a topic they want to discuss, and vote for topics they have an interest in. This event, taken from and organised by the Community Summit team, is the ideal place to warm up for the conference and meet others in the ecosystem.&lt;&#x2F;li&gt;
+&lt;li&gt;Friday 20 and Saturday 21 will be the two core conference days. With several tracks on a variety of topics like Matrix in the public sector, Trust &amp;amp; Safety, interoperability, data sovereignty, performance, and new use cases… Everyone will find a talk they want to attend.&lt;&#x2F;li&gt;
+&lt;li&gt;Sunday 22 will be dedicated to sprints. Those are sessions where the various attendees can gather to start working together on ideas that emerged during the conference in a more relaxed atmosphere.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We are doing our best to make the event as inclusive as possible. The ticket price is kept as low as possible, and we will rely on an honour system to allow people who can’t afford it to get a free ticket. Regular tickets will start at €50, a €100 premium ticket will get you limited edition merch, and we plan €350 business tickets for organisations willing to support us.&lt;&#x2F;p&gt;
+&lt;p&gt;Further, we are taking care to make sure the event venue is accessible, dietary requirements are satisfied, and to implement a robust Health &amp;amp; Safety policy alongside our Code of Conduct.&lt;&#x2F;p&gt;
+&lt;p&gt;For more information about the venue, health &amp;amp; safety policy, sponsorship packages and more, please visit &lt;a href=&quot;https:&#x2F;&#x2F;2024.matrix.org&quot;&gt;The Matrix Conference Website&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;In the meantime, you can submit your talk, workshop and sprint proposals on &lt;a href=&quot;https:&#x2F;&#x2F;cfp.matrix.org&quot;&gt;cfp.matrix.org&lt;&#x2F;a&gt;. We’re interested in short (20min + 10min Q&amp;amp;A) or long (45min + 10min Q&amp;amp;A) talks on all the topics related to Matrix. Please submit your proposals before Wednesday 26 June 2024 09:59 AM &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Anywhere_on_Earth&quot;&gt;AOE&lt;&#x2F;a&gt;, 23:59 CEST (Berlin time).&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+</feed>

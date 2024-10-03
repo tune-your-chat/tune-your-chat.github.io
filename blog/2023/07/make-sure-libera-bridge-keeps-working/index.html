@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;07&#x2F;make-sure-libera-bridge-keeps-working&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Making Sure The Libera.Chat Bridge Keeps Working" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Making Sure The Libera.Chat Bridge Keeps Working</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Making Sure The Libera.Chat Bridge Keeps Working",
+    "datePublished": "2023-07-07T18:45+00:00",
+    
+    
+    "image": [
+        "https://matrix.org/blog/img/matrix-logo.png"
+    ],
+    
+    "author": [
+    
+    {
+        "@type": "Person",
+        "name": "Thib",
+        "url": "https://tune-your-chat.github.io/authors/thib"
+    }
+    
+    ]
+}
+</script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<article class="content post with-sidebar">
+    <header>
+        <h1>Making Sure The Libera.Chat Bridge Keeps Working</h1>
+        <span>
+            07.07.2023 18:45
+            
+            —
+            <a href="/category/bridges">Bridges</a>
+            
+            —
+            <a
+                href="/author/thib">Thib</a>
+            
+        </span>
+        
+    </header>
+    <div class="post-main">
+        <div class="post-content">
+            <p>Libera Chat recently <a href="https://libera.chat/news/matrix-deportalling">announced their decision to opt-out of portalled rooms</a>
+from the Libera.Chat bridge instance hosted by the Matrix.org Foundation
+(<a href="https://matrix.org/blog/2023/07/deportalling-libera-chat/">a decision we regret but respect</a>).
+<strong>This means that for the bridge to keep working, all of your portalled rooms
+need to be turned into plumbed rooms before July 31st</strong>. All of this might be a
+bit obscure, so let’s walk together through these concepts and give you the
+tools to make sure the bridge keeps working for you.</p>
+<span id="continue-reading"></span><h2 id="am-i-concerned">Am I concerned?</h2>
+<p>If your community is primarily on Matrix and your rooms are not bridged to
+Libera.Chat channels, then you’re not concerned!</p>
+<p>If your community is spread across Matrix and Libera Chat, you need to make sure
+your room is “plumbed” into a Libera Chat channel, and not “portalled” to it.
+But what are those, and how to find out?</p>
+<h2 id="plumbed-and-portalled">Plumbed and portalled?</h2>
+<p>The simplest approach to it is to say that:</p>
+<ul>
+<li>Portalled rooms are primarily owned by the bridge and “obey” the IRC side.
+Everyone can join a portalled room.</li>
+<li>Plumbed rooms are primarily owned by an individual, and try to obey the IRC
+side as much as possible. Plumbed rooms require an IRC chanop to approve a
+plumbing request to establish the link between the Matrix room and the IRC
+channel.</li>
+</ul>
+<p>If you created the room yourself and you remember manually plumbing it into IRC,
+then it's a plumbed room. In all other cases, chances are very high that you are
+using a portalled room. There is no simple way for the general public to know
+whether the room is plumbed or portalled because it’s a technicality that
+shouldn’t matter for most people, and the bridge was not designed to work with
+only plumbed rooms.</p>
+<p>Widgets are not part of the Matrix specification, but given the short time you
+have to migrate your channels, they’re the most straightforward way to figure
+out whether your room is portalled or plumbed and do the necessary to keep the
+bridge working.</p>
+<p>In this guide, we’ll be using Element. Open your room, then click on the top
+right <code>i</code> to open the right panel. Click on “Add widgets bridges &amp; bots”.</p>
+<p><img src="/blog/img/right-panel-add-widgets-bridges.png" alt="" /></p>
+<p>Click on “IRC Bridge (Libera.Chat)” and see if you have results in the “Linked
+channels” section.</p>
+<p><img src="/blog/img/libera-widget-linked-section.png" alt="" /></p>
+<p>If you see results in that section, the room is plumbed, and it will keep
+working. If you don’t see any result in that section, the room is portalled and
+the bridge will stop working by July 31st.</p>
+<h2 id="what-to-do-if-my-room-is-portalled">What to do if my room is portalled</h2>
+<p>Unfortunately, portalled rooms cannot be easily turned into plumbed rooms. You
+need to:</p>
+<ol>
+<li>Create a brand new Matrix room</li>
+<li>Plumb it to the IRC channel it was bridged to</li>
+<li>Redirect the users of the portalled room to the new plumbed room.</li>
+</ol>
+<p>The third step can will be done automatically by the bridge in portalled rooms.
+On July 31st, it will make the room read only and list the public rooms which
+are plumbed to the same IRC channel.</p>
+<h3 id="create-a-brand-new-room">Create a brand new room</h3>
+<p>At first this room is not connected to IRC at all. We recommend you to set the
+room history visibility to “Members only (since they joined)”, which corresponds
+to <code>m.room.history_visibility = joined</code> technically. This setting matches IRC’s
+behaviour.</p>
+<h3 id="plumb-it-to-irc">Plumb it to IRC</h3>
+<p>In Element, make sure you’re in the room you have just created, and click on the
+top right <code>i</code> icon to open the right panel. Then at the bottom click on “Add
+widgets, bridges &amp; bots” like you did in the portalled room.</p>
+<p>In the “Bridges” section, click on “IRC Bridge (Libera.chat)” and “Add”. Scroll
+down to “Link a new channel”. You will be asked to fill information so you can
+plumb the room to IRC. You can’t edit the server field, which is correctly set
+to Libera Chat. Enter the channel you want to plumb to, and the nick of a chanop
+of this channel.</p>
+<p><img src="/blog/img/request-plumbing.png" alt="" /></p>
+<p>We ask you to please be considerate of Libera Chat chanops and staff, and to
+only send plumb requests to channels:</p>
+<ul>
+<li>you control;</li>
+<li>or you have talked to the chanop prior to the plumb request</li>
+</ul>
+<p>The chanop will receive this request on their end:</p>
+<p><img src="/blog/img/plumbing-op-request.png" alt="" /></p>
+<p>If they accept, the room will be plumbed into the IRC channel. Again, please be
+mindful of the remote side of the bridge and don’t send plumbing requests out of
+the blue: IRC chanops will very likely turn them down if they don’t know who is
+sending them or who is controlling the room.</p>
+<h3 id="a-note-on-aliases">A note on aliases</h3>
+<p>Portalled rooms used to have room addresses in the form<code>#myroom:libera.chat</code>.
+Since the <code>libera.chat</code> instance only has Matrix ghosts and no real human users,
+you can’t move the alias from the portalled room to your new plumbed room. This
+is by design.</p>
+<p>We hope to be able to turn portalling back on in the future, when we have more
+resources reserved for the bridge and can make stronger commitments. As such we
+want to keep addresses ending in <code>:libera.chat</code> for portalled rooms.</p>
+<p>This is not too much of a problem for your room and users though. Let’s consider
+your portalled room was <code>#myroom:libera.chat</code>, and that you have created
+<code>#myroom:example.com</code> to plumb it into the same <code>#myroom</code> channel on
+Libera.Chat. People who try to join <code>#myroom:libera.chat</code> will be greeted with a
+message telling them that the room has been archived, and redirect them to your
+plumbed room.</p>
+
+            <div class="callout">
+                <div class="left-col">
+                    <h2>The Foundation needs you</h2>
+                </div>
+                <div class="right-col">
+                    <p>
+                        The Matrix.org Foundation is a non-profit and only relies
+                        on donations to operate. Its core mission is to maintain
+                        the Matrix Specification, but it does much more than that.
+                    </p>
+                    <p>
+                        It maintains the matrix.org homeserver and hosts several
+                        bridges for free. It fights for our collective rights to
+                        digital privacy and dignity.
+                    </p>
+                    <a class="call-to-action plausible-event-name=BlogPostCtaSupportUs" href="/support">Support us</a>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Post Contents</h3>
+
+            <ul style="list-style: none; padding-left: 0px;">
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/07/make-sure-libera-bridge-keeps-working/#am-i-concerned">Am I concerned?</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/07/make-sure-libera-bridge-keeps-working/#plumbed-and-portalled">Plumbed and portalled?</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/07/make-sure-libera-bridge-keeps-working/#what-to-do-if-my-room-is-portalled">What to do if my room is portalled</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/07/make-sure-libera-bridge-keeps-working/#create-a-brand-new-room">Create a brand new room</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/07/make-sure-libera-bridge-keeps-working/#plumb-it-to-irc">Plumb it to IRC</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/07/make-sure-libera-bridge-keeps-working/#a-note-on-aliases">A note on aliases</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+            </ul>
+        </aside>
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

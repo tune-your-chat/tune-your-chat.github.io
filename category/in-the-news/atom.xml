@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - In the News</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/in-the-news/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-03-03T21:49:00+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/in-the-news/atom.xml</id>
+    
+    
+    
+<entry xml:lang="en">
+    <title>Moznet IRC is dead; long live Mozilla Matrix!</title>
+    <published>2020-03-03T21:49:00+00:00</published>
+    <updated>2020-03-03T18:09:39+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2020/03/03/moznet-irc-is-dead-long-live-mozilla-matrix/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2020/03/03/moznet-irc-is-dead-long-live-mozilla-matrix/</id>
+    <content type="html">&lt;p&gt;Hi all,&lt;&#x2F;p&gt;
+&lt;p&gt;Heads up that yesterday at 12:00 ET, the Mozilla IRC network was switched off
+after over 22 years of valiant service, and the &lt;a href=&quot;http:&#x2F;&#x2F;exple.tive.org&#x2F;blarg&#x2F;2020&#x2F;02&#x2F;20&#x2F;synchronous-messaging-were-live&#x2F;&quot;&gt;mozilla.org Matrix instance is
+now in full production&lt;&#x2F;a&gt;.
+You can get at it via the Riot instance at
+https:&#x2F;&#x2F;chat.mozilla.org, by pointing your client at
+https:&#x2F;&#x2F;mozilla.modular.im, or by joining rooms on the mozilla.org server over
+federation via its room directory.&lt;&#x2F;p&gt;
+&lt;p&gt;We&#x27;d like to thank Mozilla again for putting their faith in Matrix, and are
+determined to do everything we can to ensure we&#x27;re a more than worthy
+successor to IRC; we have big boots to fill :)&lt;&#x2F;p&gt;
+&lt;p&gt;We&#x27;ve been gathering a huge amount of invaluable FTUE (first time user experience)
+feedback from the commentary in &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#synchronicity:mozilla.org&quot;&gt;#synchronicity:mozilla.org&lt;&#x2F;a&gt; - and we&#x27;re in the process
+of implementing it over the coming weeks.  In particular, we&#x27;ve already implemented
+alphabetic room ordering, custom theming support, and done a bunch more SSO work.&lt;&#x2F;p&gt;
+&lt;p&gt;The immediate priorities include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixing a regression in jumps&#x2F;jank when scrolling (fix PRed to develop today)&lt;&#x2F;li&gt;
+&lt;li&gt;Enabling Mozilla IAM SSO authentication on remaining &quot;interactive user auth&quot; flows (e.g. managing devices)&lt;&#x2F;li&gt;
+&lt;li&gt;Fixing the UX around selecting server when browsing the room directory.&lt;&#x2F;li&gt;
+&lt;li&gt;Fixing notification defaults, behaviour and settings UX&lt;&#x2F;li&gt;
+&lt;li&gt;Better educating users to connect to the mozilla.modular.im if using a random app.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Finally, it&#x27;s worth noting that the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&quot;&gt;matrix-ircd&lt;&#x2F;a&gt; project is
+seeing some commits again, many thanks to jplatte from the &lt;a href=&quot;https:&#x2F;&#x2F;ruma.dev&#x2F;&quot;&gt;Ruma&lt;&#x2F;a&gt; project - so if you are
+currently despairing the demise of moznet, never fear: you may yet be able to connect to the Mozilla matrix
+server &lt;a href=&quot;https:&#x2F;&#x2F;xkcd.com&#x2F;1782&#x2F;&quot;&gt;via IRC&lt;&#x2F;a&gt; (authing via Mozilla IAM, of course) and pretend that none of this newfangled Matrix stuff
+exists :D&lt;&#x2F;p&gt;
+&lt;p&gt;Please keep the feedback coming in &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#synchronicity:mozilla.org&quot;&gt;#synchronicity:mozilla.org&lt;&#x2F;a&gt; - we&#x27;re gathering it all up into Github (under the mozilla label) as well as a high level &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;document&#x2F;d&#x2F;1yG3pqAWN4JLL_omC1E9W7Gc-jAOqFD0OAr5gig1Yilg&#x2F;edit?usp=drive_web&amp;amp;ouid=106410341666574529833&quot;&gt;Google Doc&lt;&#x2F;a&gt; to help collate everything.&lt;&#x2F;p&gt;
+&lt;p&gt;thanks,&lt;&#x2F;p&gt;
+&lt;p&gt;- The Matrix Core Team.&lt;&#x2F;p&gt;
+&lt;p&gt;(Comments over at &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=22477757&quot;&gt;HN&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Welcoming Mozilla to Matrix!</title>
+    <published>2019-12-19T00:00:00+00:00</published>
+    <updated>2019-12-19T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/12/19/welcoming-mozilla-to-matrix/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/12/19/welcoming-mozilla-to-matrix/</id>
+    <content type="html">&lt;p&gt;Hi all,&lt;&#x2F;p&gt;
+&lt;p&gt;We’re incredibly excited that &lt;a href=&quot;https:&#x2F;&#x2F;discourse.mozilla.org&#x2F;t&#x2F;synchronous-messaging-at-mozilla-the-decision&#x2F;50620&quot;&gt;Mozilla just announced&lt;&#x2F;a&gt; that they’ve selected Matrix as the successor to IRC as the communication platform for the public Mozilla community!!  This comes off the back of a &lt;a href=&quot;https:&#x2F;&#x2F;discourse.mozilla.org&#x2F;t&#x2F;synchronous-messaging-at-mozilla-trial-servers-feedback&#x2F;44871&quot;&gt;formal 1-month trial&lt;&#x2F;a&gt; in September to evaluate various options side by side, and now New Vector will be helping Mozilla get their homeserver up and running on the &lt;a href=&quot;https:&#x2F;&#x2F;modular.im&quot;&gt;Modular.im&lt;&#x2F;a&gt; hosting platform over the coming weeks - and federating openly with the rest of the open global Matrix network! :)&lt;&#x2F;p&gt;
+&lt;p&gt;We have always been massive fans of Mozilla: they have been an excellent role model as champions of the open web, open standards, not to mention open source - and it’s fair to say that Mozilla has been a major inspiration to how Matrix has evolved (Riot aspires to be to Matrix what Firefox is to the Web: a flagship open source app which provides an accessible friendly interface into an open standard network).  It’s very reassuring to see that Mozillians from the trial recognise the alignment and have converged on Matrix as the way forward - it’s a massive win for the open web and standards-based communication in general.&lt;&#x2F;p&gt;
+&lt;p&gt;It’s worth noting that we’ve also always been massive fans of IRC, and Matrix is unashamedly derivative of IRC in capabilities and culture, while broadening the scope to decentralised synchronisation and relaying of any kind of data.  For context, the genesis of the team which eventually spawned Matrix was on a student IRC server ~20 years ago - and subsequently everything we’ve worked on (up to Matrix) was coordinated exclusively through IRC.  We even used to give conference talks on how to run your project&#x2F;company off IRC.  I can’t really overstate how fundamental IRC is to our history - and we still keep our private IRC network online for old time’s sake (albeit bridged to Matrix). The very first protocol bridge we built for Matrix back in 2015 was for IRC - and Moznet and Freenode were the first public bridges we turned on. As of right now, &lt;code&gt;&#x2F;stats u&lt;&#x2F;code&gt; on Moznet says that there are 4950 connected users, of which 1724 (so 35%) are actually Matrix users connected via the Moznet bridge - effectively using Matrix as a big decentralised IRC bouncer in the sky.&lt;&#x2F;p&gt;
+&lt;p&gt;All of this is to say is that we deeply understand how dependent Mozilla has been on IRC over the years, and that we built Matrix to be a worthy successor which tries to capture all the best bits of IRC while providing much richer primitives (E2E encryption, openly federated decentralised chatrooms, arbitrary data sync, HTTP API, VoIP, etc).  It’s also worth noting that even though Moznet is being turned off, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&quot;&gt;matrix-ircd&lt;&#x2F;a&gt; exists as a very promising project that exposes &lt;em&gt;any&lt;&#x2F;em&gt; Matrix homeserver as an ircd - so for all you IRC die-hards, Moznet can absolutely live on in the afterlife!  (matrix-ircd is still alpha right now, but it’s a relatively modest amount of Rust and PRs are &lt;em&gt;very&lt;&#x2F;em&gt; welcome - if you grok IRC it should be a really really fun project to contribute to).&lt;&#x2F;p&gt;
+&lt;p&gt;In other news, the trial in September was an amazing opportunity to gather feedback first-hand from a wide range of Mozillians as they gave Riot and Matrix a spin, often for the first time - and it was a lot of fun to take that feedback and rapidly act on it to improve the app.  For instance, having direct expert feedback on our screenreader support meant that we were able to &lt;a href=&quot;https:&#x2F;&#x2F;blog.riot.im&#x2F;riot-web-1-5&#x2F;&quot;&gt;radically improve our accessibility&lt;&#x2F;a&gt;, and we’ve kept up the momentum on this since the trial (regardless of the outcome) with Mozilla &amp;amp; Riot devs hacking together with the aim of making Riot the most accessible communication app out there without exception.  Huge thanks to Marco Zehe for all his guidance (and PRs), as well as the rest of &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#a11y:matrix.org&quot;&gt;#a11y:matrix.org&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;p&gt;Meanwhile, Riot’s UX continues to mature in general. One of our two primary projects right now is to improve First Time User Experience (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;vector-im&#x2F;riot-web&#x2F;issues?utf8=%E2%9C%93&amp;amp;q=is%3Aissue+is%3Aopen+label%3Aproject%3AFtue+&quot;&gt;FTUE&lt;&#x2F;a&gt;) - i.e. making our UX as smooth and polished and predictable as possible, especially as seen by new users.  This project had just kicked off in September as the Mozilla trial began, and some of the major improvements to the Room Directory and Room Creation flow which subsequently landed in Riot&#x2F;Web 1.5 were prioritised directly based on Mozillian feedback.  Since the trial we’ve been focusing more on our other primary project (getting E2E Encryption enabled by default), but we will be back on FTUE asap - particularly to incorporate all the feedback we anticipate as Mozilla goes live!  We are absolutely determined for Riot to have as good if not better UX than the likes of Slack or Discord.  New Vector is also &lt;a href=&quot;https:&#x2F;&#x2F;apply.workable.com&#x2F;new-vector&#x2F;j&#x2F;6CB817C79E&#x2F;&quot;&gt;actively hiring more designers&lt;&#x2F;a&gt; to come work fulltime on Riot’s UI and UX as we shift Riot’s focus from being developer-led to design-led - if this sounds interesting, please get in touch!  And finally, everything is of course open source and PRs are genuinely appreciated to keep Riot heading in the right direction (please just check first if they change the UI&#x2F;UX).&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, in case you’re dreading having to use a graphical chat client like Riot, the Mozilla instance will of course be accessible to any &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;clients&#x2F;&quot;&gt;Matrix client&lt;&#x2F;a&gt; that floats your boat - for instance, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;poljar&#x2F;weechat-matrix&quot;&gt;weechat-matrix&lt;&#x2F;a&gt; also got a spurt of development to support Mozilla IAM single-sign-on so that commandline junkies can get their fix too. (It’s worth noting that weechat-matrix really is an incredibly fully featured and usable client - complete with full end-to-end encryption support.  If you haven’t tried it, you’re missing out).&lt;&#x2F;p&gt;
+&lt;p&gt;So, to conclude: it has been indescribably valuable to have the expertise and enthusiasm of the Mozilla community in contributing feedback and fixes to Riot (and even &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bnjbvr&#x2F;botzilla&quot;&gt;building new Matrix bots&lt;&#x2F;a&gt;!).  Huge thanks to everyone who invested their time and energy participating in the trial and for their trust in concluding that Matrix was the way forward.  We see this as a massive responsibility and honour to help power the wider Mozilla community, and we will do everything we can to make it as successful as conceivably possible :)&lt;&#x2F;p&gt;
+&lt;p&gt;To the future of an open web, with even more open communications!&lt;&#x2F;p&gt;
+&lt;p&gt;Matthew, Amandine &amp;amp; the whole Matrix &amp;amp; Riot team :)&lt;&#x2F;p&gt;
+&lt;p&gt;P.S. we’ve come a long way since &lt;a href=&quot;https:&#x2F;&#x2F;discourse.mozilla.org&#x2F;t&#x2F;matrix-and-irc-mozillians-custom-client&#x2F;2911&#x2F;7&quot;&gt;Matrix was first proposed&lt;&#x2F;a&gt; for Mozilla :D&lt;&#x2F;p&gt;
+&lt;!-- Docs to Markdown version 1.0β17 --&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>New Vector raises $8.5M to accelerate Matrix&#x2F;Riot&#x2F;Modular</title>
+    <published>2019-10-10T00:00:00+00:00</published>
+    <updated>2019-10-10T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/10/10/new-vector-raises-8-5m-to-accelerate-matrix-riot-modular/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/10/10/new-vector-raises-8-5m-to-accelerate-matrix-riot-modular/</id>
+    <content type="html">&lt;p&gt;Hi all,&lt;&#x2F;p&gt;
+&lt;p&gt;Massive news for the Matrix ecosystem today: &lt;a href=&quot;https:&#x2F;&#x2F;vector.im&quot;&gt;New Vector&lt;&#x2F;a&gt; (the
+startup which the Matrix core team formed to fund development in 2017) has
+raised an additional $8.5M of funding in order to speed up Riot&#x2F;Matrix
+development and expand Matrix hosting via &lt;a href=&quot;https:&#x2F;&#x2F;modular.im&quot;&gt;Modular.im&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;p&gt;The new funding comes in the form of a Series-A equity investment in New
+Vector from three of the top venture capital funds in London.  The round is
+led by &lt;a href=&quot;https:&#x2F;&#x2F;notion.vc&quot;&gt;Notion&lt;&#x2F;a&gt; - a fund set up by the founders of
+MessageLabs, who many will know as one of the leaders in secure hosted email
+services.  Notion&#x27;s long history with email means they immediately clocked the
+potential of Matrix&#x27;s mission to build a new open global communication network -
+after all, Matrix aims to provide a worthy replacement to email (and the
+phone network, for that matter!).  Joining Notion in the round is &lt;a href=&quot;https:&#x2F;&#x2F;firstminute.capital&quot;&gt;First
+Minute&lt;&#x2F;a&gt; - a fund set up by the founders of
+Lastminute.com (arguably the UK&#x27;s most famous original dotcom), and
+&lt;a href=&quot;http:&#x2F;&#x2F;dawncapital.com&#x2F;&quot;&gt;Dawn&lt;&#x2F;a&gt; - one of the largest SaaS tech specialist
+funds in Europe (famous for backing iZettle, Mimecast, Neo4J and many more).&lt;&#x2F;p&gt;
+&lt;p&gt;The last funding round in Jan 2017 from Status was instrumental in stabilising
+the big 1.0 release of Matrix and exiting beta in June; creating the
+Matrix.org Foundation as a neutral custodian for the standard; stabilising and
+optimising Synapse; redesigning Riot’s user interface; bringing in a full-time
+professional UI&#x2F;UX designer to the team; supporting the huge amount of
+encryption work required to turn on E2EE by default (cross-signing, key
+backups, device verification, e2e search, the pantalaimon e2e daemon etc);
+creating RiotX&#x2F;Android; and launching the Modular.im hosting platform.&lt;&#x2F;p&gt;
+&lt;p&gt;With today’s new funding, the priorities for Matrix will be:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Turning on end-to-end encryption by default for DMs&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Much better support for grouping rooms into Communities&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;More anti-abuse&#x2F;anti-spam mechanisms&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Shrinking Synapse (and&#x2F;or finishing Dendrite)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Canonical DMs (having one DM per user, and have them feel clearly distinct from ‘rooms’)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Extensible Profiles&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Decentralised accounts&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Threading&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;...and furthering development on P2P Matrix, so users can have full control of their communications without having to run or trust a server.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;On the New Vector side, this funding will support:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A whole new wave of UX improvements to Riot (particularly around onboarding and first time user experience).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Making Modular hosting as polished and powerful as possible.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Creating a whole new set of next-generation Modular integrations.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;While New Vector’s contributions to the Matrix ecosystem can’t be ignored,
+it’s important to remember that the Matrix protocol and specification itself
+is governed and controlled by the independent and neutral &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;foundation&quot;&gt;Matrix.org
+Foundation&lt;&#x2F;a&gt; and its &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;blob&#x2F;master&#x2F;proposals&#x2F;1779-open-governance.md&quot;&gt;extensive governance
+processes&lt;&#x2F;a&gt;.
+We set up the Foundation &lt;em&gt;very&lt;&#x2F;em&gt; deliberately to enforce the protocol&#x27;s
+neutrality, formalise the project&#x27;s mission, goals and values and hold true to
+them no matter what - specifically to protect the project from conflicts of
+interest with commercial Matrix endeavours, including New Vector.&lt;&#x2F;p&gt;
+&lt;p&gt;That said, New Vector would not be taking money from any investors if they did
+not believe their goals are aligned with Matrix&#x27;s. To clarify:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Matrix exists to create an open secure decentralised communication network and protocol for the benefit of all.&lt;&#x2F;li&gt;
+&lt;li&gt;New Vector exists to help grow Matrix and be one of many successful companies in the Matrix ecosystem.&lt;&#x2F;li&gt;
+&lt;li&gt;Tech VCs exist to invest their money in growing companies in order to get a return when the company IPOs or gets bought.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;It turns out that these goals are not incompatible if one understands that the
+potential of the Matrix ecosystem is directly linked to its openness and size
+(hint: funding sources who didn’t understand this self-selected out ;). By
+funding Matrix development and helping the open ecosystem and public network
+grow, New Vector can go provide more Matrix hosting via
+&lt;a href=&quot;https:&#x2F;&#x2F;modular.im&quot;&gt;Modular.im&lt;&#x2F;a&gt; and more Government &amp;amp; Enterprise deployments
+via &lt;a href=&quot;https:&#x2F;&#x2F;vector.im&quot;&gt;Vector.im&lt;&#x2F;a&gt;.  Critically, other companies can and do
+build on top of Matrix too - and frankly the more players there are, the more
+valuable the network, and the more value to be shared for everyone (including
+New Vector).  This model worked relatively well for the Web, and we believe
+it&#x27;ll work for Matrix too.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Update: the best way to gauge the investment in New Vector is to hear it
+first hand from the investors.  Jos from Notion is leading the round, and has
+a &lt;a href=&quot;https:&#x2F;&#x2F;notion.vc&#x2F;resources&#x2F;new-vector-series-a&#x2F;&quot;&gt;fascinating blog post&lt;&#x2F;a&gt;
+(written with zero input from Matrix or New Vector folks) to explain where the
+investors are coming from.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Update 2: More excellend &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;dawn-capital&#x2F;communications-of-the-future-will-be-open-and-secure-why-we-invested-in-new-vector-2bd8a060faf7&quot;&gt;first-hand analysis&lt;&#x2F;a&gt; from Dan at Dawn Capital, who does a really deep dive into how they see Matrix and New Vector. Another must read.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;In this case, all of New Vector&#x27;s new investors have a background as respected
+tech entrepreneurs, and everyone involved categorically understands that
+Matrix itself is a neutral open source project, and the mission is to help
+build up the whole network to be as successful as possible rather than
+sabotage it by constraining it in any way.&lt;&#x2F;p&gt;
+&lt;p&gt;All in all, it’s great news for the ecosystem: Matrix is 5 years old now, and
+while the project is growing faster than ever (over 300% more active users in
+the last year!) - it&#x27;s fair to say that we haven&#x27;t moved as fast as our
+mainstream competition - for instance, Slack is only a year older, and Discord
+is a year younger(!)  Obviously much of this is due to Matrix being a
+completely different proposition: we&#x27;ve been creating an open spec; multiple
+client codebases; multiple server codebases; the bridges; a fault tolerant
+decentralised network - not to mention the complexities of decentralised E2E
+encryption.  Based on comparing with our endeavours prior to Matrix, we
+estimate building this stuff in an open and decentralised manner takes roughly
+6 times longer.&lt;&#x2F;p&gt;
+&lt;p&gt;But the project is now in a position where the foundations are solid: the
+protocol is out of beta, reference servers and clients are production ready,
+and it’s more than time to make all of this mainstream. We have to redouble
+our focus on user experience and ensure that we compare favourably to today’s
+established alternatives while staying true to Matrix’s principles.  Making
+sure there are Matrix apps out there which provide a credible alternative to
+with the likes of Slack and WhatsApp (until they eventually join Matrix, of
+course) is what will make the difference between Matrix being a cliquey FOSS
+curiosity versus really being the natural successor to today’s instant
+messaging, email and phone networks.&lt;&#x2F;p&gt;
+&lt;p&gt;In the end; Matrix needs full-time contributors in order to continue to grow,
+and keeping New Vector funded is a very good way to achieve that (&lt;a href=&quot;https:&#x2F;&#x2F;vector.im&#x2F;careers&quot;&gt;New Vector
+is hiring!&lt;&#x2F;a&gt;).  (That said, if any philanthropic
+billionaires are reading this, the Matrix.org Foundation is actively
+soliciting donations to improve Matrix independently of New Vector&#x27;s efforts -
+particularly around the areas of countering online abuse and disinformation).&lt;&#x2F;p&gt;
+&lt;p&gt;In the meantime, huge thanks to Jos at Notion for believing in Matrix and
+leading this funding round in New Vector - and huge thanks to the other
+investors who saw the potential!  And most of all, thank you to all those
+supporting Matrix, whether by donating to the Foundation, promoting and using
+the protocol, or contributing code to the ecosystem.  You are the ones keeping
+the dream alive :)&lt;&#x2F;p&gt;
+&lt;p&gt;You can read things from the NV angle over at https:&#x2F;&#x2F;blog.vector.im&#x2F;8-5m-to-accelerate-matrix&#x2F;.
+We hope you’re as excited as we are to open a whole new chapter as Matrix
+picks up yet more momentum :D&lt;&#x2F;p&gt;
+&lt;p&gt;-- Matthew, Amandine, and the whole Matrix team&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>5-user Matrix homeserver hosting now available from Modular</title>
+    <published>2019-07-17T00:00:00+00:00</published>
+    <updated>2019-07-17T00:00:00+00:00</updated>
+    <author>
+      <name>Modular.im</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/07/17/5-user-matrix-homeserver-hosting-now-available-from-modular/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/07/17/5-user-matrix-homeserver-hosting-now-available-from-modular/</id>
+    <content type="html">&lt;p&gt;Hi all,&lt;&#x2F;p&gt;
+&lt;p&gt;If you’ve been looking for a way to have you own Matrix homeserver without having to run it yourself, you may be interested to hear that &lt;a href=&quot;https:&#x2F;&#x2F;modular.im&quot;&gt;Modular&lt;&#x2F;a&gt; (the Matrix hosting provider run by &lt;a href=&quot;https:&#x2F;&#x2F;vector.im&quot;&gt;New Vector&lt;&#x2F;a&gt;, the startup which hires many of the Matrix core team) is now offering a personal-sized small homeserver hosting service, supporting a minimum size of 5 user servers.&lt;&#x2F;p&gt;
+&lt;p&gt;A lot of recent performance work on Synapse has been driven by the need to make smaller dedicated servers more efficient to run - and so if you run your own homeserver you’ll be benefiting from all this work too :)  Meanwhile, if you choose to outsource your server hosting to Modular, you’ll be indirectly supporting core Matrix and Synapse development, given most of the core Matrix team work for New Vector - it’s through buying services like this which lets us keep folks able to hack on Matrix as their day job.&lt;&#x2F;p&gt;
+&lt;p&gt;See more details &lt;a href=&quot;https:&#x2F;&#x2F;modular.im&#x2F;personal-hosted-homeservers&quot;&gt;over at the Modular blog post&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Synapse 1.0.0 released</title>
+    <published>2019-06-11T00:00:00+00:00</published>
+    <updated>2019-06-11T00:00:00+00:00</updated>
+    <author>
+      <name>Neil Johnson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/06/11/synapse-1-0-0-released/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/06/11/synapse-1-0-0-released/</id>
+    <content type="html">&lt;p&gt;Well here it is: Synapse 1.0.&lt;&#x2F;p&gt;
+&lt;p&gt;Synapse 1.0 is the reference implementation of the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&quot;&gt;Matrix 1.0 spec&lt;&#x2F;a&gt;. The goal of the release overall has been to focus on security and stability, such that we can officially declare Synapse (and Matrix) out of beta and recommended for production use. This means changing the default room protocol version used for new rooms to be &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;blob&#x2F;37871106c6fc6013c17b5711fb93853fff140267&#x2F;proposals&#x2F;2002-rooms-v4.md&quot;&gt;v4&lt;&#x2F;a&gt;, which includes the new &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;blob&#x2F;f714aaadd011ac736d779f8460202a8d95799123&#x2F;proposals&#x2F;1442-state-resolution.md&quot;&gt;state resolution algorithm&lt;&#x2F;a&gt;, as well as &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;blob&#x2F;erikj&#x2F;event_id_hashes&#x2F;proposals&#x2F;1659-event-id-as-hashes.md&quot;&gt;collision-resistant event IDs&lt;&#x2F;a&gt;, which are now formatted to be &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;blob&#x2F;rav&#x2F;proposal&#x2F;no_slash_in_event_id&#x2F;proposals&#x2F;1884-replace-slashes-in-event_ids.md&quot;&gt;URL safe&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Synapse 1.0 also ships with support for the upcoming &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;rooms&#x2F;v5.html&quot;&gt;v5 room protocol&lt;&#x2F;a&gt; (which enforces honouring server key validity periods), but this will not be used as the default for new rooms until a sufficient number of servers support it.&lt;&#x2F;p&gt;
+&lt;p&gt;Please note that Synapse 1.0 does &lt;strong&gt;not&lt;&#x2F;strong&gt; include significant performance work or new features - our focus has been almost exclusively on providing a reference implementation of the Matrix 1.0 protocol. But having cleared our backlog on security&#x2F;stability issues we will finally be now unblocked to pursue work around reducing RAM footprint, eliminating forward-extremity build up, and shipping new features like Edits, Reactions &amp;amp; E2E cross-signing support.&lt;&#x2F;p&gt;
+&lt;p&gt;As part of the security work, Synapse 1.0 contains a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;master&#x2F;docs&#x2F;MSC1711_certificates_FAQ.md#it-used-to-work-just-fine-why-are-you-breaking-everything&quot;&gt;breaking change&lt;&#x2F;a&gt; that requires a valid TLS certificate on the federation API endpoint. &lt;strong&gt;Servers that do not configure their certificate will no longer be able to federate post 1.0.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;It is also worth noting that Synapse 1.0.0 is the last release that will support Python 2.x and Postgres 9.4. For more information see &lt;a href=&quot;&#x2F;blog&#x2F;2019&#x2F;04&#x2F;08&#x2F;synapse-deprecating-postgres-9-4-and-python-2-x&quot;&gt;here&lt;&#x2F;a&gt; but the TL;DR is that you should upgrade asap.&lt;&#x2F;p&gt;
+&lt;p&gt;This release has been a long time coming. Many thanks indeed to everyone who helped test the release candidates and provided feedback along the way.&lt;&#x2F;p&gt;
+&lt;p&gt;Synapse 1.0 is just one component of a larger Matrix 1.0 release, which you can &lt;a href=&quot;&#x2F;blog&#x2F;2019&#x2F;06&#x2F;11&#x2F;introducing-matrix-1-0-and-the-matrix-org-foundation&quot;&gt;read all about here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;As ever, you can get the new update &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;releases&#x2F;tag&#x2F;v1.0.0&quot;&gt;here&lt;&#x2F;a&gt; or any of the sources mentioned at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&lt;&#x2F;a&gt;. Note, Synapse is now available from PyPI, pick it up &lt;a href=&quot;https:&#x2F;&#x2F;pypi.org&#x2F;project&#x2F;matrix-synapse&#x2F;&quot;&gt;here&lt;&#x2F;a&gt;. Also, check out our &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;guides&#x2F;installing-synapse&quot;&gt;Synapse installation guide page&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The changelog since 0.99.5 follows:&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;synapse-1-0-0-2019-06-11&quot;&gt;Synapse 1.0.0 (2019-06-11)&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix bug where attempting to send transactions with large number of EDUs can fail. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5418&quot;&gt;#5418&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;improved-documentation&quot;&gt;Improved Documentation&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Expand the federation guide to include relevant content from the MSC1711 FAQ (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5419&quot;&gt;#5419&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;internal-changes&quot;&gt;Internal Changes&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Move password reset links to &#x2F;_matrix&#x2F;client&#x2F;unstable namespace. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5424&quot;&gt;#5424&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;synapse-1-0-0rc3-2019-06-10&quot;&gt;Synapse 1.0.0rc3 (2019-06-10)&lt;&#x2F;h1&gt;
+&lt;p&gt;Security: Fix authentication bug introduced in 1.0.0rc1. Please upgrade to rc3 immediately&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;synapse-1-0-0rc2-2019-06-10&quot;&gt;Synapse 1.0.0rc2 (2019-06-10)&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;bugfixes-1&quot;&gt;Bugfixes&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove redundant warning about key server response validation. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5392&quot;&gt;#5392&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix bug where old keys stored in the database with a null valid until timestamp caused all verification requests for that key to fail. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5415&quot;&gt;#5415&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix excessive memory using with default &lt;code&gt;federation_verify_certificates: true&lt;&#x2F;code&gt; configuration. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5417&quot;&gt;#5417&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;synapse-1-0-0rc1-2019-06-07&quot;&gt;Synapse 1.0.0rc1 (2019-06-07)&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Synapse now more efficiently collates room statistics. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;4338&quot;&gt;#4338&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5260&quot;&gt;#5260&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5324&quot;&gt;#5324&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Add experimental support for relations (aka reactions and edits). (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5220&quot;&gt;#5220&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Ability to configure default room version. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5223&quot;&gt;#5223&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5249&quot;&gt;#5249&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Allow configuring a range for the account validity startup job. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5276&quot;&gt;#5276&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;CAS login will now hit the r0 API, not the deprecated v1 one. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5286&quot;&gt;#5286&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Validate federation server TLS certificates by default (implements &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;blob&#x2F;master&#x2F;proposals&#x2F;1711-x509-for-federation.md&quot;&gt;MSC1711&lt;&#x2F;a&gt;). (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5359&quot;&gt;#5359&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Update &#x2F;_matrix&#x2F;client&#x2F;versions to reference support for r0.5.0. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5360&quot;&gt;#5360&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Add a script to generate new signing-key files. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5361&quot;&gt;#5361&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Update upgrade and installation guides ahead of 1.0. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5371&quot;&gt;#5371&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Replace the &lt;code&gt;perspectives&lt;&#x2F;code&gt; configuration section with &lt;code&gt;trusted_key_servers&lt;&#x2F;code&gt;, and make validating the signatures on responses optional (since TLS will do this job for us). (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5374&quot;&gt;#5374&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Add ability to perform password reset via email without trusting the identity server. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5377&quot;&gt;#5377&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Set default room version to v4. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5379&quot;&gt;#5379&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bugfixes-2&quot;&gt;Bugfixes&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixes client-server API not sending &quot;m.heroes&quot; to lazy-load &#x2F;sync requests when a rooms name or its canonical alias are empty. Thanks to @dnaf for this work! (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5089&quot;&gt;#5089&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Prevent federation device list updates breaking when processing multiple updates at once. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5156&quot;&gt;#5156&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix worker registration bug caused by ClientReaderSlavedStore being unable to see get_profileinfo. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5200&quot;&gt;#5200&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix race when backfilling in rooms with worker mode. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5221&quot;&gt;#5221&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix appservice timestamp massaging. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5233&quot;&gt;#5233&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Ensure that server_keys fetched via a notary server are correctly signed. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5251&quot;&gt;#5251&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Show the correct error when logging out and access token is missing. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5256&quot;&gt;#5256&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix error code when there is an invalid parameter on &#x2F;_matrix&#x2F;client&#x2F;r0&#x2F;publicRooms (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5257&quot;&gt;#5257&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix error when downloading thumbnail with missing width&#x2F;height parameter. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5258&quot;&gt;#5258&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix schema update for account validity. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5268&quot;&gt;#5268&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix bug where we leaked extremities when we soft failed events, leading to performance degradation. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5274&quot;&gt;#5274&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5278&quot;&gt;#5278&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5291&quot;&gt;#5291&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix &quot;db txn &#x27;update_presence&#x27; from sentinel context&quot; log messages. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5275&quot;&gt;#5275&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix dropped logcontexts during high outbound traffic. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5277&quot;&gt;#5277&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix a bug where it is not possible to get events in the federation format with the request &lt;code&gt;GET &#x2F;_matrix&#x2F;client&#x2F;r0&#x2F;rooms&#x2F;{roomId}&#x2F;messages&lt;&#x2F;code&gt;. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5293&quot;&gt;#5293&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix performance problems with the rooms stats background update. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5294&quot;&gt;#5294&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix noisy &#x27;no key for server&#x27; logs. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5300&quot;&gt;#5300&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix bug where a notary server would sometimes forget old keys. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5307&quot;&gt;#5307&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Prevent users from setting huge displaynames and avatar URLs. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5309&quot;&gt;#5309&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix handling of failures when processing incoming events where calling &lt;code&gt;&#x2F;event_auth&lt;&#x2F;code&gt; on remote server fails. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5317&quot;&gt;#5317&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Ensure that we have an up-to-date copy of the signing key when validating incoming federation requests. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5321&quot;&gt;#5321&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix various problems which made the signing-key notary server time out for some requests. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5333&quot;&gt;#5333&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix bug which would make certain operations (such as room joins) block for 20 minutes while attemoting to fetch verification keys. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5334&quot;&gt;#5334&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix a bug where we could rapidly mark a server as unreachable even though it was only down for a few minutes. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5335&quot;&gt;#5335&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5340&quot;&gt;#5340&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix a bug where account validity renewal emails could only be sent when email notifs were enabled. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5341&quot;&gt;#5341&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix failure when fetching batches of events during backfill, etc. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5342&quot;&gt;#5342&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Add a new room version where the timestamps on events are checked against the validity periods on signing keys. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5348&quot;&gt;#5348&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5354&quot;&gt;#5354&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix room stats and presence background updates to correctly handle missing events. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5352&quot;&gt;#5352&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Include left members in room summaries&#x27; heroes. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5355&quot;&gt;#5355&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix &lt;code&gt;federation_custom_ca_list&lt;&#x2F;code&gt; configuration option. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5362&quot;&gt;#5362&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix missing logcontext warnings on shutdown. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5369&quot;&gt;#5369&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;improved-documentation-1&quot;&gt;Improved Documentation&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix docs on resetting the user directory. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5282&quot;&gt;#5282&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Fix notes about ACME in the MSC1711 faq. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5357&quot;&gt;#5357&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;internal-changes-1&quot;&gt;Internal Changes&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Synapse will now serve the experimental &quot;room complexity&quot; API endpoint. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5216&quot;&gt;#5216&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;The base classes for the v1 and v2_alpha REST APIs have been unified. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5226&quot;&gt;#5226&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5328&quot;&gt;#5328&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Simplifications and comments in do_auth. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5227&quot;&gt;#5227&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Remove urllib3 pin as requests 2.22.0 has been released supporting urllib3 1.25.2. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5230&quot;&gt;#5230&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Preparatory work for key-validity features. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5232&quot;&gt;#5232&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5234&quot;&gt;#5234&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5235&quot;&gt;#5235&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5236&quot;&gt;#5236&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5237&quot;&gt;#5237&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5244&quot;&gt;#5244&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5250&quot;&gt;#5250&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5296&quot;&gt;#5296&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5299&quot;&gt;#5299&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5343&quot;&gt;#5343&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5347&quot;&gt;#5347&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5356&quot;&gt;#5356&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Specify the type of reCAPTCHA key to use. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5283&quot;&gt;#5283&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Improve sample config for monthly active user blocking. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5284&quot;&gt;#5284&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Remove spurious debug from MatrixFederationHttpClient.get_json. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5287&quot;&gt;#5287&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Improve logging for logcontext leaks. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5288&quot;&gt;#5288&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Clarify that the admin change password API logs the user out. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5303&quot;&gt;#5303&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;New installs will now use the v54 full schema, rather than the full schema v14 and applying incremental updates to v54. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5320&quot;&gt;#5320&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Improve docstrings on MatrixFederationClient. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5332&quot;&gt;#5332&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Clean up FederationClient.get_events for clarity. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5344&quot;&gt;#5344&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Various improvements to debug logging. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5353&quot;&gt;#5353&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Don&#x27;t run CI build checks until sample config check has passed. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5370&quot;&gt;#5370&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Automatically retry buildkite builds (max twice) when an agent is lost. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;issues&#x2F;5380&quot;&gt;#5380&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Breaking the 100bps barrier with Matrix, meshsim &amp; coap-proxy</title>
+    <published>2019-03-12T00:00:00+00:00</published>
+    <updated>2019-03-12T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/03/12/breaking-the-100bps-barrier-with-matrix-meshsim-coap-proxy/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/03/12/breaking-the-100bps-barrier-with-matrix-meshsim-coap-proxy/</id>
+    <content type="html">&lt;p&gt;Hi all,&lt;&#x2F;p&gt;
+&lt;p&gt;Last month at FOSDEM 2019 we gave a &lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2019&#x2F;schedule&#x2F;event&#x2F;matrix&#x2F;&quot;&gt;talk&lt;&#x2F;a&gt; about a new experimental ultra-low-bandwidth transport for Matrix which swaps our baseline HTTPS+JSON transport for a custom one built on &lt;a href=&quot;https:&#x2F;&#x2F;tools.ietf.org&#x2F;html&#x2F;rfc7252&quot;&gt;CoAP&lt;&#x2F;a&gt;+&lt;a href=&quot;https:&#x2F;&#x2F;tools.ietf.org&#x2F;html&#x2F;rfc7049&quot;&gt;CBOR&lt;&#x2F;a&gt;+&lt;a href=&quot;https:&#x2F;&#x2F;noiseprotocol.org&quot;&gt;Noise&lt;&#x2F;a&gt;+&lt;a href=&quot;https:&#x2F;&#x2F;golang.org&#x2F;pkg&#x2F;compress&#x2F;flate&#x2F;&quot;&gt;Flate&lt;&#x2F;a&gt;+&lt;a href=&quot;https:&#x2F;&#x2F;tools.ietf.org&#x2F;rfc&#x2F;rfc768.txt&quot;&gt;UDP&lt;&#x2F;a&gt;.  (CoAP is the RPC protocol; CBOR is the encoding; Noise powers the transport layer encryption; Flate compresses everything uses predefined compression maps).&lt;&#x2F;p&gt;
+&lt;p&gt;The challenge here was to see if we could demonstrate Matrix working usably over networks running at around 100 bits per second of throughput (where it&#x27;d take 2 minutes to send a typical 1500 byte ethernet packet!!) and very high latencies.  You can see the original FOSDEM talk below, or &lt;a href=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2019&#x2F;02&#x2F;2019-02-03-FOSDEM-Low-Bandwidth.pdf&quot;&gt;check out the slides here.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=DZBvy4abB1o&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=DZBvy4abB1o&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;DZBvy4abB1o&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;Now, it&#x27;s taken us a little while to find time to tidy up the stuff we demo&#x27;d in the talk to be (relatively) suitable for public consumption, but we&#x27;re happy to finally release the four projects which powered the demo:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;meshsim&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;meshsim&lt;&#x2F;a&gt; - meshsim is the network simulator which provides an interactive web interface to draw a network topology and let you spin up dockerized homeservers on a simulated network with whatever preferred latency, jitter, packet loss etc.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;meshsim-docker&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;meshsim-docker&lt;&#x2F;a&gt; - meshsim-docker is the custom synapse + coap-proxy Dockerfile used to define the containers which meshsim instantiates&lt;&#x2F;li&gt;
+ 	&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;coap-proxy&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;coap-proxy&lt;&#x2F;a&gt; - coap-proxy is the golang proxy which converts HTTPS+JSON into CoAP+CBOR+Noise+Flate and vice versa, letting you squish Matrix CS API and SS API traffic in &amp; out of CoAP.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-coap&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-coap&lt;&#x2F;a&gt; - go-coap is a fork of the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Kistler-Group&quot;&gt;Kistler-Group&lt;&#x2F;a&gt;&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;go-ocf&#x2F;go-coap&quot;&gt;go-ocf&#x2F;go-coap&lt;&#x2F;a&gt; (in turn originally a fork of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dustin&#x2F;go-coap&quot;&gt;dustin&#x2F;go-coap&lt;&#x2F;a&gt;) which adds encryption using &lt;a href=&quot;https:&#x2F;&#x2F;noiseprotocol.org&quot;&gt;Noise&lt;&#x2F;a&gt;, retries, and hooks for compression.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+In order to get up and running, the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;meshsim&#x2F;blob&#x2F;master&#x2F;README.md&quot;&gt;meshsim README&lt;&#x2F;a&gt; has all the details.
+&lt;p&gt;It&#x27;s important to understand that this is very much a proof of concept, and shouldn&#x27;t be used in production yet, and almost certainly has some glaring bugs.  In fact, it currently assumes you are running on a trusted private network rather than the public Matrix network in order to get away with some of the bandwidth optimisations performed - see &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;coap-proxy#limitations&quot;&gt;coap-proxy&#x27;s Limitations section&lt;&#x2F;a&gt; for details.  Particularly, please note that the encryption is homemade and not audited or fully reviewed or tested yet.  Also, we&#x27;ve released the code for the low-bandwidth transport, but we haven&#x27;t released the &quot;fan-out routing&quot; implementation for Synapse as it needs a &lt;a href=&quot;https:&#x2F;&#x2F;yggdrasil-network.github.io&#x2F;&quot;&gt;rethink&lt;&#x2F;a&gt; to be applicable to the public Matrix network.  You&#x27;ll also want to run Riot&#x2F;Web in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-react-sdk&#x2F;pull&#x2F;2598&quot;&gt;low-bandwidth mode&lt;&#x2F;a&gt; if you really wind down the bandwidth (suppressing avatars, read receipts, typing notifs and presence to avoid wasting precious bandwidth).&lt;&#x2F;p&gt;
+&lt;p&gt;We also don&#x27;t have an MSC for the CoAP-based transport yet, mainly due to lack of time whilst wanting to ensure the limitations are addressed first before we propose it as a formal alternative Matrix transport.  (We also first need to define negotiation mechanisms for entirely alternative CS &amp;amp; SS transports!).  However, the quick overview is:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;JSON is converted directly into CBOR (with a few substitutions made to shrink common patterns down)&lt;&#x2F;li&gt;
+ 	&lt;li&gt;HTTP is converted directly into CoAP (mapping the verbose API endpoints down to single-byte endpoints)&lt;&#x2F;li&gt;
+ 	&lt;li&gt;TLS is swapped out for &lt;a href=&quot;https:&#x2F;&#x2F;noiseprotocol.org&#x2F;noise.html#noise-pipes&quot;&gt;Noise Pipes&lt;&#x2F;a&gt; (XX + IK noise handshakes).  This gives us 1RTT setup (XX) for the first connection to a host, and 0RTT (IK) for all subsequent connections, and provides trust-on-first-use semantics when connecting to a server.  You can see the Noise state machine we maintain in go-coap&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-coap&#x2F;blob&#x2F;master&#x2F;noise.go&quot;&gt;noise.go&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;The CoAP headers are hoisted up above the Noise payload, letting us use them for framing the noise pipes without having duplicated framing headers at the CoAP &amp; Noise layers.  We also &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-coap&#x2F;blob&#x2F;e156f6bb5d3c728040ceffd09685610128d3c63c&#x2F;conn.go#L340-L371&quot;&gt;frame the Noise handshake packets as CoAP&lt;&#x2F;a&gt; with custom message types (250, 251 and 252).  We might be better off using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;core-wg&#x2F;oscoap&quot;&gt;OSCORE&lt;&#x2F;a&gt; for this, however, rather than hand-wrapping a custom encrypted transport...&lt;&#x2F;li&gt;
+ 	&lt;li&gt;The CoAP payload is compressed via &lt;a href=&quot;https:&#x2F;&#x2F;golang.org&#x2F;pkg&#x2F;compress&#x2F;flate&#x2F;&quot;&gt;Flate&lt;&#x2F;a&gt; using preshared compression tables derived from compressing large chunks of representative Matrix traffic. This could be significantly improved in future with streaming compression and dynamic tables (albeit seeded from a common set of tables).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+The end result is that you end up taking about 90 bytes (including ethernet headers!) to send a typical Matrix message (and about 70 bytes to receive the acknowledgement).  This breaks down as as:
+&lt;ul&gt;
+ 	&lt;li&gt;14 bytes of Ethernet headers&lt;&#x2F;li&gt;
+ 	&lt;li&gt;20 bytes of IP headers&lt;&#x2F;li&gt;
+ 	&lt;li&gt;8 bytes of UDP headers&lt;&#x2F;li&gt;
+ 	&lt;li&gt;16 bytes of Noise AEAD&lt;&#x2F;li&gt;
+ 	&lt;li&gt;6 bytes of CoAP headers&lt;&#x2F;li&gt;
+ 	&lt;li&gt;~26 bytes of compressed and encrypted CBOR&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+The Noise handshake on connection setup would take an additional 128 bytes (4x 32 byte Curve25519 DH values), either spread over 1RTT for initial setup or 0RTT for subsequent setups.
+&lt;p&gt;At 100bps, 90 bytes takes 90*8&#x2F;100 = 7.2s to send... which is just about usable in an extreme life and death situation where you can only get 100bps of connectivity (e.g. someone at the bottom of a ravine trying to trickle data over one bar of GPRS to the emergency services).  In practice, on a custom network, you could ditch the Ethernet and UDP&#x2F;IP headers if on a point-to-point link for CS API, and ditch the encryption if the network physical layer was trusted - at which point we&#x27;re talking ~32 bytes per request (2.5s to send at 100bps).  Then, there&#x27;s still a whole wave of additional work that could be investigated, including...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Smarter streaming compression (so that if a user says &#x27;Hello?&#x27; three times in a row, the 2nd and 3rd messages are just references to the first pattern)&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Hoisting Matrix transaction IDs up to the CoAP layer (reusing the CoAP msgId+token rather than passing around new Matrix transaction IDs, at the expense of requiring one Matrix txn per request)&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Switching to CoAP OBSERVE for receiving data from the server (currently we long-poll &#x2F;sync to receive data)&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Switching access_tokens for PSKs or similar&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+...all of which could shrink the payload down even further.  That said, even in its current state, it&#x27;s a massive improvement - roughly ~65x better than the equivalent HTTPS+JSON traffic.
+&lt;p&gt;In practice, &lt;strong&gt;further work on low-bandwidth Matrix is dependent on finding a sponsor who&#x27;s willing to fund the team to focus on this&lt;&#x2F;strong&gt;, as otherwise it&#x27;s hard to justify spending time here in addition to all the less exotic business-as-usual Matrix work that we need to keep the core of Matrix evolving (finishing 1.0, finishing E2E encryption, speeding up Synapse, finishing Dendrite, rewriting Riot&#x2F;Android etc).  However, the benefits here should be pretty obvious: massively reduced bandwidth and battery-life; resilience to catastrophic network conditions; faster sync times; and even a protocol suitable for push notifications (Matrix as e2e encrypted, decentralised, push!).  If you&#x27;re interested in supporting this work, please contact &lt;code&gt;support at matrix.org&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Experiments with payments over Matrix</title>
+    <published>2019-03-07T00:00:00+00:00</published>
+    <updated>2019-03-07T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/03/07/experiments-with-payments-over-matrix/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/03/07/experiments-with-payments-over-matrix/</id>
+    <content type="html">&lt;p&gt;Hi all,&lt;&#x2F;p&gt;
+&lt;p&gt;Heads up that&lt;a href=&quot;https:&#x2F;&#x2F;modular.im&quot;&gt; Modular.im&lt;&#x2F;a&gt; (the paid hosting Matrix service provided by &lt;a href=&quot;https:&#x2F;&#x2F;vector.im&quot;&gt;New Vector&lt;&#x2F;a&gt;, the company who employs much of the Matrix core team) launched a pilot today for paid Matrix integrations in the form of paid sticker packs.  Yes kids, it&#x27;s true - for only $0.50 you can slap Matrix and Riot hex stickers all over your chatrooms. It&#x27;s a toy example to test the payments infrastructure and demonstrate the concept - the proceeds go towards funding development work on Matrix.org :)  
+You can read more about over on &lt;a href=&quot;https:&#x2F;&#x2F;www.modular.im&#x2F;stickers&quot;&gt;Modular&#x27;s blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We wanted to elaborate on this a bit from the Matrix.org perspective, specifically:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li style=&quot;font-weight: 400;&quot;&gt;We are categorically &lt;strong&gt;not&lt;&#x2F;strong&gt; baking payments or financial incentives as a first class citizen into Matrix, and we&#x27;re not going to start moving stuff behind paywalls or similar.
+&lt;&#x2F;li&gt;
+ 	&lt;li style=&quot;font-weight: 400;&quot;&gt;This demo is a proof-of-concept to illustrate how folks could do this sort of thing in general in Matrix - it&#x27;s not a serious product in and of itself.
+&lt;&#x2F;li&gt;
+ 	&lt;li style=&quot;font-weight: 400;&quot;&gt;What it shows is that an Integration Manager like Modular can be used as a way to charge for services in Matrix - whether that&#x27;s digital content within an integration, or bots&#x2F;bridges&#x2F;etc. 
+&lt;&#x2F;li&gt;
+ 	&lt;li style=&quot;font-weight: 400;&quot;&gt;While Modular today gathers payments via credit-card (Stripe), it could certainly support other mechanisms (e.g. cryptocurrencies) in future.
+&lt;&#x2F;li&gt;
+ 	&lt;li style=&quot;font-weight: 400;&quot;&gt;The idea in future is for Modular to provide this as a mechanism that &lt;em&gt;anyone&lt;&#x2F;em&gt; can use to charge for content on Matrix - e.g. if you have your own sticker pack and want to sell it to people, you&#x27;ll be able to upload it and charge people for it.
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Meanwhile, there&#x27;s a lot of interesting stuff on the horizon with integration managers in general - see &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;issues&#x2F;1236&quot;&gt;MSC1236&lt;&#x2F;a&gt; and an upcoming MSC from TravisR (based around &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;issues&#x2F;1286&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;issues&#x2F;1286&lt;&#x2F;a&gt;) proposing new integration capabilities.  We&#x27;re also hoping to implement inline widgets soon (e.g. chatbot buttons for voting and other semantic behaviour) which should make widgets even more interesting!
+&lt;p&gt;So, feel free to go stick some hex stickers on your rooms if you like and help test this out.  In future there should be more useful things available :)&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Matrix at FOSDEM 2019</title>
+    <published>2019-02-04T00:00:00+00:00</published>
+    <updated>2019-02-04T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/02/04/matrix-at-fosdem-2019/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/02/04/matrix-at-fosdem-2019/</id>
+    <content type="html">&lt;p&gt;Hi all,&lt;&#x2F;p&gt;
+&lt;p&gt;We just got back from braving the snow in Brussels at &lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2019&#x2F;&quot;&gt;FOSDEM 2019&lt;&#x2F;a&gt; - Europe&#x27;s biggest Open Source conference. I think it&#x27;s fair to say we had an amazing time, with more people than ever before wanting to hang out and talk Matrix and discuss their favourite features (and bugs)!&lt;&#x2F;p&gt;
+&lt;p&gt;The big news is that &lt;strong&gt;we released &lt;a href=&quot;&#x2F;docs&#x2F;spec&#x2F;server_server&#x2F;r0.1.0.html&quot;&gt;r0.1 of Matrix&#x27;s Server-Server API&lt;&#x2F;a&gt; &lt;&#x2F;strong&gt;late on Friday night - our first ever formal stable release of Matrix&#x27;s Federation API, having addressed the core of the issues which have kept Federation in beta thus far. We&#x27;ll go into more detail on this in a dedicated blog post, but this marks the first ever time that &lt;strong&gt;all&lt;&#x2F;strong&gt; of Matrix&#x27;s APIs have had an official stable release.  All that remains before we declare Matrix out of beta is to release updates of the CS API (0.5) and possibly the IS API (0.2) and then we can formally declare the overall combination as Matrix 1.0 :D&lt;&#x2F;p&gt;
+&lt;p&gt;We spoke about SS API r0.1 at length in &lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2019&#x2F;schedule&#x2F;event&#x2F;matrix_french_state&#x2F;&quot;&gt;our main stage FOSDEM talk &lt;&#x2F;a&gt;on Saturday - as well as showing off the Riot Redesign, the E2E Encryption Endgame and giving an update on the French Government deployment of Matrix and the focus it&#x27;s given us on finally shipping Matrix 1.0! For those who weren&#x27;t there or missed the livestream, here&#x27;s the talk!  &lt;a href=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2019&#x2F;02&#x2F;2019-02-01-FOSDEM-Matrix-1.0.pdf&quot;&gt;Slides are available here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=C2eE7rCUKlE&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=C2eE7rCUKlE&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;C2eE7rCUKlE&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;blockquote&gt;
+&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Full house for &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;ara4n?ref_src=twsrc%5Etfw&quot;&gt;@ara4n&lt;&#x2F;a&gt; talking about &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg?ref_src=twsrc%5Etfw&quot;&gt;@matrixdotorg&lt;&#x2F;a&gt; and the French State &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;fosdem?ref_src=twsrc%5Etfw&quot;&gt;@fosdem&lt;&#x2F;a&gt; It was a packed presentation full of lots exciting progress demos. So sorry for practically yanking you offstage in the end! &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;idshDcSRhv&quot;&gt;pic.twitter.com&#x2F;idshDcSRhv&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;&amp;mdash; Rob Pickering (@RobinJPickering) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;RobinJPickering&#x2F;status&#x2F;1091725803715481607?ref_src=twsrc%5Etfw&quot;&gt;February 2, 2019&lt;&#x2F;a&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Then, on Sunday we had the opportunity to have a quick &lt;a href=&quot;https:&#x2F;&#x2F;fosdem.org&#x2F;2019&#x2F;schedule&#x2F;event&#x2F;matrix&#x2F;&quot;&gt;20 minute talk in the Real Time Comms dev room&lt;&#x2F;a&gt;, where we gave a tour of some of the work we&#x27;ve been doing recently to scale Matrix down to working on incredibly low bandwidth networks (100bps or less).  It&#x27;s literally the opposite of the Matrix 1.0 &#x2F; France talk in that it&#x27;s a quick deep dive into a very specific problem area in Matrix - so, if you&#x27;ve been looking forward to Matrix finally having a better transport than HTTPS+JSON, here goes!  &lt;a href=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2019&#x2F;02&#x2F;2019-02-03-FOSDEM-Low-Bandwidth.pdf&quot;&gt;Slides are available here.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=DZBvy4abB1o&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=DZBvy4abB1o&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;DZBvy4abB1o&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;blockquote&gt;
+&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Full house for &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg?ref_src=twsrc%5Etfw&quot;&gt;@matrixdotorg&lt;&#x2F;a&gt; ? &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;FOSDEM?src=hash&amp;ref_src=twsrc%5Etfw&quot;&gt;#FOSDEM&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;RTCsevroom?src=hash&amp;ref_src=twsrc%5Etfw&quot;&gt;#RTCsevroom&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;dDQnD3mzmc&quot;&gt;pic.twitter.com&#x2F;dDQnD3mzmc&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;&amp;mdash; Saúl Ibarra Corretgé (@saghul) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;saghul&#x2F;status&#x2F;1091995116649267201?ref_src=twsrc%5Etfw&quot;&gt;February 3, 2019&lt;&#x2F;a&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Huge thanks to everyone who came to the talks, and everyone who came to the stand or grabbed us for a chat! FOSDEM is an amazing way to be reminded in person that folks care about Matrix, and we&#x27;ve come away feeling more determined than ever to make Matrix as great as possible and provide a protocol+network which will replace the increasingly threatened proprietary communication silos. :)&lt;&#x2F;p&gt;
+&lt;p&gt;Next up: Matrix 1.0...&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Modular: the world’s first Matrix homeserver hosting provider!</title>
+    <published>2018-10-22T00:00:00+00:00</published>
+    <updated>2018-10-22T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2018/10/22/modular-the-world-s-first-matrix-homeserver-hosting-provider/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2018/10/22/modular-the-world-s-first-matrix-homeserver-hosting-provider/</id>
+    <content type="html">&lt;p&gt;Hi folks,&lt;&#x2F;p&gt;
+&lt;p&gt;Today is one of those pivotal days for the Matrix ecosystem: we&#x27;re incredibly excited to announce that the world&#x27;s first ever dedicated homeserver hosting service is now fully available over at &lt;a href=&quot;https:&#x2F;&#x2F;modular.im&quot;&gt;https:&#x2F;&#x2F;modular.im&lt;&#x2F;a&gt;!  This really is a massive step for Matrix towards being a mature ecosystem, and we look forward to Modular being the first of many hosting providers in the years to come :D&lt;&#x2F;p&gt;
+&lt;p&gt;Modular lets anyone spin up a dedicated homeserver and Riot via a super-simple web interface, rather than having to run and admin their own server.  It&#x27;s built by New Vector (the startup who makes Riot and hires many of the Matrix core team), and comes from taking the various custom homeserver deployments for people like Status and TADHack and turning them into a paid service available to everyone.  You can even point your own DNS at it to get a fully branded dedicated homeserver for your own domain!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;modular.im&quot;&gt;&lt;img class=&quot;aligncenter wp-image-3662 size-full&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2018&#x2F;10&#x2F;181022-Modular-featured.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;241&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Anyway, for full details, check out the &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@RiotChat&#x2F;introducing-modular-awesome-hosting-for-riot-matrix-665a7a0c616&quot;&gt;announcement over at the Riot blog&lt;&#x2F;a&gt;.  We&#x27;re particularly excited that Modular helps increase Matrix&#x27;s decentralisation, and is really forcing us to ensure that the Federation API is getting the attention it deserves.  Hopefully it&#x27;ll also reduce some load from the Matrix.org homeserver! Modular will also help Matrix by directly funding Matrix development by the folks working at New Vector, which should in turn of course benefit the whole ecosystem.&lt;&#x2F;p&gt;
+&lt;p&gt;Many people reading this likely already run their own servers, and obviously they aren&#x27;t the target audience for Modular.  But for organisations who don&#x27;t have a sysadmin or don&#x27;t want to spend the time to run their own server, hopefully Modular gives a very cost-effective way of running your own dedicated reliable Matrix server without having to pay for a sysadmin :)&lt;&#x2F;p&gt;
+&lt;p&gt;We&#x27;re looking forward to see more of these kind of services popping up in the future from everywhere in the ecosystem, and have started a &lt;a href=&quot;&#x2F;hosting&#x2F;&quot;&gt;Matrix Hosting page&lt;&#x2F;a&gt; on the Matrix website so that everyone can advertise their own: don&#x27;t hesitate to get in touch if you have a service to be featured!&lt;&#x2F;p&gt;
+&lt;p&gt;If you&#x27;re interested, please swing by &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#modular:matrix.org&quot;&gt;#modular:matrix.org&lt;&#x2F;a&gt; or feel free to shoot questions to &lt;a href=&quot;mailto:support@modular.im&quot;&gt;support@modular.im&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Matrix and Riot confirmed as the basis for France&#x27;s Secure Instant Messenger app</title>
+    <published>2018-04-26T00:00:00+00:00</published>
+    <updated>2018-04-26T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2018/04/26/matrix-and-riot-confirmed-as-the-basis-for-france-s-secure-instant-messenger-app/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2018/04/26/matrix-and-riot-confirmed-as-the-basis-for-france-s-secure-instant-messenger-app/</id>
+    <content type="html">&lt;p&gt;Hi folks,&lt;&#x2F;p&gt;
+&lt;p&gt;We&#x27;re incredibly excited that the Government of France has confirmed it is in the process of deploying a huge private federation of Matrix homeservers spanning the whole government, and developing a fork of Riot.im for use as their official secure communications client! The goal is to replace usage of WhatsApp or Telegram for official purposes.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s a unbelievably wonderful situation that we&#x27;re living in a world where governments genuinely care about openness, open source and open-standard based communications - and Matrix&#x27;s decentralisation and end-to-end encryption is a perfect fit for intra- and inter-governmental communication.  Congratulations to France for going decentralised and supporting FOSS! We understand the whole project is going to be released entirely open source (other than the operational bits) - development is well under way and an early proof of concept is already circulating within various government entities.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m sure there will be more details from their side as the project progresses, but meanwhile here&#x27;s the official press release, and an English translation too. We expect this will drive a lot of effort into maturing Synapse&#x2F;Dendrite, E2E encryption and matrix-{&#x27;{&#x27;}react,ios,android{&#x27;}&#x27;}-sdk, which is great news for the whole Matrix ecosystem! The deployment is going to be speaking pure Matrix and should be fully compatible with other Matrix clients and projects in addition to the official client.&lt;&#x2F;p&gt;
+&lt;p&gt;So: exciting times for Matrix.  Needless to say, if you work on Open Government projects in other countries, please get in touch - we&#x27;re seeing that Matrix really is a sweet spot for these sort of use cases and we&#x27;d love to help get other deployments up and running.  We&#x27;re also hoping it&#x27;s going to help iron out many of the UX kinks we have in Riot.im today as we merge stuff back. We&#x27;d like to thank DINSIC (the Department responsible for the project) for choosing Matrix, and can&#x27;t wait to see how the project progresses!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2018&#x2F;04&#x2F;CP_messagerie_instantanee_Etat.pdf&quot;&gt;&lt;img class=&quot;aligncenter size-large wp-image-3082&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2018&#x2F;04&#x2F;dinsic.jpg&quot; alt=&quot;&quot; width=&quot;620&quot; height=&quot;877&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;English Translation:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-french-state-creates-its-own-secure-instant-messenger&quot;&gt;The French State creates its own secure instant messenger&lt;&#x2F;h3&gt;
+&lt;p&gt;By the summer of 2018, the French State will have its own instant messenger, an alternative to WhatsApp and Telegram.&lt;&#x2F;p&gt;
+&lt;p&gt;It will guarantee &lt;b&gt;secure, end-to-end encrypted conversations&lt;&#x2F;b&gt; without degradation of the user experience. It will be compatible with any mobile device or desktop, state or personal. In fact until now the installation of applications like WhatsApp or Telegram was not possible on professional mobile phones, which hindered easy sharing of information and documents.&lt;&#x2F;p&gt;
+&lt;p&gt;Led by the &lt;b&gt;Interministerial Department of State Digital, Information and Communication Systems&lt;&#x2F;b&gt; (DINSIC), the project is receiving contributions from the &lt;b&gt;National Agency for Information System Security&lt;&#x2F;b&gt; (ANSSI), the IT Directorship (DSI) of the &lt;b&gt;Armed Forces&lt;&#x2F;b&gt; and the &lt;b&gt;Ministry of Europe and Foreign Affairs&lt;&#x2F;b&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The tool developed is based on &lt;b&gt;open source software&lt;&#x2F;b&gt; (Riot) that implements an &lt;b&gt;open standard&lt;&#x2F;b&gt; (Matrix). Powered by a Franco-British startup (New Vector), and benefiting from many contributions, this communication standard has already caught the attention of other states such as the &lt;b&gt;Netherlands&lt;&#x2F;b&gt; and &lt;b&gt;Canada&lt;&#x2F;b&gt;, with whom DINSIC collaborates closely.&lt;&#x2F;p&gt;
+&lt;p&gt;The Matrix standard and its open source software are also used by private companies such as Thales, which has driven the teams to come together to ensure the interoperability of their tools and cooperate in the development of free and open source software.&lt;&#x2F;p&gt;
+&lt;p&gt;After 3 months of development for a very limited cost, this tool is currently being tested in the State Secretary for Digital, DINSIC and in the IT departments of different ministries. It should be rolled out during the summer in administrations and cabinets.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;b&gt;&lt;i&gt;&quot;With this new French solution, the state is demonstrating its ability to work in an agile manner to meet concrete needs by using open source tools and very low development costs. Sharing information in a secure way is essential not only for companies but also for a more fluid dialogue within administrations.&quot;&lt;&#x2F;i&gt; - Mounir Mahjoubi, Secretary of State to the Prime Minister, in charge of Digital.&lt;&#x2F;b&gt;&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>The Matrix Autumn Special!</title>
+    <published>2016-11-12T00:00:00+00:00</published>
+    <updated>2016-11-12T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2016/11/12/the-matrix-autumn-special/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2016/11/12/the-matrix-autumn-special/</id>
+    <content type="html">&lt;p&gt;Another season has passed; the leaves are dropping from the trees in the northern hemisphere (actually, in the time it&#x27;s taken us to finish this post, most of them have dropped :-&#x2F;) and once again the Matrix team has been hacking away too furiously to properly update the blog. So without further delay here&#x27;s an update on all things Matrix!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;synapse-0-18&quot;&gt;Synapse 0.18&lt;&#x2F;h3&gt;
+&lt;p&gt;Back in September, we forgot to properly announce the 0.18 release of Synapse! This is a major oversight given that 0.18 was a huge update with some critical performance improvements, but hopefully everyone has upgraded by now anyway. If not, there&#x27;s never been a better time to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&quot;&gt;run your own homeserver&lt;&#x2F;a&gt;! The main improvement is that the Matrix room state updates are now stored as deltas in the database rather than snapshots, which reduces the size of the database footprint by around 5 - 7x. The first time you run synapse after upgrading to 0.18 it will go through your database deleting all the historical data, after which you can VACUUM the db to reclaim the freed diskspace.&lt;&#x2F;p&gt;
+&lt;p&gt;You can tell when it&#x27;s finished based on whether it&#x27;s stopped logging about the &#x27;background_deduplicate_state&#x27; task. There was a bug in 0.18.0 that meant this process was very slow (weeks) on sqlite DBs and chewed 100% CPU; this was fixed in 0.18.1, and subsequently we&#x27;ve also had 0.18.2 (various perf and bug fixes, and a new modular internal API for authentication) and the current release: 0.18.3 to address a &lt;a href=&quot;&#x2F;blog&#x2F;2016&#x2F;11&#x2F;08&#x2F;synapse-debian-pacakge-security-announcement&#x2F;&quot;&gt;major vulnerability&lt;&#x2F;a&gt; on deployments using LDAP with obsolete versions (0.9.x) of the python ldap3 library - e.g. Debian Stable. &lt;strong&gt;Folks using the Debian Stable packages must upgrade immediately.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Other big changes in Synapse 0.18 were:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Adding the final APIs required to support end-to-end encryption: specifically, a new store-and-forward API called &quot;to device messaging&quot;, which lets messages be passed between specific devices outside the context of a room or a room DAG. This is used for exchanging authentication tokens and sensitive end-to-end key data between devices (e.g. when a new device joins a room and needs to be looped in) and is not intended for general messaging.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Changing how remote directory servers are queried. Rather than constantly spidering them via the secondary_directory_servers option (which was causing a load crisis on the matrix.org server, as everyone else in Matrix kept polling it for directory updates), clients can now set a &#x27;server&#x27; parameter on the publicRooms request to ask their server to proxy the request through to a specific remote server. Element (the app formally known as Riot&#x2F;Web) implements this already. This is a stopgap until we have a proper global room discovery database of some kind.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Adding pagination support to the room directory API. We now have enough rooms in Matrix that downloading the full list every time the user searches for a room was getting completely untenable - we now support paginating and searching the list. Riot (now Element) and Riot-Android (now Element Android) are using the new APIs already.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Basic support for &#x27;direct room&#x27; semantics. When you create a room you can now state the intent for that room to be a 1:1 with someone via the is_direct parameter.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Making the &#x2F;notifications API work - this lets clients download a full list of all the notifications a user has been recently sent (highlights, mentions etc)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Spec for all of these new APIs are currently making their way into the official matrix spec; you can see the work in progress at &lt;a href=&quot;&#x2F;speculator&quot;&gt;https:&#x2F;&#x2F;matrix.org&#x2F;speculator&lt;&#x2F;a&gt;. Meanwhile, we&#x27;re waiting for the last bits of the end-to-end encryption APIs to land there before releasing 0.3 of the Matrix spec, which should happen any day now.
+&lt;p&gt;To find out more and get upgraded if you haven&#x27;t already, please check out &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;releases&#x2F;tag&#x2F;v0.18.3&quot;&gt;the full changelog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;synapse-scalability&quot;&gt;Synapse scalability&lt;&#x2F;h3&gt;
+&lt;p&gt;Something which we&#x27;ve been quietly adding over the last 6 months is support for running large synapse deployments like the Matrix.org homeserver. Matrix.org has around 500K accounts on it, 50k rooms, and relays around 500K messages per day and obviously the community expects it to have good performance and availability (even though we&#x27;d prefer if you ran your own server, for obvious reasons!)&lt;&#x2F;p&gt;
+&lt;p&gt;The current scaling approach for this is called &#x27;Workers&#x27; - where we&#x27;ve split out a whole bunch of different endpoints from the main Synapse process into child &#x27;worker&#x27; processes which replicate their state from the master Synapse process. These workers are designed to scale horizontally, adding as many as you like to handle the traffic load. It&#x27;s not full active&#x2F;active horizontal scalability in that you&#x27;re still limited by the performance of the master process and the database master you&#x27;re writing to, but it&#x27;s a great way to escape Python&#x27;s global interpreter lock limiting processes effectively to a single core, and in practice it&#x27;s a huge improvement and works pretty well as of Synapse 0.18.&lt;&#x2F;p&gt;
+&lt;p&gt;You can read more about the architecture and how to run your Synapse in worker-mode over at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;master&#x2F;docs&#x2F;workers.rst&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;master&#x2F;docs&#x2F;workers.rst&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;starting-a-riot-now-element&quot;&gt;Starting a Riot (now Element)&lt;&#x2F;h3&gt;
+&lt;p&gt;Meanwhile, the biggest news in Matrixland has probably been the renaming of Vector as Riot (now Element) and the &#x27;mass market&#x27; launch of Riot as a flagship Matrix client at the &lt;a href=&quot;http:&#x2F;&#x2F;pulverhwc.evolero.com&#x2F;monage&quot;&gt;MoNage&lt;&#x2F;a&gt; conference on Sept 19th in Boston. The reasons for renaming Vector have been done to death by now and hopefully folks have got over the shock, but the rationale is to have a more distinctive and memorable (and controversial!) name, which is more aligned with the idea of returning control of communication back to the people :) Amandine has the full story over at the &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@RiotChat&#x2F;lets-riot-f5b0aa99dc8e&quot;&gt;Riot blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Riot (now Element) itself is a fairly thin layer on top of the official client Matrix SDKs, and so 95% of the work for Riot (now Element) took the form of updates to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk&quot;&gt;matrix-js-sdk&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-react-sdk&quot;&gt;matrix-react-sdk&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-sdk&quot;&gt;matrix-ios-sdk&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-kit&quot;&gt;matrix-ios-kit&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-android-sdk&quot;&gt;matrix-android-sdk&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&quot;&gt;synapse&lt;&#x2F;a&gt; itself. There&#x27;s been a tonne of changes here since June, but the main highlights are:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;End-to-end encryption support landed in matrix-js-sdk and matrix-react-sdk (and thus Riot&#x2F;Web (now Element)) and in dev on matrix-ios-sdk and matrix-android-sdk using the Olm and Megolm ratchets. More about this later.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Hosted integrations, bots and bridges! More about this later too.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Direct Message UI landed in Riot&#x2F;Web (now Element) to tag rooms which exist for contacting a specific user. These get grouped now as the &#x27;People&#x27; list in Riot (now Element). It&#x27;s in dev on Riot&#x2F;iOS (now Element (iOS)) &amp; Android (now Element Android).&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Entirely new UI for starting conversations with people - no more creating a room and then inviting; you just say &quot;i want to talk with Bob&quot;.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Entirely new UI for inviting people into a room - no more confusion between searching the membership list and inviting users.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;FilePanel UI in Riot&#x2F;Web (now Element) to instantly view all the attachments posted in a room&lt;&#x2F;li&gt;
+ 	&lt;li&gt;NotificationPanel UI in Riot&#x2F;Web (now Element) to instantly view all your missed notifications and mentions in a single place&lt;&#x2F;li&gt;
+ 	&lt;li&gt;&quot;Volume control&quot; UI to have finer grained control over per-room notification noisiness&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Entirely re-worked Room Directory navigator - lazy-loading the directory from the server, and selecting rooms via bridge and remote server&lt;&#x2F;li&gt;
+ 	&lt;li&gt;It&#x27;s very exciting to see a wider audience discovering Matrix through Riot (now Element) - and Riot (now Element)&#x27;s usage stats have been growing steadily since launch, but there&#x27;s still a lot of room for improvement.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Stuff on the horizon includes:
+&lt;ul&gt;
+ 	&lt;li&gt;Formal beta-testing the full end-to-end encryption feature-set.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Performance and optimisation work on all platforms - there are huge improvements to be had.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Long-awaited poweruser features: &#x27;dark&#x27; colour scheme; more whitespace-efficient layout; collapsing consecutive joins&#x2F;parts...&lt;&#x2F;li&gt;
+ 	&lt;li&gt;&quot;Landing page&quot; to help explain what&#x27;s going on to new users and to show deployment-specific announcements and room lists.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support for arbitrary profile information.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Threading.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Riot (now Element) releases are announced on &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#riot:matrix.org&quot;&gt;#riot:matrix.org&lt;&#x2F;a&gt;, the &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@RiotChat&quot;&gt;Riot blog&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;twitter.com&#x2F;@RiotChat&quot;&gt;Twitter&lt;&#x2F;a&gt; - keep your eyes peeled for updates!
+&lt;h3 id=&quot;end-to-end-encryption&quot;&gt;End to End Encryption&lt;&#x2F;h3&gt;
+&lt;p&gt;Full cross-platform end-to-end encryption is incredibly close now, with the develop branches of iOS &amp;amp; Android SDKs and Riot (now Element) currently in internal testing as of Nov 7 - expect a Big Announcement very shortly.  We&#x27;re very optimistic based on how the initial implementation on Riot&#x2F;Web (now Element)has been behaving so far.&lt;&#x2F;p&gt;
+&lt;p&gt;When E2E first landed on Riot&#x2F;Web (now Element) in September we were missing mobile support, encrypted attachments, encrypted VoIP signalling, and the ability to retrieve encrypted history on new devices - as well as a formal audit of the underlying &lt;a href=&quot;&#x2F;docs&#x2F;spec&#x2F;olm.html&quot;&gt;Olm&lt;&#x2F;a&gt; and &lt;a href=&quot;&#x2F;docs&#x2F;spec&#x2F;megolm.html&quot;&gt;Megolm&lt;&#x2F;a&gt; libraries. Since then things have progressed enormously with most of the core team working since September on filling in the gaps, as well as getting audited and fixing all the weird and wonderful edge cases that the audit showed up. All the missing stuff has been landing on the develop branches over the last few weeks, with encrypted attachments landing on web on Nov 10; encrypted VoIP landing on Nov 11; etc. Watch this space for news on the upcoming cross-platform public beta!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;hosted-integrations-and-introducing-go-neb&quot;&gt;Hosted Integrations and introducing go-neb&lt;&#x2F;h3&gt;
+&lt;p&gt;One of the new features which arrived in Riot (now Element) is the ability to add &quot;single click&quot; integrations (i.e. bots, bridges, application services) into rooms from Riot&#x2F;Web (now Element) by clicking the &quot;Manage Integrations&quot; button in Room Settings. These integrations are hosted for free by Riot (now Element) in its production infrastructure (codenamed Scalar), but all the actual bots&#x2F;bridges&#x2F;services themselves are normal opensource Matrix apps and you can of course run them yourself too.&lt;&#x2F;p&gt;
+&lt;img class=&quot;aligncenter wp-image-1827&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;Screen-Shot-2016-11-12-at-11.47.29-1024x913.png&quot; alt=&quot;screen-shot-2016-11-12-at-11-47-29&quot; width=&quot;894&quot; height=&quot;797&quot; &#x2F;&gt;
+&lt;p&gt;The Bot integrations are all provided by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&quot;&gt;go-neb&lt;&#x2F;a&gt; - a complete rewrite in Golang and general reimagining of the old &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;Matrix-NEB&quot;&gt;python NEB bot&lt;&#x2F;a&gt; which old-timers will recall as the very first bot written for the Matrix ecosystem. Go-neb has effectively now become a general purpose golang bot&#x2F;integration framework for Matrix, with the various different services implemented as plugins for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;tree&#x2F;master&#x2F;src&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;services&#x2F;github&quot;&gt;Github&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;tree&#x2F;master&#x2F;src&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;services&#x2F;jira&quot;&gt;JIRA&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;tree&#x2F;master&#x2F;src&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;services&#x2F;giphy&quot;&gt;Giphy&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;tree&#x2F;master&#x2F;src&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&#x2F;services&#x2F;guggy&quot;&gt;Guggy&lt;&#x2F;a&gt; etc. Critically it supports &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb#configuring-realms&quot;&gt;authenticating Matrix users through to the remote service&lt;&#x2F;a&gt;, letting normal Matrix users interact with Github and friends using their actual Github identity rather than via a bot user - this is a huge huge improvement over the original naive python NEB.&lt;&#x2F;p&gt;
+&lt;p&gt;If you like Go and you like Matrix, we&#x27;d strongly suggest having a go (hah) at adding new services into go-neb: anything implemented against go-neb will also magically be hosted and available as part of the &quot;Manage Integrations&quot; interface in Riot (now Element), as well as being available to anyone else running their own go-nebs. For full details of the architecture and how to implement new plugins, go check out the full &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;go-neb&quot;&gt;README&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If Matrix is to provide a good FOSS alternative to systems like Slack it&#x27;s critical to have a large array of available integrations, so we really hope that the community will help us grow the list!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;building-bridges&quot;&gt;Building Bridges&lt;&#x2F;h3&gt;
+&lt;p&gt;There have been vast improvements to bridging over the last few months, including the ability to &quot;plumb&quot; bridges into arbitrary rooms (letting you link a single Matrix room through to multiple remote networks). Like go-neb, Riot (now Element) is providing free bridge hosting with the ability to add to rooms with a &quot;single click&quot; via the Manage Integrations button in Room Settings. For now, Riot (now Element) is hosting any bridges built on the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-bridge&quot;&gt;matrix-appservice-bridge&lt;&#x2F;a&gt; codebase.&lt;&#x2F;p&gt;
+&lt;p&gt;In short, this means that any user can go and take an existing Matrix room and link it through to Slack, IRC, Gitter, and more.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;matrix-appservice-irc&quot;&gt;matrix-appservice-irc&lt;&#x2F;h4&gt;
+&lt;p&gt;Huge amounts of work have gone into improving the IRC bridge - both adding new features to try to give the most IRC-friendly experience when bridging into IRC, as well as lots of maintenance and performance work to ensure that the matrix.org hosted bridges can scale to the large amounts of traffic we&#x27;re seeing going through Freenode and others. We&#x27;ve also added hosted bridges for OFTC and Snoonet, and turned on connecting via IPv6 by default for networks which support it.&lt;&#x2F;p&gt;
+&lt;p&gt;You can read the full changelogs for 0.5.0 and 0.6.0 at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-irc&#x2F;blob&#x2F;master&#x2F;CHANGELOG.md&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-irc&#x2F;blob&#x2F;master&#x2F;CHANGELOG.md&lt;&#x2F;a&gt;, but the main highlights are:&lt;&#x2F;p&gt;
+&lt;p&gt;matrix-appservice-irc 0.6.0&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Debouncing quits and netsplits: if IRC users quit there can be a window where they are shown as just offline rather than leaving the room, avoiding join&#x2F;part spam and creating unnecessary state events in Matrix.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Topic bridging: IRC topics can now be bridged to Matrix!&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support custom SSL CAs (thanks to @Waldteufel)&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support custom media repository URLs&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support the ability to quit your IRC user from the network entirely&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Fix rate limiting for traffic from privileged IRC users and services&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+matrix-appservice-irc 0.5.0:
+&lt;ul&gt;
+ 	&lt;li&gt;Support throttling reconnections to IRC servers to avoid triggering abuse thresholds&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support &quot;Third party lookup&quot;: mapping from IRC users &amp; rooms into Matrix IDs for discovery purposes&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Support rate-limiting membership entries to avoid triggering abuse thresholds&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Require permission of an IRC chanop when plumbing an IRC channel into a Matrix room&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Prevent routing loops by advisory m.room.bridging events&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Better error messages&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Sync chanmode +s correctly&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Fix IPv6 support&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Next up is automating NickServ login, and generally continuing to make the IRC experience as good as we possibly can.
+&lt;h4 id=&quot;matrix-appservice-slack&quot;&gt;matrix-appservice-slack&lt;&#x2F;h4&gt;
+&lt;p&gt;Similarly, the Slack bridge has had loads of work. The main changes include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Ability to dynamically bridge (&quot;plumb&quot;) rooms on request&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Add Prometheus monitoring metrics&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Ability to discover slack team tokens via OAuth2&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Sync avatars both ways&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+We&#x27;re currently looking at shifting over to Slack&#x27;s RTM (Real Time Messaging) API rather than using webhooks in order to get an even better fit with Slack and support bridging DMs, but the current setup is still very usable. For more details: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-slack&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-slack&lt;&#x2F;a&gt;.
+&lt;h4 id=&quot;matrix-appservice-gitter&quot;&gt;matrix-appservice-gitter&lt;&#x2F;h4&gt;
+&lt;p&gt;The Gitter bridge has provided a lot of inspiration for the more recent work on the Slack bridge. Right now it provides straightforward bridging into Gitter rooms, albeit proxied via a &#x27;matrixbot&#x27; user on the Gitter side. We&#x27;re currently looking at letting also users authenticate using their Gitter credentials so they are bridged through to their &#x27;real&#x27; Gitter user - watch this space. For more details: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-gitter&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-gitter&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;community-updates&quot;&gt;Community updates&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;matrix-ircd&quot;&gt;matrix-ircd&lt;&#x2F;h4&gt;
+&lt;p&gt;matrix-ircd is a rewrite of the old PTO project (&lt;a href=&quot;http:&#x2F;&#x2F;pto.im&quot;&gt;pto.im&lt;&#x2F;a&gt;): a Rust application that turns Matrix into a single great big decentralised IRC network. PTO itself has unfortunately been on hiatus and is rather bitrotted, so Erik from the core Matrix Team picked it up to see if it could be resurrected. This ended up turning into a complete rewrite (switching from mio to tokio etc), and the new project can be found at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ircd&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;matrix-ircd really is an incredibly promising way of getting folks onto Matrix, as it exposes the entirety of Matrix as a virtual IRC network. This means that IRC addicts can jack straight into Matrix, talking native IRC from their existing IRC clients - but interacting directly with Matrix rooms as if they were IRC channesls without going through a bridge. Obviously you lose all of the features and semantics which Matrix provides beyond IRC, but this is still a great way to get started.&lt;&#x2F;p&gt;
+&lt;p&gt;The project is currently alpha but provides a good functioning base to extend, and Erik&#x27;s explicitly asking for help from the Rust and Matrix community to fill in all the missing features. If you&#x27;re interested in helping, please come talk on &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#matrix-ircd:matrix.org&quot;&gt;#matrix-ircd:matrix.org&lt;&#x2F;a&gt;!.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;matrix-appservice-gitter-twisted&quot;&gt;matrix-appservice-gitter-twisted&lt;&#x2F;h4&gt;
+&lt;p&gt;Not to be confused with the Node-based &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-gitter&quot;&gt;matrix-appservice-gitter&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;remram44&#x2F;matrix-appservice-gitter-twisted&quot;&gt;matrix-appservice-gitter-twisted&lt;&#x2F;a&gt; is an entirely separate project written in Python&#x2F;Twisted by Remram (Remi Rampin) that has the opposite architecture: rather than bridging existing rooms into Matrix, matrix-appservice-gitter-twisted lets you provide your Gitter credentials and acts instead as a Gitter client, bridging your personal view of a Gitter room into a private Matrix room just for you.&lt;&#x2F;p&gt;
+&lt;p&gt;This obviously has some major advantages (your actions on Gitter use your real Gitter account rather than a bot), and some disadvantages too (you can&#x27;t use Matrix features when interacting with other Matrix users in the same room, and the Gitter channel itself is not decentralised into Matrix). However, it&#x27;s a really cool example of how the other model can work - and within the core team, we&#x27;ve been arguing back and forth for ages now on whether normal bridges or &quot;sidecar&quot; bridges like this one are a more preferable architecture. Thanks to Remram&#x27;s work we can try both side by side! Go check it out at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;remram44&#x2F;matrix-appservice-gitter-twisted&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;remram44&#x2F;matrix-appservice-gitter-twisted&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;telematrix&quot;&gt;telematrix&lt;&#x2F;h4&gt;
+&lt;p&gt;Telematrix is Telegram&amp;lt;-&amp;gt;Matrix bridge, written by Sijmen Schoon using python3 and asyncio. Right now it&#x27;s a fairly early alpha hardcoded to bridge a specific Telegram channel into a specific Matrix room, but it works and in use and could be an excellent base for folks interested in a more comprehensive Matrix&#x2F;Telegram bridge. Go check it out at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SijmenSchoon&#x2F;telematrix&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;SijmenSchoon&#x2F;telematrix&lt;&#x2F;a&gt;
+&lt;img class=&quot;aligncenter wp-image-1832&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;telematrix-1024x828.png&quot; alt=&quot;telematrix&quot; width=&quot;641&quot; height=&quot;518&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;ruma&quot;&gt;Ruma&lt;&#x2F;h4&gt;
+&lt;p&gt;Meanwhile, the Ruma project to write a Matrix homeserver in Rust has been progressing steadily, with more and more checkboxes appearing on the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ruma&#x2F;ruma&#x2F;blob&#x2F;master&#x2F;STATUS.md&quot;&gt;status page&lt;&#x2F;a&gt;, with significant new contributions from mujx and farodin91. The best way to keep track of Ruma is to read Jimmy&#x27;s excellent &lt;a href=&quot;https:&#x2F;&#x2F;ruma.dev&#x2F;news&#x2F;&quot;&gt;This Week in Ruma&lt;&#x2F;a&gt; updates and of course hang out on &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#ruma:matrix.org&quot;&gt;#ruma:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;nachat&quot;&gt;NaChat&lt;&#x2F;h4&gt;
+&lt;p&gt;An entirely new client on the block since the last update is &lt;a href=&quot;http:&#x2F;&#x2F;github.com&#x2F;ralith&#x2F;nachat&quot;&gt;NaChat&lt;&#x2F;a&gt;, written by Ralith. NaChat is a pure cross-platform Qt&#x2F;C++ desktop client written from the ground up, supporting local history synchronisation, excellent performance, native Qt theming, and generally being a lean and mean Matrix client machine. It&#x27;s still alpha, but it&#x27;s easy to build and a lot of fun to play with.&lt;&#x2F;p&gt;
+&lt;img class=&quot;aligncenter wp-image-1828&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;Screen-Shot-2016-11-12-at-12.01.03-1024x664.png&quot; alt=&quot;screen-shot-2016-11-12-at-12-01-03&quot; width=&quot;1009&quot; height=&quot;654&quot; &#x2F;&gt;
+&lt;p&gt;Please give a spin, encourage Ralith to finish the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ralith&#x2F;nachat&#x2F;tree&#x2F;timeline-view-rewrite&quot;&gt;timeline-view-rewrite&lt;&#x2F;a&gt; branch (which is probably the one you want to be running!), and come hang out on &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#nachat:matrix.org&quot;&gt;#nachat:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;quaternion&quot;&gt;Quaternion&lt;&#x2F;h4&gt;
+&lt;p&gt;Meanwhile, the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fxrh&#x2F;quaternion&quot;&gt;Quaternion&lt;&#x2F;a&gt; Qt&#x2F;QML desktop client and its &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fxrh&#x2F;libqmatrixclient&quot;&gt;libqmatrixclient&lt;&#x2F;a&gt; library has been making sure and steady progress, with fxrh, kitsune, maralorn and others working away at it. The difference with NaChat here is using QML rather than native Qt widgets, and a focus on more advanced UX features like a custom infinite-scrolling scrollbar widget, unread message notifications, and read-up-to markers.  Recent developments include the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Fxrh&#x2F;Quaternion&#x2F;releases&#x2F;tag&#x2F;v0.0.1&quot;&gt;first official release (0.0.1)&lt;&#x2F;a&gt; on Sept 12, official Windows builds, lots of work on implementing better Read-up-to Markers, scrolling behaviour etc. Again, it&#x27;s worth keeping a checkout of Quaternion handy and playing with the client - it&#x27;s loads of fun!&lt;&#x2F;p&gt;
+&lt;img class=&quot;aligncenter size-large wp-image-1829&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;Screen-Shot-2016-11-12-at-12.12.48-1024x535.png&quot; alt=&quot;screen-shot-2016-11-12-at-12-12-48&quot; width=&quot;1024&quot; height=&quot;535&quot; &#x2F;&gt;
+&lt;h3 id=&quot;google-summer-of-code-2016-retrospective&quot;&gt;Google Summer of Code 2016 Retrospective&lt;&#x2F;h3&gt;
+&lt;p&gt;The summer is long gone now, and along with it Google Summer of Code. This was the first year we&#x27;ve &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;archive&#x2F;2016&#x2F;organizations&#x2F;6552738187968512&#x2F;&quot;&gt;participated in GSoC&lt;&#x2F;a&gt;, and it was an incredible experience - both judging all the applications, and then working with Aviral Dasgupta and Will Hunt (Half-Shot) who joined the core team as part of their GSoC endeavours.&lt;&#x2F;p&gt;
+&lt;p&gt;Aviral&#x27;s work has been widespread throughout Riot (now Element): adding consistent Emoji support throughout the app via Emoji One, implementing the beta Rich Text Editor (RTE) and all-new autocompletion UI, as well as a bunch of spec proposals for rich message semantics and an initial Slack Webhooks application service. You can read his wrap up at &lt;a href=&quot;http:&#x2F;&#x2F;www.aviraldg.com&#x2F;p&#x2F;gsoc-2016-wrapup&quot;&gt;http:&#x2F;&#x2F;www.aviraldg.com&#x2F;p&#x2F;gsoc-2016-wrapup&lt;&#x2F;a&gt; and use the code in Riot&#x2F;Web (now Element) today. We&#x27;re currently working on fixing the final issues on RTE and auto-complete and hope to enable them by default real soon now!&lt;&#x2F;p&gt;
+&lt;p&gt;Meanwhile, Half-Shot&#x27;s work ended up focusing on bridging through to Twitter and working on the Threading spec proposal for Matrix. You can find out all about the Twitter bridge at &lt;a href=&quot;https:&#x2F;&#x2F;half-shot.github.io&#x2F;matrix-appservice-twitter&quot;&gt;https:&#x2F;&#x2F;half-shot.github.io&#x2F;matrix-appservice-twitter&lt;&#x2F;a&gt;; it works incredibly well (arguably too well, given the amount of traffic it can bridge into Matrix! :S) - and we&#x27;re currently working on hosting a version of it on matrix.org for all your tweeting needs. You can see Half-Shot&#x27;s wrapup blog post over at &lt;a href=&quot;https:&#x2F;&#x2F;half-shot.uk&#x2F;gsoc16_evaulation&quot;&gt;https:&#x2F;&#x2F;half-shot.uk&#x2F;gsoc16_evaulation&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, as a bit of a wildcard, we discovered the other day that there was also another GSoC project using Matrix by Waqee Khalid, supported by the &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;archive&#x2F;2016&#x2F;organizations&#x2F;6488734048452608&#x2F;&quot;&gt;Berkman Center for Internet and Society&lt;&#x2F;a&gt; at Harvard to &lt;a href=&quot;https:&#x2F;&#x2F;summerofcode.withgoogle.com&#x2F;archive&#x2F;2016&#x2F;projects&#x2F;5749069813121024&#x2F;&quot;&gt;switch Apache Wave (formerly Google Wave) over to using Matrix rather than XMPP&lt;&#x2F;a&gt; for federation!  The implementation looks a little curious here, as Wave used XMPP as a blunt pubsub layer for synchronising protobuf deltas - and it looks like this implementation uses Matrix similarly, thus killing any interop with the rest of Matrix, which is a bit of a shame.  If anyone knows more about the project we&#x27;d love to hear though!&lt;&#x2F;p&gt;
+&lt;p&gt;Either way, it&#x27;s been a pleasure to work with the GSoC community and we owe Aviral and Half-Shot (and Waqee!) a huge debt of gratitude for spending their summers (and more!) hacking away improving Matrix. So, thanks Google for making GSoC possible and thanks to the GSoCers for all their contributions, effort &amp;amp; enthusiasm! Watch this space for updates on RTE, new-autocomplete and the twitter bridge going live...&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;matrix-in-the-news&quot;&gt;Matrix in the news&lt;&#x2F;h3&gt;
+&lt;p&gt;Just in case you missed them, there have been a couple of high profile articles flying around about Matrix recently - we made the &lt;a href=&quot;http:&#x2F;&#x2F;www.linux-magazine.com&#x2F;Issues&#x2F;2016&#x2F;189&#x2F;Matrix&quot;&gt;front cover of Linux Magazine in August&lt;&#x2F;a&gt; with a comprehensive review of Matrix and Vector (now Riot (now Element)). Then when we launched Riot (now Element) itself we got a cautiously &lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2016&#x2F;09&#x2F;19&#x2F;riot-wants-to-be-like-slack-but-with-the-flexibility-of-an-underlying-open-source-platform&#x2F;&quot;&gt;positive write-up from Mike Butcher at Techcrunch&lt;&#x2F;a&gt;. We also wrote an guest column for Techcrunch about the &lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2016&#x2F;10&#x2F;09&#x2F;a-decentralized-web-would-give-power-back-to-the-people-online&#x2F;&quot;&gt;importance of bringing power back to the people via decentralisation&lt;&#x2F;a&gt;, which got a surprising amount of attention on &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=12670958&quot;&gt;HackerNews&lt;&#x2F;a&gt; and elsewhere.&lt;&#x2F;p&gt;
+&lt;p&gt;More recently, we were lucky enough to get an &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=LhCfI-xdvlE&quot;&gt;indepth video interview with Bryan Lunduke&lt;&#x2F;a&gt; as part of his &#x27;Linux &amp;amp; Whatnot&#x27; series, and also a &lt;a href=&quot;http:&#x2F;&#x2F;www.networkworld.com&#x2F;article&#x2F;3140014&#x2F;open-source-tools&#x2F;down-the-rabbit-hole-part-5-secure-and-private-instant-messaging.html#tk.twt_nww.&quot;&gt;write-up in NetworkWorld&lt;&#x2F;a&gt; alongside Signal &amp;amp; Wire as part of Bryan&#x27;s journeys in the land of encrypted messaging.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=LhCfI-xdvlE&quot;&gt;&lt;img class=&quot;aligncenter wp-image-1830 size-large&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;Screen-Shot-2016-11-12-at-12.31.34-1024x571.png&quot; alt=&quot;screen-shot-2016-11-12-at-12-31-34&quot; width=&quot;1024&quot; height=&quot;571&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Huge thanks to everyone who&#x27;s been nice enough to spread the word of Matrix!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;matrix-in-real-life&quot;&gt;Matrix In Real Life&lt;&#x2F;h3&gt;
+&lt;p&gt;Finally, we&#x27;ve been present at a slew of different events. In August we attended FOSSCON again in Philadelphia to give a general update on Matrix to the Freenode community...&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;It&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;fossconNE&quot;&gt;@fossconNE&lt;&#x2F;a&gt; time! Dave will be talking about Matrix at 1pm today. Come &amp; say hi! &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;KtfTVRnAVn&quot;&gt;pic.twitter.com&#x2F;KtfTVRnAVn&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Matrix (@matrixdotorg) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg&#x2F;status&#x2F;766998104369426432&quot;&gt;August 20, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;...and then Riot (now Element) was launched at Monage in Boston in September, with Matthew and Amandine respectively presenting Matrix and Riot (now Element):&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;Best &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;swag?src=hash&quot;&gt;#swag&lt;&#x2F;a&gt; of &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;MoNage?src=hash&quot;&gt;#MoNage&lt;&#x2F;a&gt;? The &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;RiotChat&quot;&gt;@RiotChat&lt;&#x2F;a&gt; stand is getting mobbed :) &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;NltlfO74Y9&quot;&gt;pic.twitter.com&#x2F;NltlfO74Y9&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Oisin Lunny (@oisinlunny) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;oisinlunny&#x2F;status&#x2F;778293579605213185&quot;&gt;September 20, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Whilst quite a small event, the quality of folks present was incredibly high - much fun was had comparing open communities to walled gardens with Nicola Greco from Tim Berners-Lee&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;solid.mit.edu&quot;&gt;Solid project&lt;&#x2F;a&gt;...&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;.&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;ara4n&quot;&gt;@ara4n&lt;&#x2F;a&gt; &amp; &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;AmandineLePape&quot;&gt;@AmandineLePape&lt;&#x2F;a&gt; showing off the new Riot (now Element) at &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;MoNage?src=hash&quot;&gt;#MoNage&lt;&#x2F;a&gt; in &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;Boston?src=hash&quot;&gt;#Boston&lt;&#x2F;a&gt;! &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;U0qSNjNLGs&quot;&gt;pic.twitter.com&#x2F;U0qSNjNLGs&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Riot (@RiotChat) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;RiotChat&#x2F;status&#x2F;778610558983634945&quot;&gt;September 21, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;...comparing notes with the founders of ICQ, hanging out with Alan from Wire...&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;A meeting of the messaging minds! &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;wire&quot;&gt;@Wire&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg&quot;&gt;@matrixdotorg&lt;&#x2F;a&gt; federating over a pint at &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;MoNage?src=hash&quot;&gt;#MoNage&lt;&#x2F;a&gt;. &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;uTUvWrKRqp&quot;&gt;pic.twitter.com&#x2F;uTUvWrKRqp&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Oisin Lunny (@oisinlunny) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;oisinlunny&#x2F;status&#x2F;778731058170736640&quot;&gt;September 21, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;...chatting to FireChat&#x27;s CTO, catching up with Dan York from the Internet Society, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;Then in October we spoke about scaling Python&#x2F;Twisted for Matrix at PyCon France in Rennes - this was really fun, albeit slightly embarrassing to be the only talk about Python&#x2F;Twisted in a track otherwise entirely about Python 3 and asyncio :D That said, the talk seemed to be well received and it was fantastic to meet some of the enthusiastic French Python community and see folks in the audience who were already up and running on Matrix!&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;Lots of fun at &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;pyconfr&quot;&gt;@pyconfr&lt;&#x2F;a&gt; today demoing Matrix, including a quick video conference with the audience &amp; &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;hashtag&#x2F;TADHack?src=hash&quot;&gt;#TADHack&lt;&#x2F;a&gt; London! &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;rwbA43X7wB&quot;&gt;pic.twitter.com&#x2F;rwbA43X7wB&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Matrix (@matrixdotorg) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg&#x2F;status&#x2F;787332779264602112&quot;&gt;October 15, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;The same weekend also featured TADHack Global - we were present at the London site; you can read all about it in our &lt;a href=&quot;&#x2F;blog&#x2F;2016&#x2F;10&#x2F;20&#x2F;tadhack-global-2016&#x2F;&quot;&gt;earlier blog post&lt;&#x2F;a&gt;. There was a really high standard of hacks on Matrix this year, and it was incredibly hard to judge the hackathon. In most ways this is a good problem to have though!&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;Dramatic prep for &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;maffydub&quot;&gt;@maffydub&lt;&#x2F;a&gt; and yinyee&#x27;s Matrix IoT demo with multiple ESP8266, proximity sensor, and &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;Tropo&quot;&gt;@tropo&lt;&#x2F;a&gt; ASR!! &lt;a href=&quot;https:&#x2F;&#x2F;t.co&#x2F;eytG8QWFq6&quot;&gt;pic.twitter.com&#x2F;eytG8QWFq6&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;— Matrix (@matrixdotorg) &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg&#x2F;status&#x2F;787639861696139264&quot;&gt;October 16, 2016&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Meanwhile, coming up on the horizon we have TADSummit in Lisbon next week, where we&#x27;ll be giving an update on Matrix to the global Telco Application Developer community, and then the week after we&#x27;ll be in Israel as part of the Geektime Techfest, Devfest and Chatbot Summit. So if you&#x27;re in Lisbon or Tel Aviv do give us a ping on Matrix and come hang out!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;matrixing-for-fun-and-profit&quot;&gt;Matrixing for fun and profit!&lt;&#x2F;h3&gt;
+&lt;p&gt;If you&#x27;ve read this far, we&#x27;re guessing you&#x27;re hopefully quite interested in Matrix (or just skipping to the end ;).  Something we don&#x27;t talk about as much as we should is that if you&#x27;re interested in being paid to work on Matrix full time, we&#x27;re always interested in expanding the core team.  Right now we&#x27;re particularly looking for:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Experienced front-end developers who can help build the next generation of matrix-react-sdk and vector-web&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Professional tech-writers to help keep &lt;a href=&quot;&#x2F;docs&#x2F;spec&quot;&gt;The Spec&lt;&#x2F;a&gt; and tutorials and other docs updated and as kick-ass as possible&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Backend Python&#x2F;Twisted or Golang wizards to help us improve and evolve Synapse&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Mobile developers (especially Android) to help keep the mobile SDKs and apps evolving as quickly as possible&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Integration fiends who&#x27;d like to be paid to build more bridges, bots and other integrations for the overall ecosystem!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Most of the core team hangs out in London or Rennes (France), but we&#x27;re also open to remote folks where it makes sense.  If this sounds interesting, please shoot us a mail to jobs@matrix.org.  Obviously it helps enormously if we already know you from the Matrix community, and you have a proven FOSS track record.
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h3&gt;
+&lt;p&gt;Apologies once again for an overdue and overlong update, but hopefully this gives a good taste of how Matrix is progressing. Just to give a different datapoint: this graph is quite interesting - showing the volume of events per day sent by native (i.e. non-bridged) Matrix users visible to the matrix.org homeserver since we turned the service on back in 2014:&lt;&#x2F;p&gt;
+&lt;img class=&quot;aligncenter wp-image-1833&quot; src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;11&#x2F;Screen-Shot-2016-11-04-at-11.02.58-1-1024x778.png&quot; alt=&quot;screen-shot-2016-11-04-at-11-02-58-1&quot; width=&quot;958&quot; height=&quot;728&quot; &#x2F;&gt;
+&lt;p&gt;As you can see, things are accelerating quite nicely - and this is ignoring all the traffic in the rest of the Matrix ecosystem that happens not to be federated onto the matrix.org HS, not to mention the &lt;em&gt;huge&lt;&#x2F;em&gt; amounts of traffic due to bridging.&lt;&#x2F;p&gt;
+&lt;p&gt;Our plans over the next few months are going to involve:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Turning on end-to-end encryption by default for any rooms with private history - whilst ensuring it&#x27;s as easy to write Matrix clients, bots and bridges as it ever was.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Yet more scalability and performance work across the board, to ensure Synapse and the client SDKs can handle the growth curve we&#x27;re seeing here&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Releasing 0.3.0 of the matrix spec itself.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Making Riot (now Element)&#x27;s UX excellent.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Editable messages.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Threading.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;User groups, for applying permissions&#x2F;invites etc to groups of users as well as individuals.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Formalising the federation spec at last&lt;&#x2F;li&gt;
+ 	&lt;li&gt;As many bots, bridges and other integrations as possible!&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Making VoIP&#x2F;Video conferencing and calling awesome.&lt;&#x2F;li&gt;
+ 	&lt;li&gt;More experiments with next-generation homeservers&lt;&#x2F;li&gt;
+ 	&lt;li&gt;Starting to really think hard about decentralised identity and reputation&#x2F;spam management&lt;&#x2F;li&gt;
+ 	&lt;li&gt;...and a few new things we don&#x27;t want to talk about yet ;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+If you&#x27;ve got this far - congratulations! Thanks for reading, and thank you for supporting the Matrix ecosystem.
+&lt;p&gt;Now more than ever before we believe that it is absolutely critical to have a healthy and secure decentralised communications ecosystem on the &#x27;net (whether that&#x27;s Matrix, XMPP, Tox or whatever) - so thank you again for participating in our one :)  And if you don&#x27;t already run your server, please &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&quot;&gt;grab a Synapse&lt;&#x2F;a&gt; and have fun!&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Matthew, Amandine &amp;amp; the Matrix Team.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Matrix wins Best of Show at WebRTC World!</title>
+    <published>2015-05-18T00:00:00+00:00</published>
+    <updated>2015-05-18T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2015/05/18/matrix-wins-best-of-show-at-webrtc-world/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2015/05/18/matrix-wins-best-of-show-at-webrtc-world/</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.webrtcworld.com&#x2F;topics&#x2F;newsfeed&#x2F;articles&#x2F;403642-webrtc-conference-expo-announces-demo-winners.htm&quot;&gt;&lt;img src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;05&#x2F;WebRTC-Best-in-ShowLogo-Only.jpg&quot; alt=&quot;WebRTC Best in Show&quot; width=&quot;282&quot; height=&quot;214&quot; class=&quot;alignright size-full wp-image-1022&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Amandine and I just got back from WebRTC World 2015 in Miami - the conference was a great success: a fantastic opportunity to meet up with many of the companies who are supporting Matrix and give everyone an update on what Matrix is up to with our Keynote: &lt;a href=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;05&#x2F;2015-05-13.2-Matrix-Keynote.pdf&quot;&gt;Defragmenting the Internet for fun and non-profit!&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We also had a little too much fun in the demo shoot-out - hooking up a &lt;a href=&quot;http:&#x2F;&#x2F;www.parrot.com&#x2F;uk&#x2F;products&#x2F;bebop-drone&#x2F;&quot;&gt;Parrot Bebop quadrocopter&lt;&#x2F;a&gt; into Matrix using a Matrix-enabled &lt;a href=&quot;https:&#x2F;&#x2F;janus.conf.meetecho.com&#x2F;&quot;&gt;Janus WebRTC Gateway&lt;&#x2F;a&gt;.  The problem here is that the Parrot firmware and C SDK provides H.264 video, but doesn&#x27;t package it up at all for use with WebRTC - let alone using interoperable signalling like Matrix.  So this is a classic use of Matrix to expose a simple open consistent interface to a system which is otherwise is stuck with a proprietary non-web-friendly API.  The code hasn&#x27;t been tidied up yet, but our hacked Matrixified fork of Janus is up at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;janus-gateway&#x2F;tree&#x2F;ardrone3&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;janus-gateway&#x2F;tree&#x2F;ardrone3&lt;&#x2F;a&gt; if anyone has a drone and is crazy enough to want to experiment with it :)&lt;&#x2F;p&gt;
+&lt;p&gt;Meanwhile, we also showed &lt;a href=&quot;http:&#x2F;&#x2F;openwebrtc.io&quot;&gt;OpenWebRTC&lt;&#x2F;a&gt;-powered VoIP on the latest develop iOS Matrix Console app talking hardware-accelerated H.264 through to Firefox on the desktop.  My ancient 2010 MacBook Pro did its best to sabotage the demo (turns out that 1080P AirPlay + Firefox WebRTC is a bridge too far), but it gave a good idea of what&#x27;s to come.  Many thanks to the OpenWebRTC team for lots of help in getting the demo together in time!&lt;&#x2F;p&gt;
+&lt;p&gt;It turns out that all the demo excitement was worth it in the end, as the jury seemed to like what Matrix is up to and was kind enough to award us more points than any of the other 13 demos... meaning that &lt;b&gt;we won &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;webrtcexpo&#x2F;status&#x2F;598901296100462592&quot;&gt;Best In Show!!&lt;&#x2F;a&gt;&lt;&#x2F;b&gt;.  Huge thanks to the judges for believing in the Matrix vision, and congratulations to all the other demoists too :)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;05&#x2F;prize-e1431964418791.jpg&quot;&gt;&lt;img src=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;05&#x2F;prize-e1431964418791-300x225.jpg&quot; alt=&quot;Best in Show at WebRTC World!&quot; width=&quot;300&quot; height=&quot;225&quot; class=&quot;aligncenter size-medium wp-image-1017&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Meanwhile, the slides from the demo presentation can be found here: &lt;a href=&quot;&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;05&#x2F;2015-05-12-Matrix-Demo-Miami.pdf&quot;&gt;Building bridges between islands of communication&lt;&#x2F;a&gt;, and you can see the full video of our Demo here:&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=OMzDklvDS3c&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=OMzDklvDS3c&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;OMzDklvDS3c&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;...and the actual video stream that the drone transmitted before I crashed it (recorded on Janus) is at...&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=NpBStIIq6fM&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=NpBStIIq6fM&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;NpBStIIq6fM&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;Finally, our grand finale was meant to be combining the two demos, and showing OpenWebRTC decoding the H.264 from the Drone in hardware on an iPhone - using Matrix of course to set up the call and control the drone.  Alas a TURN-related bug got in the way of this working, but we just fixed it up in the office this morning, and I&#x27;m proud to show the first ever Parrot Bebop -&amp;gt; Janus -&amp;gt; Matrix -&amp;gt; OpenWebRTC video stream!! (and very exciting it is too...)&lt;&#x2F;p&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=KsJOqLcpzNM&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=KsJOqLcpzNM&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;KsJOqLcpzNM&quot;&gt;&lt;&#x2F;youtube-player&gt;
+&lt;p&gt;Huge thanks again to Dave for doing the Matrix integration with Janus, Stefan and Rob from OpenWebRTC for all the help on the OWR side, and Manu &amp;amp; Giom for porting the OpenWebRTC pull request to MatrixKit and landing it in iOS Console Develop for the demo!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Android Console 0.3.0!</title>
+    <published>2015-04-13T00:00:00+00:00</published>
+    <updated>2015-04-13T00:00:00+00:00</updated>
+    <author>
+      <name>Oddvar Lovaas</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2015/04/13/android-console-0-3-0/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2015/04/13/android-console-0-3-0/</id>
+    <content type="html">&lt;p&gt;Just a quick announcement that Android Console 0.3.0 has been released on the &lt;a href=&quot;https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id=org.matrix.androidsdk.alpha&quot; title=&quot;Google Play store&quot;&gt;Google Play store&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;This release contains a whole lot of fixes, new features, and nicer UI - see the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-android-sdk&#x2F;blob&#x2F;master&#x2F;CHANGES.rst#changes-in-matrix-android-sdk-in-030-2015-04-10&quot; title=&quot;changes&quot;&gt;changes&lt;&#x2F;a&gt; file for details, but in summary:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+	&lt;li&gt;The UI has been switched to Android&#x27;s Material Design&lt;&#x2F;li&gt;
+	&lt;li&gt;Android Lollipop is now fully supported&lt;&#x2F;li&gt;
+	&lt;li&gt;We have added support for contacts&lt;&#x2F;li&gt;
+	&lt;li&gt;Various accessibility and usability fixes have been contributed by Nolan Darilek (thanks!)&lt;&#x2F;li&gt;
+	&lt;li&gt;We also have clientside GCM support thanks to Leon Handreke! We need to make some changes server-side before GCM can be used, but that&#x27;s on the current ToDo-list!&lt;&#x2F;li&gt;
+	&lt;li&gt;Lots of bugs fixed, as usual, thanks to everyone who reported an issue.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Introducing Matrix Console for iOS (and Android) + Web client 0.6.5</title>
+    <published>2015-03-12T00:00:00+00:00</published>
+    <updated>2015-03-12T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2015/03/12/introducing-matrix-console-for-ios-and-android-web-client-0-6-5/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2015/03/12/introducing-matrix-console-for-ios-and-android-web-client-0-6-5/</id>
+    <content type="html">&lt;p&gt;Hi folks,&lt;&#x2F;p&gt;
+&lt;p&gt;As of today you can install the &lt;a href=&quot;https:&#x2F;&#x2F;itunes.apple.com&#x2F;gb&#x2F;app&#x2F;matrix-console&#x2F;id970074271&quot;&gt;basic reference Matrix client&lt;&#x2F;a&gt; on iOS from the App Store.  We&#x27;ve called the app &quot;Matrix Console&quot; to try to make it clear that it&#x27;s very much a developer&#x2F;poweruser tool for experimenting with Matrix and showcasing the Matrix APIs and an example of how to use the iOS SDK - whilst it can be used as a great replacement to IRC, it&#x27;s by no means meant to be a glossy polished app like Hangouts or Slack.&lt;&#x2F;p&gt;
+&lt;p&gt;Meanwhile you can also get &lt;a href=&quot;https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id=org.matrix.androidsdk.alpha&quot;&gt;the Android version of Console&lt;&#x2F;a&gt; at the Google Play Store as we mentioned in the last post.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;itunes.apple.com&#x2F;gb&#x2F;app&#x2F;matrix-console&#x2F;id970074271&quot;&gt;&lt;img src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;img&#x2F;screenie.jpg&quot; width=&quot;375&quot; height=&quot;667&quot; alt=&quot;iOS screenshot&quot; class=&quot;aligncenter&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Needless to say, they&#x27;re both entirely open-source (Apache license) and you can grab the code from &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-sdk&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-sdk&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-android-sdk&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-android-sdk&lt;&#x2F;a&gt; respectively if you want to play with your own copy.&lt;&#x2F;p&gt;
+&lt;p&gt;The mobile apps currently act very similarly to &lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;beta&quot;&gt;the reference web app&lt;&#x2F;a&gt; - providing group chat (text&#x2F;images&#x2F;video etc) in decentralised public and private rooms, with room history kept in sync across all your different Matrix-enabled apps.  They don&#x27;t yet do VoIP, although we&#x27;re working on it.  Please give the apps a go and file all your bugs and feedback into &lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;jira&quot;&gt;JIRA&lt;&#x2F;a&gt; or &lt;a href=&quot;&#x2F;beta&#x2F;#&#x2F;room&#x2F;#ios:matrix.org&quot;&gt;#ios:matrix.org&lt;&#x2F;a&gt; and &lt;a href=&quot;&#x2F;beta&#x2F;#&#x2F;room&#x2F;#android:matrix.org&quot;&gt;#android:matrix.org&lt;&#x2F;a&gt; so we can make them even better :)&lt;&#x2F;p&gt;
+&lt;p&gt;The iOS app in particular showcases one of the coolest new features in Matrix: the ability for homeservers to support highly configurable push notifications, ensuring you never miss messages on Matrix ever again.  The way this works is that when you install the Matrix Console app from iTunes and log in, the app tells your homeserver to send push notifications to a simple push server on Matrix.org running the &lt;a href=&quot;http:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;sygnal&quot;&gt;sygnal&lt;&#x2F;a&gt; codebase (you can also run your own sygnal for your own Matrix apps).  You can then configure some excitingly comprehensive push settings in the settings page of the web client (we haven&#x27;t exposed the UI to configure these on the mobile apps yet) to configure what events in Matrix should trigger push notifications - and then you will automatically receive the desired pushes even when the app isn&#x27;t running.&lt;&#x2F;p&gt;
+&lt;p&gt;We think this is incredibly powerful: there are no longer &lt;em&gt;any&lt;&#x2F;em&gt; client-side notification settings.  Instead, all your notifications are stored server-side - per-room, per-user, per-word and as many other extensible rules as you desire (plus some helpful common special cases).  This means that the rules that determine whether you see notifications on the desktop from the webclient are &lt;em&gt;identical&lt;&#x2F;em&gt; to the notifications you receive push notifications on your mobile devices.  We hope this is a huge improvement over the inflexible notification rules that iMessage, Hangouts etc push onto you (so to speak).&lt;&#x2F;p&gt;
+&lt;p&gt;To support the new push rules we&#x27;ve just released a new version of the web client - 0.6.5.  This implements the new rule configuration UI - see below for example UI.&lt;&#x2F;p&gt;
+&lt;img src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;img&#x2F;push-settings.jpg&quot; width=&quot;988&quot; height=&quot;1252&quot; alt=&quot;push settings UI&quot; class=&quot;aligncenter&quot; &#x2F;&gt;
+&lt;p&gt;The full list of changes in matrix-angular-sdk 0.6.5 is as per below.  We hope you enjoy the new clients and push settings - thanks for flying Matrix :)&lt;&#x2F;p&gt;
+&lt;pre&gt;
+
+Changes in Matrix Angular SDK 0.6.5 (2015-03-12)
+================================================
+Features:
+ - Push notifications can now be set up in the Settings page.
+ - Text entered into the input box for a room will be preserved across
+   room swaps.
+
+Bug fixes:
+ - Fixed a bug where auto-scroll for images did not work correctly.
+ - Fixed a bug which resulted in a partially populated room when another
+   device joined a room.
+ - Fixed a bug which prevented files with the same name being uploaded
+   sequentially.
+ - Correctly remove redacted event text from the recent activity list.
+ - Firefox: Can now join rooms which have a double ## alias.
+
+Improvements:
+ - Modified Settings page layout.
+ - Angular SDK now relies on the Javascript SDK for new API features.
+ - Transparent images will now be shown on a white background.
+ - GIFs are now marked as such on the thumbnail for the image.
+ - The web client version is now shown in Settings.
+&lt;&#x2F;pre&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Matrix on the road - September to November 2014</title>
+    <published>2014-11-13T00:00:00+00:00</published>
+    <updated>2014-11-13T00:00:00+00:00</updated>
+    <author>
+      <name>Amandine Le Pape</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2014/11/13/matrix-on-the-road/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2014/11/13/matrix-on-the-road/</id>
+    <content type="html">&lt;p&gt;Matrix has been showing off in various places these last months. But whilst drowning in the launch we haven&#x27;t managed to keep the blog updated with what&#x27;s been going on! We are now much more back on track and able to catch up at last, as well as start on new ground for upcoming events!&lt;&#x2F;p&gt;
+&lt;p&gt;So you&#x27;ll find here a summary of the 4 events Matrix attended in September and October as well as all the presentations we gave!&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;disrupt-san-francisco-september-6-10&quot;&gt;Disrupt San Francisco (September 6-10)&lt;&#x2F;h5&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;09&#x2F;6am.jpg&quot;&gt;&lt;img class=&quot;alignnone size-medium wp-image-191&quot; src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;IMG_48491-300x225.jpg&quot; alt=&quot;IMG_4849[1]&quot; width=&quot;300&quot; height=&quot;225&quot; &#x2F;&gt;&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;09&#x2F;6am.jpg&quot;&gt;&lt;img class=&quot;alignnone wp-image-138 size-medium&quot; src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;09&#x2F;6am-300x225.jpg&quot; alt=&quot;&quot; width=&quot;300&quot; height=&quot;225&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;techcrunch.com&#x2F;events&#x2F;disrupt-sf-2014&#x2F;event-home&#x2F;&quot;&gt;Disrupt SF&lt;&#x2F;a&gt; was the launchpad of Matrix! We participated in the &lt;a href=&quot;http:&#x2F;&#x2F;techcrunch.com&#x2F;events&#x2F;disrupt-sf-hackathon-2014&#x2F;&quot;&gt;Hackathon &lt;&#x2F;a&gt;as both a sponsor and a competitor (see our live &lt;a title=&quot;Techcrunch Update!&quot; href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2014&#x2F;09&#x2F;09&#x2F;techcrunch-update&#x2F;&quot;&gt;update&lt;&#x2F;a&gt;!), and exhibited at the conference as a Product Sponsor.&lt;&#x2F;p&gt;
+&lt;p&gt;Three teams announced that they were using Matrix to build their hack but eventually only &lt;a href=&quot;http:&#x2F;&#x2F;challengepost.com&#x2F;software&#x2F;go-social&quot;&gt;Go Social&lt;&#x2F;a&gt; presented their project: a social network for travelers with a very nice UI! Go Social used Matrix APIs to add chat to their platform. The video of Go Social&#x27;s presentation is &lt;a href=&quot;http:&#x2F;&#x2F;techcrunch.com&#x2F;video&#x2F;go-social-presents-disrupt-sf-2014-hackathon&#x2F;518404022&#x2F;&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Matrix team worked on &lt;a href=&quot;http:&#x2F;&#x2F;challengepost.com&#x2F;software&#x2F;animatrix&quot;&gt;Animatrix&lt;&#x2F;a&gt;: a chat app allowing you to build your own 3D animated cartoon and share it with any other friend using Matrix-compliant app using Unify. We had to hack together a basic Matrix Android client in order to do the demo .... You can see our project&#x27;s presentation &lt;a href=&quot;http:&#x2F;&#x2F;techcrunch.com&#x2F;video&#x2F;animatrix-presents-disrupt-sf-2014-hackathon&#x2F;518404216&#x2F;&quot;&gt;here&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;IMG_48581.jpg&quot;&gt;&lt;img class=&quot;size-medium wp-image-195 aligncenter&quot; src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;IMG_48581-300x225.jpg&quot; alt=&quot;IMG_4858[1]&quot; width=&quot;300&quot; height=&quot;225&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The three days conference was great in terms of reaching out to devs and getting good feedback on Matrix! We love seeing people&#x27;s eyes lighting up and people saying &quot;Eventually someone is doing it!&quot; when we explain what Matrix is about :) So thank you all for your support!&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;disrupt-europe-london-uk-october-18-21&quot;&gt;Disrupt Europe (London, UK - October 18-21)&lt;&#x2F;h5&gt;
+&lt;p&gt;After getting public in SF, &lt;a href=&quot;http:&#x2F;&#x2F;techcrunch.com&#x2F;events&#x2F;disrupt-eu&#x2F;event-home&#x2F;&quot;&gt;Disrupt London &lt;&#x2F;a&gt;was the next steps to release a more stable version of Matrix and encourage even more people to build on Matrix. Again we sponsored both the Hackathon and the Conference and we brought with us a very cool &lt;a href=&quot;http:&#x2F;&#x2F;www.trossenrobotics.com&#x2F;phantomx-ax-hexapod.aspx&quot; target=&quot;_blank&quot;&gt;PhantomX robot from Trossen Robotics&lt;&#x2F;a&gt; which was also the price we gave away during the hackathon.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;IMG_50191.jpg&quot;&gt;&lt;img class=&quot;size-medium wp-image-193 aligncenter&quot; src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;IMG_50191-300x225.jpg&quot; alt=&quot;IMG_5019[1]&quot; width=&quot;300&quot; height=&quot;225&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Two teams pitched a Matrix project at the &lt;a href=&quot;http:&#x2F;&#x2F;techcrunch.com&#x2F;events&#x2F;disrupt-europe-hackathon-2014-london&#x2F;&quot;&gt;Hackathon &lt;&#x2F;a&gt;this time:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;hujambo.co&quot;&gt;Hujambo&lt;&#x2F;a&gt; is a very cool chat app allowing you to chat in your native language to someone who is going to read you in their own native language.&lt;&#x2F;p&gt;
+&lt;p&gt;Movidiam did a very ambitious hack, modelling the trends of conversation in the Matrix ecosystem and displaying them a force-directed graph visualisation using D3.&lt;&#x2F;p&gt;
+&lt;p&gt;Matrix team worked on a MIDI to Matrix bridge allowing to share and display music you play in a chatroom and jam together even if in different places. Here is the demo video:&lt;&#x2F;p&gt;
+&lt;p&gt;http:&#x2F;&#x2F;youtu.be&#x2F;LXDBoHyjmtw&lt;&#x2F;p&gt;
+&lt;p&gt;Another great time to meet a lot of interesting people and build partnerships!&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;webrtc-summit-europe-and-rich-communication-conference-berlin-october-27-29&quot;&gt;WebRTC Summit Europe and Rich Communication Conference (Berlin - October 27-29)&lt;&#x2F;h5&gt;
+&lt;p&gt;Matrix was a Silver sponsor at &lt;a href=&quot;http:&#x2F;&#x2F;rich-communication.com&#x2F;webrtc-summit-europe&#x2F;&quot;&gt;WebRTC Summit&lt;&#x2F;a&gt; and the &lt;a href=&quot;http:&#x2F;&#x2F;rich-communication.com&#x2F;&quot;&gt;Rich Communication&lt;&#x2F;a&gt; events and it was a great opportunity to show the multiple ways that Matrix can be considered.&lt;&#x2F;p&gt;
+&lt;p&gt;The first day was the WebRTC Summit where the focus was on the challenges and next steps of the standard. Matthew presented Matrix explained how it can be used as the missing signaling layer to WebRTC raising lots of questions and interest. You can see the presentation &lt;a title=&quot;Matrix, the missing link to WebRTC&quot; href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;2014-11-03-Matrix_Missing-Link_IOT.pdf&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;photo.jpg&quot;&gt;&lt;img class=&quot;size-medium wp-image-201 aligncenter&quot; src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;photo-300x225.jpg&quot; alt=&quot;photo&quot; width=&quot;300&quot; height=&quot;225&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The two next days were focusing more on &lt;a href=&quot;http:&#x2F;&#x2F;www.gsma.com&#x2F;network2020&#x2F;rcs&#x2F;&quot; target=&quot;_blank&quot;&gt;Rich Communication Services &lt;&#x2F;a&gt;(RCS) and again Matrix didn&#x27;t go unnoticed, and not only because of the lightspeed presentation from Matthew waking everyone up on Wednesday morning! This time Matthew addressed Telcos and RCS vendors with the compelling proposition of using Matrix as the bridge between RCS&#x2F;IMS&#x2F;PSTN and the world of over-the-top applications.  The presentation is downloadable &lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;2014-10-29-OTT-Federation-Strategies.pdf&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Again some great feedback and lots of animated discussions over the future of the IP communication world!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;apex.png&quot;&gt;&lt;img class=&quot;wp-image-202 aligncenter&quot; src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;apex-300x176.png&quot; alt=&quot;apex&quot; width=&quot;406&quot; height=&quot;238&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;Sebastian_2.png&quot;&gt;&lt;img class=&quot;wp-image-203 aligncenter&quot; src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;Sebastian_2-300x53.png&quot; alt=&quot;Sebastian_2&quot; width=&quot;425&quot; height=&quot;75&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;webrtc-summit-santa-clara-november-4-5&quot;&gt;WebRTC Summit (Santa Clara - November 4-5)&lt;&#x2F;h5&gt;
+&lt;p&gt;Beginning of November Matrix was back on the West Coast  to sponsor the &lt;a href=&quot;http:&#x2F;&#x2F;webrtcsummit.net&#x2F;&quot;&gt;WebRTC Summit&lt;&#x2F;a&gt;, collocated with the CloudExpo. Matthew opened the WebRTC track with another presentation again raising a lot of interest and question, and greatly supported by &lt;a href=&quot;http:&#x2F;&#x2F;hookflash.com&quot; target=&quot;_blank&quot;&gt;Hookflash&lt;&#x2F;a&gt; in their following session. The presentation is available &lt;a title=&quot;Matrix, the missing link to WebRTC&quot; href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2014&#x2F;11&#x2F;2014-11-03-Matrix_Missing-Link_IOT.pdf&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;And the tour continues: this week Matrix sponsored the &lt;a href=&quot;http:&#x2F;&#x2F;tadsummit.com&#x2F;2014&#x2F;&quot;&gt;TADSummit&lt;&#x2F;a&gt; in Istanbul and next week we will be in San José at the &lt;a href=&quot;http:&#x2F;&#x2F;www.webrtcworld.com&#x2F;conference&#x2F;west&#x2F;&quot;&gt;WebRTC World Conference &amp;amp; Expo&lt;&#x2F;a&gt;: meet us there and watch out for the upcoming TADSummit news!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+</feed>

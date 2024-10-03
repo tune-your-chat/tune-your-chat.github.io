@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;06&#x2F;20&#x2F;matrix-v1.11-release&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Matrix v1.11 release" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Matrix v1.11 release</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Matrix v1.11 release",
+    "datePublished": "2024-06-20T16:52+00:00",
+    
+    
+    "image": [
+        "https://matrix.org/blog/img/matrix-logo.png"
+    ],
+    
+    "author": [
+    
+    {
+        "@type": "Person",
+        "name": "Travis Ralston",
+        "url": "https://tune-your-chat.github.io/authors/travis-ralston"
+    }
+    
+    ]
+}
+</script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<article class="content post with-sidebar">
+    <header>
+        <h1>Matrix v1.11 release</h1>
+        <span>
+            20.06.2024 16:52
+            
+            —
+            <a href="/category/releases">Releases</a>, <a href="/category/spec">Spec</a>
+            
+            —
+            <a
+                href="/author/travis-ralston">Travis Ralston</a>
+            
+        </span>
+        
+    </header>
+    <div class="post-main">
+        <div class="post-content">
+            <p>Hey all,</p>
+<p>We’ve just released the milestone <a href="https://spec.matrix.org/v1.11/">Matrix 1.11</a> update for the protocol. It’s been almost exactly 3 months since the last release, <a href="https://matrix.org/blog/2024/03/22/matrix-v1.10-release/">Matrix 1.10</a>, keeping us on track for our once-a-quarter release schedule.</p>
+<p>There are 9 MSCs released in Matrix 1.11 today, but there’s one specific MSC we’d like to draw your attention to: <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3916">MSC3916 - Authenticated Media</a>. Until today, Matrix had a design flaw which allows a user to access media unauthenticated if they knew the URL. This has been used to share files in social media posts, link images outside of chats, and generally imply that a homeserver is a CDN for the internet. Some of these use cases are legitimate, though many are not. This is fixed with <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3916">MSC3916</a>.</p>
+<p>This post covers <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3916">MSC3916</a> and its implementation guidelines in more detail, but the full changelog for Matrix 1.11 is available at the end, as always.</p>
+<span id="continue-reading"></span><h2 id="msc3916-authenticated-media">MSC3916: Authenticated Media</h2>
+<p>The Trust &amp; Safety team has been hard at work fixing the design flaw in media mentioned above, taking <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3916">MSC3916</a> under their wing and bringing it to release here. The goal has been to roll out the feature as fast as possible, and that’s culminated in the following plan after consultations with us on the Spec Core Team.</p>
+<p>Servers are encouraged to <em>freeze</em> unauthenticated media access (i.e. only allow historical media to be accessed without auth) <em>before</em> Matrix 1.12 is released, which we anticipate will happen in about August 2024. Any media which is cached or uploaded before that freeze will remain accessible on the unauthenticated endpoints indefinitely to avoid breaking existing links in social media, external chats, etc. Media which is cached or uploaded after the freeze takes place will only be accessible through the new authenticated endpoints - callers will receive a 404 error on the unauthenticated side.</p>
+<p>The MSC has a bit more detail about the side effects of this approach, and more on the considerations leading to this proposed plan. Implementations might choose to support a config flag to enable/disable the freeze as needed, or simply release a version which freezes unauthenticated media on startup. Either are effective approaches for improving user safety and privacy.</p>
+<p>Each homeserver should additionally consider its local ecosystem before freezing unauthenticated media by ensuring bridges and the popular clients among users are ready for authenticated media in particular. Ideally, users should see no visible impact to this change being rolled out. To help encourage this, the matrix.org homeserver will be rolling out authenticated media relatively quickly itself - watch for news on the blog next week for specific timelines.</p>
+<p>Client and server developers are encouraged to support authenticated media as soon as they can to help server admins make the switch. Servers have a bit more work to do than clients, unfortunately, but both should have a reasonably easy time adding in the relevant support. The T&amp;S team have made themselves available in <a href="https://matrix.to/#/#matrix-client-developers:matrix.org">#matrix-client-developers:matrix.org</a> and <a href="https://matrix.to/#/#matrix-homeserver-developers:matrix.org">#matrix-homeserver-developers:matrix.org</a> to help developers implement this new feature - feel free to visit the respective room for your project and ask questions.</p>
+<p>Below is some implementation guidance for developers, though is not a replacement for the <a href="https://spec.matrix.org/v1.11/client-server-api/#content-repository">spec</a>. Where this post and the spec differ, please prefer the spec. :)</p>
+<h3 id="client-implementation-guidance">Client implementation guidance</h3>
+<p>Thankfully, supporting authenticated media should be relatively trivial for most clients. When the homeserver declares support for Matrix 1.11 through <code><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientversions">/versions</a></code>, the client should use the new <a href="https://spec.matrix.org/v1.11/client-server-api/#content-repo-client-behaviour"><code>/_matrix/client/v1/media/*</code> endpoints</a>, noting that they now require authentication. The user’s access token can be supplied using the <code>Authorization</code> header. (Note that using the query string <code>?access_token</code> method is not recommended, and <a href="https://spec.matrix.org/v1.11/client-server-api/#using-access-tokens">deprecated</a> in Matrix 1.11 for all endpoints.)</p>
+<p>If the server <em>doesn’t</em> support Matrix 1.11, the existing <code>/_matrix/media/*</code> endpoints should continue to be used.</p>
+<p>This may end up looking something like the following in a client:</p>
+<pre data-lang="js" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#569cd6;">const </span><span>specVersions = doRequest(</span><span style="color:#d69d85;">&#39;GET&#39;</span><span>, </span><span style="color:#d69d85;">&#39;/_matrix/client/versions&#39;</span><span>, accessToken);
+</span><span style="color:#569cd6;">if </span><span>(specVersions.versions.includes(</span><span style="color:#d69d85;">&quot;v1.11&quot;</span><span>)) {
+</span><span>	</span><span style="color:#569cd6;">return </span><span>doRequest(</span><span style="color:#d69d85;">&#39;GET&#39;</span><span>, </span><span style="color:#d69d85;">`/_matrix/client/v1/media/download/${</span><span>serverName</span><span style="color:#d69d85;">}/${</span><span>mediaId</span><span style="color:#d69d85;">}`</span><span>, accessToken);
+</span><span>} </span><span style="color:#569cd6;">else </span><span>{
+</span><span>	</span><span style="color:#569cd6;">return </span><span>doRequest(</span><span style="color:#d69d85;">&#39;GET&#39;</span><span>, </span><span style="color:#d69d85;">`/_matrix/media/v3/download/${</span><span>serverName</span><span style="color:#d69d85;">}/${</span><span>mediaId</span><span style="color:#d69d85;">}`</span><span>, </span><span style="color:#569cd6;">null</span><span>);
+</span><span>}
+</span></code></pre>
+<p>Clients which rely on a web browser may have to use a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker</a> to append the required header, particularly for <code>img</code> tags and similar.</p>
+<p>Clients should additionally note that, as well as <code><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientv1mediadownloadservernamemediaid">/_matrix/media/v3/download/{serverName}/{mediaId}</a></code>, the following other endpoints have moved to the <code>/_matrix/client/v1/media/*</code> namespace:</p>
+<ul>
+<li><code><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientv1mediapreview_url">GET /_matrix/client/v1/media/preview_url</a></code></li>
+<li><code><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientv1mediaconfig">GET /_matrix/client/v1/media/config</a></code></li>
+<li><code><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientv1mediathumbnailservernamemediaid">GET /_matrix/client/v1/media/thumbnail/{serverName}/{mediaId}</a></code></li>
+<li><code><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientv1mediadownloadservernamemediaidfilename">GET /_matrix/client/v1/media/download/{serverName}/{mediaId}/{fileName}</a></code></li>
+</ul>
+<p>The media <code><a href="https://spec.matrix.org/v1.11/client-server-api/#post_matrixmediav3upload">/upload</a></code>, <code><a href="https://spec.matrix.org/v1.11/client-server-api/#put_matrixmediav3uploadservernamemediaid">/upload/{serverName}/{mediaId}</a></code>, and <code><a href="https://spec.matrix.org/v1.11/client-server-api/#post_matrixmediav1create">/create</a></code> endpoints have not yet moved; they are expected to make the switch in a future spec version.</p>
+<h3 id="server-implementation-guidance">Server implementation guidance</h3>
+<p>As mentioned above, servers are a bit more tricky. The Client-Server API endpoints are relatively straightforward: they are the exact same as the previous endpoints, just with authentication added and at a new path. The Federation API endpoints are a bit more challenging. Most server projects have already started implementation, but for those which haven’t (or need a bit of guidance), there’s some information <a href="https://matrix.org/docs/spec-guides/authed-media-servers/">here</a>.</p>
+<p>Server authors are also encouraged to review the client guidance above to gain a better understanding of what their connected clients will be looking for and doing.</p>
+<h2 id="up-next-in-matrix-1-12-and-beyond">Up next in Matrix 1.12 and beyond</h2>
+<p>Over the next 2-3 months, we’ll be focusing on the following MSCs:</p>
+<ul>
+<li>Early review of Matrix 2.0 features as they become ready.
+<ul>
+<li>Sliding sync - <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3575">MSC3575</a>, or its Simplified variation, and applicable extensions.</li>
+<li>Group VoIP - Exact MSCs to be determined, as they may change following implementation.</li>
+<li>OIDC Authentication - primarily <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3861">MSC3861</a>.</li>
+<li>Encryption stability - primarily <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4153">MSC4153</a>.</li>
+</ul>
+</li>
+<li>Pre-implementation review of Trust &amp; Safety MSCs as required.
+<ul>
+<li>Exact MSCs to be determined. Likely to include some “reporting v2” work.</li>
+</ul>
+</li>
+<li>Extensible Events and Custom Emoji/Stickers unblocking as required and able.</li>
+</ul>
+<p>Additionally, we’ll be continuing to define the expectations of a Spec Core Team member, particularly as it relates to the Governing Board of the Foundation. This exercise has been extremely valuable to us so far, and will help identify areas the Foundation and SCT may need support from each other.</p>
+<h2 id="the-full-changelog">The full changelog</h2>
+<p>Read on for full details of what’s in Matrix 1.11:</p>
+<h3 id="client-server-api">Client-Server API</h3>
+<p><strong>Deprecations</strong></p>
+<ul>
+<li>Authentication using a query string is now deprecated, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/issues/4126">MSC4126</a>. The <code>Authorization</code> header should be used instead. (<a href="https://github.com/matrix-org/matrix-spec/issues/1808">#1808</a>)</li>
+<li>Use of the <code>/_matrix/media/*</code> endpoints is now deprecated. New, authenticated, endpoints are available instead. (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+</ul>
+<p><strong>New Endpoints</strong></p>
+<ul>
+<li><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientv1mediaconfig"><code>GET /_matrix/client/v1/media/config</code></a> (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+<li><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientv1mediadownloadservernamemediaid"><code>GET /_matrix/client/v1/media/download/{serverName}/{mediaId}</code></a> (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+<li><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientv1mediadownloadservernamemediaidfilename"><code>GET /_matrix/client/v1/media/download/{serverName}/{mediaId}/{fileName}</code></a> (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+<li><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientv1mediapreview_url"><code>GET /_matrix/client/v1/media/preview_url</code></a> (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+<li><a href="https://spec.matrix.org/v1.11/client-server-api/#get_matrixclientv1mediathumbnailservernamemediaid"><code>GET /_matrix/client/v1/media/thumbnail/{serverName}/{mediaId}</code></a> (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+</ul>
+<p><strong>Backwards Compatible Changes</strong></p>
+<ul>
+<li>Add support for muting in VoIP calls, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3291">MSC3291</a>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1755">#1755</a>)</li>
+<li>Add optional <code>animated</code> query string option to <code>GET /thumbnail</code>, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/2705">MSC2705</a>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1757">#1757</a>)</li>
+<li>Specify terms of services at registration, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/1692">MSC1692</a>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1812">#1812</a>)</li>
+<li>Add support for mathematical messages, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/2191">MSC2191</a>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1816">#1816</a>)</li>
+<li>Do not require UIA when first uploading cross-signing keys, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3967">MSC3967</a>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1828">#1828</a>)</li>
+<li>Add the new <code>unsigned.membership</code> property to events, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4115">MSC4115</a>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1847">#1847</a>)</li>
+<li>Media downloads and thumbnails are now authenticated, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3916">MSC3916</a>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+<li>Some media endpoints are now consistently under <code>/_matrix/client/{version}/media/*</code> instead of <code>/_matrix/media/*</code>, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3916">MSC3916</a>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+</ul>
+<p><strong>Spec Clarifications</strong></p>
+<ul>
+<li>Add <code>/logout</code> and clarify the endpoints which do not take a JSON request body. (<a href="https://github.com/matrix-org/matrix-spec/issues/1644">#1644</a>)</li>
+<li>Clarify that the <code>type</code> of the <code>POST /login</code> request must be one of the types returned by the <code>GET /login</code> response. (<a href="https://github.com/matrix-org/matrix-spec/issues/1776">#1776</a>)</li>
+<li>Link to existing grammar where possible in types. (<a href="https://github.com/matrix-org/matrix-spec/issues/1813">#1813</a>)</li>
+<li>Rename "recovery key" to "backup decryption key". (<a href="https://github.com/matrix-org/matrix-spec/issues/1819">#1819</a>)</li>
+<li>Clarify that the device's Ed25519 signing key should be used in QR code verification (as opposed to the device's Curve25519 identity key). (<a href="https://github.com/matrix-org/matrix-spec/issues/1829">#1829</a>)</li>
+<li>Fix various typos throughout the specification. (<a href="https://github.com/matrix-org/matrix-spec/issues/1832">#1832</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1841">#1841</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1852">#1852</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1853">#1853</a>)</li>
+<li>Specify the encoding to be used when generating QR codes for device verification. (<a href="https://github.com/matrix-org/matrix-spec/issues/1839">#1839</a>)</li>
+<li>Clarify that an access token is optional on the <code>POST /account/password</code> and <code>POST /account/deactivate</code> endpoints. (<a href="https://github.com/matrix-org/matrix-spec/issues/1843">#1843</a>)</li>
+<li>Use RFC 2119 keywords more consistently. (<a href="https://github.com/matrix-org/matrix-spec/issues/1846">#1846</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1861">#1861</a>)</li>
+<li>Move size limits for user, room and event IDs into the appendix and clarify that the length is to be measured in bytes. (<a href="https://github.com/matrix-org/matrix-spec/issues/1850">#1850</a>)</li>
+<li>Clarify that relations recursion should be capped at a certain depth. (<a href="https://github.com/matrix-org/matrix-spec/issues/1854">#1854</a>)</li>
+<li>Add missing secrets, third-party invites and room tagging modules to feature profiles table. (<a href="https://github.com/matrix-org/matrix-spec/issues/1860">#1860</a>)</li>
+<li>Clarify when server name is used and link to the definition. (<a href="https://github.com/matrix-org/matrix-spec/issues/1862">#1862</a>)</li>
+<li>Clarify where keys reside when checking an <code>m.room.encrypted</code> event. (<a href="https://github.com/matrix-org/matrix-spec/issues/1863">#1863</a>)</li>
+<li>Clarify that <code>/media/v3/upload/{serverName}/{mediaId}</code> requires authentication. (<a href="https://github.com/matrix-org/matrix-spec/issues/1872">#1872</a>)</li>
+</ul>
+<h3 id="server-server-api">Server-Server API</h3>
+<p><strong>Deprecations</strong></p>
+<ul>
+<li>Use of the Client-Server API <code>/_matrix/media/*</code> endpoints is now deprecated. New, authenticated, endpoints are available instead. (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+</ul>
+<p><strong>New Endpoints</strong></p>
+<ul>
+<li><a href="https://spec.matrix.org/v1.11/server-server-api/#get_matrixfederationv1mediadownloadmediaid"><code>GET /_matrix/federation/v1/media/download/{mediaId}</code></a> (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+<li><a href="https://spec.matrix.org/v1.11/server-server-api/#get_matrixfederationv1mediathumbnailmediaid"><code>GET /_matrix/federation/v1/media/thumbnail/{mediaId}</code></a> (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>)</li>
+</ul>
+<p><strong>Backwards Compatible Changes</strong></p>
+<ul>
+<li>Media downloads and thumbnails are now authenticated, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3916">MSC3916</a>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1858">#1858</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1869">#1869</a>)</li>
+</ul>
+<p><strong>Spec Clarifications</strong></p>
+<ul>
+<li>Link to existing grammar where possible in types. (<a href="https://github.com/matrix-org/matrix-spec/issues/1813">#1813</a>)</li>
+<li>Clarify that whitespace around commas is allowed in the <code>X-Matrix</code> <code>Authorization</code> header value params list. (<a href="https://github.com/matrix-org/matrix-spec/issues/1818">#1818</a>)</li>
+<li>Clarify that the <code>event</code> field of the <code>/v2/send_join</code> response is only required when the event is signed by the resident server. (<a href="https://github.com/matrix-org/matrix-spec/issues/1834">#1834</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1840">#1840</a>)</li>
+<li>Replace references to RFC 7235 and RFC 7230 that are obsoleted by RFC 9110. (<a href="https://github.com/matrix-org/matrix-spec/issues/1844">#1844</a>)</li>
+<li>Fix various typos throughout the specification. (<a href="https://github.com/matrix-org/matrix-spec/issues/1877">#1877</a>)</li>
+</ul>
+<h3 id="application-service-api">Application Service API</h3>
+<p><strong>Spec Clarifications</strong></p>
+<ul>
+<li>Clarify that appservices should be notified of events relating to the <code>sender_localpart</code> user. (<a href="https://github.com/matrix-org/matrix-spec/issues/1810">#1810</a>)</li>
+</ul>
+<h3 id="identity-service-api">Identity Service API</h3>
+<p><strong>Deprecations</strong></p>
+<ul>
+<li>Authentication using a query string is now deprecated, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/issues/4126">MSC4126</a>. The <code>Authorization</code> header should be used instead. (<a href="https://github.com/matrix-org/matrix-spec/issues/1808">#1808</a>)</li>
+</ul>
+<h3 id="push-gateway-api">Push Gateway API</h3>
+<p>No significant changes.</p>
+<h3 id="room-versions">Room Versions</h3>
+<p><strong>Spec Clarifications</strong></p>
+<ul>
+<li>Clarify that redaction events are still subject to all applicable auth rules. (<a href="https://github.com/matrix-org/matrix-spec/issues/1824">#1824</a>)</li>
+<li>Fix various typos throughout the specification. (<a href="https://github.com/matrix-org/matrix-spec/issues/1827">#1827</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1848">#1848</a>)</li>
+<li>Fix the rendering of the event format for room versions 1 and 2. (<a href="https://github.com/matrix-org/matrix-spec/issues/1883">#1883</a>)</li>
+<li>Generate the Table of Contents with Hugo rather than JavaScript. (<a href="https://github.com/matrix-org/matrix-spec/issues/1884">#1884</a>)</li>
+</ul>
+<h3 id="appendices">Appendices</h3>
+<p><strong>Deprecations</strong></p>
+<ul>
+<li>Deprecate linking to events in rooms identified by alias, as per <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/4132">MSC4132</a>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1823">#1823</a>)</li>
+</ul>
+<p><strong>Spec Clarifications</strong></p>
+<ul>
+<li>Define 'Opaque Identifier Grammar'. (<a href="https://github.com/matrix-org/matrix-spec/issues/1791">#1791</a>)</li>
+<li>Define common cryptographic key representation. (<a href="https://github.com/matrix-org/matrix-spec/issues/1819">#1819</a>)</li>
+<li>Move size limits for user, room and event IDs into the appendix and clarify that the length is to be measured in bytes. (<a href="https://github.com/matrix-org/matrix-spec/issues/1850">#1850</a>)</li>
+</ul>
+<h3 id="internal-changes-tooling">Internal Changes/Tooling</h3>
+<p><strong>Spec Clarifications</strong></p>
+<ul>
+<li>Update the spec release process and related documentation. (<a href="https://github.com/matrix-org/matrix-spec/issues/1759">#1759</a>)</li>
+<li>Fix npm release script for <code>@matrix-org/spec</code>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1765">#1765</a>)</li>
+<li>Formatting fixes in <code>CONTRIBUTING.rst</code>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1769">#1769</a>)</li>
+<li>Improve rendering on mobile devices. (<a href="https://github.com/matrix-org/matrix-spec/issues/1770">#1770</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1771">#1771</a>)</li>
+<li>Fix the OpenAPI definition of the security schemes. (<a href="https://github.com/matrix-org/matrix-spec/issues/1772">#1772</a>)</li>
+<li>Simplify uses of <code>resolve-refs</code> partial. (<a href="https://github.com/matrix-org/matrix-spec/issues/1773">#1773</a>)</li>
+<li>Fix Hugo warnings. (<a href="https://github.com/matrix-org/matrix-spec/issues/1775">#1775</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1788">#1788</a>)</li>
+<li>Fix <code>github-labels.rst</code>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1781">#1781</a>)</li>
+<li>Update dependencies. (<a href="https://github.com/matrix-org/matrix-spec/issues/1786">#1786</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1803">#1803</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1804">#1804</a>)</li>
+<li>Solve <code>allOf</code> recursively in OpenAPI and JSON Schemas. (<a href="https://github.com/matrix-org/matrix-spec/issues/1787">#1787</a>)</li>
+<li>Fix property type resolution in <code>render-object-table</code> partial. (<a href="https://github.com/matrix-org/matrix-spec/issues/1789">#1789</a>)</li>
+<li>Factor out common definition of <code>Tag</code> type. (<a href="https://github.com/matrix-org/matrix-spec/issues/1793">#1793</a>)</li>
+<li>Update the version of Hugo used to render the spec to v0.124.1. (<a href="https://github.com/matrix-org/matrix-spec/issues/1794">#1794</a>)</li>
+<li>Add support for pattern formats for <code>patternProperties</code>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1796">#1796</a>)</li>
+<li>Clean up unnecessary <code>allOf</code>s in OpenAPI definitions. (<a href="https://github.com/matrix-org/matrix-spec/issues/1797">#1797</a>)</li>
+<li>Show information about "Additional Properties" in object tables. (<a href="https://github.com/matrix-org/matrix-spec/issues/1798">#1798</a>)</li>
+<li>Fix anchors for schemas under <code>oneOf</code>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1799">#1799</a>)</li>
+<li>Use reference to <code>OneTimeKeys</code> schema in OpenAPI definitions. (<a href="https://github.com/matrix-org/matrix-spec/issues/1800">#1800</a>)</li>
+<li>Do not use the <code>title</code> of objects containing only <code>additionalProperties</code> or <code>patternProperties</code>. (<a href="https://github.com/matrix-org/matrix-spec/issues/1801">#1801</a>)</li>
+<li>Add anchors in <code>definition</code> shortcode. (<a href="https://github.com/matrix-org/matrix-spec/issues/1802">#1802</a>)</li>
+<li>Set python version for the Towncrier CI job. (<a href="https://github.com/matrix-org/matrix-spec/issues/1805">#1805</a>)</li>
+<li>Replace <code>set-output</code> with environment files in CI. (<a href="https://github.com/matrix-org/matrix-spec/issues/1806">#1806</a>)</li>
+<li>Render response headers. (<a href="https://github.com/matrix-org/matrix-spec/issues/1809">#1809</a>)</li>
+<li>Use <code>patternProperties</code> in more places with supported formats. (<a href="https://github.com/matrix-org/matrix-spec/issues/1813">#1813</a>)</li>
+<li>Add support for rendering string formats. (<a href="https://github.com/matrix-org/matrix-spec/issues/1814">#1814</a>)</li>
+<li>Refactor the OpenAPI definitions of the content repository endpoints. (<a href="https://github.com/matrix-org/matrix-spec/issues/1822">#1822</a>)</li>
+<li>Clean up pull request template. (<a href="https://github.com/matrix-org/matrix-spec/issues/1831">#1831</a>)</li>
+<li>Do not add empty arrays to examples. (<a href="https://github.com/matrix-org/matrix-spec/issues/1849">#1849</a>)</li>
+<li>Generate the Table of Contents with Hugo rather than JavaScript. (<a href="https://github.com/matrix-org/matrix-spec/issues/1851">#1851</a>, <a href="https://github.com/matrix-org/matrix-spec/issues/1885">#1885</a>)</li>
+<li>Fix syntax errors in the spec release issue template. (<a href="https://github.com/matrix-org/matrix-spec/issues/1856">#1856</a>)</li>
+<li>Use environment variables for Netlify build job. (<a href="https://github.com/matrix-org/matrix-spec/issues/1865">#1865</a>)</li>
+<li>Render added/changed in info on request and response content types. (<a href="https://github.com/matrix-org/matrix-spec/issues/1876">#1876</a>)</li>
+<li>Fix validation errors in generated HTML. (<a href="https://github.com/matrix-org/matrix-spec/issues/1880">#1880</a>)</li>
+<li>Ensure most generated HTML IDs are unique. (<a href="https://github.com/matrix-org/matrix-spec/issues/1881">#1881</a>)</li>
+<li>Allow to specify a prefix for generated HTML IDs of API endpoints. (<a href="https://github.com/matrix-org/matrix-spec/issues/1882">#1882</a>)</li>
+</ul>
+
+            <div class="callout">
+                <div class="left-col">
+                    <h2>The Foundation needs you</h2>
+                </div>
+                <div class="right-col">
+                    <p>
+                        The Matrix.org Foundation is a non-profit and only relies
+                        on donations to operate. Its core mission is to maintain
+                        the Matrix Specification, but it does much more than that.
+                    </p>
+                    <p>
+                        It maintains the matrix.org homeserver and hosts several
+                        bridges for free. It fights for our collective rights to
+                        digital privacy and dignity.
+                    </p>
+                    <a class="call-to-action plausible-event-name=BlogPostCtaSupportUs" href="/support">Support us</a>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Post Contents</h3>
+
+            <ul style="list-style: none; padding-left: 0px;">
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#msc3916-authenticated-media">MSC3916: Authenticated Media</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#client-implementation-guidance">Client implementation guidance</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#server-implementation-guidance">Server implementation guidance</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#up-next-in-matrix-1-12-and-beyond">Up next in Matrix 1.12 and beyond</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#the-full-changelog">The full changelog</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#client-server-api">Client-Server API</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#server-server-api">Server-Server API</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#application-service-api">Application Service API</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#identity-service-api">Identity Service API</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#push-gateway-api">Push Gateway API</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#room-versions">Room Versions</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#appendices">Appendices</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/06/20/matrix-v1.11-release/#internal-changes-tooling">Internal Changes&#x2F;Tooling</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+            </ul>
+        </aside>
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;03&#x2F;why-matrix-org&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Why the Matrix.org Homeserver Exists?" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Why the Matrix.org Homeserver Exists?</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Why the Matrix.org Homeserver Exists?",
+    "datePublished": "2024-03-14T15:30+00:00",
+    
+    
+    "image": [
+        "https://matrix.org/blog/img/matrix-logo.png"
+    ],
+    
+    "author": [
+    
+    {
+        "@type": "Person",
+        "name": "Thib",
+        "url": "https://tune-your-chat.github.io/authors/thib"
+    }
+    
+    ]
+}
+</script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<article class="content post with-sidebar">
+    <header>
+        <h1>Why the Matrix.org Homeserver Exists?</h1>
+        <span>
+            14.03.2024 15:30
+            
+            —
+            <a href="/category/foundation">Foundation</a>
+            
+            —
+            <a
+                href="/author/thib">Thib</a>
+            
+        </span>
+        
+    </header>
+    <div class="post-main">
+        <div class="post-content">
+            <p>Matrix self-defines as the go-to protocol for "open, secure, decentralised communications". The Matrix.org Foundation defines "maximising […] the number of online servers in the open federation" as <a href="/about/#mission">a key objective in its mission</a>. So why is the Matrix.org homeserver, probably the largest homeserver in the whole federation, still in open registration mode?</p>
+<p>Let's dive into the technical, and user experience choices behind it.</p>
+<span id="continue-reading"></span><h2 id="a-point-of-centralisation">A point of centralisation</h2>
+<p>The Matrix protocol is heavily decentralised. It goes beyond just federation: every single server in a room maintains a local copy of that room in sync with all the other servers participating in the conversation.</p>
+<p>Matrix is often compared to email but for instant messaging. The first thing that comes to mind is that email might be federated, but it's no longer <em>that</em> decentralised. According to <a href="https://www.sellcell.com/blog/most-popular-email-provider-by-number-of-users/">this article on sellcell.com</a>, Gmail.com provides nearly 50% of the active email accounts in 2023, iCloud follows with 27.8%, and Outlook.com owns 13.1% of them.</p>
+<p>The Matrix.org Foundation doesn't want to become the Gmail.com or Outlook.com of Matrix. It doesn't generate any revenue from its users and runs on <a href="/support">donations</a>. The costs of hosting, maintenance and support of the Matrix.org homeserver grow with the number of people using it.</p>
+<p>A steep and steady growth comes with three significant issues:</p>
+<ol>
+<li>
+<p>The technical maintenance costs do not grow linearly with the number of users. The infrastructure itself costs more, but more time needs to be spent on research and development to make the backend scale.</p>
+</li>
+<li>
+<p>Moderation becomes more difficult. The more reports the Trust &amp; Safety team has to handle, the less time it can spend on tools to improve the moderation experience.</p>
+</li>
+<li>
+<p>Support can't be automated and is very costly to scale. The more users on Matrix.org, the less responsive the support team can be (unless we find resources to hire more support team members) and the more frustrating it is for everyone involved.</p>
+</li>
+</ol>
+<p>In short: everyone stands to benefit from Matrix.org not being a supermassive homeserver that is difficult to leave.</p>
+<h2 id="mindfulness-of-others">Mindfulness of others</h2>
+<p>One of the goals of the Matrix.org Foundation is to maximise the number of Matrix users in the open federation. Another goal is to make sure Matrix remains decentralised by increasing the number of servers in that same open federation.</p>
+<p>One of the fundamental aspects that makes Matrix appealing is decentralisation and (open) federation. Those concepts are not as difficult for the general public to understand as some claim. But we must acknowledge the general public is not regularly confronted with them and their implications when trying new apps.</p>
+<p>For Matrix to gain traction outside of technical circles, it needs to be mindful of the time and habits of the general public. Whether we like it or not, people are used to trying apps, not protocols or providers. It is not reasonable to ask a user to pick a homeserver before they even know what a homeserver is, nor what this decision entails. People need to be able to download an app, try it right away, and get some (potential) value from it before making more advanced decisions.</p>
+<p>We have made Matrix.org one of the most prominent entry points for people discovering Matrix because we believe inclusivity is one of the fundamental premises of Matrix's global success.</p>
+<p>So then, how do we reconcile the need for ease of adoption with the goal of decentralisation?</p>
+<h2 id="a-way-in-and-a-way-out">A way in and a way out</h2>
+<p>Creating an account on Matrix.org is a typical first step in the Matrix user journey. Since agglomeration around a single instance is against the goals of Matrix and its Foundation, users need to have a way out and incentives to move.</p>
+<p>To move to another homeserver, a user needs to be able to pick a homeserver and move there.</p>
+<h3 id="picking-a-homeserver">Picking a homeserver</h3>
+<p>Matrix community member Austin Huang created <a href="https://servers.joinmatrix.org">servers.joinmatrix.org</a> to list all the servers with open registrations where people could find a new home. I am working on creating an official and curated version. We need the instance picker to work on Matrix.org's website, and provide data that the client apps can reuse and present to users who want to move away from Matrix.org.</p>
+<h3 id="moving-to-the-new-homeserver">Moving to the new homeserver</h3>
+<p>The Foundation will implement an account migration tool to allow people to migrate to another server. A proper portable identity mechanism would be better - however, the Foundation had to pause its development due to a lack of funding. Such a mechanism would also rely on a new room version. It would only allow migrating conversations that happened after a room upgrade to that hypothetical new version, which results in data loss.</p>
+<h2 id="the-most-reasonable-solution">The most reasonable solution</h2>
+<p>There are alternatives to a prominent onboarding homeserver like the Matrix.org homeserver. We don't find any of them satisfactory:</p>
+<ul>
+<li>Picking a server randomly when a user wants to sign up in the app is confusing and has a lot of security implications. This is not acceptable.</li>
+<li>Forcing the user to choose a server when they sign up is a highly cumbersome process that does not respect the user's time and resources.</li>
+<li>Portable identities are very desirable but will take time to materialise.</li>
+<li>P2P Matrix depends on a portable identity mechanism and is further away in the future.</li>
+</ul>
+<p>As you can see, we at the Foundation need to strike a balance as we pursue goals that are occasionally in tension with one another, and the Matrix.org homeserver is a prime example. We are committed both to making Matrix more accessible, and to doing the work to decenter the Matrix.org homeserver.</p>
+<p>You can help us achieve both: the Foundation needs your support! If you can afford to, please consider <a href="/support/">supporting us financially</a>. If you want to contribute to the Foundation’s governance, consider <a href="/membership/">becoming a member</a>.</p>
+
+            <div class="callout">
+                <div class="left-col">
+                    <h2>The Foundation needs you</h2>
+                </div>
+                <div class="right-col">
+                    <p>
+                        The Matrix.org Foundation is a non-profit and only relies
+                        on donations to operate. Its core mission is to maintain
+                        the Matrix Specification, but it does much more than that.
+                    </p>
+                    <p>
+                        It maintains the matrix.org homeserver and hosts several
+                        bridges for free. It fights for our collective rights to
+                        digital privacy and dignity.
+                    </p>
+                    <a class="call-to-action plausible-event-name=BlogPostCtaSupportUs" href="/support">Support us</a>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Post Contents</h3>
+
+            <ul style="list-style: none; padding-left: 0px;">
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/03/why-matrix-org/#a-point-of-centralisation">A point of centralisation</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/03/why-matrix-org/#mindfulness-of-others">Mindfulness of others</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/03/why-matrix-org/#a-way-in-and-a-way-out">A way in and a way out</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/03/why-matrix-org/#picking-a-homeserver">Picking a homeserver</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/03/why-matrix-org/#moving-to-the-new-homeserver">Moving to the new homeserver</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/03/why-matrix-org/#the-most-reasonable-solution">The most reasonable solution</a>
+                    
+                </li>
+                
+            </ul>
+        </aside>
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

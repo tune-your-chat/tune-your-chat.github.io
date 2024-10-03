@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - Foundation</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/foundation/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-08-15T19:00:00+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/foundation/atom.xml</id>
+    
+    
+    
+    
+<entry xml:lang="en">
+    <title>Protecting the projects at the heart of the Matrix ecosystem</title>
+    <published>2024-08-15T19:00:00+00:00</published>
+    <updated>2024-08-15T19:00:00+00:00</updated>
+    <author>
+      <name>Josh Simmons, Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/08/heart-of-matrix/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/08/heart-of-matrix/</id>
+    <content type="html">&lt;p&gt;There have been many changes at the Foundation in the last couple of years. We’ve added independent leadership, attracted members, continued working towards sustainability, and expanded our open governance to establish a Governing Board to become better and more capable stewards of the protocol and ecosystem. We’re still in a period of organisational transition, getting into the groove with the Governing Board, focusing on the Spec Core Team, and building the technical and financial foundation for independence.&lt;&#x2F;p&gt;
+&lt;p&gt;We’ve also been asking ourselves what it means for a project to be “core” to the Foundation, and how the Foundation should relate to and work with the people who maintain those projects. These are fundamental questions for any open source foundation, and they’ve become even more pressing for us since Element switched developing Synapse and several other projects to AGPLv3, rather than contributing under the Foundation as Apache v2.&lt;&#x2F;p&gt;
+&lt;p&gt;This blog post explores our context and sets out to start a discussion on how we should move forward. Already, we’ve been having these discussions in Foundation rooms and on the Governing Board, and we look forward to bringing more people into this discussion so that we can ship a framework that delivers on our mission and meets the needs of the Matrix ecosystem.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;where-we-are-and-where-we-re-going&quot;&gt;Where we are and where we’re going&lt;&#x2F;h2&gt;
+&lt;p&gt;The Foundation’s primary responsibility is to the Matrix specification itself, but the ecosystem has a lot to gain when we provide a neutral home and stewardship for other relevant projects as well.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;&quot;&gt;We currently host an array of projects&lt;&#x2F;a&gt; and even proactively fund maintenance and development on a small number of them. Most of those projects were created by the same set of people who first created Matrix, and the folks they trusted with commit access – providing a consistent set of expectations around trust, security, code quality, maintenance, advocacy, and support – almost all of whom still work on the projects today. This group is referred to as the “Core Team” – which is &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;media&#x2F;2019-06-10%20-%20Matrix.org%20Foundation%20CIC%20Rules.pdf&quot;&gt;formally defined&lt;&#x2F;a&gt; as those who have direct commit privileges on any of our repositories. But the structure and expectations for this team are due for an update, and the mix of projects under our banner has grown sprawling and a bit chaotic.&lt;&#x2F;p&gt;
+&lt;p&gt;The time has come for us to design a coherent, modern framework, with the benefit of hindsight and a Governing Board that can channel important perspectives from across the ecosystem. And once we’ve established that framework, then we can get to designing the processes by which projects join or leave the Foundation, and how decisions are made about resourcing.&lt;&#x2F;p&gt;
+&lt;p&gt;If you’d like to get involved, we encourage you to jump into conversations in the Foundation’s rooms and make your voice heard through &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;foundation&#x2F;governing-board-elections&#x2F;#elected-representatives&quot;&gt;your representatives on the Governing Board&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;answering-the-immediate-questions&quot;&gt;Answering the immediate questions&lt;&#x2F;h2&gt;
+&lt;p&gt;But three questions remain that we think are worth offering provisional answers to now: what will the Foundation do to protect projects at the heart of Matrix? How do we determine what those “core” projects are? And are there any projects that don’t belong at the Foundation?&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;The first question is easy to answer:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;The Foundation will seek to fund and coordinate maintenance and development of core projects if faced with a competing fork. We believe some projects, like the spec, test suites, SDKs, and shared cryptographic libraries, are so important that they require ongoing stewardship, under a permissive open source licence, by an organisation that is accountable to the ecosystem.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The Foundation may host a variety of other projects for the benefit of the ecosystem, and may also fund and coordinate maintenance and development of some of those projects where we see a meaningful gap in the ecosystem. This broader set of projects is more subject to change over time, and is less likely to receive direct investment from the Foundation.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;But that second question – what is “core?”&lt;&#x2F;strong&gt; It’s not as easy to pin down exactly, and we look forward to formalising a definition and designation process in collaboration with the Governing Board, Spec Core Team, and Guardians.&lt;&#x2F;p&gt;
+&lt;p&gt;A non-exhaustive list of projects we think are core includes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Spec, Spec Proposals, the matrix.org website and homeserver, and matrix.to link redirection service&lt;&#x2F;li&gt;
+&lt;li&gt;Integration test suites, to confirm that implementations conform to the spec:
+&lt;ul&gt;
+&lt;li&gt;sytest&lt;&#x2F;li&gt;
+&lt;li&gt;complement&lt;&#x2F;li&gt;
+&lt;li&gt;complement-crypto&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;SDKs and libraries which are used extensively by the wider community:
+&lt;ul&gt;
+&lt;li&gt;matrix-rust-sdk&lt;&#x2F;li&gt;
+&lt;li&gt;matrix-js-sdk&lt;&#x2F;li&gt;
+&lt;li&gt;vodozemac&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;As to the third question – are there any projects that don’t belong at the Foundation?&lt;&#x2F;strong&gt; Probably, yes. It’s debatable whether it makes sense to host experimental or speculative projects, and we don’t think it’s appropriate to host projects that don’t have anything to do with Matrix specifically.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;taking-the-next-steps&quot;&gt;Taking the next steps&lt;&#x2F;h2&gt;
+&lt;p&gt;We hope this helps answer some of the questions that folks have been raising, illuminates where we are on our journey in defining these things, and provides some assurance that the Matrix.org Foundation is ever evolving in partnership with the community and will draw a line to protect and maintain projects that are truly at the heart of Matrix.&lt;&#x2F;p&gt;
+&lt;p&gt;Next, we’ll be deliberating on these things with the Governing Board, Spec Core Team, Guardians, and the broader ecosystem including you, the reader. We encourage you to reach out to &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;foundation&#x2F;governing-board-elections&#x2F;#elected-representatives&quot;&gt;your representatives on the Governing Board&lt;&#x2F;a&gt; along the way.&lt;&#x2F;p&gt;
+&lt;p&gt;Ultimately, we’ll define a framework and begin aligning our operations with it – including defining a legal and governance framework and setting up the infrastructure to facilitate it.&lt;&#x2F;p&gt;
+&lt;p&gt;As always, we can’t do this without your support. Some organisations have stepped forward to support our work, but we still don’t have enough to sustain our operations. The more people that come together to fund the Foundation’s work, the more capable we are of investing in core projects, operationalizing more open governance, and nurturing the broader ecosystem.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;support&quot;&gt;Please join the Foundation today&lt;&#x2F;a&gt;, especially if you depend on Matrix, to ensure the Matrix ecosystem is here for you today and tomorrow.&lt;&#x2F;p&gt;
+&lt;p&gt;Thanks,&lt;&#x2F;p&gt;
+&lt;p&gt;Josh Simmons and Matthew Hodgson&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Policy and regulation update 2024: Matrix and the GDPR</title>
+    <published>2024-06-06T07:00:00+00:00</published>
+    <updated>2024-06-06T07:00:00+00:00</updated>
+    <author>
+      <name>Denise Almeida</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/06/regulatory-update/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/06/regulatory-update/</id>
+    <content type="html">&lt;p&gt;If you have been following the matrix.org blog for some time, you will know that we’ve never been ones to shy away from complex topics like public policy and its impacts on Matrix. With this blog post series, our aim is to introduce a more regular cadence to our regulatory updates and to be more transparent about where we are focusing our efforts in this area.&lt;&#x2F;p&gt;
+&lt;p&gt;Each blog post in the series will focus on a given theme or piece of law, as well as its relevant jurisdiction. We will start this series by taking a deep dive into EU regulation, starting with the General Data Protection Regulation (GDPR). Future blog posts in the series will cover the digital services package (DMA and DSA), the incoming CRA and the highly controversial CSAM regulation. These will be followed by a series dedicated to the UK, particularly UK applications of European law such as the GDPR and ePrivacy directive, as well as the Online Safety Act and the IPA amendment bill. Finally, we will conclude the series by looking across the pond and diving into the Cloud Act, as well as KOSA and other existing proposals.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;the-big-one&quot;&gt;The big one&lt;&#x2F;h2&gt;
+&lt;p&gt;Over the last decade the most impactful - in terms of grassroots led change, not necessarily enforcement - piece of legislation was probably the GDPR. Although its initial enforcement date (May 2018) was a couple of years before I joined Element and the Matrix.org Foundation, I know that preparing for GDPR was a huge effort that led to a lot of deep thinking about the ins and outs of Matrix.&lt;&#x2F;p&gt;
+&lt;p&gt;These have been certainly years of learning, iterating and evolving our approach to this fascinating piece of law, and &lt;a href=&quot;https:&#x2F;&#x2F;www.matrix.org&#x2F;blog&#x2F;2018&#x2F;05&#x2F;08&#x2F;gdpr-compliance-in-matrix&quot;&gt;just like 6 years ago&lt;&#x2F;a&gt;, we keep receiving questions and feedback about how the GDPR applies to the Matrix protocol and how server administrators can remain compliant.&lt;&#x2F;p&gt;
+&lt;p&gt;We maintain the view that the GDPR was not built for a decentralised digital world, after all we are (for now!) the exception, not the rule. This does not mean, however, that we don’t make every effort possible to comply with the spirit and the letter of the law. Most organisations using the Matrix protocol will be running strictly closed federations or single servers in closed federation, which they fully control (or appoint others to support them with that control). Compliance is a lot more straightforward in this sense, so for now we will focus on those using Matrix to interact with open federation.&lt;&#x2F;p&gt;
+&lt;p&gt;The most difficult part of GDPR compliance for Matrix has always been article 17, right to erasure, or ‘right to be forgotten’ as it is usually known. Our view has always been that this is a relative right, which needs to take into account available technology and other applicable laws in order to be enacted. For example, if an employee leaves a company and asks for all of their data to be erased, in practice not all of that data will actually be erased, due to constraints put in place by other legal instruments (i.e. tax and fraud prevention regulations, employment law, etc.).&lt;&#x2F;p&gt;
+&lt;p&gt;Considering this relativity, we looked at what other ubiquitous product offerings already exist in the decentralised space, and how they address erasure. Using email as an analogy was a no-brainer in this regard: one understands that deleting an email account will delete everything from their inbox and sent folders, whilst also understanding that is impossible and not expectable to have the same data deleted from the recipients’ inbox (or the inboxes of those that might have had the same message forwarded to them).&lt;&#x2F;p&gt;
+&lt;p&gt;Use of technology is always associated with constant give and take and risk based decisions. Whilst we make every effort to minimise risks for the people using the Matrix protocol, the reality is that one of the main purposes of the protocol is integrity of communications and decentralisation of communications data. This is directly at odds with absolute deletion of communications.&lt;&#x2F;p&gt;
+&lt;p&gt;So how do we come to terms with this conflict? Following the email analogy, we address right to erasure from two different standpoints: account data and communications data. As part of the protocol, everyone is able to automatically delete their accounts and select an option to delete all of their data. First, this deletes all ‘external’ data associated with the account, such as e-mail addresses, phone numbers, IP addresses and device identifiers - effectively pseudonymising this data, aside from Matrix IDs which we will address later on. This measure follows recital 28 of the GDPR, which mentions pseudonymisation as a risk reducing measure for data subjects, which helps controllers and processors meet their data protection obligations.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, the thornier issue of communications data. How can we apply erasure whilst maintaining the integrity of the service for remaining users? Keeping on with the email analogy, if someone deletes their sent email from their own account, you would still expect an existing thread with multiple users to work and be visible. You just would not expect the same message to leave the original account to new individuals.&lt;&#x2F;p&gt;
+&lt;p&gt;That is precisely how the issue is addressed in Matrix - upon deletion of an account, and request for deletion of messages, a flag is applied to the original messages which prevents it from ever being displayed to any new people. This, of course, requires cooperation from the other server administrators who might also have copies of the same message in their server instance. We make this decision by referring to recital 66 of the GDPR, which requires controllers take reasonable steps, taking into account available technology, to inform other controllers of the data subject’s request to have their data erased.&lt;&#x2F;p&gt;
+&lt;p&gt;One issue still remains unresolved - Matrix IDs (MXIDs) are always associated with state events (data sent by a user to modify the attributes of a given room - eg its name, its members, its avatar), which means those IDs could still leak over federation. That is a particular concern when one uses their legal name as their MXID. The solution for this is to replace the MXID with a pseudonym, maintaining the integrity of communications and fully removing any last remains of identifiable information in the system.&lt;&#x2F;p&gt;
+&lt;p&gt;The Synapse team has also made a lot of progress on message retention policies and media retention, both huge strides to continuously improve the privacy of Matrix users, whilst also helping server administrators comply with their legal obligations.&lt;&#x2F;p&gt;
+&lt;p&gt;Things have definitely progressed in the portability space, and chat export is now implemented in multiple Matrix clients, having been first implemented on Element Web in October 2021, in version 1.9.2. We look forward to seeing what the next year brings us in terms of privacy improvements.&lt;&#x2F;p&gt;
+&lt;p&gt;For the next post in this series we will continue discussing the EU policy landscape, although from a different perspective. We will be going through the digital services package (which includes the DSA and DMA) and what does it all mean for Matrix now that we have reached implementation stage.&lt;&#x2F;p&gt;
+&lt;p&gt;As always, we remain open to your feedback and thoughts. If there is anything you would like to hear more about or have a suggestion for a future blog in this series please feel free to reach out to &lt;a href=&quot;mailto:dpo@matrix.org&quot;&gt;dpo@matrix.org&lt;&#x2F;a&gt; via email, DM to &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@gpdr:matrix.org&quot;&gt;@gpdr:matrix.org&lt;&#x2F;a&gt; or chat to us in the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#foundation-office:matrix.org&quot;&gt;Office of the Matrix.org Foundation room&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Introducing our first elected Governing Board</title>
+    <published>2024-06-03T19:00:00+00:00</published>
+    <updated>2024-06-03T19:00:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/06/election-results/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/06/election-results/</id>
+    <content type="html">&lt;p&gt;It is an honor and a pleasure to unveil the election results and introduce the first elected Governing Board for the Matrix.org Foundation!&lt;&#x2F;p&gt;
+&lt;p&gt;Congratulations to the winning candidates, we thank you for your willingness to serve the community. We’re also grateful to everyone who threw their hat in the ring, and hope that the candidates who did not get elected consider running again in the future – noting that we have an election of Gold, Silver, Individual, and Associate Members scheduled for next year.&lt;&#x2F;p&gt;
+&lt;p&gt;Thanks also to all of the people who cast ballots in the election, and to everyone who asked questions along the way! We learned a lot in this first election process that we look forward to incorporating into the next one.&lt;&#x2F;p&gt;
+&lt;p&gt;The level of engagement with the process was a very encouraging sign for the health of the Matrix ecosystem, and we’re proud to have had 100% voter turnout in all but one constituency.&lt;&#x2F;p&gt;
+&lt;p&gt;Read on to see who is on the Governing Board, a brief discussion of next steps, and reflections on some of the work that remains to improve representation.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;the-governing-board&quot;&gt;The Governing Board&lt;&#x2F;h2&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;5140858738311168&quot;&gt;Individual Members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Andy Balaam (he&#x2F;him)&lt;&#x2F;li&gt;
+&lt;li&gt;Greg Sutcliffe (he&#x2F;him)&lt;&#x2F;li&gt;
+&lt;li&gt;J.B. Crawford (they&#x2F;them)&lt;&#x2F;li&gt;
+&lt;li&gt;Sumner Evans&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;5661642078552064&quot;&gt;Ecosystem Members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bram van den Heuvel (he&#x2F;they), Elm SDK&lt;&#x2F;li&gt;
+&lt;li&gt;Kim Brose (he&#x2F;him), Matrix Community Events&lt;&#x2F;li&gt;
+&lt;li&gt;Nicolas Werner (he&#x2F;him), Nheko-Reborn&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;6484668047163392&quot;&gt;Associate Members&lt;&#x2F;a&gt;, we have&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleo Menenez Jr. (he&#x2F;him), GNOME Foundation&lt;&#x2F;li&gt;
+&lt;li&gt;Tobias Fella (he&#x2F;him), KDE e.V.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;4762997481275392&quot;&gt;Platinum Members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neil Johnson (he&#x2F;him), Element&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;6283574079651840&quot;&gt;Gold Members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Brad Murray (he&#x2F;him), Beeper&lt;&#x2F;li&gt;
+&lt;li&gt;Kevin Boos (he&#x2F;him), Futurewei Technologies&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;6615071399608320&quot;&gt;Silver Members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jan Kohnert (he&#x2F;him), Gematik GmbH&lt;&#x2F;li&gt;
+&lt;li&gt;Thor Arne Johansen, Verji Tech AS&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;5342481448173568&quot;&gt;Guardians&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amandine Le Pape (she&#x2F;her)&lt;&#x2F;li&gt;
+&lt;li&gt;Matthew Hodgson (he&#x2F;him)&lt;&#x2F;li&gt;
+&lt;li&gt;Ross Schulman&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;5127688657305600&quot;&gt;Spec Core Team members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Richard van der Hoff (he&#x2F;him)&lt;&#x2F;li&gt;
+&lt;li&gt;Travis Ralston (he&#x2F;him)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;And, lastly, representing Foundation staff in an ex officio capacity, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Josh Simmons (he&#x2F;they)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;&#x2F;h2&gt;
+&lt;p&gt;All of the elected representatives will soon receive a welcome email and details about onboarding which will take place over the next two months, with our first official meeting being in August or September. That first meeting will include chartering committees, establishing initial committee assignments, and other agenda items within the Governing Board’s remit.&lt;&#x2F;p&gt;
+&lt;p&gt;All Governing Board members will soon be added to a private Matrix room and mailing list. We also hope to hold informal gatherings before that first meeting, so that Governing Board members can get to know each other before we dig into business.&lt;&#x2F;p&gt;
+&lt;p&gt;We will continue to use the &lt;a href=&quot;&#x2F;governing-board&#x2F;elections&#x2F;2024&#x2F;&quot;&gt;2024 elections page&lt;&#x2F;a&gt; as a place to aggregate information about the current Governing Board, and our &lt;a href=&quot;&#x2F;about&#x2F;&quot;&gt;About&lt;&#x2F;a&gt; page will soon be updated. Before next year’s election we will establish a more general landing page for the Governing Board that is not specific to any one year.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;reflecting-on-representation&quot;&gt;Reflecting on representation&lt;&#x2F;h2&gt;
+&lt;p&gt;Our mission is to bring secure, private, free and open, unencumbered communication to everyone. In order to succeed in that, we need to bring a representative cross-section of perspectives to bear on our governance and development.&lt;&#x2F;p&gt;
+&lt;p&gt;And while we haven’t yet conducted formal surveys of demographics, such that we can be confident about the baseline we’re working from, it’s plain to see that our contributor communities are not yet as representative as we need them to be. This isn’t news to anyone, but the election results make it all the more obvious.&lt;&#x2F;p&gt;
+&lt;p&gt;The issue of representation is something we must tackle across the whole of the Matrix ecosystem, and we intend for the Foundation to play a leading role in addressing this internally and externally. We can learn from other successful initiatives, and I myself have been successful in tackling these challenges in partnership with other communities, so I know we can get to where we need to be.&lt;&#x2F;p&gt;
+&lt;p&gt;In electing our first Governing Board, we have dramatically expanded the number of perspectives and lived experiences that are directly engaged in the evolution and direction of Matrix. Coming from a place where the majority of decisions were being made by people associated with one company, this is a huge improvement. This is something we should be proud of!&lt;&#x2F;p&gt;
+&lt;p&gt;But to be extremely clear: we need to drastically increase the representation of women and people outside of Europe and North America. There may be other lived experiences we are short on, but these two stand out.&lt;&#x2F;p&gt;
+&lt;p&gt;I’m eager to dig into this work with everyone here around Matrix. Please stay tuned for a follow up blog post specifically on this subject.&lt;&#x2F;p&gt;
+&lt;p&gt;Onwards and upwards 🚀&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Voting has begun in the Governing Board elections</title>
+    <published>2024-05-17T00:00:00+00:00</published>
+    <updated>2024-05-17T00:00:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/05/voting-begins/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/05/voting-begins/</id>
+    <content type="html">&lt;p&gt;Voting has started for the Governing Board elections and runs till May 31! This is our first election and we are very excited. All of the results will be published here on the blog on June 3.&lt;&#x2F;p&gt;
+&lt;p&gt;You can learn about all of the &lt;a href=&quot;&#x2F;governing-board&#x2F;elections&#x2F;2024&#x2F;#nominees&quot;&gt;candidates&lt;&#x2F;a&gt; on our &lt;a href=&quot;&#x2F;governing-board&#x2F;elections&#x2F;2024&quot;&gt;2024 election page&lt;&#x2F;a&gt;. All eligible voters should have received an email from &lt;a href=&quot;https:&#x2F;&#x2F;www.opavote.com&#x2F;&quot;&gt;OpaVote&lt;&#x2F;a&gt;, the election system we have chosen for this year’s elections.&lt;&#x2F;p&gt;
+&lt;p&gt;If you believe you are eligible to participate but have not heard from us, first check the inbox and spam folders of the email address you have on file with us (such as through Donorbox or Patreon). Please &lt;a href=&quot;mailto:elections@foundation.matrix.org&quot;&gt;email us&lt;&#x2F;a&gt; if you have any questions.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;All members of each constituency group are entitled to vote on the candidates within that constituency group. Generally, we will hold elections for half of the constituency groups each year. However, this year we are holding elections for all of the constituency groups:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Community representatives&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;4 seats for Individual Members – these are people who currently provide financial support to the Foundation.&lt;&#x2F;li&gt;
+&lt;li&gt;3 seats for Ecosystem Members – these are FOSS projects and communities around Matrix.&lt;&#x2F;li&gt;
+&lt;li&gt;2 seats for Associate Members – these are FOSS foundations, academic institutions, and other communities that are aligned with key parts of our mission.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Funder representatives&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;4 seats for Platinum Members – these organisations sponsor at the highest level.&lt;&#x2F;li&gt;
+&lt;li&gt;3 seats for Gold Members — these organisations sponsor at a high level.&lt;&#x2F;li&gt;
+&lt;li&gt;2 seats for Silver Members — these organisations sponsor at a level commensurate with the size of their organisation.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Foundation representatives&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;3 seats for Guardians – these are the members of the Foundation&#x27;s board of directors.&lt;&#x2F;li&gt;
+&lt;li&gt;2 seats for the Spec Core Team – these are the members of the Spec Core Team that looks after the spec.&lt;&#x2F;li&gt;
+&lt;li&gt;Managing Director – this is the Foundation&#x27;s head of staff, no election is run for this seat.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Next year, we&#x27;ll run elections just for Gold, Silver, Individual, and Associate Members.&lt;&#x2F;p&gt;
+&lt;p&gt;For more background on the Governing Board and its place in the growth and evolution of the Matrix ecosystem, read: &lt;a href=&quot;&#x2F;blog&#x2F;2023&#x2F;12&#x2F;electing-our-first-governing-board&quot;&gt;The Governing Board, our next big step in open governance&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Post-mortem of the Matrix.org Outage</title>
+    <published>2024-04-25T16:20:00+00:00</published>
+    <updated>2024-04-25T16:20:00+00:00</updated>
+    <author>
+      <name>SRE Team, Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/04/morg-post-mortem/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/04/morg-post-mortem/</id>
+    <content type="html">&lt;p&gt;The Matrix.org homeserver suffered from an outage on Monday 22 April, between 08:00 UTC and 10:00 UTC, followed by slowness for the next 2 hours.&lt;&#x2F;p&gt;
+&lt;p&gt;The outage occurred during scheduled maintenance with no expected downtime. It included upgrading the base OS of the machines running Matrix.org’s deployment.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;technical-cause&quot;&gt;Technical cause&lt;&#x2F;h2&gt;
+&lt;p&gt;The Matrix.org homeserver is &lt;em&gt;large&lt;&#x2F;em&gt;. To operate at this scale and distribute the load on several machines, it relies on Synapse workers.&lt;&#x2F;p&gt;
+&lt;p&gt;The first machines upgraded only ran stateless workers and were trivial to upgrade. Upgrading the machines with stateful workers was more difficult. To avoid downtime, the stateful workers had to be moved to other machines from the same deployment, and be restarted.&lt;&#x2F;p&gt;
+&lt;p&gt;The machines that received the additional workers ended up being resource-starved. In the meantime, it took significant time to upgrade the free machine and bring its network back online before we could move the workers back to it to better share the load.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;organizational-cause&quot;&gt;Organizational cause&lt;&#x2F;h2&gt;
+&lt;p&gt;Matrix.org is a historical and complex deployment that is difficult and costly to replicate entirely in a staging environment at this scale. It is also the largest deployment in the federation and has unique performance requirements.&lt;&#x2F;p&gt;
+&lt;p&gt;Through this upgrade process, gaps in the deployment documentation were identified and these gaps contributed to the upgrade taking longer than expected. The deployment specificity has now been properly documented, and we are confident that the next machines’ upgrade will be significantly faster.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;lessons-learned&quot;&gt;Lessons learned&lt;&#x2F;h2&gt;
+&lt;p&gt;To perform an upgrade without downtime, the Foundation would need to add another server in the deployment of the Matrix.org homeserver, as a consequence of steadily increasing traffic. An extra server introduces a recurring cost and requires additional work that the Foundation cannot afford right now.&lt;&#x2F;p&gt;
+&lt;p&gt;The next upgrade will have about an hour of planned downtime and will be announced shortly. In the meantime, the Foundation is investigating the most cost-effective way to improve redundancy on matrix.org.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Announcing the 2024 Governing Board elections</title>
+    <published>2024-04-12T14:00:00+00:00</published>
+    <updated>2024-04-24T10:30:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/04/election-announcement/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/04/election-announcement/</id>
+    <content type="html">&lt;p&gt;&lt;em&gt;Update: the terms of the board have been updated with the follow changes:&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Allow for filling vacancies by appointment or by-election at the discretion of the Managing Director and the Guardians, in consultation with a Governance Committee. (2.7.1)&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Allow for the Governing Board to adopt voting mechanisms other than simple majority on a case-by-case basis. (5.5)&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Disallow nominees from running for election in more than one constituency at a time. (2.4.1)&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Change UTC to AOE in timeline. (2.3)&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Welcome to the first ever Governing Board election season for the Matrix.org Foundation! We start with a one week nomination period that opens on Saturday, April 20th and closes on Friday, April 26th &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Anywhere_on_Earth&quot;&gt;AOE time&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We’ll be doing our best to reach out to every constituent group to let them know they are eligible to nominate candidates for the election. That said, this is our first election and we don’t yet have contact information for everybody who is eligible, so we want your help getting the word out.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;If you are interested in nominating someone – or yourself – to be a candidate in this election, read this post in its entirety.&lt;&#x2F;em&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;To learn about what the Governing Board is, what it does, and the context it operates in, read this &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;12&#x2F;electing-our-first-governing-board&#x2F;&quot;&gt;blog post from last December&lt;&#x2F;a&gt;. You are also welcome to read &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;media&#x2F;2024-04-governing-board-terms-of-reference.pdf&quot;&gt;the Governing Board’s current bylaws&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2024&#x2F;04&#x2F;election-announcement&#x2F;#how-to-nominate&quot;&gt;Go here for instructions on submitting a nomination!&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;election-schedule&quot;&gt;Election schedule&lt;&#x2F;h2&gt;
+&lt;p&gt;Here is the timeline for this election season, which will happen in the second quarter of every year:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;2024-election-timeline.png&quot; alt=&quot;A visual election timeline for this year: Announcements on April 15, Nominations begin April 20, Campaigning begins April 27, Voting begins May 18, and Results announced on June 3.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;To minimize confusion, and maximize inclusion given our international community, we will be using &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Anywhere_on_Earth&quot;&gt;“Anywhere on Earth” (AOE) time&lt;&#x2F;a&gt;. If you’re not familiar with AOE time, here’s what it means using our nomination period as an example: so long as it’s still Friday, April 26th in any timezone on the planet (from UTC+12 to UTC-12), the nomination period is open.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-our-elections-work&quot;&gt;How our elections work&lt;&#x2F;h2&gt;
+&lt;p&gt;Our Governing Board is made up of 9 different constituency groups across 3 categories: nonprofit and community representatives, funder representatives, and foundation representatives. Each group has been allocated seats on the board, gets to nominate its own slate of candidates, and gets to vote within that slate of candidates.&lt;&#x2F;p&gt;
+&lt;p&gt;For example, Individual Members get to nominate themselves, and vote on the Individual Members who are qualified candidates. The only exception is with the Managing Director (hi, that’s me) who automatically gets a seat on the Governing Board, but that’s just one seat of many.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the composition of seats on the Governing Board:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;Community representatives&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: center&quot;&gt;Funder representatives&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: center&quot;&gt;Foundation representatives&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;4 Individual Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;4 Platinum Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;3 Guardians&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;3 Ecosystem Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;3 Gold Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;2 Spec Core Team Members&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;2 Associate Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;2 Silver Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;Managing Director&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;Learn how to become a member&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;support&#x2F;&quot;&gt;see a list of our current organizational members&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We will be seating candidates for all constituency groups in our first election. Starting in 2025, we’ll run elections for half of the constituency groups. This is so that we maintain some level of continuity and institutional knowledge across each election. Consequently, while the first elected representatives from the Guardians, Spec Core Team, Platinum, and Ecosystem Members will serve 2-year terms, the first elected representatives from Gold, Silver, Individual, and Associate Members will serve a 1-year term. We anticipate that many people in those constituencies who are elected this year will run for re-election in 2025.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;2024-election-years.png&quot; alt=&quot;A visual election timeline for the next few years: in 2024 we elect all constituencies, in 2025 we elect Gold, Silver, Individual, and Associate Members, in 2026 we elect Platinum, Ecosystem, Guardians, and Spec Core Team Members, in 2027 we elect Gold, Silver, Individual, and Associate Members, and so on.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;There are currently no term limits, but term limits are a best practice in open governance so we intend to introduce them as we find our collective footing.&lt;&#x2F;p&gt;
+&lt;p&gt;For greater detail, &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;12&#x2F;electing-our-first-governing-board&#x2F;&quot;&gt;please read this blog post from last December&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;who-can-nominate&quot;&gt;Who can nominate&lt;&#x2F;h2&gt;
+&lt;p&gt;You must be a member of one of the constituency groups in order to nominate yourself or someone else to be a candidate in the election. By far our largest constituency group are Individual Members, who number in the 100’s. If you have donated at least $60 USD to the Foundation since April 20, 2023, on any of Donorbox, Patreon, or Liberapay, then you are eligible to nominate and vote.&lt;&#x2F;p&gt;
+&lt;p&gt;All nominees must have consented to nomination &lt;em&gt;before being nominated&lt;&#x2F;em&gt; and must be a community member in good standing. That means they must have a clean track record with respect to our &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;legal&#x2F;code-of-conduct&#x2F;&quot;&gt;Code of Conduct&lt;&#x2F;a&gt;. We want our Governing Board to be a clearing house for a variety of priorities and perspectives, and to be able to hold space for each other even when there are disagreements.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;who-can-vote&quot;&gt;Who can vote&lt;&#x2F;h2&gt;
+&lt;p&gt;All members of each constituency group are entitled to vote on the candidates within that constituency group. We will be reaching out to everyone we have contact information for, to ensure we have our voter rolls together before voting begins in May.&lt;&#x2F;p&gt;
+&lt;p&gt;We will hold an election for every constituency even if a given constituency has fewer candidates than there are seats allocated for them on the Governing Board. This is, effectively, as a vote of confidence.&lt;&#x2F;p&gt;
+&lt;p&gt;If you believe you are eligible to participate but have not heard from us or &lt;a href=&quot;https:&#x2F;&#x2F;www.opavote.com&#x2F;&quot;&gt;OpaVote&lt;&#x2F;a&gt; – the election system we have chosen for this year’s elections – by May 10th, &lt;a href=&quot;mailto:elections@foundation.matrix.org&quot;&gt;please email us promptly&lt;&#x2F;a&gt;. We build our voter rolls on May 17th and can&#x27;t change them after that!&lt;&#x2F;p&gt;
+&lt;p&gt;All of the candidates will be listed on an elections page here on our website which we’ll publish on April 29th.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-to-prepare-yourself&quot;&gt;How to prepare yourself&lt;&#x2F;h2&gt;
+&lt;p&gt;If you want to be a candidate in the election, there are a few things you should know:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;All candidates will be listed on our website, grouped by the constituency group.&lt;&#x2F;li&gt;
+&lt;li&gt;We do not require people to use their “legal name.”&lt;&#x2F;li&gt;
+&lt;li&gt;Candidates who are nominated by an organizational member will have their affiliation listed.&lt;&#x2F;li&gt;
+&lt;li&gt;We expect candidates to provide a short bio and a short statement, collectively covering qualifications and priorities.&lt;&#x2F;li&gt;
+&lt;li&gt;You are encouraged to make yourself available for conversation with members of your constituency group.&lt;&#x2F;li&gt;
+&lt;li&gt;The period for campaigning runs from April 27th to May 17th. Please note our &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;legal&#x2F;code-of-conduct&#x2F;&quot;&gt;community Code of Conduct&lt;&#x2F;a&gt; while campaigning.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;what-to-expect-if-you-win&quot;&gt;What to expect if you win&lt;&#x2F;h2&gt;
+&lt;p&gt;Congratulations! All of the winners will be announced on June 3rd, but since the elections conclude on May 31st, you may get an email with the results of the election you participated in before June 3rd.&lt;&#x2F;p&gt;
+&lt;p&gt;All elected representatives will be added to a private mailing list and Matrix room so that they can introduce themselves and communicate in between meetings. I will be reaching out to every elected representative to meet one-on-one, get acquainted, and answer questions before we convene for our first Governing Board meeting. Given the size of the board and the international nature of our ecosystem, those one-on-one meetings will likely happen over the course of a couple months.&lt;&#x2F;p&gt;
+&lt;p&gt;The Governing Board will meet as a full board twice a year, for at least 90 minutes each time, and our first 1-2 meetings will have a professional facilitator to help us collectively put our best foot forward. Expect one meeting before the end of the year, and another before the next election.&lt;&#x2F;p&gt;
+&lt;p&gt;You are likely to receive a packet of materials before each meeting which you will be expected to have reviewed. Most meetings will be held online, though we may convene meetings in-person, such as at the (soon to be announced) annual Matrix Conference. We will make every effort to make in-person meetings accessible to remote participants, and no official business will ever happen without appropriate notice, quorum, and minutes.&lt;&#x2F;p&gt;
+&lt;p&gt;While the Governing Board is an advisory board, members are encouraged to play a role in helping to carry out the activities that support the staff in delivering on the Foundation’s collective remit, such as coalescing priorities to share with the Spec Core Team and connecting with contributors and funders to implement proposals.&lt;&#x2F;p&gt;
+&lt;p&gt;We intend to charter committees – such as for finance, which would review our annual budget in detail – who will meet in between Governing Board meetings and present their assessments and recommendations to the Governing Board. These committees are where the bulk of the activity will take place since the board, which may have up to 24 members, is quite large.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-to-nominate&quot;&gt;How to nominate&lt;&#x2F;h2&gt;
+&lt;p&gt;Please &lt;a href=&quot;https:&#x2F;&#x2F;cryptpad.fr&#x2F;form&#x2F;#&#x2F;2&#x2F;form&#x2F;view&#x2F;Fjksk0AMwLWnp4T6t+tTsmNoWSMsJJg8jLXdPzIGkpc&#x2F;&quot;&gt;use this Cryptpad form to nominate for the Governing Board elections&lt;&#x2F;a&gt;. If you are unable to use the form, please refer to &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;media&#x2F;2024-nomination-form.pdf&quot;&gt;this nomination document&lt;&#x2F;a&gt; and email your responses to &lt;a href=&quot;mailto:elections@foundation.matrix.org&quot;&gt;elections@foundation.matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;All nominations are subject to review in accordance with our bylaws. We will email you to confirm receipt within 2 business days, and we will publish our elections landing page with all of the nominees, and other details, by April 27th.&lt;&#x2F;p&gt;
+&lt;p&gt;Thank you for your ongoing support, and good luck to all the candidates in the upcoming elections!&lt;&#x2F;p&gt;
+&lt;p&gt;Ad astra per aspera 🚀&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Open Source Infrastructure must be a publicly funded service.</title>
+    <published>2024-04-04T16:30:00+00:00</published>
+    <updated>2024-04-04T16:30:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/04/open-source-publicly-funded-service/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/04/open-source-publicly-funded-service/</id>
+    <content type="html">&lt;p&gt;Hi folks,&lt;&#x2F;p&gt;
+&lt;p&gt;The events of the last week have been utterly terrifying as we’ve seen a highly sophisticated targeted attack on open source infrastructure play out in public, in the form of the &lt;a href=&quot;https:&#x2F;&#x2F;arstechnica.com&#x2F;security&#x2F;2024&#x2F;04&#x2F;what-we-know-about-the-xz-utils-backdoor-that-almost-infected-the-world&#x2F;&quot;&gt;liblzma backdoor&lt;&#x2F;a&gt;. Matrix is not impacted by the attack (none of our code or infrastructure is using liblzma or xz 5.6), but it has been a massive wakeup call in terms of understanding the risks posed by overstretched open source maintainership.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;The attack particularly resonates as Matrix’s maintainership is distinctly overstretched currently - despite Matrix ending up at the heart of huge amounts of critical infrastructure, ranging from the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Delta_(situational_awareness_system)&quot;&gt;Ukrainian MOD&lt;&#x2F;a&gt; to &lt;a href=&quot;https:&#x2F;&#x2F;innovationhub-act.org&#x2F;case-studies&#x2F;ni2ce-messenger&#x2F;&quot;&gt;NATO&lt;&#x2F;a&gt; and at least 15 other countries and major international organisations that we know of.&lt;&#x2F;p&gt;
+&lt;p&gt;Historically, Matrix development has been largely been funded by Element, the company set up by the team who created Matrix in order to fund their work on it. As unpopular as VC funding is in some circles, the Matrix community owes a &lt;em&gt;huge&lt;&#x2F;em&gt; debt of thanks to Element’s investors (Status, Notion, firstminute, Dawn, Automattic, Protocol Labs and Metaplanet) and Amdocs for funding over $50M of work on both Matrix and Element since 2017.  Having a large professional team paid as their day job to maintain Matrix has helped enormously against xz-style attacks.&lt;&#x2F;p&gt;
+&lt;p&gt;However, this model is simply not sustainable: these days, Element is focused on being able to pay its own costs rather than being dependent on further VC investment. This leaves a massive hole in funding for Matrix, and we’ve &lt;a href=&quot;&#x2F;blog&#x2F;2023&#x2F;12&#x2F;25&#x2F;the-matrix-holiday-update-2023&#x2F;#in-other-news&quot;&gt;already seen the impact of this&lt;&#x2F;a&gt; with projects like Dendrite, Low Bandwidth Matrix, Account Portability, P2P Matrix and Third Room no longer able to be funded by Element (for now).  Meanwhile, the remaining core team is stretched.&lt;&#x2F;p&gt;
+&lt;p&gt;This feels particularly unfortunate given the number of governments and public sector organisations who rely on Matrix, but in practice it turns out that finding a way for them to fund open source maintenance can be surprisingly challenging - despite the potential impact of Matrix not being able to invest in security (or cryptography, or trust &amp;amp; safety, or performance improvements) being catastrophic, especially as Matrix becomes more and more of a high value target for large scale adversaries.&lt;&#x2F;p&gt;
+&lt;p&gt;There seems to be two types of problems: firstly, those who don’t understand why it might be beneficial for a government to pay for open source at all.  A particularly amazing real-life example of this came from a certain Ministry of Defence last week, whose procurement department (on being asked to help fund core Matrix development, given their operational dependency on Matrix) said: “You have to understand, we’re responsible for taxpayer money here. We can’t just make a donation to your open source project.” Apparently if we had built the same tech as a proprietary product, paying for it would apparently have been an infinitely better use of taxpayer money.  Now, thankfully, organisations like &lt;a href=&quot;https:&#x2F;&#x2F;fsfe.org&#x2F;&quot;&gt;FSFE&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;edri.org&#x2F;&quot;&gt;EDRi&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;osb-alliance.de&#x2F;&quot;&gt;OSBA&lt;&#x2F;a&gt; have made major strides in educating governments to understand that funnelling taxpayer money into proprietary software licences does not benefit the public in the way that using open source software does - but old views die hard.&lt;&#x2F;p&gt;
+&lt;p&gt;Then, perversely, the second problem emerges: FSFE’s well-intentioned “&lt;a href=&quot;https:&#x2F;&#x2F;publiccode.eu&#x2F;&quot;&gt;Public Money, Public Code&lt;&#x2F;a&gt;” campaign is often given to us as a reason to insist on funding features rather than maintenance.  This seems to be because procurement departments want to have something concrete to procure as a one-off, rather than making an ongoing commitment to keep the project secure, existing and healthy - and so focus on funding new features (or hiring their own staff to build their features) and ignore maintenance.  If you ever wondered why Element has so many weird and wonderful features (which are not always maintained as well as they might), this is part of the problem.  The problem is captured beautifully in &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=oB-v2_YnrHk&quot;&gt;Tobie Langel’s excellent (and highly topical) talk&lt;&#x2F;a&gt; from this year’s State of Open Con:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;20240404-slide.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;However: we think there might (just might!) be a long-term solution in sight.&lt;&#x2F;p&gt;
+&lt;p&gt;Particularly in the wake of the xz&#x2F;liblzma attack, it seems that governments may be more aware that they and their societies depend enormously on FOSS infrastructure to operate.  Free and open source software has literally become shared digital public infrastructure.  &lt;strong&gt;And much like shared physical public infrastructure - bridges, roads, sea defences, etc - FOSS maintenance should be funded by governments on behalf of the taxpayer.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This funding should &lt;strong&gt;NOT&lt;&#x2F;strong&gt; be tied to specific feature development, but simply funding the core maintenance of the infrastructure - paying for the maintainers (and&#x2F;or letting them or their umbrella org hire trusted ones!) to ensure the core project remains healthy and secure.  Otherwise, the pressure just rises on the core project to chase feature development at the expense of maintenance (making maintenance harder) - or, worse, to be pushed away from open source into building proprietary solutions or crippling the open source by moving valuable features into side proprietary products.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, the good news is that some organisations are already trying to solve this problem:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nlnet.nl&#x2F;&quot;&gt;NLnet&lt;&#x2F;a&gt; &amp;amp; &lt;a href=&quot;https:&#x2F;&#x2F;www.ngi.eu&#x2F;about&quot;&gt;NGI&lt;&#x2F;a&gt; are excellent in directing EU funding to smaller FOSS projects (e.g. funding &lt;a href=&quot;https:&#x2F;&#x2F;www.google.com&#x2F;search?q=site%3Ahttps%3A%2F%2Fnlnet.nl%2Fproject+matrix&quot;&gt;loads of Matrix community projects&lt;&#x2F;a&gt;),&lt;&#x2F;li&gt;
+&lt;li&gt;Similarly the &lt;a href=&quot;https:&#x2F;&#x2F;prototypefund.de&#x2F;&quot;&gt;Prototype Fund&lt;&#x2F;a&gt; is very helpful for smaller projects (e.g. funding bits of &lt;a href=&quot;https:&#x2F;&#x2F;prototypefund.de&#x2F;project&#x2F;conduit&#x2F;&quot;&gt;Conduit&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;prototypefund.de&#x2F;project&#x2F;threematrix-eine-bruecke-zwischen-threema-und-dem-matrix-protokoll&#x2F;&quot;&gt;ThreeMatrix&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;prototypefund.de&#x2F;project&#x2F;alertrix&#x2F;&quot;&gt;alertrix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;openssf.org&#x2F;about&#x2F;charter&#x2F;&quot;&gt;OpenSSF&lt;&#x2F;a&gt; is a Linux Foundation project focused on helping solve the problem&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.sovereigntechfund.de&#x2F;&quot;&gt;Sovereign Tech Fund&lt;&#x2F;a&gt; similarly supports smaller projects to act as a digital public good&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;copiepublique.fr&#x2F;&quot;&gt;Copie Publique&lt;&#x2F;a&gt; takes a different approach to encourage private companies to contribute back directly to FOSS projects&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;digital-strategy.ec.europa.eu&#x2F;en&#x2F;policies&#x2F;edic&quot;&gt;European Digital Infrastructure Consortium (EDIC)&lt;&#x2F;a&gt; is a new strategy from the EU to enable multi-country funding of digital infrastructure projects (but so far seems to be aiming at funding governments themselves, rather than underlying FOSS projects).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;However, most of these are not yet operating at the scale of a project like Matrix, and the irony is that the bigger projects need even more financial support than smaller projects to keep alive and sustainable.  High level funding does exist in the form of the EU’s &lt;a href=&quot;https:&#x2F;&#x2F;research-and-innovation.ec.europa.eu&#x2F;funding&#x2F;funding-opportunities&#x2F;funding-programmes-and-open-calls&#x2F;horizon-europe_en&quot;&gt;Horizon&lt;&#x2F;a&gt; programme for R&amp;amp;D and Innovation (which provides the upstream for NLnet and NGI), with a total budget of €95.5B. However, it’s currently set up to only fund consortiums rather than independent projects - and the last thing a typical open source project needs is to orchestrate and administer an international consortium of vendors and universities in order to get itself funded.&lt;&#x2F;p&gt;
+&lt;p&gt;The perfect solution in the EU would probably be a NLnet-style organisation with the remit to route funds in the range of low-millions a year to larger projects like Matrix which have become widespread critical infrastructure - to allow them to thrive in their mission without trying to coerce typical public sector procurement into picking up the bill. Or maybe a tax should be instantiated to force large scale open source projects users to route recurring funding to the project maintainers. So, &lt;strong&gt;Governments: please route taxpayer money to support the maintenance (not just features!) of open source projects that your country depends upon, before it’s too late.&lt;&#x2F;strong&gt; This also means educating procurement to the topic and updating procurement frameworks to be able to support this.&lt;&#x2F;p&gt;
+&lt;p&gt;Meanwhile, we are in the middle of running a &lt;a href=&quot;&#x2F;blog&#x2F;2024&#x2F;01&#x2F;2024-roadmap-and-fundraiser&#x2F;&quot;&gt;fundraising drive&lt;&#x2F;a&gt; to help address the funding gap, which is currently making cautiously positive progress towards its £900K target, having raised £415K since last year, entirely thanks to &lt;a href=&quot;&#x2F;support&#x2F;&quot;&gt;Individual, Silver and Gold members joining&lt;&#x2F;a&gt;. Our new membership model is working - giving the wider Matrix community a way to join the Foundation in order to participate in the upcoming Governing Board, and help steer the direction of the project, while contributing funding! So while we hope that governments will read this blog post and point out ways to sustainably fund more of the maintenance they depend on - today, you can help too by persuading your organisation (or yourself!) to  &lt;strong&gt;&lt;a href=&quot;&#x2F;membership&#x2F;&quot;&gt;become a member today&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; and help keep Matrix funded and pointed in the right direction.&lt;&#x2F;p&gt;
+&lt;p&gt;thanks,&lt;&#x2F;p&gt;
+&lt;p&gt;Matthew&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Why the Matrix.org Homeserver Exists?</title>
+    <published>2024-03-14T15:30:00+00:00</published>
+    <updated>2024-03-14T15:30:00+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/03/why-matrix-org/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/03/why-matrix-org/</id>
+    <content type="html">&lt;p&gt;Matrix self-defines as the go-to protocol for &quot;open, secure, decentralised communications&quot;. The Matrix.org Foundation defines &quot;maximising […] the number of online servers in the open federation&quot; as &lt;a href=&quot;&#x2F;about&#x2F;#mission&quot;&gt;a key objective in its mission&lt;&#x2F;a&gt;. So why is the Matrix.org homeserver, probably the largest homeserver in the whole federation, still in open registration mode?&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s dive into the technical, and user experience choices behind it.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;a-point-of-centralisation&quot;&gt;A point of centralisation&lt;&#x2F;h2&gt;
+&lt;p&gt;The Matrix protocol is heavily decentralised. It goes beyond just federation: every single server in a room maintains a local copy of that room in sync with all the other servers participating in the conversation.&lt;&#x2F;p&gt;
+&lt;p&gt;Matrix is often compared to email but for instant messaging. The first thing that comes to mind is that email might be federated, but it&#x27;s no longer &lt;em&gt;that&lt;&#x2F;em&gt; decentralised. According to &lt;a href=&quot;https:&#x2F;&#x2F;www.sellcell.com&#x2F;blog&#x2F;most-popular-email-provider-by-number-of-users&#x2F;&quot;&gt;this article on sellcell.com&lt;&#x2F;a&gt;, Gmail.com provides nearly 50% of the active email accounts in 2023, iCloud follows with 27.8%, and Outlook.com owns 13.1% of them.&lt;&#x2F;p&gt;
+&lt;p&gt;The Matrix.org Foundation doesn&#x27;t want to become the Gmail.com or Outlook.com of Matrix. It doesn&#x27;t generate any revenue from its users and runs on &lt;a href=&quot;&#x2F;support&quot;&gt;donations&lt;&#x2F;a&gt;. The costs of hosting, maintenance and support of the Matrix.org homeserver grow with the number of people using it.&lt;&#x2F;p&gt;
+&lt;p&gt;A steep and steady growth comes with three significant issues:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The technical maintenance costs do not grow linearly with the number of users. The infrastructure itself costs more, but more time needs to be spent on research and development to make the backend scale.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Moderation becomes more difficult. The more reports the Trust &amp;amp; Safety team has to handle, the less time it can spend on tools to improve the moderation experience.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Support can&#x27;t be automated and is very costly to scale. The more users on Matrix.org, the less responsive the support team can be (unless we find resources to hire more support team members) and the more frustrating it is for everyone involved.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;In short: everyone stands to benefit from Matrix.org not being a supermassive homeserver that is difficult to leave.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;mindfulness-of-others&quot;&gt;Mindfulness of others&lt;&#x2F;h2&gt;
+&lt;p&gt;One of the goals of the Matrix.org Foundation is to maximise the number of Matrix users in the open federation. Another goal is to make sure Matrix remains decentralised by increasing the number of servers in that same open federation.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the fundamental aspects that makes Matrix appealing is decentralisation and (open) federation. Those concepts are not as difficult for the general public to understand as some claim. But we must acknowledge the general public is not regularly confronted with them and their implications when trying new apps.&lt;&#x2F;p&gt;
+&lt;p&gt;For Matrix to gain traction outside of technical circles, it needs to be mindful of the time and habits of the general public. Whether we like it or not, people are used to trying apps, not protocols or providers. It is not reasonable to ask a user to pick a homeserver before they even know what a homeserver is, nor what this decision entails. People need to be able to download an app, try it right away, and get some (potential) value from it before making more advanced decisions.&lt;&#x2F;p&gt;
+&lt;p&gt;We have made Matrix.org one of the most prominent entry points for people discovering Matrix because we believe inclusivity is one of the fundamental premises of Matrix&#x27;s global success.&lt;&#x2F;p&gt;
+&lt;p&gt;So then, how do we reconcile the need for ease of adoption with the goal of decentralisation?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-way-in-and-a-way-out&quot;&gt;A way in and a way out&lt;&#x2F;h2&gt;
+&lt;p&gt;Creating an account on Matrix.org is a typical first step in the Matrix user journey. Since agglomeration around a single instance is against the goals of Matrix and its Foundation, users need to have a way out and incentives to move.&lt;&#x2F;p&gt;
+&lt;p&gt;To move to another homeserver, a user needs to be able to pick a homeserver and move there.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;picking-a-homeserver&quot;&gt;Picking a homeserver&lt;&#x2F;h3&gt;
+&lt;p&gt;Matrix community member Austin Huang created &lt;a href=&quot;https:&#x2F;&#x2F;servers.joinmatrix.org&quot;&gt;servers.joinmatrix.org&lt;&#x2F;a&gt; to list all the servers with open registrations where people could find a new home. I am working on creating an official and curated version. We need the instance picker to work on Matrix.org&#x27;s website, and provide data that the client apps can reuse and present to users who want to move away from Matrix.org.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;moving-to-the-new-homeserver&quot;&gt;Moving to the new homeserver&lt;&#x2F;h3&gt;
+&lt;p&gt;The Foundation will implement an account migration tool to allow people to migrate to another server. A proper portable identity mechanism would be better - however, the Foundation had to pause its development due to a lack of funding. Such a mechanism would also rely on a new room version. It would only allow migrating conversations that happened after a room upgrade to that hypothetical new version, which results in data loss.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-most-reasonable-solution&quot;&gt;The most reasonable solution&lt;&#x2F;h2&gt;
+&lt;p&gt;There are alternatives to a prominent onboarding homeserver like the Matrix.org homeserver. We don&#x27;t find any of them satisfactory:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Picking a server randomly when a user wants to sign up in the app is confusing and has a lot of security implications. This is not acceptable.&lt;&#x2F;li&gt;
+&lt;li&gt;Forcing the user to choose a server when they sign up is a highly cumbersome process that does not respect the user&#x27;s time and resources.&lt;&#x2F;li&gt;
+&lt;li&gt;Portable identities are very desirable but will take time to materialise.&lt;&#x2F;li&gt;
+&lt;li&gt;P2P Matrix depends on a portable identity mechanism and is further away in the future.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;As you can see, we at the Foundation need to strike a balance as we pursue goals that are occasionally in tension with one another, and the Matrix.org homeserver is a prime example. We are committed both to making Matrix more accessible, and to doing the work to decenter the Matrix.org homeserver.&lt;&#x2F;p&gt;
+&lt;p&gt;You can help us achieve both: the Foundation needs your support! If you can afford to, please consider &lt;a href=&quot;&#x2F;support&#x2F;&quot;&gt;supporting us financially&lt;&#x2F;a&gt;. If you want to contribute to the Foundation’s governance, consider &lt;a href=&quot;&#x2F;membership&#x2F;&quot;&gt;becoming a member&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Opening up the Foundation</title>
+    <published>2024-02-29T19:00:00+00:00</published>
+    <updated>2024-02-29T19:00:00+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/02/opening-up-foundation/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/02/opening-up-foundation/</id>
+    <content type="html">&lt;p&gt;Since the Foundation got itself a Managing Director at the end of last summer, it has been working on its independence. With lines more clearly defined between its major supporter Element and itself, the Foundation has been able to clarify its role. &lt;strong&gt;The Foundation&#x27;s major goal, alongside stewarding the specification, is to fill in the gaps where there is no direct organisational interest, to make the Matrix ecosystem grow.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;There are two levels where the Foundation can have an impact: at the governance level, in the form of the Governing Board; and at the hands-on level, with working groups and projects.&lt;&#x2F;p&gt;
+&lt;p&gt;See below what the coming year holds for us.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;setting-the-direction-together&quot;&gt;Setting the direction, together&lt;&#x2F;h2&gt;
+&lt;p&gt;The Foundation wants to be a place for the various entities who depend on Matrix to gather, share their insights and current situation, make decisions on what they want for the future of Matrix, and pool resources to make it happen.&lt;&#x2F;p&gt;
+&lt;p&gt;A place that gives everyone in the ecosystem an opportunity to be proactive in their problem solving, sharing the cost of maintenance and development of projects that may lack commercial support.&lt;&#x2F;p&gt;
+&lt;p&gt;It is also meant to be a place where all the members can discuss topics that need to be addressed, but that they cannot address on their own. Indeed, some components of the Matrix ecosystem receive attention because they are commercially viable, if not already sustainable. Some other projects might not be possible to monetise ethically. Or it might make sense for a neutral organisation to act as a point of reference. One example would be a strong Trust &amp;amp; Safety suite.&lt;&#x2F;p&gt;
+&lt;p&gt;The Governing Board will help set the direction of the Foundation, so it can deliver on what matters the most to the ecosystem. For all the details on the Governing Board and its mission, please head to &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;12&#x2F;electing-our-first-governing-board&quot;&gt;Josh&#x27;s excellent blog post&lt;&#x2F;a&gt;. If you have an opinion on the direction the Foundation should follow, consider &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;becoming a member&lt;&#x2F;a&gt; and running for the board!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;more-room-for-the-community&quot;&gt;More room for the community&lt;&#x2F;h2&gt;
+&lt;p&gt;Joining the Governing Board is not the only way to contribute to the Matrix ecosystem. The Foundation hosts numerous projects, and directly contributes to some of them. But there are no guidelines regarding how a project becomes hosted or managed by the Foundation, nor any guidelines on who can gain or lose access to a repository.&lt;&#x2F;p&gt;
+&lt;p&gt;In coordination with the Governing Board, the Foundation will set-up processes to better define what a Foundation project is, how it can join the &lt;code&gt;matrix-org&#x2F;&lt;&#x2F;code&gt; namespace on GitHub, how it is governed, and when it makes sense to contribute financially. This is particularly important to make sure that the Foundation is open to new contributors and projects.&lt;&#x2F;p&gt;
+&lt;p&gt;We don&#x27;t want to define processes &lt;em&gt;a priori&lt;&#x2F;em&gt; and force them onto the project, creating unnecessary top-down bureaucracy. We would rather experiment, see what processes actually work in practice, and then formalise and generalise them.&lt;&#x2F;p&gt;
+&lt;p&gt;We are starting with a couple of experiments: community member &lt;a href=&quot;https:&#x2F;&#x2F;mtrnord.blog&#x2F;&quot;&gt;MTRNord&lt;&#x2F;a&gt; and myself &lt;a href=&quot;https:&#x2F;&#x2F;ergaster.org&quot;&gt;Thib&lt;&#x2F;a&gt; have &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2024&#x2F;02&#x2F;website-office-hours&#x2F;&quot;&gt;launched the Matrix.org Website Office Hours&lt;&#x2F;a&gt; to onboard everyone who wants to contribute to the website. Web development is a rather widespread skill, and it should be a good testbed to gauge our ability to onboard a diverse group of contributors. You should join us!&lt;&#x2F;p&gt;
+&lt;p&gt;A second initiative will be launched on a topic our community is full of energy and ideas about: a Trust &amp;amp; Safety working group, steered by myself. The working group will be tightly scoped to a single problem area, and tasked to come up with a single deliverable. We will spin up new working groups to tackle new problems. We will share the details of the first T&amp;amp;S working group in early April on this blog. You can &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;atom.xml&quot;&gt;subscribe to our RSS feed&lt;&#x2F;a&gt; or follow us on our socials to stay tuned.&lt;&#x2F;p&gt;
+&lt;p&gt;This experiment will establish a framework for collaborations on other important topics. This will help us make the Matrix ecosystem one that all individuals and organisations are able to contribute to.&lt;&#x2F;p&gt;
+&lt;p&gt;This post is the second post in &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2024&#x2F;01&#x2F;2024-roadmap-and-fundraiser&#x2F;&quot;&gt;our roadmap series&lt;&#x2F;a&gt;, and while governance isn’t the most exciting thing in open source, it makes the difference between a project that stands the test of time and a project that fails.&lt;&#x2F;p&gt;
+&lt;p&gt;Support the Matrix ecosystem if you want to see it thrive, support the Foundation in its quest for inclusivity: become &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&quot;&gt;a member&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;support&quot;&gt;a supporter&lt;&#x2F;a&gt; today!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Launching the Matrix.org Website Office Hours</title>
+    <published>2024-02-20T16:00:00+00:00</published>
+    <updated>2024-04-25T16:00:00+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/02/website-office-hours/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/02/website-office-hours/</id>
+    <content type="html">&lt;p&gt;The Matrix.org website is the public face of the Foundation, and the first thing you stumble upon when looking up “matrix chat” on a search engine. It’s a very important step in people’s Matrix journey.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;issues&#x2F;1502&quot;&gt;A lot of thought&lt;&#x2F;a&gt; has been put into making a website &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;issues&#x2F;1543&quot;&gt;that talks to the various audiences&lt;&#x2F;a&gt; visiting it, but we still have a lot of room for improvement!&lt;&#x2F;p&gt;
+&lt;p&gt;The website is only maintained by community member &lt;a href=&quot;https:&#x2F;&#x2F;mtrnord.blog&#x2F;&quot;&gt;MTRNord&lt;&#x2F;a&gt; in a volunteer way, and part-time by me, &lt;a href=&quot;https:&#x2F;&#x2F;ergaster.org&quot;&gt;Thib&lt;&#x2F;a&gt;. We could use an extra pair of hands or two, but to make the most of people’s desire to help we need to let them know where they can have the most impact depending on their skill set, and how we can accept their help!&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;We did a small scale pilot of Website Office Hours on Tuesday 20. We gathered in an Element Call to talk, review PRs and issues, and merge&#x2F;fix them! It looked like a form of peer programming since I (Thib) was sharing my Github and VSCode windows while working on the site, and we discussed it. A few people came by, and gave feedback about the format.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;We are happy to launch the Matrix.org Website Office Hours, on Thursdays every other week at 17:00 CET&#x2F;CEST!&lt;&#x2F;strong&gt; starting next week on Thursday 29. You can join the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;%23matrix.org-website:matrix.org&quot;&gt;#matrix.org-website:matrix.org&lt;&#x2F;a&gt; where all the fun happens. We will embed Element Call in the website room as well, but you can &lt;a href=&quot;https:&#x2F;&#x2F;call.element.io&#x2F;room&#x2F;#&#x2F;matrixorg-website-office-hour?roomId=!kzyGmYCZimtZaSOVyP:call.ems.host&amp;amp;password=_ufRbbGJcRX8rwNXNo4atQ&quot;&gt;join the Call directly&lt;&#x2F;a&gt; if you’re not interested in the chat. &lt;a href=&quot;https:&#x2F;&#x2F;mtrnord.blog&#x2F;&quot;&gt;MTRNord&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;ergaster.org&quot;&gt;myself&lt;&#x2F;a&gt; will sit in that call and monitor that room for one hour, browsing and prioritising issues of the matrix.org website, and actually working on it.&lt;&#x2F;p&gt;
+&lt;p&gt;Come and contribute to Matrix. Get involved, grow your skills, and make the world a better place with us!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>A roadmap and appeal for help from The Matrix.org Foundation</title>
+    <published>2024-01-30T17:00:00+00:00</published>
+    <updated>2024-01-30T17:00:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/01/2024-roadmap-and-fundraiser/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/01/2024-roadmap-and-fundraiser/</id>
+    <content type="html">&lt;h2 id=&quot;a-new-fundraising-drive&quot;&gt;A new fundraising drive&lt;&#x2F;h2&gt;
+&lt;p&gt;Today we launch a new fundraising drive, talk about the scope of the Foundation&#x27;s work, and begin to unpack our emerging roadmap for the future. &lt;strong&gt;There is a lot going on and we need your help to keep it going!&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;At the end of 2022 Matthew and Amandine &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2022&#x2F;12&#x2F;25&#x2F;the-matrix-holiday-update-2022&#x2F;&quot;&gt;sounded the alarm&lt;&#x2F;a&gt;: the Foundation needed more support. To deliver that, they &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2022&#x2F;12&#x2F;01&#x2F;funding-matrix-via-the-matrix-org-foundation&#x2F;#introducing-foundation-memberships-and-the-governing-board&quot;&gt;launched the Foundation&#x27;s membership program&lt;&#x2F;a&gt;. They also introduced open governance, and committed to hiring a Managing Director to act as a robust, neutral steward.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;You can help: If you are already sold on Matrix, &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;become a member today&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt; To find out how the last year has gone, and how your support helps us to serve the Matrix ecosystem, read on.&lt;&#x2F;p&gt;
+&lt;p&gt;Over the last year, there are lots of positive, healthy signs for Matrix. New members like &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;06&#x2F;beeper-joins-the-foundation&#x2F;&quot;&gt;Beeper&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;06&#x2F;gematik-joins-the-foundation&#x2F;&quot;&gt;gematik&lt;&#x2F;a&gt; — and hundreds of individuals ​— boosted our annual revenues from £82K to £364K. The open network has grown from 80.3M to 115M addressable users. We&#x27;ve invested in long-term interoperability efforts at the IETF. And we&#x27;ve shifted focus from experiments to polish, usability, and advocacy.&lt;&#x2F;p&gt;
+&lt;p&gt;We&#x27;ve supported development of core libraries, and subsidize hosting for FOSS communities like GNOME and KDE. The Foundation runs the Matrix.org homeserver, with over 250K daily active users, and operates several public bots and bridges. And indeed, the Foundation &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;10&#x2F;26&#x2F;hello-world&#x2F;&quot;&gt;hired a Managing Director&lt;&#x2F;a&gt; 👋.&lt;&#x2F;p&gt;
+&lt;p&gt;You&#x27;ll find a full accounting of our 2023 activity and finances in our first Annual Report, slated to come out around April 2024.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;an-inflection-point-for-matrix&quot;&gt;An inflection point for Matrix&lt;&#x2F;h2&gt;
+&lt;p&gt;We are incredibly proud of what we&#x27;ve accomplished in the last year. As Matrix approaches its 10th anniversary, we are arriving at an inflection point. To continue on this trajectory, we need your help.&lt;&#x2F;p&gt;
+&lt;p&gt;Element used to subsidize our activity, and still donates upwards of £3M in core development annually, but we are paying our own bills now. While we managed a 400+% increase in revenue to £364K last year, at £440K our expenses exceeded our revenue. As we enter our first full year of paying our own bills, the full cost of operating the Foundation at its current scope is projected to stabilize somewhere north of £900K in 2024. And the more we can raise beyond £900K, the less dependent the ecosystem is on Element.&lt;&#x2F;p&gt;
+&lt;p&gt;As I get more settled in, we&#x27;ll deliver more granular financial projections and reporting. For now, the rough breakdown of those projected expenses:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;£550K in staffing 4 full-time people covering management, advocacy, standards development, and trust and safety, as well as external part-time staff for core project and bridge maintenance and infra ops&lt;&#x2F;li&gt;
+&lt;li&gt;£250K in servers and other third-party providers&lt;&#x2F;li&gt;
+&lt;li&gt;£100K in administrative costs covering legal, accounting, and compliance&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;To put that £900K figure in perspective, the &lt;a href=&quot;https:&#x2F;&#x2F;www.python.org&#x2F;psf&#x2F;records&#x2F;&quot;&gt;Python Software Foundation&#x27;s expenses&lt;&#x2F;a&gt; are nearer £2.9M, and &lt;a href=&quot;https:&#x2F;&#x2F;signal.org&#x2F;blog&#x2F;signal-is-expensive&#x2F;&quot;&gt;Signal&#x27;s annual costs&lt;&#x2F;a&gt; are in the ballpark of £39M!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;This year is exciting and full of promise, and there are many reasons to be hopeful. If the work we are doing to support Matrix is valuable to you, we need your help to continue it well past 2024. We need more organizations to &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;step up as members&lt;&#x2F;a&gt; to invest in the Matrix ecosystem. Otherwise, we need to start scaling back programs and staff starting January 2025.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;We&#x27;re going to publish a series of blog posts over the next three months to unpack our work and our roadmap for the future. You&#x27;ll see posts covering: governance, ecosystem diversity and community engagement, infrastructure, trust and safety, fighting for your digital rights, and more.&lt;&#x2F;p&gt;
+&lt;p&gt;With your support, the Foundation can charge full steam ahead to deliver on the promise of making open, unencumbered, safe, secure, and private communications technology.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-hint-of-the-year-ahead&quot;&gt;A hint of the year ahead&lt;&#x2F;h2&gt;
+&lt;p&gt;The forthcoming posts in this series will dive into several of our core program areas, and explore where we aim to go. But when I think about the year ahead, three overriding themes stand out to me:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ramp up open governance of Matrix and the Foundation&lt;&#x2F;li&gt;
+&lt;li&gt;Prioritize Trust &amp;amp; Safety&lt;&#x2F;li&gt;
+&lt;li&gt;Cement the Foundation as an independent and sustainable organization&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;2024 will see the Foundation sustain and deepen work in our ongoing responsibilities:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Empowering the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;about&#x2F;#the-spec-core-team&quot;&gt;Spec Core Team (SCT)&lt;&#x2F;a&gt; to deliver an effective, modern spec change process&lt;&#x2F;li&gt;
+&lt;li&gt;Running the Matrix.org homeserver and public bridges&lt;&#x2F;li&gt;
+&lt;li&gt;Trust &amp;amp; Safety&lt;&#x2F;li&gt;
+&lt;li&gt;Communications and community engagement&lt;&#x2F;li&gt;
+&lt;li&gt;Compliance&lt;&#x2F;li&gt;
+&lt;li&gt;Governance&lt;&#x2F;li&gt;
+&lt;li&gt;Fundraising&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We will also continue investing in long-term initiatives, such as driving work toward &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;09&#x2F;matrix-2-0&#x2F;&quot;&gt;Matrix 2.0&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;12&#x2F;25&#x2F;the-matrix-holiday-update-2023&#x2F;&quot;&gt;beyond&lt;&#x2F;a&gt; and building a fully independent Foundation. With this in mind, we see several exciting milestones including:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Establish a fiscal sponsorship framework, &lt;a href=&quot;https:&#x2F;&#x2F;t2bot.io&#x2F;&quot;&gt;starting with t2bot.io&lt;&#x2F;a&gt;,&lt;&#x2F;li&gt;
+&lt;li&gt;Publishing our first ever Annual Report,&lt;&#x2F;li&gt;
+&lt;li&gt;Electing our &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;12&#x2F;electing-our-first-governing-board&#x2F;&quot;&gt;first ever Governing Board&lt;&#x2F;a&gt;,&lt;&#x2F;li&gt;
+&lt;li&gt;And hosting the first ever official Matrix conference!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;We couldn&#x27;t be more excited about what we have to share in the coming months, and we hope that our vision – which is deeply informed by community input – is something you are ready to stand behind.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Thank you for &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;support&#x2F;&quot;&gt;donating&lt;&#x2F;a&gt;, becoming &lt;a href=&quot;https:&#x2F;&#x2F;donorbox.org&#x2F;membership-303&quot;&gt;Individual Members&lt;&#x2F;a&gt;, and rallying your organization to become &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;a funding member&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;p&gt;Ad astra per aspera 🚀&lt;&#x2F;p&gt;
+&lt;p&gt;Josh Simmons, Managing Director of The Matrix.org Foundation&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Open letter to EU Member States on the proposed CSA Regulation</title>
+    <published>2024-01-22T00:00:00+00:00</published>
+    <updated>2024-01-22T00:00:00+00:00</updated>
+    <author>
+      <name>Denise Almeida</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/01/open-letter-csa/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/01/open-letter-csa/</id>
+    <content type="html">&lt;p&gt;We join our voices to technology companies, trade associations and other supporters in asking EU member states to align the Council&#x27;s position on the CSA Regulation to the position agreed by the Parliament.&lt;&#x2F;p&gt;
+&lt;p&gt;Safeguarding encryption should be a priority in negotiations, ensuring the protection of rights and freedoms around privacy and security of communications.&lt;&#x2F;p&gt;
+&lt;p&gt;A copy of the open letter sent to ministers can be read below.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;open-letter-to-eu-member-states-on-the-proposed-csa-regulation&quot;&gt;Open letter to EU Member States on the proposed CSA Regulation&lt;&#x2F;h2&gt;
+&lt;p&gt;Dear Ministers of the Interior, Justice, and Economy of EU Member States,&lt;&#x2F;p&gt;
+&lt;p&gt;We write to you as small and medium-sized companies and organizations from Europe, concerned about the proposal for a Regulation on Child Sexual Abuse (CSA). Collectively, we call on you to ensure that your country’s position on this file is brought as close as possible to the European Parliament’s (EP) one.
+We all agree that ensuring children are safe online is one of the most important duties of tech companies and for this reason, we find the European Commission’s proposed Regulation extremely worrying. If it were implemented as proposed, it would negatively impact children’s privacy and security online, while also having dramatic unforeseen consequences on the EU cybersecurity landscape, on top of creating an ineffective administrative burden&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.
+The European Parliament recently adopted its position on the file, acknowledging that scanning technologies are not compatible with the aim of having confidential and secure communications.  The crucial changes it therefore puts forward for the proposal reflect the opinions of the European Data Protection Supervisor (EDPS), the Council legal services as well as countless experts in cryptography and cybersecurity&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. It also reflects the opinion of between 63% and 69% of the companies, public authorities, NGOs and citizens consulted by the European Commission in its Impact Assessment&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.
+As small and medium-sized tech companies and organizations, we share their concerns as we know that looking for specific content – such as text, photos and videos – in an end-to-end encrypted communication would require the implementation of a backdoor, or of a similar technology called “client-side scanning”. Even if this mechanism is created with the purpose of fighting crime online, it would also quickly be used by criminals themselves, putting citizens and businesses more at risk online by creating vulnerabilities for all users alike.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;data-protection-is-a-strong-competitive-advantage&quot;&gt;Data protection is a strong competitive advantage&lt;&#x2F;h3&gt;
+&lt;p&gt;As tech companies operating within the European Union, we have built products and services in line with the strong data protection framework of the EU which still serves as an example and inspiration across the world.&lt;&#x2F;p&gt;
+&lt;p&gt;The GDPR allowed for the creation of ethical, privacy-first tech companies in Europe, that would otherwise never have been able to compete against Big Tech. It gave European companies a strong competitive advantage in that field internationally and allowed consumers to finally be able to find alternatives to American and Chinese services. Our users, both within the EU and beyond, have come to trust our commitment to safeguarding their data and this trust is a key driver of our competitiveness. The learning curve for adapting to the necessary administrative burden brought about by the GDPR was high but was worth it.
+However, the CSA Regulation could threaten this unique selling point of European IT companies and would also add a new administrative burden which we fear could overwhelm both our companies and law enforcement bodies. Considering the volume of communications and content transiting through our services, even an insignificant error rate of the technologies applied to scan for abusive material would result in millions of false positives to be manually reviewed every day.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-csa-regulation-could-erode-trust-and-safety-online&quot;&gt;The CSA Regulation could erode trust and safety online&lt;&#x2F;h3&gt;
+&lt;p&gt;In a world where data breaches and privacy scandals are increasingly common, the EU&#x27;s reputation for stringent data protection is a unique selling point for businesses operating within its borders. It provides us with a competitive edge, assuring our customers that their information is handled with the utmost care and integrity. This trust, once eroded, is challenging to rebuild, and any measures that compromise it such as mandatory scanning, or mandatory age verification have the potential to harm businesses both large and small.
+Furthermore, the EU has recently adopted Regulation 2023&#x2F;2841, which mandates that EU Institutions and bodies to consider the use of end-to-end encryption among their cybersecurity risk-management measures. There are also multiple ‘cyber’ EU proposals currently on the table, such as the Cyber Resilience Act and the Cybersecurity Act. Supporting an opposite approach for the CSA Regulation would only undermine the EU cybersecurity framework creating a contradictory, incoherent and inefficient new set of measures that companies would not be able to enforce without putting citizens and businesses at risk.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-eu-parliament-s-proposal-goes-in-the-right-direction&quot;&gt;The EU Parliament&#x27;s proposal goes in the right direction&lt;&#x2F;h3&gt;
+&lt;p&gt;Therefore, we applaud the European Parliament for its resolute stance in defending the European citizens&#x27; right to privacy and secure communication. The European Parliament’s commitment to these principles is not only a testament to its dedication to human rights, but also a beacon of hope for businesses like ours that prioritize data protection and security. The position of the Parliament includes alternatives to scanning which have a minimal impact on cybersecurity and data protection, and which experts believe would be both more effective and more efficient than mandatory scanning. Such changes of paradigm would mean going beyond the false dichotomy between privacy and security, while also making the proposal respect the proportionality principle, as requested by the Regulatory Scrutiny Board.
+Even if not perfect in our eyes, the changes the European Parliament made in its position are a good compromise to maintain digital security and confidentiality and to better protect children online. We believe that these changes strike the right balance between child protection and safeguarding privacy and cybersecurity.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;As representatives of the vibrant European small businesses community, we encourage EU Member States to continue championing the values of privacy, cybersecurity and data protection. These principles not only align with the EU&#x27;s commitment to human rights, but also serve as a foundation for a thriving and competitive business environment. Let us defend and strengthen these principles, ensuring that the EU remains an advocate of privacy in the global marketplace.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;For these reasons we call on you to:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure that Council’s position is aligned as closely as possible to the European Parliament’s. This will allow for a swifter adoption of the Regulation while building on the important work of the European Parliament.&lt;&#x2F;li&gt;
+&lt;li&gt;Maintain the high level of fundamental rights - and in particular data protection – enjoyed by citizens in the European Union.&lt;&#x2F;li&gt;
+&lt;li&gt;Refrain from forcing companies like us to conduct mass surveillance of private correspondence on behalf of law enforcement agencies.&lt;&#x2F;li&gt;
+&lt;li&gt;Guarantee a high level of cybersecurity in the EU by protecting end-to-end encryption and bringing the necessary safeguards in the text. Client-side scanning and backdoors in particular should not be mandated.&lt;&#x2F;li&gt;
+&lt;li&gt;Preserve the confidentiality of correspondence.&lt;&#x2F;li&gt;
+&lt;li&gt;Minimize the administrative burden of the proposal by making it more effective and efficient, through alternatives to mass scanning.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Signed,&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Blacknight Solutions (Ireland)&lt;&#x2F;li&gt;
+&lt;li&gt;Element (United Kingdom)&lt;&#x2F;li&gt;
+&lt;li&gt;Mail.de GmbH (Germany)&lt;&#x2F;li&gt;
+&lt;li&gt;Matrix Foundation (United Kingdom)&lt;&#x2F;li&gt;
+&lt;li&gt;Nextcloud (Germany)&lt;&#x2F;li&gt;
+&lt;li&gt;Open-Xchange (Germany)&lt;&#x2F;li&gt;
+&lt;li&gt;Renvis (Greece)&lt;&#x2F;li&gt;
+&lt;li&gt;TelemetryDeck (Germany)&lt;&#x2F;li&gt;
+&lt;li&gt;Tresorit (Switzerland)&lt;&#x2F;li&gt;
+&lt;li&gt;E Foundation (France)&lt;&#x2F;li&gt;
+&lt;li&gt;Logilab (France)&lt;&#x2F;li&gt;
+&lt;li&gt;Mailfence (Belgium)&lt;&#x2F;li&gt;
+&lt;li&gt;Murena (France)&lt;&#x2F;li&gt;
+&lt;li&gt;Olvid (France)&lt;&#x2F;li&gt;
+&lt;li&gt;Proton (Switzerland)&lt;&#x2F;li&gt;
+&lt;li&gt;Surfshark (Lithuania)&lt;&#x2F;li&gt;
+&lt;li&gt;Threema (Switzerland)&lt;&#x2F;li&gt;
+&lt;li&gt;Tuta (Germany)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Trade associations and supporters:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;ACT | The App Association&lt;&#x2F;li&gt;
+&lt;li&gt;Defend Democracy&lt;&#x2F;li&gt;
+&lt;li&gt;Gate 15&lt;&#x2F;li&gt;
+&lt;li&gt;Myntex&lt;&#x2F;li&gt;
+&lt;li&gt;Quilibrium&lt;&#x2F;li&gt;
+&lt;li&gt;Studio Legale Fabiano&lt;&#x2F;li&gt;
+&lt;li&gt;Cyberstorm&lt;&#x2F;li&gt;
+&lt;li&gt;Encryption Europe&lt;&#x2F;li&gt;
+&lt;li&gt;ISOC-CAT&lt;&#x2F;li&gt;
+&lt;li&gt;Privacy &amp;amp; Access Council of Canada&lt;&#x2F;li&gt;
+&lt;li&gt;SecureCrypt&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;A detailed summary of the proposal, drafted by the NGO EDRi, is available here: &lt;a href=&quot;https:&#x2F;&#x2F;edri.org&#x2F;our-work&#x2F;private-and-secure-communications-put-at-risk-by-european-commissions-latest-proposal&#x2F;&quot;&gt;https:&#x2F;&#x2F;edri.org&#x2F;our-work&#x2F;private-and-secure-communications-put-at-risk-by-european-commissions-latest-proposal&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
+&lt;p&gt;For more information, you can read their statement from July 2023: &lt;a href=&quot;https:&#x2F;&#x2F;edri.org&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;07&#x2F;Open-Letter-CSA-Scientific-community.pdf&quot;&gt;https:&#x2F;&#x2F;edri.org&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;07&#x2F;Open-Letter-CSA-Scientific-community.pdf&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;&#x2F;sup&gt;
+&lt;p&gt;See in particular page 134 of the impact assessment: &lt;a href=&quot;https:&#x2F;&#x2F;eur-lex.europa.eu&#x2F;legal-content&#x2F;EN&#x2F;TXT&#x2F;PDF&#x2F;?uri=CELEX:52022SC0209&quot;&gt;https:&#x2F;&#x2F;eur-lex.europa.eu&#x2F;legal-content&#x2F;EN&#x2F;TXT&#x2F;PDF&#x2F;?uri=CELEX:52022SC0209&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>The Governing Board, our next big step in open governance</title>
+    <published>2023-12-19T18:00:00+00:00</published>
+    <updated>2023-12-19T18:00:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/12/electing-our-first-governing-board/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/12/electing-our-first-governing-board/</id>
+    <content type="html">&lt;h2 id=&quot;forging-our-future-with-matrix&quot;&gt;Forging our future with Matrix&lt;&#x2F;h2&gt;
+&lt;p&gt;As 2023 winds down and I find myself in the thick of planning for 2024, I’d like to start preparing all of us in the Matrix ecosystem for what is to come.&lt;&#x2F;p&gt;
+&lt;p&gt;Next year will mark a number of important milestones in the history and evolution of Matrix: the protocol will mark its &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2014&#x2F;09&#x2F;03&#x2F;hello-world&#x2F;&quot;&gt;10th birthday&lt;&#x2F;a&gt;, we’ll see &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;09&#x2F;matrix-2-0&#x2F;&quot;&gt;key initiatives&lt;&#x2F;a&gt; in the spec cross the finish line, and we’ll seat the first ever community-elected Governing Board.&lt;&#x2F;p&gt;
+&lt;p&gt;The election of our first Governing Board is what I’d like to focus on today, because it is a huge milestone on the path to an independent, self-sustaining, and self-governing ecosystem. When we celebrate Matrix’s 20th birthday, we’ll look back and our history will be divided much the same way it is in other ecosystems: before and after incorporating a foundation, and before and after introducing community governance.&lt;&#x2F;p&gt;
+&lt;p&gt;Let’s talk about what the Governing Board is, why it matters, and how to get involved!&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h3 id=&quot;what-is-the-governing-board&quot;&gt;What is the Governing Board&lt;&#x2F;h3&gt;
+&lt;p&gt;The Governing Board is an elected advisory board that supports and guides Matrix. It is a group of up to 25 people who offer a representative set of perspectives that will keep the Foundation on track and accountable in its work to evolve the spec and nurture the ecosystem.&lt;&#x2F;p&gt;
+&lt;p&gt;The specific duties of the Governing Board include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Approving the Foundation’s budget based on the Managing Director’s recommendations.&lt;&#x2F;li&gt;
+&lt;li&gt;Approving partnerships and relationships with an annual value over $50,000.&lt;&#x2F;li&gt;
+&lt;li&gt;Approving initiatives and programs which will have a major impact on the brand and reputation of the Foundation, or create a new revenue stream.&lt;&#x2F;li&gt;
+&lt;li&gt;Helping the Spec Core Team prioritize their work, such as which MSC’s need attention in any given release cycle.&lt;&#x2F;li&gt;
+&lt;li&gt;Providing conclusions, recommendations, and guidance on next steps to the Guardians.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Ultimately, the Governing Board is meant to be a clearing house of feedback, expertise, and perspectives from across the ecosystem. Meeting at least twice a year, the Governing Board will shape our operational reality, influence our technical roadmap, and explore the next steps in making the Foundation increasingly transparent and community-governed over time.&lt;&#x2F;p&gt;
+&lt;p&gt;The Governing Board and membership program have been intentionally structured to ensure key stakeholders from across the ecosystem have a voice. That structure was first codified in April 2023 with the Governing Board Terms of Reference, and I’m pleased to say that, with Guardian approval, I’ve introduced a round of improvements that incorporate community feedback and improve on the initial design.&lt;&#x2F;p&gt;
+&lt;p&gt;A more in-depth discussion of the membership groups follows later in this post, but at a high level the composition of the Governing Board is as follows:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nonprofit and community representatives
+&lt;ul&gt;
+&lt;li&gt;4 Individual Members&lt;&#x2F;li&gt;
+&lt;li&gt;3 Ecosystem Members&lt;&#x2F;li&gt;
+&lt;li&gt;2 Associate Members&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Funder representatives
+&lt;ul&gt;
+&lt;li&gt;4 Platinum Members&lt;&#x2F;li&gt;
+&lt;li&gt;3 Gold Members&lt;&#x2F;li&gt;
+&lt;li&gt;2 Silver Members&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Foundation representatives
+&lt;ul&gt;
+&lt;li&gt;Managing Director&lt;&#x2F;li&gt;
+&lt;li&gt;2 Spec Core Team Members&lt;&#x2F;li&gt;
+&lt;li&gt;3 Guardians&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;All of the Governing Board members, with the exception of the Foundation’s Managing Director, are selected based on elections run by the Foundation within each group. Every year half of the groups’ representatives will end their term and those groups will vote in a new election – with the exception of our first elections in 2024.&lt;&#x2F;p&gt;
+&lt;p&gt;In 2024, we will elect Governing Board members from all of the groups so that no one has to wait until 2025 to be represented. Half of the members elected in 2024 will have 1-year terms in order to enable this staggered election timeline. The reason for the staggered elections is that we want to maintain a degree of continuity so that we can accumulate institutional knowledge.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why-does-it-matter&quot;&gt;Why does it matter&lt;&#x2F;h3&gt;
+&lt;p&gt;The Governing Board matters because it is the beginning of shared decision making for our collective assets, complementing the Spec Core Team which brought shared decision making to the protocol itself. The two, together, represent a complete set of basic community governance.&lt;&#x2F;p&gt;
+&lt;p&gt;Not only will the Governing Board weigh in on our shared assets, it will also channel community feedback to the Spec Core Team in a more structured and representative fashion. Further, the Governing Board is itself a mechanism for introducing even more community governance.&lt;&#x2F;p&gt;
+&lt;p&gt;This is a key threshold that all major open source communities must cross, and a pivotal moment in which individual and collective behavior sets precedents – good or bad – that echo for years to come.&lt;&#x2F;p&gt;
+&lt;p&gt;The importance of the Governing Board is heightened by the context in which the Foundation itself was created: as an organization being spun out of the for-profit, Element, that Matrix’s founders Matthew Hodgson and Amandine Le Pape started in order to fund research and development of the project.&lt;&#x2F;p&gt;
+&lt;p&gt;In many cases, for-profit organizations created to fund R&amp;amp;D of an open source project end up going down an unfortunate path that ultimately sees the project fall into a “&lt;a href=&quot;https:&#x2F;&#x2F;meshedinsights.com&#x2F;2021&#x2F;02&#x2F;02&#x2F;rights-ratchet&#x2F;&quot;&gt;rights ratchet&lt;&#x2F;a&gt;” pattern that takes it out of the open source commons. The last 5 years of open source have been littered with dispiriting examples of this.&lt;&#x2F;p&gt;
+&lt;p&gt;Much to the credit of Matrix’s founders, they have charted a different course. Matthew and Amandine formed the Matrix.org Foundation, gave it all the core project assets, and donated millions of dollars annually in services through Element. Even when they ultimately made the decision to fork some of the Foundation’s projects in a bid to keep Element stable, they implemented a Contributor License Agreement with a clause that ensures those projects, and all third party contributions to it, remain available under an open source license. This is a laudable pattern when cast against the backdrop of the rest of the industry.&lt;&#x2F;p&gt;
+&lt;p&gt;But the fact remains that the Foundation was spun out of an existing organization, and the resulting power dynamic is one that is unequal. The broader community and Matrix’s founders all agree: we need a Foundation that is more representative and more independent.&lt;&#x2F;p&gt;
+&lt;p&gt;The Governing Board is how we get there.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;getting-ready-for-our-first-elections&quot;&gt;Getting ready for our first elections&lt;&#x2F;h3&gt;
+&lt;p&gt;Running the first Governing Board elections will require preparation from both the Foundation and everyone who aims to participate in the elections.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;election-timeline&quot;&gt;Election timeline&lt;&#x2F;h4&gt;
+&lt;p&gt;Our first election season begins April 2024 and ends in June. The timeline looks like this:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Monday, April 15: Announcements with logistical details&lt;&#x2F;li&gt;
+&lt;li&gt;Saturday, April 20 through Friday, April 26: Nominations&lt;&#x2F;li&gt;
+&lt;li&gt;Saturday, April 27 through Friday, May 17: Campaigning&lt;&#x2F;li&gt;
+&lt;li&gt;Saturday, May 18 through Friday, May 31: Voting&lt;&#x2F;li&gt;
+&lt;li&gt;Monday, June 3: Results announced&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Following the election, the duly elected members of the Governing Board will participate in an onboarding process prior to their first official meeting which will be scheduled following the conclusion of the election.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;preparations-at-the-foundation&quot;&gt;Preparations at the Foundation&lt;&#x2F;h4&gt;
+&lt;p&gt;First, the Foundation itself needs to establish its membership and voter rolls, which requires new tools to manage membership, and processes paired with an outreach campaign to make sure we bring everyone along with us.&lt;&#x2F;p&gt;
+&lt;p&gt;We’ve started that by beginning to consolidate on Donorbox as our donor management platform, and making it possible to &lt;a href=&quot;https:&#x2F;&#x2F;donorbox.org&#x2F;membership-303&quot;&gt;become an Individual Member&lt;&#x2F;a&gt; simply by signing up at the appropriate level on Donorbox. If you’re an existing donor on Donorbox or another platform, you’ll be hearing from us about how to make the transition.&lt;&#x2F;p&gt;
+&lt;p&gt;Please keep your eyes on our blog, social channels, official Foundation rooms, and your email inbox. We’ll be using as many channels as we can to make sure we reach people – including donors who are eligible to be Individual Members that have donated anonymously such that we have no direct contact info.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;preparing-yourself-and-your-community-for-the-election&quot;&gt;Preparing yourself and your community for the election&lt;&#x2F;h4&gt;
+&lt;p&gt;There are many membership groups (referred to in the Terms of Reference as “constituencies”) from which people may nominate themselves as candidates.&lt;&#x2F;p&gt;
+&lt;p&gt;Among those membership groups are three who represent the grassroots corners of the community:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Individual Members are people who donate at least $60 per year, or equivalent in other currencies. In the future, we will allow people to apply for Individual Member status on the basis of non-monetary contributions to the community. They are elected to represent themselves. You can &lt;a href=&quot;https:&#x2F;&#x2F;donorbox.org&#x2F;membership-303&quot;&gt;become an Individual Member today&lt;&#x2F;a&gt;!&lt;&#x2F;li&gt;
+&lt;li&gt;Ecosystem Members are open source projects that speak Matrix – such as clients, servers, or bots. If you are the maintainer of such a project, stay tuned, we&#x27;ll begin accepting applications for Ecosystem Members in late January. Each Ecosystem Member may nominate a representative to run in the election.&lt;&#x2F;li&gt;
+&lt;li&gt;Associate Members are open source foundations, standards bodies, other nonprofits, and organizations that use Matrix but are resource constrained such as universities. If you are in leadership at such an organization, stay tuned, we&#x27;ll begin accepting applications for Associate Members in late January. Each Associate Member may nominate a representative to run in the election.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Then there are three membership groups who represent the major funders of the Foundation, major funders who are typically service providers who use Matrix or organizations with major deployments. Each funder is entitled to nominate a representative to run in the election. These funders, as of today, include both for-profits and public sector organizations. If your organization is interested in becoming a funder, &lt;a href=&quot;mailto:funding@matrix.org&quot;&gt;please reach out&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Members must be in good standing with the Foundation and its Guardians in order to qualify as candidates. This is discretion we don’t expect to have to exercise often, thankfully. One needn’t be agreeable to be in good standing, but one ought to, for instance, not violate our Code of Conduct. We need to build a Governing Board that can have healthy debates and get things done.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are considering nominating yourself, it would serve you well to build positive working relationships with others in your community and membership group. That’s something you can start doing today, even before the official nomination period opens.&lt;&#x2F;p&gt;
+&lt;p&gt;As we get closer to the elections, we’ll share more about the level of commitment that is required of Governing Board members and how we aim to work together.&lt;&#x2F;p&gt;
+&lt;p&gt;But until then, the best thing you can do to support the Foundation and prepare for the elections is to become a member!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Hello, world! You, me, and The Matrix.org Foundation</title>
+    <published>2023-10-26T00:00:00+00:00</published>
+    <updated>2023-10-26T00:00:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/10/26/hello-world/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/10/26/hello-world/</id>
+    <content type="html">&lt;h2 id=&quot;a-letter-from-the-managing-director&quot;&gt;A letter from the Managing Director&lt;&#x2F;h2&gt;
+&lt;p&gt;Hello, world! My name is Josh Simmons and it is a joy and a privilege to introduce myself as the first Managing Director of The Matrix.org Foundation. While I’m no stranger to open source and I have been a Matrix user for several years, I am new to the Matrix community and so I’d like to share a little about myself and the work we have ahead of us.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;Matrix is on a journey, charting a course through technical and social evolution like all the successful open source projects that precede us. Once a project gets traction, the question quickly becomes: how do we sustain this and how do we make collective decisions? And set against a backdrop of an industry where many projects backed by for-profits are ultimately relicensed out of the open source commons, there’s added intensity around the question: how do we protect this public good and keep it in the commons? The answers to these questions evolve as the community grows and the landscape changes, but the seeds of success are planted early.&lt;&#x2F;p&gt;
+&lt;p&gt;I step into this role for the Matrix community with the greatest of confidence about our future, based on current conditions as well as the decisions that were made years before the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;about#the-guardians&quot;&gt;Guardians&lt;&#x2F;a&gt; began their search for a Managing Director. But who am I to make such an assessment?&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;about-josh&quot;&gt;About Josh&lt;&#x2F;h3&gt;
+&lt;p&gt;I am a community organizer, web developer, nonprofit geek, inclusion specialist, and activist based in the &lt;a href=&quot;https:&#x2F;&#x2F;josh.link&#x2F;bliss&quot;&gt;North Bay Area&lt;&#x2F;a&gt;. I’m working full-time as the Managing Director of the Foundation, and volunteer as Vice President of &lt;a href=&quot;https:&#x2F;&#x2F;petalumapride.org&#x2F;&quot;&gt;Petaluma Pride&lt;&#x2F;a&gt;, organizer of the &lt;a href=&quot;https:&#x2F;&#x2F;publichealthpledge.com&#x2F;&quot;&gt;Public Health Pledge&lt;&#x2F;a&gt;, co-organizer of &lt;a href=&quot;https:&#x2F;&#x2F;northbaypython.org&#x2F;&quot;&gt;North Bay Python&lt;&#x2F;a&gt;, and an advisor to &lt;a href=&quot;https:&#x2F;&#x2F;iftas.org&#x2F;&quot;&gt;Independent Federated Trust &amp;amp; Safety&lt;&#x2F;a&gt; (IFTAS). But most people know me for the six years I spent on the board of the &lt;a href=&quot;https:&#x2F;&#x2F;opensource.org&#x2F;&quot;&gt;Open Source Initiative&lt;&#x2F;a&gt; (OSI), which I concluded as its President then Chair after running a strategic review process and hiring OSI’s first ever Executive Director. In the past I’ve worked as a Foundations Advocate at Tidelift, helped start the Open Source Programs Office (OSPO) at Salesforce, worked on Google Summer of Code at Google, and did community management for O’Reilly Media, in particular for OSCON (RIP).&lt;&#x2F;p&gt;
+&lt;p&gt;Suffice it to say, I’ve spent a lot of time observing how projects, communities, and organizations change, celebrating their successes and learning from their failures. And my time at OSI was themed by external crises, navigating challenging new social and economic circumstances, and fighting against for-profits that embrace open source only so long as it’s convenient marketing before engaging in open washing and the ‘&lt;a href=&quot;https:&#x2F;&#x2F;meshedinsights.com&#x2F;2021&#x2F;02&#x2F;02&#x2F;rights-ratchet&#x2F;&quot;&gt;rights ratchet&lt;&#x2F;a&gt;.’&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;about-matrix&quot;&gt;About Matrix&lt;&#x2F;h3&gt;
+&lt;p&gt;So when I look at Matrix and say I feel confident, those are not empty words. Why do I feel confident? It doesn’t hurt that there are already 115 million users, or that people and their governments are increasingly fed up with a world littered with siloed communication tools and tech companies that chase short-term gains at the cost of user experience, privacy, and security.&lt;&#x2F;p&gt;
+&lt;p&gt;It’s also because of decisions that have already been made around licensing and governance. First, the core assets of Matrix – from the trademark and domain name to the spec and reference implementations – all belong to The Matrix.org Foundation, a UK-based &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;about#legal-details&quot;&gt;Community Interest Company&lt;&#x2F;a&gt; (CIC) – and cannot be extracted for private benefit. And second, relicensing has been made a deliberately impossible task by allowing contributors to retain their copyrights when they contribute to Foundation-stewarded projects. The one exception is made in an effort to thoughtfully address the power dynamics in the ecosystem: the copyrights for contributions from Element are assigned to the Foundation.&lt;&#x2F;p&gt;
+&lt;p&gt;All of this, combined with the existing open governance via the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;about#the-spec-core-team&quot;&gt;Spec Core Team&lt;&#x2F;a&gt; and the soon-to-come community-elected &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&quot;&gt;Governing Board&lt;&#x2F;a&gt;, sets us up for collective success in bringing private, secure, decentralized, open source communication to everyone on the planet.&lt;&#x2F;p&gt;
+&lt;p&gt;Granted, the conditions for success isn&#x27;t enough. We have work to do together in the years ahead, work that will challenge us and require us to summon our best selves.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-journey-ahead&quot;&gt;The journey ahead&lt;&#x2F;h3&gt;
+&lt;p&gt;We must build the Foundation into a self-sustaining organization through fundraising and staffing. We must increase transparency and actualize self-governance. We must improve the diversity of contributors, both in terms of their lived experiences and who employs them. We must rise to the challenge of robust Trust &amp;amp; Safety on decentralized protocols in a chaotic world.&lt;&#x2F;p&gt;
+&lt;p&gt;These are all hard problems, but the solutions aren’t shrouded in mystery. It’s a matter of learning from our fellow travelers, coming together, putting in the time, and continuously building the capacity to tackle these things head on.&lt;&#x2F;p&gt;
+&lt;p&gt;We won’t get to where we want to go overnight. This is a yearslong project. But day by day, together, we will accomplish great things.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;our-next-steps&quot;&gt;Our next steps&lt;&#x2F;h3&gt;
+&lt;p&gt;Today, it is great to see the traction that Matrix has, particularly in open source and the public sector with users including: the United Nations, the Republic of France, The Document Foundation, World Wide Web Consortium (W3C), Debian, GNOME, KDE, Fedora, Ansible, World Ethical Data Foundation, Free Software Foundation Europe, and Open Source Initiative. However, while this adoption is encouraging, it also puts additional strain on the small but mighty team of paid staff at the Foundation and the countless volunteers responsible for critical work like that of the Spec Core Team.&lt;&#x2F;p&gt;
+&lt;p&gt;Last year Matrix&#x27;s co-founders &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2022&#x2F;12&#x2F;01&#x2F;funding-matrix-via-the-matrix-org-foundation&#x2F;&quot;&gt;rang the alarm&lt;&#x2F;a&gt; and launched our membership program. It is my job to finish operationalizing that program, and I&#x27;m pleased to say it has brought in some funding. But it&#x27;s not nearly enough.&lt;&#x2F;p&gt;
+&lt;p&gt;In order to avoid being a &lt;em&gt;victim&lt;&#x2F;em&gt; of our success, I have a singular, familiar call to action: &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;support&#x2F;&quot;&gt;provide financial support&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;become a member&lt;&#x2F;a&gt;. We need your help to ensure the continued development of Synapse and the Matrix Rust SDK, help us fill gaps in Trust and Safety tooling, and nurture the ecosystem for everyone&#x27;s benefit.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are invested in the success of Matrix, in particular if it provides you critical infrastructure or product features, as an individual or as an organization, please, contribute. And if you want to have a hand in shaping the future together, stop by the new &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#foundation-office:matrix.org&quot;&gt;Office of the Matrix.org Foundation&lt;&#x2F;a&gt; room and come say hello!&lt;&#x2F;p&gt;
+&lt;p&gt;Ad astra per aspera 🚀&lt;&#x2F;p&gt;
+&lt;p&gt;Josh Simmons, Managing Director of The Matrix.org Foundation&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;what-people-are-saying&quot;&gt;What people are saying&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I couldn&#x27;t be more excited to see Josh Simmons chosen for the Matrix.org Foundation&#x27;s first Managing Director. Josh is a dedicated open source community builder with a track record of personal accountability and integrity. Matrix.org&#x27;s mission to provide reliable, decentralized, secure communications is a great match with Josh&#x27;s personal mission to empower and protect software users while making sure that vulnerable communities — for whom privacy is paramount — are fully included.”&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;— Deb Nicholson, Executive Director of Python Software Foundation&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“This is a promising development. When I joined the Open Source Initiative as its first Executive Director, I stepped into an organization with renewed focus and energy thanks to Josh’s leadership. I know Josh will accomplish great things for the Matrix ecosystem.”&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;— Stefano Maffulli, Executive Director of Open Source Initiative&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I&#x27;ve crossed paths with Josh in numerous ways throughout his career, most recently working with him on the North Bay Python conference and talking to him in his role with the Public Health Pledge. In each case, Josh was thoughtful and productive. I can&#x27;t wait to see the great work he accomplishes with the Matrix community!”&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;— Karen Sandler, Executive Director of Software Freedom Conservancy&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Josh is a quick study and a capable organizational leader. I saw him rapidly rise to the challenge for the Open Source Initiative, where he worked to mature the organization and served as a fierce advocate for the Open Source Definition even as industry titans sought to undermine it. Those are leadership qualities I welcome, particularly in the growing community of European open source foundations.”&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;— Mike Milinkovich, Executive Director of Eclipse Foundation&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+<entry xml:lang="en">
+    <title>Welcoming Josh Simmons as Managing Director of the Matrix.org Foundation!</title>
+    <published>2023-09-05T00:00:00+00:00</published>
+    <updated>2023-09-05T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson, Amandine Le Pape</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/09/introducing-josh-simmons-managing-director/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/09/introducing-josh-simmons-managing-director/</id>
+    <content type="html">&lt;p&gt;Hi all,&lt;&#x2F;p&gt;
+&lt;p&gt;Today is a big day! As you know, over the last few months we’ve been searching for a &lt;a href=&quot;https:&#x2F;&#x2F;opensourcejobs.com&#x2F;?id=225&quot;&gt;Managing Director&lt;&#x2F;a&gt; to join the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;foundation&quot;&gt;Matrix.org Foundation&lt;&#x2F;a&gt; full-time, focused on managing the Foundation’s finances, organising the Foundation’s &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;06&#x2F;membership-program&#x2F;&quot;&gt;membership programme&lt;&#x2F;a&gt;, helping raise funding to support Foundation work, working with the Guardians to ensure the Foundation stays on mission, and ensuring the Foundation can operate successfully as a fully independent entity.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;We’re super excited to announce today that our search is complete, and so we’d like to welcome &lt;a href=&quot;https:&#x2F;&#x2F;joshsimmons.com&#x2F;&quot;&gt;Josh Simmons&lt;&#x2F;a&gt; to the Foundation as its first ever Managing Director (and first ever employee, for that matter!).  Josh has a huge amount of experience in open source and non-profit foundations (including many stints on the board of the Open Source Initiative, including President) - as well as being an existing Matrix fan and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@josh:josh.tel&quot;&gt;user&lt;&#x2F;a&gt;, even running a personal homeserver.  This was a really tough search, by the way - we were genuinely blown away at the number of amazing folks who responded to the job listing, and if we’d had the $ we’d have been sorely tempted to make additional offers :)&lt;&#x2F;p&gt;
+&lt;p&gt;I’m sure Josh will intro himself properly in a bit, but here’s a quick reaction from him on what he’s getting into:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“It is humbling to step into this role to lead the Foundation and fully realize the Foundation’s mission as a neutral steward for the Matrix ecosystem. Our work to bring decentralized, secure, open source communication tools to all has never been more important than it is today, amidst a panoply of power structures that surveil, oppress, extract, and fundamentally do not serve people or planet. I look forward to working together to strengthen the Foundation’s independence and make the Matrix ecosystem even more vibrant.”&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;If you’re wondering what the Matrix Foundation is, and why it needs a Managing Director: as a reminder, the team who created Matrix set up &lt;a href=&quot;https:&#x2F;&#x2F;element.io&quot;&gt;Element&lt;&#x2F;a&gt; in 2017 as a way to help fund our work on Matrix - and then in 2018 &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2018&#x2F;10&#x2F;29&#x2F;introducing-the-matrix-org-foundation-part-1-of-2&#x2F;&quot;&gt;incorporated The Matrix.org Foundation&lt;&#x2F;a&gt; as a not-for-profit foundation to act as a neutral custodian for the Matrix protocol.  We formally &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2019&#x2F;06&#x2F;11&#x2F;introducing-matrix-1-0-and-the-matrix-org-foundation&#x2F;&quot;&gt;launched the Foundation&lt;&#x2F;a&gt; alongside Matrix 1.0 in June 2019, and since then the Foundation has acted as the copyright holder of the core Matrix IP donated by Element, and custodian of the &lt;a href=&quot;https:&#x2F;&#x2F;spec.matrix.org&#x2F;proposals&#x2F;&quot;&gt;open governance process&lt;&#x2F;a&gt; by which Matrix evolves.&lt;&#x2F;p&gt;
+&lt;p&gt;However, until today the Foundation has not had any dedicated employees - all the Foundation’s work to date has been either donated by the Foundation’s Guardians (Directors) or by Element staff.  As a result the Foundation has historically been very dependent on Element’s donations to keep Matrix thriving - but it’d be way healthier for Matrix (and Element!) if the wider Matrix ecosystem itself financially supported Matrix and helped steer its direction, and if the Matrix Foundation was fully operationally independent of Element.&lt;&#x2F;p&gt;
+&lt;p&gt;With &lt;a href=&quot;https:&#x2F;&#x2F;archive.fosdem.org&#x2F;2023&#x2F;schedule&#x2F;event&#x2F;matrix20&#x2F;&quot;&gt;Matrix 2.0&lt;&#x2F;a&gt; rapidly coming up on the horizon, and the increased importance of the membership programme in helping sustainably fund Matrix, it’s the perfect time to be welcoming Josh to the Foundation with a view to getting Matrix entirely self-sustainable as rapidly as possible.  Practically speaking, Josh reports to the Foundation’s Board (i.e. the Guardians), and will be focused primarily on running the membership programme, fundraising for the Foundation in general, spending Foundation funds to the greater glory of Matrix, as well as working with &lt;a href=&quot;https:&#x2F;&#x2F;ergaster.org&quot;&gt;Thib&lt;&#x2F;a&gt; on helping spread awareness of Matrix as enthusiastically as possible.&lt;&#x2F;p&gt;
+&lt;p&gt;Talking of the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;membership programme&lt;&#x2F;a&gt;: we’d like to enormously thank everyone who has joined and expressed willingness to join the Foundation since we launched the programme in June! We’ve been running late on onboarding and announcing folks, but now that Josh is on board we have way more bandwidth to accelerate the programme and establish the Governing Board for steering the organisational decisions of the Foundation.&lt;&#x2F;p&gt;
+&lt;p&gt;Now is a great time to &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;become a member&lt;&#x2F;a&gt; to support Matrix and be part of shaping its future. One of Josh’s first projects is to establish the Governing Board infrastructure and run its first election. Joining now gives you the great opportunity to be part of the first elected Governing Board!&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, Matthew and Amandine are still involved as much as ever, both as the founders of Matrix, and as two of the five Guardians of the Foundation, and Matthew continues to be Project Lead and lead for the Spec Core Team.  However, given they also have a day job running Element, it’s fantastic to have Josh join to focus exclusively on operating the Foundation.&lt;&#x2F;p&gt;
+&lt;p&gt;We’d like to thank everyone who’s financially supported Matrix over the years - whether that’s as an individual supporter on &lt;a href=&quot;https:&#x2F;&#x2F;donorbox.org&#x2F;keep-matrix-exciting&quot;&gt;Donorbox&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.patreon.com&#x2F;matrixdotorg&quot;&gt;Patreon&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;liberapay.com&#x2F;matrixdotorg&#x2F;&quot;&gt;Liberapay&lt;&#x2F;a&gt;, or by joining the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;membership programme&lt;&#x2F;a&gt;!  We’re entering a whole new era for Matrix, with your donations being proactively deployed by an independent Governing Board to best fund core Matrix development - and we can’t wait to see the Foundation grow into an open source powerhouse to rival the best of them.&lt;&#x2F;p&gt;
+&lt;p&gt;We’d like to wish Josh good luck in the new role, and hope you’re as excited as we are to see the Foundation finally gaining independence and spreading its wings!&lt;&#x2F;p&gt;
+&lt;p&gt;Matthew, Amandine, and the whole Matrix.org team.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+    
+</feed>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - Bridges</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/bridges/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-12-14T16:00:00+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/bridges/atom.xml</id>
+    
+    
+    
+<entry xml:lang="en">
+    <title>Cleaning up Libera.Chat aliases</title>
+    <published>2023-12-14T16:00:00+00:00</published>
+    <updated>2023-12-14T16:00:00+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/12/libera-chat-alias-cleanup/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/12/libera-chat-alias-cleanup/</id>
+    <content type="html">&lt;p&gt;The Matrix.org Foundation has taken down the bridge with the Libera Chat network. This only prevented messages from making it across the bridges, for Matrix users to appear on the IRC side, and for new IRC users to appear on the Matrix side.&lt;&#x2F;p&gt;
+&lt;p&gt;As part of our work to remove the bridge leftovers, we have removed the ghosts in Matrix rooms and demoted the Libera Chat appservice user. We will now remove the aliases from the rooms, and strongly encourage you to make sure you update the links to your Matrix room if they relied on a &lt;code&gt;matrix.to&lt;&#x2F;code&gt; link that contains &lt;code&gt;:libera.chat&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;ghosts-cleanup&quot;&gt;Ghosts cleanup&lt;&#x2F;h2&gt;
+&lt;p&gt;One of the core concepts of Matrix is interoperability with third party platforms via bridges. In the example of Libera Chat, when an IRC user appears on the Matrix side, it’s called a ghost. When a Matrix user appears on IRC, it’s called a puppet.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;libera-chat-bridge.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;When the IRC bridge was taken down, all the puppets disappeared from IRC. Matrix works differently than IRC, and all the ghosts remained in most bridged rooms.&lt;&#x2F;p&gt;
+&lt;p&gt;The Foundation has performed the clean-up work to remove ghosts from the rooms, and will now tackle the alias clean-up.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;aliases-cleanup&quot;&gt;Aliases cleanup&lt;&#x2F;h2&gt;
+&lt;p&gt;The bridge operated by the Matrix.org Foundation was hosted on a dedicated Matrix server that lived under the libera.chat domain. This means that all the matrix users whose username looks like &lt;code&gt;@username:libera.chat&lt;&#x2F;code&gt; are ghosts. It also means that aliases looking like &lt;code&gt;#roomname:libera.chat&lt;&#x2F;code&gt; are hosted on the libera.chat Matrix instance.&lt;&#x2F;p&gt;
+&lt;p&gt;The Foundation will decommission this server, and as such those aliases will stop working. This doesn’t mean the room will stop working, but &lt;em&gt;links&lt;&#x2F;em&gt; to this room might stop working because the alias won’t resolve.&lt;&#x2F;p&gt;
+&lt;p&gt;The Foundation is going to remove all the libera.chat aliases from rooms that have them by January 7. After this date matrix.to links that contain &lt;code&gt;:libera.chat&lt;&#x2F;code&gt; will stop working. You will need to update them by going to your matrix client, and asking it for a new link to share the room. In Element on a computer, you can do this by clicking on the room header and then clicking on “Copy room link”.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are the administrator of such a room, you can change the alias in advance. To do so, in your favourite client go to the room settings, add a new published address if none exists, and change the main address. You can then repeat the “copy room link” steps to get a new matrix.to link.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Shutting down the Matrix bridge to Libera Chat</title>
+    <published>2023-11-28T00:00:00+00:00</published>
+    <updated>2023-11-28T00:00:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/11/28/shutting-down-bridge-to-libera-chat/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/11/28/shutting-down-bridge-to-libera-chat/</id>
+    <content type="html">&lt;p&gt;Today we are sorry to announce that we are not able to bring the Libera Chat bridge back online. We have already begun working through clean up tasks, such as clearing ghosts, and expect to be done by December 22. If you see any bridge artifacts left past that point, please let us know.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are one of those who have relied on the bridge in the past, you may be asking: what now? You do have options.&lt;&#x2F;p&gt;
+&lt;p&gt;People who need a bridge for their community can &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;ecosystem&#x2F;bridges&#x2F;irc&#x2F;&quot;&gt;run their own&lt;&#x2F;a&gt;: the matrix-appservice-irc software is still maintained. Only its Libera Chat instance, which was configured to persist connections across restarts, is being shut down. Please be mindful of the network, and read &lt;a href=&quot;https:&#x2F;&#x2F;libera.chat&#x2F;guides&#x2F;faq#are-bridges-allowed&quot;&gt;Libera Chat’s recommendations&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;libera.chat&#x2F;guides&#x2F;matrix&quot;&gt;their Matrix FAQ&lt;&#x2F;a&gt; when doing so.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;background&quot;&gt;Background&lt;&#x2F;h2&gt;
+&lt;p&gt;We at the Matrix.org Foundation have been working behind the scenes for months with the team at Element who operated the bridge and our peers at Libera Chat. Our hope had been to address the issues that were raised about the bridge to the satisfaction of Libera and to quickly bring it back online, but ultimately the Foundation is only a facilitator in the process and does not have the resources to maintain and operate the bridge itself.&lt;&#x2F;p&gt;
+&lt;p&gt;We know that many communities and individuals were relying on the bridge, and we regret the impact this situation has on them.&lt;&#x2F;p&gt;
+&lt;p&gt;To date, development, maintenance, and operation of the Libera Chat bridge had been donated to the community by teams at Element. We are grateful for their work and ongoing support, and understand that limited staffing has impacted their ability to consistently prioritize work on this bridge.&lt;&#x2F;p&gt;
+&lt;p&gt;Over the course of the last couple of years of operating the bridge, issues had been raised and work undertaken to address those issues to the extent possible with available resources.&lt;&#x2F;p&gt;
+&lt;p&gt;Transparently, the complexity of the work meant that we didn’t get the desired results as quickly as any involved party would’ve liked. Given that, the teams came to mutual agreement to turn the bridge off until key improvements were made and verified.&lt;&#x2F;p&gt;
+&lt;p&gt;It’s possible that the necessary work will be undertaken at some point, and Element has made it clear that they would like to make this happen. But with so many people wondering about the status and trying to make plans, we owe it to the impacted communities to provide more certainty than we’ve offered to date.&lt;&#x2F;p&gt;
+&lt;p&gt;Long term, the Foundation’s hope is to have the resources to service its core programs as well as provide additional community services like bridge maintenance and operations. However, as an open source foundation that is still early in its journey, we must be realistic about our capacity and make hard choices about where we put our scarce resources.&lt;&#x2F;p&gt;
+&lt;p&gt;We thank all of the involved parties for their commitment to doing right by the community and are sorry that we don’t have better news to offer at this time.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Libera.Chat bridge temporarily unavailable.</title>
+    <published>2023-08-04T22:30:00+00:00</published>
+    <updated>2023-08-04T22:30:00+00:00</updated>
+    <author>
+      <name>Neil</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/08/libera-bridge-disabled/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/08/libera-bridge-disabled/</id>
+    <content type="html">&lt;p&gt;Following a series of stability issues, the &lt;a href=&quot;https:&#x2F;&#x2F;libera.chat&#x2F;news&#x2F;temporarily-disabling-the-matrix-bridge&quot;&gt;Libera.Chat team has requested that the Matrix &amp;lt;&amp;gt; Libera.Chat bridge be disabled&lt;&#x2F;a&gt; until we can resolve the stability issues.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;From 14:00 UTC on Saturday 5th August the bridge will be unavailable.&lt;&#x2F;strong&gt; We will be working to get the bridge back up as soon as we can, however, given the severity of the situation we do not expect immediate resolution.&lt;&#x2F;p&gt;
+&lt;p&gt;We send our sincere apologies to anyone caught up in this decision and unable to reach folks on the Libera side.&lt;&#x2F;p&gt;
+&lt;p&gt;We’ll get you back as soon as we can.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Disclosure: Bridges security issues</title>
+    <published>2023-08-04T10:30:00+00:00</published>
+    <updated>2023-08-04T10:30:00+00:00</updated>
+    <author>
+      <name>Integrations Team, Matrix Security Team</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/08/bridges-vulnerability-disclosure/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/08/bridges-vulnerability-disclosure/</id>
+    <content type="html">&lt;p&gt;Hi folks. As previously mentioned on &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;07&#x2F;bridges-security-updates&#x2F;&quot;&gt;Monday&lt;&#x2F;a&gt;, we’re now disclosing the vulnerabilities patched for the IRC, Slack and Hookshot bridges. If you have not already done so, please ensure you are running the patched versions.&lt;&#x2F;p&gt;
+&lt;p&gt;Today we are disclosing the 3 vulnerabilities.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;matrix-appservice-bridge-doesn-t-verify-the-sub-parameter-of-an-openid-token-exchange-cve-2023-38691&quot;&gt;matrix-appservice-bridge doesn&#x27;t verify the sub parameter of an openId token exchange (CVE-2023-38691)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-bridge&#x2F;security&#x2F;advisories&#x2F;GHSA-vc7j-h8xg-fv5x&quot;&gt;GHSA-vc7j-h8xg-fv5x&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;cve.mitre.org&#x2F;cgi-bin&#x2F;cvename.cgi?name=CVE-2023-38691&quot;&gt;CVE-2023-38691&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;code&gt;POST &#x2F;v1&#x2F;exchange_openid&lt;&#x2F;code&gt; endpoint did not check that the servername part of the &lt;code&gt;sub&lt;&#x2F;code&gt; parameter (containing the user&#x27;s &lt;em&gt;claimed&lt;&#x2F;em&gt; MXID) is the same as the servername we are talking to. This could allow a malicious actor to spin up a server on any given domain, respond with a &lt;code&gt;sub&lt;&#x2F;code&gt; parameter according to the user they want to act as and use the resulting token to perform provisioning requests.&lt;&#x2F;p&gt;
+&lt;p&gt;This is now patched so that the server part of the sub &#x2F; user ID is checked against the server used to make the request.&lt;&#x2F;p&gt;
+&lt;p&gt;Discovered and reported by a community member.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;irc-command-injection-via-admin-commands-containing-newlines-cve-2023-38690&quot;&gt;IRC command injection via admin commands containing newlines (CVE-2023-38690)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-irc&#x2F;security&#x2F;advisories&#x2F;GHSA-3pmj-jqqp-2mj3&quot;&gt;GHSA-3pmj-jqqp-2mj3&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;cve.mitre.org&#x2F;cgi-bin&#x2F;cvename.cgi?name=CVE-2023-38690&quot;&gt;CVE-2023-38690&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;When the IRC bridge attempted to parse an admin command from a Matrix user, it would only split arguments by a literal space. For example, sending “!join #matrix\nfoobar” would treat the channel name as “#matrix\nfoobar”. This could then be exploited to inject any IRC command into the bridge to be run. Since the !join command first joins via the bridge bot user, it could be used to execute commands as the bridge bot.&lt;&#x2F;p&gt;
+&lt;p&gt;This is now patched so that both the command handler is more strict about its arguments, as well as channel names being explicitly validated when provided by users.&lt;&#x2F;p&gt;
+&lt;p&gt;Discovered and reported by &lt;a href=&quot;https:&#x2F;&#x2F;valentin-lorentz.fr&#x2F;&quot;&gt;Val Lorentz&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;events-can-be-crafted-to-leak-parts-of-targeted-messages-from-other-bridged-rooms-cve-2023-38700&quot;&gt;Events can be crafted to leak parts of targeted messages from other bridged rooms (CVE-2023-38700)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-irc&#x2F;security&#x2F;advisories&#x2F;GHSA-c7hh-3v6c-fj4q&quot;&gt;GHSA-c7hh-3v6c-fj4q&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;cve.mitre.org&#x2F;cgi-bin&#x2F;cvename.cgi?name=CVE-2023-38700&quot;&gt;CVE-2023-38700&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The IRC bridge caches recent timeline messages in memory, so that when a reply is seen for a message it doesn’t need to request the event content from the homeserver. However the room ID was not validated when accessing this cache, so a malicious actor could craft a reply event in another room referencing any event ID (so long as it was still in the bridge cache) to trick the bridge into posting the message content into a bridged reply.&lt;&#x2F;p&gt;
+&lt;p&gt;Discovered and reported by &lt;a href=&quot;https:&#x2F;&#x2F;valentin-lorentz.fr&#x2F;&quot;&gt;Val Lorentz&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If you have further questions, please reach out on &lt;a href=&quot;mailto:security@matrix.org&quot;&gt;security@matrix.org&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Bridges Security Update</title>
+    <published>2023-07-31T11:40:00+00:00</published>
+    <updated>2023-07-31T11:40:00+00:00</updated>
+    <author>
+      <name>Integrations Team, Matrix Security Team</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/07/bridges-security-updates/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/07/bridges-security-updates/</id>
+    <content type="html">&lt;p&gt;Today we are announcing security updates for several of our bridges.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;matrix-appservice-irc &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-irc&#x2F;releases&#x2F;tag&#x2F;1.0.1&quot;&gt;1.0.1&lt;&#x2F;a&gt; affected by GHSA-vc7j-h8xg-fv5x &lt;a href=&quot;https:&#x2F;&#x2F;cve.mitre.org&#x2F;cgi-bin&#x2F;cvename.cgi?name=CVE-2023-38691&quot;&gt;CVE-2023-38691&lt;&#x2F;a&gt;, GHSA-3pmj-jqqp-2mj3 &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;cve.mitre.org&#x2F;cgi-bin&#x2F;cvename.cgi?name=CVE-2023-38690&quot;&gt;CVE-2023-38690&lt;&#x2F;a&gt;, and GHSA-c7hh-3v6c-fj4q&lt;&#x2F;li&gt;
+&lt;li&gt;matrix-hookshot &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-hookshot&#x2F;releases&#x2F;tag&#x2F;4.4.1&quot;&gt;4.4.1&lt;&#x2F;a&gt; affected by GHSA-vc7j-h8xg-fv5x &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;cve.mitre.org&#x2F;cgi-bin&#x2F;cvename.cgi?name=CVE-2023-38691&quot;&gt;CVE-2023-38691&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;matrix-appservice-slack &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-slack&#x2F;releases&#x2F;tag&#x2F;2.1.2&quot;&gt;2.1.2&lt;&#x2F;a&gt; affected by GHSA-vc7j-h8xg-fv5x &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;cve.mitre.org&#x2F;cgi-bin&#x2F;cvename.cgi?name=CVE-2023-38691&quot;&gt;CVE-2023-38691&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In addition we have released matrix-appservice-bridge &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-bridge&#x2F;releases&#x2F;tag&#x2F;9.0.1&quot;&gt;9.0.1&lt;&#x2F;a&gt; (and backported to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-bridge&#x2F;releases&#x2F;tag&#x2F;8.1.2&quot;&gt;8.1.2&lt;&#x2F;a&gt;) which patches GHSA-vc7j-h8xg-fv5x.&lt;&#x2F;p&gt;
+&lt;p&gt;All mentioned bridges are affected by a vulnerability in the provisioning interfaces of these bridges. If you are unable to upgrade, please disable provisioning for now (which should be documented in the relevant bridge sample config).&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-irc&#x2F;blob&#x2F;develop&#x2F;config.sample.yaml#L520-L522&quot;&gt;IRC bridge config&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Set &lt;code&gt;provisioning.enabled&lt;&#x2F;code&gt; to false.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-slack&#x2F;blob&#x2F;a9f555308fb7485ebb1df98e6c327808915f816f&#x2F;config&#x2F;config.sample.yaml#L163&quot;&gt;Slack bridge config&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Set &lt;code&gt;provisioning.enabled&lt;&#x2F;code&gt; to false.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-hookshot&#x2F;blob&#x2F;main&#x2F;config.sample.yml#L192&quot;&gt;Hookshot config&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove the &lt;code&gt;widgets&lt;&#x2F;code&gt; resource (NOT provisioning)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The IRC bridge is also affected by two additional vulnerabilities. In this case, we would recommend upgrading &lt;strong&gt;immediately&lt;&#x2F;strong&gt; rather than working around the problems.&lt;&#x2F;p&gt;
+&lt;p&gt;Disclosures for these vulnerabilities, as well as CVE numbers will be out in three days (Thursday 3rd).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;We advise to upgrade as soon as possible.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If you have further questions, please reach out on &lt;a href=&quot;mailto:security@matrix.org&quot;&gt;security@matrix.org&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Postponing the Libera.Chat deportalling</title>
+    <published>2023-07-28T14:00:00+00:00</published>
+    <updated>2023-07-28T14:00:00+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/07/postponing-libera-chat-deportalling/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/07/postponing-libera-chat-deportalling/</id>
+    <content type="html">&lt;p&gt;We have recently announced that &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;07&#x2F;deportalling-libera-chat&#x2F;&quot;&gt;we will be honouring Libera Chat’s request&lt;&#x2F;a&gt; to turn off portalled rooms on the Libera.Chat bridge maintained by the Matrix.org Foundation. The changes were originally scheduled to be effective on 31st July. In the meantime, we posted &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;07&#x2F;make-sure-libera-bridge-keeps-working&#x2F;&quot;&gt;instructions for people to turn their portalled rooms into plumbed ones&lt;&#x2F;a&gt; so the bridge keeps working for them.&lt;&#x2F;p&gt;
+&lt;p&gt;Some stability issues on the bridge have prevented people from turning their portalled rooms into plumbed ones. We have been actively working on resolving those issues since the first reports and the situation is gradually improving. However, at this point, we do not believe the plumbed mode can be considered sufficiently stable yet.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;Additionally, as part of the project we have been made aware of several new bridge security issues. These issues must be patched ahead of the plumbing stability work thereby increasing the overall scope of the project. The limited resources of the&lt;a href=&quot;http:&#x2F;&#x2F;Matrix.org&quot;&gt; Matrix.org&lt;&#x2F;a&gt; Foundation didn’t allow us to meet the deadline in time.&lt;&#x2F;p&gt;
+&lt;p&gt;Rather than plough ahead with the original timeline and risking splitting communities, we have asked Libera Chat for an extension for turning off portal rooms to ensure successful migrations in order to make sure the bridge is ready to handle the traffic in plumbed rooms and to leave people enough time to migrate their rooms after the stabilisation work. We have asked the Libera Chat staff to allow us to postpone the deportalling to Friday 11 August, which they accepted. We’re grateful to the Libera Chat team for accommodating us.&lt;&#x2F;p&gt;
+&lt;p&gt;We will turn off the new portal creation on Monday 31 July, but will leave the existing portals active. On Friday 11 August we will make all the portal rooms read-only, and will send a message in each portalled room to list all the public rooms plumbed to the same channel on IRC.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;security-release-information&quot;&gt;Security release information&lt;&#x2F;h2&gt;
+&lt;p&gt;On Monday 31st, we will release new security updates for several bridges and the matrix-appservice-bridge library, including the IRC bridge. These will be:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;matrix-appservice-bridge 9.0.1&lt;&#x2F;li&gt;
+&lt;li&gt;matrix-appservice-irc 1.0.1&lt;&#x2F;li&gt;
+&lt;li&gt;matrix-appservice-slack 2.1.2&lt;&#x2F;li&gt;
+&lt;li&gt;matrix-hookshot 4.4.1&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We, and the community, have found several vulnerabilities classified as High severity and strongly recommend upgrading as soon as possible after the release.&lt;&#x2F;p&gt;
+&lt;p&gt;A full disclosure of the vulnerabilities will be out 3 days after the release, to allow people time to upgrade.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Making Sure The Libera.Chat Bridge Keeps Working</title>
+    <published>2023-07-07T18:45:00+00:00</published>
+    <updated>2023-07-07T18:45:00+00:00</updated>
+    <author>
+      <name>Thib</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/07/make-sure-libera-bridge-keeps-working/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/07/make-sure-libera-bridge-keeps-working/</id>
+    <content type="html">&lt;p&gt;Libera Chat recently &lt;a href=&quot;https:&#x2F;&#x2F;libera.chat&#x2F;news&#x2F;matrix-deportalling&quot;&gt;announced their decision to opt-out of portalled rooms&lt;&#x2F;a&gt;
+from the Libera.Chat bridge instance hosted by the Matrix.org Foundation
+(&lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;07&#x2F;deportalling-libera-chat&#x2F;&quot;&gt;a decision we regret but respect&lt;&#x2F;a&gt;).
+&lt;strong&gt;This means that for the bridge to keep working, all of your portalled rooms
+need to be turned into plumbed rooms before July 31st&lt;&#x2F;strong&gt;. All of this might be a
+bit obscure, so let’s walk together through these concepts and give you the
+tools to make sure the bridge keeps working for you.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;am-i-concerned&quot;&gt;Am I concerned?&lt;&#x2F;h2&gt;
+&lt;p&gt;If your community is primarily on Matrix and your rooms are not bridged to
+Libera.Chat channels, then you’re not concerned!&lt;&#x2F;p&gt;
+&lt;p&gt;If your community is spread across Matrix and Libera Chat, you need to make sure
+your room is “plumbed” into a Libera Chat channel, and not “portalled” to it.
+But what are those, and how to find out?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;plumbed-and-portalled&quot;&gt;Plumbed and portalled?&lt;&#x2F;h2&gt;
+&lt;p&gt;The simplest approach to it is to say that:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Portalled rooms are primarily owned by the bridge and “obey” the IRC side.
+Everyone can join a portalled room.&lt;&#x2F;li&gt;
+&lt;li&gt;Plumbed rooms are primarily owned by an individual, and try to obey the IRC
+side as much as possible. Plumbed rooms require an IRC chanop to approve a
+plumbing request to establish the link between the Matrix room and the IRC
+channel.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If you created the room yourself and you remember manually plumbing it into IRC,
+then it&#x27;s a plumbed room. In all other cases, chances are very high that you are
+using a portalled room. There is no simple way for the general public to know
+whether the room is plumbed or portalled because it’s a technicality that
+shouldn’t matter for most people, and the bridge was not designed to work with
+only plumbed rooms.&lt;&#x2F;p&gt;
+&lt;p&gt;Widgets are not part of the Matrix specification, but given the short time you
+have to migrate your channels, they’re the most straightforward way to figure
+out whether your room is portalled or plumbed and do the necessary to keep the
+bridge working.&lt;&#x2F;p&gt;
+&lt;p&gt;In this guide, we’ll be using Element. Open your room, then click on the top
+right &lt;code&gt;i&lt;&#x2F;code&gt; to open the right panel. Click on “Add widgets bridges &amp;amp; bots”.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;right-panel-add-widgets-bridges.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Click on “IRC Bridge (Libera.Chat)” and see if you have results in the “Linked
+channels” section.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;libera-widget-linked-section.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If you see results in that section, the room is plumbed, and it will keep
+working. If you don’t see any result in that section, the room is portalled and
+the bridge will stop working by July 31st.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-to-do-if-my-room-is-portalled&quot;&gt;What to do if my room is portalled&lt;&#x2F;h2&gt;
+&lt;p&gt;Unfortunately, portalled rooms cannot be easily turned into plumbed rooms. You
+need to:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a brand new Matrix room&lt;&#x2F;li&gt;
+&lt;li&gt;Plumb it to the IRC channel it was bridged to&lt;&#x2F;li&gt;
+&lt;li&gt;Redirect the users of the portalled room to the new plumbed room.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The third step can will be done automatically by the bridge in portalled rooms.
+On July 31st, it will make the room read only and list the public rooms which
+are plumbed to the same IRC channel.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;create-a-brand-new-room&quot;&gt;Create a brand new room&lt;&#x2F;h3&gt;
+&lt;p&gt;At first this room is not connected to IRC at all. We recommend you to set the
+room history visibility to “Members only (since they joined)”, which corresponds
+to &lt;code&gt;m.room.history_visibility = joined&lt;&#x2F;code&gt; technically. This setting matches IRC’s
+behaviour.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;plumb-it-to-irc&quot;&gt;Plumb it to IRC&lt;&#x2F;h3&gt;
+&lt;p&gt;In Element, make sure you’re in the room you have just created, and click on the
+top right &lt;code&gt;i&lt;&#x2F;code&gt; icon to open the right panel. Then at the bottom click on “Add
+widgets, bridges &amp;amp; bots” like you did in the portalled room.&lt;&#x2F;p&gt;
+&lt;p&gt;In the “Bridges” section, click on “IRC Bridge (Libera.chat)” and “Add”. Scroll
+down to “Link a new channel”. You will be asked to fill information so you can
+plumb the room to IRC. You can’t edit the server field, which is correctly set
+to Libera Chat. Enter the channel you want to plumb to, and the nick of a chanop
+of this channel.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;request-plumbing.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;We ask you to please be considerate of Libera Chat chanops and staff, and to
+only send plumb requests to channels:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;you control;&lt;&#x2F;li&gt;
+&lt;li&gt;or you have talked to the chanop prior to the plumb request&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The chanop will receive this request on their end:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;plumbing-op-request.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If they accept, the room will be plumbed into the IRC channel. Again, please be
+mindful of the remote side of the bridge and don’t send plumbing requests out of
+the blue: IRC chanops will very likely turn them down if they don’t know who is
+sending them or who is controlling the room.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;a-note-on-aliases&quot;&gt;A note on aliases&lt;&#x2F;h3&gt;
+&lt;p&gt;Portalled rooms used to have room addresses in the form&lt;code&gt;#myroom:libera.chat&lt;&#x2F;code&gt;.
+Since the &lt;code&gt;libera.chat&lt;&#x2F;code&gt; instance only has Matrix ghosts and no real human users,
+you can’t move the alias from the portalled room to your new plumbed room. This
+is by design.&lt;&#x2F;p&gt;
+&lt;p&gt;We hope to be able to turn portalling back on in the future, when we have more
+resources reserved for the bridge and can make stronger commitments. As such we
+want to keep addresses ending in &lt;code&gt;:libera.chat&lt;&#x2F;code&gt; for portalled rooms.&lt;&#x2F;p&gt;
+&lt;p&gt;This is not too much of a problem for your room and users though. Let’s consider
+your portalled room was &lt;code&gt;#myroom:libera.chat&lt;&#x2F;code&gt;, and that you have created
+&lt;code&gt;#myroom:example.com&lt;&#x2F;code&gt; to plumb it into the same &lt;code&gt;#myroom&lt;&#x2F;code&gt; channel on
+Libera.Chat. People who try to join &lt;code&gt;#myroom:libera.chat&lt;&#x2F;code&gt; will be greeted with a
+message telling them that the room has been archived, and redirect them to your
+plumbed room.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Deportalling from Libera Chat</title>
+    <published>2023-07-04T16:00:00+00:00</published>
+    <updated>2023-07-04T16:00:00+00:00</updated>
+    <author>
+      <name>Neil Johnson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/07/deportalling-libera-chat/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/07/deportalling-libera-chat/</id>
+    <content type="html">&lt;p&gt;On Monday 3rd July, the Libera.Chat IRC network shared that &lt;a href=&quot;https:&#x2F;&#x2F;libera.chat&#x2F;news&#x2F;matrix-deportalling&quot;&gt;they would no longer accept portalled rooms over the Matrix.org &amp;lt;&amp;gt; Libera.Chat bridge&lt;&#x2F;a&gt;.
+This change will come into effect between 25th July and 31st July.&lt;&#x2F;p&gt;
+&lt;p&gt;We respect the decision but also recognise that this will be disruptive for
+matrix.org users accessing IRC over the bridge.&lt;&#x2F;p&gt;
+&lt;p&gt;Practically speaking, if you currently use matrix.org as a bouncer into Libera.Chat this will no longer be possible unless the admin of every room you inhabit is willing
+to reconfigure the room for plumbing.&lt;&#x2F;p&gt;
+&lt;p&gt;This post explains the situation as seen from the matrix.org side, what it means for matrix.org users and what to do next.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;what-is-a-portalled-room-what-is-a-plumbed-room&quot;&gt;What is a portalled room, what is a plumbed room?&lt;&#x2F;h2&gt;
+&lt;p&gt;Portalled rooms are rooms that already pre-exist on the IRC side of the bridge -
+e.g. #example:libera.chat in Matrix is, for now, #example on Libera. It is
+possible to join from matrix.org without any configuration needed whatsoever.
+Effectively using matrix.org as a ‘bouncer’ for the remote network.&lt;&#x2F;p&gt;
+&lt;p&gt;Plumbed rooms are existing Matrix rooms bridged to existing IRC channels. They
+require specific configuration and action by the IRC chanop. They can be useful
+in cases where multiple protocols bridge into the same room on the Matrix side
+though are harder to manage than their portalled counterparts, and have limits
+to avoid large (100+ user) preexisting rooms being plumbed together.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-happened&quot;&gt;What happened?&lt;&#x2F;h2&gt;
+&lt;p&gt;Bridging two incompatible protocols together is hard and requires constant
+attention. It is at once a technical and social challenge.&lt;&#x2F;p&gt;
+&lt;p&gt;Over the last 9 years, the IRC bridge has had its share of problems, and we have
+worked through fixing them. Though in fairness, not always as rapidly as we
+would like. For many years it was essentially just one person leading the
+effort, and then in recent times, we added two more people (though the team
+covers all bridges and integrations).&lt;&#x2F;p&gt;
+&lt;p&gt;We are in constant dialogue with the Libera.Chat team, and we know they have
+been frustrated with the experience of working with the bridge.&lt;&#x2F;p&gt;
+&lt;p&gt;Recent examples include&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Latency due to federation delays&lt;&#x2F;li&gt;
+&lt;li&gt;Spam from Matrix - open signup spam not being blocked on the bridge, and
+Libera having to write their own scanner&lt;&#x2F;li&gt;
+&lt;li&gt;Dropped messages following an ambitious refactor of the bridge&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We have tried to address these problems as they arise, this &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-irc&#x2F;releases&#x2F;tag&#x2F;1.0.0&quot;&gt;changelog for the 1.0 release&lt;&#x2F;a&gt;
+gives an idea of some recent changes.&lt;&#x2F;p&gt;
+&lt;p&gt;More concretely:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Persisting connections over a restart&lt;&#x2F;li&gt;
+&lt;li&gt;Continually monitoring and scaling the libera.chat homeserver (hosted on EMS)&lt;&#x2F;li&gt;
+&lt;li&gt;Automatically disconnecting users banned by matrix.org moderators, by reading
+the &lt;a href=&quot;https:&#x2F;&#x2F;matrix-org.github.io&#x2F;matrix-appservice-irc&#x2F;latest&#x2F;administrators_guide.html#subscribing-to-moderation-policies&quot;&gt;ban list&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Improving test coverage with a new suite of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-irc&#x2F;tree&#x2F;develop&#x2F;spec&#x2F;e2e&quot;&gt;E2E tests&lt;&#x2F;a&gt;
+for the bridge.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Fundamentally, progress has been slow due to bandwidth, and we cannot stress
+enough that these hurdles are not due to a lack of care or interest, but much
+more due to trying to support the bridge on limited resources.&lt;&#x2F;p&gt;
+&lt;p&gt;All in all, it adds up to a lot of work on both sides of the bridge, which
+places pressure both on the matrix.org side and the Libera Chat side. After
+consideration, the folks at Libera decided that it would be better to block
+portalled rooms and instead move to an opt-in model where the specific admins
+would need to agree to have their room be ‘plumbed’ into Matrix.&lt;&#x2F;p&gt;
+&lt;p&gt;As a separate point, we know there have been some concerns about the
+archive.matrix.org service. This is unfortunate, not least because we see some
+fundamental misunderstandings on what the service is doing and why.
+&lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;07&#x2F;what-happened-with-the-archive&#x2F;&quot;&gt;Here is a more detailed post to explain&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;so-what-does-this-mean&quot;&gt;So what does this mean?&lt;&#x2F;h2&gt;
+&lt;p&gt;From August 2023, only plumbed rooms will be possible.  This means that unless
+the chanop on the Libera Chat side is open to plumbing the room, then it will not be
+possible to talk in the room from Matrix. This will affect the majority of the
+~11,000 Matrix users currently using the bridge to communicate on IRC (and the
+remaining ~31,000 users left on the IRC side of the bridge).&lt;&#x2F;p&gt;
+&lt;p&gt;As a consequence, it will no longer be possible to use matrix.org as a bouncer into
+Libera and in order to reach a given room, chanop &lt;em&gt;must&lt;&#x2F;em&gt; specifically configure the
+plumbed room. Additionally, some features will stop functioning, like topic
+synchronisation or kick propagation from Libera.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-to-do-next&quot;&gt;What to do next?&lt;&#x2F;h2&gt;
+&lt;p&gt;If you are a matrix.org user and want to continue to participate in an Libera IRC
+community, then you will need to persuade the room IRC chanop to do the
+necessary plumbing. Hopefully, they will do that for you, but if not, there
+will be no way to reach across the bridge.&lt;&#x2F;p&gt;
+&lt;p&gt;We will put together a guide to make the process of converting to a plumbed
+room easier.&lt;&#x2F;p&gt;
+&lt;p&gt;Further down the line, Libera have floated an idea to implement a channel mode
+to let chanops opt-in to portalled bridging. This approach could reduce the
+overall burden on the chanop and reduce friction to interoperability.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-word-on-the-bigger-picture&quot;&gt;A word on the bigger picture&lt;&#x2F;h2&gt;
+&lt;p&gt;For the most part, this post attempts to lay out the situation practically.
+However, we should not ignore the bigger picture. At Matrix, we consider this
+situation to be a great sadness. We respect the decision from Libera Chat, but
+see this as a lose-lose for the open-source community overall.&lt;&#x2F;p&gt;
+&lt;p&gt;This move will partition the two networks. It will stop users from being able to
+use matrix.org as an IRC bouncer into Libera. It will make life more irritating for Libera chanops
+who will now be hassled by users to enable Matrix bridging for their rooms,
+rather than it happening automatically.&lt;&#x2F;p&gt;
+&lt;p&gt;It will fragment communities still further between their Matrix room and their
+separate IRC room (as well as their Discord and Telegram and Slack etc), unless
+the chanop chooses to plumb the two together.&lt;&#x2F;p&gt;
+&lt;p&gt;It will represent a blow to the open-source community at large and make it even
+harder for contributors to participate in discussions for their projects. Also,
+since it means creating new rooms, there will be a discontinuity in room history
+with valuable discussion effectively lost.&lt;&#x2F;p&gt;
+&lt;p&gt;Perhaps most importantly, it will encourage plumbing, which can cause more
+problems than portal bridging. Specifically, the social implications of plumbing
+(merging) together two existing communities will always be more more
+controversial and awkward than simply joining a Libera IRC channel using matrix.org as a
+bouncer. In practice, plumbing gives fewer privileges to the bridge bot, which
+makes support for bridged rooms more difficult on both sides.&lt;&#x2F;p&gt;
+&lt;p&gt;Fundamentally, we do not want to be bad IRC citizens and acknowledge that the
+matrix.org bridge generates more work on the Libera Chat side than native IRC
+bouncers. We do consider that extra effort to come with a significant upside:
+it’s transparent for users, who can pick the technology they love to join the
+conversation.&lt;&#x2F;p&gt;
+&lt;p&gt;Likewise, the folks at Libera are keen to stress that this is not necessarily a
+permanent change, and that in future, they would be open to reconsidering the
+move should the support burden of the bridge reduce.&lt;&#x2F;p&gt;
+&lt;p&gt;So that’s it, we’ll be working with the community over the coming month to help with the transition.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Old Gitter bridge end of life (2021-04-21) - to be replaced with native bridge</title>
+    <published>2021-04-15T00:00:00+00:00</published>
+    <updated>2021-04-15T00:00:00+00:00</updated>
+    <author>
+      <name>Bridge Team</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2021/04/15/old-gitter-bridge-end-of-life-2021-04-21-to-be-replaced-with-native-bridge/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2021/04/15/old-gitter-bridge-end-of-life-2021-04-21-to-be-replaced-with-native-bridge/</id>
+    <content type="html">&lt;p&gt;Next week on Wednesday (2021-04-21), the old Gitter bridge (identified as &lt;code&gt;@gitterbot:matrix.org&lt;&#x2F;code&gt;) will be shut down and any plumbed rooms (bridged connections) remaining will no longer bridge. To replace this, we&#x27;ve already migrated all of the portal rooms and many of the plumbed rooms in preparation so most users will not need to take any further actions. The remaining rooms with the old Gitter bridge are unfortunately not possible to migrate and for those communities a clean break will be needed. The new native Gitter bridge is here to replace this!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2020&#x2F;12&#x2F;07&#x2F;gitter-now-speaks-matrix&quot;&gt;Gitter is bridged natively to Matrix&lt;&#x2F;a&gt; on the &lt;code&gt;gitter.im&lt;&#x2F;code&gt; homeserver and all of the public rooms are available there. The new native Gitter bridge has many advantages over the old bridge and is being actively developed to ensure parity and delivers:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ability to join public Gitter rooms from Matrix via &lt;code&gt;#&amp;lt;community&amp;gt;_&amp;lt;room&amp;gt;:gitter.im&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Native feeling virtual users on both sides of the bridge so messages appear from the author itself&lt;&#x2F;li&gt;
+&lt;li&gt;Bridging edits, replies (mapped to threads on Gitter), deletes, file transfers&lt;&#x2F;li&gt;
+&lt;li&gt;Full support for markdown, emoji and mentions&lt;&#x2F;li&gt;
+&lt;li&gt;Soon to be &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;gitterHQ&#x2F;webapp&#x2F;-&#x2F;issues&#x2F;2671&quot;&gt;direct message (DM) support&lt;&#x2F;a&gt;!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If you still need your &lt;strong&gt;existing&lt;&#x2F;strong&gt; Matrix room for a public community plumbed to Gitter, we’re happy to help community admins with the setup of a manual plumb. Send an email to &lt;a href=&quot;mailto:support@gitter.im&quot;&gt;support@gitter.im&lt;&#x2F;a&gt; with the details! Self-service plumbing will be coming in future (meanwhile, please keep it to public community rooms only, if you must!)&lt;&#x2F;p&gt;
+&lt;p&gt;We hope that this notice helps make the transition a little smoother and avoid any disruptions 🙇&lt;&#x2F;p&gt;
+&lt;p&gt;If you have any questions about the migration path or the new bridge, you can always chat with us in &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#gitter:matrix.org&quot;&gt;#gitter:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Happy chatting everyone!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>matrix-appservice-slack bridge 1.0 is here!</title>
+    <published>2019-10-03T00:00:00+00:00</published>
+    <updated>2019-10-03T00:00:00+00:00</updated>
+    <author>
+      <name>Half-Shot</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/10/03/matrix-appservice-slack-bridge-1-0-is-here/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/10/03/matrix-appservice-slack-bridge-1-0-is-here/</id>
+    <content type="html">&lt;p&gt;Hello Matrix enthusiasts! Yesterday we released &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-slack&#x2F;releases&#x2F;tag&#x2F;1.0.0&quot;&gt;matrix-appservice-slack 1.0&lt;&#x2F;a&gt;. This marks a major milestone
+in bridge development for the Matrix.org team, being our first bridge to ever reach 1.0. The decision to
+release this version came after we decided that the bridge had gained enough features and reached a point
+of stability where it could be deployed in the wild with minimal risk.&lt;&#x2F;p&gt;
+&lt;p&gt;For those not in the know, the Slack bridge is Node.JS based, and bridges slack channels &amp;amp; users into Matrix
+seamlessly. And for those wondering, yes it works with Mattermost too (since their API is compatible with Slack)!
+In previous versions only a limited subset of features were supported, making heavy usage of Slack’s
+webhook API. As of 1.0, the bridge now makes use of the newer Slack Events&#x2F;RTM API which gives us all we need for
+a richer bridging experience. Everything from edits and reactions to typing notifications is supported in the 1.0 release.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally for those who are self hosting, we are pleased to offer the ability to &quot;puppet&quot; your Slack account using the
+bridge. Puppeting is the process in which the bridge will send messages as if you were sending them from the Slack client
+directly, when you talk using your Matrix account. This opens the door to seamless bridging and direct messaging support.&lt;&#x2F;p&gt;
+&lt;p&gt;For those wishing to bridge their whole workspace across, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SolarDrew&#x2F;skill-picard&quot;&gt;picard&lt;&#x2F;a&gt; exists
+as a tool to manage large scale Slack bridge deployments. This tool is provided by &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@Cadair:matrix.org&quot;&gt;Cadair&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@SolarDrew:matrix.org&quot;&gt;SolarDrew&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;2019-10-03-slack1.0-threading.png&quot; alt=&quot;Slack Screenshot&quot; &#x2F;&gt;
+Threading &amp;amp; Reactions!&lt;&#x2F;p&gt;
+&lt;p&gt;The bridge has undergone some pretty serious code surgery as well. The whole codebase has been rewritten in
+TypeScript to take advantage of type checking and generic types. The bridge is currently based upon the
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-bridge&#x2F;&quot;&gt;matrix-appservice-bridge&lt;&#x2F;a&gt; library. The datastore interface now supports PostgreSQL, which allows for administrators to inspect and edit the database while the bridge is running, as well as offering  helpful performance boost over the NeDB datastore format that was used previously. Finally, the codebase has proper Unit and Integration Tests to ensure new changes will not cause any regressions in behaviour. In short, &lt;strong&gt;now is an excellent time to get involved and hack on the bridge&lt;&#x2F;strong&gt;. There is already a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-slack&#x2F;issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22&quot;&gt;crafted list of easy issues&lt;&#x2F;a&gt; for new and experienced bridge devs.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;2019-10-03-slack1.0-perfmem.png&quot; alt=&quot;Grafana memory usage graph&quot; &#x2F;&gt;
+Memory usage of the bridge comparison&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;2019-10-03-slack1.0-perfcpu.png&quot; alt=&quot;Grafana CPU usage graph&quot; &#x2F;&gt;
+CPU usage of the bridge comparison&lt;&#x2F;p&gt;
+&lt;p&gt;In terms of how many users matrix.org is currently serving at the moment, we present to you some figures:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;2562 bridged rooms&lt;&#x2F;li&gt;
+&lt;li&gt;764 teams connected to the bridge&lt;&#x2F;li&gt;
+&lt;li&gt;103711 events have passed through the bridge since the launch of 0.3.2&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Of course, our work doesn’t stop at 1.0. The plan for the immediate future of the bridge
+is to continue adding support for other event types coming from Matrix and Slack to create
+an ever richer experience. Obvious features are things like topic changes, and syncing membership
+across the bridge. In the long term future we would also like to add community support to the bridge,
+so whole Slack workspaces can be bridged across with a single click.&lt;&#x2F;p&gt;
+&lt;p&gt;That’s all from me, and I would like to say a massive thank you to &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@Cadair:matrix.org&quot;&gt;Cadair&lt;&#x2F;a&gt;
+and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@benpa:matrix.org&quot;&gt;Ben&lt;&#x2F;a&gt; for both their code and review work on the project and as always,
+thank you to the community for using the bridge and reporting issues. 🙂&lt;&#x2F;p&gt;
+&lt;p&gt;Useful links:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#matrix_appservice_slack:matrix.org&quot;&gt;Matrix Room&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-appservice-slack&quot;&gt;Project Home&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix-appservice-slack.readthedocs.io&#x2F;en&#x2F;stable&#x2F;&quot;&gt;Docs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+</entry>
+
+    
+</feed>

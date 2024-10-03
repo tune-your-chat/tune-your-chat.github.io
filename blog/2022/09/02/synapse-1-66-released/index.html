@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;02&#x2F;synapse-1-66-released&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Synapse 1.66 released" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Synapse 1.66 released</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Synapse 1.66 released",
+    "datePublished": "2022-09-02T00:00+00:00",
+    
+    
+    "image": [
+        "https://matrix.org/blog/img/matrix-logo.png"
+    ],
+    
+    "author": [
+    
+    {
+        "@type": "Person",
+        "name": "Brendan Abolivier",
+        "url": "https://tune-your-chat.github.io/authors/brendan-abolivier"
+    }
+    
+    ]
+}
+</script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<article class="content post with-sidebar">
+    <header>
+        <h1>Synapse 1.66 released</h1>
+        <span>
+            02.09.2022 00:00
+            
+            —
+            <a href="/category/releases">Releases</a>
+            
+            —
+            <a
+                href="/author/brendan-abolivier">Brendan Abolivier</a>
+            
+        </span>
+        
+    </header>
+    <div class="post-main">
+        <div class="post-content">
+            <p>Hey all, we've just released <a href="https://github.com/matrix-org/synapse/releases/tag/v1.66.0">Synapse 1.66</a>! Let's have a
+look at what's inside this release.</p>
+<span id="continue-reading"></span><h2 id="removal-of-email-verification-delegation">Removal of email verification delegation</h2>
+<p>Before Synapse 1.66, homeserver administrators had the possibility to
+configure Synapse to delegate verifying email addresses to an identity
+server (using the <code>account_threepid_delegates.email</code> configuration setting).
+This feature relied on old APIs from the Matrix specification that have since
+been <a href="https://spec.matrix.org/v1.3/changelog/#identity-service-api-1-1">removed</a> from it.</p>
+<p><a href="https://matrix.org/blog/2022/08/03/synapse-1-64-released">Synapse 1.64</a> announced the
+deprecation of this feature, and the addition of a warning at startup when
+the configuration setting is in use.</p>
+<p>As of Synapse 1.66, support for this feature has been fully removed, and
+Synapse will refuse to start if the configuration setting for it is in use.</p>
+<p>If this has not already been done, administrators of servers that were
+previously using this feature are encouraged to configure an SMTP server that
+Synapse can use to verify email addresses on its own. See the
+<a href="https://matrix-org.github.io/synapse/v1.66/usage/configuration/config_documentation.html#email">configuration guide</a>
+for more information.</p>
+<p>Also see the <a href="https://matrix-org.github.io/synapse/v1.66/upgrade.html#delegation-of-email-validation-no-longer-supported">upgrade notes</a>
+for more information.</p>
+<h2 id="planned-removal-of-support-for-tcp-replication">Planned removal of support for TCP replication</h2>
+<p>Most server administrators already know that Synapse can be made to scale
+horizontally by deploying <a href="https://matrix-org.github.io/synapse/latest/workers.html">workers</a>. Workers are
+processes running alongside Synapse's main process to allow offloading some
+of the work it would otherwise be doing, load balancing some of the traffic,
+etc.</p>
+<p>In a deployment of Synapse that uses workers, these processes use replication
+to share information between themselves. One of the earliest protocols
+Synapse used for replication was built on top of TCP.</p>
+<p><a href="https://github.com/matrix-org/synapse/releases/tag/v1.18.0">Synapse 1.18</a> introduced a new
+Redis-based replication protocol for workers to use and deprecated the
+TCP-based protocol, without specifying a removal date.</p>
+<p>This week we're announcing that support for TCP replication will be removed
+from Synapse in version 1.67, which is expected to come out around Sep 13th.
+See the <a href="https://github.com/matrix-org/synapse/releases/tag/v1.66.0">release notes</a> for more
+details.</p>
+<h2 id="everything-else">Everything else</h2>
+<p>Synapse 1.66 also includes some improvements to validation on endpoints using
+<a href="https://spec.matrix.org/latest/client-server-api/#user-interactive-authentication-api">User-Interactive Authentication</a>.</p>
+<p>This version of Synapse also adds compression support for federation traffic.
+See <a href="https://matrix-org.github.io/synapse/v1.66/usage/configuration/config_documentation.html#listeners">the configuration guide</a>
+for more information on how to compress HTTP traffic.</p>
+<p>Furthermore, Synapse 1.66 improves the <a href="https://matrix-org.github.io/synapse/v1.66/admin_api/rooms.html#room-details-api">Room Details admin API</a>
+and allows administrators to see if all local users have marked a given room
+as "forgotten".</p>
+<p>See the <a href="https://github.com/matrix-org/synapse/releases/tag/v1.66.0">full
+changelog</a> for a
+complete list of changes in this release. Also please have a look at the
+<a href="https://matrix-org.github.io/synapse/v1.66/upgrade#upgrading-to-v1660">upgrade
+notes</a>
+for this version.</p>
+<p>Synapse is a Free and Open Source Software project, and we'd like to extend
+our thanks to everyone who contributed to this release, including (in no
+particular order) <a href="https://github.com/dklimpel">Dirk Klimpel</a> and
+<a href="https://github.com/AntoninLoubiere">Antonin Loubiere</a>, as well as anyone
+helping us make Synapse better by sharing their feedback and reporting
+issues.</p>
+
+            <div class="callout">
+                <div class="left-col">
+                    <h2>The Foundation needs you</h2>
+                </div>
+                <div class="right-col">
+                    <p>
+                        The Matrix.org Foundation is a non-profit and only relies
+                        on donations to operate. Its core mission is to maintain
+                        the Matrix Specification, but it does much more than that.
+                    </p>
+                    <p>
+                        It maintains the matrix.org homeserver and hosts several
+                        bridges for free. It fights for our collective rights to
+                        digital privacy and dignity.
+                    </p>
+                    <a class="call-to-action plausible-event-name=BlogPostCtaSupportUs" href="/support">Support us</a>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Post Contents</h3>
+
+            <ul style="list-style: none; padding-left: 0px;">
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2022/09/02/synapse-1-66-released/#removal-of-email-verification-delegation">Removal of email verification delegation</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2022/09/02/synapse-1-66-released/#planned-removal-of-support-for-tcp-replication">Planned removal of support for TCP replication</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2022/09/02/synapse-1-66-released/#everything-else">Everything else</a>
+                    
+                </li>
+                
+            </ul>
+        </aside>
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

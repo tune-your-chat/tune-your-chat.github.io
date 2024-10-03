@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - Governing Board</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/governing-board/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-06-03T19:00:00+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/governing-board/atom.xml</id>
+    
+    
+    
+<entry xml:lang="en">
+    <title>Introducing our first elected Governing Board</title>
+    <published>2024-06-03T19:00:00+00:00</published>
+    <updated>2024-06-03T19:00:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/06/election-results/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/06/election-results/</id>
+    <content type="html">&lt;p&gt;It is an honor and a pleasure to unveil the election results and introduce the first elected Governing Board for the Matrix.org Foundation!&lt;&#x2F;p&gt;
+&lt;p&gt;Congratulations to the winning candidates, we thank you for your willingness to serve the community. We’re also grateful to everyone who threw their hat in the ring, and hope that the candidates who did not get elected consider running again in the future – noting that we have an election of Gold, Silver, Individual, and Associate Members scheduled for next year.&lt;&#x2F;p&gt;
+&lt;p&gt;Thanks also to all of the people who cast ballots in the election, and to everyone who asked questions along the way! We learned a lot in this first election process that we look forward to incorporating into the next one.&lt;&#x2F;p&gt;
+&lt;p&gt;The level of engagement with the process was a very encouraging sign for the health of the Matrix ecosystem, and we’re proud to have had 100% voter turnout in all but one constituency.&lt;&#x2F;p&gt;
+&lt;p&gt;Read on to see who is on the Governing Board, a brief discussion of next steps, and reflections on some of the work that remains to improve representation.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;the-governing-board&quot;&gt;The Governing Board&lt;&#x2F;h2&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;5140858738311168&quot;&gt;Individual Members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Andy Balaam (he&#x2F;him)&lt;&#x2F;li&gt;
+&lt;li&gt;Greg Sutcliffe (he&#x2F;him)&lt;&#x2F;li&gt;
+&lt;li&gt;J.B. Crawford (they&#x2F;them)&lt;&#x2F;li&gt;
+&lt;li&gt;Sumner Evans&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;5661642078552064&quot;&gt;Ecosystem Members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bram van den Heuvel (he&#x2F;they), Elm SDK&lt;&#x2F;li&gt;
+&lt;li&gt;Kim Brose (he&#x2F;him), Matrix Community Events&lt;&#x2F;li&gt;
+&lt;li&gt;Nicolas Werner (he&#x2F;him), Nheko-Reborn&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;6484668047163392&quot;&gt;Associate Members&lt;&#x2F;a&gt;, we have&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleo Menenez Jr. (he&#x2F;him), GNOME Foundation&lt;&#x2F;li&gt;
+&lt;li&gt;Tobias Fella (he&#x2F;him), KDE e.V.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;4762997481275392&quot;&gt;Platinum Members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neil Johnson (he&#x2F;him), Element&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;6283574079651840&quot;&gt;Gold Members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Brad Murray (he&#x2F;him), Beeper&lt;&#x2F;li&gt;
+&lt;li&gt;Kevin Boos (he&#x2F;him), Futurewei Technologies&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;6615071399608320&quot;&gt;Silver Members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jan Kohnert (he&#x2F;him), Gematik GmbH&lt;&#x2F;li&gt;
+&lt;li&gt;Thor Arne Johansen, Verji Tech AS&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;5342481448173568&quot;&gt;Guardians&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amandine Le Pape (she&#x2F;her)&lt;&#x2F;li&gt;
+&lt;li&gt;Matthew Hodgson (he&#x2F;him)&lt;&#x2F;li&gt;
+&lt;li&gt;Ross Schulman&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Representing &lt;a href=&quot;https:&#x2F;&#x2F;opavote.com&#x2F;results&#x2F;5127688657305600&quot;&gt;Spec Core Team members&lt;&#x2F;a&gt;, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Richard van der Hoff (he&#x2F;him)&lt;&#x2F;li&gt;
+&lt;li&gt;Travis Ralston (he&#x2F;him)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;And, lastly, representing Foundation staff in an ex officio capacity, we have:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Josh Simmons (he&#x2F;they)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;&#x2F;h2&gt;
+&lt;p&gt;All of the elected representatives will soon receive a welcome email and details about onboarding which will take place over the next two months, with our first official meeting being in August or September. That first meeting will include chartering committees, establishing initial committee assignments, and other agenda items within the Governing Board’s remit.&lt;&#x2F;p&gt;
+&lt;p&gt;All Governing Board members will soon be added to a private Matrix room and mailing list. We also hope to hold informal gatherings before that first meeting, so that Governing Board members can get to know each other before we dig into business.&lt;&#x2F;p&gt;
+&lt;p&gt;We will continue to use the &lt;a href=&quot;&#x2F;governing-board&#x2F;elections&#x2F;2024&#x2F;&quot;&gt;2024 elections page&lt;&#x2F;a&gt; as a place to aggregate information about the current Governing Board, and our &lt;a href=&quot;&#x2F;about&#x2F;&quot;&gt;About&lt;&#x2F;a&gt; page will soon be updated. Before next year’s election we will establish a more general landing page for the Governing Board that is not specific to any one year.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;reflecting-on-representation&quot;&gt;Reflecting on representation&lt;&#x2F;h2&gt;
+&lt;p&gt;Our mission is to bring secure, private, free and open, unencumbered communication to everyone. In order to succeed in that, we need to bring a representative cross-section of perspectives to bear on our governance and development.&lt;&#x2F;p&gt;
+&lt;p&gt;And while we haven’t yet conducted formal surveys of demographics, such that we can be confident about the baseline we’re working from, it’s plain to see that our contributor communities are not yet as representative as we need them to be. This isn’t news to anyone, but the election results make it all the more obvious.&lt;&#x2F;p&gt;
+&lt;p&gt;The issue of representation is something we must tackle across the whole of the Matrix ecosystem, and we intend for the Foundation to play a leading role in addressing this internally and externally. We can learn from other successful initiatives, and I myself have been successful in tackling these challenges in partnership with other communities, so I know we can get to where we need to be.&lt;&#x2F;p&gt;
+&lt;p&gt;In electing our first Governing Board, we have dramatically expanded the number of perspectives and lived experiences that are directly engaged in the evolution and direction of Matrix. Coming from a place where the majority of decisions were being made by people associated with one company, this is a huge improvement. This is something we should be proud of!&lt;&#x2F;p&gt;
+&lt;p&gt;But to be extremely clear: we need to drastically increase the representation of women and people outside of Europe and North America. There may be other lived experiences we are short on, but these two stand out.&lt;&#x2F;p&gt;
+&lt;p&gt;I’m eager to dig into this work with everyone here around Matrix. Please stay tuned for a follow up blog post specifically on this subject.&lt;&#x2F;p&gt;
+&lt;p&gt;Onwards and upwards 🚀&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Voting has begun in the Governing Board elections</title>
+    <published>2024-05-17T00:00:00+00:00</published>
+    <updated>2024-05-17T00:00:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/05/voting-begins/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/05/voting-begins/</id>
+    <content type="html">&lt;p&gt;Voting has started for the Governing Board elections and runs till May 31! This is our first election and we are very excited. All of the results will be published here on the blog on June 3.&lt;&#x2F;p&gt;
+&lt;p&gt;You can learn about all of the &lt;a href=&quot;&#x2F;governing-board&#x2F;elections&#x2F;2024&#x2F;#nominees&quot;&gt;candidates&lt;&#x2F;a&gt; on our &lt;a href=&quot;&#x2F;governing-board&#x2F;elections&#x2F;2024&quot;&gt;2024 election page&lt;&#x2F;a&gt;. All eligible voters should have received an email from &lt;a href=&quot;https:&#x2F;&#x2F;www.opavote.com&#x2F;&quot;&gt;OpaVote&lt;&#x2F;a&gt;, the election system we have chosen for this year’s elections.&lt;&#x2F;p&gt;
+&lt;p&gt;If you believe you are eligible to participate but have not heard from us, first check the inbox and spam folders of the email address you have on file with us (such as through Donorbox or Patreon). Please &lt;a href=&quot;mailto:elections@foundation.matrix.org&quot;&gt;email us&lt;&#x2F;a&gt; if you have any questions.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;All members of each constituency group are entitled to vote on the candidates within that constituency group. Generally, we will hold elections for half of the constituency groups each year. However, this year we are holding elections for all of the constituency groups:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Community representatives&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;4 seats for Individual Members – these are people who currently provide financial support to the Foundation.&lt;&#x2F;li&gt;
+&lt;li&gt;3 seats for Ecosystem Members – these are FOSS projects and communities around Matrix.&lt;&#x2F;li&gt;
+&lt;li&gt;2 seats for Associate Members – these are FOSS foundations, academic institutions, and other communities that are aligned with key parts of our mission.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Funder representatives&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;4 seats for Platinum Members – these organisations sponsor at the highest level.&lt;&#x2F;li&gt;
+&lt;li&gt;3 seats for Gold Members — these organisations sponsor at a high level.&lt;&#x2F;li&gt;
+&lt;li&gt;2 seats for Silver Members — these organisations sponsor at a level commensurate with the size of their organisation.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Foundation representatives&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;3 seats for Guardians – these are the members of the Foundation&#x27;s board of directors.&lt;&#x2F;li&gt;
+&lt;li&gt;2 seats for the Spec Core Team – these are the members of the Spec Core Team that looks after the spec.&lt;&#x2F;li&gt;
+&lt;li&gt;Managing Director – this is the Foundation&#x27;s head of staff, no election is run for this seat.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Next year, we&#x27;ll run elections just for Gold, Silver, Individual, and Associate Members.&lt;&#x2F;p&gt;
+&lt;p&gt;For more background on the Governing Board and its place in the growth and evolution of the Matrix ecosystem, read: &lt;a href=&quot;&#x2F;blog&#x2F;2023&#x2F;12&#x2F;electing-our-first-governing-board&quot;&gt;The Governing Board, our next big step in open governance&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Announcing the 2024 Governing Board elections</title>
+    <published>2024-04-12T14:00:00+00:00</published>
+    <updated>2024-04-24T10:30:00+00:00</updated>
+    <author>
+      <name>Josh Simmons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/04/election-announcement/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/04/election-announcement/</id>
+    <content type="html">&lt;p&gt;&lt;em&gt;Update: the terms of the board have been updated with the follow changes:&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Allow for filling vacancies by appointment or by-election at the discretion of the Managing Director and the Guardians, in consultation with a Governance Committee. (2.7.1)&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Allow for the Governing Board to adopt voting mechanisms other than simple majority on a case-by-case basis. (5.5)&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Disallow nominees from running for election in more than one constituency at a time. (2.4.1)&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Change UTC to AOE in timeline. (2.3)&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Welcome to the first ever Governing Board election season for the Matrix.org Foundation! We start with a one week nomination period that opens on Saturday, April 20th and closes on Friday, April 26th &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Anywhere_on_Earth&quot;&gt;AOE time&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We’ll be doing our best to reach out to every constituent group to let them know they are eligible to nominate candidates for the election. That said, this is our first election and we don’t yet have contact information for everybody who is eligible, so we want your help getting the word out.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;If you are interested in nominating someone – or yourself – to be a candidate in this election, read this post in its entirety.&lt;&#x2F;em&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;To learn about what the Governing Board is, what it does, and the context it operates in, read this &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;12&#x2F;electing-our-first-governing-board&#x2F;&quot;&gt;blog post from last December&lt;&#x2F;a&gt;. You are also welcome to read &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;media&#x2F;2024-04-governing-board-terms-of-reference.pdf&quot;&gt;the Governing Board’s current bylaws&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2024&#x2F;04&#x2F;election-announcement&#x2F;#how-to-nominate&quot;&gt;Go here for instructions on submitting a nomination!&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;election-schedule&quot;&gt;Election schedule&lt;&#x2F;h2&gt;
+&lt;p&gt;Here is the timeline for this election season, which will happen in the second quarter of every year:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;2024-election-timeline.png&quot; alt=&quot;A visual election timeline for this year: Announcements on April 15, Nominations begin April 20, Campaigning begins April 27, Voting begins May 18, and Results announced on June 3.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;To minimize confusion, and maximize inclusion given our international community, we will be using &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Anywhere_on_Earth&quot;&gt;“Anywhere on Earth” (AOE) time&lt;&#x2F;a&gt;. If you’re not familiar with AOE time, here’s what it means using our nomination period as an example: so long as it’s still Friday, April 26th in any timezone on the planet (from UTC+12 to UTC-12), the nomination period is open.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-our-elections-work&quot;&gt;How our elections work&lt;&#x2F;h2&gt;
+&lt;p&gt;Our Governing Board is made up of 9 different constituency groups across 3 categories: nonprofit and community representatives, funder representatives, and foundation representatives. Each group has been allocated seats on the board, gets to nominate its own slate of candidates, and gets to vote within that slate of candidates.&lt;&#x2F;p&gt;
+&lt;p&gt;For example, Individual Members get to nominate themselves, and vote on the Individual Members who are qualified candidates. The only exception is with the Managing Director (hi, that’s me) who automatically gets a seat on the Governing Board, but that’s just one seat of many.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the composition of seats on the Governing Board:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;Community representatives&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: center&quot;&gt;Funder representatives&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: center&quot;&gt;Foundation representatives&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;4 Individual Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;4 Platinum Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;3 Guardians&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;3 Ecosystem Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;3 Gold Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;2 Spec Core Team Members&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;2 Associate Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;2 Silver Members&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;Managing Director&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;membership&#x2F;&quot;&gt;Learn how to become a member&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;support&#x2F;&quot;&gt;see a list of our current organizational members&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We will be seating candidates for all constituency groups in our first election. Starting in 2025, we’ll run elections for half of the constituency groups. This is so that we maintain some level of continuity and institutional knowledge across each election. Consequently, while the first elected representatives from the Guardians, Spec Core Team, Platinum, and Ecosystem Members will serve 2-year terms, the first elected representatives from Gold, Silver, Individual, and Associate Members will serve a 1-year term. We anticipate that many people in those constituencies who are elected this year will run for re-election in 2025.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;img&#x2F;2024-election-years.png&quot; alt=&quot;A visual election timeline for the next few years: in 2024 we elect all constituencies, in 2025 we elect Gold, Silver, Individual, and Associate Members, in 2026 we elect Platinum, Ecosystem, Guardians, and Spec Core Team Members, in 2027 we elect Gold, Silver, Individual, and Associate Members, and so on.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;There are currently no term limits, but term limits are a best practice in open governance so we intend to introduce them as we find our collective footing.&lt;&#x2F;p&gt;
+&lt;p&gt;For greater detail, &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2023&#x2F;12&#x2F;electing-our-first-governing-board&#x2F;&quot;&gt;please read this blog post from last December&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;who-can-nominate&quot;&gt;Who can nominate&lt;&#x2F;h2&gt;
+&lt;p&gt;You must be a member of one of the constituency groups in order to nominate yourself or someone else to be a candidate in the election. By far our largest constituency group are Individual Members, who number in the 100’s. If you have donated at least $60 USD to the Foundation since April 20, 2023, on any of Donorbox, Patreon, or Liberapay, then you are eligible to nominate and vote.&lt;&#x2F;p&gt;
+&lt;p&gt;All nominees must have consented to nomination &lt;em&gt;before being nominated&lt;&#x2F;em&gt; and must be a community member in good standing. That means they must have a clean track record with respect to our &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;legal&#x2F;code-of-conduct&#x2F;&quot;&gt;Code of Conduct&lt;&#x2F;a&gt;. We want our Governing Board to be a clearing house for a variety of priorities and perspectives, and to be able to hold space for each other even when there are disagreements.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;who-can-vote&quot;&gt;Who can vote&lt;&#x2F;h2&gt;
+&lt;p&gt;All members of each constituency group are entitled to vote on the candidates within that constituency group. We will be reaching out to everyone we have contact information for, to ensure we have our voter rolls together before voting begins in May.&lt;&#x2F;p&gt;
+&lt;p&gt;We will hold an election for every constituency even if a given constituency has fewer candidates than there are seats allocated for them on the Governing Board. This is, effectively, as a vote of confidence.&lt;&#x2F;p&gt;
+&lt;p&gt;If you believe you are eligible to participate but have not heard from us or &lt;a href=&quot;https:&#x2F;&#x2F;www.opavote.com&#x2F;&quot;&gt;OpaVote&lt;&#x2F;a&gt; – the election system we have chosen for this year’s elections – by May 10th, &lt;a href=&quot;mailto:elections@foundation.matrix.org&quot;&gt;please email us promptly&lt;&#x2F;a&gt;. We build our voter rolls on May 17th and can&#x27;t change them after that!&lt;&#x2F;p&gt;
+&lt;p&gt;All of the candidates will be listed on an elections page here on our website which we’ll publish on April 29th.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-to-prepare-yourself&quot;&gt;How to prepare yourself&lt;&#x2F;h2&gt;
+&lt;p&gt;If you want to be a candidate in the election, there are a few things you should know:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;All candidates will be listed on our website, grouped by the constituency group.&lt;&#x2F;li&gt;
+&lt;li&gt;We do not require people to use their “legal name.”&lt;&#x2F;li&gt;
+&lt;li&gt;Candidates who are nominated by an organizational member will have their affiliation listed.&lt;&#x2F;li&gt;
+&lt;li&gt;We expect candidates to provide a short bio and a short statement, collectively covering qualifications and priorities.&lt;&#x2F;li&gt;
+&lt;li&gt;You are encouraged to make yourself available for conversation with members of your constituency group.&lt;&#x2F;li&gt;
+&lt;li&gt;The period for campaigning runs from April 27th to May 17th. Please note our &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;legal&#x2F;code-of-conduct&#x2F;&quot;&gt;community Code of Conduct&lt;&#x2F;a&gt; while campaigning.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;what-to-expect-if-you-win&quot;&gt;What to expect if you win&lt;&#x2F;h2&gt;
+&lt;p&gt;Congratulations! All of the winners will be announced on June 3rd, but since the elections conclude on May 31st, you may get an email with the results of the election you participated in before June 3rd.&lt;&#x2F;p&gt;
+&lt;p&gt;All elected representatives will be added to a private mailing list and Matrix room so that they can introduce themselves and communicate in between meetings. I will be reaching out to every elected representative to meet one-on-one, get acquainted, and answer questions before we convene for our first Governing Board meeting. Given the size of the board and the international nature of our ecosystem, those one-on-one meetings will likely happen over the course of a couple months.&lt;&#x2F;p&gt;
+&lt;p&gt;The Governing Board will meet as a full board twice a year, for at least 90 minutes each time, and our first 1-2 meetings will have a professional facilitator to help us collectively put our best foot forward. Expect one meeting before the end of the year, and another before the next election.&lt;&#x2F;p&gt;
+&lt;p&gt;You are likely to receive a packet of materials before each meeting which you will be expected to have reviewed. Most meetings will be held online, though we may convene meetings in-person, such as at the (soon to be announced) annual Matrix Conference. We will make every effort to make in-person meetings accessible to remote participants, and no official business will ever happen without appropriate notice, quorum, and minutes.&lt;&#x2F;p&gt;
+&lt;p&gt;While the Governing Board is an advisory board, members are encouraged to play a role in helping to carry out the activities that support the staff in delivering on the Foundation’s collective remit, such as coalescing priorities to share with the Spec Core Team and connecting with contributors and funders to implement proposals.&lt;&#x2F;p&gt;
+&lt;p&gt;We intend to charter committees – such as for finance, which would review our annual budget in detail – who will meet in between Governing Board meetings and present their assessments and recommendations to the Governing Board. These committees are where the bulk of the activity will take place since the board, which may have up to 24 members, is quite large.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-to-nominate&quot;&gt;How to nominate&lt;&#x2F;h2&gt;
+&lt;p&gt;Please &lt;a href=&quot;https:&#x2F;&#x2F;cryptpad.fr&#x2F;form&#x2F;#&#x2F;2&#x2F;form&#x2F;view&#x2F;Fjksk0AMwLWnp4T6t+tTsmNoWSMsJJg8jLXdPzIGkpc&#x2F;&quot;&gt;use this Cryptpad form to nominate for the Governing Board elections&lt;&#x2F;a&gt;. If you are unable to use the form, please refer to &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;media&#x2F;2024-nomination-form.pdf&quot;&gt;this nomination document&lt;&#x2F;a&gt; and email your responses to &lt;a href=&quot;mailto:elections@foundation.matrix.org&quot;&gt;elections@foundation.matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;All nominations are subject to review in accordance with our bylaws. We will email you to confirm receipt within 2 business days, and we will publish our elections landing page with all of the nominees, and other details, by April 27th.&lt;&#x2F;p&gt;
+&lt;p&gt;Thank you for your ongoing support, and good luck to all the candidates in the upcoming elections!&lt;&#x2F;p&gt;
+&lt;p&gt;Ad astra per aspera 🚀&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+</feed>

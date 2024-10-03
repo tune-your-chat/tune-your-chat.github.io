@@ -1,0 +1,1257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;page&#x2F;53&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Blog" />
+    
+    
+    
+    <meta property="og:description" content="The Matrix.org Foundation blog is where the Matrix.org Foundation and Community
+post updates on their activity. Every Friday evening they publish This Week In
+Matrix, a digest of the past week activity.
+" />
+    <meta name="description" content="The Matrix.org Foundation blog is where the Matrix.org Foundation and Community
+post updates on their activity. Every Friday evening they publish This Week In
+Matrix, a digest of the past week activity.
+" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Blog</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        <div class="content">
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;04&#x2F;08&#x2F;synapse-deprecating-postgres-9-4-and-python-2-x&#x2F;" title="Synapse: Deprecating Postgres 9.4 and Python 2.x">Synapse: Deprecating Postgres 9.4 and Python 2.x</a></h1>
+            <span>
+                08.04.2019 00:00
+                —
+                <a href="/category/general">
+                    General
+                </a>
+                —
+                
+                <a href="/author/neil-johnson">
+                    Neil Johnson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p><strong>TL;DR DON'T PANIC - Synapse 1.0 will support Postgres 9.4 and Python 2.7</strong></p>
+<p>Folks, this is an update to explain that we will be shortly deprecating Synapse support for Postgres 9.4 and Python 2.x.</p>
+<h2 id="what-are-we-doing">What are we doing?</h2>
+<p>From the dates described below, we will no longer guarantee support for deprecated versions. This means that Synapse <em>may </em>continue to work with these versions but we will not make any attempt to ensure compatibility and will remove old library versions from our CI.</p>
+<h2 id="when-is-this-happening">When is this happening?</h2>
+<p><strong>Synapse 1.0 will continue to support both technologies, but subsequent releases may not:-</strong></p>
+<p>For Python, we shared that we would discontinue to Python 2.x support from<a href="/blog/2018/12/21/porting-synapse-to-python-3/"> April 1st 2019</a>, so for the first release that follows 1.0 we do not guarantee Python 2.x support.</p>
+<p>For Postgres, will give server admins 6 weeks to upgrade to a newer version, and will guarantee support <strong>up until 20th May 2019.</strong></p>
+<h2 id="why-would-you-do-this-to-us">Why would you do this to us?</h2>
+<p>We have multiple reasons, but broadly:-</p>
+<ul>
+ 	<li>We want to make use of new language features not supported in old versions. This will enable us to continue to improve the performance and maintainability of Synapse.</li>
+ 	<li>Python 2.x overall will be <a href="https://pythonclock.org/">end of life'd at the end of the year</a>. <a href="https://www.postgresql.org/support/versioning/">Postgres 9.4's final release</a> will follow 2 months later on 13th February 2020.</li>
+ 	<li>Since very few server admins still use these technologies on the wild, providing support is costly and we want to reduce our overall maintenance load.</li>
+</ul>
+<h2 id="la-la-la-i-am-ignoring-you-what-will-happen">La la la I am ignoring you - what will happen?</h2>
+<p>You will be able to upgrade to Synapse 1.0, but will likely experience incompatibilities that prevent you upgrading further. Seriously, you really need to upgrade.</p>
+<h2 id="okay-but-i-have-questions-where-should-i-go">Okay, but I have questions, where should I go?</h2>
+<p>Come and say Hi in #synapse:matrix.org and we'll do our best to help you.</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;04&#x2F;05&#x2F;this-week-in-matrix-2019-04-05&#x2F;" title="This Week in Matrix 2019-04-05">This Week in Matrix 2019-04-05</a></h1>
+            <span>
+                05.04.2019 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/ben-parsons">
+                    Ben Parsons
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live-s3e20-fluffychat-creator-krille-on-matrix-ubuntu-touch-and-matrix-for-healthcare">Matrix Live S3E20 FluffyChat creator Krille on Matrix, Ubuntu Touch and Matrix-for-Healthcare</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=mLgLwLcq9Ys">https://youtube.com/watch?v=mLgLwLcq9Ys</a></noscript>
+<youtube-player video-id="mLgLwLcq9Ys"></youtube-player>
+<h2 id="synapse-the-road-to-1-0">Synapse, the road to 1.0</h2>
+<p>Neil, <a href="https://github.com/matrix-org/synapse/">Synapse</a> overlord:</p>
+<blockquote>
+<p>Last week we carried on with Synapse 1.0 work, in particular <a href="https://github.com/matrix-org/synapse/issues/4364">server key signing validity</a>, a config option to <a href="https://github.com/matrix-org/synapse/pull/4967">verify federation certificates</a> to support MSC1711 and support for <a href="https://github.com/matrix-org/synapse/pull/4982">3PID unbinding APIs</a> (MSC1915). Outside of that we've been thinking about how to improve room upgrades for private rooms and landed the preparatory work for a refactor of the room directory.</p>
+<p>Coming up next, we'll continue to bash out 1.0 blockers, Hawkowl has started work on optimising for small hosted homeservers, and anoa will be working on the new super fast room directory. Finally Erik has started work on aggregations support so clients will be able to offer things like edits and reactions ?</p>
+<p><a href="https://www.arewereadyyet.com/">https://www.arewereadyyet.com/</a> is now just shy of 64%, keep going.</p>
+</blockquote>
+<h2 id="dendrite">Dendrite</h2>
+<blockquote>
+<p><a href="https://github.com/matrix-org/sytest/pull/541">Dockerfile for sytest</a> running against Dendrite approved. Close to being able to run Dendrite against sytest. Also using sytest's new test white/blacklist functionality to include a list of tests that Dendrite is known to pass in the repo. When people make new PRs that allow Dendrite to pass new tests, they can also append the names of the tests to the testfile to help automatically track Dendrite's improving progress. Look forward to seeing further progress post Synapse 1.0.</p>
+</blockquote>
+<h2 id="libqmatrixclient-0-5-1-released">libQMatrixClient 0.5.1 released,</h2>
+<p><a href="https://matrix.to/#/@kitsune:matrix.org">kitsune</a>:</p>
+<blockquote>
+<p><a href="https://github.com/QMatrixClient/libqmatrixclient">libQMatrixClient</a> 0.5.1 is out! This is a minor release with bugfixes and small improvements, a base for Quaternion 0.0.9.4, RC of which is coming this weekend. <a href="https://github.com/QMatrixClient/libqmatrixclient/releases/tag/0.5.1">Full release notes here</a></p>
+</blockquote>
+<p>and to follow up:</p>
+<blockquote>
+<p><a href="https://github.com/QMatrixClient/Quaternion">Quaternion</a> 0.0.9.4 Release Candidate is available for all those who don't need a "release" seal of approval to use applications. Get out, grab it, report bugs that could still sneak in: <a href="https://github.com/QMatrixClient/Quaternion/releases/tag/0.0.9.4-rc">https://github.com/QMatrixClient/Quaternion/releases/tag/0.0.9.4-rc</a>. A separate call out to translators - it's a great moment to teach Quaternion a few more phrases in your language!</p>
+</blockquote>
+<h2 id="net-core-synchrotron">.NET Core Synchrotron</h2>
+<p><a href="https://matrix.to/#/@Half-Shot:half-shot.uk">Half-Shot</a>:</p>
+<blockquote>
+<p>This weekend I took a brief pause from doing matrix work, and then went back into it by finishing the feature set for the <a href="https://github.com/turt2live/synapse-netcore-workers/pull/48">.NET Core Synchrotron</a>. It's "feature complete" meaning all specced features of sync are in this branch, excluding legacy endpoints. There are a few bugs logged against it and it's really only useful as a super early test, while I fix some of the p1 bugs.</p>
+<p>The federation sender continues to be reliable and stable, and we are prepping for the release of synapse 0.99.3 which made a few changes to the replication stream. For more info, please see <a href="https://github.com/turt2live/synapse-netcore-workers">https://github.com/turt2live/synapse-netcore-workers</a></p>
+</blockquote>
+<h2 id="pattle-has-now-moved-to-flutter">Pattle has now moved to Flutter</h2>
+<p><a href="https://matrix.to/#/@wilko:matrix.org">Wilko</a> has officially discontinued the previous version of Pattle, and is focused on their Flutter SDK and new version of Pattle based on it:</p>
+<blockquote>
+<p>After some silence here but a lot of development, Pattle has now moved to Flutter. The new app is available in the same F-droid repository, you can just update. Note that you will have to log in again. If there are issues with updating, try removing the old app and installing the new one.</p>
+<p>Also note that this version is still very basic and does not have all features of the old Pattle unfortunately. The reason that I chose to already replace it on the repo is that the old app will not receive updates anymore.</p>
+<p>The current features are logging in and an overview of all chats. What <em>is</em> new is that data is now stored locally, so you won't have to do an initial sync everytime you open the app (which was the case with old app). What's also new is that I've decided to use more red, because.. I like red.</p>
+<p>There is still a lot to do! Please notify me of anything that you think is missing, even though some things may be obvious (sorting chats based on date, chat avatars), some may not be as obvious to me!</p>
+<p>If you'd like to contribute, the new repo is <a href="https://git.pattle.im/pattle/app">here</a>. Note that many contributions will probably start at the SDK level. Pattle uses my own Dart SDK, which you can find <a href="https://git.pattle.im/pattle/library/matrix-dart-sdk">here</a>.</p>
+<p>There is at the moment a very specific bug in Flutter, where on Android 7.1 with release builds, the app crashes when building a list widget. If you use Android 7.1 (like me) and you crash after logging in, that's the reason. It seems I can't do anything about it, sorry.</p>
+</blockquote>
+<p><a href="/blog/wp-content/uploads/2019/04/pattle-2019-04-05a.png"><img class="alignnone size-large wp-image-4175" src="/blog/wp-content/uploads/2019/04/pattle-2019-04-05a-581x1024.png" alt="" width="581" height="1024" /></a></p>
+<h2 id="libaqueous-matrix-dart-sdk-and-aqueous-client">libaqueous (Matrix Dart SDK) and Aqueous client</h2>
+<p><a href="https://matrix.to/#/@bhat:encom.eu.org">Black Hat</a> is continuing work on <a href="https://gitlab.com/b0/libaqueous">libaqueous</a>, a Matrix Dart SDK.</p>
+<blockquote>
+<p>Aqueous now comes with room categories and history messages support.
+Also, a lot of code refactoring is going on to change the backend store from plain json file to sqlite, which should improve the performance a lot.
+The room is at <a href="https://matrix.to/#/#libaqueous:encom.eu.org">#libaqueous:encom.eu.org</a></p>
+</blockquote>
+<p><a href="/blog/wp-content/uploads/2019/04/aqueous.png"><img class="alignnone size-large wp-image-4176" src="/blog/wp-content/uploads/2019/04/aqueous-1024x715.png" alt="" width="1024" height="715" /></a></p>
+<h2 id="riot-web">Riot Web</h2>
+<blockquote>
+<ul>
+ 	<li>Working towards bringing breadcrumbs out of labs</li>
+ 	<li>Adding image preview to file upload UX</li>
+ 	<li>Stability fixes for timeline</li>
+ 	<li>Defending against issues introduced when using Riot Web on a machine which is running out of disk space</li>
+</ul>
+</blockquote>
+<h2 id="riot-ios">Riot iOS</h2>
+<blockquote>
+<ul>
+ 	<li>Grouped notifications are coming! We have added some logs to track why the notification setting is sometimes disables (#2348).</li>
+ 	<li>SAS device verification is still in progress but it should be released next week.</li>
+</ul>
+</blockquote>
+<h2 id="riot-android">Riot Android</h2>
+<blockquote>
+<ul>
+ 	<li>Three releases this week, to fix several bugs with the new EventStreamServiceX, and to fix issue with the Jitsi conference call (Riot.im 0.8.29). FDroid users should receive the upgrade soon.</li>
+ 	<li>Users are happy with the new notifications!</li>
+ 	<li>Valere is still working on SAS, we are reaching the end :).</li>
+</ul>
+</blockquote>
+<h2 id="riotx-android">RiotX (Android)</h2>
+<blockquote>
+<ul>
+ 	<li>It's now possible to signout from RiotX.</li>
+ 	<li>The whole setting screen has been imported from Riot, as well as the Themes and some other small features (launcher icon, etc.).</li>
+ 	<li>Benoit is working on room creation, sdk side, and François is working on image upload.</li>
+ 	<li>We should start to integrate new design from Nad next week.</li>
+</ul>
+</blockquote>
+<h2 id="continuum-javafx-desktop-client">continuum (JavaFX desktop client)</h2>
+<p><a href="https://matrix.to/#/@uforia:matrix.org">yuforia</a> has continued work on their client:</p>
+<blockquote>
+<p>in <a href="https://github.com/koma-im/continuum-desktop">continuum</a>, moving storage of messages from plain text files to a database, simplifying code and improving performance</p>
+</blockquote>
+<h2 id="neo">neo</h2>
+<p><a href="https://matrix.to/#/@f0x:lain.haus">f0x</a>:</p>
+<blockquote>
+<p>Neo now has <code>.well-known</code> implemented for login :D<br />video showcasing the different outcomes:</p>
+</blockquote>
+<video controls="controls" width="640" height="150">
+<source src="https://lain.haus/_matrix/media/v1/download/lain.haus/kbCZrSZJhGFYlSZzIIaFPwAH" />
+Find the video here: https://lain.haus/_matrix/media/v1/download/lain.haus/kbCZrSZJhGFYlSZzIIaFPwAH
+</video>
+<h2 id="synapse-k8s-images">Synapse K8s images</h2>
+<p><a href="https://github.com/ananace/">Ananace</a> has updated his <a href="https://github.com/ananace/matrix-synapse">k8s images for Synapse</a> 0.99.3, and has been continuing work on other parts of the project:</p>
+<blockquote>
+<p>I'll be writing a Helm chart for 1.0 as well, just haven't had time to do so yet.<br />I need to update all the references to TLS as well, as that's supposed to be left to kube-lego or cert-manager for a modern install</p>
+</blockquote>
+<h2 id="federation-tester">Federation Tester</h2>
+<p><a href="https://matrix.to/#/@brendan:abolivier.bzh">Brendan</a> and <a href="https://matrix.to/#/@andrewm:amorgan.xyz">anoa</a> have been working on the <a href="/federationtester">Federation Tester</a>:</p>
+<blockquote>
+<p>Following up on last week's effort, a number of issues on the <a href="/federationtester">Matrix federation tester</a>, both on the backend and the frontend side, have been fixed, including fixing certificate validity checks, not following CNAME records in SRV records, fixing display of the SRV lookup in the UI, preventing some crashes, and a few more.</p>
+<p>All outstanding issues on both the federation tester's backend and its frontend that could have preventing people to test efficiently how their server is performing in the context of Synapse's 1.0 release have now been fixed and deployed on <a href="/federationtester/">https://matrix.org/federationtester/</a>.</p>
+</blockquote>
+<h2 id="synapse-and-riot-bounties">Synapse and Riot bounties</h2>
+<p><a href="https://matrix.to/#/@aaron:raim.ist">Aaron Raimist</a> reports:</p>
+<blockquote>
+<p>A few bounties have been added to Synapse and Riot recently to encourage community members to work on those projects. Although they aren't large enough to actually pay for development, I believe they can serve as a small push to help an already interested developer justify spending some time working on these projects.</p>
+<ul>
+ 	<li><a href="https://github.com/vector-im/riot-web/issues/2349#issuecomment-466777377">$400 bounty on threading in Riot</a> thanks to GitHub user <a href="https://github.com/fallerOfFalls">@fallerOfFalls</a>, expires November 21, 2019</li>
+ 	<li><a href="https://github.com/matrix-org/synapse/issues/2181#issuecomment-479316364">$200 bounty to fixing stuck invites</a>, expires on January 1, 2020</li>
+ 	<li><a href="https://github.com/vector-im/riot-web/issues/8246#issuecomment-479318491">$200 bounty to fix Riot forgetting the name of rooms, AKA the "Aaron and 5246 others" bug</a>, expires on January 1, 2020</li>
+</ul>
+</blockquote>
+<h2 id="still-more">Still more</h2>
+<p><a href="https://github.com/matrix-org/pantalaimon">pantalaimon</a> has been seen in the wild, even appearing to run on Android. We'll get a little closer to the project and see how it's going in a future edition.</p>
+<p><a href="https://matrix.to/#/@TheJJ:matrix.org">jj</a> announced a new Python SDK for Matrix:</p>
+<blockquote>
+<p>new, alpha quality, matrix python client for asyncio and with support for e2e encryption: <a href="https://github.com/SFTtech/aiomatrix">https://github.com/SFTtech/aiomatrix</a><br />Polishing is needed but the basics do work already :)</p>
+</blockquote>
+<p><a href="https://matrix.to/#/@lautre:calculate-linux.org">L'autre</a> from <a href="https://www.calculate-linux.org/">Calculate Linux</a> announced that the project is <a href="https://old.calculate-linux.org/blogs/en/730/show">now using Matrix for their communications</a>, you can find their rooms in their newly created community: <a href="https://matrix.to/#/+list:calculate-linux.org">+list:calculate-linux.org</a>.</p>
+<p><del><a href="https://images.newrepublic.com/3ee5ecc7b7ba7fa0cd0f6920ede0db5ea121401e.png">George Lucas</a></del> <del><a href="https://en.wikipedia.org/wiki/Gy%C3%B6rgy_Luk%C3%A1cs">György Lukács</a></del> <a href="https://op-co.de/">Georg Lukas</a> <em>brutally skewered</em> Matrix with an April Fool's post suggesting that <a href="https://yaxim.org">yaxim</a>, an XMPP client for Android, <a href="https://yaxim.org/blog/2019/04/01/yaxim-enters-the-matrix/">will begin to support Matrix</a>.</p>
+<p>Matrix listed as <a href="https://genr.eu/wp/open-science-top-ten-tools-all-open-source/">one of the "Top Ten Tools" for Open Science practitioners</a></p>
+<blockquote>
+<p>the whole point of Matrix is that its a protocol which many different suppliers can use so you can avoid nasty lock ins</p>
+</blockquote>
+<p>That is certainly an advantage!</p>
+<h2 id="that-s-all-i-know">That's all I know</h2>
+<p>See you next week, and be sure to stop by <a href="https://matrix.to/#/#TWIM:matrix.org">#twim:matrix.org</a> with your updates!</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;04&#x2F;01&#x2F;synapse-0-99-3-released&#x2F;" title="Synapse 0.99.3 released!">Synapse 0.99.3 released!</a></h1>
+            <span>
+                01.04.2019 00:00
+                —
+                <a href="/category/releases">
+                    Releases
+                </a>
+                —
+                
+                <a href="/author/neil-johnson">
+                    Neil Johnson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>Hey hey, a Synapse release for you today.</p>
+<p>The big news in 0.99.3 is that the user directory has been completely re-written and should now be much more performant - this will benefit all installations, but especially those housing larger servers.</p>
+<p>Aside from that we continue our 1.0 preparations and relatedly we've improved our docs, in particular to explain how .well-known works. On the perf side we've added rate limiting to login and register endpoints as well as now batching up read receipts to send over federation.</p>
+<p>I've said it before, and I'll say it again:-</p>
+<blockquote>
+<p>The most important thing that admins should know is that prior to 1.0 landing later this month, <strong>it is essential that the federation API has a valid TLS certificate - self signed certificates will no longer be accepted.</strong> For more details see our <a href="https://github.com/matrix-org/synapse/blob/master/docs/MSC1711_certificates_FAQ.md">handy guide</a>. Failure to do this will result in being unable to federate with other 1.0 servers.</p>
+</blockquote>
+<p>As ever, you can get the new update <a href="https://github.com/matrix-org/synapse/releases/tag/v0.99.3">here</a> or any of the sources mentioned at <a href="https://github.com/matrix-org/synapse">https://github.com/matrix-org/synapse</a>. Note, Synapse is now available from PyPI, pick it up <a href="https://pypi.org/project/matrix-synapse/">here</a>. Also, check out our new <a href="/docs/guides/installing-synapse">Synapse installation guide page.</a></p>
+<h2 id="synapse-0-99-3-changelog">Synapse 0.99.3 changelog</h2>
+<h4 id="features">Features</h4>
+<ul>
+ 	<li>The user directory has been rewritten to make it faster, with less chance of falling behind on a large server. (<a href="https://github.com/matrix-org/synapse/issues/4537">#4537</a>, <a href="https://github.com/matrix-org/synapse/issues/4846">#4846</a>, <a href="https://github.com/matrix-org/synapse/issues/4864">#4864</a>, <a href="https://github.com/matrix-org/synapse/issues/4887">#4887</a>, <a href="https://github.com/matrix-org/synapse/issues/4900">#4900</a>, <a href="https://github.com/matrix-org/synapse/issues/4944">#4944</a>)</li>
+ 	<li>Add configurable rate limiting to the /register endpoint. (<a href="https://github.com/matrix-org/synapse/issues/4735">#4735</a>, <a href="https://github.com/matrix-org/synapse/issues/4804">#4804</a>)</li>
+ 	<li>Move server key queries to federation reader. (<a href="https://github.com/matrix-org/synapse/issues/4757">#4757</a>)</li>
+ 	<li>Add support for /account/3pid REST endpoint to client_reader worker. (<a href="https://github.com/matrix-org/synapse/issues/4759">#4759</a>)</li>
+ 	<li>Add an endpoint to the admin API for querying the server version. Contributed by Joseph Weston. (<a href="https://github.com/matrix-org/synapse/issues/4772">#4772</a>)</li>
+ 	<li>Include a default configuration file in the 'docs' directory. (<a href="https://github.com/matrix-org/synapse/issues/4791">#4791</a>, <a href="https://github.com/matrix-org/synapse/issues/4801">#4801</a>)</li>
+ 	<li>Synapse is now permissive about trailing slashes on some of its federation endpoints, allowing zero or more to be present. (<a href="https://github.com/matrix-org/synapse/issues/4793">#4793</a>)</li>
+ 	<li>Add support for /keys/query and /keys/changes REST endpoints to client_reader worker. (<a href="https://github.com/matrix-org/synapse/issues/4796">#4796</a>)</li>
+ 	<li>Add checks to incoming events over federation for events evading auth (aka "soft fail"). (<a href="https://github.com/matrix-org/synapse/issues/4814">#4814</a>)</li>
+ 	<li>Add configurable rate limiting to the /login endpoint. (<a href="https://github.com/matrix-org/synapse/issues/4821">#4821</a>, <a href="https://github.com/matrix-org/synapse/issues/4865">#4865</a>)</li>
+ 	<li>Remove trailing slashes from certain outbound federation requests. Retry if receiving a 404. Context: #3622. (<a href="https://github.com/matrix-org/synapse/issues/4840">#4840</a>)</li>
+ 	<li>Allow passing --daemonize flags to workers in the same way as with master. (<a href="https://github.com/matrix-org/synapse/issues/4853">#4853</a>)</li>
+ 	<li>Batch up outgoing read-receipts to reduce federation traffic. (<a href="https://github.com/matrix-org/synapse/issues/4890">#4890</a>, <a href="https://github.com/matrix-org/synapse/issues/4927">#4927</a>)</li>
+ 	<li>Add option to disable searching the user directory. (<a href="https://github.com/matrix-org/synapse/issues/4895">#4895</a>)</li>
+ 	<li>Add option to disable searching of local and remote public room lists. (<a href="https://github.com/matrix-org/synapse/issues/4896">#4896</a>)</li>
+ 	<li>Add ability for password providers to login/register a user via 3PID (email, phone). (<a href="https://github.com/matrix-org/synapse/issues/4931">#4931</a>)</li>
+</ul>
+<h4 id="bugfixes">Bugfixes</h4>
+<ul>
+ 	<li>Fix a bug where media with spaces in the name would get a corrupted name. (<a href="https://github.com/matrix-org/synapse/issues/2090">#2090</a>)</li>
+ 	<li>Fix attempting to paginate in rooms where server cannot see any events, to avoid unnecessarily pulling in lots of redacted events. (<a href="https://github.com/matrix-org/synapse/issues/4699">#4699</a>)</li>
+ 	<li>'event_id' is now a required parameter in federated state requests, as per the matrix spec. (<a href="https://github.com/matrix-org/synapse/issues/4740">#4740</a>)</li>
+ 	<li>Fix tightloop over connecting to replication server. (<a href="https://github.com/matrix-org/synapse/issues/4749">#4749</a>)</li>
+ 	<li>Fix parsing of Content-Disposition headers on remote media requests and URL previews. (<a href="https://github.com/matrix-org/synapse/issues/4763">#4763</a>)</li>
+ 	<li>Fix incorrect log about not persisting duplicate state event. (<a href="https://github.com/matrix-org/synapse/issues/4776">#4776</a>)</li>
+ 	<li>Fix v4v6 option in HAProxy example config. Contributed by Flakebi. (<a href="https://github.com/matrix-org/synapse/issues/4790">#4790</a>)</li>
+ 	<li>Handle batch updates in worker replication protocol. (<a href="https://github.com/matrix-org/synapse/issues/4792">#4792</a>)</li>
+ 	<li>Fix bug where we didn't correctly throttle sending of USER_IP commands over replication. (<a href="https://github.com/matrix-org/synapse/issues/4818">#4818</a>)</li>
+ 	<li>Fix potential race in handling missing updates in device list updates. (<a href="https://github.com/matrix-org/synapse/issues/4829">#4829</a>)</li>
+ 	<li>Fix bug where synapse expected an un-specced <code>prev_state</code> field on state events. (<a href="https://github.com/matrix-org/synapse/issues/4837">#4837</a>)</li>
+ 	<li>Transfer a user's notification settings (push rules) on room upgrade. (<a href="https://github.com/matrix-org/synapse/issues/4838">#4838</a>)</li>
+ 	<li>fix test_auto_create_auto_join_where_no_consent. (<a href="https://github.com/matrix-org/synapse/issues/4886">#4886</a>)</li>
+ 	<li>Fix a bug where hs_disabled_message was sometimes not correctly enforced. (<a href="https://github.com/matrix-org/synapse/issues/4888">#4888</a>)</li>
+ 	<li>Fix bug in shutdown room admin API where it would fail if a user in the room hadn't consented to the privacy policy. (<a href="https://github.com/matrix-org/synapse/issues/4904">#4904</a>)</li>
+ 	<li>Fix bug where blocked world-readable rooms were still peekable. (<a href="https://github.com/matrix-org/synapse/issues/4908">#4908</a>)</li>
+</ul>
+<h4 id="internal-changes">Internal Changes</h4>
+<ul>
+ 	<li>Add a systemd setup that supports synapse workers. Contributed by Luca Corbatto. (<a href="https://github.com/matrix-org/synapse/issues/4662">#4662</a>)</li>
+ 	<li>Change from TravisCI to Buildkite for CI. (<a href="https://github.com/matrix-org/synapse/issues/4752">#4752</a>)</li>
+ 	<li>When presence is disabled don't send over replication. (<a href="https://github.com/matrix-org/synapse/issues/4757">#4757</a>)</li>
+ 	<li>Minor docstring fixes for MatrixFederationAgent. (<a href="https://github.com/matrix-org/synapse/issues/4765">#4765</a>)</li>
+ 	<li>Optimise EDU transmission for the federation_sender worker. (<a href="https://github.com/matrix-org/synapse/issues/4770">#4770</a>)</li>
+ 	<li>Update test_typing to use HomeserverTestCase. (<a href="https://github.com/matrix-org/synapse/issues/4771">#4771</a>)</li>
+ 	<li>Update URLs for riot.im icons and logos in the default notification templates. (<a href="https://github.com/matrix-org/synapse/issues/4779">#4779</a>)</li>
+ 	<li>Removed unnecessary $ from some federation endpoint path regexes. (<a href="https://github.com/matrix-org/synapse/issues/4794">#4794</a>)</li>
+ 	<li>Remove link to deleted title in README. (<a href="https://github.com/matrix-org/synapse/issues/4795">#4795</a>)</li>
+ 	<li>Clean up read-receipt handling. (<a href="https://github.com/matrix-org/synapse/issues/4797">#4797</a>)</li>
+ 	<li>Add some debug about processing read receipts. (<a href="https://github.com/matrix-org/synapse/issues/4798">#4798</a>)</li>
+ 	<li>Clean up some replication code. (<a href="https://github.com/matrix-org/synapse/issues/4799">#4799</a>)</li>
+ 	<li>Add some docstrings. (<a href="https://github.com/matrix-org/synapse/issues/4815">#4815</a>)</li>
+ 	<li>Add debug logger to try and track down #4422. (<a href="https://github.com/matrix-org/synapse/issues/4816">#4816</a>)</li>
+ 	<li>Make shutdown API send explanation message to room after users have been forced joined. (<a href="https://github.com/matrix-org/synapse/issues/4817">#4817</a>)</li>
+ 	<li>Update example_log_config.yaml. (<a href="https://github.com/matrix-org/synapse/issues/4820">#4820</a>)</li>
+ 	<li>Document the <code>generate</code> option for the docker image. (<a href="https://github.com/matrix-org/synapse/issues/4824">#4824</a>)</li>
+ 	<li>Fix check-newsfragment for debian-only changes. (<a href="https://github.com/matrix-org/synapse/issues/4825">#4825</a>)</li>
+ 	<li>Add some debug logging for device list updates to help with #4828. (<a href="https://github.com/matrix-org/synapse/issues/4828">#4828</a>)</li>
+ 	<li>Improve federation documentation, specifically .well-known support. Many thanks to @vaab. (<a href="https://github.com/matrix-org/synapse/issues/4832">#4832</a>)</li>
+ 	<li>Disable captcha registration by default in unit tests. (<a href="https://github.com/matrix-org/synapse/issues/4839">#4839</a>)</li>
+ 	<li>Add stuff back to the .gitignore. (<a href="https://github.com/matrix-org/synapse/issues/4843">#4843</a>)</li>
+ 	<li>Clarify what registration_shared_secret allows for. (<a href="https://github.com/matrix-org/synapse/issues/4844">#4844</a>)</li>
+ 	<li>Correctly log expected errors when fetching server keys. (<a href="https://github.com/matrix-org/synapse/issues/4847">#4847</a>)</li>
+ 	<li>Update install docs to explicitly state a full-chain (not just the top-level) TLS certificate must be provided to Synapse. This caused some people's Synapse ports to appear correct in a browser but still (rightfully so) upset the federation tester. (<a href="https://github.com/matrix-org/synapse/issues/4849">#4849</a>)</li>
+ 	<li>Move client read-receipt processing to federation sender worker. (<a href="https://github.com/matrix-org/synapse/issues/4852">#4852</a>)</li>
+ 	<li>Refactor federation TransactionQueue. (<a href="https://github.com/matrix-org/synapse/issues/4855">#4855</a>)</li>
+ 	<li>Comment out most options in the generated config. (<a href="https://github.com/matrix-org/synapse/issues/4863">#4863</a>)</li>
+ 	<li>Fix yaml library warnings by using safe_load. (<a href="https://github.com/matrix-org/synapse/issues/4869">#4869</a>)</li>
+ 	<li>Update Apache setup to remove location syntax. Thanks to @cwmke! (<a href="https://github.com/matrix-org/synapse/issues/4870">#4870</a>)</li>
+ 	<li>Reinstate test case that runs unit tests against oldest supported dependencies. (<a href="https://github.com/matrix-org/synapse/issues/4879">#4879</a>)</li>
+ 	<li>Update link to federation docs. (<a href="https://github.com/matrix-org/synapse/issues/4881">#4881</a>)</li>
+ 	<li>fix test_auto_create_auto_join_where_no_consent. (<a href="https://github.com/matrix-org/synapse/issues/4886">#4886</a>)</li>
+ 	<li>Use a regular HomeServerConfig object for unit tests rater than a Mock. (<a href="https://github.com/matrix-org/synapse/issues/4889">#4889</a>)</li>
+ 	<li>Add some notes about tuning postgres for larger deployments. (<a href="https://github.com/matrix-org/synapse/issues/4895">#4895</a>)</li>
+ 	<li>Add a config option for torture-testing worker replication. (<a href="https://github.com/matrix-org/synapse/issues/4902">#4902</a>)</li>
+ 	<li>Log requests which are simulated by the unit tests. (<a href="https://github.com/matrix-org/synapse/issues/4905">#4905</a>)</li>
+ 	<li>Allow newsfragments to end with exclamation marks. Exciting! (<a href="https://github.com/matrix-org/synapse/issues/4912">#4912</a>)</li>
+ 	<li>Refactor some more tests to use HomeserverTestCase. (<a href="https://github.com/matrix-org/synapse/issues/4913">#4913</a>)</li>
+ 	<li>Refactor out the state deltas portion of the user directory store and handler. (<a href="https://github.com/matrix-org/synapse/issues/4917">#4917</a>)</li>
+ 	<li>Fix nginx example in ACME doc. (<a href="https://github.com/matrix-org/synapse/issues/4923">#4923</a>)</li>
+ 	<li>Use an explicit dbname for postgres connections in the tests. (<a href="https://github.com/matrix-org/synapse/issues/4928">#4928</a>)</li>
+ 	<li>Fix <code>ClientReplicationStreamProtocol.__str__()</code>. (<a href="https://github.com/matrix-org/synapse/issues/4929">#4929</a>)</li>
+</ul>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;03&#x2F;29&#x2F;this-week-in-matrix-2019-03-29&#x2F;" title="This Week in Matrix 2019-03-29">This Week in Matrix 2019-03-29</a></h1>
+            <span>
+                29.03.2019 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/ben-parsons">
+                    Ben Parsons
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<p>Tom &amp; Matthew talk through the <a href="https://github.com/vector-im/riot-web/projects/16">newly published Riot/Web roadmap</a>! Be sure to read <a href="https://medium.com/@RiotChat/whats-next-for-riot-web-be48f948c801">Tom's blog post which gets into his thinking for the roadmap</a> too.</p>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=-pKHn0pittY">https://youtube.com/watch?v=-pKHn0pittY</a></noscript>
+<youtube-player video-id="-pKHn0pittY"></youtube-player>
+<h2 id="matrix-org-homeserver-notice">Matrix.org homeserver notice</h2>
+<p>The matrix.org homeserver will be down for essential database maintenance between 12:00 and 12:30 UTC on 2019-04-01</p>
+<h2 id="synapse">Synapse</h2>
+<p>Neil, Synapse overseer, reports on the acceleration towards <em>1.0</em>:</p>
+<blockquote>
+<p>We have much improved sytest support for Synapse worker mode, Hawkowl landed a brand new super fast super shiny user directory implementation, Brendan fixed a bunch of niggles in <a href="/federationtester">the federation tester</a> and we <em>finally</em> got to the bottom of our <a href="https://github.com/matrix-org/synapse/pull/4956">sync caching bug that obscured accepting invites</a> (thanks richvdh for sticking with it). Erik solved our presence spamming bug and anoa fixed some LDAP auth bugs and submitted a PR for certificate checking - one of our final blockers for Synapse 1.0. For all the latest checkout out our latest release candidate <a href="https://github.com/matrix-org/synapse/releases/tag/v0.99.3rc1">0.99.3rc1</a>.<br />
+Next week, we'll ship 0.99.3, we'll be looking at <a href="https://github.com/matrix-org/synapse/issues/4364">server key validity periods</a>, adding a <a href="https://github.com/matrix-org/matrix-doc/pull/1915">3PID unbind API</a> and starting work on tuning low powered Synapse installations.<br />
+<a href="https://www.arewereadyyet.com/">https://www.arewereadyyet.com/</a> is still rising so keep banging to everyone you know that they ensure their federation certificates are valid.</p>
+</blockquote>
+<p><a href="/blog/wp-content/uploads/2019/03/Screenshot-2019-03-29-at-18.38.23.png"><img class="alignnone size-full wp-image-4155" src="/blog/wp-content/uploads/2019/03/Screenshot-2019-03-29-at-18.38.23.png" alt="" width="429" height="339" /></a></p>
+<h2 id="pantalaimon">Pantalaimon</h2>
+<p><a href="https://github.com/poljar">poljar</a> gave this update on his new project <a href="https://github.com/matrix-org/pantalaimon">Pantalaimon</a>:</p>
+<blockquote>
+<p><a href="https://github.com/matrix-org/pantalaimon">Pantalaimon</a> is a new project that acts as a reverse proxy for clients to connect to. Once a client is connected Pantalaimon handles end to end encryption for the client transparently.<br />
+The project is only a week old but already at a working prototype phase. A demo can be found here: <a href="http://webmshare.com/play/Qn4wg">http://webmshare.com/play/Qn4wg</a></p>
+</blockquote>
+<p>This is a huge gain! Use of this project, as you will see in the video, permits any Matrix client to support End-to-End encryption of messages, by handling encryption/decryption in a daemon rather than in the client.</p>
+<p><a href="http://webmshare.com/play/Qn4wg">Watch the video</a>, and you'll see <a href="https://github.com/tulir/gomuks">gomuks</a>, which does not support encryption, chatting in an encrypted room. Also, go chat in <a href="https://matrix.to/#/#pantalaimon:matrix.org">#pantalaimon:matrix.org</a> and get involved!</p>
+<p><a href="/blog/wp-content/uploads/2019/03/Screenshot-2019-03-29-at-18.55.05.png"><img class="alignnone size-large wp-image-4161" src="/blog/wp-content/uploads/2019/03/Screenshot-2019-03-29-at-18.55.05-1024x535.png" alt="" width="1024" height="535" /></a></p>
+<h2 id="construct">Construct</h2>
+<p>Report from the Construct team:</p>
+<blockquote>
+<p>The matrix Construct server has made significant progress this week implementing the 1.0 specification and is very close to a 1.0 release! Special thanks to our star tester Yan Minari and expert Matrix consultants Tulir and Max and C++ developers Jason of Zemos and Mujx of nheko for all their hard work to make this happen. The Construct now fully supports IPv6 and is ready to participate in fully end-to-to-end encrypted ipv6 networks like <code>#yggdrasil:matrix.org</code> and <code>#cjdns:matrix.org</code>.<br />This week also saw additions for .well-known support, <code>m.fully_read</code> and even DNS caching inside a matrix room shared between servers (which is really cool if you ask me).</p>
+<p>I'd like to recognize our testers for their invaluable contributions this week, only a fraction of which are documented here: <a href="https://github.com/matrix-construct/construct/issues">https://github.com/matrix-construct/construct/issues</a> leading to the 1.0 release.</p>
+</blockquote>
+<blockquote>
+<p>The Construct is written in C++ for maximum performance and scalability. It is the first fully federating server after the Synapse reference implementation. Your contributions in code and participation are essential to bring Construct to its upcoming release; get involved at <a href="https://github.com/matrix-construct/construct">https://github.com/matrix-construct/construct</a> and in <a href="https://matrix.to/#/#zemos-test:matrix.org">#zemos-test:matrix.org</a>.</p>
+</blockquote>
+<h2 id="riot-web">Riot Web</h2>
+<p>From the team:</p>
+<blockquote>
+<p>We've been upgrading and optimising our Jitsi instance so people should see more reliable video conference calls, especially if they avoid connecting from Firefox over poor connections.<br />We've been squashing scroll jumps (where the timeline pops out of position unexpectedly due to images loading, etc.). We've come up with a radical reimplementation of the timeline (which should be imperceptible, except it doesn't jump) - try it out on <a href="https://riot.im/develop">https://riot.im/develop</a> now.</p>
+</blockquote>
+<p>Bruno, who has been working on scroll functional for Riot deserves a call-out - scrolling in new Riot web works great, and he may now be the most qualified dev on <code>scroll: anchor</code> outside of Mozilla or Google…</p>
+<p>You can now get all Riot updates from <a href="https://matrix.to/#/#riot-web-announcements:matrix.org">#riot-web-announcements:matrix.org</a>, the official room of Riot web announcements! You can especially get this update, which was also featured on Twitter:</p>
+<blockquote>
+<p dir="ltr" lang="en">Attention Riot Web Admins! We reset Scalar tokens to address a potential security vuln. with some clients - if you run your own Riot instance please upgrade to at least v1.0.4 to keep using integrations (widgets, sticker picker, any bots and bridges configured through Scalar).</p>
+<p>— Riot.im (@RiotChat) <a href="https://twitter.com/RiotChat/status/1110937638847111173?ref_src=twsrc%5Etfw">March 27, 2019</a></p>
+</blockquote>
+<p>Please upgrade your Riot web instances!</p>
+<p>Additionally, <a href="https://matrix.to/#/@pacien:pacien.net">Notkea</a> has <a href="https://github.com/NixOS/nixpkgs/pull/57838">packaged Riot desktop for NixOS</a>.</p>
+<h2 id="riot-ios">Riot iOS</h2>
+<blockquote>
+<p>Another case of UTD (<a href="https://github.com/vector-im/riot-ios/issues/2320">https://github.com/vector-im/riot-ios/issues/2320</a>) has been fixed. Some logs have been added to track push notifications that disabled themselves. SAS verification implementation is still in progress.</p>
+</blockquote>
+<p>UTD = "Unable to Decrypt", messages as seen in Riot</p>
+<h2 id="riot-android">Riot Android</h2>
+<blockquote>
+<ul>
+ 	<li>Rework of EventStreamService, to fix many issues (crash) reported by users. The feature is available on the develop branch.</li>
+ 	<li>Also we are trying to upgrade Jitsi library, to fix other errors reported by users.</li>
+ 	<li>SAS verification implementation is still in progress.</li>
+</ul>
+</blockquote>
+<p>Also, you may have already seen the use of Android 9-style notifications, featuring "Mark as read" + "Quick reply" buttons. This addition has started to make Riot Android my client of choice for burning through notifying rooms.</p>
+<h2 id="riotx-android">RiotX (Android)</h2>
+<blockquote>
+<ul>
+ 	<li>Phase 1 started!</li>
+ 	<li>Backporting RageShake feature, with better handshake detection.</li>
+ 	<li>We are still fighting bug on the timeline rendering.</li>
+</ul>
+</blockquote>
+<h2 id="nheko-packaging">nheko packaging</h2>
+<p><a href="https://matrix.to/#/@adridg:matrix.org">@adridg:matrix.org</a>:</p>
+<blockquote>
+<p>Quick note that nheko (v 0.6.3) is now packaged for FreeBSD as well. The C++ code was fine (we use Clang, that does trip up some people) but I have Opinions about the CMake code (in particular that the find code for nlohmann/json.hpp, lmdb++.h and tweeny.h could use a lot of work -- if I feel perky I may come up with a PR). Thanks for the good work!</p>
+</blockquote>
+<h2 id="dart-sdks">Dart SDKs</h2>
+<p><a href="https://matrix.to/#/@bhat:encom.eu.org">Black Hat</a> has been using Dart and Flutter this week, and is making progress with an SDK and reference client:</p>
+<blockquote>
+<p>I am trying to use libaqueous(Matrix Dart SDK) to create a cross-platform matrix client for Android and iOS.<br /><del>Almost nothing works except</del> Already a significant number of client features are available: <strong>login/logout, room list, basic timeline and message posting</strong></p>
+</blockquote>
+<blockquote>
+<p>Flutter is quite good for rapidly building mobile apps. ? Strong-typed json serialization/deserialization in Dart is a bit difficult at first, but I managed to solve that.<br />the repo is <a href="https://gitlab.com/b0/aqueous">here</a>, the SDK is <a href="https://gitlab.com/b0/libaqueous">here</a>, and the room for discussion is at <a href="https://matrix.to/#/#libaqueous:encom.eu.org">#libaqueous:encom.eu.org</a></p>
+<p>Debug build apk from Gitlab CI is <a href="https://gitlab.com/b0/aqueous/-/jobs/artifacts/master/raw/build/app/outputs/apk/debug/app-debug.apk?job=build-debug">here</a></p>
+</blockquote>
+<p><a href="/blog/wp-content/uploads/2019/03/libaq1.jpg"><img class="alignnone size-large wp-image-4151" src="/blog/wp-content/uploads/2019/03/libaq1-529x1024.jpg" alt="" width="529" height="1024" /></a> <a href="/blog/wp-content/uploads/2019/03/libaq3.jpg"><img class="alignnone size-large wp-image-4152" src="/blog/wp-content/uploads/2019/03/libaq3-530x1024.jpg" alt="" width="530" height="1024" /></a> <a href="/blog/wp-content/uploads/2019/03/libaq2.jpg"><img class="alignnone size-large wp-image-4153" src="/blog/wp-content/uploads/2019/03/libaq2-530x1024.jpg" alt="" width="530" height="1024" /></a></p>
+<h2 id="notes-on-manually-upgrading-rooms-from-travisr">Notes on manually upgrading rooms, from TravisR</h2>
+<p><a href="https://github.com/turt2live">TravisR</a> has written a brief guide to manually upgrading rooms:</p>
+<p><a href="https://gist.github.com/turt2live/a99c8e794d6115d4ddfaadb72aabf063">https://gist.github.com/turt2live/a99c8e794d6115d4ddfaadb72aabf063</a></p>
+<p>Note that you generally won't need to do this.</p>
+<h2 id="that-s-all-i-know">That's all I know</h2>
+<p>See you next week, and be sure to stop by <a href="https://matrix.to/#/#TWIM:matrix.org">#twim:matrix.org</a> with your updates!</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;03&#x2F;22&#x2F;this-week-in-matrix-2019-03-22&#x2F;" title="This Week in Matrix 2019-03-22">This Week in Matrix 2019-03-22</a></h1>
+            <span>
+                22.03.2019 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/ben-parsons">
+                    Ben Parsons
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live-with-kitsune">Matrix Live with Kitsune</h2>
+<p>I chatted with <a href="https://matrix.to/#/@kitsune:matrix.org">Kitsune</a>, maintainer of <a href="https://github.com/QMatrixClient/libqmatrixclient">libQMatrixClient</a>, <a href="https://github.com/QMatrixClient/Quaternion">Quaternion</a> and Spec Core Team member. We talked about the history and future of these projects, platform preferences, the importance of decentralisation and more.</p>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=h9uenfVToaw">https://youtube.com/watch?v=h9uenfVToaw</a></noscript>
+<youtube-player video-id="h9uenfVToaw"></youtube-player>
+<h2 id="synapse-and-the-road-to-1-0">Synapse and the road to 1.0</h2>
+<p>Neil, Synapse-dev wrangler #1:</p>
+<blockquote>
+<p>Huge thanks to everyone who has helped increase the number of ‘1.0 ready' synapse installs. If you don't know what this means, <a href="/blog/2019/03/15/matrix-1-0-https-arewereadyyet-com/">see our blog</a>. <a href="https://arewereadyyet.com">https://arewereadyyet.com</a> reports &gt; 60% adoption on a per server basis, and high 90s on a per user basis. We are now really close to being able to ship a 1.0 release candidate and start the 2 week countdown before releasing 1.0 proper.</p>
+<p>This week we have focussed on performance, richvdh has been working on batching of outgoing read receipts and hawkowl shipped a much more performant implementation of user search. Erik has been putting the <a href="https://github.com/matrix-org/rust-synapse-compress-state">state compressor</a> through its paces, he saw one room compress down to 1% of its original size. Andrew has been focusing on ensuring spec compliance on various Synapse endpoints and is currently looking at some bugs in the federation tester.</p>
+</blockquote>
+<h2 id="nixos-synapse-setup">NixOS-Synapse setup</h2>
+<p><a href="https://matrix.to/#/@me:jonas-schuermann.name">Jonas Schürmann</a> shared his config for Synapse on NixOS:</p>
+<blockquote>
+<p>I open sourced my NixOS-Synapse setup: <a href="https://gitlab.com/MazeChaZer/nixops-servers/tree/master/matrix">https://gitlab.com/MazeChaZer/nixops-servers/tree/master/matrix</a></p>
+</blockquote>
+<p><a href="https://matrix.to/#/#NixOS:matrix.org">#NixOS:matrix.org</a> for more.</p>
+<h2 id="pattle-lots-of-progress-and-dart-sdk-planned">Pattle, lots of progress and Dart SDK planned</h2>
+<p>Lots of news from <a href="https://git.pattle.im/pattle/android">Pattle</a>, the project aiming to create clients for multiple mobile platforms. All quotes below from <a href="https://matrix.to/#/@wilko:matrix.org">Wilko</a>.</p>
+<blockquote>
+<p>Pattle for Android now has an F-droid repository: <a class="linkified" href="https://fdroid.pattle.im/fdroid/repo?fingerprint=E91F63CA6AE04F8E7EA53E52242EAF8779559209B8A342F152F9E7265E3EA729" target="_blank" rel="noopener">https://fdroid.pattle.im/</a></p>
+<p>It's the most up to date version straight from the pipeline, so not necessarily stable.</p>
+</blockquote>
+<blockquote>
+<p>You can now scroll up and load history</p>
+</blockquote>
+<p><a href="/blog/wp-content/uploads/2019/03/pattle-2019-03-22-1.png"><img class="alignnone size-full wp-image-4130" src="/blog/wp-content/uploads/2019/03/pattle-2019-03-22-1.png" alt="" width="363" height="603" /></a></p>
+<p>As part of the project, <a href="https://matrix.to/#/@wilko:matrix.org">Wilko</a> also announced the intention to create a Dart SDK:</p>
+<blockquote>
+<p>I'm currently working on a <a href="https://git.pattle.im/pattle/library/matrix-dart-sdk">Matrix SDK for Dart</a>, which will be used for the <a href="https://git.pattle.im/pattle/app">Pattle rewrite in Flutter</a>.
+The reason for this is outlined <a href="https://git.pattle.im/pattle/android#future">here</a>. To summarize: My goal for Pattle is to release for not only Android but also iOS and web, with a single code base. Other reasons include that Android native development is just bad, and the fact that I'm not too happy with the official Matrix Android SDK design and documentation.
+I will maintain and also add some features to the current version of Pattle, to try things out. The Flutter version will replace the native one once the features are in sync.</p>
+</blockquote>
+<h2 id="riot-ios">Riot iOS</h2>
+<blockquote>
+<p>We've released a hotfix release 0.8.4 on App Store that fixes following issues:</p>
+<ul>
+ 	<li>Unable to open a file attachment of a room message.</li>
+ 	<li>Unable to share a file with whitespace in filename.</li>
+</ul>
+We are working on iOS 12 notifications features.
+</blockquote>
+<h2 id="riot-android">Riot Android</h2>
+<blockquote>
+<ul>
+ 	<li>Improving new notification system</li>
+ 	<li>Implementing SAS verification</li>
+</ul>
+</blockquote>
+<h2 id="riotx-android">RiotX (Android)</h2>
+<blockquote>
+<ul>
+ 	<li>Setup CI</li>
+ 	<li>Finishing Phase 0</li>
+</ul>
+</blockquote>
+<h2 id="dimension-sticker-packs">Dimension sticker packs</h2>
+<p><a href="https://github.com/turt2live">TravisR</a> has introduced sticker packs for <a href="https://dimension.t2bot.io/">Dimension</a>:</p>
+<blockquote>
+<p>Dimension now has beta support for custom sticker packs. To create a sticker pack:</p>
+</blockquote>
+<ol>
+ 	<li>Start a conversation with @stickers:t2bot.io</li>
+ 	<li>Say <code>!stickers newpack</code> and follow the prompts.</li>
+ 	<li>Share the URL with your friends.</li>
+</ol>
+To add the sticker pack to your sticker picker:
+<ol>
+ 	<li>Make sure you're using Dimension as your integration manager.
+<ul>
+ 	<li>Not sure if you are? Click the 4 squares in the top right of the room in Riot - if the dialog is titled "Dimension", you're all set :)</li>
+ 	<li>If you aren't, check out <a href="https://dimension.t2bot.io">https://dimension.t2bot.io</a></li>
+</ul>
+</li>
+ 	<li>Click on the smiley face to the right of where you type messages then the Edit button in the top right.</li>
+ 	<li>Paste the URL of the sticker pack into the box and click "Add Stickerpack".</li>
+ 	<li>Start using your new stickers.</li>
+</ol>
+<blockquote>
+<p>These instructions are also available at <a href="https://github.com/turt2live/matrix-dimension/blob/master/docs/custom_stickerpacks.md">https://github.com/turt2live/matrix-dimension/blob/master/docs/custom_stickerpacks.md</a> as is the admin/operator guide for running your own sticker bot (you're not stuck with using t2bot.io unless you want to be).<br />Custom sticker packs are still beta while the proposals to share this with the wider Matrix ecosystem are still works in progress. This serves as a proof of concept to see how crazy of an idea it is to have stickerpacks-as-rooms (yes, they're just plain Matrix rooms under the hood) and what needs ironing out before moving ahead with the MSC.</p>
+</blockquote>
+<h2 id="matrix-notification-profile-manager">matrix-notification-profile-manager</h2>
+<p><a href="https://matrix.to/#/@brendan:abolivier.bzh">Brendan</a> has created a notification profile manager:</p>
+<blockquote>
+<p>Over the past few weeks, I grew a bit fed up of always having to turn on and off every notification rule each time I'm having a slight change in what I'm working on or depending on what mood I was in (e.g. want to focus only on work-related stuff and nothing else, don't want to hear about work at all, somewhere in the middle, etc.), so I built a <a href="https://github.com/babolivier/matrix-notification-profile-manager">notification profile manager for Matrix</a>. It's available both as a command line interface or a Go package in case people want to build on top of it.</p>
+<p>It allows one to take a snapshot of their current notifications settings and save that as a profile, so that this profile can be applied later. It also allows one to delete a profile or list the existing profiles (more features to be added as time goes by). In order to make the whole thing interoperable with other projects building on top of the Go package, it also uses the user's account data on the user's Matrix homeserver to store profiles.</p>
+</blockquote>
+<h2 id="neo-v4-iris">neo v4: iris</h2>
+<p><a href="https://matrix.to/#/@f0x:lain.haus">F0x</a> has recommenced development on the Matrix client Neo:</p>
+<blockquote>
+<p>After discussion following <a href="https://cyberia.social/@foks/101785513826000032">https://cyberia.social/@foks/101785513826000032</a> I've resumed development on Neo. Suggestions are very much welcomed on the pad and mastodon thread<br />I'm implementing components one by one now, with just mocked events. Actual Matrix integration will come when the gui components are ready.</p>
+<p>Neo is now partly integrated with <code>matrix-js-sdk</code> because I grew tired of having to write my own mock events. There's a basic authentication flow, with 0 error handling, and parsing of <code>m.text</code> and <code>m.image</code> events</p>
+</blockquote>
+<p><a href="/blog/wp-content/uploads/2019/03/iris-1.png"><img class="alignnone size-large wp-image-4131" src="/blog/wp-content/uploads/2019/03/iris-1-1024x576.png" alt="" width="1024" height="576" /></a></p>
+<p>Check out <a href="https://git.lain.haus/f0x/iris">https://git.lain.haus/f0x/iris</a> for the source code and see a working version at <a href="https://neo.lain.haus/neo">https://neo.lain.haus/neo</a></p>
+<p>f0x also said:</p>
+<blockquote>
+<p>it would be much appreciated to get some feedback on how I implemented matrix-js-sdk, had to do some weird stuff to make React update</p>
+</blockquote>
+<p>I'll take a look but would love anyone with more experience of the SDK to get in touch with the f-man.</p>
+<h2 id="solari-z-s-ed-wallpaper">solari[z|s]ed wallpaper</h2>
+<p><a href="https://matrix.to/#/@ma1uta:matrix.org">ma1uta</a> shared this awesome Matrix wallpaper, created by <a class="linkified" href="https://matrix.to/#/@kolonsky:092918.xyz" target="_blank" rel="noopener">@kolonsky:092918.xyz</a> via <a href="https://linux.pictures/projects/solarized-dark-wallpaper">https://linux.pictures/projects/solarized-dark-wallpaper</a></p>
+<p><a href="/blog/wp-content/uploads/2019/03/matrix-solarized.png"><img class="alignnone size-large wp-image-4132" src="/blog/wp-content/uploads/2019/03/matrix-solarized-1024x576.png" alt="" width="1024" height="576" /></a></p>
+<h2 id="mautrix-telegram-0-5-0-released">mautrix-telegram 0.5.0 released</h2>
+<p><a href="https://matrix.to/#/@tulir:maunium.net">tulir</a> is up again with his Telegram bridge:</p>
+<blockquote>
+<p><a href="https://github.com/tulir/mautrix-telegram">mautrix-telegram</a> 0.5.0 was released after I finally fixed the bug that was causing the bridge database to lock up. It turned out to be a single line of ORM usage that I had missed while converting everything to use SQLAlchemy Core.
+The full release notes are at <a href="https://github.com/tulir/mautrix-telegram/releases/tag/v0.5.0.">https://github.com/tulir/mautrix-telegram/releases/tag/v0.5.0.</a>
+I also released <a href="https://github.com/tulir/mautrix-telegram/releases/tag/v0.5.1">v0.5.1</a> to fix a bug that made the DBMS migration script not work and Python 3.5 compatibility. I wouldn't recommend using Python 3.5 though, I'm going to drop support for it some time after Debian 10 is released</p>
+</blockquote>
+<h2 id="shevski-mentions-matrix-on-bbc-radio-4">Shevski mentions Matrix on BBC Radio 4</h2>
+<p>Shevski from the <a href="https://redecentralize.org/">#redecentralize</a> organisation was interviewed on Radio 4, and mentioned Matrix:</p>
+<blockquote>
+<p dir="ltr" lang="en">Yesterday on <a href="https://twitter.com/BBCRadio4?ref_src=twsrc%5Etfw">@BBCRadio4</a> I talked about the problems of centralisation, how to regulate big tech, personal data stores and <a href="https://twitter.com/redecentralize?ref_src=twsrc%5Etfw">@redecentralize</a>! You can listen online here: <a href="https://t.co/xGHK812lYa">https://t.co/xGHK812lYa</a> with <a href="https://twitter.com/hashtag/Web30?src=hash&ref_src=twsrc%5Etfw">#Web30</a> section starting 1:50 mins in ? (I'm from 7mins ish) <a href="https://twitter.com/hashtag/redecentralize?src=hash&ref_src=twsrc%5Etfw">#redecentralize</a> <a href="https://t.co/m0dazBH7Dk">pic.twitter.com/m0dazBH7Dk</a></p>
+<p>— Irina (Ira) Bolychevsky (@shevski) <a href="https://twitter.com/shevski/status/1109056592396382208?ref_src=twsrc%5Etfw">March 22, 2019</a></p>
+</blockquote>
+<h2 id="extras">Extras</h2>
+<p><a href="https://github.com/DanilaFe/Scylla">Scylla</a> has been receiving regular updates, no release to report but the project keeps going. <a href="https://matrix.to/#/#scylla:riot.danilafe.com">#scylla:riot.danilafe.com</a></p>
+<p>This React Native client is not announced so <a href="https://github.com/limvot/bubbles">don't look at it</a></p>
+<p>My pal Doug shared his frustration with the broader state of the chat ecosystem after <a href="https://www.theatlantic.com/technology/archive/2019/03/hottest-chat-app-teens-google-docs/584857/">reading that teens now use Google Docs for their chat needs</a> (and not the chat feature, the document itself!)</p>
+<blockquote>
+<p>I love that you've got Amazon with their Alexa messaging, Apple in their own bubble with iMessage, Facebook doing chat 3-ways and Google trying 50 ways to do chat. And that's before you even get into things like Slack, Discord, Telegram, Riot, Line, WeChat etc etc. And then the current hot way to chat is in a document...
+I mean, <strong>how much money is being invested in trying to create the perfect chat solution?</strong></p>
+</blockquote>
+<p>For the record, we were chatting over Matrix…</p>
+<h2 id="that-s-all-i-know">That's all I know</h2>
+<p>That's the news, if you have something to say, or something to add, then you should go to <a href="https://matrix.to/#/#TWIM:matrix.org">#twim:matrix.org</a> and share it. If you have other projects to discuss, come share them. If you'd prefer to come quietly, my door is always open: <a href="https://matrix.to/#/@benpa:matrix.org">@benpa:matrix.org</a>.</p>
+<p>See you here next week, and on Matrix!</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;03&#x2F;15&#x2F;matrix-1-0-https-arewereadyyet-com&#x2F;" title="Matrix 1.0  - Are We Ready Yet?">Matrix 1.0  - Are We Ready Yet?</a></h1>
+            <span>
+                15.03.2019 00:00
+                —
+                <a href="/category/general">
+                    General
+                </a>
+                —
+                
+                <a href="/author/neil-johnson">
+                    Neil Johnson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>TL;DR</p>
+<ul>
+ 	<li style="font-weight: 400;">If you run a Synapse ensure that your federation certificates are valid <a href="/federationtester/">here</a>. 
+</li>
+ 	<li style="font-weight: 400;">If they are not valid check out the <a href="https://github.com/matrix-org/synapse/blob/master/docs/MSC1711_certificates_FAQ.md">FAQ</a>.
+</li>
+ 	<li style="font-weight: 400;">Follow along with progress at <a href="https://arewereadyyet.com">https://arewereadyyet.com</a></li>
+ 	<li style="font-weight: 400;">Tell all your admin friends.
+</li>
+</ul>
+Folks, as you know we are now very close to achieving Matrix 1.0 and finally being in a position to shed our ‘beta' tag. It has been a long time coming and speaks to the huge effort from hundreds of people over the past 5 years.
+<p>A critical step towards this goal is the release of Synapse 1.0. We want to ship Synapse 1.0 as soon as possible but can't do so without your help!</p>
+<p>We'd like to introduce <a href="http://arewereadyyet.com/"> AreWeReadyYet.com</a> - a quick and easy way for everyone to track the progress and check if their federation is ready for Matrix 1.0!!</p>
+<p style="text-align: center;"><a href="https://www.arewereadyyet.com/"><img class="alignnone wp-image-4110 size-medium" src="/blog/wp-content/uploads/2019/03/Screenshot-2019-03-15-at-10.05.19-300x214.png" alt="Are we ready yet?" width="300" height="214" /></a></p>
+Synapse 1.0 is good news for anyone running a Synapse installation - it contains critical bug fixes, security patches, a new room algorithm version and dramatically improved user and room search. However, as part of the security work it also 
+<b>contains a breaking change from previous Synapse versions. From 1.0 onwards it will necessary to ensure a valid TLS certificate on the federation API. Self signed certificates will no longer be accepted</b>. <a href="https://github.com/matrix-org/synapse/blob/master/docs/MSC1711_certificates_FAQ.md#it-used-to-work-just-fine-why-are-you-breaking-everything">Why would we do such a thing?</a>
+<p>In anticipation for this, everyone currently running a homeserver must ensure that they have checked their federation certificate (check yours <a href="/federationtester/">here</a>). Failure to do so will mean being unable to federate with any Matrix 1.0 compliant server. If your server fails the check, our <a href="https://github.com/matrix-org/synapse/blob/master/docs/MSC1711_certificates_FAQ.md">FAQ</a> has all the details on what you need to do.</p>
+<p>This post is a call to arms to try and get as many admins to upgrade their certificates as possible. We are tracking adoption at <a href="https://arewereadyyet.com">https://arewereadyyet.com</a> - currently this sits at about 55% - we need this figure to be higher before we can pull the lever.  </p>
+<p>So what are you waiting for? Check that your server has valid certs - then tell all your admin pals to do the same.
+<b>Friends don't let friends miss out on Synapse 1.0, send them to</b><a href="http://arewereadyyet.com/"><b> arewereadyyet.com</b></a><b> (or tweet </b><a href="https://twitter.com/intent/tweet?text=Are%20you%20running%20a%20Matrix%20server%3F%20Are%20you%20ready%20for%20Matrix%201.0%3F%20Find%20out%20at%20https%3A%2F%2Farewereadyyet.com!"><b>here</b></a><b> to remind them!)</b> We really need the community to help us here because at some point soon, we will need to pull the lever and release.</p>
+<p>Once we make more progress on adoption, we will announce an official release date and finally get Synapse out of beta!</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;03&#x2F;15&#x2F;this-week-in-matrix-2019-03-15&#x2F;" title="This Week in Matrix 2019-03-15">This Week in Matrix 2019-03-15</a></h1>
+            <span>
+                15.03.2019 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/ben-parsons">
+                    Ben Parsons
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live-s3e17-hello-ryan">Matrix Live S3E17: Hello Ryan</h2>
+<p>This week you're stuck with me, but I'm chatting to Ryan, who works on Riot web. Having previously worked at Mozilla, Ryan has a LOT of interesting things to say about Firefox, the browser market, the importance of decentralisation, Matrix being GREAT, and more.</p>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=2LiaUmNdT0s">https://youtube.com/watch?v=2LiaUmNdT0s</a></noscript>
+<youtube-player video-id="2LiaUmNdT0s"></youtube-player>
+<h2 id="arewereadyyet-com-matrix-1-0-ready-federation">arewereadyyet.com: Matrix 1.0-ready Federation</h2>
+<p><a href="https://arewereadyyet.com">https://arewereadyyet.com</a> is not just an amazing domain we somehow managed to buy, it's also the first place to look for progress towards full Matrix 1.0 readiness. Read more details at <a href="/blog/2019/03/15/matrix-1-0-https-arewereadyyet-com/">https://matrix.org/blog/2019/03/15/matrix-1-0-https-arewereadyyet-com/</a>.</p>
+<h2 id="spec">Spec</h2>
+<blockquote>
+<p>Lots of activity but most notably MSC 1915 (a blocker for Matrix 1.0) is making progress. <a href="https://github.com/matrix-org/matrix-doc/pull/1915">https://github.com/matrix-org/matrix-doc/pull/1915</a></p>
+</blockquote>
+<h2 id="synapse-1-0">Synapse . . . 1.0?</h2>
+<blockquote>
+<p>It's all about 1.0 for the Synapse gang this week. This means performance improvements across the board in the form of read receipt batching, user directory (room directory coming soon!) and rate limiting on log in and registration APIs.</p>
+<p>Brendan shipped the low bandwidth CoAP proxy we demo'd at FOSDEM</p>
+<p>As well as a bunch of spec implementation projects to ensure that Synapse (and Sydent) are ready for Synapse 1.0.</p>
+</blockquote>
+<h2 id="synapse-workers-projects">Synapse workers projects</h2>
+<p>Turn-of-phrase of the week from <a href="https://matrix.to/#/@Half-Shot:half-shot.uk">Half-Shot</a> ("make it more performant and less crashy"):</p>
+<blockquote>
+<p><a href="https://github.com/turt2live/synapse-netcore-workers">synapse-netcore-workers</a> is progressing as strongly as ever. This week has mainly been supporting a couple of users trying to use the fed sender, and also trying to make it more performant and less crashy. I've been using it solidly for two weeks now, and by and large it's been working nicely :)</p>
+</blockquote>
+<p><a href="https://matrix.to/#/@bhat:encom.eu.org">Black Hat</a> has been working on <a href="https://gitlab.com/b0/cortex/">Cortex</a>, a similar project in Rust:</p>
+<blockquote>
+<p>Support for replication protocol in <a href="https://gitlab.com/b0/cortex/">Cortex</a> is mostly complete. A federation sender worker implementation is being worked on. If anyone is interested or wants to contribute, please go to <a href="https://matrix.to/#/#cortex:encom.eu.org">#cortex:encom.eu.org</a></p>
+</blockquote>
+<h2 id="construct">Construct</h2>
+<blockquote>
+<p>Lots of progress this week. I'd like to give a special thanks to Yan Minari for another great week of testing, bugfixes and feature requests.</p>
+<ul>
+ 	<li>We implemented features related to room directory lists, reporting content, ignoring users, VoIP turnServer, prev_content in state events.</li>
+ 	<li>Improving SSL: allowing configurable lists of ciphers, and sending/receiving SNI.</li>
+ 	<li>At the lower level: adding support for Linux AIO features that are present in newer kernels, giving a nice performance boost.</li>
+</ul>
+</blockquote>
+<p>For more Construct news watch the <a href="https://github.com/matrix-construct/construct/">repo</a> or join <a href="https://matrix.to/#/#zemos-test:matrix.org">#zemos-test:matrix.org</a></p>
+<h2 id="new-client-for-android-pattle">New Client for Android: Pattle</h2>
+<p><a href="https://matrix.to/#/@wilko:matrix.org">Wilko</a> announced <a href="https://git.pattle.im/pattle/android">Pattle</a>, a Matrix client for Android:</p>
+<blockquote>
+<p>Hey all, I've been working on my Matrix Android app, Pattle! The goal of Pattle is to be an easy to use app for Matrix, with it's design inspired by popular apps such as WhatsApp and Telegram. <a href="https://git.pattle.im/pattle/android">Development happens here</a>, and contributions are encouraged! The app is not currently suited for daily use, but some functionality is there, such as registering, logging in and viewing chats.
+Currently it's an Android only app using the official Matrix Android SDK, but the plan is to support iOS and web too, in the future.
+There's also a sort of <a href="https://docs.pattle.im/design/philosophy/">design document</a> available, stating how Pattle differs from standard Matrix apps and what it's goals are. The intent of the design document is to make development easier later on for other platforms</p>
+</blockquote>
+<p><a href="/blog/wp-content/uploads/2019/03/pattle.png"><img class="alignnone size-large wp-image-4119" src="/blog/wp-content/uploads/2019/03/pattle-1024x561.png" alt="" width="1024" height="561" /></a></p>
+<ul>
+ 	<li>Get APKs to test: <a href="https://git.pattle.im/pattle/android/-/jobs">https://git.pattle.im/pattle/android/-/jobs</a></li>
+ 	<li>and join the development room: <a href="https://matrix.to/#/#pattle:matrix.org">#pattle:matrix.org</a></li>
+</ul>
+<h2 id="quaternion-0-0-9-4-beta-2-available">Quaternion 0.0.9.4 beta 2 available</h2>
+<p><a href="https://matrix.to/#/@kitsune:matrix.org">kitsune</a>:</p>
+<blockquote>
+<p><a href="https://github.com/QMatrixClient/Quaternion">Quaternion</a> 0.0.9.4 beta 2 (too many numbers? That too shall pass) is out, with bugfixes and translation updates. Notably, Quaternion won't crash on upgraded rooms in some cases, and won't cry in <a href="https://matrix.to/#/#gsoc:matrix.org">#gsoc:matrix.org</a> and other v3 rooms. Translators are still strongly encouraged to push forward - due to all the features and fixes, there are many untranslated strings across the board! Also, some bugfixes are <a href="https://github.com/QMatrixClient/Quaternion/projects/2#column-4040192">still in order</a> before we can call the release RC, and some of them are really easy - so if you'd like to contribute, it's a great time to start!</p>
+</blockquote>
+<h2 id="riot-web">Riot Web</h2>
+<blockquote>
+<ul>
+ 	<li>Preparing for 1.0.4 release with lots of small polish fixes</li>
+ 	<li>Planning our roadmap for the next few quarters</li>
+</ul>
+</blockquote>
+<h2 id="riot-ios">Riot iOS</h2>
+<blockquote>
+<p>iOS released 2 times. Last release was to fix an issue with invalid scalar token.
+Review of one PR from the community for iOS10 notifications.
+Started implementing device verification with emoji.</p>
+</blockquote>
+<h2 id="riot-android">Riot Android</h2>
+<blockquote>
+<p>We've released v0.8.25 on Thursday, containing refresh of invalid scalar token, and some bugfixes. Links on m.notice messages are now clickable again.<br />Started implementing device verification with emoji.</p>
+</blockquote>
+<h2 id="riotx-android">RiotX (Android)</h2>
+<blockquote>
+<ul>
+ 	<li>We started to setup build tools and CI configuration.</li>
+ 	<li>The timeline scroll issues are addressed.</li>
+</ul>
+</blockquote>
+<h2 id="fluffychat-11-released">FluffyChat 11 released</h2>
+<p>Ubuntu Touch fans rejoiced this week as a new version of <a href="https://github.com/ChristianPauly/fluffychat">FluffyChat</a> was made available: <a href="https://open-store.io/app/fluffychat.christianpauly">https://open-store.io/app/fluffychat.christianpauly</a></p>
+<blockquote>
+<ul>
+ 	<li>Improved stability and performance</li>
+ 	<li>New translations - thanks to all translators</li>
+ 	<li>Design improvements to make FluffyChat look more like a common Ubuntu Touch app</li>
+ 	<li>Better tablet support</li>
+ 	<li>Lots of Bugfixes which caused a critical error</li>
+ 	<li>Fixed the automatic scrolling up to the last seen message</li>
+ 	<li>Fixed disabling account</li>
+</ul>
+</blockquote>
+<h2 id="minivector-v0-8-25">miniVector v0.8.25</h2>
+<p><a href="https://github.com/LiMium/mini-vector-android">miniVector</a> is a minified Android Matrix client derived from Riot Android. v0.8.25 keeps it up to date with Riot Android.</p>
+<h2 id="matrix-ruby-sdk">Matrix Ruby SDK</h2>
+<p><a href="https://github.com/ananace/">Ananace</a> is returning his attention to the <a href="https://github.com/ananace/ruby-matrix-sdk">Matrix Ruby SDK</a>:</p>
+<blockquote>
+<p>I just realized that I haven't had lazy loading activated by default in the Ruby SDK, despite having had lazy loading code in place since ages back, so now that's going to be the default value going forward.</p>
+</blockquote>
+<p>Further:</p>
+<blockquote>
+<p>I started hacking - just a couple of hours or so ago - on a notification sender for The Foreman, a server orchestration system. So it can forward notifications to Matrix. <a href="https://github.com/ananace/foreman_notification_send">https://github.com/ananace/foreman_notification_send</a></p>
+</blockquote>
+<p>If you're using, or considering using, The Foreman for orchestration this may be very useful.</p>
+<p><a href="/blog/wp-content/uploads/2019/03/foreman.png"><img class="alignnone size-full wp-image-4120" src="/blog/wp-content/uploads/2019/03/foreman.png" alt="" width="491" height="288" /></a></p>
+<h2 id="maubot">maubot</h2>
+<p><a href="https://matrix.to/#/@tulir:maunium.net">tulir</a>:</p>
+<blockquote>
+<p><a href="https://github.com/maubot/maubot">maubot</a> plugins can now add their own endpoints to the main maubot webserver. The pingstat plugin I announced last week uses this feature for the leaderboard widget: <a href="https://maubot.xyz/_matrix/maubot/plugin/pingstat/stats?room_id=!MbRaSiMIRhhxDtJENL:maunium.net">https://maubot.xyz/_matrix/maubot/plugin/pingstat/stats?room_id=!MbRaSiMIRhhxDtJENL:maunium.net</a></p>
+</blockquote>
+<h2 id="matrix-appservice-bridge-1-8-0-matrix-appservice-irc-0-12-0-rc1-room-upgrades-and-more">matrix-appservice-bridge 1.8.0, matrix-appservice-irc 0.12.0-rc1: room upgrades and more</h2>
+<p><a href="https://matrix.to/#/@Half-Shot:half-shot.uk">Half-Shot</a>:</p>
+<blockquote>
+<p><a href="https://github.com/matrix-org/matrix-appservice-bridge">matrix-appservice-bridge</a> got a 1.8.0 release last night, featuring automatic handling of room upgrades for all your room upgrade needs. Providing your bridge uses the RoomStore as designed, it's literally a few lines to enable :). <a href="https://github.com/matrix-org/matrix-appservice-bridge/blob/master/CHANGES.md">Changelog here</a></p>
+<p>What is this? A <a href="https://github.com/matrix-org/matrix-appservice-irc">matrix-appservice-irc</a> release? No, it's a release <em>candidate</em>. Announcing that 0.12.0-rc1 is <a href="https://github.com/matrix-org/matrix-appservice-irc/blob/release-v0.12.0/CHANGELOG.md">now out and about</a> for folks to play with. More IRC updates to come in the future :)</p>
+</blockquote>
+<h2 id="mautrix-whatsapp">mautrix-whatsapp</h2>
+<p><a href="https://matrix.to/#/@tulir:maunium.net">tulir</a>:</p>
+<blockquote>
+<p><a href="https://github.com/tulir/mautrix-whatsapp">mautrix-whatsapp</a> now has support for postgres databases thanks to a <a href="https://github.com/tulir/mautrix-whatsapp/pull/43">pull request</a> by <a href="https://github.com/Rennerdo30">@Rennerdo30</a></p>
+</blockquote>
+<h2 id="mautrix-telegram">mautrix-telegram</h2>
+<p><a href="https://matrix.to/#/@tulir:maunium.net">tulir</a>:</p>
+<blockquote>
+<p><a href="https://github.com/tulir/mautrix-telegram">mautrix-telegram</a> got a <a href="https://github.com/tulir/mautrix-telegram/pull/290">pull request</a> with a pytest setup and a few unit tests by <a href="https://github.com/V02460">@V02460</a>. I haven't merged that one yet, but will soon.</p>
+</blockquote>
+<h2 id="matrix-docker-ansible-deploy-supports-dimension">matrix-docker-ansible-deploy supports Dimension</h2>
+<p>This is really neat, and a shout-out that these playbooks are my preferred way to install Synapse and other components. <a href="https://matrix.to/#/@slavi:devture.com">Slavi</a>:</p>
+<blockquote>
+<p>Thanks to <a href="https://github.com/NullIsNot0">NullIsNot0</a>, <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a> can now (optionally) <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/CHANGELOG.md#dimension-integration-manager-support">install</a> the <a href="https://dimension.t2bot.io/">Dimension</a> Integration Manager.<br />The playbook can now also assist with <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/CHANGELOG.md#matrix-nginx-proxy-support-for-serving-the-base-domain">serving the base domain</a> from the Matrix server, thus making it easier for some folks to set up well-known Server-Delegation.</p>
+</blockquote>
+<h2 id="self-hosting-guide-for-nixos">Self-hosting guide for NixOS</h2>
+<p><a href="https://matrix.to/#/@florianjacob:matrix.org">Florian</a>:</p>
+<blockquote>
+<p>I wrote a <a href="https://github.com/NixOS/nixpkgs/pull/57699">Matrix self-hosting guide</a> for the <a href="https://nixos.org/">NixOS</a> operating system: Check its progress and give it a test if you're a fellow NixOS user!</p>
+</blockquote>
+<h2 id="banhammer-new-bot-for-applying-a-ban-policy">banhammer: new bot for applying a ban policy</h2>
+<p><a href="https://matrix.to/#/@jan.christian:gruenhage.xyz">jcgruenhage</a> reports that:</p>
+<blockquote>
+<p>I wrote a small bot that takes a kick/ban policy from room state from all rooms it's a member of and tries to enact that policy. In practice that means it applies a regex to all MXIDs and tries to kick/ban them based on that. It's been a request of <a href="https://github.com/turt2live">TravisR</a> , source code is available at <a href="https://gitlab.com/jcgruenhage/banhammer">https://gitlab.com/jcgruenhage/banhammer</a>, documentation is still lacking but will hopefully soon be added</p>
+</blockquote>
+<h2 id="matrix-wug-support-for-navajo-script">matrix-wug support for Navajo script</h2>
+<p>Continuing his theme of Native American languages, <a href="https://matrix.to/#/@dandellion:dodsorf.as">Dandellion</a> added Navajo script to <a href="https://github.com/dali99/matrix-wug">matrix-wug</a>.</p>
+<h2 id="freedombox-tutorial-setting-up-a-chat-server-with-matrix-and-riot">FreedomBox Tutorial: Setting Up a Chat Server with Matrix and Riot</h2>
+<p>It's been possible for some time to set up a Matrix server with FreedomBox, and they just recently released a video tutorial showing the process.</p>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=37uoEbVsbNQ">https://youtube.com/watch?v=37uoEbVsbNQ</a></noscript>
+<youtube-player video-id="37uoEbVsbNQ"></youtube-player>
+<h2 id="around-the-internets">Around the Internets</h2>
+<p>There were a <a href="https://www.theregister.co.uk/2019/03/14/facebook_server_configuration/">whole lot</a> of <a href="https://www.theguardian.com/technology/2019/mar/13/googles-gmail-and-drive-suffer-global-outages">outages</a> for the <a href="https://www.wsj.com/articles/facebook-and-instagram-suffer-lengthy-outages-11552539752">big names</a> this week - good time to think about self-hosting?</p>
+<h2 id="that-s-all-i-know">That's all I know</h2>
+<p>So that's all I have to say! I hope you enjoyed this edition of This Week in Matrix, and whether you did or you didn't, I'd love too hear from you in <a href="https://matrix.to/#/#TWIM:matrix.org">#twim:matrix.org</a>. If you have Matrix news to share, that's the place to come and do so!</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;03&#x2F;12&#x2F;breaking-the-100bps-barrier-with-matrix-meshsim-coap-proxy&#x2F;" title="Breaking the 100bps barrier with Matrix, meshsim &amp; coap-proxy">Breaking the 100bps barrier with Matrix, meshsim &amp; coap-proxy</a></h1>
+            <span>
+                12.03.2019 00:00
+                —
+                <a href="/category/in-the-news">
+                    In the News
+                </a>
+                —
+                
+                <a href="/author/matthew-hodgson">
+                    Matthew Hodgson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>Hi all,</p>
+<p>Last month at FOSDEM 2019 we gave a <a href="https://fosdem.org/2019/schedule/event/matrix/">talk</a> about a new experimental ultra-low-bandwidth transport for Matrix which swaps our baseline HTTPS+JSON transport for a custom one built on <a href="https://tools.ietf.org/html/rfc7252">CoAP</a>+<a href="https://tools.ietf.org/html/rfc7049">CBOR</a>+<a href="https://noiseprotocol.org">Noise</a>+<a href="https://golang.org/pkg/compress/flate/">Flate</a>+<a href="https://tools.ietf.org/rfc/rfc768.txt">UDP</a>.  (CoAP is the RPC protocol; CBOR is the encoding; Noise powers the transport layer encryption; Flate compresses everything uses predefined compression maps).</p>
+<p>The challenge here was to see if we could demonstrate Matrix working usably over networks running at around 100 bits per second of throughput (where it'd take 2 minutes to send a typical 1500 byte ethernet packet!!) and very high latencies.  You can see the original FOSDEM talk below, or <a href="/blog/wp-content/uploads/2019/02/2019-02-03-FOSDEM-Low-Bandwidth.pdf">check out the slides here.</a></p>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=DZBvy4abB1o">https://youtube.com/watch?v=DZBvy4abB1o</a></noscript>
+<youtube-player video-id="DZBvy4abB1o"></youtube-player>
+<p>Now, it's taken us a little while to find time to tidy up the stuff we demo'd in the talk to be (relatively) suitable for public consumption, but we're happy to finally release the four projects which powered the demo:</p>
+<ul>
+ 	<li><a href="https://github.com/matrix-org/meshsim">https://github.com/matrix-org/meshsim</a> - meshsim is the network simulator which provides an interactive web interface to draw a network topology and let you spin up dockerized homeservers on a simulated network with whatever preferred latency, jitter, packet loss etc.</li>
+ 	<li><a href="https://github.com/matrix-org/meshsim-docker">https://github.com/matrix-org/meshsim-docker</a> - meshsim-docker is the custom synapse + coap-proxy Dockerfile used to define the containers which meshsim instantiates</li>
+ 	<li><a href="https://github.com/matrix-org/coap-proxy">https://github.com/matrix-org/coap-proxy</a> - coap-proxy is the golang proxy which converts HTTPS+JSON into CoAP+CBOR+Noise+Flate and vice versa, letting you squish Matrix CS API and SS API traffic in & out of CoAP.</li>
+ 	<li><a href="https://github.com/matrix-org/go-coap">https://github.com/matrix-org/go-coap</a> - go-coap is a fork of the <a href="https://github.com/Kistler-Group">Kistler-Group</a>'s <a href="https://github.com/go-ocf/go-coap">go-ocf/go-coap</a> (in turn originally a fork of <a href="https://github.com/dustin/go-coap">dustin/go-coap</a>) which adds encryption using <a href="https://noiseprotocol.org">Noise</a>, retries, and hooks for compression.</li>
+</ul>
+In order to get up and running, the <a href="https://github.com/matrix-org/meshsim/blob/master/README.md">meshsim README</a> has all the details.
+<p>It's important to understand that this is very much a proof of concept, and shouldn't be used in production yet, and almost certainly has some glaring bugs.  In fact, it currently assumes you are running on a trusted private network rather than the public Matrix network in order to get away with some of the bandwidth optimisations performed - see <a href="https://github.com/matrix-org/coap-proxy#limitations">coap-proxy's Limitations section</a> for details.  Particularly, please note that the encryption is homemade and not audited or fully reviewed or tested yet.  Also, we've released the code for the low-bandwidth transport, but we haven't released the "fan-out routing" implementation for Synapse as it needs a <a href="https://yggdrasil-network.github.io/">rethink</a> to be applicable to the public Matrix network.  You'll also want to run Riot/Web in <a href="https://github.com/matrix-org/matrix-react-sdk/pull/2598">low-bandwidth mode</a> if you really wind down the bandwidth (suppressing avatars, read receipts, typing notifs and presence to avoid wasting precious bandwidth).</p>
+<p>We also don't have an MSC for the CoAP-based transport yet, mainly due to lack of time whilst wanting to ensure the limitations are addressed first before we propose it as a formal alternative Matrix transport.  (We also first need to define negotiation mechanisms for entirely alternative CS &amp; SS transports!).  However, the quick overview is:</p>
+<ul>
+ 	<li>JSON is converted directly into CBOR (with a few substitutions made to shrink common patterns down)</li>
+ 	<li>HTTP is converted directly into CoAP (mapping the verbose API endpoints down to single-byte endpoints)</li>
+ 	<li>TLS is swapped out for <a href="https://noiseprotocol.org/noise.html#noise-pipes">Noise Pipes</a> (XX + IK noise handshakes).  This gives us 1RTT setup (XX) for the first connection to a host, and 0RTT (IK) for all subsequent connections, and provides trust-on-first-use semantics when connecting to a server.  You can see the Noise state machine we maintain in go-coap's <a href="https://github.com/matrix-org/go-coap/blob/master/noise.go">noise.go</a>.</li>
+ 	<li>The CoAP headers are hoisted up above the Noise payload, letting us use them for framing the noise pipes without having duplicated framing headers at the CoAP & Noise layers.  We also <a href="https://github.com/matrix-org/go-coap/blob/e156f6bb5d3c728040ceffd09685610128d3c63c/conn.go#L340-L371">frame the Noise handshake packets as CoAP</a> with custom message types (250, 251 and 252).  We might be better off using <a href="https://github.com/core-wg/oscoap">OSCORE</a> for this, however, rather than hand-wrapping a custom encrypted transport...</li>
+ 	<li>The CoAP payload is compressed via <a href="https://golang.org/pkg/compress/flate/">Flate</a> using preshared compression tables derived from compressing large chunks of representative Matrix traffic. This could be significantly improved in future with streaming compression and dynamic tables (albeit seeded from a common set of tables).</li>
+</ul>
+The end result is that you end up taking about 90 bytes (including ethernet headers!) to send a typical Matrix message (and about 70 bytes to receive the acknowledgement).  This breaks down as as:
+<ul>
+ 	<li>14 bytes of Ethernet headers</li>
+ 	<li>20 bytes of IP headers</li>
+ 	<li>8 bytes of UDP headers</li>
+ 	<li>16 bytes of Noise AEAD</li>
+ 	<li>6 bytes of CoAP headers</li>
+ 	<li>~26 bytes of compressed and encrypted CBOR</li>
+</ul>
+The Noise handshake on connection setup would take an additional 128 bytes (4x 32 byte Curve25519 DH values), either spread over 1RTT for initial setup or 0RTT for subsequent setups.
+<p>At 100bps, 90 bytes takes 90*8/100 = 7.2s to send... which is just about usable in an extreme life and death situation where you can only get 100bps of connectivity (e.g. someone at the bottom of a ravine trying to trickle data over one bar of GPRS to the emergency services).  In practice, on a custom network, you could ditch the Ethernet and UDP/IP headers if on a point-to-point link for CS API, and ditch the encryption if the network physical layer was trusted - at which point we're talking ~32 bytes per request (2.5s to send at 100bps).  Then, there's still a whole wave of additional work that could be investigated, including...</p>
+<ul>
+ 	<li>Smarter streaming compression (so that if a user says 'Hello?' three times in a row, the 2nd and 3rd messages are just references to the first pattern)</li>
+ 	<li>Hoisting Matrix transaction IDs up to the CoAP layer (reusing the CoAP msgId+token rather than passing around new Matrix transaction IDs, at the expense of requiring one Matrix txn per request)</li>
+ 	<li>Switching to CoAP OBSERVE for receiving data from the server (currently we long-poll /sync to receive data)</li>
+ 	<li>Switching access_tokens for PSKs or similar</li>
+</ul>
+...all of which could shrink the payload down even further.  That said, even in its current state, it's a massive improvement - roughly ~65x better than the equivalent HTTPS+JSON traffic.
+<p>In practice, <strong>further work on low-bandwidth Matrix is dependent on finding a sponsor who's willing to fund the team to focus on this</strong>, as otherwise it's hard to justify spending time here in addition to all the less exotic business-as-usual Matrix work that we need to keep the core of Matrix evolving (finishing 1.0, finishing E2E encryption, speeding up Synapse, finishing Dendrite, rewriting Riot/Android etc).  However, the benefits here should be pretty obvious: massively reduced bandwidth and battery-life; resilience to catastrophic network conditions; faster sync times; and even a protocol suitable for push notifications (Matrix as e2e encrypted, decentralised, push!).  If you're interested in supporting this work, please contact <code>support at matrix.org</code>.</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;03&#x2F;08&#x2F;this-week-in-matrix-2019-03-08&#x2F;" title="This Week in Matrix 2019-03-08">This Week in Matrix 2019-03-08</a></h1>
+            <span>
+                08.03.2019 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/ben-parsons">
+                    Ben Parsons
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="arewereadyyet-com"><a href="https://arewereadyyet.com/">AreWeReadyYet.com</a>?</h2>
+<p>From Neil of the Synapse-team</p>
+<blockquote>
+<p>Folks, in the run up to Synapse 1.0, if you are running your own homeserver now would be an excellent time to check that your TLS certificates are up to date. Point your server name at <a href="/federationtester/">https://matrix.org/federationtester/</a> and if there are errors check our handy FAQ on how to fix it. If you do not have valid TLS certificates Synapse 1.0 will refuse to federate with you.</p>
+<p><a href="https://matrix.to/#/@benpa:matrix.org">benpa</a> has put together a federation checker to quantify how many homeservers are 1.0 ready - <a href="https://www.arewereadyyet.com">https://www.arewereadyyet.com/</a> - It currently stands at 50.5% let's try and get that to 60% over the weekend.</p>
+<p>Aside from all that, the team have been working on preparing for Synapse 1.0, you can <a href="https://github.com/orgs/matrix-org/projects/8">track our progress here</a>. We promise not to just land 1.0 out of the blue - we'll give everyone a 2 week warning to give stragglers a chance to get their certificates in order.</p>
+</blockquote>
+<p>And this week we have Neil and Erik talking about this in more detail on Matrix Live</p>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=dPvis1eEMDM">https://youtube.com/watch?v=dPvis1eEMDM</a></noscript>
+<youtube-player video-id="dPvis1eEMDM"></youtube-player>
+<h2 id="jeonserver-and-related-project-updates">JeonServer and related project updates</h2>
+<p><a href="https://matrix.to/#/@ma1uta:matrix.org">ma1uta</a> has been working on <a href="https://gitlab.com/ma1uta/jeon">Jeon</a> - Java interfaces to the various <a href="/docs/spec">Matrix APIs</a> - and is now getting ready to start work on a homeserver. He was previously asking for a name for this project, but might now have settled on "<strong>JeonServer</strong>".</p>
+<blockquote>
+<p>First Release Candidate of the <a href="https://gitlab.com/ma1uta/jeon">Jeon</a> Project with upcoming Client-Server API 0.5, Server-Server API 0.1.1, Application API 0.1, Identity API 0.2 and Push API 0.1.
+Also the RC of the <a href="https://github.com/ma1uta/jmsdk">jmsdk</a> has been prepared with Java Matrix Client for Client-Server API 0.5.
+Changes in the C2S: Added the <code>m.push_rules</code> event, removed presence list methods and other minor fixes.
+Added S2S API of the 0.1.1 version.
+I prepared a very simple page <a href="https://ma1uta.github.io/">https://ma1uta.github.io/</a> with links to the swagger schemas (json and yaml) for all Matrix API which generated from the Jeon code.</p>
+</blockquote>
+<p>Chat more in <a href="https://matrix.to/#/#jeon:matrix.org">#jeon:matrix.org</a> or <a href="https://matrix.to/#/#jeon:ru-matrix.org">#jeon:ru-matrix.org</a>.</p>
+<h2 id="construct-updates">Construct updates</h2>
+<blockquote>
+<p>There's a lot of progress, a few endpoints and features have been implemented this week such as Room Tags and all of the spec features for /createRoom. Most of the progress has been with testing and bugfixes thanks to Yan Minari, and <a href="https://matrix.to/#/@tulir:maunium.net">tulir</a> and mujx.
+We've fixed several interactions with synapse such as invite accept/deny and synapse's ability to join and leave construct created rooms without any issues.
+Lastly and most important, we've generated an official issues list thanks again to our star tester Yan Minari available here <a href="https://github.com/matrix-construct/construct/issues">https://github.com/matrix-construct/construct/issues</a></p>
+</blockquote>
+<p>For more new Construct news watch the <a href="https://github.com/matrix-construct/construct/">repo</a> or join <a href="https://matrix.to/#/#zemos-test:matrix.org">#zemos-test:matrix.org</a></p>
+<h2 id="opensaps-open-slack-api-server">OpenSAPS: Open Slack API Server</h2>
+<p><a href="https://matrix.to/#/@pztrn:pztrn.name">pztrn</a> has created a new mechanism for relaying apps that use Slack webhooks into Matrix:</p>
+<blockquote>
+<p>To everyone who wonders how to connect his application to Matrix (at least for notifications of some kind) - use <a href="https://gitlab.com/pztrn/opensaps">OpenSAPS</a>! It just reached v0.1.0. <a href="https://gitlab.com/pztrn/opensaps">OpenSAPS</a> stands for Open Slack API Server and able to retransmit messages from applications (like Gitlab or everything that can send data to Slack) to somewhere else. Right now these "somewhere else" is a Telegram (with HTTP proxy support) and Matrix! Written in Golang to ensure minimal memory footprint. Take a look at <a href="https://gitlab.com/pztrn/opensaps">https://gitlab.com/pztrn/opensaps</a> Tested with Gitlab and Gitea but should work with almost any service. Join <a href="https://matrix.to/#/#opensaps:pztrn.name">#opensaps:pztrn.name</a> to talk with developers or get help. BTW, there is OpenSAPS instance in our room that transmits everything from gitlab.com into room! (almost) immediately after 0.1.0 comes <a href="https://gitlab.com/pztrn/opensaps/tags/v0.1.1">0.1.1</a>, with fixed URLs parsing and fixed inability to login into servers which use .well-known for delegation. It should work [with other webhooks]. If something strange happens there is also a possibility to write own parser to make everything work :)‚ Tested with Gitlab and Gitea ATM. Share application names that work, I'll start to make a list of them. :D</p>
+</blockquote>
+<h2 id="matrix-puppet-bridge-matrix-puppet-slack-and-matrix-puppet-hangouts-updates">matrix-puppet-bridge: matrix-puppet-slack and matrix-puppet-hangouts updates</h2>
+<p><a href="https://matrix.to/#/@root:thomasprofitt.com">tom</a> reports from <a href="https://matrix.to/#/#matrix-puppet-bridge:matrix.org">#matrix-puppet-bridge:matrix.org</a>:</p>
+<blockquote>
+<ul>
+ 	<li><a href="https://github.com/matrix-hacks/matrix-puppet-slack/releases">matrix-puppet-slack</a> 1.12.0 has been released. This version:
+<ul>
+ 	<li>Fixes incorrect room alias reserved prefixes (thanks to jeffcasavant!)</li>
+ 	<li>Handles a new kind of Slack event (hence the minor version bump): channel renames (thanks to <a href="https://github.com/d3m3vilurr">d3m3vilurr</a> !)</li>
+</ul>
+</li>
+ 	<li><a href="https://github.com/matrix-hacks/matrix-puppet-hangouts/releases">matrix-puppet-hangouts</a> 1.0.1 has been released.
+<ul>
+ 	<li>The patch fixes node 8 compatibility broken by a recent change.</li>
+</ul>
+</li>
+ 	<li>Work is ongoing to <a href="https://github.com/matrix-hacks/matrix-puppet-bridge/pull/49">replace unwieldy Promise chains in matrix-puppet-bridge with async/await</a>, to make the lives of maintainers & contributors easier.</li>
+</ul>
+</blockquote>
+<h2 id="minivector-update">MiniVector update</h2>
+<p><a href="https://matrix.to/#/@bubu:bubu1.eu">bubu</a> let us know about MiniVector updates</p>
+<blockquote>
+<p><a href="https://github.com/LiMium/mini-vector-android">Minivector</a>, a minimalistic fork of riot-android had a new release last week, getting rid of a few more unused dependencies. This brings the final apk size down to 13mb vs riot android's 25mb. This work was done by <a href="https://matrix.to/#/@hrjet:matrix.org">@hrjet:matrix.org</a>. The project room is here: <a href="https://matrix.to/#/#miniVectorAndroid:matrix.org">#miniVectorAndroid:matrix.org</a></p>
+</blockquote>
+<h2 id="matrix-docker-ansible-deploy-now-with-discord-and-email-templates">matrix-docker-ansible-deploy, now with Discord and email templates</h2>
+<p>The volume of discussion about installing/configuring Synapse and other Matrix-related components is like a subculture in itself. Standing tall within this is <a href="https://matrix.to/#/@slavi:devture.com">Slavi</a>'s <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a> collection of Ansible playbooks. They're a great way to quickly and reliably get a Synapse instance running.</p>
+<blockquote>
+<p>Thanks to <a href="@lionstiger:divisibleprimes.com">Lionstiger</a>, <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a> now supports <a href="https://discordapp.com/">Discord</a> bridging via <a href="https://github.com/Half-Shot/matrix-appservice-discord">matrix-appservice-discord</a>.<br />Those wishing to give it a try can refer to the <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/docs/configuring-playbook-bridge-appservice-discord.md">Setting up Appservice Discord bridging</a> documentation page.</p>
+<p>Thanks to <a href="https://github.com/TheLastProject">Sylvia van Os</a>, <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a> now has the <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/CHANGELOG.md#ability-to-customize-mxisds-email-templates">Ability to customize mxisd's email templates</a></p>
+</blockquote>
+<h2 id="quaternion-0-0-9-4-beta">Quaternion 0.0.9.4 beta</h2>
+<p><a href="https://matrix.to/#/@kitsune:matrix.org">kitsune</a>:</p>
+<blockquote>
+<p>between chasing bugs in <a href="https://github.com/QMatrixClient/Quaternion/releases/tag/0.0.9.4-beta1">Quaternion 0.0.9.4 beta</a> (translators, your help is hugely needed to catch up with new and updated strings) there happens almost literal bikeshedding in <a href="https://matrix.to/#/#qmatrixclient:matrix.org">#qmatrixclient:matrix.org</a>, under an excuse of discussing The Universal Algorithm to Colour Usernames. Join the fun!</p>
+</blockquote>
+<h2 id="bifrost-bridge-gatewaying">Bifrost bridge gatewaying</h2>
+<p><a href="https://matrix.to/#/@Half-Shot:half-shot.uk">Half-Shot</a>:</p>
+<blockquote>
+<p>Bifrost is now starting to comfortably support gatewaying. For those that don't know, gateways allow a remote user to participate in the matrix network without prior bridging, it's very fancy. The latest changes are that XMPP clients can now ask for the public room list by querying the bridge component. There is a video on this using the Yaxim XMPP client on Android (Credit to Ge0rG). Come chat with us in <a href="https://matrix.to/#/#bifrost:half-shot.uk">#bifrost:half-shot.uk</a></p>
+</blockquote>
+<p>You can check out the video of the bridge in operation here:</p>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=0vDMlBSXGw4">https://youtube.com/watch?v=0vDMlBSXGw4</a></noscript>
+<youtube-player video-id="0vDMlBSXGw4"></youtube-player>
+<h2 id="spectral-development-restart">Spectral development restart</h2>
+<p><a href="https://matrix.to/#/@bhat:encom.eu.org">Black Hat</a>:</p>
+<blockquote>
+<p><a href="https://gitlab.com/spectral-im/spectral">Spectral</a> development now continues after a short break. The new "material design" has been merged into master, along with a few bug fixes. I plan to work on Kirigami port in the following two weeks.</p>
+</blockquote>
+<p><a href="/blog/wp-content/uploads/2019/03/spectral.2019-03-08.png"><img class="size-full wp-image-4079 aligncenter" src="/blog/wp-content/uploads/2019/03/spectral.2019-03-08.png" alt="" width="874" height="649" /></a></p>
+<h2 id="fractal">Fractal</h2>
+<p><a href="https://matrix.to/#/@afranke:matrix.org">Alexandre Franke</a> reports on Fractal:</p>
+<blockquote>
+<p>Since our last update about Fractal we <a href="https://gitlab.gnome.org/GNOME/fractal/merge_requests/262">landed typing notifications</a>, found out <a href="https://gitlab.gnome.org/GNOME/fractal/issues/430">we actually weren't logging anything</a>, <a href="https://gitlab.gnome.org/GNOME/fractal/merge_requests/369">recovered the ability to log</a>, and <a href="https://gitlab.gnome.org/GNOME/fractal/merge_requests/377">restored spellcheck support</a>.<br />We are also now <a href="https://gitlab.gnome.org/GNOME/fractal/merge_requests/322">tagging uploaded audio files as such</a> and <a href="https://gitlab.gnome.org/GNOME/fractal/merge_requests/365">adding thumbnails to image files</a>, courtesy of our Outreachy intern, and we fixed a bunch of other things.</p>
+</blockquote>
+<h2 id="ping-maunium-net">#ping:maunium.net</h2>
+<p><a href="https://matrix.to/#/@tulir:maunium.net">tulir</a> making crazy <a href="https://github.com/maubot/maubot">maubot</a>s this week:</p>
+<blockquote>
+<p>I made a room for <code>!ping</code>ing <a href="https://github.com/maubot/echo">echo</a> maubots: <a href="https://matrix.to/#/#ping:maunium.net">#ping:maunium.net</a>. The room has a bunch of echo bots, currently on maunium.net, c.mau.dev and matrix.vgorcum.com. It also has a new maubot plugin called <a href="https://github.com/maubot/pingstat">pingstat</a>, which collects the pong data and makes a leaderboard website. The website is linked to the room as a widget.</p>
+</blockquote>
+<p>Check out instructions to get your own maubots setup here: <a href="https://github.com/maubot/maubot/wiki/Setup">https://github.com/maubot/maubot/wiki/Setup</a></p>
+<p><a href="/blog/wp-content/uploads/2019/03/pingbot.png"><img class="alignnone size-full wp-image-4080" src="/blog/wp-content/uploads/2019/03/pingbot.png" alt="" width="820" height="525" /></a></p>
+<h2 id="synapse-netcore-workers">synapse-netcore-workers</h2>
+<p><a href="https://matrix.to/#/@Half-Shot:half-shot.uk">Half-Shot</a>:</p>
+<blockquote>
+<p>Not much news to report on the <a href="https://github.com/turt2live/synapse-netcore-workers">netcore-workers</a> other than it's maturing and we have nice things now like logging, metrics and a docker image you can run at home. I'm running the federation sender fulltime on half-shot.uk to <em>dogfood</em> it and will announce when I think it's good for general consumption :)</p>
+</blockquote>
+<p>Related: <a href="https://matrix.to/#/@bhat:encom.eu.org">Black Hat</a> is investigating a similar project in Rust. Anyone interested in that please do go chat, and take a look at the <a href="https://gitlab.com/b0/cortex">repo they've created</a>.</p>
+<h2 id="matrix-wug-ipa-rendering-bot-gets-support-for-cherokee">matrix-wug, IPA rendering bot, gets support for cherokee</h2>
+<p><a href="https://matrix.to/#/@dandellion:dodsorf.as">Dandellion</a> on <a href="https://github.com/dali99/matrix-wug">matrix-wug</a>:</p>
+<blockquote>
+<p>This is "script" or written language has a very interesting story behind it, where the creator of it actually couldn't read and write. Regardless, he wanted to write down his language, and developed his own writing system.<br />The characters look a lot like latin characters because he tried to imitate the characters of a bible. Just a fun history lesson!</p>
+</blockquote>
+<p><a href="/blog/wp-content/uploads/2019/03/wug-cherokee.png"><img class="alignnone size-full wp-image-4081" src="/blog/wp-content/uploads/2019/03/wug-cherokee.png" alt="" width="492" height="204" /></a></p>
+<h2 id="weechat-matrix">weechat-matrix</h2>
+<p><a href="@ptman:matrix.org">Paul</a> created a dockerfile to install <a href="https://github.com/poljar/weechat-matrix">weechat-matrix</a>:</p>
+<blockquote>
+<p>since <a href="https://github.com/poljar/weechat-matrix">weechat-matrix</a> is a bit involved to install, I create a dockerfile that takes care of it: <a href="https://github.com/poljar/weechat-matrix/pull/60">https://github.com/poljar/weechat-matrix/pull/60</a> . And people allergic to docker can look inside to check the steps (just reading the readme doesn't give a full picture)</p>
+</blockquote>
+<h2 id="modular-im">modular.im</h2>
+<p>Modular.im is a Matrix-as-a-SaaS offering. It's suitable for users who want the benefits of having their own Matrix homeserver, but don't want to host and run one.</p>
+<p>There are some new announcements this week:</p>
+<blockquote>
+<p>Today we are pleased to announce that you can now <a href="https://www.modular.im/custom-branding">customise your Modular hosted Riot</a> at the touch of a button, through the Modular host admin interface. Better yet, this is available to all Modular customers at no additional cost.<br />Today we are also <a href="https://www.modular.im/stickers">launching a proof of concept for purchasing additional content</a> via the Modular integration manager.<br />For the initial experiment we're offering a set of "snazzy", limited edition Matrix stickers for the princely sum of $0.50. These are digital versions of the Matrix and Riot hexagons that some of you may have seen in real life.</p>
+</blockquote>
+<h2 id="still-more">Still more!</h2>
+<p><a href="https://decred.org">decred.org</a> are an organisation concerned with blockchain technology, and they also use Matrix for their communications! They now have a stickerpack available in Riot, so if you'd like to use their stickers you can add the pack and get going with blockchain-related memes.</p>
+<p>If <strong>you</strong> have a stickerpack you'd like to see included, please <a href="https://matrix.to/#/@benpa:matrix.org">let me know</a>.</p>
+<p>Celebrating the creation of a new homeserver instance at kde.org, <a href="https://jriddell.org/2019/02/28/kde-chat-on-matrix/">Jonathan Riddell has written an article</a>.</p>
+<p><a href="https://matrix.to/#/@sortebill:matrix.org">sortebill</a> created <a href="https://matrix.to/#/#drums:matrix.org">#drums:matrix.org</a>:</p>
+<blockquote>
+<p>I've made a room for anyone interested in drums and percussion. Acoustic, Electronic, Played or Programmed, anything goes as long as it's rhytm related. The room is focused on both playing/programming drums and equipment.</p>
+</blockquote>
+<p>There was a somewhat longstanding bug that affected a number of users: often manifesting as unexpected and frustrating "Unable to decrypt" messages - this has now been fixed, take a look at <a href="https://github.com/vector-im/riot-web/issues/6838">https://github.com/vector-im/riot-web/issues/6838</a></p>
+<h2 id="they-think-it-s-all-over">They think it's all over...</h2>
+<p>It is now! If you'd like to have your project included in this post, come chat to us in <a href="https://matrix.to/#/#TWIM:matrix.org">#twim:matrix.org</a>!</p>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;03&#x2F;07&#x2F;experiments-with-payments-over-matrix&#x2F;" title="Experiments with payments over Matrix">Experiments with payments over Matrix</a></h1>
+            <span>
+                07.03.2019 00:00
+                —
+                <a href="/category/in-the-news">
+                    In the News
+                </a>
+                —
+                
+                <a href="/author/matthew-hodgson">
+                    Matthew Hodgson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>Hi all,</p>
+<p>Heads up that<a href="https://modular.im"> Modular.im</a> (the paid hosting Matrix service provided by <a href="https://vector.im">New Vector</a>, the company who employs much of the Matrix core team) launched a pilot today for paid Matrix integrations in the form of paid sticker packs.  Yes kids, it's true - for only $0.50 you can slap Matrix and Riot hex stickers all over your chatrooms. It's a toy example to test the payments infrastructure and demonstrate the concept - the proceeds go towards funding development work on Matrix.org :)  
+You can read more about over on <a href="https://www.modular.im/stickers">Modular's blog</a>.</p>
+<p>We wanted to elaborate on this a bit from the Matrix.org perspective, specifically:</p>
+<ul>
+ 	<li style="font-weight: 400;">We are categorically <strong>not</strong> baking payments or financial incentives as a first class citizen into Matrix, and we're not going to start moving stuff behind paywalls or similar.
+</li>
+ 	<li style="font-weight: 400;">This demo is a proof-of-concept to illustrate how folks could do this sort of thing in general in Matrix - it's not a serious product in and of itself.
+</li>
+ 	<li style="font-weight: 400;">What it shows is that an Integration Manager like Modular can be used as a way to charge for services in Matrix - whether that's digital content within an integration, or bots/bridges/etc. 
+</li>
+ 	<li style="font-weight: 400;">While Modular today gathers payments via credit-card (Stripe), it could certainly support other mechanisms (e.g. cryptocurrencies) in future.
+</li>
+ 	<li style="font-weight: 400;">The idea in future is for Modular to provide this as a mechanism that <em>anyone</em> can use to charge for content on Matrix - e.g. if you have your own sticker pack and want to sell it to people, you'll be able to upload it and charge people for it.
+</li>
+</ul>
+Meanwhile, there's a lot of interesting stuff on the horizon with integration managers in general - see <a href="https://github.com/matrix-org/matrix-doc/issues/1236">MSC1236</a> and an upcoming MSC from TravisR (based around <a href="https://github.com/matrix-org/matrix-doc/issues/1286">https://github.com/matrix-org/matrix-doc/issues/1286</a>) proposing new integration capabilities.  We're also hoping to implement inline widgets soon (e.g. chatbot buttons for voting and other semantic behaviour) which should make widgets even more interesting!
+<p>So, feel free to go stick some hex stickers on your rooms if you like and help test this out.  In future there should be more useful things available :)</p>
+
+        </div>
+    </article>
+    
+    <nav class="pagination">
+    <div class="prev">
+        
+        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;page&#x2F;52&#x2F;">‹ Previous</a>
+        
+    </div>
+    <span class="page-number">53 / 79</span>
+    <div class="prev">
+        
+        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;page&#x2F;54&#x2F;">Next ›</a>
+        
+    </div>
+</nav>
+
+</div>
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

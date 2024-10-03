@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;author&#x2F;thomas-lant&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Matrix.org" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Thomas Lant</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://tune-your-chat.github.io/author/thomas-lant/atom.xml">
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            ">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<div id="taxonomy-single">
+    <div class="content">
+        <header>
+            <h1>Thomas Lant</h1>
+            7 posts tagged with "Thomas Lant" <a href="/author">(See all Author)</a>
+            
+        </header>
+
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;07&#x2F;24&#x2F;data-portability-tooling-bug&#x2F;" title="Data Portability Tooling Bug">Data Portability Tooling Bug</a></h2>
+                <span>
+                    24.07.2019 00:00
+                    —
+                    <a href="/category/privacy">
+                        Privacy
+                    </a>
+                    —
+                    <a
+                        href="/author/thomas-lant">
+                        Thomas Lant
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>It was drawn to our attention this afternoon that there is a bug in our GDPR data portability tooling that resulted in the data dump including some events that should not have been included.</p>
+<p>This tooling has recently been updated (<a href="https://github.com/matrix-org/synapse/blob/baf081cd3b040926e2d14dfd1c555307bba59245/synapse/handlers/admin.py#L98">here is the new code</a>), and the bug only affects reports generated with the updated tool. So far we have generated one report using the updated tooling.</p>
+<p>The bug affects events which:</p>
+<ul>
+<li>were sent in rooms in which, at the point at which the message was sent, the message visibility was set to 'shared' or 'world readable', and</li>
+<li>were pulled in over federation from another server after the data subject left the room</li>
+</ul>
+<p>As a reminder, 'shared' message visibility means <em>anyone in the room can view the message, from the point in time at which visibility was set to 'shared'</em> and 'world readable' means <em>anyone can read the messages without joining the room, from the point in time at which visibility was set to 'world readable'</em>.</p>
+<p>Events are pulled onto a homeserver over federation when a user on that homeserver tries to access events which, for whatever reason, their homeserver does not already have a local copy. This most often happens when their homeserver is offline for any period of time, but can also happen when a user is the first user from their homeserver to join a room with active participants on other homeservers.</p>
+<p>We're still analysing the data but so far it looks like the bug resulted in only a small number of events that were not publicly-accessible being shared (there were also publicly-accessible events mistakenly included). At this stage we have identified 19 events from 4 users across 2 rooms (the dump contained ~3.5 million events). This is not to diminish the severity of the bug - just to reassure that the scale of its impact appears to be extremely limited.</p>
+<p>It is also worth noting that any encrypted events erroneously included in the dump will not have been decryptable (since the data subject would not have had access to the keys).</p>
+<h3 id="update-2019-08-06">Update (2019-08-06)</h3>
+<blockquote>
+<p>In our original analysis we stated that 19 events were shared erroneously. On closer analysis we missed 5 other timeline events - the correct figure is 24 timeline events originating from 4 users over 2 rooms. However, this figure focused on timeline data and does not take into account all state events (such as user joins, parts, topic changes etc). When considering these too, a further 56 state events were erroneously shared, referencing 64 users across these 2 rooms (mainly detailing when users had joined/left the room after the requesting user themselves had left). These membership events contained avatar &amp; display name details which may not have been public (but in practice, the vast majority appear to be public data).</p>
+<p>Aside from the events referenced above, the full dump contained ~20,000 events that also ought not to have been included; however <strong>these events were already publicly accessible due to being part of publicly accessible rooms</strong> (eg Matrix HQ) and so we do not consider them a breach of data.</p>
+</blockquote>
+<h2 id="what-caused-the-bug">What caused the bug?</h2>
+<p>Events that are pulled in over federation are assigned a negative 'stream ordering' ID. This is designed to avoid their being sent down the sync (where they would likely be out of sequence). In normal operation (accessing your homeserver via a Matrix client) these events would be appropriately filtered, but a bug in the data dump tooling caused them to be included.</p>
+<p>The bug was introduced as a result of two factors:</p>
+<ul>
+<li>The event filtering code assumes that the user is currently in the room - this was not intuitive, and was not called out in the documentation</li>
+<li>When we fetched the events from the database, we tried to limit to events sent before the user left the room. On reflection, we used the wrong ordering mechanism (stream ordering instead of topological ordering), resulting in the inclusion of events that were fetched from a remote server after the data subject had left</li>
+</ul>
+<p>We are working to fix the bug, and we'll update here when it is resolved. As a reminder, please do report security bugs responsibly as per the <a href="https://matrix.org/security-disclosure-policy/">Security Disclosure Policy</a> so we can validate the issue and mitigate abuse.</p>
+<p>As is standard practice for any data breach, we have notified the ICO.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;07&#x2F;19&#x2F;privacy-changes-to-new-vector-identity-servers&#x2F;" title="Privacy Changes to New Vector Identity Servers">Privacy Changes to New Vector Identity Servers</a></h2>
+                <span>
+                    19.07.2019 16:35
+                    —
+                    <a href="/category/privacy">
+                        Privacy
+                    </a>
+                    —
+                    <a
+                        href="/author/thomas-lant">
+                        Thomas Lant
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>As a step towards implementing Terms of Service for Sydent Identity Servers (<a href="https://github.com/matrix-org/matrix-doc/pull/2140">MSC2140</a>), we're rolling out a couple of changes to the two Identity Servers run by New Vector (running at vector.im and matrix.org):</p>
+<ol>
+<li>We have erased all of the data where there is any chance that the data subject didn't understand how, why or with whom their data was being shared.</li>
+<li>We've made a change to Sydent so that it no longer persists new associations relating to users on homeservers not run by New Vector.</li>
+</ol>
+<p>The impact of these changes is that users on homeservers not run by New Vector will no longer be discoverable by their email or telephone number via the Identity Servers running at vector.im and matrix.org. As we roll out the rest of the changes for Terms of Service for Identity Servers, this functionality will again be made available for users who make an informed choice to opt in.</p>
+<h2 id="registration-with-email-and-password-reset">Registration with Email and Password Reset</h2>
+<p>In the short term, the New Vector Identity Servers will continue to support registration with email (signing up with an email address as well as a matrix username) and password reset. However, as we continue to improve Identity Server data hygiene practices, we will phase out their use in registration with email and password reset entirely. We have already made the change to Synapse to support password reset without relying on an Identity Server (though this can optionally be re-enabled).</p>
+<p>Once Synapse can support registration with email without relying on an Identity Server <strong>we will announce a schedule for disabling registration with email and password reset in our Identity Servers entirely</strong>. After this point, homeserver administrators will have to make sure their homeservers are configured to send email to keep registration with email and password reset working. More details on this to follow - please watch this space.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2018&#x2F;05&#x2F;29&#x2F;matrix-org-homeserver-privacy-policy-and-terms-of-use-being-enforced-today&#x2F;" title="Matrix.org homeserver privacy policy and terms of use being enforced today">Matrix.org homeserver privacy policy and terms of use being enforced today</a></h2>
+                <span>
+                    29.05.2018 00:00
+                    —
+                    <a href="/category/privacy">
+                        Privacy
+                    </a>
+                    —
+                    <a
+                        href="/author/thomas-lant">
+                        Thomas Lant
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Hi all,</p>
+<p>As mentioned in our last <a href="/blog/2018/05/25/gdpr-on-matrix-org/">blog post on GDPR</a>, to make sure that everyone has read and understood the important details about how their personal data is processed by the matrix.org homeserver, users who haven't yet agreed to the <a href="/docs/guides/privacy_notice.html">privacy notice</a> and <a href="/docs/guides/terms_and_conditions.html">terms and conditions</a> will be blocked from sending new messages until they have.</p>
+<p>Users will continue to be able to <em>receive</em> messages, so they won't miss out on any messages sent to them before they've agreed to the terms.</p>
+<p>The System Alerts room has already sent every user their unique link to review and agree, and if anyone missed that message, the latest Riot.im web and mobile will display a helpful error message guiding users who are yet to agree through the agreement process.</p>
+<p>If you have any questions or difficulties, please let us know at <a href="mailto:support@matrix.org">support@matrix.org</a>.</p>
+<p>Thanks!</p>
+<p>Tom</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2018&#x2F;05&#x2F;25&#x2F;gdpr-on-matrix-org&#x2F;" title="GDPR on matrix.org">GDPR on matrix.org</a></h2>
+                <span>
+                    25.05.2018 00:00
+                    —
+                    <a href="/category/privacy">
+                        Privacy
+                    </a>
+                    —
+                    <a
+                        href="/author/thomas-lant">
+                        Thomas Lant
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>If you've connected to the matrix.org homeserver today, you'll have noticed some activity in support of GDPR compliance. The most obvious of these is an invite from <strong>System Alerts</strong> (aka @server:matrix.org):</p>
+<p><a href="/blog/wp-content/uploads/2018/05/system_alerts_invite.png"><img class="alignnone size-full wp-image-3247" src="/blog/wp-content/uploads/2018/05/system_alerts_invite.png" alt="" width="227" height="66" /></a></p>
+<p>We've rolled out the System Alerts feature to communicate important platform information to all of a homeserver's users. Today, we're using it to communicate the arrival of our new (and much-improved) <a href="/docs/guides/privacy_notice.html">Privacy Notice</a> and <a href="/docs/guides/terms_and_conditions.html">Terms and Conditions</a> to users on matrix.org.</p>
+<p>The System Alerts service takes the form of an (unrejectable) invite to a room. We took this approach to support maximum compatibility with the myriad Matrix clients (since all Matrix clients can support conversations in a room ?).</p>
+<p>When we first rolled out System Alerts, we didn't allow users leave the System Alerts room. Sorry! We got a bit overexcited - we've fixed that now (though please do provide your agreement before you leave).</p>
+<h2 id="what-do-i-need-to-do">What do I need to do?</h2>
+<p>At some point today the System Alerts service will provide you with unique link, directing you to review the new terms and provide your agreement.</p>
+<p>For us to process your personal data lawfully, it's <strong>really important</strong> that we know you understand and agree to our <a href="/docs/guides/privacy_notice.html">Privacy Notice</a> and <a href="/docs/guides/terms_and_conditions.html">Terms and Conditions</a>. For that reason, we will shortly be blocking any users who haven't indicated their acceptance, so please act quickly when you receive your link.</p>
+<p>Once the block is enabled, users who haven't accepted the terms will see an error when they try and send a message, join a room, or send an invite. This message will also include the unique link to review and accept the terms, so users who haven't seen the message from System Alerts will know what to do.</p>
+<p>Don't worry if you're reading this some time after May 25 - accepting the terms at any time will unblock message sending on your account, and you won't have missed any messages sent to you.</p>
+<p>If you have any thoughts or suggestions on the legal documentation, you can provide comment <a href="https://github.com/matrix-org/matrix.org/tree/master/jekyll/_posts/guides">via github</a>.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2017&#x2F;08&#x2F;30&#x2F;pr&#x2F;" title="PR">PR</a></h2>
+                <span>
+                    30.08.2017 00:00
+                    —
+                    <a href="/category/general">
+                        General
+                    </a>
+                    —
+                    <a
+                        href="/author/thomas-lant">
+                        Thomas Lant
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <h2 id="press-media-contact">Press/Media Contact</h2>
+<p>You can reach us by email at <a href="mailto:pr@matrix.org">pr@matrix.org</a>, or reach <a href="https://riot.im/develop/#/user/@matthew:matrix.org?action=chat">Matthew</a> or <a href="https://riot.im/develop/#/user/@amandine:matrix.org?action=chat">Amandine</a> on Matrix via Riot.im (or your favourite Matrix client).</p>
+<h2 id="who-is-matrix-org">Who is Matrix.org?</h2>
+<p>Matrix.org is the world leader in decentralised encrypted communication, with project lead Matthew Hodgson a regular speaker at conferences such as FOSDEM and decentralisation/privacy summits. In Sept 2016 Matrix released the world's first ever publicly audited end-to-end encryption “Olm”, based on the Double Ratchet Algorithm.</p>
+<p>Matrix core team is based in London (UK) and Rennes (France).</p>
+<h2 id="branding-identity">Branding Identity</h2>
+<p><a href="https://github.com/vector-im/logos/raw/master/matrix/matrix-logo.png"><img class="alignnone size-medium" src="https://github.com/vector-im/logos/raw/master/matrix/matrix-logo.png" width="300" /></a><em>Matrix logo, black on transparent background, PNG format (also available in <a href="https://github.com/vector-im/logos/raw/master/matrix/matrix-logo.svg">SVG</a>)</em></p>
+<span style="padding-left: 3px; padding-right: 3px; background: black; display: inline-block;">
+<a href="https://github.com/vector-im/logos/raw/master/matrix/matrix-logo-white.png"><img class="alignnone size-medium" src="https://github.com/vector-im/logos/raw/master/matrix/matrix-logo-white.png" width="300" /></a></span>
+<p><em>Matrix logo, white on transparent background, PNG format</em></p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2017&#x2F;07&#x2F;06&#x2F;synapse-0-22-0-released&#x2F;" title="Synapse 0.22.0 released!">Synapse 0.22.0 released!</a></h2>
+                <span>
+                    06.07.2017 00:00
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/thomas-lant">
+                        Thomas Lant
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Hi Synapsefans,</p>
+<p>Synapse 0.22.0 has just been released! This release lands a few interesting features:</p>
+<ul>
+ 	<li>The new User directory API which supports Matrix clients' providing a much more intuitive and effective user search capability by exposing a list of:
+<ul>
+ 	<li>Everybody your user shares a room with, and</li>
+ 	<li>Everybody in a public room your homeserver knows about</li>
+</ul>
+</li>
+ 	<li>New support for server admins, including a Shutdown Room API (to remove a room from a local server) and a Media Quarrantine API (to render a media item inaccessible without its actually being deleted)</li>
+</ul>
+As always there are lots of bug fixes and performance improvements, including increasing the default cache factor size from 0.1 to 0.5 (should improve performance for those running their own homeservers).
+<p>You can get Synapse 0.22.0 from <a href="https://github.com/matrix-org/synapse">https://github.com/matrix-org/synapse</a> or <a href="https://github.com/matrix-org/synapse/releases/tag/v0.22.0">https://github.com/matrix-org/synapse/releases/tag/v0.22.0</a> as normal.</p>
+<h2 id="changes-in-synapse-v0-22-0-2017-07-06">Changes in synapse v0.22.0 (2017-07-06)</h2>
+<p>No changes since v0.22.0-rc2</p>
+<h2 id="changes-in-synapse-v0-22-0-rc2-2017-07-04">Changes in synapse v0.22.0-rc2 (2017-07-04)</h2>
+<p>Changes:</p>
+<ul>
+ 	<li>Improve performance of storing user IPs (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2307" data-url="https://github.com/matrix-org/synapse/issues/2307" data-id="238837177" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2307</a>, <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2308" data-url="https://github.com/matrix-org/synapse/issues/2308" data-id="238864014" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2308</a>)</li>
+ 	<li>Slightly improve performance of verifying access tokens (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2320" data-url="https://github.com/matrix-org/synapse/issues/2320" data-id="239486219" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2320</a>)</li>
+ 	<li>Slightly improve performance of event persistence (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2321" data-url="https://github.com/matrix-org/synapse/issues/2321" data-id="239502265" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2321</a>)</li>
+ 	<li>Increase default cache factor size from 0.1 to 0.5 (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2330" data-url="https://github.com/matrix-org/synapse/issues/2330" data-id="240356521" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2330</a>)</li>
+</ul>
+Bug fixes:
+<ul>
+ 	<li>Fix bug with storing registration sessions that caused frequent CPU churn
+(PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2319" data-url="https://github.com/matrix-org/synapse/issues/2319" data-id="239472982" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2319</a>)</li>
+</ul>
+<h2 id="changes-in-synapse-v0-22-0-rc1-2017-06-26">Changes in synapse v0.22.0-rc1 (2017-06-26)</h2>
+<p>Features:</p>
+<ul>
+ 	<li>Add a user directory API (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2252" data-url="https://github.com/matrix-org/synapse/issues/2252" data-id="232602331" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2252</a>, and many more)</li>
+ 	<li>Add shutdown room API to remove room from local server (PR <a class="issue-link js-issue-link" title="Add shutdown room API" href="https://github.com/matrix-org/synapse/pull/2291" data-id="236863021" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2291</a>)</li>
+ 	<li>Add API to quarantine media (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2292" data-url="https://github.com/matrix-org/synapse/issues/2292" data-id="236951215" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2292</a>)</li>
+ 	<li>Add new config option to not send event contents to push servers (PR <a class="issue-link js-issue-link" title="Add configuration parameter to allow redaction of content from push m…" href="https://github.com/matrix-org/synapse/pull/2301" data-id="238111730" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2301</a>)
+Thanks to <a class="user-mention" href="https://github.com/cjdelisle">@cjdelisle</a>!</li>
+</ul>
+Changes:
+<ul>
+ 	<li>Various performance fixes (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2177" data-url="https://github.com/matrix-org/synapse/issues/2177" data-id="225644418" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2177</a>, <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2233" data-url="https://github.com/matrix-org/synapse/issues/2233" data-id="229717425" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2233</a>, <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2230" data-url="https://github.com/matrix-org/synapse/issues/2230" data-id="229354438" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2230</a>, <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2238" data-url="https://github.com/matrix-org/synapse/issues/2238" data-id="230015890" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2238</a>, <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2248" data-url="https://github.com/matrix-org/synapse/issues/2248" data-id="231384660" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2248</a>, <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2256" data-url="https://github.com/matrix-org/synapse/issues/2256" data-id="234157222" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2256</a>,
+<a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2274" data-url="https://github.com/matrix-org/synapse/issues/2274" data-id="235482780" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2274</a>)</li>
+ 	<li>Deduplicate sync filters (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2219" data-url="https://github.com/matrix-org/synapse/issues/2219" data-id="228004726" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2219</a>) Thanks to <a class="user-mention" href="https://github.com/krombel">@krombel</a>!</li>
+ 	<li>Correct a typo in UPGRADE.rst (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2231" data-url="https://github.com/matrix-org/synapse/issues/2231" data-id="229539435" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2231</a>) Thanks to <a class="user-mention" href="https://github.com/aaronraimist">@aaronraimist</a>!</li>
+ 	<li>Add count of one time keys to sync stream (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2237" data-url="https://github.com/matrix-org/synapse/issues/2237" data-id="229999204" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2237</a>)</li>
+ 	<li>Only store event_auth for state events (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2247" data-url="https://github.com/matrix-org/synapse/issues/2247" data-id="231038843" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2247</a>)</li>
+ 	<li>Store URL cache preview downloads separately (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2299" data-url="https://github.com/matrix-org/synapse/issues/2299" data-id="238100783" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2299</a>)</li>
+</ul>
+Bug fixes:
+<ul>
+ 	<li>Fix users not getting notifications when AS listened to that user_id (PR
+<a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2216" data-url="https://github.com/matrix-org/synapse/issues/2216" data-id="227919645" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2216</a>) Thanks to <a class="user-mention" href="https://github.com/slipeer">@slipeer</a>!</li>
+ 	<li>Fix users without push set up not getting notifications after joining rooms
+(PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2236" data-url="https://github.com/matrix-org/synapse/issues/2236" data-id="229977772" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2236</a>)</li>
+ 	<li>Fix preview url API to trim long descriptions (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2243" data-url="https://github.com/matrix-org/synapse/issues/2243" data-id="230506502" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2243</a>)</li>
+ 	<li>Fix bug where we used cached but unpersisted state group as prev group,
+resulting in broken state of restart (PR <a class="issue-link js-issue-link" href="https://github.com/matrix-org/synapse/pull/2263" data-url="https://github.com/matrix-org/synapse/issues/2263" data-id="234489302" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2263</a>)</li>
+ 	<li>Fix removing of pushers when using workers (PR <a class="issue-link js-issue-link" title="Fix removing of pushers when using workers" href="https://github.com/matrix-org/synapse/pull/2267" data-id="234785628" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2267</a>)</li>
+ 	<li>Fix CORS headers to allow Authorization header (PR <a class="issue-link js-issue-link" title="allow Authorization header" href="https://github.com/matrix-org/synapse/pull/2285" data-id="236427727" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#2285</a>) Thanks to <a class="user-mention" href="https://github.com/krombel">@krombel</a>!</li>
+</ul>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2017&#x2F;05&#x2F;18&#x2F;synapse-0-21-0-is-released&#x2F;" title="Synapse 0.21.0 is released!">Synapse 0.21.0 is released!</a></h2>
+                <span>
+                    18.05.2017 00:00
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/thomas-lant">
+                        Thomas Lant
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Hi all,</p>
+<p>Synapse 0.21.0 was released a moment ago. This release lands a number of performance improvements and stability fixes, plus a couple of small features.</p>
+<p>For those of you upgrading <a href="https://github.com/matrix-org/synapse">https://github.com/matrix-org/synapse</a> has the details as usual.  Full changelog follows:</p>
+<h2 id="changes-in-synapse-v0-21-0-2017-05-17">Changes in synapse v0.21.0 (2017-05-17)</h2>
+<p>Features:</p>
+<ul>
+ 	<li>Add per user rate-limiting overrides (PR <a href="https://github.com/matrix-org/synapse/pull/2208">#2208</a>)</li>
+ 	<li>Add config option to limit maximum number of events requested by <code>/sync</code> and <code>/messages</code> (PR <a href="https://github.com/matrix-org/synapse/pull/2221">#2221</a>) Thanks to @psaavedra!</li>
+</ul>
+Changes:
+<ul>
+ 	<li>Various small performance fixes (PR <a href="https://github.com/matrix-org/synapse/pull/2201">#2201</a>, <a href="https://github.com/matrix-org/synapse/pull/2202">#2202</a>, <a href="https://github.com/matrix-org/synapse/pull/2224">#2224</a>, <a href="https://github.com/matrix-org/synapse/pull/2226">#2226</a>, <a href="https://github.com/matrix-org/synapse/pull/2227">#2227</a>, <a href="https://github.com/matrix-org/synapse/pull/2228">#2228</a>, <a href="https://github.com/matrix-org/synapse/pull/2229">#2229</a>)</li>
+ 	<li>Update username availability checker API (PR <a href="https://github.com/matrix-org/synapse/pull/2209">#2209</a>, <a href="https://github.com/matrix-org/synapse/pull/2213">#2213</a>)</li>
+ 	<li>When purging, don't de-delta state groups we're about to delete (PR <a href="https://github.com/matrix-org/synapse/pull/2214">#2214</a>)</li>
+ 	<li>Documentation to check synapse version (PR <a href="https://github.com/matrix-org/synapse/pull/2215">#2215</a>) Thanks to @hamber-dick!</li>
+ 	<li>Add an index to event_search to speed up purge history API (PR <a href="https://github.com/matrix-org/synapse/pull/2218">#2218</a>)</li>
+</ul>
+Bug fixes:
+<ul>
+ 	<li>Fix API to allow clients to upload one-time-keys with new sigs (PR <a href="https://github.com/matrix-org/synapse/pull/2206">#2206</a>)</li>
+</ul>
+<a name="user-content-changes-in-synapse-v0-21-0-rc2-2017-05-08"></a>
+<h2 id="changes-in-synapse-v0-21-0-rc2-2017-05-08">Changes in synapse v0.21.0-rc2 (2017-05-08)</h2>
+<p>Changes:</p>
+<ul>
+ 	<li>Always mark remotes as up if we receive a signed request from them (PR <a href="https://github.com/matrix-org/synapse/pull/2190">#2190</a>)</li>
+</ul>
+Bug fixes:
+<ul>
+ 	<li>Fix bug where users got pushed for rooms they had muted (PR <a href="https://github.com/matrix-org/synapse/pull/2200">#2200</a>)</li>
+</ul>
+<a name="user-content-changes-in-synapse-v0-21-0-rc1-2017-05-08"></a>
+<h2 id="changes-in-synapse-v0-21-0-rc1-2017-05-08">Changes in synapse v0.21.0-rc1 (2017-05-08)</h2>
+<p>Features:</p>
+<ul>
+ 	<li>Add username availability checker API (PR <a href="https://github.com/matrix-org/synapse/pull/2183">#2183</a>)</li>
+ 	<li>Add read marker API (PR <a href="https://github.com/matrix-org/synapse/pull/2120">#2120</a>)</li>
+</ul>
+Changes:
+<ul>
+ 	<li>Enable guest access for the 3pl/3pid APIs (PR <a href="https://github.com/matrix-org/synapse/pull/1983">#1986</a>)</li>
+ 	<li>Add setting to support TURN for guests (PR <a href="https://github.com/matrix-org/synapse/pull/2011">#2011</a>)</li>
+ 	<li>Various performance improvements (PR <a href="https://github.com/matrix-org/synapse/pull/2075">#2075</a>, <a href="https://github.com/matrix-org/synapse/pull/2076">#2076</a>, <a href="https://github.com/matrix-org/synapse/pull/2080">#2080</a>, <a href="https://github.com/matrix-org/synapse/pull/2083">#2083</a>, <a href="https://github.com/matrix-org/synapse/pull/2108">#2108</a>, <a href="https://github.com/matrix-org/synapse/pull/2158">#2158</a>, <a href="https://github.com/matrix-org/synapse/pull/2176">#2176</a>, <a href="https://github.com/matrix-org/synapse/pull/2185">#2185</a>)</li>
+ 	<li>Make synctl a bit more user friendly (PR <a href="https://github.com/matrix-org/synapse/pull/2078">#2078</a>, <a href="https://github.com/matrix-org/synapse/pull/2127">#2127</a>) Thanks @APwhitehat!</li>
+ 	<li>Replace HTTP replication with TCP replication (PR <a href="https://github.com/matrix-org/synapse/pull/2082">#2082</a>, <a href="https://github.com/matrix-org/synapse/pull/2097">#2097</a>, <a href="https://github.com/matrix-org/synapse/pull/2098">#2098</a>, <a href="https://github.com/matrix-org/synapse/pull/2099">#2099</a>, <a href="https://github.com/matrix-org/synapse/pull/2103">#2103</a>, <a href="https://github.com/matrix-org/synapse/pull/2014">#2014</a>, <a href="https://github.com/matrix-org/synapse/pull/2016">#2016</a>, <a href="https://github.com/matrix-org/synapse/pull/2115">#2115</a>, <a href="https://github.com/matrix-org/synapse/pull/2116">#2116</a>, <a href="https://github.com/matrix-org/synapse/pull/2117">#2117</a>)</li>
+ 	<li>Support authenticated SMTP (PR <a href="https://github.com/matrix-org/synapse/pull/2102">#2102</a>) Thanks @DanielDent!</li>
+ 	<li>Add a counter metric for successfully-sent transactions (PR <a href="https://github.com/matrix-org/synapse/pull/2121">#2121</a>)</li>
+ 	<li>Propagate errors sensibly from proxied IS requests (PR <a href="https://github.com/matrix-org/synapse/pull/2147">#2147</a>)</li>
+ 	<li>Add more granular event send metrics (PR <a href="https://github.com/matrix-org/synapse/pull/2178">#2178</a>)</li>
+</ul>
+Bug fixes:
+<ul>
+ 	<li>Fix nuke-room script to work with current schema (PR <a href="https://github.com/matrix-org/synapse/pull/1927">#1927</a>) Thanks @zuckschwerdt!</li>
+ 	<li>Fix db port script to not assume postgres tables are in the public schema (PR <a href="https://github.com/matrix-org/synapse/pull/2024">#2024</a>) Thanks @jerrykan!</li>
+ 	<li>Fix getting latest device IP for user with no devices (PR <a href="https://github.com/matrix-org/synapse/pull/2118">#2118</a>)</li>
+ 	<li>Fix rejection of invites to unreachable servers (PR <a href="https://github.com/matrix-org/synapse/pull/2145">#2145</a>)</li>
+ 	<li>Fix code for reporting old verify keys in synapse (PR <a href="https://github.com/matrix-org/synapse/pull/2156">#2156</a>)</li>
+ 	<li>Fix invite state to always include all events (PR <a href="https://github.com/matrix-org/synapse/pull/2163">#2163</a>)</li>
+ 	<li>Fix bug where synapse would always fetch state for any missing event (PR <a href="https://github.com/matrix-org/synapse/pull/2170">#2170</a>)</li>
+ 	<li>Fix a leak with timed out HTTP connections (PR <a href="https://github.com/matrix-org/synapse/pull/2180">#2180</a>)</li>
+ 	<li>Fix bug where we didn't time out HTTP requests to ASes (PR <a href="https://github.com/matrix-org/synapse/pull/2192">#2192</a>)</li>
+</ul>
+Docs:
+<ul>
+ 	<li>Clarify doc for SQLite to PostgreSQL port (PR <a href="https://github.com/matrix-org/synapse/pull/1961">#1961</a>) Thanks @benhylau!</li>
+ 	<li>Fix typo in synctl help (PR <a href="https://github.com/matrix-org/synapse/pull/2107">#2107</a>) Thanks @HarHarLinks!</li>
+ 	<li><code>web_client_location</code> documentation fix (PR <a href="https://github.com/matrix-org/synapse/pull/2131">#2131</a>) Thanks @matthewjwolff!</li>
+ 	<li>Update README.rst with FreeBSD changes (PR <a href="https://github.com/matrix-org/synapse/pull/2132">#2132</a>) Thanks @feld!</li>
+ 	<li>Clarify setting up metrics (PR <a href="https://github.com/matrix-org/synapse/pull/2149">#2149</a>) Thanks @encks!</li>
+</ul>
+
+                
+            </div>
+        </article>
+        
+        <nav class="pagination">
+    <div class="prev">
+        
+    </div>
+    <span class="page-number">1 / 1</span>
+    <div class="prev">
+        
+    </div>
+</nav>
+
+    </div>
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

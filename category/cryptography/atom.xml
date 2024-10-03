@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - Cryptography</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/cryptography/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-08-27T14:00:00+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/cryptography/atom.xml</id>
+    
+    
+    
+<entry xml:lang="en">
+    <title>Libolm Deprecation</title>
+    <published>2024-08-27T14:00:00+00:00</published>
+    <updated>2024-08-27T14:00:00+00:00</updated>
+    <author>
+      <name>Neil Johnson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2024/08/libolm-deprecation/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2024/08/libolm-deprecation/</id>
+    <content type="html">&lt;p&gt;It’s been a few weeks since we announced the &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;matrix-org&#x2F;olm&#x2F;-&#x2F;blob&#x2F;master&#x2F;README.md?ref_type=heads#important-libolm-is-now-deprecated&quot;&gt;deprecation of libolm&lt;&#x2F;a&gt;. Since then, we’ve fielded some questions on the subject and thought it would be helpful to collect this context in a blog post.&lt;&#x2F;p&gt;
+&lt;p&gt;First up, a recap. We first introduced the idea that &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2022&#x2F;05&#x2F;16&#x2F;independent-public-audit-of-vodozemac-a-native-rust-reference-implementation-of-matrix-end-to-end-encryption&#x2F;&quot;&gt;libolm would make way for vodozemac&lt;&#x2F;a&gt; in 2022, following the &lt;a href=&quot;https:&#x2F;&#x2F;www.gematik.de&#x2F;&quot;&gt;Gematik&lt;&#x2F;a&gt; sponsored audit from &lt;a href=&quot;https:&#x2F;&#x2F;leastauthority.com&#x2F;&quot;&gt;Least Authority&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Since then, various client implementations have migrated to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;vodozemac&quot;&gt;vodozemac&lt;&#x2F;a&gt;. Notably, all versions of Element, Element X, Fractal, iamb and other &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-rust-sdk&quot;&gt;matrix-rust-sdk&lt;&#x2F;a&gt; based clients and their forks already use vodozemac, and platforms using matrix-js-sdk can also use vodozemac instead of libolm.&lt;&#x2F;p&gt;
+&lt;p&gt;In &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2024&#x2F;08&#x2F;02&#x2F;this-week-in-matrix-2024-08-02&#x2F;#vodozemac-website&quot;&gt;This Week in Matrix 2024-08-02&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;@matthew:matrix.org&quot;&gt;Matthew&lt;&#x2F;a&gt; formally announced the deprecation of libolm in favour of vodozemac.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Heads up that we have officially marked the original C&#x2F;C++ libolm implementation as deprecated, as warned back in &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2022&#x2F;05&#x2F;16&#x2F;independent-public-audit-of-vodozemac-a-native-rust-reference-implementation-of-matrix-end-to-end-encryption&#x2F;&quot;&gt;May 2022&lt;&#x2F;a&gt; when we announced the Rust vodozemac implementation as the successor to libolm. The rationale for doing so now is that all of the SDKs maintained by the core team at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&quot;&gt;github.com&#x2F;matrix-org&lt;&#x2F;a&gt; now support vodozemac, and the majority of apps built on top of them have now successfully switched over to vodozemac. Meanwhile, we simply don&#x27;t have bandwidth to maintain and support both vodozemac and libolm, so our maintenance will be focused on vodozemac going forwards. You can find the official deprecation notice &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;matrix-org&#x2F;olm&#x2F;-&#x2F;blob&#x2F;master&#x2F;README.md?ref_type=heads#important-libolm-is-now-deprecated&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Matthew then followed up in &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2024&#x2F;08&#x2F;16&#x2F;this-week-in-matrix-2024-08-16&#x2F;#dept-of-encryption-closed-lock-with-key&quot;&gt;This Week in Matrix 2024-08-16&lt;&#x2F;a&gt; in light of the coordinated disclosure by security researcher Soatok of &lt;a href=&quot;https:&#x2F;&#x2F;soatok.blog&#x2F;2024&#x2F;08&#x2F;14&#x2F;security-issues-in-matrixs-olm-library&#x2F;&quot;&gt;potential security weaknesses in libolm&lt;&#x2F;a&gt; underpinned by the primitives employed by the library.&lt;&#x2F;p&gt;
+&lt;p&gt;Quoting selectively:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We&#x27;re not aware of any way to actually exploit these weaknesses over the network, but we continue to strongly recommend developers to migrate to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;vodozemac&quot;&gt;vodozemac&lt;&#x2F;a&gt; (or fork libolm to add better primitives). We should have done a better job of explicitly deprecating libolm sooner (and&#x2F;or improving its primitives) – but all of our focus has been on ensuring that vodozemac is excellent, to the detriment of libolm. Apologies to those who are now finding themselves expediting libolm replacement.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;So what does this mean if you are building an app that has a dependency on libolm?&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;We have been public from the outset that that libolm&#x27;s primitives are functionally correct, but not resilient to timing attacks
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;olm&#x2F;issues&#x2F;3&quot;&gt;Repository issue&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;matrix-org&#x2F;olm&#x2F;-&#x2F;blob&#x2F;master&#x2F;lib&#x2F;crypto-algorithms&#x2F;README.md&quot;&gt;Project README&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2016&#x2F;11&#x2F;21&#x2F;matrix-s-olm-end-to-end-encryption-security-assessment-released-and-implemented-cross-platform-on-riot-at-last&#x2F;&quot;&gt;An audit from NCC Group&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;We do not believe this to be a high-severity issue for Matrix because an attack would require sending very large volumes of messages with very accurate timings targeting the same key material – while in practice Matrix implementations have short-lived AES key material (due to ratcheting), very noisy timings (due to traffic topology being client ↔ server ↔ server ↔ client, with persistence steps at each hop), as well as traffic rate-limiting. As a result, we do not believe that an attack over the network is feasible. It is possible that a local attack might work – but if the attacker has local access to your device, we consider you to already be compromised.&lt;&#x2F;li&gt;
+&lt;li&gt;Even though it is a theoretical rather than practical weakness, we still wanted to fix it. We chose to do so with the shift to vodozemac, which provides both first-class, audited cryptographic primitives provided by Rust, while also avoiding the possibility of an entire class of weaknesses, such as the &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;2021&#x2F;12&#x2F;13&#x2F;disclosure-buffer-overflow-in-libolm-and-matrix-js-sdk&#x2F;&quot;&gt;buffer overflows&lt;&#x2F;a&gt; previously found and mitigated in libolm.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We&#x27;ve deprecated libolm simply because we do not have the bandwidth to replace its primitives as well as maintain and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;vodozemac&#x2F;pull&#x2F;171&quot;&gt;evolve&lt;&#x2F;a&gt; vodozemac.&lt;&#x2F;p&gt;
+&lt;p&gt;Given the above, in the context of Matrix, libolm is currently safe to use in a practical sense (with the above caveats). However, we strongly encourage all app developers to chart a path away from libolm in favour of vodozemac.&lt;&#x2F;p&gt;
+&lt;p&gt;Additionally, we have registered three CVEs to track recently highlighted vulnerabilities.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nvd.nist.gov&#x2F;vuln&#x2F;detail&#x2F;CVE-2024-45191&quot;&gt;CVE-2024-45191 - AES implementation is vulnerable to cache-timing attacks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nvd.nist.gov&#x2F;vuln&#x2F;detail&#x2F;CVE-2024-45192&quot;&gt;CVE-2024-45192 - Base64 implementation used for decoding sensitive data has a timing side-channel&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nvd.nist.gov&#x2F;vuln&#x2F;detail&#x2F;CVE-2024-45193&quot;&gt;CVE-2024-45193 - Ed25519 signatures are malleable&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Note: The CVEs have since been edited post-submission to conflate libolm with the Olm protocol itself. A genuine protocol vulnerability would be much more serious so we are working with MITRE to clarify.&lt;&#x2F;p&gt;
+&lt;p&gt;The good news is that if you are building on matrix-rust-sdk or matrix-js-sdk they are already vodozemac backed. However, libolm is still a dependency of both libraries, and it is worth explaining why.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;matrix-rust-sdk&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;libolm is used only in testing and is not an operational dependency (it is used to check that &lt;code&gt;PkEncryption&lt;&#x2F;code&gt; in matrix-sdk-crypto is compatible with libolm&#x27;s). &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-rust-sdk&#x2F;pull&#x2F;3860&#x2F;files&quot;&gt;We have updated&lt;&#x2F;a&gt; its dependency specification to make this clearer. We do not intend to remove this dependency in the short term.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;matrix-js-sdk&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;libolm is referenced &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk&#x2F;blob&#x2F;c408c0d1d517eeac98c7ee11d99a6a8a874ecda5&#x2F;src&#x2F;crypto&#x2F;backup.ts#L666&quot;&gt;here&lt;&#x2F;a&gt;, as a hangover from recent work to migrate from libolm to vodozemac. This file will be &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;element-hq&#x2F;element-web&#x2F;issues&#x2F;26922&quot;&gt;removed&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Additionally, the legacy mobile SDKs, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-android-sdk2&quot;&gt;matrix-android-sdk2&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-sdk&quot;&gt;matrix-ios-sdk&lt;&#x2F;a&gt;, also have dependencies on libolm. It is used there for the following:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;To encrypt the bodies of the requests for the Element maintained &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;element-hq&#x2F;matrix-content-scanner-python&quot;&gt;content scanner&lt;&#x2F;a&gt; project. These references are unused in any publicly available application and will be removed.&lt;&#x2F;li&gt;
+&lt;li&gt;To support migration of users from legacy crypto to Rust crypto. Given the adoption of Rust crypto in March 2023 for iOS and July 2023 for Android we will remove this support in the near future, once we have confirmed that the vast majority of users have migrated.&lt;&#x2F;li&gt;
+&lt;li&gt;For unused legacy QR code log-in functionality in matrix-android-sdk2. This will be removed shortly.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;To conclude, we see the deprecation as a natural step in a multi-year process. In retrospect, we could&#x27;ve been a lot more explicit in explaining the context of the libolm deprecation and offer our apologies. Hopefully, this post makes things clearer.&lt;&#x2F;p&gt;
+&lt;p&gt;However, by formally deprecating libolm we make the direction of travel extremely clear and we recommend all projects adopt a vodozemac-backed solution promptly or alternatively fork libolm and upgrade the primitives.&lt;&#x2F;p&gt;
+&lt;p&gt;If you have any questions or concerns, please reach out to &lt;a href=&quot;mailto:security@matrix.org&quot;&gt;security@matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+</feed>
