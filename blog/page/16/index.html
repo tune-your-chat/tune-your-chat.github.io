@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;page&#x2F;16&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Blog" />
+    
+    
+    
+    <meta property="og:description" content="The Matrix.org Foundation blog is where the Matrix.org Foundation and Community
+post updates on their activity. Every Friday evening they publish This Week In
+Matrix, a digest of the past week activity.
+" />
+    <meta name="description" content="The Matrix.org Foundation blog is where the Matrix.org Foundation and Community
+post updates on their activity. Every Friday evening they publish This Week In
+Matrix, a digest of the past week activity.
+" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Blog</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        <div class="content">
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;10&#x2F;17&#x2F;synapse-1-69-released&#x2F;" title="Synapse 1.69 released">Synapse 1.69 released</a></h1>
+            <span>
+                17.10.2022 18:52
+                —
+                <a href="/category/releases">
+                    Releases
+                </a>
+                —
+                
+                <a href="/author/brendan-abolivier">
+                    Brendan Abolivier
+                </a>
+                
+            </span>
+            <br>
+            <small>Last update: 17.10.2022 18:07</small>
+        </header>
+        <div>
+            <p>Hey everyone, it's time for a new Synapse release! <a href="https://github.com/matrix-org/synapse/releases/tag/v1.69.0">Synapse
+1.69</a> is out, fresh
+out of the oven. But before we take a look at it, here's a quick announcement:</p>
+<blockquote>
+<p>We have recently disclosed a moderate severity security vulnerability, which
+was fixed in <a href="https://matrix.org/blog/2022/07/06/synapse-1-62-released/">Synapse
+1.62</a> (released on
+July 5th 2022). This issue affects all homeservers running a version of
+Synapse older than 1.62 with open federation. If this is the case for your
+deployment, please update to a more recent version of Synapse at your earliest
+convenience.</p>
+<p>See advisory
+<a href="https://github.com/matrix-org/synapse/security/advisories/GHSA-jhjh-776m-4765">GHSA-jhjh-776m-4765</a>
+and <a href="https://www.cve.org/CVERecord?id=CVE-2022-31152">CVE-2022-31152</a> for more
+information.</p>
+</blockquote>
+<p>Now let's see what's new in Synapse 1.69!</p>
+
+            <p><a href="/blog/2022/10/17/synapse-1-69-released/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;10&#x2F;14&#x2F;this-week-in-matrix-2022-10-14&#x2F;" title="This Week in Matrix 2022-10-14">This Week in Matrix 2022-10-14</a></h1>
+            <span>
+                14.10.2022 20:30
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/thib">
+                    Thib
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=UT6KSEqDUf8">https://youtube.com/watch?v=UT6KSEqDUf8</a></noscript>
+<youtube-player video-id="UT6KSEqDUf8"></youtube-player>
+
+            <p><a href="/blog/2022/10/14/this-week-in-matrix-2022-10-14/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;10&#x2F;07&#x2F;this-week-in-matrix-2022-10-07&#x2F;" title="This Week in Matrix 2022-10-07">This Week in Matrix 2022-10-07</a></h1>
+            <span>
+                07.10.2022 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/thib">
+                    Thib
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=o9na3Kj-Gj4">https://youtube.com/watch?v=o9na3Kj-Gj4</a></noscript>
+<youtube-player video-id="o9na3Kj-Gj4"></youtube-player>
+<p>Our guest for Matrix Live is Rich, to talk about how the Synapse team is hard at work to hunt those pesky spinners. Faster room joins now? Yes! But only for the brave!</p>
+
+            <p><a href="/blog/2022/10/07/this-week-in-matrix-2022-10-07/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;30&#x2F;this-week-in-matrix-2022-09-30&#x2F;" title="This Week in Matrix 2022-09-30">This Week in Matrix 2022-09-30</a></h1>
+            <span>
+                30.09.2022 00:00
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/thib">
+                    Thib
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=cJHlndIcgMM">https://youtube.com/watch?v=cJHlndIcgMM</a></noscript>
+<youtube-player video-id="cJHlndIcgMM"></youtube-player>
+
+            <p><a href="/blog/2022/09/30/this-week-in-matrix-2022-09-30/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;29&#x2F;matrix-v-1-4-release&#x2F;" title="Matrix v1.4 release">Matrix v1.4 release</a></h1>
+            <span>
+                29.09.2022 15:30
+                —
+                <a href="/category/releases">
+                    Releases
+                </a>
+                —
+                
+                <a href="/author/travis-ralston">
+                    Travis Ralston
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>Hey all,</p>
+<p>It’s finally here: <a href="https://spec.matrix.org/v1.4/client-server-api/#threading">threads</a>, <a href="https://spec.matrix.org/v1.4/client-server-api/#event-replacements">edits</a>, and <a href="https://spec.matrix.org/v1.4/client-server-api/#private-read-receipts">private read receipts</a>. v1.4 has been a little later than usual in the quarter because we wanted to make sure we nailed down all the core MSCs for threads before publishing the spec itself, but we’ve done that now and we’re excited about it.</p>
+
+            <p><a href="/blog/2022/09/29/matrix-v-1-4-release/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;28&#x2F;upgrade-now-to-address-encryption-vulns-in-matrix-sdks-and-clients&#x2F;" title="Upgrade now to address E2EE vulnerabilities in matrix-js-sdk, matrix-ios-sdk and matrix-android-sdk2">Upgrade now to address E2EE vulnerabilities in matrix-js-sdk, matrix-ios-sdk and matrix-android-sdk2</a></h1>
+            <span>
+                28.09.2022 17:41
+                —
+                <a href="/category/security">
+                    Security
+                </a>
+                —
+                
+                <a href="/author/matthew-hodgson">
+                    Matthew Hodgson
+                </a>, 
+                
+                <a href="/author/denis-kasak">
+                    Denis Kasak
+                </a>, 
+                
+                <a href="/author/matrix-cryptography-team">
+                    Matrix Cryptography Team
+                </a>, 
+                
+                <a href="/author/matrix-security-team">
+                    Matrix Security Team
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p><strong>TL;DR:</strong></p>
+<ul>
+<li>Two critical severity vulnerabilities in end-to-end encryption were found in
+the SDKs which power Element, Beeper, Cinny, SchildiChat, Circuli, Synod.im
+and any other clients based on matrix-js-sdk, matrix-ios-sdk or
+matrix-android-sdk2.</li>
+<li>These have now been fixed, and we have not seen evidence of them being
+exploited in the wild. All of the critical vulnerabilities require
+cooperation from a malicious homeserver to be exploited.</li>
+<li><strong>Please upgrade immediately in order to be protected against these
+vulnerabilities.</strong></li>
+<li>Clients with other encryption implementations (including Hydrogen, ElementX,
+Nheko, FluffyChat, Syphon, Timmy, Gomuks and Pantalaimon) are not affected;
+<strong>this is not a protocol bug</strong>.</li>
+<li>We take the security of our end-to-end encryption extremely seriously, and we
+have an ongoing series of public independent audits booked to help guard
+against future vulnerabilities.  We will also be making some protocol changes
+in the future to provide additional layers of protection.</li>
+<li>This resolves the <a href="https://matrix.org/blog/2022/09/23/pre-disclosure-upcoming-critical-security-release-of-matrix-sd-ks-and-clients">pre-disclosure</a> issued on September 23rd.</li>
+</ul>
+
+            <p><a href="/blog/2022/09/28/upgrade-now-to-address-encryption-vulns-in-matrix-sdks-and-clients/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;27&#x2F;announcing-third-room-tech-preview-1&#x2F;" title="Announcing Third Room Tech Preview 1">Announcing Third Room Tech Preview 1</a></h1>
+            <span>
+                27.09.2022 17:53
+                —
+                <a href="/category/releases">
+                    Releases
+                </a>
+                —
+                
+                <a href="/author/matthew-hodgson">
+                    Matthew Hodgson
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>We're excited to announce the first tech preview of <a href="https://thirdroom.io/">Third Room</a>, an open, standards-based, decentralised vision of the metaverse for the open Web, built entirely on Matrix… without cryptocurrencies, NFTs or walled gardens.</p>
+<p>To see what it's all about, head over to <a href="https://thirdroom.io/preview">https://thirdroom.io/preview</a> - or come chat in <a href="https://matrix.to/#/#thirdroom-dev:matrix.org">#thirdroom-dev:matrix.org</a> to learn more!</p>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=skC5TYRAgKE">https://youtube.com/watch?v=skC5TYRAgKE</a></noscript>
+<youtube-player video-id="skC5TYRAgKE"></youtube-player>
+
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;27&#x2F;synapse-1-68-released&#x2F;" title="Synapse 1.68 released">Synapse 1.68 released</a></h1>
+            <span>
+                27.09.2022 16:34
+                —
+                <a href="/category/releases">
+                    Releases
+                </a>
+                —
+                
+                <a href="/author/brendan-abolivier">
+                    Brendan Abolivier
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>Hey everyone, it's time for a new Synapse release! <a href="https://github.com/matrix-org/synapse/releases/tag/v1.68.0">Synapse
+1.68</a> just dropped,
+let's have a look at what's inside.</p>
+
+            <p><a href="/blog/2022/09/27/synapse-1-68-released/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;23&#x2F;this-week-in-matrix-2022-09-23&#x2F;" title="This Week in Matrix 2022-09-23">This Week in Matrix 2022-09-23</a></h1>
+            <span>
+                23.09.2022 19:09
+                —
+                <a href="/category/this-week-in-matrix">
+                    This Week in Matrix
+                </a>
+                —
+                
+                <a href="/author/thib">
+                    Thib
+                </a>
+                
+            </span>
+            <br>
+            <small>Last update: 23.09.2022 18:41</small>
+        </header>
+        <div>
+            <h2 id="matrix-live">Matrix Live</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=MwOh4NvPdtQ">https://youtube.com/watch?v=MwOh4NvPdtQ</a></noscript>
+<youtube-player video-id="MwOh4NvPdtQ"></youtube-player>
+
+            <p><a href="/blog/2022/09/23/this-week-in-matrix-2022-09-23/#continue-reading">Continue reading…</a></p>
+            
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;23&#x2F;pre-disclosure-upcoming-critical-security-release-of-matrix-sd-ks-and-clients&#x2F;" title="Pre-disclosure: upcoming critical security release of Matrix SDKs and clients">Pre-disclosure: upcoming critical security release of Matrix SDKs and clients</a></h1>
+            <span>
+                23.09.2022 14:53
+                —
+                <a href="/category/security">
+                    Security
+                </a>
+                —
+                
+                <a href="/author/matrix-security-team">
+                    Matrix Security Team
+                </a>
+                
+            </span>
+            
+        </header>
+        <div>
+            <p>We will be releasing a security update to matrix-js-sdk, matrix-ios-sdk and matrix-android-sdk2 and clients which implement end-to-end encryption with these libraries, to patch <strong>critical</strong> security issues, on <strong>Wed, Sept 28th</strong>. The releases will be published in the afternoon, followed by the disclosure blog post around 16:00 UTC. The affected clients include Element Web, Desktop, iOS and Android.  We will also be working with downstream packagers and forks over the coming days to ensure a synchronised release to address affected clients.</p>
+<p>Clients using matrix-rust-sdk, hydrogen-sdk and matrix-nio are not affected by these critical issues.  We are also auditing third-party client SDKs and clients in advance of the release, and will work with the projects if action is needed. So far we've confirmed that other popular SDK/clients including mtxclient (nheko), Matrix Dart SDK (FluffyChat), Trixnity (Timmy), Syphon, mautrix-go (Gomuks) and mautrix-python are not affected by the issues in question.</p>
+<p>If you maintain or package a (potentially) affected E2EE-capable Matrix client and need to coordinate on the release, please contact <a href="mailto:security@matrix.org">security@matrix.org</a>.</p>
+<p><strong>We advise to upgrade as soon as possible after the patched versions are released.</strong></p>
+<p>Thank you for your patience while we work to resolve this issue.</p>
+
+        </div>
+    </article>
+    
+    <nav class="pagination">
+    <div class="prev">
+        
+        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;page&#x2F;15&#x2F;">‹ Previous</a>
+        
+    </div>
+    <span class="page-number">16 / 79</span>
+    <div class="prev">
+        
+        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;page&#x2F;17&#x2F;">Next ›</a>
+        
+    </div>
+</nav>
+
+</div>
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

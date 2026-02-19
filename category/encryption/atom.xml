@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - Encryption</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/encryption/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-07-18T14:00:00+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/encryption/atom.xml</id>
+    
+    
+    
+<entry xml:lang="en">
+    <title>A giant leap forwards for encryption with MLS</title>
+    <published>2023-07-18T14:00:00+00:00</published>
+    <updated>2023-07-18T14:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson, Hubert Chathi</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2023/07/a-giant-leap-with-mls/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2023/07/a-giant-leap-with-mls/</id>
+    <content type="html">&lt;p&gt;Hi all,&lt;&#x2F;p&gt;
+&lt;p&gt;Given our commitment to open standards and interoperability, we’re delighted to see MLS be ratified by the IETF as &lt;a href=&quot;https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;rfc&#x2F;rfc9420&quot;&gt;RFC9420&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;MLS is a new encryption standard defined by the IETF, the standards body that maintains much of what makes the internet work. In the same way that Transport Layer Security (TLS, another IETF standard) defines the way to provide encryption between users and servers, or between two different servers, MLS provides a standard way for users of a messaging service to communicate securely without servers being able to eavesdrop on their conversations.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;Since Matrix is a proponent of open standards and secure communication, MLS is a great fit for us, and we were pleased to participate in the standardization process along with many other organizations. By being produced in the open, MLS was able to benefit from the experience and knowledge of a huge cross-industry group of individuals.&lt;&#x2F;p&gt;
+&lt;p&gt;Since the beta launch of end-to-end encryption in Matrix in 2016, we’ve been working on improving the end-to-end encryption experience for users while ensuring that conversations remain secure. End-to-end encryption is an important part in ensuring that people can communicate safely and securely with each other, whether it be about healthcare, financial, government, business, or personal information.&lt;&#x2F;p&gt;
+&lt;p&gt;MLS provides more opportunities for improving the security of conversations in Matrix, and offers those building on Matrix more flexibility. MLS is particularly useful for conversations with large numbers of participating users, thanks to algorithmic improvements over the Double Ratchet most systems use today. It also introduces new security guarantees, such as the ability for group members to cryptographically verify the recipients of a message.&lt;&#x2F;p&gt;
+&lt;p&gt;We have been working on integrating MLS into Matrix since 2020 to take advantage of its benefits; the biggest task has been developing approaches to enable MLS to operate in decentralised environments such as Matrix or the IETF’s &lt;a href=&quot;https:&#x2F;&#x2F;datatracker.ietf.org&#x2F;wg&#x2F;mimi&#x2F;about&#x2F;&quot;&gt;MIMI working group&lt;&#x2F;a&gt; for interoperable instant messaging.&lt;&#x2F;p&gt;
+&lt;p&gt;With other interested parties, we’re continuing to develop best practices for MLS that will work without modification in a decentralized environment which should be available for testing later this year.&lt;&#x2F;p&gt;
+&lt;p&gt;We should also highlight that much of the work to create and use MLS in a decentralized environment comes from a commercial arrangement between BWI and Element to create ‘Matrix over MLS’ for use by the German Armed Forces, to further secure its own solution BwMessenger and to make it interoperable with other messaging products.&lt;&#x2F;p&gt;
+&lt;p&gt;BWI’s funding of Element’s open source development of MLS has massively accelerated support for Matrix over MLS. It’s why commercial arrangements with vendors building on Matrix are so important for Element, who employs the majority of the Matrix core team. Matrix vendors can also now directly financially support The Matrix.org Foundation as paying members too.&lt;&#x2F;p&gt;
+&lt;p&gt;You can keep track of our progress at &lt;a href=&quot;https:&#x2F;&#x2F;arewemlsyet.com&quot;&gt;https:&#x2F;&#x2F;arewemlsyet.com&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;-- Matthew, Hubert &amp;amp; the Matrix cryptography team&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+</feed>

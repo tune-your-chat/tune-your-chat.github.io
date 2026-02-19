@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;author&#x2F;denis-kasak&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Matrix.org" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Denis Kasak</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://tune-your-chat.github.io/author/denis-kasak/atom.xml">
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            ">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<div id="taxonomy-single">
+    <div class="content">
+        <header>
+            <h1>Denis Kasak</h1>
+            7 posts tagged with "Denis Kasak" <a href="/author">(See all Author)</a>
+            
+        </header>
+
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;05&#x2F;24&#x2F;disclosing-synapse-security-advisories&#x2F;" title="Disclosing Synapse security advisories">Disclosing Synapse security advisories</a></h2>
+                <span>
+                    24.05.2023 13:44
+                    —
+                    <a href="/category/security">
+                        Security
+                    </a>
+                    —
+                    <a
+                        href="/author/denis-kasak">
+                        Denis Kasak
+                    </a>
+                </span>
+                <br>
+                <small>Last update: 24.05.2023 13:36</small>
+            </header>
+            <div>
+                
+                <p>Today we are retroactively publishing advisories for security bugs in <a href="https://github.com/matrix-org/synapse/">Synapse</a>. From oldest to most recent, they are:</p>
+<ul>
+<li><a href="https://github.com/matrix-org/synapse/security/advisories/GHSA-p9qp-c452-f9r7">GHSA-p9qp-c452-f9r7</a> (<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2022-39374">CVE-2022-39374</a>), fixed in Synapse 1.68.0 and affecting all prior versions since Synapse 1.62.0;</li>
+<li><a href="https://github.com/matrix-org/synapse/security/advisories/GHSA-45cj-f97f-ggwv">GHSA-45cj-f97f-ggwv</a> (<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2022-39335">CVE-2022-39335</a>), fixed in Synapse 1.69.0 and affecting all prior versions; and finally</li>
+<li><a href="https://github.com/matrix-org/synapse/security/advisories/GHSA-f3wc-3vxv-xmvr">GHSA-f3wc-3vxv-xmvr</a> (<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2023-32323">CVE-2023-32323</a>), fixed in Synapse 1.74.0 and affecting all prior versions.</li>
+</ul>
+<p>We strongly advise Synapse operators who are still on earlier Synapse versions to upgrade to the latest version (<a href="https://github.com/matrix-org/synapse/releases/tag/v1.84.0">v1.84.0</a>) or at the very least v1.74.0 (<a href="https://github.com/matrix-org/synapse/releases/tag/v1.74.0">released Dec 2022</a>), to prevent attacks based on these vulnerabilities. Please see the advisories for the full details, including a description of</p>
+<ul>
+<li>the vulnerability and potential attacks,</li>
+<li>exactly which deployments are vulnerable, and</li>
+<li>workarounds and mitigations.</li>
+</ul>
+<p>Because these bugs are either related to or exploitable over Matrix federation, we have delayed publishing these advisories until now out of caution. This allowed us to ensure that the majority of Synapse homeservers across the public federation have upgraded to a sufficiently patched version, based on the (opt-in) <a href="https://matrix-org.github.io/synapse/latest/usage/administration/monitoring/reporting_homeserver_usage_statistics.html">stats reporting</a> to the Matrix.org foundation.</p>
+<p>If you have any questions or comments about this announcement or any of the advisories, e-mail us at <a href="mailto:security@matrix.org">security@matrix.org</a>.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;03&#x2F;28&#x2F;security-releases-matrix-js-sdk-24-0-0-and-matrix-react-sdk-3-69-0&#x2F;" title="Security releases: matrix-js-sdk 24.0.0 and matrix-react-sdk 3.69.0">Security releases: matrix-js-sdk 24.0.0 and matrix-react-sdk 3.69.0</a></h2>
+                <span>
+                    28.03.2023 00:00
+                    —
+                    <a href="/category/releases">
+                        Releases
+                    </a>
+                    —
+                    <a
+                        href="/author/denis-kasak">
+                        Denis Kasak
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Today we are issuing security releases of matrix-js-sdk and matrix-react-sdk to
+patch a pair of High severity vulnerabilities
+(<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2023-28427">CVE-2023-28427</a>
+/ <a href="https://github.com/matrix-org/matrix-js-sdk/security/advisories/GHSA-mwq8-fjpf-c2gr">GHSA-mwq8-fjpf-c2gr</a>
+for matrix-js-sdk and
+<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2023-28103">CVE-2023-28103</a>
+/ <a href="https://github.com/matrix-org/matrix-react-sdk/security/advisories/GHSA-6g43-88cp-w5gv">GHSA-6g43-88cp-w5gv</a>
+for matrix-react-sdk).</p>
+<p>Affected clients include those which depend on the affected libraries, such as
+Element Web/Desktop and Cinny. Releases of the affected clients should follow
+shortly. We advise users of those clients to upgrade at their earliest
+convenience.</p>
+<p>The issues involve prototype pollution via events containing special strings in
+key locations, which can temporarily disrupt normal functioning of
+matrix-js-sdk and matrix-react-sdk, potentially impacting the consumer's
+ability to process data safely.</p>
+<p>Although we have only demonstrated a denial-of-service-style impact, we cannot
+completely rule out the possibility of a more severe impact due to the
+relatively extensive attack surface. We have therefore classified this as High
+severity and strongly recommend upgrading as a precautionary measure.</p>
+<p>We found these issues during a codebase audit that we had <a href="https://matrix.org/blog/2022/08/31/security-releases-matrix-js-sdk-19-4-0-and-matrix-react-sdk-3-53-0">previously
+announced</a>
+in an earlier security release of matrix-js-sdk and matrix-react-sdk. The
+earlier release had already addressed a set of similar vulnerabilities that
+were assigned
+<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE%2D2022%2D36059">CVE-2022-36059</a>
+/ <a href="https://github.com/matrix-org/matrix-js-sdk/security/advisories/GHSA-rfv9-x7hh-xc32">GHSA-rfv9-x7hh-xc32</a>
+and
+<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE%2D2022%2D36060">CVE-2022-36060</a>
+/ <a href="https://github.com/matrix-org/matrix-react-sdk/security/advisories/GHSA-2x9c-qwgf-94xr">GHSA-2x9c-qwgf-94xr</a>,
+which we had initially decided not to disclose until the completion of the
+audit. Now that the audit is finished, we are disclosing those previous
+advisories as well.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;28&#x2F;upgrade-now-to-address-encryption-vulns-in-matrix-sdks-and-clients&#x2F;" title="Upgrade now to address E2EE vulnerabilities in matrix-js-sdk, matrix-ios-sdk and matrix-android-sdk2">Upgrade now to address E2EE vulnerabilities in matrix-js-sdk, matrix-ios-sdk and matrix-android-sdk2</a></h2>
+                <span>
+                    28.09.2022 17:41
+                    —
+                    <a href="/category/security">
+                        Security
+                    </a>
+                    —
+                    <a
+                        href="/author/matthew-hodgson">
+                        Matthew Hodgson
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p><strong>TL;DR:</strong></p>
+<ul>
+<li>Two critical severity vulnerabilities in end-to-end encryption were found in
+the SDKs which power Element, Beeper, Cinny, SchildiChat, Circuli, Synod.im
+and any other clients based on matrix-js-sdk, matrix-ios-sdk or
+matrix-android-sdk2.</li>
+<li>These have now been fixed, and we have not seen evidence of them being
+exploited in the wild. All of the critical vulnerabilities require
+cooperation from a malicious homeserver to be exploited.</li>
+<li><strong>Please upgrade immediately in order to be protected against these
+vulnerabilities.</strong></li>
+<li>Clients with other encryption implementations (including Hydrogen, ElementX,
+Nheko, FluffyChat, Syphon, Timmy, Gomuks and Pantalaimon) are not affected;
+<strong>this is not a protocol bug</strong>.</li>
+<li>We take the security of our end-to-end encryption extremely seriously, and we
+have an ongoing series of public independent audits booked to help guard
+against future vulnerabilities.  We will also be making some protocol changes
+in the future to provide additional layers of protection.</li>
+<li>This resolves the <a href="https://matrix.org/blog/2022/09/23/pre-disclosure-upcoming-critical-security-release-of-matrix-sd-ks-and-clients">pre-disclosure</a> issued on September 23rd.</li>
+</ul>
+
+                <p><a href="/blog/2022/09/28/upgrade-now-to-address-encryption-vulns-in-matrix-sdks-and-clients/#continue-reading">Continue reading…</a></p>
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;09&#x2F;13&#x2F;security-release-of-matrix-appservice-irc-0-35-0-high-severity&#x2F;" title="Security release of matrix-appservice-irc 0.35.0 (High severity)">Security release of matrix-appservice-irc 0.35.0 (High severity)</a></h2>
+                <span>
+                    13.09.2022 16:56
+                    —
+                    <a href="/category/releases">
+                        Releases
+                    </a>
+                    —
+                    <a
+                        href="/author/denis-kasak">
+                        Denis Kasak
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>We've released a new version of matrix.org's node-irc 1.3.0 and
+matrix-appservice-irc 0.35.0, to patch several security issues:</p>
+<ul>
+<li>IRC mode operator confusion (Low, <a href="https://github.com/matrix-org/matrix-appservice-irc/security/advisories/GHSA-cq7q-5c67-w39w">GHSA-cq7q-5c67-w39w</a>)</li>
+<li>Parsing issue leading to room takeovers (High, <a href="https://github.com/matrix-org/matrix-appservice-irc/security/advisories/GHSA-xvqg-mv25-rwvw">GHSA-xvqg-mv25-rwvw</a>)</li>
+<li>Undisclosed issue (Moderate, <a href="https://github.com/matrix-org/matrix-appservice-irc/security/advisories/GHSA-r3p6-cg2c-c4qw">GHSA-r3p6-cg2c-c4qw</a>)</li>
+</ul>
+<p>The details of the final vulnerability will be released at a later date,
+pending an audit of the codebase to ensure it's not affected by other similar
+vulnerabilities.</p>
+<p>The vulnerabilities have been patched in node-irc version 1.3.0 and
+matrix-appservice-irc 0.35.0. You can get the release on
+<a href="https://github.com/matrix-org/matrix-appservice-irc/releases">Github</a>.</p>
+<p>The bridges running on the Libera Chat, OFTC and other networks bridged by the
+Matrix.org Foundation have been patched.</p>
+<p><strong>Please upgrade your IRC bridge as soon as possible.</strong></p>
+<p>The above vulnerabilities were reported by <a href="https://valentin-lorentz.fr/">Val
+Lorentz</a>. Thank you!</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;08&#x2F;31&#x2F;security-releases-matrix-js-sdk-19-4-0-and-matrix-react-sdk-3-53-0&#x2F;" title="Security releases: matrix-js-sdk 19.4.0 and matrix-react-sdk 3.53.0">Security releases: matrix-js-sdk 19.4.0 and matrix-react-sdk 3.53.0</a></h2>
+                <span>
+                    31.08.2022 18:13
+                    —
+                    <a href="/category/releases">
+                        Releases
+                    </a>
+                    —
+                    <a
+                        href="/author/denis-kasak">
+                        Denis Kasak
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Today we are issuing security releases of matrix-js-sdk and matrix-react-sdk to
+patch a couple of High severity vulnerabilities (reserved as
+<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE%2D2022%2D36059">CVE-2022-36059</a>
+for the matrix-js-sdk and
+<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE%2D2022%2D36060">CVE-2022-36060</a>
+for the matrix-react-sdk).</p>
+<p>Affected clients include those which depend on the affected libraries, such as
+Element Web/Desktop and Cinny. Releases of the affected clients will follow
+shortly. We advise users of those clients to upgrade at their earliest
+convenience.</p>
+<p>The vulnerabilities give an adversary who you share a room with the ability to
+carry out a denial-of-service attack against the affected clients, making it
+not show all of a user's rooms or spaces and/or causing minor temporary
+corruption.</p>
+<p>The full vulnerability details will be disclosed at a later date, to give
+people time to upgrade and us to perform a more thorough audit of the codebase.</p>
+<p>Note that while the vulnerability was to our knowledge never exploited
+maliciously, some unintentional public testing has left some people affected by
+the bug. We made a best effort to sanitize this to stop the breakage. If you
+are affected, you may still need to clear the cache and reload your Matrix
+client for it to take effect.</p>
+<p>We thank <a href="https://valentin-lorentz.fr/">Val Lorentz</a> who discovered and
+reported the vulnerability over the weekend.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2021&#x2F;09&#x2F;13&#x2F;vulnerability-disclosure-key-sharing&#x2F;" title="Disclosing CVE-2021-40823 and CVE-2021-40824: E2EE vulnerability in multiple Matrix clients">Disclosing CVE-2021-40823 and CVE-2021-40824: E2EE vulnerability in multiple Matrix clients</a></h2>
+                <span>
+                    13.09.2021 17:29
+                    —
+                    <a href="/category/security">
+                        Security
+                    </a>
+                    —
+                    <a
+                        href="/author/denis-kasak">
+                        Denis Kasak
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Today we are disclosing a critical security issue affecting multiple Matrix clients and libraries including <a href="https://element.io/">Element</a> (Web/Desktop/Android), <a href="https://fluffychat.im/">FluffyChat</a>, <a href="https://nheko-reborn.github.io/">Nheko</a>, <a href="https://cinny.in/">Cinny</a>, and <a href="https://schildi.chat/">SchildiChat</a>. Element on iOS is not affected.</p>
+<p>Specifically, in certain circumstances it may be possible to trick vulnerable clients into disclosing encryption keys for messages previously sent by that client to user accounts later compromised by an attacker.</p>
+<p>Exploiting this vulnerability to read encrypted messages requires gaining control over the recipient’s account. This requires either compromising their credentials directly or compromising their homeserver.</p>
+<p>Thus, the greatest risk is to users who are in encrypted rooms containing malicious servers. Admins of malicious servers could attempt to impersonate their users' devices in order to spy on messages sent by vulnerable clients in that room.</p>
+<p>This is not a vulnerability in the Matrix or Olm/Megolm protocols, nor the libolm implementation. It is an implementation bug in certain Matrix clients and SDKs which support end-to-end encryption (“E2EE”).</p>
+<p><strong>We have no evidence of the vulnerability being exploited in the wild</strong>.</p>
+<p>This issue was discovered during an internal audit by Denis Kasak, a security researcher at Element.</p>
+<h2 id="remediation-and-detection">Remediation and Detection</h2>
+<p>Patched versions of affected clients are available now; please upgrade as soon as possible — we apologise sincerely for the inconvenience. If you are unable to upgrade, consider keeping vulnerable clients offline until you can. If vulnerable clients are offline, they cannot be tricked into disclosing keys. They may safely return online once updated.</p>
+<p>Unfortunately, it is difficult or impossible to retroactively identify instances of this attack with standard logging levels present on both clients and servers. However, as the attack requires account compromise, homeserver administrators may wish to review their authentication logs for any indications of inappropriate access.</p>
+<p>Similarly, users should review the list of devices connected to their account with an eye toward missing, untrusted, or non-functioning devices. Because an attacker must impersonate an existing or historical device, exploiting this vulnerability would either break an existing login on the user’s account, or a historical device would be re-added and flagged as untrusted.</p>
+<p>Lastly, if you have previously verified the users / devices in a room, you would witness the safety shield on the room turn red during the attack, indicating the presence of an untrusted and potentially malicious device.</p>
+<h2 id="affected-software">Affected Software</h2>
+<p>Given the severity of this issue, Element attempted to review all known encryption-capable Matrix clients and libraries so that patches could be prepared prior to public disclosure.</p>
+<p>Known <strong>vulnerable</strong> software:</p>
+<ul>
+<li><strong><a href="https://github.com/matrix-org/matrix-js-sdk">matrix-js-sdk</a> &lt; 12.4.1</strong> (<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-40823">CVE-2021-40823</a>), including:
+<ul>
+<li><a href="https://element.io/">Element</a> Web / Desktop &lt; 1.8.3</li>
+<li><a href="https://schildi.chat/">SchildiChat</a> (Web / Desktop) ≤ 1.7.32-sc1</li>
+<li><a href="https://cinny.in/">Cinny</a> &lt; 1.2.1</li>
+</ul>
+</li>
+<li><strong><a href="https://github.com/matrix-org/matrix-android-sdk2">matrix-android-sdk2</a> &lt; 1.2.2</strong> (<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-40824">CVE-2021-40824</a>), including:
+<ul>
+<li><a href="https://element.io/">Element</a> (Android) &lt; 1.2.2</li>
+<li><a href="https://schildi.chat/">SchildiChat</a> (Android) &lt; 1.2.2.sc43</li>
+</ul>
+</li>
+<li><strong><a href="https://github.com/matrix-org/matrix-rust-sdk">matrix-rust-sdk</a> &lt; 0.4.0:</strong>
+<ul>
+<li><a href="https://gitlab.gnome.org/GNOME/fractal/-/tree/fractal-next">fractal-next</a> is <strong>not vulnerable</strong> due to depending on a recent enough commit.</li>
+<li><a href="https://github.com/poljar/weechat-matrix-rs/">weechat-matrix-rs</a>, a rewrite of the original weechat-matrix script, had no tagged releases, but some commits did depend on vulnerable versions of the matrix-rust-sdk. Users should ensure to update to the latest master of weechat-matrix-rs, presently <a href="https://github.com/poljar/weechat-matrix-rs/commit/2b093a7ff1c75650467d61335b90e4a6ce1fa210">2b093a7</a>.</li>
+</ul>
+</li>
+<li><strong><a href="https://github.com/famedly/matrix-dart-sdk">FamedlySDK</a> &lt; 0.5.0</strong>, including:
+<ul>
+<li>Famedly &lt; 0.45.0</li>
+<li><a href="https://fluffychat.im/">FluffyChat</a> &lt; 0.40.0</li>
+</ul>
+</li>
+<li><strong><a href="https://nheko-reborn.github.io/">Nheko</a> ≤ 0.8.2</strong></li>
+</ul>
+<p>We believe the following software is <strong>not vulnerable:</strong></p>
+<ul>
+<li><strong><a href="https://github.com/matrix-org/matrix-android-sdk">matrix-android-sdk</a></strong> (deprecated!)</li>
+<li><strong><a href="https://github.com/matrix-org/matrix-ios-sdk">matrix-ios-sdk</a></strong></li>
+<li><strong><a href="https://github.com/poljar/matrix-nio">matrix-nio</a></strong>, including its use in<a href="https://github.com/matrix-org/pantalaimon"> Pantalaimon</a> and <a href="https://github.com/poljar/weechat-matrix">weechat-matrix</a>.</li>
+</ul>
+<p>We believe the following are <strong>not vulnerable</strong> due to not implementing key sharing:</p>
+<ul>
+<li><strong><a href="https://source.puri.sm/Librem5/chatty/-/tree/master/src/matrix">Chatty</a></strong></li>
+<li><strong><a href="https://github.com/vector-im/hydrogen-web/tree/master/src/matrix">Hydrogen</a></strong></li>
+<li><strong><a href="https://github.com/mautrix/go">mautrix</a></strong></li>
+<li><strong><a href="https://github.com/matrix-org/purple-matrix">purple-matrix</a></strong></li>
+<li><strong><a href="https://github.com/syphon-org/syphon">Syphon</a></strong></li>
+</ul>
+<h2 id="background">Background</h2>
+<p>Matrix supports the concept of “key sharing”, letting a Matrix client which lacks the keys to decrypt a message request those keys from that user's other devices or the original sender's device.</p>
+<p>This was a feature added in 2016 in order to address edge cases where a newly logged-in device might not have the necessary keys to decrypt historical messages.  Specifically, if other devices in the room are unaware of the new device due to a network partition, they have no way to encrypt for it—meaning that the only way the new device will be able to decrypt history is if the recipient's other devices share the necessary keys with it.</p>
+<p>Other situations where key sharing is desirable include when the recipient hasn't backed up their keys (either online or offline) and needs them to decrypt history on a new login, or when facing implementation bugs which prevent clients from sending keys correctly. Requesting keys from a user's other devices sidesteps these issues.</p>
+<p>Key sharing is described <a href="https://matrix.org/docs/guides/end-to-end-encryption-implementation-guide#key-sharing">here</a> in the Matrix E2EE Implementation Guide, which contains the following paragraph:</p>
+<blockquote>
+<p>In order to securely implement key sharing, clients must not reply to every key request they receive. The recommended strategy is to share the keys automatically only to verified devices of the same user.</p>
+</blockquote>
+<p>This is the approach taken in the original implementation in matrix-js-sdk, as used in Element Web and others, with the extension of also letting the sending device service keyshare requests from recipient devices.  Unfortunately, the implementation did not sufficiently verify the identity of the device requesting the keyshare, meaning that a compromised account can impersonate the device requesting the keys, creating this vulnerability.</p>
+<p>This is not a protocol or specification bug, but an implementation bug which was then unfortunately replicated in other independent implementations.</p>
+<p>While we believe we have identified and contacted all affected E2EE client implementations: if your client implements key sharing requests, we strongly recommend you check that you cryptographically verify the identity of the device which originated the key sharing request.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>The fact that this vulnerability was independently introduced so many times is a clear signal that the current wording in the Matrix Spec and the E2EE Implementation Guide is insufficient. We will thoroughly review the related documentation and revise it with clear guidelines on safely implementing key sharing.</p>
+<p>Going further, we will also consider whether key sharing is still a necessary part of the Matrix protocol. If it is not, we will remove it. As discussed above, key sharing was originally introduced to make E2EE more reliable while we were ironing out its many edge cases and failure modes. Meanwhile, implementations have become much more robust, to the point that we may be able to go without key sharing completely. We will also consider changing how we present situations in which you cannot decrypt messages because the original sender was not aware of your presence. For example, undecryptable messages could be filed in a separate conversation thread, or those messages could require that keys are shared manually, effectively turning a bug into a feature.</p>
+<p>We will also accelerate our work on matrix-rust-sdk as a portable reference implementation of the Matrix protocol, avoiding the implicit requirement that each independent library must necessarily reimplement this logic on its own. This will have the effect of reducing attack surface and simplifying audits for software which chooses to use matrix-rust-sdk.</p>
+<p>Finally, we apologise to the wider Matrix community for the inconvenience and disruption of this issue.  While Element discovered this vulnerability during an internal audit of E2EE implementations, we will be funding an independent end-to-end audit of the reference Matrix E2EE implementations (not just Olm + libolm) in the near future to help mitigate the risk from any future vulnerabilities. The results of this audit will be made publicly available.</p>
+<h2 id="timeline">Timeline</h2>
+<p>Ultimately, Element took two weeks from initial discovery to completing an audit of all known, public E2EE implementations. It took a further week to coordinate disclosure, culminating in today's announcement.</p>
+<ul>
+<li>Monday, 23rd August — Discovery that Element Web is exploitable.</li>
+<li>Thursday, 26th August — Determination that Element Android is exploitable with a modified attack.</li>
+<li>Wednesday, 1 September — Determination that Element iOS fails safe in the presence of device changes.</li>
+<li>Friday, 3 September — Determination that FluffyChat and Nheko are exploitable.</li>
+<li>Tuesday, 7th September — Audit of Matrix clients and libraries complete.</li>
+<li>Wednesday, 8th September — Affected software authors contacted, disclosure timelines agreed.</li>
+<li>Friday, 10th September —<a href="https://matrix.org/blog/2021/09/10/pre-disclosure-upcoming-critical-fix-for-several-popular-matrix-clients"> Public pre-disclosure notification</a>. Downstream packagers (e.g., Linux distributions) notified via Matrix and e-mail.</li>
+<li>Monday, 13th September — Coordinated releases of all affected software, public disclosure.</li>
+</ul>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2021&#x2F;06&#x2F;14&#x2F;adventures-in-fuzzing-libolm&#x2F;" title="Adventures in fuzzing libolm">Adventures in fuzzing libolm</a></h2>
+                <span>
+                    14.06.2021 00:00
+                    —
+                    <a href="/category/security">
+                        Security
+                    </a>
+                    —
+                    <a
+                        href="/author/denis-kasak">
+                        Denis Kasak
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <h2 id="introduction">Introduction</h2>
+<p>Hi all! My name is Denis and I'm a <a href="https://dkasak.github.io/">security
+researcher</a>. Six months ago, I started working for
+Element on doing dedicated security research on important Matrix projects.
+After some initial focus on Synapse, I decided to take a closer look at
+<a href="https://gitlab.matrix.org/matrix-org/olm">libolm</a>. In this entry, I'd like to
+present an overview of that work, along with some early fruits that came out of
+it.</p>
+<p><strong>TL;DR: we found some bugs which had crept in since libolm's original audit in
+2016, thanks to properly overhauling our fuzzing capability, and we'd like to
+tell you all about it! The bugs were not easily exploitable (if at all), and
+have already been fixed.</strong></p>
+<p><strong>Update:
+<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34813">CVE-2021-34813</a>
+has now been assigned to this.</strong></p>
+<p>To give a bit of a background, libolm is a cryptographic library implementing
+the <a href="https://en.wikipedia.org/wiki/Double_Ratchet_Algorithm">Double Ratchet
+Algorithm</a> pioneered by
+Signal and it is the cryptographic workhorse behind Matrix. The classic
+algorithm is called Olm in Matrix land, but libolm also implements Megolm which
+is a variant for efficient encrypted group chats between many participants.</p>
+<p>Since libolm is currently used in all Matrix clients supporting end-to-end
+encryption, it makes for a particularly juicy target. The present state of
+libolm's monopoly on Matrix encryption is somewhat unfortunate -- luckily there
+are some exciting new developments on the horizon, such as the
+<a href="https://github.com/matrix-org/matrix-rust-sdk/tree/vodozemac-bench">vodozemac</a>
+implementation in Rust. But for now, we're stuck with libolm.</p>
+<p>To start, I decided to do a bit of fuzzing. libolm already had a fuzzing setup
+using AFL, but it was written a while ago. The state of the art in fuzzing had
+advanced quite rapidly in the last few years, so the setup was missing many
+modern features and techniques. As an example, the fuzzing setup was configured
+to use the now ancient afl-gcc coverage mode, which can be slower than the more
+modern LLVM-based coverage by a factor of 2.</p>
+<p>I also noticed that the fuzzing was done with non-hardened binaries (instead of
+using something like ASAN), so many memory errors could've gone unnoticed.
+There were also no corpora available from previous fuzzing runs and some of the
+newer code was not covered by the harnesses.</p>
+<h2 id="preparation">Preparation</h2>
+<p>I decided to tackle these one by one, adding ASAN and MSAN builds as a first
+step. I took the opportunity to switch to <a href="https://aflplus.plus/">AFL++</a> since
+it is a drop-in replacement and contains numerous improvements, notably
+improved coverage modes which are either much faster (e.g. LLVM-PCGUARD) or
+guaranteed to have no collisions (LTO)<sup class="footnote-reference"><a href="#1">1</a></sup>. AFL++ also optimizes mutation
+scheduling (by using scheduling algorithms from
+<a href="https://github.com/mboehme/aflfast">AFLFast</a>) and mutation operator selection
+(through <a href="https://github.com/puppet-meteor/MOpt-AFL">MOpt</a>). All of this makes
+it much more efficient at discovering bugs.</p>
+<p>After this, I changed the existing harnesses to use AFL's persistent mode
+(which lowers process creation overhead and thus increases fuzzing
+performance). This change, combined with the switch to a newer coverage mode,
+increased the fuzzing exec/s from ~2.5k to ~5.5k on my machine, so this is not
+an insignificant gain!</p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>In the context of fuzzing, collisions are situations where
+two different execution paths appear to the fuzzer as the same one due to
+technical limitations.
+Classically, AFL tracks coverage by tracking so-called "edges" (or "tuples").
+Edges are really pairs of (A, B), where A and B represent basic blocks. Each
+edge is meant to represent a different execution "jump", but sometimes, as
+the number of basic blocks in a program grows, two different execution paths
+can end up being encoded as the same edge. LTO mode in AFL++ does some magic
+so that this is guaranteed not to happen.</p>
+</div>
+<p>After this preparatory work, I generated a small initial corpus and ran a small
+fleet of fuzzers with varying parameters. Almost immediately, I started getting
+heaps of crashes. Luckily, after some investigation, these turned out not to be
+serious bugs in the library but a double-free in the fuzzing harness! The
+double-free only got triggered when the input was of size 0. It also only
+happened with AFL++ and not vanilla AFL, presumably due to differences in input
+trimming logic, which must be the reason no one noticed this earlier. I quickly
+came up with a patch and resumed.</p>
+<h2 id="the-plot-thickens">The plot thickens</h2>
+<p>I let the fuzzers run for a while. Since ASAN introduces a bit of a performance
+overhead, I only run a single AFL instance with ASAN variant of the binary.
+This is okay because all fuzzer instances actually synchronize their findings,
+which means every instance gets to see every input which increases coverage.
+When I came back to check, there was another crash waiting. This time the
+crashing input wasn't being generated continually so it looked much more
+promising -- and only the ASAN instance was crashing. <em>A-ha</em>!</p>
+<p>Running the offending input on the ASAN variant of the harness revealed it was
+an invalid read one byte past the end of a heap buffer. The read was happening
+in the base64 decoder:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>❮ ./build/fuzzers/fuzz_group_decrypt_asan &quot;&quot; pickled-inbound-group-session.txt &lt;input
+</span><span>=================================================================
+</span><span>==1838065==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xf4a00795 at pc 0x56560660 bp 0xffff9df8 sp 0xffff9de8
+</span><span>READ of size 1 at 0xf4a00795 thread T0
+</span><span>    #0 0x5656065f in olm::decode_base64(unsigned char const*, unsigned int, unsigned char*) src/base64.cpp:124
+</span><span>    #1 0x565607b5 in _olm_decode_base64 src/base64.cpp:165
+</span><span>    #2 0x565d5a9e in olm_group_decrypt_max_plaintext_length src/inbound_group_session.c:304
+</span><span>    #3 0x56558e75 in main fuzzers/fuzz_group_decrypt.cpp:46
+</span><span>    #4 0xf7509a0c in __libc_start_main (/usr/lib32/libc.so.6+0x1ea0c)
+</span><span>    #5 0x5655a0f4 in _start (/home/dkasak/code/olm/build/fuzzers/fuzz_group_decrypt_asan+0x50f4)
+</span><span>
+</span><span>0xf4a00795 is located 0 bytes to the right of 5-byte region [0xf4a00790,0xf4a00795)
+</span><span>allocated by thread T0 here:
+</span><span>    #0 0xf7a985c5 in __interceptor_malloc /build/gcc/src/gcc/libsanitizer/asan/asan_malloc_linux.cpp:145
+</span><span>    #1 0x56558ce3 in main fuzzers/fuzz_group_decrypt.cpp:32
+</span><span>    #2 0xf7509a0c in __libc_start_main (/usr/lib32/libc.so.6+0x1ea0c)
+</span><span>
+</span><span>SUMMARY: AddressSanitizer: heap-buffer-overflow src/base64.cpp:124 in olm::decode_base64(unsigned char const*, unsigned int, unsigned char*)
+</span><span>Shadow bytes around the buggy address:
+</span><span>  0x3e9400a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+</span><span>  0x3e9400b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+</span><span>  0x3e9400c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+</span><span>  0x3e9400d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+</span><span>  0x3e9400e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+</span><span>=&gt;0x3e9400f0: fa fa[05]fa fa fa 05 fa fa fa fa fa fa fa fa fa
+</span><span>  0x3e940100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+</span><span>  0x3e940110: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+</span><span>  0x3e940120: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+</span><span>  0x3e940130: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+</span><span>  0x3e940140: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+</span><span>Shadow byte legend (one shadow byte represents 8 application bytes):
+</span><span>  Addressable:           00
+</span><span>  Partially addressable: 01 02 03 04 05 06 07 
+</span><span>  Heap left redzone:       fa
+</span><span>  Freed heap region:       fd
+</span><span>  Stack left redzone:      f1
+</span><span>  Stack mid redzone:       f2
+</span><span>  Stack right redzone:     f3
+</span><span>  Stack after return:      f5
+</span><span>  Stack use after scope:   f8
+</span><span>  Global redzone:          f9
+</span><span>  Global init order:       f6
+</span><span>  Poisoned by user:        f7
+</span><span>  Container overflow:      fc
+</span><span>  Array cookie:            ac
+</span><span>  Intra object redzone:    bb
+</span><span>  ASan internal:           fe
+</span><span>  Left alloca redzone:     ca
+</span><span>  Right alloca redzone:    cb
+</span><span>  Shadow gap:              cc
+</span><span>==1838065==ABORTING
+</span></code></pre>
+<p>Following the stack trace, I quickly pinpointed the root of the bug: the logic
+of the decoder was subtly flawed, unconditionally accessing a remainder
+byte<sup class="footnote-reference"><a href="#2">2</a></sup> in the base64 input which might not actually be there.
+This occurs when the input is 1 (mod 4) in length, which can never happen in
+a <em>valid</em> base64 payload, but of course we cannot assume all inputs are
+necessarily valid payloads. Specifically, if the payload was not 0 (mod 4) in
+length, the code was assuming it was at least 2 (mod 4) or more in length and
+immediately read the second byte. This spurious byte was then incorporated into
+the output value.</p>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>By <em>remainder byte</em>, I mean bytes which are not part of
+a group of 4. These can only occur at the end of a base64 payload and they're
+the ones that get suffixed with padding in padded base64.</p>
+</div>
+<p>I examined the code in an attempt to find a way to have it leak more than
+a single byte, but it was impossible. As it turned out, not even the full byte
+of useful information was encoded into the output -- due to the way the byte is
+encoded, only about 6 bits of useful information ended up in the output value.</p>
+<p>Still, even a single leaked bit is too much in a cryptographic context. Could
+we do some heap hacking so that something of interest is placed there and then
+have it be leaked to us?</p>
+<p>I next tracked down all call sites of the vulnerable function
+<code>olm::decode_base64</code>. Most of them were immune to the problem since they were
+preceded with calls to another function, <code>olm::decode_base64_length</code>, which
+checks that the base64 payload is of legal length. This left me with only a few
+potentially vulnerable call sites, so I examined where their base64 inputs come
+from. Promisingly, two of them received input from other conversation
+participants, but they either had no way of leaking the information back to the
+attacker or they hardcoded the number of bytes to be processed, after ensuring
+the input was of some minimum length. The output of the remaining function
+<a href="https://gitlab.matrix.org/matrix-org/olm/-/blob/0a7b6da9a0959694303d5b0724a09e63e8c217ab/src/pk.cpp#L352"><code>olm_pk_decrypt</code></a> is never sent anywhere externally, so there
+was again no way of leaking the data to the attacker.</p>
+<p>In conclusion, even though this invalid read is a valid bug, I was not able to
+find a working exploit for it.</p>
+<p>But wait a second! Something was still bothering me about <code>olm_pk_decrypt</code>.
+It's a fairly complex function, <em>receives several string inputs from the
+homeserver</em> and it itself isn't tested by any of the harnesses. Furthermore,
+the reason I started looking at it in the first place is that it was missing
+the <code>olm::decode_base64_length</code> check. Perhaps it warrants a closer look?</p>
+<h2 id="it-does">It does</h2>
+<p>And sure enough, there was something amiss. As <code>olm_pk_decrypt</code> receives three
+base64 inputs from the homeserver: the ciphertext to decrypt, an ephemeral
+public key and a MAC. All three are eventually passed to <code>olm::decode_base64</code>
+to be decoded. Yet there was only a single length check there, to ensure the
+decrypted ciphertext would fit its output buffer. What would happen if the
+server returned a public key that was longer than expected?</p>
+<pre data-lang="c++" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#569cd6;">struct</span><span> _olm_curve25519_public_key ephemeral;
+</span><span>olm::decode_base64(
+</span><span>    (</span><span style="color:#569cd6;">const </span><span>uint8_t</span><span style="color:#569cd6;">*</span><span>)ephemeral_key, ephemeral_key_length,
+</span><span>    (uint8_t </span><span style="color:#569cd6;">*</span><span>)ephemeral.public_key
+</span><span>);
+</span></code></pre>
+<p>As can be seen from the snippet, the decoded version of public key gets written
+to <code>ephemeral.public_key</code>, which is an array allocated on the stack. If the
+input is longer than expected, this will become a stack buffer overflow.</p>
+<p>The purpose of <code>olm_pk_decrypt</code> is to decrypt secrets previously stored by
+a Matrix device on the homeserver. The point of encryption is to prevent the
+server from learning these secrets since they're supposed to be known only by
+your own devices. One use case for this mechanism is to allow one of your
+devices to store encrypted end-to-end encryption keys on the homeserver. Your
+other devices can then retrieve those keys from the homeserver, making it
+possible to view all of your private conversations on each of your devices.</p>
+<p>I decided to go for an end-to-end test to confirm the bug is triggerable by
+connecting with the latest Element Android from my test phone to my homeserver,
+with <a href="https://mitmproxy.org/">mitmproxy</a> sitting in between. This allowed me to
+write a small mitmproxy script which intercepts HTTP calls fetching the E2E
+encryption keys from the homeserver and modifies the response so that the key
+is longer than expected.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#9b9b9b;">import </span><span>json
+</span><span>
+</span><span style="color:#9b9b9b;">from </span><span>mitmproxy </span><span style="color:#9b9b9b;">import </span><span>ctx, http
+</span><span>
+</span><span>
+</span><span style="color:#569cd6;">def </span><span>response(flow: http.HTTPFlow) -&gt; </span><span style="color:#569cd6;">None</span><span>:
+</span><span>    </span><span style="color:#569cd6;">if </span><span>(</span><span style="color:#d69d85;">&quot;/_matrix/client/unstable/room_keys/keys&quot; </span><span style="color:#569cd6;">in </span><span>flow.request.pretty_url
+</span><span>            </span><span style="color:#569cd6;">and </span><span>flow.request.method == </span><span style="color:#d69d85;">&quot;GET&quot;</span><span>):
+</span><span>
+</span><span>        response_body = flow.response.content.decode(</span><span style="color:#d69d85;">&quot;utf-8&quot;</span><span>)
+</span><span>        response_json = json.loads(response_body)
+</span><span>
+</span><span>        rooms = response_json[</span><span style="color:#d69d85;">&quot;rooms&quot;</span><span>]
+</span><span>        room_id = list(rooms.keys())[</span><span style="color:#b5cea8;">0</span><span>]
+</span><span>
+</span><span>        sessions = rooms[room_id][</span><span style="color:#d69d85;">&quot;sessions&quot;</span><span>]
+</span><span>        session = list(sessions.keys())[</span><span style="color:#b5cea8;">0</span><span>]
+</span><span>        session_data = sessions[session][</span><span style="color:#d69d85;">&quot;session_data&quot;</span><span>]
+</span><span>
+</span><span>        ephemeral = session_data[</span><span style="color:#d69d85;">&quot;ephemeral&quot;</span><span>]
+</span><span>        ctx.log.info(</span><span style="color:#569cd6;">f</span><span style="color:#d69d85;">&quot;Replacing ephemeral key &#39;</span><span>{ephemeral}</span><span style="color:#d69d85;">&#39; with &#39;</span><span>{ephemeral * </span><span style="color:#b5cea8;">10</span><span>}</span><span style="color:#d69d85;">&#39;&quot;</span><span>)
+</span><span>        session_data[</span><span style="color:#d69d85;">&quot;ephemeral&quot;</span><span>] = ephemeral * </span><span style="color:#b5cea8;">10
+</span><span>
+</span><span>        modified_body = json.dumps(response_json).encode(</span><span style="color:#d69d85;">&quot;utf-8&quot;</span><span>)
+</span><span>        flow.response.content = modified_body
+</span></code></pre>
+<p>This longer value is then eventually passed by Element Android to libolm's
+<code>olm_pk_decrypt</code>, which triggers the buffer overflow. With all of that in
+place, I deleted the local encryption key backup on my device and asked for it
+to be restored from the server:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>F libc    : stack corruption detected (-fstack-protector)
+</span><span>F libc    : Fatal signal 6 (SIGABRT), code -6 (SI_TKILL) in tid 24517 (DefaultDispatch), pid 24459 (im.vector.app)
+</span><span>F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+</span><span>F DEBUG   : Build fingerprint: &#39;xiaomi/tissot/tissot_sprout:9/PKQ1.180917.001/V10.0.24.0.PDHMIXM:user/release-keys&#39;
+</span><span>F DEBUG   : Revision: &#39;0&#39;
+</span><span>F DEBUG   : ABI: &#39;arm64&#39;
+</span><span>F DEBUG   : pid: 24459, tid: 24517, name: DefaultDispatch  &gt;&gt;&gt; im.vector.app &lt;&lt;&lt;
+</span><span>F DEBUG   : signal 6 (SIGABRT), code -6 (SI_TKILL), fault addr --------
+</span><span>F DEBUG   : Abort message: &#39;stack corruption detected (-fstack-protector)&#39;
+</span><span>F DEBUG   :     x0  0000000000000000  x1  0000000000005fc5  x2  0000000000000006  x3  0000000000000008
+</span><span>F DEBUG   :     x4  0000000000000000  x5  0000000000000000  x6  0000000000000000  x7  0000000000000030
+</span><span>F DEBUG   :     x8  0000000000000083  x9  7d545b4513138652  x10 0000000000000000  x11 fffffffc7ffffbdf
+</span><span>F DEBUG   :     x12 0000000000000001  x13 0000000060b0f2a9  x14 0022ed916fede200  x15 0000d925cd93f18f
+</span><span>F DEBUG   :     x16 00000079e741b2b0  x17 00000079e733c9d8  x18 0000000000000000  x19 0000000000005f8b
+</span><span>F DEBUG   :     x20 0000000000005fc5  x21 0000007940e3c400  x22 000000000000026b  x23 00000000000001d0
+</span><span>F DEBUG   :     x24 000000000000002f  x25 000000793d9653f0  x26 0000007948303368  x27 0000007945dd5588
+</span><span>F DEBUG   :     x28 00000000000001d0  x29 0000007945dd37d0
+</span><span>F DEBUG   :     sp  0000007945dd3790  lr  00000079e732e00c  pc  00000079e732e034
+</span></code></pre>
+<h3 id="impact">Impact</h3>
+<p>This vulnerability is a server-controlled stack buffer overflow in Matrix
+clients supporting room key backup.</p>
+<p>Of course, the largest fear stemming from any remotely controlled stack buffer
+overflow is code execution. This is perhaps even doubly so in a cryptographic
+library, where we have the additional worry of an attacker being able to leak
+our dearly protected conversations.</p>
+<p>The federated architecture of Matrix may be somewhat of a mitigating
+circumstance in this case, since users are much more likely to know and trust
+the homeserver owner, but we don't want to have to rely on this trust.</p>
+<h4 id="native-binaries">Native binaries</h4>
+<p>Luckily, on its own, this bug is not enough to successfully execute code on
+native binaries. By default, libolm is compiled for all supported targets with
+stack canaries (also called stack protectors or stack cookies), which are magic
+values unknown to the attacker, placed just before the current function's frame
+on the stack. This value is checked upon returning from the function -- if its
+value is changed, the process aborts itself to prevent further damage. This is
+evident from the <code>Abort message: 'stack corruption detected (-fstack-protector)'</code> message above. Besides canaries, other system-level
+protections exist to make exploiting bugs such as this harder, such as ASLR.</p>
+<p>Therefore, to achieve remote code execution, an attacker would need to find
+additional vulnerabilities which would allow him to exfiltrate the stack canary
+and addresses of key memory locations from the system.</p>
+<h4 id="wasm">WASM</h4>
+<p>With WASM, the analysis is much more complicated due to its very different
+memory and execution model. In WASM, the unmanaged stack is generally much more
+vulnerable due to it missing support for stack canaries. This implies a stack
+buffer overflow can not only overwrite the frame of the function in which the
+overflow occurred but also <em>all parent frames</em>.</p>
+<p>On the other hand, due to typed calls and much stronger control-flow integrity
+techniques, it's much harder for the attacker to make the code do something
+that is (maliciously) useful. Notably, return addresses live outside unmanaged
+memory and are out of reach to the attacker. Because of this, the primary way
+of influencing code execution is by manipulating <code>call_indirect</code> instructions
+in such a way as to call.</p>
+<p>The analysis of the impact of this bug on the WASM binary is thus left as an
+exercise to the reader. If you're interested, the 2020 USENIX paper <a href="https://www.usenix.org/conference/usenixsecurity20/presentation/lehmann">Everything
+Old is New Again: Binary Security of WebAssembly</a>
+is a great starting point.</p>
+<h2 id="the-fix">The fix</h2>
+<p>Once the problems were identified, <a href="https://gitlab.matrix.org/matrix-org/olm/-/commit/e82f2601b0dc2a69d3167499ee969555267b7aa6">the patches</a> were <a href="https://gitlab.matrix.org/matrix-org/olm/-/commit/ccc0d122ee1b4d5e5ca4ec1432086be17d5f901b">rather
+trivial</a> and the issues were promptly resolved. The first libolm
+release that includes the fix is 3.2.3 which was released on 2021-05-25.</p>
+<p>We reached out to all Matrix clients which were determined to be affected. The
+Element client versions which first fix the issue are as follows:</p>
+<ul>
+<li>Element Web/Desktop: v1.7.29</li>
+<li>Element Android: v1.1.9</li>
+<li>Element iOS: v1.4.0</li>
+</ul>
+<p>For the mobile clients, these versions are already available in their
+respective application stores at the time of publishing this post. If you
+haven't already, please upgrade.</p>
+<h2 id="future-work">Future work</h2>
+<p>Even though the fuzzing setup is in a much better shape now (or rather will be,
+since I still have some PRs to merge upstream), there's still a lot that can be
+done to further improve it.</p>
+<p>Right now, there are undoubtedly parts of the codebase that are not fuzzed
+well. The reasons for this range from the obvious, like some parts of the code
+simply not being called by any the existing harnesses, to more subtle ones such
+as the fact that cryptographic operations form a nearly-insurmountable natural
+barrier for naive fuzzing operations<sup class="footnote-reference"><a href="#3">3</a></sup>. Finally, some of
+the existing harnesses accept additional parameters as command-line arguments,
+meaning we would have to re-run the same harness with different values of those
+parameters in order to reach full coverage of the code. This is suboptimal.</p>
+<p>So the plan for future work is roughly as follows:</p>
+<ol>
+<li>Write missing harnesses to cover more portions of the codebase.</li>
+<li>Write starting corpus generators. These should generate believable, valid
+input for each of the harnesses. For example, for the decryption harness, we
+should generate a variety of encrypted messages: empty, short, long, text,
+binary, etc.</li>
+<li>Modify the harnesses so that their extra parameters are determined from the
+fuzzed input. This will allow the fuzzer to vary these itself, which reduces
+the importance of the human in the loop and makes it harder to forget some
+combination.</li>
+<li>Fuzz for some time until coverage stops increasing. The corpora generated
+should be saved so that future fuzzing attempts can resume from an earlier
+point so that this work is not wasted.</li>
+<li>Use afl-cov to investigate which parts of the code are not covered well or
+at all. This should inform us what further changes are needed.</li>
+<li>Write intelligent, custom mutators. These will allow the fuzzer to take
+a valid input and easily produce another valid input instead of only
+corrupting it with a high probability.</li>
+<li>Design harnesses which test for wanted semantic properties instead of only
+memory errors.</li>
+</ol>
+<div class="footnote-definition" id="3"><sup class="footnote-definition-label">3</sup>
+<p>Classic fuzzers famously have a hard time
+circumventing magic values and checksums, and cryptography is full of these.
+This is further complicated by the fact that the double ratchet algorithm is
+very stateful and depends on the two ratchets evolving in lockstep. This
+means that even if, for example, the decryption harness is supplied with
+a corpus of valid encrypted messages, the mutations done by the fuzzer would
+only manage to produce corrupted versions of those messages which will fail
+to decrypt, but it will ~never manage to produce a different <em>valid</em>
+encrypted message.</p>
+</div>
+<p>It's very exciting that we're able to do full-time security research on Matrix
+these days (thanks to Element's funding), and going forwards we'll publish any
+interesting discoveries for the visibility and education of the whole Matrix
+community. We'd also like to remind everyone that we run an official <a href="https://matrix.org/security-disclosure-policy/">Security
+Disclosure Policy</a> for
+Matrix.org and we'd welcome other researchers to come join our Hall of Fame!
+(And hopefully we will get more bounty programmes running in future.)</p>
+
+                
+            </div>
+        </article>
+        
+        <nav class="pagination">
+    <div class="prev">
+        
+    </div>
+    <span class="page-number">1 / 1</span>
+    <div class="prev">
+        
+    </div>
+</nav>
+
+    </div>
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

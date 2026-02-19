@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;12&#x2F;libera-chat-alias-cleanup&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Cleaning up Libera.Chat aliases" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;img&#x2F;libera-chat-bridge-og.png" />
+    
+    <title>Matrix.org - Cleaning up Libera.Chat aliases</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Cleaning up Libera.Chat aliases",
+    "datePublished": "2023-12-14T16:00+00:00",
+    
+    
+    "image": [
+        "https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;img&#x2F;libera-chat-bridge-og.png"
+    ],
+    
+    "author": [
+    
+    {
+        "@type": "Person",
+        "name": "Thib",
+        "url": "https://tune-your-chat.github.io/authors/thib"
+    }
+    
+    ]
+}
+</script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<article class="content post with-sidebar">
+    <header>
+        <h1>Cleaning up Libera.Chat aliases</h1>
+        <span>
+            14.12.2023 16:00
+            
+            —
+            <a href="/category/bridges">Bridges</a>
+            
+            —
+            <a
+                href="/author/thib">Thib</a>
+            
+        </span>
+        
+    </header>
+    <div class="post-main">
+        <div class="post-content">
+            <p>The Matrix.org Foundation has taken down the bridge with the Libera Chat network. This only prevented messages from making it across the bridges, for Matrix users to appear on the IRC side, and for new IRC users to appear on the Matrix side.</p>
+<p>As part of our work to remove the bridge leftovers, we have removed the ghosts in Matrix rooms and demoted the Libera Chat appservice user. We will now remove the aliases from the rooms, and strongly encourage you to make sure you update the links to your Matrix room if they relied on a <code>matrix.to</code> link that contains <code>:libera.chat</code></p>
+<span id="continue-reading"></span><h2 id="ghosts-cleanup">Ghosts cleanup</h2>
+<p>One of the core concepts of Matrix is interoperability with third party platforms via bridges. In the example of Libera Chat, when an IRC user appears on the Matrix side, it’s called a ghost. When a Matrix user appears on IRC, it’s called a puppet.</p>
+<p><img src="/blog/img/libera-chat-bridge.png" alt="" /></p>
+<p>When the IRC bridge was taken down, all the puppets disappeared from IRC. Matrix works differently than IRC, and all the ghosts remained in most bridged rooms.</p>
+<p>The Foundation has performed the clean-up work to remove ghosts from the rooms, and will now tackle the alias clean-up.</p>
+<h2 id="aliases-cleanup">Aliases cleanup</h2>
+<p>The bridge operated by the Matrix.org Foundation was hosted on a dedicated Matrix server that lived under the libera.chat domain. This means that all the matrix users whose username looks like <code>@username:libera.chat</code> are ghosts. It also means that aliases looking like <code>#roomname:libera.chat</code> are hosted on the libera.chat Matrix instance.</p>
+<p>The Foundation will decommission this server, and as such those aliases will stop working. This doesn’t mean the room will stop working, but <em>links</em> to this room might stop working because the alias won’t resolve.</p>
+<p>The Foundation is going to remove all the libera.chat aliases from rooms that have them by January 7. After this date matrix.to links that contain <code>:libera.chat</code> will stop working. You will need to update them by going to your matrix client, and asking it for a new link to share the room. In Element on a computer, you can do this by clicking on the room header and then clicking on “Copy room link”.</p>
+<p>If you are the administrator of such a room, you can change the alias in advance. To do so, in your favourite client go to the room settings, add a new published address if none exists, and change the main address. You can then repeat the “copy room link” steps to get a new matrix.to link.</p>
+
+            <div class="callout">
+                <div class="left-col">
+                    <h2>The Foundation needs you</h2>
+                </div>
+                <div class="right-col">
+                    <p>
+                        The Matrix.org Foundation is a non-profit and only relies
+                        on donations to operate. Its core mission is to maintain
+                        the Matrix Specification, but it does much more than that.
+                    </p>
+                    <p>
+                        It maintains the matrix.org homeserver and hosts several
+                        bridges for free. It fights for our collective rights to
+                        digital privacy and dignity.
+                    </p>
+                    <a class="call-to-action plausible-event-name=BlogPostCtaSupportUs" href="/support">Support us</a>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Post Contents</h3>
+
+            <ul style="list-style: none; padding-left: 0px;">
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/12/libera-chat-alias-cleanup/#ghosts-cleanup">Ghosts cleanup</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/12/libera-chat-alias-cleanup/#aliases-cleanup">Aliases cleanup</a>
+                    
+                </li>
+                
+            </ul>
+        </aside>
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

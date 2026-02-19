@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;09&#x2F;29&#x2F;this-week-in-matrix-2023-09-29&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="This Week in Matrix 2023-09-29" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;img&#x2F;12516a5a22a84c23ef36b66ae9f86a2182985f28.png" />
+    
+    <title>Matrix.org - This Week in Matrix 2023-09-29</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "This Week in Matrix 2023-09-29",
+    "datePublished": "2023-09-29T00:00+00:00",
+    
+    
+    "image": [
+        "https:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;img&#x2F;12516a5a22a84c23ef36b66ae9f86a2182985f28.png"
+    ],
+    
+    "author": [
+    
+    {
+        "@type": "Person",
+        "name": "Thib",
+        "url": "https://tune-your-chat.github.io/authors/thib"
+    }
+    
+    ]
+}
+</script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<article class="content post with-sidebar">
+    <header>
+        <h1>This Week in Matrix 2023-09-29</h1>
+        <span>
+            29.09.2023 00:00
+            
+            —
+            <a href="/category/this-week-in-matrix">This Week in Matrix</a>
+            
+            —
+            <a
+                href="/author/thib">Thib</a>
+            
+        </span>
+        
+    </header>
+    <div class="post-main">
+        <div class="post-content">
+            <h2 id="matrix-live">Matrix Live</h2>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=dywrUiZP_m0">https://youtube.com/watch?v=dywrUiZP_m0</a></noscript>
+<youtube-player video-id="dywrUiZP_m0"></youtube-player>
+<span id="continue-reading"></span><h2 id="dept-of-servers-office">Dept of Servers 🏢</h2>
+<h3 id="dendrite-website">Dendrite (<a href="https://github.com/matrix-org/dendrite">website</a>)</h3>
+<p>Second generation Matrix homeserver</p>
+<p><a href="https://matrix.to/#/@devon:trident.chat">Devon Dmytro</a> reports</p>
+<blockquote>
+<p>This week we released <a href="https://github.com/matrix-org/dendrite/releases/tag/v0.13.3">v0.13.3</a>. Here are a few of the highlights:</p>
+<ul>
+<li>Room version 11 is now supported</li>
+<li>Sliding Sync proxy can be configured in the /.well-known/matrix/client response</li>
+<li>Invitations are now correctly pushed to devices</li>
+<li>A bug which could result in the corruption of m.direct account data has been fixed</li>
+<li>Clients can request the federation event_format when creating filters</li>
+<li>Many under the hood improvements for <a href="https://github.com/matrix-org/matrix-spec-proposals/blob/kegan/pseudo-ids/proposals/4014-pseudonymous-identities.md">MSC4014: Pseudonymous Identities</a></li>
+</ul>
+<p>...and a whole lot more. Check out the release notes for the full set of changes!
+As always, feel free to stop by <a href="https://matrix.to/#/#dendrite:matrix.org">#dendrite:matrix.org</a> to join in on the discussion and if you encounter a bug make sure to report it <a href="https://github.com/matrix-org/dendrite/issues/new/choose">here</a>.</p>
+</blockquote>
+<h2 id="dept-of-bridges-bridge-at-night">Dept of Bridges 🌉</h2>
+<h3 id="postmoogle-website">Postmoogle (<a href="https://gitlab.com/etke.cc/postmoogle">website</a>)</h3>
+<p>An Email to Matrix bridge. 1 room = 1 mailbox.</p>
+<p><a href="https://matrix.to/#/@aine:etke.cc">Aine</a> says</p>
+<blockquote>
+<p><strong>Introducing Postmoogle v0.9.16: Bridging Email and Matrix Like Never Before!</strong></p>
+<p>We at <a href="https://etke.cc/">etke.cc</a> are delighted to announce the release of Postmoogle v0.9.16, your trusted bridge for seamlessly connecting the worlds of email and Matrix. In this update, we've introduced a host of new features and enhancements to elevate your Matrix email experience.</p>
+<p>Here's what's new in this release:</p>
+<ol>
+<li><strong>Emoji Support</strong>: Express yourself with emojis! You can now react to emails with the ⛔️,🛑, or 🚫 emojis to add the sender to your spam list. Embrace a better quality of life change within your Matrix rooms.</li>
+<li><strong>Subaddressing Support</strong>: Postmoogle now offers support for subaddressing. Receive emails sent to addresses like <code>mailbox+anything@example.com</code>, giving you more control over your email routing.</li>
+<li><strong>Enhanced Banlist Modes</strong>: We've added two new server ban modes: <code>banlist:auth</code> and <code>banlist:auto</code>. The <code>banlist:auth</code> mode automatically bans users for attempting to authenticate into Postmoogle over SMTP with invalid credentials, while <code>banlist:auto</code> automatically bans for invalid emails, such as those failing MX, SPF, or DKIM checks. You can configure each mode separately, enhancing the security of your Matrix environment.</li>
+<li><strong>Improved Banlist Output</strong>: The <code>!pm banlist</code> command output has been improved to display bans per day in weekly chunks. This streamlined presentation makes it easier for you to monitor and manage banned IPs effectively.</li>
+<li><strong>Enhanced Reply Handling</strong>: Postmoogle now ensures that it always replies to your messages, either within the threads or using the reply-tos, depending on your mailbox configuration. This guarantees a more organized and threaded conversation experience within your Matrix rooms.</li>
+<li><strong>Custom Mailbox Signatures</strong>: The new <code>!pm signature</code> command enables you to set a personalized signature for your mailbox, adding a unique touch to your email messages.</li>
+<li><strong>Automatic Replies</strong>: With the introduction of the <code>!pm autoreply</code> command, you can configure automatic responses for all incoming emails without existing threads. This feature simplifies communication when receiving new email threads.</li>
+</ol>
+<p>Postmoogle v0.9.16 brings you an enhanced email-to-Matrix bridge, bolstered security measures, and an improved quality of life. Whether you're managing email discussions within your Matrix rooms or responding to emails from your Matrix client, Postmoogle ensures a seamless integration.</p>
+<p>Upgrade to Postmoogle v0.9.16 today and discover the future of email communication within the Matrix ecosystem. To get started, visit our <a href="https://gitlab.com/etke.cc/postmoogle">GitLab repository</a> or explore the <a href="https://matrix.to/#/#postmoogle:etke.cc">#postmoogle:etke.cc</a>  room.</p>
+</blockquote>
+<h2 id="dept-of-clients-iphone">Dept of Clients 📱</h2>
+<h3 id="commet">Commet</h3>
+<p>A client packed with fun and convenient features.</p>
+<p><a href="https://matrix.to/#/@airyz:matrix.org">airyz</a> announces</p>
+<blockquote>
+<p>Hello, world!</p>
+<p>I'm excited to finally announce Commet! a new client for matrix! We are aiming to create a client that is packed with fun and convenient features, to help you connect with your friends.</p>
+<p>We’ve been quietly in development over the past seven months and while we aren’t ready to call Commet stable, it is ‘stable enough’ to reveal it to the community</p>
+<p>Despite being early in development, we have a few exciting features that help us stand out:</p>
+<h3 id="built-for-multiple-accounts">Built for multiple accounts</h3>
+<p>Commet was built from the ground up to have great support for running multiple accounts at once.</p>
+<h3 id="gif-search">GIF Search</h3>
+<p>A Gif searcher in a matrix client?! We are running a proxy service for tenor, so you can easily send sarcastic gifs on matrix!</p>
+<h3 id="custom-emotes-stickers">Custom Emotes / Stickers</h3>
+<p>We support the same custom emotes implementation that you might be familiar with from other clients!</p>
+<p>Thats all for now! Check us out on <a href="https://github.com/commetchat/commet">github</a> or stop by <a href="https://matrix.to/#/#commet:matrix.org">our room</a> and say hi!</p>
+</blockquote>
+<h3 id="neochat-website">Neochat (<a href="https://invent.kde.org/network/neochat">website</a>)</h3>
+<p>A client for matrix, the decentralized communication protocol</p>
+<p><a href="https://matrix.to/#/@tobiasfella:kde.org">Tobias Fella</a> says</p>
+<blockquote>
+<p>We've landed a major feature in NeoChat this week: There's a now a page showing the subspaces and rooms in a space. This also allows for basic space administration tasks, like adding new rooms to the space. Internally, our Qt6 port is progressing, with all major changes being done now.
+<img src="/blog/img/12516a5a22a84c23ef36b66ae9f86a2182985f28.png" alt="" /></p>
+</blockquote>
+<h3 id="element-x-ios-website">Element X iOS (<a href="https://github.com/vector-im/element-x-ios">website</a>)</h3>
+<p>A total rewrite of Element-iOS using the Matrix Rust SDK underneath and targeting devices running iOS 16+.</p>
+<p><a href="https://matrix.to/#/@stefan.ceriu:matrix.org">Ștefan</a> says</p>
+<blockquote>
+<p>Busy week in Element X land:</p>
+<ul>
+<li>Following small tweaks <a href="https://github.com/vector-im/element-x-ios/pull/1819">here</a> and <a href="https://github.com/vector-im/element-x-ios/pull/1799">there</a> Polls are now officially finished! 🥳</li>
+<li>Work has started on <a href="https://github.com/vector-im/element-x-ios/pull/1776">support for voice messages</a></li>
+<li>And also on <a href="https://github.com/vector-im/element-x-ios/pull/1797">user mention pills</a></li>
+<li>We can now reply to more types of room messages</li>
+<li>Our unit tests are more stable and ever and our coverage is at all time high at <a href="https://app.codecov.io/gh/vector-im/element-x-ios">71.4%</a></li>
+<li>And we fixed bugs around UI and Integration tests, the Element Call integration, iOS 17 and more</li>
+</ul>
+</blockquote>
+<h3 id="element-x-android-website">Element X Android (<a href="https://github.com/vector-im/element-x-android">website</a>)</h3>
+<p>Android Matrix messenger application using the Matrix Rust Sdk and Jetpack Compose</p>
+<p><a href="https://matrix.to/#/@benoit.marty:matrix.org">benoit</a> announces</p>
+<blockquote>
+<ul>
+<li>Element X Android will be released on the PlayStore - once Google approves it - with a fix for the crash about the Camera permission.</li>
+<li>Polls are getting the latest design tweak, notification with the poll question is coming.</li>
+<li>Open a room is smoother than before, some stuff have been move to worker thread.</li>
+<li>The bloom effect will also be rendered faster.</li>
+<li>We are adding test to reach the target of 60% of code coverage. We are not far!</li>
+<li>The Rich Text Editor can now be displayed in full screen mode.</li>
+<li>Next week we will start October features: Key backup management; pin and biometric unlock; voice message; and rendering pills in the timeline.</li>
+</ul>
+</blockquote>
+<h3 id="element-web-desktop-website">Element Web/Desktop (<a href="https://github.com/vector-im/element-web">website</a>)</h3>
+<p>Secure and independent communication, connected via Matrix. Come talk with us in <a href="https://matrix.to/#/#element-web:matrix.org">#element-web:matrix.org</a>!</p>
+<p><a href="https://matrix.to/#/@johannesm:element.io">Johannes Marbach</a> announces</p>
+<blockquote>
+<ul>
+<li>We’re wrapping up some test stabilisation work on our notification test suite and will transition into fixing the failures next.</li>
+<li>Visual regressions from the Compound adoption have mostly been fixed. We started applying a UI refresh to the right panel and are planning to unlabs it together with the room header once complete.</li>
+<li>About 80% of our strings have been migrated over to Localazy. We’re getting close to finishing this off and reopening translations to contributors.</li>
+<li>People living on the edge might have noticed that the Safari 17 update has broken our emoji fonts. We’re planning to put a hotfix together for this today. On the back of this we’re also considering doing away with bundled emoji fonts entirely and falling back to what the OS provides. The situation on this is looking much different these days compared to a few years ago.</li>
+</ul>
+</blockquote>
+<h2 id="dept-of-voip-call-me-hand">Dept of VoIP 🤙</h2>
+<h3 id="calling-for-bridges">Calling for bridges</h3>
+<p><a href="https://matrix.to/#/@malte:maltee.de">Malte E</a> reports</p>
+<blockquote>
+<p>During the Matrix community summit, Timo K.and I discussed reducing friction for video calls with bridged users. Instead of true call bridging, which would likely be months of work, we implemented a workaround within less than a day. Starting an MSC3401 call from Matrix will send an element call link to the remote platform user, which will skip login and room selection, taking them straight to the call in two clicks (one for the link and one to confirm). On the Matrix side, the experience is seamless, once a few prerequisites have been met: the matrix client must use MSC3401 and because element web currently defaults to legacy calling in DMs, a third user, such as the bridge bot, must be present in the room. Furthermore, a modified element call instance is needed.
+We have so far implemented calls via Element Call for matrix -&gt; Telegram in DMs. We will be working on solutions for incoming calls and group calls as well as support for other platforms.
+There is currently still a major security concern: To skip the login process, the link comes with a token for the ghost account. Anyone with access to the token - that includes the matrix user who started the call - will be able to log in with that ghost account. We invalidate the token once the call has ended, but that is obviously nowhere near sufficient. Scoped access tokens with permissions for sending and receiving call events in a single room for a limited time would be required. On platforms using Double Ratchet E2E, it should also be possible to use different plaintext for different recipients in the same message, thereby only exposing the token to those who already implicitly have authority over the ghost account through their account on the remote platform.</p>
+<p>For those brave enough to try, you will need <a href="https://github.com/maltee1/mautrix-python/tree/calls">this fork of mautrix-python</a>, <a href="https://github.com/maltee1/mautrix-telegram/tree/calls">this fork of mautrix-telegram</a>
+as well as <a href="https://github.com/vector-im/element-call/tree/call_bridge_token_url_param">this fork of element call</a> or just use <a href="https://pr1576--element-call.netlify.app">the instance hosted here</a>.
+In the bridge config.yaml, set <code>bridge.calls.enabled</code> to <code>true</code> and provide the element call instance in <code>bridge.calls.ec_url</code>.
+Be sure that you trust everyone with access your bridge before deploying, until we have figured out how to make it safer.</p>
+<p>We apologize for the subpar audio and glitches. We had limited time and equipment to record the demo and will try to do better next time
+{{&lt; video src="vrcDiEGzmollhUGuTEONHVCE.m4v" &gt;}}</p>
+</blockquote>
+<h2 id="dept-of-sdks-and-frameworks-toolbox">Dept of SDKs and Frameworks 🧰</h2>
+<h3 id="rory-libmatrix">Rory&amp;::LibMatrix</h3>
+<p><a href="https://matrix.to/#/@emma:rory.gay">Emma [it/its]</a> says</p>
+<blockquote>
+<p>Not much changed this week:</p>
+<ul>
+<li>Some refactors to how user identities are handled</li>
+<li>Correction in function names to correctly display async vs non-async functions</li>
+<li><code>AuthenticatedHomeserverGeneric.GetRoom(string id)</code> is no longer async, since that is only a constructor call.</li>
+<li>Sync code has gotten a slight cleanup</li>
+<li><code> AuthenticatedHomeserverGeneric.WhoAmI</code> was turned into a property that only gets fetched when attempting to get the info for the first time, rather than fetching it when constructing the homeserver object.</li>
+<li>Added a null check for <code>creationEvent.Invite</code> when callign <code>CreateRoom</code>
+<ul>
+<li>This field was also made nullable</li>
+</ul>
+</li>
+<li>Renamed <code>canonicalHomeServerDomain</code> to <code>baseUrl</code> in the constructors for homeservers</li>
+<li><code>FullHomeServerDomain</code> and <code>HomeServerDomain</code> were removed from homeserver objects</li>
+<li>Authentication was moved to a functions inside <code>RemoteHomeserver</code> rather than being service-only. This allows for usecases outside of Dependency Injection based applications</li>
+<li>LoginResponse now tries to get homeserver canonical domain from mxid if not provided by the server (since this field is deprecated)</li>
+<li>Removed an obsolete way to get room state without providing a type (can still pass <code>JsonElement</code> if required)</li>
+<li>Fixed sending files in a room via <code>room.SendFileAsync</code>, this now does what you would expect instead of throwing an exception (because I'd written the wrong code)</li>
+<li>Added <code>room.DisbandRoomAsync()</code> in the case you ever want to completely get rid of a room, ban everyone and make the room private</li>
+<li>Added <code>AddChildAsync</code> to SpaceRoom, in order to allow adding space children</li>
+<li>Removed TieredStorage arguments from homeserver constructor</li>
+<li>Removed explicit http client creation for authenticated homeservers, in favor of re-using the one created in RemoteHomeserver</li>
+<li>Fixed <code>room.SendMessageEventAsync</code> requiring an event type (this is always <code>m.room.message</code> afaik)</li>
+<li>Moved namespace <code>LibMatrix.StateEventTypes.Spec</code> to <code>LibMatrix.EventTypes.Spec.State</code> in order to better represent what's in that folder</li>
+<li>Increased coverage of MatrixHttpClient to include PUT requests</li>
+<li>Removed TieredStorageService argument from SyncHelper (I might make SyncHelper not part of homeserver in the future so you can have separate sync loops with different filters)</li>
+<li>GetRoom(string id) now has a check that the id needs to start with a <code>!</code></li>
+<li>Added a Logout function to AuthenticatedHomeserverGeneric so you can properly dispose a session</li>
+<li>Added the ability to resolve room aliases</li>
+<li>Last, but definitely not least, some unit tests have been added!</li>
+</ul>
+<p>Non-code updates:</p>
+<ul>
+<li>Unit tests are powered by an unfederated homeserver at matrixunittests.rory.gay - there is no data persistence</li>
+</ul>
+<p>As always:</p>
+<ul>
+<li>The code is available at <a href="https://git.rory.gay/matrix/LibMatrix.git/">my git domain</a>
+<ul>
+<li>If anyone wants to contribute a page to put there instead of a plain dumb git directory, please feel free to!</li>
+<li>All other contributions are more than welcome, be it documentation, code, anything!</li>
+</ul>
+</li>
+<li>Discussion is welcome in <a href="https://matrix.to/#/#libmatrix:rory.gay">#libmatrix:rory.gay</a></li>
+</ul>
+</blockquote>
+<h3 id="trixnity-website">Trixnity (<a href="https://gitlab.com/trixnity/trixnity">website</a>)</h3>
+<p>Multiplatform Kotlin SDK for Matrix</p>
+<p><a href="https://matrix.to/#/@michael:imbitbu.de">Michael</a> announces</p>
+<blockquote>
+<p>We are happy to announce that Trixnity Messenger is open source now. It is a Kotlin multiplatform Matrix messenger SDK built on top of Trixnity. It defines a messenger client without specifying a UI layer (think of it as a headless messenger). All it provides is a series of view models that define the structure and logic of a messenger.
+It has never been easier to implement a Matrix messenger targeting multiple platforms such as Android, iOS, Desktop or the web. Just define how it should look - all the logic and nitty-gritty details are already accounted for. And if you do not like the behavior of the messenger in some parts, just extend or override the existing logic with your own. There is no need to fork the project.
+So join us at https://gitlab.com/connect2x/trixnity-messenger and in <a href="https://matrix.to/#/#trixnity-messenger:imbitbu.de">#trixnity-messenger:imbitbu.de</a>.</p>
+</blockquote>
+<h3 id="matrix-rust-sdk-website">matrix-rust-sdk (<a href="https://github.com/matrix-org/matrix-rust-sdk">website</a>)</h3>
+<p>Next-gen crypto-included SDK for developing Clients, Bots and Appservices; written in Rust with bindings for Node, Swift and WASM</p>
+<p><a href="https://matrix.to/#/@jplatte:flipdot.org">Jonas Platte</a> reports</p>
+<blockquote>
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-rust-sdk/pull/2592">[Timeline] Add highlevel API for replying</a></li>
+<li><a href="https://github.com/matrix-org/matrix-rust-sdk/pull/2631">Progress on the <code>WidgetDriver</code> API</a></li>
+<li>and lots of bug fixes and refactorings</li>
+</ul>
+</blockquote>
+<h2 id="dept-of-internet-of-things-bulb">Dept of Internet of Things 💡</h2>
+<h3 id="home-assistant-matrix-integration">Home Assistant - Matrix Integration</h3>
+<p><a href="https://matrix.to/#/@me:shahpaarth.com">Paarth Shah</a> announces</p>
+<blockquote>
+<p>I'm happy to announce that Home Assistant <a href="https://rc.home-assistant.io/blog/2023/09/27/release-202310/">2023.10 release</a> (in beta at the time of writing) includes <a href="https://github.com/home-assistant/core/pull/72797">my PR</a> to refactor the included <code>matrix</code> integration to use <code>matrix-nio</code>! You can see the full changelog <a href="https://rc.home-assistant.io/changelogs/core-2023.10#all-changes">here</a>. As part of the merge, I've also become the code owner for the integration.</p>
+<p>In the <a href="https://matrix.org/blog/2023/06/09/this-week-in-matrix-2023-06-09/">2023-06-09 TWIM</a> I announced that I'd created <a href="https://github.com/PaarthShah/matrix-nio-hacs">matrix-nio-hacs</a> as a stand-in while this had still been pending merge. As it will no longer be necessary, for those of you who have been using it, I'll eventually be archiving the repository since I now will be able to continue development directly on home assistant core. Any and all bug reports and/or PRs will be greatly appreciated!</p>
+</blockquote>
+<h2 id="dept-of-events-and-talks-speaking-head">Dept of Events and Talks 🗣️</h2>
+<h3 id="matrix-user-meetup-berlin">Matrix User Meetup Berlin</h3>
+<p><a href="https://matrix.to/#/@saces:c-base.org">saces</a> reports</p>
+<blockquote>
+<p>Long time no matrix meetup? We can help!</p>
+<p>Next Matrix user meetup 4.10.2023, 8 pm @ c-base</p>
+<p>Meet other matrix users, chat about Matrix, the rest, and everything else, discuss your Matrix ideas, sign each other in persona, and maybe spice the evening with a good mate or beer.</p>
+<p>Every first Wednesday of the month in the c-base at 8pm ('til the next pandemic).</p>
+<p>Matrix room: <a href="https://matrix.to/#/#mumb:c-base.org">#mumb:c-base.org</a></p>
+</blockquote>
+<h3 id="matrix-salon-podcast-german-episode">Matrix Salon Podcast (German episode)</h3>
+<p><a href="https://matrix.to/#/@jaller94:matrix.org">Christian Paul (jaller94)</a> says</p>
+<blockquote>
+<p>Meet Nadine, a designer and UX enthusiast who builds Polychat. Polychat is a bridging service for people from different messenger silos. This way, people won't need to leave their familiar messenger silo to talk to group on other platforms.</p>
+<p>Episode url: https://podcasters.spotify.com/pod/show/matrix-podcast0/episodes/Nadine---Polychat--Matrix-Community-Summit-2023-e29urs9
+RSS feed: https://anchor.fm/s/cdb34188/podcast/rss
+Mastodon post: https://mastodontech.de/@jaller94/111149212044231025</p>
+<p>For English interviews of Matrix community members, check out some of our previous episodes!
+Also, in the upcoming weeks, we'll release two more English episodes.</p>
+</blockquote>
+<h2 id="dept-of-interesting-projects-satellite-orbital">Dept of Interesting Projects 🛰️</h2>
+<h3 id="mappo">Mappo</h3>
+<p><a href="https://matrix.to/#/@akesijan:toki.club">Janet Blackquill</a> reports</p>
+<blockquote>
+<p>Hi, I present to y'all a little bot called Mappo.
+He's technically been around for a while, but I polished him up with some new Matrix features as of late to bring him closer to his presence on Discord, and I haven't really promoted it before.</p>
+<p>He's a lil noodly jellyfish fella that lets you play the eponymous social deduction game of Mappo where some people are villagers and some people are creatures. The village is trying to figure out who the creatures are to exile them, but at the same time, the creatures are slowly picking them off, one-by-one until they outnumber them! Who wins is determined by who's the best at deducing the truth (or obfuscating it if you're one of the creatures!) The roles range from the conventional like the Seer and Werewolf to the wild and wacky like Cookie Person and Goose.</p>
+<p>His source is located on GitHub at https://github.com/pontaoski/mappo. Mappo is unique for a bot due to being multi-protocol with a core logic speaking to an abstraction layer implemented for both Discord and Matrix.</p>
+<p>If you wanna check out Mappo in action, come stop by <a href="https://matrix.to/#/#mappo:toki.club">#mappo:toki.club</a> and give the game a try with other people!
+<img src="/blog/img/QDBcElMDBLarFFBgjUlvmMrP.png" alt="" />
+<img src="/blog/img/OrFWgZFqDRreTwJLvuRvDKCZ.png" alt="" />
+<img src="/blog/img/CDeXODVAKOuCtkrsuUBsDmCt.png" alt="" /></p>
+</blockquote>
+<h3 id="matrix-static">matrix-static</h3>
+<p><a href="https://matrix.to/#/@kim:sosnowkadub.de">HarHarLinks</a> reports</p>
+<blockquote>
+<p>Hi from the <a href="https://matrix.to/#/#matrix-community-summit-berlin-2023:matrix.org">Matrix Community Summit</a> Sunday Hackathon!</p>
+<p>That's right, a couple people were still alive on Sunday after one awesome Thursday of <del><a href="https://github.com/nordeck/matrix-barcamp/tree/nic/env/fosdem-2023">BarCamp</a></del> <a href="https://en.wikipedia.org/wiki/BarCamp">BarCamp</a>ing and two more excellent days full of Matrix <a href="https://summit2023.matrixmeetup.de/conference/schedule/#2023-09-22">programme</a> and programming across two stages and got together for some creative Matrix hacking!</p>
+<p>We had a bunch of interesting projects, see the announcement about VoIP bridging from Malte E. and Timo K.
+Personally, I was involved in the <del>event T-Shirt creation</del> <a href="https://github.com/matrix-org/matrix-spec-proposals/pull/2997#discussion_r1335165880">revised MSC2997 implementation</a> with the wonderful <a href="https://matrix.to/#/@c_atc:c-base.org">@c_atc:c-base.org</a>. If you look at that more closely, you'll find there is an <code>mxc</code>-URL in the event body.
+<a href="https://matrixmeetup.de">matrixmeetup.de</a> is hosted using GitLab pages, so you can't just do anything you want, however challenge_accepted.jpg.
+Of course, entering it into your browser works (<a href="https://gitlab.com/matrix-meetup/matrixmeetup.de/-/merge_requests/3">how?</a>), try it out!</p>
+<p>The obvious idea was to also make it all work through matrix so that in the future, once other client's implement the event scheme, the event will properly work?
+But how would we set up a media on a defined media ID and ...could we circumvent having to set up it's own homeserver just for this gimmick, or even any additional infrastructure at all?</p>
+<p>Luckily I was sitting next to the excellent <a href="https://matrix.to/#/@deepbluev7:neko.dev">Nico from Nheko</a> and we started hacking!
+After stumbling over the need to still offer working legacy <code>r0</code> endpoints, we quickly <a href="https://gitlab.com/matrix-meetup/matrixmeetup.de/-/merge_requests/4">got it working</a>.
+Try a <code>m.room.message</code> with:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>  &quot;content&quot;: {
+</span><span>    &quot;body&quot;: &quot;Summit Logo.png&quot;,
+</span><span>    &quot;info&quot;: {
+</span><span>      &quot;h&quot;: 1578,
+</span><span>      &quot;mimetype&quot;: &quot;image/png&quot;,
+</span><span>      &quot;size&quot;: 386815,
+</span><span>      &quot;w&quot;: 2022
+</span><span>    },
+</span><span>    &quot;msgtype&quot;: &quot;m.image&quot;,
+</span><span>    &quot;url&quot;: &quot;mxc://matrixmeetup.de/summit2023&quot;
+</span><span>  }
+</span></code></pre>
+<p>We learned during the event that we would have liked its Matrix rooms and space(s) to be more discoverable, so we continued prototyping with the room directory for next year.
+The <code>/_matrix/federation/v1/publicRooms</code> is not too complicated, it's basically a list of room IDs with a couple attributes we had to hardcode...:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>{
+</span><span>  &quot;avatar_url&quot;: &quot;mxc://matrixmeetup.de/summit2023&quot;,
+</span><span>  &quot;guest_can_join&quot;: false,
+</span><span>  &quot;join_rule&quot;: &quot;public&quot;,
+</span><span>  &quot;name&quot;: &quot;Matrix Community Summit Berlin 2023&quot;,
+</span><span>  &quot;num_joined_members&quot;: 1000000,
+</span><span>  &quot;room_id&quot;: &quot;!rrRxqrMIOzXJggCSEm:matrix.org&quot;,
+</span><span>  &quot;room_type&quot;: &quot;m.space&quot;,
+</span><span>  &quot;topic&quot;: &quot;Summit on 21-23 September 2023.\n @c-base in Berlin\n \n a barcamp - 21th\n a conference - 22/23th\n open door day - 24th (to be confirmed)&quot;,
+</span><span>  &quot;world_readable&quot;: true
+</span><span>}
+</span></code></pre>
+<p>However it was not quite so easy.
+As you can see above, the endpoint - like most of Matrix - doesn't use a file type extension.
+It turns out that Synapse <strong>really</strong> wants that piece of JSON to served with the JSON mime type, but GitLab pages' does not support setting the mime type manually and can only derive it automatically using some heuristic.
+Thanks to the manical investigation into that heuristic, Nico came up with the idea to use GitLab's <a href="https://gitlab.com/matrix-meetup/matrixmeetup.de/-/merge_requests/7">_redirects</a> or more precisely rewrite function to forward from the Matrix endpoint to the actual file served with the .json extension and what can I say - it works as proven by this screenshot from Nheko (it's Other Clients October soon, so try using Nheko)!</p>
+<p>What if I told you there were even more hackers there? urp picked up where we achieved our goals and continued testing. You can follow the experiments being done and the documented findings on <a href="https://gitlab.com/matrix-static/matrix-static.gitlab.io">GitLab/matrix-static</a> and join the effort or give feedback in the matrix room matrix-static-server..</p>
+<p>Overall we can absolutely recommend you try hacking with some static Matrix for your project, I can see lots of applications for hosting media alone.
+Until next time! 👋</p>
+</blockquote>
+<h2 id="department-of-community-initiatives-family">Department of Community Initiatives 👪️</h2>
+<p>For everything impulsed by the community that is not an Foundation initiative.</p>
+<h3 id="matrix-community-forum">Matrix Community Forum</h3>
+<p><a href="https://matrix.to/#/@mtrnord:midnightthoughts.space">MTRNord</a> announces</p>
+<blockquote>
+<h3 id="changes-and-new-features">Changes and new features</h3>
+<ul>
+<li>Email registration should be fixed. If you tried to register and didn't get the activation email, check your spam folder please</li>
+<li>There now is a way to announce events and get them into a calendar at https://forum.miki.community/t/matrix-events/52
+<ul>
+<li>For example, TWIM is in the calendar (also contains some Tips and Tricks for your next post :) feel free to add more of these if you have them!) https://forum.miki.community/t/this-week-in-matrix/100/2</li>
+</ul>
+</li>
+<li>Categories have been reorganized to be more useful</li>
+<li>Login via GitHub is possible - Login via matrix will only be possible after OIDC lands in Matrix spec and is adapted by users</li>
+<li>Small nice to have features have been added
+<ul>
+<li><del>Support for setting a birthdate</del> <a href="https://meta.discourse.org/t/cakeday-crashes-at-api-call-on-unauthicated-users/280000">this seems to break the forum</a></li>
+<li>Support for Footnotes</li>
+<li>Support for templates</li>
+<li>A dark/light mode toggle</li>
+<li>User Fields for mxid, git(hub) (and friends) ID, pronouns have been added to be optionally set on the profile.</li>
+</ul>
+</li>
+<li>Added the gamification plugin which gives a Forum Leaderboard which may help to motivate some people that are not coders and gives those people rewards too. Additionally, there could be also further integration, for example using https://meta.discourse.org/t/how-to-integrate-discourse-gamification-with-an-external-system-redeem-and-award-points/262968</li>
+</ul>
+<h3 id="planned-things">Planned things</h3>
+<ul>
+<li>Support for integration into existing Matrix based communication using https://meta.discourse.org/t/discourse-chat-integration/66522</li>
+<li>Possibly finding a way to get events announced in twim also into the forum automatically</li>
+</ul>
+<h3 id="discussion-area">Discussion Area</h3>
+<p>Anything more permanent like wishes or request should be in the forum itself at https://forum.miki.community/c/site-feedback/2</p>
+<p>However for quick discussions or questions there is <a href="https://matrix.to/#/#matrix-community-forum:midnightthoughts.space">#matrix-community-forum:midnightthoughts.space</a> available too.</p>
+</blockquote>
+<p><a href="https://matrix.to/#/@asbjorn:olli.ng">Asbjørn</a> announces</p>
+<blockquote>
+<p>Other Clients October</p>
+<p>We're doing it again!</p>
+<p>Other Clients October is a month-long challenge, where we switch away from our daily-driver Matrix clients completely for a the entire month if October.</p>
+<p>It's a nice way to explore the rich space of Matrix clients.</p>
+<p>Only use Element? Maybe check out Cinny. Only use Fluffychat? Try kicking the tires on ElementX. Only use Nheko? Why not try out Gomuks? Working on a client? Give dogfooding it a shot this month!</p>
+<p>Join the Matrix room: <a href="https://matrix.to/#/#other-clients-october:olli.ng">#other-clients-october:olli.ng</a></p>
+<p>Say hi, and tell us what clients you'll be trying!</p>
+</blockquote>
+<h2 id="dept-of-ping">Dept of Ping</h2>
+<p>Here we reveal, rank, and applaud the homeservers with the lowest ping, as measured by <a href="https://github.com/maubot/echo">pingbot</a>, a <a href="https://github.com/maubot/maubot">maubot</a> that you can host on your own server.</p>
+<h3 id="ping-maunium-net"><a href="https://matrix.to/#/#ping:maunium.net">#ping:maunium.net</a></h3>
+<p>Join <a href="https://matrix.to/#/#ping:maunium.net">#ping:maunium.net</a> to experience the fun live, and to find out how to add YOUR server to the game.</p>
+<table><thead><tr><th style="text-align: center">Rank</th><th style="text-align: center">Hostname</th><th style="text-align: center">Median MS</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">maescool.be</td><td style="text-align: center">470</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">plocki.org</td><td style="text-align: center">509</td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center">envs.net</td><td style="text-align: center">526</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">tcpip.uk</td><td style="text-align: center">567.5</td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">forgedtheir.phd</td><td style="text-align: center">607.5</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">shortestpath.dev</td><td style="text-align: center">639</td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">chat.gokhanc.net</td><td style="text-align: center">740</td></tr>
+<tr><td style="text-align: center">8</td><td style="text-align: center">herkinf.de</td><td style="text-align: center">870.5</td></tr>
+<tr><td style="text-align: center">9</td><td style="text-align: center">utzutzutz.net</td><td style="text-align: center">918</td></tr>
+<tr><td style="text-align: center">10</td><td style="text-align: center">wcore.org</td><td style="text-align: center">945</td></tr>
+</tbody></table>
+<h3 id="ping-no-synapse-maunium-net"><a href="https://matrix.to/#/#ping-no-synapse:maunium.net">#ping-no-synapse:maunium.net</a></h3>
+<p>Join <a href="https://matrix.to/#/#ping-no-synapse:maunium.net">#ping-no-synapse:maunium.net</a> to experience the fun live, and to find out how to add YOUR server to the game.</p>
+<table><thead><tr><th style="text-align: center">Rank</th><th style="text-align: center">Hostname</th><th style="text-align: center">Median MS</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">frai.se</td><td style="text-align: center">163.5</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">hacklab.fi</td><td style="text-align: center">172</td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center">kanp.ai</td><td style="text-align: center">193.5</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">inu.is</td><td style="text-align: center">260</td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">chat.gaskins.family</td><td style="text-align: center">328</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">littlevortex.net</td><td style="text-align: center">338</td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">skladka.net</td><td style="text-align: center">405</td></tr>
+<tr><td style="text-align: center">8</td><td style="text-align: center">matrix.org</td><td style="text-align: center">442</td></tr>
+<tr><td style="text-align: center">9</td><td style="text-align: center">matrix.its-tps.fr</td><td style="text-align: center">464</td></tr>
+<tr><td style="text-align: center">10</td><td style="text-align: center">noisytoot.org</td><td style="text-align: center">543</td></tr>
+</tbody></table>
+<h2 id="that-s-all-i-know">That's all I know</h2>
+<p>See you next week, and be sure to stop by <a href="https://matrix.to/#/#twim:matrix.org">#twim:matrix.org</a> with your updates!</p>
+
+            <div class="callout">
+                <div class="left-col">
+                    <h2>The Foundation needs you</h2>
+                </div>
+                <div class="right-col">
+                    <p>
+                        The Matrix.org Foundation is a non-profit and only relies
+                        on donations to operate. Its core mission is to maintain
+                        the Matrix Specification, but it does much more than that.
+                    </p>
+                    <p>
+                        It maintains the matrix.org homeserver and hosts several
+                        bridges for free. It fights for our collective rights to
+                        digital privacy and dignity.
+                    </p>
+                    <a class="call-to-action plausible-event-name=BlogPostCtaSupportUs" href="/support">Support us</a>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Post Contents</h3>
+
+            <ul style="list-style: none; padding-left: 0px;">
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#matrix-live">Matrix Live</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#dept-of-servers-office">Dept of Servers 🏢</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#dendrite-website">Dendrite (website)</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#dept-of-bridges-bridge-at-night">Dept of Bridges 🌉</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#postmoogle-website">Postmoogle (website)</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#dept-of-clients-iphone">Dept of Clients 📱</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#commet">Commet</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#built-for-multiple-accounts">Built for multiple accounts</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#gif-search">GIF Search</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#custom-emotes-stickers">Custom Emotes &#x2F; Stickers</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#neochat-website">Neochat (website)</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#element-x-ios-website">Element X iOS (website)</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#element-x-android-website">Element X Android (website)</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#element-web-desktop-website">Element Web&#x2F;Desktop (website)</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#dept-of-voip-call-me-hand">Dept of VoIP 🤙</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#calling-for-bridges">Calling for bridges</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#dept-of-sdks-and-frameworks-toolbox">Dept of SDKs and Frameworks 🧰</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#rory-libmatrix">Rory&amp;::LibMatrix</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#trixnity-website">Trixnity (website)</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#matrix-rust-sdk-website">matrix-rust-sdk (website)</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#dept-of-internet-of-things-bulb">Dept of Internet of Things 💡</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#home-assistant-matrix-integration">Home Assistant - Matrix Integration</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#dept-of-events-and-talks-speaking-head">Dept of Events and Talks 🗣️</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#matrix-user-meetup-berlin">Matrix User Meetup Berlin</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#matrix-salon-podcast-german-episode">Matrix Salon Podcast (German episode)</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#dept-of-interesting-projects-satellite-orbital">Dept of Interesting Projects 🛰️</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#mappo">Mappo</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#matrix-static">matrix-static</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#department-of-community-initiatives-family">Department of Community Initiatives 👪️</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#matrix-community-forum">Matrix Community Forum</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#changes-and-new-features">Changes and new features</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#planned-things">Planned things</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#discussion-area">Discussion Area</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#dept-of-ping">Dept of Ping</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#ping-maunium-net">#ping:maunium.net</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#ping-no-synapse-maunium-net">#ping-no-synapse:maunium.net</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/09/29/this-week-in-matrix-2023-09-29/#that-s-all-i-know">That&#x27;s all I know</a>
+                    
+                </li>
+                
+            </ul>
+        </aside>
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

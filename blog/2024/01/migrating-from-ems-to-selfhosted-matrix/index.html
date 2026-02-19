@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2024&#x2F;01&#x2F;migrating-from-ems-to-selfhosted-matrix&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Migrating from EMS to self-hosted Matrix" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Migrating from EMS to self-hosted Matrix</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Migrating from EMS to self-hosted Matrix",
+    "datePublished": "2024-01-04T17:00+00:00",
+    
+    
+    "image": [
+        "https://matrix.org/blog/img/matrix-logo.png"
+    ],
+    
+    "author": [
+    
+    {
+        "@type": "Person",
+        "name": "Josh Simmons",
+        "url": "https://tune-your-chat.github.io/authors/josh-simmons"
+    }
+    
+    ]
+}
+</script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<article class="content post with-sidebar">
+    <header>
+        <h1>Migrating from EMS to self-hosted Matrix</h1>
+        <span>
+            04.01.2024 17:00
+            
+            —
+            <a href="/category/guides">Guides</a>
+            
+            —
+            <a
+                href="/author/josh-simmons">Josh Simmons</a>
+            
+        </span>
+        
+    </header>
+    <div class="post-main">
+        <div class="post-content">
+            <h2 id="running-my-own-matrix-homeserver">Running my own Matrix homeserver</h2>
+<p>I confess I'm awfully chuffed with myself as we return from the holiday break. I just completed a successful migration of my main Matrix account from managed hosting to a homeserver that I run for myself on a virtual private server (VPS).</p>
+<p>The whole experience has been illuminating, and there are some specific details that are timely for people like me who needed to migrate off of Element Matrix Services (EMS) as they pivot to focus on enterprise.</p>
+<p>Thus, this blog post. I'm going to share my experience in hopes that it'll help some folks with that migration!</p>
+<span id="continue-reading"></span><h2 id="beware-the-gotchas">Beware the gotchas</h2>
+<p>Homeserver migration is a high stakes process, as there's a point past which mistakes will permanently wreck your ability to communicate with other people on the open federation. At that point, the resolution is to create a new account!</p>
+<p>The reason it's high stakes is that we're talking about a secure, decentralized system which requires encryption keys to be exchanged, keys which change over time. That, combined with the fact that an EMS homeserver will resume running after it completes your export, means you have to take specific measures to disable interactions with all the accounts on your homeserver during the migration. I've consulted some of the brightest people in the Matrix ecosystem to account for this in my process, so <strong>if you're using this blog post to navigate your own EMS migration, <em>read very carefully</em>.</strong></p>
+<p>Migration is typically not this tricky, and the initial setup of a fresh homeserver can be a breeze with the right tools!</p>
+<p>The other thing you need to know before you take any of my advice: I'm not a Matrix developer or expert, just a vintage web developer who likes to host some of my own infrastructure for reasons of privacy and flexibility ... and to keep my skills sharp. <strong>This guidance does <em>not</em> stand alone, it only makes sense if you've done your homework and read the documentation of the relevant projects.</strong></p>
+<h2 id="get-yourself-prepared">Get yourself prepared</h2>
+<p>The specific path to migration I'm following today is moving from EMS to self-hosting with the matrix-docker-ansible-deploy project (which I'll refer to as the "MDAD project" going forward). I found myself reading lots of docs but the two critical starting points are <a href="https://ems-docs.element.io/books/element-cloud-documentation/page/migrate-from-ems-to-self-hosted">Element's own migration docs</a> and <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/docs/README.md">the MDAD project docs</a>.</p>
+<p>I found it very helpful to play with the MDAD project on a fresh machine and an unused domain name. That got me to read the docs and get a feel for things before layering in the complexity of a migration.</p>
+<p>I deployed my new Matrix homeserver on a VPS running Ubuntu 22.04, which I was already using to host some other things. All my local work was done by command line on my MacBook. This meant I already had a server with most of the dependencies already in place, and I could readily SSH into it. It also means that I've already got Nginx listening on ports 80 and 443, so I had to get a little creative and dig deeper into the docs to set up <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/examples/nginx/README.md">Nginx as a reverse proxy in front of Traefik</a>.</p>
+<p>A few more important facts: EMS runs the Synapse homeserver alongside the matrix-media-repo (MMR) project, I'm doing the same to make this migration possible. And EMS, when I did my export, ran Synapse v1.97 whereas the latest release is v1.98. I confirmed there were no database schema changes between those two versions, so the difference in version number was immaterial, but typically your migration target should be the same version as your export.</p>
+<p>This migration will involve some downtime, and a period of low performance. Messages sent in encrypted rooms during that downtime will likely be unreadable, even if you do everything right. Having an alternate account can be useful, or just ask people to resend important messages. In my specific case, with a single-user homeserver that had been active for 13 months, I started my migration at 10am and by 12:30pm I could log back in but things weren't really usable until evening. To be on the safe side, plan for it to take longer.</p>
+<p>Since this is a high stakes migration, let's also be clear on the order of operations before we begin. I cannot stress enough how important this is – <em>read carefully, do not cut corners</em>.</p>
+<ol>
+<li>Every user account on your homeserver needs to dedicate a little time to these steps, to ensure their accounts remain usable after the migration:
+<ol>
+<li><a href="https://ems-docs.element.io/books/element-cloud-documentation/page/set-up-cross-signing">Export a Recovery Key</a> so they can log back in without cross-verifying a device.</li>
+<li><a href="https://ems-docs.element.io/books/element-cloud-documentation/page/export-and-import-e2e-room-keys">Export E2E room keys</a> from every client they have logged in.</li>
+<li>Use a client they can access to sign out of sessions on devices they don't have access to, and any bridges that are registered in the sessions list.</li>
+<li>Log out of all the remaining clients. This reduces risk of things changing or becoming undecryptable after the migration is complete.</li>
+</ol>
+</li>
+<li>After all users have completed those steps, cut over your DNS and .well-known files. This stops traffic from being directed to your EMS host.</li>
+<li>Wait twice as long as your old DNS TTL values were set to, to allow for propagation with a fudge factor.</li>
+<li>Request a backup from EMS. It took about 2 hours from the time I requested my export for the database export to be ready, and 2.5 hours for the media repo export to be ready.</li>
+<li>Import key configuration values, do initial setup of your homeserver, and import your database. Do not start Synapse until the database is imported! <strong>The "set up your homeserver" instructions below are primarily focused on this step.</strong>
+<ol>
+<li>If this goes badly wrong, restore DNS and fix.</li>
+</ol>
+</li>
+<li>Turn your Synapse on. It'll roar to life and eat a bunch of CPU as it catches up, but that's fine.</li>
+<li>Wait for things to catch up. In this time, ask your key contacts to re-send any messages they may have sent while you've been offline.</li>
+<li>Also while waiting, import your media.</li>
+<li>If things look good after about 2-4 hours, cancel and delete your EMS homeserver (it'll now be too far behind to roll back to).</li>
+<li>Rotate your signing key at your convenience.</li>
+</ol>
+<h2 id="set-up-your-homeserver">Set up your homeserver</h2>
+<p>These instructions are focused on setting up your homeserver, importing your database, and importing your media. Here are some assumptions I'm making in what I've written:</p>
+<ul>
+<li>Dependencies are already addressed locally and remotely.</li>
+<li>You don't have any bridges setup on EMS. (Their <a href="https://ems-docs.element.io/books/element-cloud-documentation/page/migrate-from-ems-to-self-hosted">docs</a> cover what to do if you do have bridges.)</li>
+<li>You've cloned the MDAD project locally and configured your playbook.
+<ul>
+<li>You're using the default profile (Synapse, Element, Postgres, Coturn, Traefik, Let's Encrypt, and Exim) and, of the optional services, have opted to use matrix-media-repo (MMR).</li>
+</ul>
+</li>
+<li>You've already set your target host in the MDAD project.</li>
+<li>You've already put the <code>macaroon</code> and <code>pepper</code> keys from your EMS export into the MDAD project's <code>vars.yml</code>, under <code>matrix_synapse_macaroon_secret_key</code> and <code>matrix_synapse_password_config_pepper</code> respectively.</li>
+<li>You're using a bare domain for your account handles (as in, not using a subdomain).</li>
+<li>You've already handled the SSL certificates and prepared your DNS.</li>
+<li>You'll store your EMS exports locally at <code>~/dev/migration</code>.</li>
+<li>You've got a directory setup on the host server at <code>/root/migration</code> – and you run commands on the host as root.</li>
+</ul>
+<p>OK, with all that scene setting done, let's walk through the steps you'll need to take to set up your homeserver and import your data!</p>
+<h3 id="run-your-ansible-playbook">Run your Ansible playbook</h3>
+<p>From your local machine, run the Ansible playbook. All of the commands we run from the local machine are within the base directory of the MDAD project. Critically, we're only installing things – not starting any services yet.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>&gt; just roles
+</span><span>&gt; ansible-playbook -i inventory/hosts setup.yml --tags=install-all
+</span></code></pre>
+<h3 id="import-your-signing-key">Import your signing key</h3>
+<p>On your remote host, edit <code>/matrix/synapse/config/matrix.DOMAIN.signing.key</code> and replace the autogenerated signing key with the one from your EMS export.</p>
+<h3 id="upload-your-exports">Upload your exports</h3>
+<p>Upload your database and media exports to your remote host by running these commands on your local machine.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>&gt; rsync -Pav ~/dev/migration/DOMAIN-synapse-database.zip root@REMOTEHOST:/root/migration/
+</span><span>&gt; rsync -Pav ~/dev/migration/DOMAIN-media-DOMAIN.zip root@REMOTEHOST:/root/migration/
+</span></code></pre>
+<h3 id="prepare-your-database-for-import">Prepare your database for import</h3>
+<p>On your remote host, run the following sequence of commands. These will convert the EMS database export to the format that the MDAD project supports importing, and prepares Postgres for the import.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>&gt; cd ~/migration
+</span><span>&gt; unzip DOMAIN-synapse-database.zip
+</span></code></pre>
+<p>Take note of the name of the directory that's extracted from the archive. It will be of the format <code>UNIQUEID-live-DOMAIN-synapse-database.dir</code> and that unique ID will be something we need to refer back to several times.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>&gt; rm DOMAIN-synapse-database.zip
+</span><span>&gt; pg_restore –file=ems-export.sql UNIQUEID-live-DOMAIN-synapse-database.dir/
+</span><span>&gt; rm -fr UNIQUEID-live-DOMAIN-synapse-database.dir/
+</span></code></pre>
+<p>Now that you've converted the EMS database export, let's prepare Postgres for some of the minor differences it will encounter when we run the import.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>&gt; systemctl start matrix-postgres
+</span><span>&gt; /matrix/postgres/bin/cli
+</span><span>&gt; &gt; CREATE ROLE rdsadmin;
+</span><span>&gt; &gt; CREATE ROLE UNIQUEID;
+</span><span>&gt; &gt; \q
+</span></code></pre>
+<h3 id="import-your-database">Import your database</h3>
+<p>On your local machine, run this command to begin the import process on your remote host:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>&gt; just run-tags import-postgres --extra-vars=server_path_postgres_dump=/root/migration/ems-export.sql --extra-vars=postgres_default_import_database=synapse
+</span></code></pre>
+<p>Now, going back to the remote machine, let's make one change to the database to make sure the imported data is owned by the correct user:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>&gt; /matrix/postgres/bin/cli
+</span><span>&gt; &gt; \c synapse
+</span><span>&gt; &gt; REASSIGN OWNED BY UNIQUEID TO synapse;
+</span><span>&gt; &gt; \q
+</span></code></pre>
+<p>Then you're done importing the database!</p>
+<h3 id="import-your-media">Import your media</h3>
+<p>You can afford to delay the media import if that's convenient for you, but people might notice some missing images so I recommend doing it promptly. All of these commands should be run on the remote host.</p>
+<p>This step differs in key ways from the database import. The database import we did from our local machine, by telling the remote host to import a database file that was stored on the remote host outside of the Docker container that the database runs in. In this case, we are running these commands on the remote host and we are placing the media archive in a place that is mounted into the Docker container that matrix-media-repo is running in.</p>
+<p>Here we go:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>&gt; mv ~/migration/DOMAIN-media-DOMAIN.zip /matrix/matrix-media-repo/data/
+</span><span>&gt; cd /matrix/matrix-media-repo/data/
+</span><span>&gt; unzip DOMAIN-media-DOMAIN.zip
+</span><span>&gt; chown -R matrix:matrix *
+</span><span>&gt; rm DOMAIN-media-DOMAIN.zip
+</span><span>&gt; systemctl start matrix-media-repo
+</span><span>&gt; docker exec -it matrix-media-repo /usr/local/bin/gdpr_import -directory /data/UNIQUEID-live-DOMAIN-media-DOMAIN
+</span></code></pre>
+<p>The import process will ask for a Machine ID. As it suggests, you can just enter 1.</p>
+<p>To test if the import was successful, run the following command:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>&gt; docker exec -it matrix-media-repo /usr/local/bin/gdpr_import -directory /data/UNIQUEID-live-DOMAIN-media-DOMAIN -verify
+</span></code></pre>
+<h3 id="rotate-your-signing-key">Rotate your signing key</h3>
+<p>This is not a step I've taken myself, but you may be keen to do this. The high level guidance I was given is as follows:</p>
+<p>First, create a new key with the <code>generate_signing_key.py</code> script that comes with Synapse.</p>
+<p>Then, list your old public key under <code>old_signing_keys</code> in your <code>homeserver.yaml</code> file (<a href="https://element-hq.github.io/synapse/latest/usage/configuration/config_documentation.html?highlight=old_signing_key#old_signing_keys">docs</a>). If you're using the MDAD project as I am, you'll want to make this change using the <code>matrix_synapse_configuration_extension_yaml</code> variable locally in the <code>vars.yml</code> file.</p>
+<p>Lastly, replace the contents of the <code>/matrix/synapse/config/matrix.DOMAIN.signing.key</code> file on your remote host with your new key.</p>
+<h3 id="fire-things-up">Fire things up</h3>
+<p>If your database and media imports have gone over successfully, you can safely start your homeserver! If not, you'll need to do some troubleshooting.</p>
+<p>Here's the command to start your homeserver, which is meant to be run from your local machine:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>&gt; ansible-playbook -i inventory/hosts setup.yml --tags=start
+</span></code></pre>
+<h2 id="have-fun">Have fun!</h2>
+<p>In my case, I had a pretty vanilla setup on EMS – no bridges or anything. But since migrating, I've started customizing things! There's a lot you can do with Matrix and the <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy/tree/master">MDAD project</a> makes it fairly painless to experiment.</p>
+<p>Here are a few of the additional things I've set up alongside my Synapse homeserver:</p>
+<ul>
+<li>Etherpad</li>
+<li>Synapse Admin</li>
+<li>Sliding Sync Proxy</li>
+<li>Synapse Auto Compressor</li>
+<li>Shared Secret Auth</li>
+<li>Prometheus and Grafana</li>
+<li>Hookshot</li>
+<li>Bridges for IRC, Discord, LinkedIn, Facebook, and Instagram</li>
+<li>Matrix Reminder Bot</li>
+<li>Maubot</li>
+</ul>
+<p>I've also found the need to do some performance tuning – while the out-of-the-box setup on my homeserver could handle most rooms, it could not handle resource intensive rooms like Matrix HQ.</p>
+<p>However, I'm still working this out for myself. Performance tuning, such as enabling and tuning workers, is a topic for another day and another blog post. I'll be collaborating with Tom Foster on such a post in the near future!</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>It took quite a lot of help for me to puzzle out this process. I am endlessly grateful to Travis Ralston, Tom Foster, Slavi Pantaleev, Cat, Richard van der Hoff, and many others for their support.</p>
+<p>As you embark on your own journey, I highly recommend reading the docs before you take any actions, and joining these rooms for peer support:</p>
+<ul>
+<li><a href="https://matrix.to/#/#matrix-docker-ansible-deploy:devture.com">Docker + Ansible = Matrix</a></li>
+<li><a href="https://matrix.to/#/#ems:matrix.org">EMS (Element Matrix Services)</a></li>
+<li><a href="https://matrix.to/#/#synapse:matrix.org">Synapse Admins</a></li>
+<li><a href="https://matrix.to/#/#synapse-extreme-tuning:fostered.uk">Synapse Extreme Tuning</a></li>
+</ul>
+<p>Onwards and upwards!</p>
+
+            <div class="callout">
+                <div class="left-col">
+                    <h2>The Foundation needs you</h2>
+                </div>
+                <div class="right-col">
+                    <p>
+                        The Matrix.org Foundation is a non-profit and only relies
+                        on donations to operate. Its core mission is to maintain
+                        the Matrix Specification, but it does much more than that.
+                    </p>
+                    <p>
+                        It maintains the matrix.org homeserver and hosts several
+                        bridges for free. It fights for our collective rights to
+                        digital privacy and dignity.
+                    </p>
+                    <a class="call-to-action plausible-event-name=BlogPostCtaSupportUs" href="/support">Support us</a>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Post Contents</h3>
+
+            <ul style="list-style: none; padding-left: 0px;">
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#running-my-own-matrix-homeserver">Running my own Matrix homeserver</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#beware-the-gotchas">Beware the gotchas</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#get-yourself-prepared">Get yourself prepared</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#set-up-your-homeserver">Set up your homeserver</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#run-your-ansible-playbook">Run your Ansible playbook</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#import-your-signing-key">Import your signing key</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#upload-your-exports">Upload your exports</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#prepare-your-database-for-import">Prepare your database for import</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#import-your-database">Import your database</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#import-your-media">Import your media</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#rotate-your-signing-key">Rotate your signing key</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#fire-things-up">Fire things up</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#have-fun">Have fun!</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2024/01/migrating-from-ems-to-selfhosted-matrix/#acknowledgements">Acknowledgements</a>
+                    
+                </li>
+                
+            </ul>
+        </aside>
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

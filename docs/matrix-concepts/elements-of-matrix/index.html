@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Elements of Matrix" />
+    
+    
+    
+    <meta property="og:description" content="Matrix relies on homeservers to connect clients together. Appservices are
+pieces of software that can bridge Matrix and third-party platforms together.
+The Matrix Specification defines the interactions between all those.
+" />
+    <meta name="description" content="Matrix relies on homeservers to connect clients together. Appservices are
+pieces of software that can bridge Matrix and third-party platforms together.
+The Matrix Specification defines the interactions between all those.
+" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Elements of Matrix</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/d3.v3.min.js"></script>
+<script src="/js/how-it-works.js"></script>
+<script src="/js/docs.js"></script>
+
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            ">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            current">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+
+
+
+
+
+<div class="docs-body">
+    <div class="docs-menu">
+        <div class="docs-menu-inner">
+            
+            
+            
+            
+            
+            <div>
+                <input id="Chat basics-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Chat basics-submenu-checkbox" class="submenu-title">Chat basics
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;chat_basics&#x2F;matrix-for-im&#x2F;" class="toclink">Matrix for Instant Messaging</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;matrix-for-im&#x2F;#what-is-it" class="toclink">
+                                <li>What is it?</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;matrix-for-im&#x2F;#creating-a-matrix-account" class="toclink">
+                                <li>Creating a Matrix account</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;" class="toclink">Private Group Chat</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;#sending-your-first-messages" class="toclink">
+                                <li>Sending your first messages</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;#inviting-people" class="toclink">
+                                <li>Inviting people</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;#keeping-the-group-safe" class="toclink">
+                                <li>Keeping the group safe</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;" class="toclink">Public Rooms</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;#joining-a-specific-room" class="toclink">
+                                <li>Joining a specific room</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;#browsing-the-public-directory" class="toclink">
+                                <li>Browsing the public directory</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;#spaces" class="toclink">
+                                <li>Spaces</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Communities-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Communities-submenu-checkbox" class="submenu-title">Communities
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;" class="toclink">Getting Started</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#creating-sharing-a-space" class="toclink">
+                                <li>Creating &amp; sharing a Space</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#adding-rooms" class="toclink">
+                                <li>Adding rooms</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#history-visibility" class="toclink">
+                                <li>History visibility</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#basic-moderation" class="toclink">
+                                <li>Basic Moderation</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#advanced-moderation" class="toclink">
+                                <li>Advanced moderation</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#moving-to-another-provider" class="toclink">
+                                <li>Moving to another provider</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;" class="toclink">Community Moderation</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#power-levels" class="toclink">
+                                <li>Power levels</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#your-community-s-security-guard" class="toclink">
+                                <li>Your community&#x27;s security guard</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#getting-moderation-reports" class="toclink">
+                                <li>Getting moderation reports</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#enforcing-moderation" class="toclink">
+                                <li>Enforcing moderation</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;" class="toclink">Switching Providers</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;#why-switching-providers" class="toclink">
+                                <li>Why switching providers?</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;#picking-a-new-provider" class="toclink">
+                                <li>Picking a new provider</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;#transferring-ownership" class="toclink">
+                                <li>Transferring ownership</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;bridging&#x2F;" class="toclink">Bridging</a>
+                        <ul>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Matrix concepts-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" checked>
+                <label for="Matrix concepts-submenu-checkbox" class="submenu-title">Matrix concepts
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;" class="toclink">Elements of Matrix</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#homeserver" class="toclink">
+                                <li>Homeserver</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#client" class="toclink">
+                                <li>Client</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#appservice-bridges-and-some-bots" class="toclink">
+                                <li>AppService (bridges and some bots)</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#the-specification" class="toclink">
+                                <li>The Specification</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;matrix-concepts&#x2F;rooms_and_events&#x2F;" class="toclink">Rooms &amp; Events</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;rooms_and_events&#x2F;#local-copies" class="toclink">
+                                <li>Local copies</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;rooms_and_events&#x2F;#administration-privileges" class="toclink">
+                                <li>Administration &amp; privileges</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;" class="toclink">End-to-End Encryption implementation guide</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;#implementing-end-to-end-encryption-in-matrix-clients" class="toclink">
+                                <li>Implementing End-to-End Encryption in Matrix clients</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;#encrypted-attachments" class="toclink">
+                                <li>Encrypted attachments</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;#key-sharing" class="toclink">
+                                <li>Key sharing</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Spec guides-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Spec guides-submenu-checkbox" class="submenu-title">Spec guides
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;spec-guides&#x2F;authed-media-servers&#x2F;" class="toclink">Authenticated Media for Servers</a>
+                        <ul>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Older documentation-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Older documentation-submenu-checkbox" class="submenu-title">Older documentation
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    <li>
+                        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;older&#x2F;#all-past-documentation" class="toclink">All past documentation</a>
+                        
+                    </li>
+                    
+                    
+                    </li>
+                </ul>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="docs-content">
+        <article class="content">
+            <header>
+                <h1>Elements of Matrix</h1>
+                
+                <div class="metadata">
+                    Last updated: <time datetime="2023-02-08"> 2023-02-08</time>
+                </div>
+                
+            </header>
+
+            <div id="howitworks">
+    <svg id="diagram"></svg>
+    <div id="legendBox">
+        <div class="legend" id="legend1">
+            <p>Here are three Matrix homeservers, each with one client connected.</p>
+            <p>The clients are all participating in the same Matrix room, which
+                is synchronised across the three participating servers.</p>
+        </div>
+        <div class="legend hidden" id="legend2">
+            Alice sends a JSON message to a room on her homeserver.
+            <pre>
+curl -XPOST
+ -d '{"msgtype":"m.text", "body":"hello"}'
+ "https://matrix.alice.com/_matrix/client
+ /v2/rooms/ROOM_ID/send/m.room.message
+ ?access_token=ACCESS_TOKEN"
+{
+  "event_id": "$YUwRidLecu:alice.com"
+}</pre>
+        </div>
+        <div class="legend hidden" id="legend3">
+            Alice's homeserver adds the JSON to its graph of history, linking
+            it to the most recent unlinked object(s) in the graph.
+            <br />
+            The server then signs the JSON <b>including the signatures of the
+                parent objects</b> to calculate a tamper-resistant signature for
+            the history.
+        </div>
+        <div class="legend hidden" id="legend4">
+            The server then sends the signed JSON over HTTPS to any other
+            servers which are participating in the room.
+            <pre>
+curl –XPOST –H 'Authorization: X-Matrix origin=alice.com,...' –d '{
+    "ts": 1413414391521,
+    "origin": "alice.com",
+    "destination": "bob.com",
+    "pdus": [{
+        "event_id": "$YUwRidLecu:alice.com",
+        "content": {
+        "body": "hello world",
+        "msgtype": "m.text"
+        },
+        ...
+        "pdu_type": "m.room.message",
+        "signatures": {
+        "matrix.org": {
+            "ed25519:auto": "jZXTwAH/7EZ..."
+        }
+        },
+        "sender": "@alice:alice.com"
+    }]
+}' https://matrix.bob.com:8448/_matrix/federation/v1/send/916d...</pre>
+        </div>
+        <div class="legend hidden" id="legend5">
+            The destination servers perform a series of checks on the message:
+            <ul>
+                <li>Validate the message signature to protect against tampering with history</li>
+                <li>Validate the HTTP request's auth signature to protect against identity spoofing</li>
+                <li>Validate whether Alice's historical permissions allow her to send this particular message</li>
+            </ul>
+            If these checks pass, the JSON is added to the destination servers' graphs.
+        </div>
+        <div class="legend hidden" id="legend6">
+            Destination clients receive Alice's message with a long-lived GET request.
+            (Clients are free to implement more efficient transports than polling as desired).
+            <pre>
+curl "https://matrix.bob.com/_matrix/client/v2/sync?access_token=ACCESS_TOKEN"
+{
+    "next_batch": "s72595_4483_1934",
+    "rooms": [{
+    "room_id": "!KrLWMLDnZAyTapqLWW:alice.com",
+    "events": {
+        "batch": [{
+        "event_id": "$YUwRidLecu:alice.com",
+        "type": "m.room.message",
+        "content": {
+            "body": "I am a fish",
+            "msgtype": "m.text",
+        },
+        "origin_server_ts": 1417731086797,
+        "sender": "@alice:alice.com"
+        }],
+    },
+    }]
+}</pre>
+        </div>
+        <div class="legend hidden" id="legend7">
+            Bob sends a response to Alice's message, and his server adds his
+            message into his copy of the room's history, linking it to the most
+            recent unlinked object in the graph - Alice's last message.
+        </div>
+        <div class="legend hidden" id="legend8">
+            Meanwhile, Charlie also responds to Alice's message - racing with
+            Bob's message.
+            <br />
+            Alice, Bob and Charlie's homeservers all have different views of
+            the message history at this point - but Matrix is designed to
+            handle this inconsistency.
+        </div>
+        <div class="legend hidden" id="legend9">
+            Bob's homeserver relays his message through to Alice and Charlie's
+            servers, who accept it.
+            <br />
+            At this point Alice and Bob are in sync, but Charlie's room
+            history has split - both messages 2 and 3 follow on from message 1.
+            This is not a problem; Charlie's client will be told about Bob's
+            message and can handle it however it chooses.
+        </div>
+        <div class="legend hidden" id="legend10">
+            Charlie's homeserver relays his message through as well, at which
+            point all 3 servers have a consistent view of history again
+            (including the race between Bob and Charlie). All three clients
+            have seen all three messages, and the room history is now back in
+            sync across the participating servers.
+        </div>
+        <div class="legend hidden" id="legend11">
+            Later on, Alice sends another message - her homeserver adds it to
+            her history, and links it to the most recent unlinked objects in
+            the graph: Bob and Charlie's messages.
+            <br />
+            This effectively merges the
+            split in history and asserts the integrity of the room (or at
+            least her view of it).
+        </div>
+        <div class="legend hidden" id="legend12">
+            Alice's message is then relayed to the other participating
+            servers, which accept it and update their own history with the
+            same rules, ensuring eventual consistency and integrity of the
+            distributed room history.
+        </div>
+        <button class="legendNav">
+            Next
+        </button>
+    </div>
+</div>
+<p>Matrix works like email, but for instant messaging. People need to use a client
+to be able to write and receive messages, and they need providers to provide
+them an account on their homeserver.</p>
+<figure>
+    <img src=".&#x2F;federation.svg" alt="Schema of clients connected to homeservers. The servers are federated together" />
+    <figcaption><p>Schema of clients connected to homeservers. The servers are federated together</p>
+</figcaption>
+</figure>
+<p>Let's explore what those are.</p>
+<h2 id="homeserver">Homeserver</h2>
+<p>A homeserver is a piece of software hosting accounts of Matrix users. It is
+bound to a single domain that cannot change over time. The accounts on a server
+have an identifier made of a local part (the username), and a server part, which
+is the (vanity) domain of the homeserver. A typical identifier would be</p>
+<pre data-lang="txt" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-txt "><code class="language-txt" data-lang="txt"><span>@username:example.com
+</span></code></pre>
+<p>The Matrix ID of the users on the schema above look like below.</p>
+<figure>
+    <img src=".&#x2F;federation_matrix_ids.svg" alt="Schema of clients connected to federated homeservers. All users have a Matrix ID" />
+    <figcaption><p>Schema of clients connected to federated homeservers. All users have a Matrix ID</p>
+</figcaption>
+</figure>
+<p>You can find a list of existing homeserver implementations in the
+<a href="/ecosystem/servers">Ecosystem &gt; Servers</a> section of this website. Most of them
+are open source, so you can explore how they work. Please also refer to their
+documentation if you want to deploy them either for testing or in production.</p>
+<div class="page_card">
+    <a href="&#x2F;ecosystem&#x2F;servers" alt="Link to Servers">
+        <div class="wrapper">
+            <div class="card_content">
+                <h4>Servers</h4>
+                <p>Discover all the homeserver implementations.</p>
+            </div>
+            <div class="arrow"></div>
+        </div>
+    </a>
+</div>
+<h2 id="client">Client</h2>
+<p>Homeservers communicate between each other with the Server-Server / Federation
+API, but they also communicate with clients in a standard way: the Client-Server
+API.</p>
+<p>Clients are pieces of software that can use a Matrix account to send and receive
+events from a specific homeserver. The clients themselves only ever talk to the
+homeserver of the account they're using. If a client uses the
+<code>@alice:example.com</code> account, they will only talk to <code>example.com</code>.</p>
+<p>The most common kinds of client are the user facing ones. In the case of instant
+messaging, those clients show rooms as timeline of messages, with users joining,
+leaving, redacting messages…</p>
+<p>To get a better idea of what clients look like in practice, you can find a list
+on <a href="/ecosystem/clients">Ecosystem &gt; Clients</a> and give them a go.</p>
+<div class="page_card">
+    <a href="&#x2F;ecosystem&#x2F;clients" alt="Link to Clients">
+        <div class="wrapper">
+            <div class="card_content">
+                <h4>Clients</h4>
+                <p>Discover all the Matrix clients.</p>
+            </div>
+            <div class="arrow"></div>
+        </div>
+    </a>
+</div>
+<p>If you're more interested in writing your own client to bring a new experience
+to users, you may want to rely on an existing SDK (see
+<a href="/ecosystem/sdks">Ecosystem &gt; SDKs</a>). Those will do significant part of the
+Matrix heavy-lifting and allow you to focus on the UX you want to build.
+Finally, if you're interested in learning more about the interactions between
+clients and servers, please head to
+<a href="https://spec.matrix.org/latest/client-server-api/">the Client-Server section of the Matrix Specification</a>.</p>
+<div class="page_card">
+    <a href="&#x2F;ecosystem&#x2F;sdks" alt="Link to SDKs">
+        <div class="wrapper">
+            <div class="card_content">
+                <h4>SDKs</h4>
+                <p>Browse SDKs to write your own client.</p>
+            </div>
+            <div class="arrow"></div>
+        </div>
+    </a>
+</div>
+<h2 id="appservice-bridges-and-some-bots">AppService (bridges and some bots)</h2>
+<p>Many Matrix bots are non-human clients. They can be built with the same SDKs as
+regular clients, and instead of showing a UI to display what is happening they
+will listen to events, parse them, and for example send automatic replies.</p>
+<h3 id="simple-and-advanced-bots">Simple and advanced bots</h3>
+<p>A good example of simple bot would be a RSS bot: it subscribes to a RSS feed
+completely outside of Matrix and whenever it sees a new item in the feed it
+posts a message in a specific Matrix room, with the name of the item. Such a bot
+is nothing more than a very limited and specialised client.</p>
+<p>But sometimes you need to get a more global view of what is happening on your
+homeserver to take action. If you want to write an anti-spam module for example,
+you want to be able to read each and every message from public rooms to detect
+patterns and ring the alarm or take action directly.</p>
+<p>To do it with a bot, you would need to invite the bot in each and every room
+where you want the monitoring to happen. An appservice is able to monitor all
+the <em>unencrypted</em> events (messages sent/edited/redacted, people joining or
+leaving rooms) within its namespace.</p>
+<h3 id="bridges">Bridges</h3>
+<p>Sometimes you need to do even more than being an all-seeing eye: you need to be
+able to create users and rooms automatically. A typical use case for this is
+<a href="/ecosystem/bridges">bridges</a>. Bridges allow you to connect a Matrix community
+to a third-party platform such as IRC, Discord or Slack. Users on these
+communities appear as native users on Matrix, and ideally the other way around
+on the third-party platform as well.</p>
+<ul>
+<li>The users created on the Matrix side by the bridge to mimic users on the
+third-party platform are called <code>ghosts</code>.</li>
+<li>The users created on the third-party platform by the bridge to mimic Matrix
+users are called <code>puppets</code>.</li>
+</ul>
+<figure>
+    <img src=".&#x2F;bridge.svg" alt="A schema of a room bridged between matrix.org and slack.com" />
+    <figcaption><p>A schema of a room bridged between matrix.org and slack.com</p>
+</figcaption>
+</figure>
+<p>To do so, the bridge needs to be able to create and impersonate users on Matrix,
+and to control rooms as well. In order to limit the risks of abuse, bridges can
+be limited to controlling a namespace.</p>
+<p>To get a high level view of bridges concepts and see which platforms Matrix can
+be bridged to, please head to <a href="/ecosystem/bridges">Ecosystem &gt; Bridges</a> on this
+website. If you're interested in writing your own bridge, you will very likely
+want to rely on an existing SDK, in which case you check the existing ones in
+<a href="/ecosystem/sdks">Ecosystem &gt; SDKs</a> and have a look at the
+<a href="https://spec.matrix.org/latest/application-service-api/">Application Service section of the specification</a>.</p>
+<div class="page_card">
+    <a href="&#x2F;ecosystem&#x2F;bridges" alt="Link to Bridges">
+        <div class="wrapper">
+            <div class="card_content">
+                <h4>Bridges</h4>
+                <p>Discover the platforms you can bridge to and how.</p>
+            </div>
+            <div class="arrow"></div>
+        </div>
+    </a>
+</div>
+<h2 id="the-specification">The Specification</h2>
+<p>We have been mentioning the <a href="https://spec.matrix.org">Matrix Specification</a>
+several times already. The Matrix Specification is a document describing
+interactions between the various components of the Matrix ecosystem
+(homeservers, clients, appservices). For a given  feature, implementation
+details may vary, but Matrix aims for a consistent behaviour and wants to avoid
+the need for negotiation between parties.</p>
+<p>The specification is open, versioned, and can be freely browsed at
+<a href="https://spec.matrix.org">spec.matrix.org</a>. Its governance and decision process
+are public, so anybody can make a proposal to extend it via Matrix Spec Change.</p>
+<p>A Matrix Spec Change (MSC) is a document describing how the author would like to
+amend the Matrix Specification, to introduce a change in the interactions
+between the components of the ecosystem. Such documents are discussed publicly,
+and when the author think they have addressed all of the important concerns they
+can bring the <a href="/about#the-spec-core-team">Spec Core Team</a>'s attention to it and
+start the formal review process.</p>
+<p>The <a href="https://spec.matrix.org/proposals/">Matrix Spec Process</a> is detailed on
+<a href="https://spec.matrix.org">spec.matrix.org</a>.</p>
+
+        </article>
+    </div>
+</div>
+<button id="docs-menu-button">Table of Contents</button>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

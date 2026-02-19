@@ -1,0 +1,1913 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;category&#x2F;tech&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Matrix.org" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Tech</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://tune-your-chat.github.io/category/tech/atom.xml">
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            ">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<div id="taxonomy-single">
+    <div class="content">
+        <header>
+            <h1>Tech</h1>
+            60 posts tagged with "Tech" <a href="/category">(See all Category)</a>
+            
+            <h2>
+                <small><a href="https://tune-your-chat.github.io/category/tech/atom.xml">Atom Feed</a></small>
+            </h2>
+            
+        </header>
+
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2021&#x2F;12&#x2F;17&#x2F;type-coverage-for-sydent-evaluation&#x2F;" title="Type coverage for Sydent: evaluation">Type coverage for Sydent: evaluation</a></h2>
+                <span>
+                    17.12.2021 00:00
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/david-robertson">
+                        David Robertson
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>This is the third in a series of three posts which discuss recent work to improve type annotations in <a href="https://github.com/matrix-org/sydent">Sydent</a>, the reference Matrix Identity server. <a href="https://matrix.org/blog/2021/12/10/type-coverage-for-sydent-annotation">Last time</a> we discussed the mechanics of how we added type coverage. Now I want to reflect on how well we did. What information and guarantees did we gain from <code>mypy</code>? How could we track our progress and measure the effect of our work? And lastly, what other tools are out there apart from <code>mypy</code>?</p>
+<h2 id="the-best-parts-of-strict">The best parts of <code>--strict</code></h2>
+<p>While the primary goal was to improve Sydent's coverage and robustness, to some extent this was an experiment too. How much could we get out of typing and static analysis, if we <em>really</em> invested in thorough annotations? Sydent is a small project that would make for a good testbed! I decided my goal would be to get Sydent passing mypy under <a href="https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-strict">--strict mode</a>. This is a command line option which turns on a number of extra checks (though not everything); it feels similar to passing <code>-Wall -Wextra -Werror</code> to <code>gcc</code>. It's a little extreme, but Sydent is a small project and this would be a good chance to see how hard it would be. In my view, the most useful options implied by strict mode were as follows.</p>
+<h3 id="check-untyped-defs"><a href="https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-check-untyped-defs">--check-untyped-defs</a></h3>
+<p>By default, mypy will only analyze the implementation of functions that are annotated. On the one hand, without annotations for inputs and the return type, it's going to be hard for mypy to thoroughly check the soundness of your function. On the other, it can still do good work with the type information it has from other sources. Mypy can</p>
+<ul>
+<li>infer the type of literals, e.g. deducing <code>x: str</code> from  <code>x = "hello"</code>;</li>
+<li>lookup the return types of standard library calls, via <code>typeshed</code>; and similarly</li>
+<li>lookup the return types of any annotated functions in your code or dependencies.</li>
+</ul>
+<p>The information is already available for free: we may as well try to use it to spot problems.</p>
+<h3 id="disallow-untyped-defs-and-friends"><a href="https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-disallow-untyped-defs">--disallow-untyped-defs</a> and <a href="https://mypy.readthedocs.io/en/stable/command_line.html#untyped-definitions-and-calls">friends</a></h3>
+<p>This flag forces you to fully annotate every function. There are less extreme versions available, e.g. <code>--disallow-incomplete-defs</code>; but I think this is a good option to ensure full coverage of your module. It means you can rely on mypy's error output as a to-do list.</p>
+<p>One downside to this: sometimes I felt like I was writing obvious boilerplate annotations, e.g.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>    </span><span style="color:#569cd6;">def </span><span>__str__(self) -&gt; str:
+</span><span>        </span><span style="color:#569cd6;">...
+</span></code></pre>
+<p>There was one particular example of this that crops up a lot. Mypy has a special exception for a class's <code>__init__</code> and <code>__init_subclass__</code> methods. If a return type annotation is missing, it will <a href="https://github.com/python/mypy/issues/604#issuecomment-348525995">assume these functions return None</a> instead of <code>Any</code>. (See  here for <a href="https://github.com/python/mypy/pull/5677">its implementation</a>.) This is normally compatible with <code>--disallow-untyped-defs</code> and <code>--disallow-incomplete-defs</code>, with one exception. If your <code>__init__</code> function takes no arguments other than <code>self</code>, mypy won't consider it annotated, and you'll need to write <code>-&gt; None</code> explicitly.</p>
+<p>It's also worth mentioning <a href="https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-disallow-untyped-calls">--disallow-untyped-calls</a>, which will cause an error if an annotated function calls an unannotated function. Again, it helps to ensure that mypy has a complete picture of the types in your function's implementation. It also helps to highlight dependencies—if you see errors from this, it might be more practical to annotate the functions and modules it's calling first.</p>
+<h3 id="warn-return-any"><a href="https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-warn-return-any">--warn-return-any</a></h3>
+<p>If I've written a function and annotated it to return an <code>int</code>, mypy will rightly complain if its implementation actually goes on to return a <code>str</code>.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#569cd6;">def </span><span>foo() -&gt; int:
+</span><span>    </span><span style="color:#608b4e;"># error: Incompatible return value type (got &quot;str&quot;, expected &quot;int&quot;)
+</span><span>    </span><span style="color:#569cd6;">return </span><span style="color:#d69d85;">&quot;hello&quot;
+</span></code></pre>
+<p>If mypy isn't sure what type I'm returning though, i.e. if I'm returning an expression of type <code>Any</code>, then by default mypy will trust that we've done the right thing.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#569cd6;">def </span><span>i_promise_this_is_an_int():
+</span><span>    </span><span style="color:#569cd6;">return </span><span style="color:#d69d85;">&quot;hello&quot;
+</span><span>
+</span><span style="color:#569cd6;">def </span><span>bar() -&gt; int:
+</span><span>    reveal_type(i_promise_this_is_an_int()) </span><span style="color:#608b4e;"># Any
+</span><span>    </span><span style="color:#569cd6;">return </span><span>i_promise_this_is_an_int()
+</span></code></pre>
+<p>Enabling <code>--warn-return-any</code> will disable this behaviour; to make this error pass we'll have to prove to mypy that <code>i_promise_this_is_an_int()</code> really is an <code>int</code>. Sometimes that will be the case, and an extra annotation will provide the necessary proof. At other times (like in this example), investigation will prove that there really is a bug!</p>
+<h3 id="strict-equality"><a href="https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-strict-equality">--strict-equality</a></h3>
+<p>This is a bit like a limited form of gcc's <a href="https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html">-Wtautological-compare</a>. Mypy will report and reject equality tests between incompatible types. If mypy can spot that an equality is always <code>False</code>, there's a good chance of there being a bug in your program, or else an incorrect annotation.</p>
+<p>I'm not sure how general this check is, since users can define their own types with their own rules for equality by overriding <a href="https://docs.python.org/3/reference/datamodel.html?highlight=__eq__#object.__eq__"><strong>eq</strong></a>. Perhaps it only applies to built-in types?</p>
+<h2 id="quantifying-coverage">Quantifying coverage</h2>
+<p>It was important to have some way to numerically evaluate our efforts to improve type coverage. It's a fairly abstract piece of work: there's nothing user-visible about it, unless we happen to discover a bug and fix it.</p>
+<p>The most obvious metric is the number of total errors reported by mypy. Before the recent sprint, we had roughly 600 errors total.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>dmr on titan in sydent on  HEAD (3dde3ad) via 🐍 v3.9.7 (env)
+</span><span>2021-11-08 12:35:37 ✔  $ mypy --strict sydent
+</span><span>Found 635 errors in 59 files (checked 78 source files)
+</span></code></pre>
+<p>This is a decent way to measure your progress when working on a particular module or package, but it's not perfect, because the errors aren't independent. Fixing one could fix another ten or reveal another twenty—the numeric value can be erratic.</p>
+<h3 id="reports">Reports</h3>
+<p>I found mypy's various <a href="https://mypy.readthedocs.io/en/stable/command_line.html#report-generation">reports</a> to be a better approach here. There were three reports I found particularly useful.</p>
+<h4 id="html-report"><code>--html-report</code></h4>
+<p>This produces a main index page showing the "imprecision" of each module. At the bottom of the table is a total imprecision value across the entire project.</p>
+<p><img src="/blog/img/2021-12-17-sydent-typing-html-report-index.png" alt="HTML report, index page. A table showing each module&#39;s precision and number of lines of code." /></p>
+<p>The precision for each module is broken down line-by-line and colour-coded accordingly, which is useful for getting an intuition for what makes a line imprecise. More on that shortly.</p>
+<p><img src="/blog/img/2021-12-17-sydent-typing-html-report-module.png" alt="HTML report, module page. Most lines of source code are highlighted green; a minority are highlighted red." /></p>
+<h4 id="txt-report"><code>--txt-report</code></h4>
+<p>This reproduces the index page from the <code>html</code> report as a plain text file. It's slightly easier to parse—that's how I got the data for the precision line graphs in <a href="https://matrix.org/blog/2021/12/03/type-coverage-for-sydent-motivation">part one</a> of this series. That was a quick and dirty hack, though; a proper analysis of precision probably ought to read from the json or xml output formats. Here's a truncated sample:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>+-----------------------------------+-------------------+----------+
+</span><span>| Module                            | Imprecision       | Lines    |
+</span><span>+-----------------------------------+-------------------+----------+
+</span><span>| sydent                            |   0.00% imprecise |    1 LOC |
+</span><span>| sydent.config                     |   0.00% imprecise |  266 LOC |
+</span><span>| sydent.config._base               |   0.00% imprecise |   31 LOC |
+</span><span>| sydent.config.crypto              |  15.94% imprecise |   69 LOC |
+</span><span>| ...                               |               ... |      ... |
+</span><span>| sydent.validators                 |   0.00% imprecise |   61 LOC |
+</span><span>| sydent.validators.common          |   7.35% imprecise |   68 LOC |
+</span><span>| sydent.validators.emailvalidator  |   1.30% imprecise |  154 LOC |
+</span><span>| sydent.validators.msisdnvalidator |   1.34% imprecise |  149 LOC |
+</span><span>+-----------------------------------+-------------------+----------+
+</span><span>| Total                             |   5.95% imprecise | 9707 LOC |
+</span><span>+-----------------------------------+-------------------+----------+
+</span></code></pre>
+<h4 id="any-exprs-report"><code>--any-exprs-report</code></h4>
+<p>Selecting this option generate two reports: <code>any-exprs.txt</code> and <code>types-of-anys.txt</code>. The latter is interesting to understand where the <code>Anys</code> come from, but the former is more useful for quantifying the progress of typing. Another sample:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>                  Name   Anys   Exprs   Coverage
+</span><span>-------------------------------------------------
+</span><span>                sydent      0       2    100.00%
+</span><span>         sydent.config      0     185    100.00%
+</span><span>   sydent.config._base      0       3    100.00%
+</span><span>  sydent.config.crypto     34      80     57.50%
+</span><span>sydent.config.database      0       8    100.00%
+</span><span>   sydent.config.email      0      86    100.00%
+</span><span>                   ...    ...     ...        ...
+</span><span>-------------------------------------------------
+</span><span>                 Total    544   11366     95.21%
+</span></code></pre>
+<p>The breakdown in <code>types-of-anys.txt</code> has more gory detail. I found the "Unimported" column particularly interesting: it lets us see how exposed we are to a lack of typing in our dependencies.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>                             Name   Unannotated   Explicit   Unimported   Omitted Generics   Error   Special Form   Implementation Artifact
+</span><span>-------------------------------------------------------------------------------------------------------------------------------------------
+</span><span>                           sydent             0          0            0                  0       0              0                         0
+</span><span>                    sydent.config             0          3            0                  0       0              0                         0
+</span><span>              sydent.config._base             0          0            0                  0       0              0                         0
+</span><span>                              ...           ...        ...          ...                ...     ...            ...                       ...
+</span><span>        sydent.util.versionstring             0         80            0                  0       0              0                         0
+</span><span>                sydent.validators             0          4            0                  0       0              0                         0
+</span><span>         sydent.validators.common             0         20            0                  0       0              0                         0
+</span><span> sydent.validators.emailvalidator             0          8            0                  0       0              0                         0
+</span><span>sydent.validators.msisdnvalidator             0          8            0                  0       0              0                         0
+</span><span>-------------------------------------------------------------------------------------------------------------------------------------------
+</span><span>                            Total             9       1276          273                  0      37              0                        17
+</span><span>
+</span></code></pre>
+<h3 id="the-meaning-of-precision">The meaning of precision</h3>
+<p>There are two metrics I chose to focus on:</p>
+<ul>
+<li>the proportion of "imprecise" lines across the project; I also used the complement, <code>precision = 100% - imprecision</code>, and</li>
+<li>the proportion of expressions whose type is not <code>Any</code>.</li>
+</ul>
+<p>These are plotted in the graph at the top of this writeup. I could see that precision and the proportion of typed expressions were correlated, but I didn't understand how they differed. I couldn't see an explanation in the mypy docs, so I went <a href="https://github.com/python/mypy/blob/d807e097d142a88a48af93314d15ad87e41d2f19/mypy/stats.py">digging</a> into the mypy source code. My understanding is as follows.</p>
+<ol>
+<li>There are <a href="https://github.com/python/mypy/blob/d807e097d142a88a48af93314d15ad87e41d2f19/mypy/stats.py#L27-L31">five kinds of precision</a>. Full details are visible in the <code>--lineprecision-report</code>.</li>
+<li>Two kinds of precision, <code>EMPTY</code> and <code>UNANALYZED</code> convey no information, because there's nothing to analyze.</li>
+<li>A line is marked as precise, imprecise or any based on the expressions it uses.
+<ul>
+<li>An expression that has type <code>Any</code> leads to precision <code>ANY</code>.</li>
+<li>I <em>think</em> an expression that <a href="https://github.com/python/mypy/blob/2907a4dea939e20ff39ef7d9ff85ae1a199a0ee8/mypy/stats.py#L422-L423">involves <code>Any</code> but is not <code>Any</code></a> counts as imprecise. For instance, <code>Dict[str, Any]</code>.</li>
+<li>Remaining expressions have precision <code>PRECISE</code>.</li>
+</ul>
+</li>
+<li>A line's precision is the worst of all its expressions' precisions.
+<ul>
+<li><code>ANY</code> is worse than <code>IMPRECISE</code>, which is worse than <code>PRECISE</code>.</li>
+</ul>
+</li>
+</ol>
+<p>The "imprecision" number reported by mypy counts the number of lines <a href="https://github.com/python/mypy/blob/3bdef9fe6d401f3d2e0cacf4964bd315550c3394/mypy/xml/mypy-txt.xslt#L77-L78">classified as <code>IMPRECISE</code> or <code>ANY</code></a>.</p>
+<p>On balance, my preferred metric is the line-level (im)precision percentage. There wasn't much difference between the two in my experience, but the colour-coded visualisation in the HTML report is a neat feature to have. Maybe in the future there could be a version of the HTML report that colour-codes each <em>expression</em>?</p>
+<h2 id="the-larger-typing-ecosystem">The larger typing ecosystem</h2>
+<p>There are plenty of articles out there about the typing. As well as the <a href="http://mypy-lang.blogspot.com/">mypy blog itself</a>, see Daniele Varrazzo's <a href="https://www.varrazzo.com/blog/2020/03/31/first-experience-mypy/">post on <code>psycopg3</code> (2020)</a>, Dropbox's <a href="https://dropbox.tech/application/our-journey-to-type-checking-4-million-lines-of-python">blog post (2019)</a>, Zulip's <a href="https://blog.zulip.com/2016/10/13/static-types-in-python-oh-mypy/">blog post (2016)</a>, Glyph's <a href="https://glyph.twistedmatrix.com/2020/07/new-duck.html">blog post on <code>Protocols</code> (2020)</a> and a follow-up <a href="https://glyph.twistedmatrix.com/2021/03/interfaces-and-protocols.html">comparing them to <code>zope.interface</code> (2021)</a> and Nylas's <a href="https://www.nylas.com/blog/not-your-pie-mypy/">blog (2019)</a>. I'm sure there's plenty more out there.</p>
+<p>It's worth highlighting the <code>typeshed</code> project, which maintains stubs for the standard library, plus popular third-party libraries. I <a href="https://github.com/python/typeshed/pull/6150">submitted a PR</a> to add a single type hint—it was a very pleasant experience! Microsoft has an <a href="https://github.com/microsoft/python-type-stubs">incubator</a> of sorts for stubs too.</p>
+<h3 id="other-typecheckers">Other typecheckers</h3>
+<p>After the sprint to improve coverage, I spent a short amount of time trying the alternative type checkers out there. Mypy isn't the <em>only</em> typechecker out there—other companies have built and open-sourced their own tools, with different strengths, weaknesses and goals. This is by no means an authoritative, exhaustive survey—just my quick notes.</p>
+<h4 id="pyre-facebook"><a href="https://pyre-check.org/">Pyre</a> (Facebook)</h4>
+<ul>
+<li>I couldn't work out how to configure paths to resolve import errors; in the end, I wasn't able to process much of Sydent's source code.</li>
+<li>Couldn't get it to process annotations like <code>syd: "Sydent"</code> where "Sydent" is an import guarded by <a href="https://docs.python.org/3/library/typing.html?highlight=type_checking#typing.TYPE_CHECKING">TYPE_CHECKING</a>.</li>
+<li>No plugin system that I could see. That said, it has a separate mode/program for running <a href="https://pyre-check.org/docs/pysa-basics">"Taint Analysis"</a> to spot security issues.</li>
+<li>Seemed stricter by default compared to mypy: there was less inference of types.</li>
+<li>Also has its own strict mode.</li>
+</ul>
+<h4 id="pyright-microsoft"><a href="https://github.com/microsoft/pyright">Pyright</a> (Microsoft)</h4>
+<ul>
+<li>Didn't seem to recognise <code>getLogger</code> as being imported from <code>logging</code>. Not sure what happened there—maybe something wrong with its bundled version of <code>typeshed</code>?</li>
+<li>In a few places, Sydent uses <code>urllib.parse.quote</code> but only imports <code>urllib</code>. We must be unintentionally relying on our dependencies to <code>import urllib.parse</code> somewhere! Mypy didn't complain about this; pyright did.</li>
+<li>Seemed to give a better explanations of why complex types were incompatible. For example:<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>/home/dmr/workspace/sydent/sydent/replication/pusher.py
+</span><span>   /home/dmr/workspace/sydent/sydent/replication/pusher.py:77:16 - error: Expression of type &quot;DeferredList&quot; cannot be assigned to return type &quot;Deferred[List[Tuple[bool, None]]]&quot;
+</span><span>     TypeVar &quot;_DeferredResultT@Deferred&quot; is contravariant
+</span><span>       TypeVar &quot;_T@list&quot; is invariant
+</span><span>         Tuple entry 2 is incorrect type
+</span><span>           Type &quot;None&quot; cannot be assigned to type &quot;_DeferredResultT@_DeferredListResultItemT&quot; (reportGeneralTypeIssues)
+</span><span> /home/dmr/workspace/sydent/sydent/sms/openmarket.py
+</span><span>   /home/dmr/workspace/sydent/sydent/sms/openmarket.py:93:13 - error: Argument of type &quot;dict[_KT@dict, list[bytes]]&quot; cannot be assigned to parameter &quot;rawHeaders&quot; of type &quot;Mapping[AnyStr@__init__, Sequence[AnyStr@__init__]] | None&quot; in function &quot;__init__&quot;
+</span><span>     Type &quot;dict[_KT@dict, list[bytes]]&quot; cannot be assigned to type &quot;Mapping[AnyStr@__init__, Sequence[AnyStr@__init__]] | None&quot;
+</span><span>       TypeVar &quot;_KT@Mapping&quot; is invariant
+</span><span>         Type &quot;_KT@dict&quot; is incompatible with constrained type variable &quot;AnyStr&quot;
+</span><span>       Type cannot be assigned to type &quot;None&quot; (reportGeneralTypeIssues)
+</span></code></pre>
+This would have been really helpful when interpreting mypy's error reports; I'd love to see something like it in mypy.
+Here's another example where I tried running against a Synapse file.<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>/home/dmr/workspace/synapse/synapse/storage/databases/main/cache.py
+</span><span>/home/dmr/workspace/synapse/synapse/storage/databases/main/cache.py:103:53 - error: Expression of type &quot;list[tuple[Unknown, Tuple[Unknown, ...]]]&quot; cannot be assigned to declared type &quot;List[Tuple[int, _CacheData]]&quot;
+</span><span>  TypeVar &quot;_T@list&quot; is invariant
+</span><span>    Tuple entry 2 is incorrect type
+</span><span>      Tuple size mismatch; expected 3 but received indeterminate number (reportGeneralTypeIssues)
+</span></code></pre>
+This is really valuable information. It's worth considering Pyright as an option to get a second opinion!</li>
+<li>It looks like Pyright's name for <code>Any</code> is <code>Unknown</code>. I think that does a better job of emphasising that <code>Unknown</code> won't be type checked. I'd certainly be more reluctant to type <code>x: Unknown</code> versus <code>x: Any</code>!</li>
+<li>Pyright is the machinery behind <a href="https://github.com/microsoft/pylance-release">Pylance</a>, which drives <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance">VS Code's Python extension</a>. That alone probably makes it worthy of more eyes.</li>
+<li>Seemed like it was the best-placed alternative typechecker to challenge mypy (the de-facto standard).</li>
+</ul>
+<h4 id="pytype-google"><a href="https://github.com/google/pytype">Pytype</a> (Google)</h4>
+<ul>
+<li>Google internal? Seems to be maintained by one person semiregularly by "syncing" from Google.</li>
+<li>Apparently contains a script <a href="https://github.com/google/pytype/tree/master/pytype/tools/merge_pyi">merge-pyi</a> to annotate a source file given a stub file.</li>
+<li>No support for TypedDict: as soon as it saw one in Sydent, it stopped all analysis.</li>
+<li>No Python 3.10 support (according to the README anyway).</li>
+<li>I think it might use a different kind of typing semantics; its <a href="https://google.github.io/pytype/typing_faq.html">typing FAQ</a> speaks of "descriptive typing" and a more lenient approach.</li>
+</ul>
+<h4 id="pycharm"><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></h4>
+<p>PyCharm has its own means to typechecking code as you write it. It's definitely caught bugs before, and having the instant feedback as you type is really nice! I have seen it struggle with <code>zope.interface</code> and some uses of <code>Generic</code>s though.</p>
+<h3 id="runtime-uses-of-annotations">Runtime uses of annotations</h3>
+<p>When annotations <a href="https://www.python.org/dev/peps/pep-3107/">were first introduced</a>, they were a generic means to associate Python objects with parts of a program. (It was only later that the community agreed that we really want to use them to annotate <em>types</em>). These annotations are available at runtime in the <code>__annotations__</code> attribute. There's also a helper function in <code>typing</code> which will help resolve forward references.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; </span><span style="color:#9b9b9b;">from </span><span>typing </span><span style="color:#9b9b9b;">import </span><span>get_type_hints
+</span><span>&gt;&gt;&gt; </span><span style="color:#ff3333;">def </span><span>foo(x: int) -&gt; str: </span><span style="color:#569cd6;">pass
+</span><span style="color:#569cd6;">...
+</span><span>&gt;&gt;&gt; get_type_hints(foo)
+</span><span>{</span><span style="color:#d69d85;">&#39;x&#39;</span><span>: &lt;</span><span style="color:#ff3333;">class </span><span style="color:#d69d85;">&#39;int&#39;</span><span>&gt;, </span><span style="color:#d69d85;">&#39;return&#39;</span><span>: &lt;</span><span style="color:#ff3333;">class </span><span style="color:#d69d85;">&#39;str&#39;</span><span>&gt;}
+</span></code></pre>
+<p>Programs and libraries are free to use these annotations at runtime as they see fit. The most well-known examples are probably <a href="https://docs.python.org/3/library/dataclasses.html">dataclasses</a>, <a href="https://www.attrs.org/en/stable/">attrs</a> with <a href="https://www.attrs.org/en/stable/types.html">auto_attribs=True</a> and <a href="https://pydantic-docs.helpmanual.io/">Pydantic</a>. I'd be interested to learn if anyone else is consuming annotations at runtime!</p>
+<h2 id="summary">Summary</h2>
+<p>All in all, in a two-week sprint we were able to get Sydent's mypy coverage from a precision of 83% up to 94%. Our work would have spotted the <a href="https://github.com/matrix-org/sydent/pull/415">bytes-versus-strings bug</a>; we understand why <a href="https://github.com/matrix-org/sydent/pull/413">the missing await</a> wasn't detected. We <a href="https://github.com/matrix-org/sydent/issues/419">fixed</a> <a href="https://github.com/matrix-org/sydent/issues/449">other</a> <a href="https://github.com/matrix-org/sydent/issues/447">small</a> <a href="https://github.com/matrix-org/sydent/issues/445">bugs</a> too as part of the process. As well as fix bugs, I've hopefully made the source code clearer for future readers (but that one is hard to quantify).</p>
+<p>There's room to spin out contributions upstream too. I submitted <a href="https://github.com/twisted/twisted/pull/1669">two</a> <a href="https://github.com/twisted/twisted/pull/1668">PRs</a> to twisted upstream; have started to work on annotations for <a href="https://github.com/pyca/pynacl/pull/693">pynacl</a> <a href="https://github.com/pyca/pynacl/pull/694">in my</a> <a href="https://github.com/pyca/pynacl/pull/695">spare time</a>; and submitted a quick fix to <a href="https://github.com/python/typeshed/pull/6150">typeshed</a>.</p>
+<p>Looking forward, I think we'd get a quick gain from ensuring that our smaller libraries (<a href="https://github.com/matrix-org/python-signedjson">signedjson</a>, <a href="https://github.com/matrix-org/python-canonicaljson">canonicaljson</a>) are annotated. We'll be sticking with mypy for now—the <code>mypy-zope</code> plugin is crucial given our reliance on twisted. We're also working to improve Sygnal and Synapse—though not to the extreme standard of <code>--strict</code> across everything.</p>
+<p>I'd say the biggest outstanding hole is our processing of JSON objects. There's too much <code>Dict[str, Any]</code> flying around. The ideal for me would be to define <code>dataclass</code> or <code>attr.s</code> class <code>C</code>, and be able to deserialise a JSON object to <code>C</code>, including automatic (deep) type checking. <a href="https://pydantic-docs.helpmanual.io/">Pydantic</a> sounds really close to what we want, but I'm told it will by default gladly interpret the json string <code>"42"</code> as the Python integer <code>42</code>, which isn't what we'd like. More investigation needed there. There are other avenues to explore too, like <a href="https://github.com/erickpeirson/jsonschema-typed">jsonschema-typed</a>, <a href="https://pypi.org/project/typedload/">typedload</a> or <a href="https://github.com/bloomberg/attrs-strict">attrs-strict</a>.</p>
+<p>To end, I'd like to add a few personal thoughts. Having types available in the source code is definitely A Good Thing. But there is a part of me that wonders if it might have been worth writing our projects in a language which incorporates types from day one. There are always trade-offs, of course: runtime performance, build times, iteration speed, ease of onboarding new contributors, ease of deployment, availability of libraries, ability to shoot yourself in the foot... the list goes on.</p>
+<p>On a more upbeat note, adding typing is a great way to get familiar with new source code. It involves a mixture of reading, cross-referencing, deduction, analysis, all across a wide variety of files. It'd be a <em>lot</em> easier to type as you write from the get-go, but typing after the fact is still a worthy use of time and effort.</p>
+<hr />
+<p>Many thanks for reading! If you've got any corrections, comments or queries, I'm available on Matrix at <a href="https://matrix.to/#/@dmrobertson:matrix.org">@dmrobertson:matrix.org</a>.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2021&#x2F;12&#x2F;10&#x2F;type-coverage-for-sydent-annotation&#x2F;" title="Type coverage for Sydent: annotation">Type coverage for Sydent: annotation</a></h2>
+                <span>
+                    10.12.2021 00:00
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/david-robertson">
+                        David Robertson
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>This is the second in a series of three posts which discuss recent work to improve type annotations in <a href="https://github.com/matrix-org/sydent">Sydent</a>, the reference Matrix Identity server. <a href="https://matrix.org/blog/2021/12/03/type-coverage-for-sydent-motivation">Last time</a> we discussed the motivation for doing this work in the first place: the <em>why</em>. Now I want to talk about the <em>how</em>. How did we add annotations to individual files, and across the project as whole? What common idioms did we learn on the way?</p>
+<h2 id="the-process-of-improving-coverage">The process of improving coverage</h2>
+<p>From experience adding typing to Synapse, we decided to annotate one module at a time. We configured a list of files in <code>pyproject.toml</code> which we knew passed mypy's checks. We could run <code>mypy</code> in CI to check that new PRs didn't introduce type problems in modules already covered.</p>
+<p>From there, the workflow was</p>
+<ol>
+<li>Choose a new module to annotate. Add it to the list of <code>files</code> in mypy's configuration.</li>
+<li>Run <code>mypy</code>. See how many errors you get.</li>
+<li>Choose an error. Fix it. Re-run <code>mypy</code>.</li>
+<li>Repeat until no errors remaining.</li>
+<li>Submit for review.</li>
+</ol>
+<p>There are two parts in there which involve a choice. Being honest, I made those choices unscientifically: I tried to choose the easy tasks to do first. My first target was actually the entire <a href="https://github.com/matrix-org/sydent/pull/418">sydent.util</a> subpackage. Probably a bit too large for a first bite! My thinking was that <code>util</code> sounded like something with few dependencies that would have impact across the whole source tree.</p>
+<p>Within a given module, I'd try to fix easier errors first: partly for confidence, partly to build up momentum, and partly to get myself familiar with that piece of source code. For example, I'd often start by telling mypy that <code>mylist = []</code> was actually was a <code>List[str]</code> (rather than the generic <code>List[Any]</code> which it would use otherwise).</p>
+<p>Picking and choosing easy targets works fairly well, but sometimes that means you end up fixing an error that's really a symptom of an earlier one. Other times fixing one error, e.g. by giving a return type annotation to a function—would solve a series of other errors throughout the file. Watching the total number of errors mypy reports bob up and down was intriguing!</p>
+<p>In retrospect, I think it would be smoother to generate some kind of dependency graph for the package. I'm imagining a <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">DAG</a> where whose vertices are modules, and there's an edge <code>A -&gt; B</code> if <code>A</code> imports from <code>B</code>. The sinks of this DAG (i.e. modules which don't depend on any others in the package) are the ideal place to start: you can get something strictly typechecked there without having to annotate a long chain of dependencies across other files. Another strategy would be to see which modules were the least precise according to mypy's reports—but more on those <a href="https://matrix.org/blog/2021/12/17/type-coverage-for-sydent-evaluation">next time</a>.</p>
+<h3 id="you-re-at-the-mercy-of-your-dependencies">You're at the mercy of your dependencies</h3>
+<p>I think this is my single biggest takeaway from the process of adding annotations to Sydent.
+I'll admit the phrasing is melodramatic, but I think it rings true.</p>
+<p>Improving coverage boils down to giving the typechecker more information about your program. The more information it has, the more it can check—and the more errors it can spot. (Hopefully this doesn't make typing come across like a pyramid scheme.) If your dependencies aren't typed, mypy can't validate you're correctly providing inputs and correctly consuming outputs. You might have a bigger impact on overall typing coverage by annotating a dependency (directly or via stubs). I have a hunch that bugs are more likely in code that uses an external dependency: we're much more familiar with the details of our own source code compared to that of a third party we trust.</p>
+<p>It's worth looking to see if your dependencies have a newer version including type annotations. Failing that, they may have a stub package added to <a href="https://github.com/python/typeshed/tree/master/stubs">typeshed</a> and published on PyPI. I saw example of both cases when choosing how to configure mypy for Sydent. If some of your dependencies are under your control, consider annotating them—you'll feel the benefits across multiple projects pretty quickly.</p>
+<h3 id="annotations-when-working-with-twisted">Annotations when working with twisted</h3>
+<p>Twisted is Sydent's biggest dependency, and I certainly felt at its mercy! In particular, it has a few quirks which make it trickier to annotate applications using it. Here's a summary of the work we had to do to get those annotations working.</p>
+<h4 id="partially-typed-modules-and-stubs">Partially typed modules and stubs</h4>
+<p>Early into the process, mypy reported that calling the function <a href="https://twistedmatrix.com/documents/current/api/twisted.python.log.html#err">twisted.python.log.err</a> was an error. It did so because I was running mypy in <a href="https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-strict">--strict mode</a>. We'll talk more about why I did so and what this means <a href="https://matrix.org/blog/2021/12/17/type-coverage-for-sydent-evaluation">next time</a>; for now, it's enough to know that calling a function that isn't fully annotated from within a function that is constitutes an error under strict mode. <code>twisted</code> is partially annotated: many key modules and functions have type annotations, but others don't. I was reluctant to give up on <code>--strict</code>. Instead, I decided to stub the <code>err</code> function myself.</p>
+<p>A stub is a cut-down version of a python function, class or module which lives in a <code>.pyi</code> file. All implementation details are removed; only type annotations remain. Stubs are useful when you want to write annotations for code you don't control. The <a href="https://github.com/python/typeshed">typeshed</a> library is probably the best example: a collection of third party stubs for the standard library, plus some popular third party packages. Microsoft's <a href="https://github.com/microsoft/python-type-stubs">python-type-stubs</a> is another example. They'd also solve the problem I mentioned at the end of the <a href="https://matrix.org/blog/2021/12/03/type-coverage-for-sydent-motivation">first part</a>: I could use a stub to <em>teach</em> mypy that <code>IResponse.headers</code> was a <code>Headers</code> object.</p>
+<p>Writing a stub for <code>log.err</code> was straightforward, thanks mainly to Twisted's thorough documentation. I chose to write it by hand, rather than use <a href="https://mypy.readthedocs.io/en/stable/stubgen.html">stubgen</a>. I'd heard of the latter, but was reluctant to use it for a few reasons.</p>
+<ul>
+<li>Twisted is a big project with many big files. I didn't want to commit huge stub files for me and my colleagues to maintain.</li>
+<li>The more our stubs cover, the larger the risk of a stub becoming out-of-date with twisted itself. Upstream twisted is the best place for these annotations.</li>
+<li>We only need annotations for the bits of twisted that we're using.</li>
+<li>And, being honest: I wanted the low-level experience of writing stubs, cross-referencing between the source and working how to best capture its type semantics.</li>
+</ul>
+<p>I think this decision to write a targeted stub made sense at the time. After all, <code>twisted.python.logging.err</code> is just one simple function! But for the project as a whole, I regret not using <code>stubgen</code> to generate module-level stubs. The reason for this is that a <code>.pyi</code> stub file accounts for an entire module: <a href="https://github.com/python/mypy/issues/5880#issuecomment-439237176">no more and no less</a>. This means that the stubs I was writing for parts of twisted only covered the functions and classes I'd stubbed. Any existing annotations in the twisted source code would be ignored, along with any types that mypy was able to infer for itself.</p>
+<p>I think it would have been more efficient to use <code>stubgen</code> to generate stubs and patch them up, rather than writing them. That would have helped avoid a few cases I encountered where stubbing one function would cause additional typechecking failures (because mypy was no longer examining the twisted source for that file). It would also have meant that I could just faithfully stub Twisted as it is; in practice, I would sometimes hesitate to stub to avoid having to cover another module. <code>sydent.http</code> was the most painful part of the source tree for this: that's where we make the most use of Twisted.</p>
+<h4 id="defer-inlinecallbacks"><a href="https://twistedmatrix.com/documents/current/api/twisted.internet.defer.html#inlineCallbacks">defer.inlineCallbacks</a></h4>
+<p>This is a decorator which allows us to write code in the style of <code>async</code>/<code>await</code> without actually using that syntax. (Twisted predates <code>asyncio</code> and the <code>async</code>/<code>await</code> syntax, introduced in Python 3.4 and 3.5 respectively. It was originally released in 2002, back when Python had released version 2.2.) We only use it in <a href="https://github.com/matrix-org/sydent/blob/e4b4dbbdf25255d19effceae7061ad9b3eefc374/sydent/http/matrixfederationagent.py#L125-L132">one place in Sydent</a> nowadays, but I've seen used across Synapse too. I mention it here because it was a bit fiddly to annotate. Here's its use in Sydent:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>    @defer.inlineCallbacks
+</span><span>    </span><span style="color:#569cd6;">def </span><span>request(
+</span><span>        self,
+</span><span>        method: bytes,
+</span><span>        uri: bytes,
+</span><span>        headers: Optional[</span><span style="color:#d69d85;">&quot;Headers&quot;</span><span>] = </span><span style="color:#569cd6;">None</span><span>,
+</span><span>        bodyProducer: Optional[</span><span style="color:#d69d85;">&quot;IBodyProducer&quot;</span><span>] = </span><span style="color:#569cd6;">None</span><span>,
+</span><span>    ) -&gt; Generator[</span><span style="color:#d69d85;">&quot;defer.Deferred[Any]&quot;</span><span>, Any, IResponse]:
+</span></code></pre>
+<p>Here, <code>request</code> is a <a href="https://docs.python.org/3/glossary.html#term-generator">generator function</a> because its body uses the <code>yield</code> keyword. Yielding allows the function to relinquish control back to twisted's reactor, only for its execution to be resumed asynchronously in the future. The <a href="https://docs.python.org/3/library/typing.html?highlight=typing%20generator#typing.Generator">Generator</a> type takes three parameters:</p>
+<ul>
+<li>a <code>YieldType</code>, <code>Deferred[Any]</code>;</li>
+<li>a <code>SendType</code>, <code>Any</code>; and</li>
+<li>a <code>ReturnType</code>, <code>IResponse</code>.</li>
+</ul>
+<p>Why have I opted to use <code>Any</code> here, when we've seen (and will see) that this limits mypy's ability to run checks? The answer is that we yield two different types within the function. Firstly a <a href="https://github.com/matrix-org/sydent/blob/e4b4dbbdf25255d19effceae7061ad9b3eefc374/sydent/http/matrixfederationagent.py#L152-L153">routing result</a>:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>        routing: _RoutingResult
+</span><span>        routing = </span><span style="color:#569cd6;">yield </span><span>defer.ensureDeferred(self._route_matrix_uri(parsed_uri))
+</span></code></pre>
+<p>and later, <a href="https://github.com/matrix-org/sydent/blob/e4b4dbbdf25255d19effceae7061ad9b3eefc374/sydent/http/matrixfederationagent.py#L194-L195">the IResponse</a> we go on to return:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>        res: IResponse
+</span><span>        res = </span><span style="color:#569cd6;">yield </span><span>agent.request(method, uri, headers, bodyProducer)
+</span></code></pre>
+<ul>
+<li>
+<p>In this example:</p>
+</li>
+<li>
+<p>We yield a value <code>y: Deferred[Any]</code>.</p>
+</li>
+<li>
+<p>That will later be resolved by twisted to an <code>x: Any</code> value. Twisted will send that value to <code>request</code>, and the execution continues.</p>
+</li>
+<li>
+<p>This repeats, until we eventually return an <code>IResponse</code>.</p>
+</li>
+</ul>
+<p>I could more correctly annotate the <code>YieldType</code> as <code>Deferred[Union[_RoutingResult, IResponse]]</code> so that the <code>SendType</code> was <code>Union[_RoutingResult, IResponse]</code>. But this would mean we end up having some kind of type check at each yield point: a <code>cast</code>, or a <code>type: ignore</code>, or a runtime <code>isinstance</code> check. It didn't feel like it was worth the boilerplate, especially since I could narrow e.g. <code>res: Any</code> to <code>res: IResponse</code> with minimal effort.</p>
+<p>This problem doesn't arise with using the <code>async/await</code> syntax:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#569cd6;">async def </span><span>foo() -&gt; int:
+</span><span>    </span><span style="color:#569cd6;">return </span><span style="color:#b5cea8;">1
+</span><span>
+</span><span style="color:#569cd6;">async def </span><span>bar() -&gt; </span><span style="color:#569cd6;">None</span><span>:
+</span><span>    x = </span><span style="color:#569cd6;">await </span><span>foo()
+</span><span>    reveal_type(foo())
+</span><span>    reveal_type(x)
+</span></code></pre>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>$ mypy example.py
+</span><span>example.py:6: note: Revealed type is &quot;typing.Coroutine[Any, Any, builtins.int]&quot;
+</span><span>example.py:7: note: Revealed type is &quot;builtins.int*&quot;
+</span></code></pre>
+<p>Behind the scenes, I <em>think</em> that <code>x = await foo()</code> is really using the same mechanism as the <code>inlineCallbacks</code> approach.</p>
+<ul>
+<li>An <code>async def</code> function is really a generator function behind the scenes.</li>
+<li>When we <code>await foo()</code>, we yield the expression <code>foo()</code></li>
+<li>Then the machinery running our coroutine <code>c</code> will call <code>c.send(x)</code> to resume execution, where <code>x</code> is the value produced by waiting for <code>foo()</code>.</li>
+</ul>
+<p>With the <code>await</code> form, mypy knows two things:</p>
+<ul>
+<li>the value <code>foo()</code> which was yielded should be <code>Awaitable[T]</code>, and</li>
+<li>the value <code>x</code> send to the coroutine should come from awaiting <code>foo()</code>, and therefore be of type <code>T</code>.</li>
+</ul>
+<p>Mypy can't assume or enforce these rules for the yield form, which can yield and send whatever it likes. There's no reason why the send type should be related to the yield type. Here's a toy example:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#9b9b9b;">from </span><span>typing </span><span style="color:#9b9b9b;">import </span><span>Any, Dict, Generator
+</span><span>
+</span><span>
+</span><span style="color:#569cd6;">def </span><span>generator_function() -&gt; Generator[int, str, Dict[str, Any]]:
+</span><span>  y: int = </span><span style="color:#b5cea8;">10
+</span><span>  x: str = </span><span style="color:#569cd6;">yield </span><span>y
+</span><span>  print(</span><span style="color:#d69d85;">&quot;Coroutine was sent&quot;</span><span>, x)  </span><span style="color:#608b4e;"># -&gt; Coroutine was sent hello
+</span><span>  </span><span style="color:#569cd6;">return </span><span>{</span><span style="color:#d69d85;">&quot;got&quot;</span><span>: x, </span><span style="color:#d69d85;">&quot;done&quot;</span><span>: </span><span style="color:#569cd6;">True</span><span>}
+</span><span>
+</span><span>coroutine = generator_function()
+</span><span>y = next(coroutine)
+</span><span>
+</span><span style="color:#569cd6;">try</span><span>:
+</span><span>  coroutine.send(</span><span style="color:#d69d85;">&quot;hello&quot;</span><span>)
+</span><span style="color:#569cd6;">except </span><span>StopIteration </span><span style="color:#569cd6;">as </span><span>e:
+</span><span>  return_value = e.value
+</span><span>  print(return_value)  </span><span style="color:#608b4e;"># -&gt; {&#39;got&#39;: &#39;hello&#39;, &#39;done&#39;: True}
+</span></code></pre>
+<p>All in all, the handling of <code>inlineCallbacks</code> is a situation specific to working with (older?) twisted code. It's still nice to understand what's going on behind the scenes though!</p>
+<h4 id="zope-interface-interface"><code>zope.interface.Interface</code></h4>
+<p>Twisted makes use of <code>zope</code>'s <code>Interface</code> to define a number of abstract interface classes. Speaking personally, I've not seen it used outside twisted, and I think that means it's not supported by much of the typechecking tooling. For example, I've definitely seen PyCharm struggle to realise that it's okay to pass a <code>Response</code> to a function which expects an <code>IResponse</code>! Here's a more complicated example where <code>PyCharm</code> isn't happy with me widening the type <code>LoggingHostnameEndpoint</code> to <code>IStreamClientEndpoint</code>, even though <a href="https://github.com/matrix-org/sydent/blob/92ff7a878a25696365b10cc49e32f5cba32c5960/sydent/http/matrixfederationagent.py#L379-L380">the latter implements the former</a>.</p>
+<p><img src="/blog/img/2021-12-10-pycharm-false-positive.png" alt="Screenshot from pycharm showing a false positive warning" /></p>
+<p>Mypy out of the box doesn't play well with a zope <code>Interface</code> (nor does any other typechecker I tried). Fortunately, the excellent <a href="https://github.com/Shoobx/mypy-zope">mypy-zope</a> plugin helps here: it teaches mypy that any class like <code>Response</code> which <code>@implements(IResponse)</code>  can be passed in place of an <code>IResponse</code>.</p>
+<h3 id="tricks-of-the-trade">Tricks of the trade</h3>
+<p>At this point I'd like to share a few generic lessons about typing I'd picked up. Nothing ground-breaking here: I think these are all fairly well-known. Hopefully they're the start of a good cheat sheet for annotating—though it pales in comparison to the <a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html">Mypy cheat sheet</a>.</p>
+<h4 id="annotating-decorators">Annotating decorators</h4>
+<p>Annotating decorators is fiddly, but it's also vitally important. An unannotated decorator will mask or throw away your decoratee's annotations! The way to write the annotation is best explained by the <a href="https://mypy.readthedocs.io/en/stable/generics.html#declaring-decorators">mypy docs</a>, but briefly: it involves a <code>TypeVar</code> and sometimes a <code>cast</code> too. Here's an example.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#9b9b9b;">from </span><span>typing </span><span style="color:#9b9b9b;">import </span><span>TypeVar, Callable, Any, cast
+</span><span>
+</span><span>F = TypeVar(</span><span style="color:#d69d85;">&quot;F&quot;</span><span>, bound=Callable[</span><span style="color:#569cd6;">...</span><span>, Any])
+</span><span>
+</span><span style="color:#569cd6;">def </span><span>decorator(input: F) -&gt; F:
+</span><span>    </span><span style="color:#569cd6;">def </span><span>wrapped(</span><span style="color:#569cd6;">*</span><span>args: Any, </span><span style="color:#569cd6;">**</span><span>kwargs: Any) -&gt; Any:
+</span><span>        print(</span><span style="color:#569cd6;">f</span><span style="color:#d69d85;">&quot;Calling </span><span>{f.__name__}</span><span style="color:#d69d85;">&quot;</span><span>)
+</span><span>        </span><span style="color:#569cd6;">return </span><span>input_func(*args, </span><span style="color:#569cd6;">**</span><span>kwargs)
+</span><span>    </span><span style="color:#569cd6;">return </span><span>cast(F, wrapped)
+</span></code></pre>
+<p>The idea here is</p>
+<ol>
+<li>Use <code>Callable[..., Any]</code> to describe a generic function with no particular signature.</li>
+<li>Use that as a bound on a type variable <code>F</code>. At each usage of <code>@decorator</code>, mypy will deduce a more specific version of <code>F</code>, e.g. <code>Callable[[int], str]</code>.</li>
+<li>Within that usage of <code>@decorator</code>, <code>F</code> is fixed to that specific type. We use <code>-&gt; F</code> to express that "we return a function with the same signature as the decoratee".</li>
+<li>Unfortunately, we don't have a good way to tell <code>mypy</code> that <code>wrapped</code> also has that signature <code>F</code>. We resort to a <code>cast</code> to force mypy to accept this without proof.</li>
+</ol>
+<p>This might change in the future, e.g. when <a href="https://docs.python.org/3/library/typing.html?highlight=paramspec#typing.ParamSpec">ParamSpec</a> is <a href="https://github.com/python/mypy/issues/8645">fully understood</a> by mypy.</p>
+<h4 id="prefer-object-over-any">Prefer <code>object</code> over <code>Any</code></h4>
+<p>Both of these are general types for expressing "I don't know anything about this expression". But only the former will undergo static type checks. We want those type checks to guard against bugs accidentally introduced in the future. For instance, imagine a class with an <code>Any</code> attribute.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#9b9b9b;">from </span><span>typing </span><span style="color:#9b9b9b;">import </span><span>Any
+</span><span style="color:#9b9b9b;">import </span><span>dataclasses
+</span><span>
+</span><span>@dataclasses.dataclass
+</span><span style="color:#569cd6;">class </span><span>C:
+</span><span>    label: Any
+</span></code></pre>
+<p>Imagine in the future we add a new method which assumes that <code>label</code> is a string:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>    </span><span style="color:#569cd6;">def </span><span>greeting(self) -&gt; str:
+</span><span>        </span><span style="color:#569cd6;">return </span><span style="color:#d69d85;">&quot;My name is &quot; </span><span>+ self.label
+</span></code></pre>
+<p>Mypy will consider this valid, because no type-checking is done on an <code>Any</code> value. It will complain that it can't prove that <code>greeting</code> returns a <code>str</code>, if <code>--warn-return-any</code> is enabled; but putting that aside, it can't identify the call site as a bug. The bug slips through to runtime.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>C(</span><span style="color:#b5cea8;">123</span><span>).greeting()  </span><span style="color:#608b4e;"># TypeError: can only concatenate str (not &quot;int&quot;) to str
+</span></code></pre>
+<p>Replacing the <code>Any</code> with <code>object</code> does allow mypy to spot the problem.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>error: Unsupported operand types for + (&quot;str&quot; and &quot;object&quot;)  [operator]
+</span></code></pre>
+<h4 id="type-ignore-and-cast-sparingly"><code># type: ignore</code> and <code>cast</code> sparingly</h4>
+<p>There's a good chance that mypy knows better than we do, so we should only overrule it if there's no better option. There are two techniques for this. One option is to tell mypy to just silence the error, by appending a <code># type: ignore</code> comment to the erroneous line. The other is to force it to accept that a certain expression has a given type: that's what <a href="https://docs.python.org/3/library/typing.html?highlight=paramspec#typing.cast">cast</a> is for.</p>
+<p>I never like using either of these, but sometimes they're the most practical choice. I'd recommend two best practices for their use, however:</p>
+<ol>
+<li>Only ignore a specific error code, e.g. <code># type: ignore[assignment]</code>.  Those codes can be displayed by passing <code>--show-error-codes</code> to mypy.</li>
+<li>Leave a comment before every <code>#type: ignore[...]</code> and every <code>cast</code> to justify their correctness. I don't think this is a widely-held practice. I picked it up from the Rust world, where it's <a href="https://rust-lang.github.io/api-guidelines/documentation.html#function-docs-include-error-panic-and-safety-considerations-c-failure">encouraged</a> as a way to justify <code>unsafe</code> source code.</li>
+</ol>
+<h4 id="there-s-good-stuff-in-typing">There's good stuff in <code>typing</code></h4>
+<p>It's worth a read through the <a href="https://docs.python.org/3/library/typing.html">module documentation</a>—plenty of things in there I wish I'd known about sooner. There's lots in the toolkit to chose from. Some bits I use fairly often include:</p>
+<ul>
+<li><a href="https://docs.python.org/3/library/typing.html?highlight=typing%20protocol#typing.Protocol">Protocol</a>: lets you formalise duck typing. To use it, define a class that inherits from <code>Protocol</code>. Its methods and attributes are all stubs which describe what you require of objects belonging to this type. It's like an <a href="https://docs.python.org/3/library/abc.html?highlight=abc#module-abc">abstract base class</a> or interface, but purely at typecheck time.</li>
+<li><a href="https://docs.python.org/3/library/typing.html?highlight=typing%20generic#typing.Generic">Generic</a>: define your own generic types. A bit of a slippery slope to type mania!</li>
+<li>[Optional<code>](https://docs.python.org/3/library/typing.html?highlight=typing%20generic#typing.Optional): I use this all the time. It's always good to make your </code>None`s explicit!</li>
+<li><a href="https://docs.python.org/3/library/typing.html?highlight=typing%20generic#typing.NewType">NewType</a>: I haven't had a chance to use it much. As I understand it, it's a way to define a "strong typedef". For example, we can use it to distinguish lengths from durations, even if they're both represented by a <code>float</code> at runtime.</li>
+</ul>
+<p>I want to call out two parts of <code>typing</code> in particular:</p>
+<h4 id="overload"><a href="https://docs.python.org/3/library/typing.html?highlight=typing%20generic#typing.overload">overload</a></h4>
+<p><code>overload</code> is a way to provide extra information about a function depending on how it's called. For instance, consider this function which takes a <code>str</code> or <code>bytes</code> as input and returns its uppercase version.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#569cd6;">def </span><span>upper(x: Union[bytes, str]) -&gt; Union[bytes, str]:
+</span><span>    </span><span style="color:#569cd6;">return </span><span>x.upper()
+</span></code></pre>
+<p>The problem with this annotation is that we'll have to check at every call site to see if the return value was a <code>bytes</code> or a <code>str</code> object. But we know that uppercasing a <code>str</code> gives us a <code>str</code>, and uppercasing a <code>bytes</code> gives us a <code>bytes.</code> We can use <code>overload</code> to express this.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#9b9b9b;">from </span><span>typing </span><span style="color:#9b9b9b;">import </span><span>overload
+</span><span>
+</span><span>@overload
+</span><span style="color:#569cd6;">def </span><span>upper(x: str) -&gt; str: </span><span style="color:#569cd6;">...
+</span><span>
+</span><span>@overload
+</span><span style="color:#569cd6;">def </span><span>upper(x: bytes) -&gt; bytes: </span><span style="color:#569cd6;">...
+</span><span>
+</span><span style="color:#569cd6;">def </span><span>upper(x: Union[bytes, str]) -&gt; Union[bytes, str]:
+</span><span>    </span><span style="color:#569cd6;">return </span><span>x.upper()
+</span></code></pre>
+<p>The first two <code>@overload</code> definitions are like stubs: they're purely used for their annotations. The actual runtime implementation is specified at the end, undecorated. (<strong>NB</strong>: this specific example is better expressed without overloads, by using <a href="https://docs.python.org/3/library/typing.html?highlight=typing%20generic#typing.AnyStr">AnyStr</a>.)</p>
+<p>I was really impressed to see how <code>mypy</code> could use this overloading information. Here's an example:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#9b9b9b;">from </span><span>typing </span><span style="color:#9b9b9b;">import </span><span>overload, Literal
+</span><span>
+</span><span>@overload
+</span><span style="color:#569cd6;">def </span><span>f(x: int) -&gt; Literal[</span><span style="color:#b5cea8;">1</span><span>]: </span><span style="color:#569cd6;">...
+</span><span>
+</span><span>@overload
+</span><span style="color:#569cd6;">def </span><span>f(x: str) -&gt; Literal[</span><span style="color:#b5cea8;">2</span><span>]: </span><span style="color:#569cd6;">...
+</span><span>
+</span><span style="color:#569cd6;">def </span><span>f(x: object) -&gt; int:
+</span><span>    </span><span style="color:#569cd6;">if </span><span>isinstance(x, int):
+</span><span>        </span><span style="color:#569cd6;">return </span><span style="color:#b5cea8;">1
+</span><span>    </span><span style="color:#569cd6;">elif </span><span>isinstance(x, str):
+</span><span>        </span><span style="color:#569cd6;">return </span><span style="color:#b5cea8;">2
+</span><span>    </span><span style="color:#569cd6;">return </span><span style="color:#b5cea8;">3
+</span><span>
+</span><span style="color:#569cd6;">if </span><span>f(</span><span style="color:#b5cea8;">10</span><span>) == </span><span style="color:#b5cea8;">2</span><span>:
+</span><span>    print(</span><span style="color:#d69d85;">&quot;potato&quot;</span><span>)
+</span></code></pre>
+<p>We can see that <code>f(10) == 1</code> and so the equality is always <code>False</code>: we'll never print the word "potato". Mypy can reason through this too, if we ask it nicely.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>$ mypy example.py
+</span><span>Success: no issues found in 1 source file
+</span><span>
+</span><span>$ mypy --strict-equality --warn-unreachable example.py
+</span><span>example.py:16: error: Non-overlapping equality check (left operand type: &quot;Literal[1]&quot;, right operand type: &quot;Literal[2]&quot;)
+</span><span>example.py:17: error: Statement is unreachable
+</span><span>Found 2 errors in 1 file (checked 1 source file)
+</span></code></pre>
+<h4 id="typeddict"><a href="https://docs.python.org/3/library/typing.html?highlight=typeddict#typing.TypedDict">TypedDict</a></h4>
+<p>I mentioned this <a href="https://matrix.org/blog/2021/12/03/type-coverage-for-sydent-motivation">in last week's post</a>) when talking about the missing <code>await</code> bug.
+Subclassing from <code>TypedDict</code> allows us to define a new type whose values are dictionaries with</p>
+<ul>
+<li>a fixed set of keys (some mandatory, some not), and</li>
+<li>a fixed type for each key's value.</li>
+</ul>
+<p><a href="https://www.python.org/dev/peps/pep-0589/">PEP 589</a> can best describe the motivation, but in short: there's a lot of source code out there that passes dictionaries around. <code>TypedDict</code> is a way to gradually add typechecking to that code, without having to refactor it to use e.g. a <a href="https://docs.python.org/3/library/dataclasses.html">dataclass</a> or a <a href="https://docs.python.org/3/library/typing.html#typing.NamedTuple">NamedTuple</a>. Let's have a quick example.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#9b9b9b;">from </span><span>typing </span><span style="color:#9b9b9b;">import </span><span>List, TypedDict
+</span><span>
+</span><span style="color:#569cd6;">class </span><span>Person(</span><span style="color:#4ec9b0;">TypedDict</span><span>):
+</span><span>    full_name: str
+</span><span>    nicknames: List[str]
+</span><span>    age: int
+</span><span>
+</span><span>p: Person = {
+</span><span>    </span><span style="color:#d69d85;">&quot;full_name&quot;</span><span>: </span><span style="color:#d69d85;">&quot;David Matthew Robertson&quot;</span><span>,
+</span><span>    </span><span style="color:#d69d85;">&quot;nicknames&quot;</span><span>: [</span><span style="color:#d69d85;">&quot;dmr&quot;</span><span>],
+</span><span>    </span><span style="color:#d69d85;">&quot;age&quot;</span><span>: </span><span style="color:#b5cea8;">29</span><span>,
+</span><span>}
+</span></code></pre>
+<p>Mypy will detect if you delete or omit a required key, or if you insert a key that's not part of the type.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#608b4e;"># error: Key &quot;age&quot; of TypedDict &quot;Person&quot; cannot be deleted
+</span><span style="color:#569cd6;">del </span><span>p[</span><span style="color:#d69d85;">&quot;age&quot;</span><span>]
+</span><span>
+</span><span style="color:#608b4e;"># error: Missing keys (&quot;full_name&quot;, &quot;nicknames&quot;, &quot;age&quot;) for TypedDict &quot;Person&quot;
+</span><span>p2: Person = {}
+</span><span>
+</span><span style="color:#608b4e;"># error: TypedDict &quot;Person&quot; has no key &quot;eye_colour&quot;
+</span><span>p[</span><span style="color:#d69d85;">&quot;eye_colour&quot;</span><span>] = </span><span style="color:#d69d85;">&quot;brown&quot;
+</span></code></pre>
+<p><code>TypedDict</code> is a useful tool, but there are a few important gotchas to be aware of. In my view, these are all minor and worth putting up with, to benefit from the extra type information that a <code>TypedDict</code> provides. Let's take a look.</p>
+<h5 id="typeddict-is-incompatible-with-dict"><code>TypedDict</code> is incompatible with <code>Dict</code></h5>
+<p>This one surprised me at first. Why can't I pass my <code>TypedDict</code> to a function that accepts a generic dictionary?</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#9b9b9b;">import </span><span>json
+</span><span style="color:#9b9b9b;">from </span><span>typing </span><span style="color:#9b9b9b;">import </span><span>Dict, TypedDict
+</span><span>
+</span><span style="color:#569cd6;">class </span><span>Foo(</span><span style="color:#4ec9b0;">TypedDict</span><span>):
+</span><span>    bar: str
+</span><span>
+</span><span style="color:#569cd6;">def </span><span>print_size(d: Dict[object, object]) -&gt; </span><span style="color:#569cd6;">None</span><span>:
+</span><span>    print(len(d))
+</span><span>
+</span><span>f: Foo = {</span><span style="color:#d69d85;">&quot;bar&quot;</span><span>: </span><span style="color:#d69d85;">&quot;baz&quot;</span><span>}
+</span><span style="color:#608b4e;"># error: Argument 1 to &quot;print_size&quot; has incompatible type &quot;Foo&quot;; expected &quot;Dict[object, object]&quot;
+</span><span>print_size(f)
+</span></code></pre>
+<p>The answer is that it wouldn't be type-safe! For all we know, the function <code>print_size</code> might mutate its argument <code>d</code>. It might add a key, remove a key, or change the type of a value. Each of those would break the contract that <code>TypedDict</code> is supposed to enforce, so mypy is correct to flag this as an error. <a href="https://github.com/python/mypy/issues/4976">This GitHub issue</a> has more discussion.</p>
+<p>There are few workarounds for this kind of problem.</p>
+<ul>
+<li>The function might be able to accept a <code>TypedDict</code> directly.</li>
+<li>The function could accept a <code>Mapping</code> instead of a <code>Dict</code>. This is type-safe because the <code>Mapping</code> type does not offer mutating methods such as <code>pop</code>, <code>__setitem__</code>, <code>__del__</code>; but it only works if the function does not mutate the dictionary.</li>
+<li>A more drastic approach would discard the <code>TypedDict</code> information with a <code>cast</code> to <code>Dict[str, object]</code> or similar. If so, I'd strongly recommend a comment explaining why the cast is correct and safe.</li>
+</ul>
+<h5 id="mixing-mandatory-and-required-fields">Mixing mandatory and required fields</h5>
+<p>Secondly, defining a <code>TypedDict</code> with a mixture of optional and required keys is a little fiddly. All keys can be made optional by passing <code>total=False</code> in the class definition. To have some keys optional and others mandatory, we have to make <em>two</em> TypedDicts. Say for instance we wanted to allow a potentially-missing <code>favourite_colour</code> field to <code>Person</code>. We can't add an annotation <code>favourite_colour: Optional[str]</code> to the first class body. That's optional in a different sense: it would mean that <code>favourite_colour</code> is a mandatory field which is allowed to be <code>None</code>. Instead, we apply <code>total=False</code> to a subclass:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#9b9b9b;">from </span><span>typing </span><span style="color:#9b9b9b;">import </span><span>List, TypedDict
+</span><span>
+</span><span style="color:#569cd6;">class </span><span>_PersonRequired(</span><span style="color:#4ec9b0;">TypedDict</span><span>):
+</span><span>    full_name: str
+</span><span>    nicknames: List[str]
+</span><span>    age: int
+</span><span>
+</span><span style="color:#569cd6;">class </span><span>Person(</span><span style="color:#4ec9b0;">_PersonRequired</span><span>, total=</span><span style="color:#4ec9b0;">False</span><span>):
+</span><span>    favourite_colour: str
+</span></code></pre>
+<p>This means that a valid <code>Person</code> dictionary may have no <code>favourite_colour</code> key. If it is present, it must be a <code>str</code>.</p>
+<p>The syntax is unfortunately a little clunky. <a href="https://www.python.org/dev/peps/pep-0655/">PEP 655</a> acknowledges this and proposes an alternative.</p>
+<h5 id="typeddict-is-typecheck-time-only"><code>TypedDict</code> is typecheck-time only</h5>
+<p>One final note: a <code>TypedDict</code> does no validation or conversion whatsoever. If mypy can't know the keys and values a dictionary will have a typecheck-time, you'll need to validate it by hand at runtime. We see this a lot because when deserialising json objects into a dictionary. Here's an example.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#9b9b9b;">import </span><span>json
+</span><span style="color:#9b9b9b;">from </span><span>typing </span><span style="color:#9b9b9b;">import </span><span>TypedDict
+</span><span>
+</span><span style="color:#569cd6;">class </span><span>Foo(</span><span style="color:#4ec9b0;">TypedDict</span><span>):
+</span><span>    bar: str
+</span><span>
+</span><span style="color:#608b4e;"># note: Revealed type is &quot;Any&quot;
+</span><span>reveal_type(json.loads(</span><span style="color:#d69d85;">&quot;</span><span style="color:#b4cea8;">{}</span><span style="color:#d69d85;">&quot;</span><span>))
+</span><span style="color:#608b4e;"># no error. mypy can&#39;t do analysis on Any.
+</span><span>f: Foo = json.loads(</span><span style="color:#d69d85;">&quot;</span><span style="color:#b4cea8;">{}</span><span style="color:#d69d85;">&quot;</span><span>)
+</span></code></pre>
+<h2 id="next-time">Next time</h2>
+<p>This covers a lot of the machinery and the day-to-day process of annotating Sydent. The <a href="https://matrix.org/blog/2021/12/17/type-coverage-for-sydent-evaluation">last part of this series</a> will give us a chance to quantify our efforts and reflect on the wider typing ecosystem.</p>
+<hr />
+<p>Many thanks for reading! If you've got any corrections, comments or queries, I'm available on Matrix at <a href="https://matrix.to/#/@dmrobertson:matrix.org">@dmrobertson:matrix.org</a>.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2021&#x2F;12&#x2F;03&#x2F;type-coverage-for-sydent-motivation&#x2F;" title="Type coverage for Sydent: motivation">Type coverage for Sydent: motivation</a></h2>
+                <span>
+                    03.12.2021 00:00
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/david-robertson">
+                        David Robertson
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p><em>This is the first of three posts on improving type coverage in Sydent. Join us next Friday for the <a href="https://matrix.org/blog/2021/12/10/type-coverage-for-sydent-annotation">second part</a>!</em></p>
+<p><a href="https://github.com/matrix-org/sydent">Sydent</a> is the reference Matrix Identity server. It provides a <a href="https://matrix.org/docs/spec/identity_service/r0.3.0">lookup service</a>, so that you can find a Matrix user via their email address or phone number (if they've chosen to share it).</p>
+<p>We recently worked on <a href="https://github.com/matrix-org/sydent/issues/414">improving Sydent's type coverage</a>: the proportion of its source code with explicit annotations denoting the kind of data that each variable, expression and return value is expected to hold. These annotations are optional, but if present, they allow tools like <a href="https://mypy.readthedocs.io/en/stable/">mypy</a> to analyze your programs and spot entire classes of bugs <em>before</em> you ship them! In this instance, we aimed to make Sydent pass <code>mypy --strict</code>, which <a href="https://github.com/matrix-org/sydent/commit/7bdaac2774840e1f9697d30515f367c5c8c16866">it now does</a>. Here's what the process looked like:</p>
+<p><img src="/blog/img/TWGXKTFpjYxlbnHRkZFAzljQ.png" alt="Coverage as measured by mypy. Precision and the number of typed expressions increase over the latter half of 2021." /></p>
+<p>Two lines show two different measures of how well-typed the project is. The grey region covers our two-week sprint towards improving coverage; the earliest data point is from just before previous efforts to improve typing earlier in the year.</p>
+<p>In a series of posts, I'd like to reflect on this sprint and share what we've learned. In particular, I aim to:</p>
+<ul>
+<li>explain why we wanted to improve type coverage <em>now</em>;</li>
+<li>work through examples to see how (if?) mypy could have spotted bugs;</li>
+<li>describe the annotation process;</li>
+<li>illustrate common patterns I learned along the way;</li>
+<li>discuss the checks that <code>mypy</code> provides; and finally</li>
+<li>reflect on the state of Python's typing ecosystem.</li>
+</ul>
+<p>In this first part, we'll concentrate on the first two topics; the <a href="https://matrix.org/blog/2021/12/10/type-coverage-for-sydent-annotation">second</a> covers the middle two; and the <a href="https://matrix.org/blog/2021/12/17/type-coverage-for-sydent-evaluation">third</a> the last two.</p>
+<h2 id="why-do-this-now">Why do this now?</h2>
+<p>It took us a long time (too long) to notice that the Sydent instance serving <code>matrix.org</code> <a href="https://github.com/vector-im/element-web/issues/19317">was failing to send SMS messages for verification</a>. We suspected that something was going wrong with our <a href="https://github.com/matrix-org/sydent/blob/main/sydent/sms/openmarket.py">API call to OpenMarket</a>. Our first step was to <a href="https://github.com/matrix-org/sydent/issues/410">improve logging</a>, so we could start to deduce what was going wrong and why. Whilst trawling through logs, we spotted <a href="https://github.com/matrix-org/sydent/pull/413#pullrequestreview-775154313">
+one problem</a> which meant we weren't actually sending off the API request in the first place. Further investigation revealed a <a href="https://github.com/matrix-org/sydent/pull/415">strings-versus-bytes confusion</a> which meant that we would always (incorrectly) interpret the API response as having failed.</p>
+<p>All in all, phone number verification was unknowingly broken in the 2.4.0 release, to be fixed in 2.4.6 a month later. How could we do better? Better test coverage is (as ever) one answer. But <a href="https://github.com/matrix-org/sydent/pull/413#pullrequestreview-775154313">it struck me</a> that the two bugs we'd encountered might be ripe for automatic detection:</p>
+<ul>
+<li>we created an <a href="https://docs.python.org/3/library/typing.html#typing.Awaitable">Awaitable</a> but didn't <code>await</code> it or use it in any way, and</li>
+<li>we tried to look up a <code>str</code> key in a dictionary which mapped <code>bytes</code> to <code>bytes</code>.</li>
+</ul>
+<p>Could a static analysis tool like <code>mypy</code> detect these? How much work would it take to do so? Are there other bugs and problems we could spot with it? I was curious to answer these questions and learn more about the tools that Python's typing ecosystem provides.</p>
+<h2 id="could-typing-have-spotted-these-problems">Could typing have spotted these problems?</h2>
+<p>Let's start with the first of question: what can <code>mypy</code> detect?</p>
+<h3 id="the-missing-await">The missing <code>await</code></h3>
+<p>Instead of writing <code>x = await foo()</code>, we simply had <code>x = foo()</code> and didn't then go on to <code>await x</code>. Mypy doesn't have means to detect this at present. There was interest in <a href="https://github.com/python/mypy/issues/2499">this issue</a> on such a feature, with related threads <a href="https://github.com/python/mypy/issues/5597">here</a> and <a href="https://github.com/python/mypy/issues/5650">here</a>.</p>
+<p>Are there other opportunities to spot the error? Here's the relevant bit of source code from <a href="https://github.com/matrix-org/sydent/blob/2e3b7576b17e92080319e08c0c0ebf566935636c/sydent/http/servlets/msisdnservlet.py#L93-L98">before the fix</a>.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>            sid = self.sydent.validators.msisdn.requestToken(
+</span><span>                phone_number_object, clientSecret, sendAttempt, brand
+</span><span>            )
+</span><span>            resp = {
+</span><span>                </span><span style="color:#d69d85;">&quot;success&quot;</span><span>: </span><span style="color:#569cd6;">True</span><span>,
+</span><span>                </span><span style="color:#d69d85;">&quot;sid&quot;</span><span>: str(sid),
+</span><span>                </span><span style="color:#d69d85;">&quot;msisdn&quot;</span><span>: msisdn,
+</span><span>                </span><span style="color:#d69d85;">&quot;intl_fmt&quot;</span><span>: intl_fmt,
+</span><span>            }
+</span></code></pre>
+<p>The call to <code>requestToken</code> produces a value of type <code>Awaitable[int]</code>. If we tried to assign that to an expression of type <code>int</code> we'd get an error that mypy can spot.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>$ cat example.py
+</span><span>async def foo() -&gt; int:
+</span><span>    return 1
+</span><span>
+</span><span>async def bar():
+</span><span>    x = foo()      # no error
+</span><span>    y: int = foo() # error: rhs is Awaitable[int], but lhs expects int
+</span><span>
+</span><span>$ mypy --check-untyped-defs example.py
+</span><span>example.py:6: error: Incompatible types in assignment (expression has type &quot;Coroutine[Any, Any, int]&quot;, variable has type &quot;int&quot;)
+</span><span>Found 1 error in 1 file (checked 1 source file)
+</span></code></pre>
+<p>Note that we have to specifically ask mypy to typecheck the body of <code>bar</code> by passing <a href="https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-check-untyped-defs">--check-untyped-defs</a>; by default, <code>mypy</code> will only typecheck annotated code.</p>
+<p>We might also have been able to detect the error by looking at how we used <code>sid</code>. Unfortunately, the only use of was in a conversion <code>str(sid)</code>, which is a perfectly type-safe call for both <code>sid: int</code> and <code>sid: Awaitable[int]</code>. But let's put that aside for a second—suppose we added <code>"sid": sid</code> directly into the <code>resp</code> dictionary. Could mypy have spotted there was a problem with <em>that</em>?</p>
+<p>Unfortunately not. Because <code>resp</code> has no annotation, we have to rely on how it's used to spot any type inconsistencies. There's only one use of <code>resp</code>: as the return value from its enclosing function, <code>render_POST</code>. Mypy's only chance to spot a type problem would be to compare the mypy's inferred type for <code>resp</code> to the return type of <code>render_POST</code>. What are those types? We can use <code>reveal_type</code> to see the former is <code>Dict[str, object]</code>. For the latter:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>    @jsonwrap
+</span><span>    </span><span style="color:#569cd6;">def </span><span>render_POST(self, request: Request) -&gt; JsonDict:
+</span></code></pre>
+<p>The return type is <code>JsonDict</code>, which is an <a href="https://github.com/matrix-org/sydent/blob/2e3b7576b17e92080319e08c0c0ebf566935636c/sydent/types.py#L17">alias</a> for <code>Dict[str, Any]</code>. This is bad news, because <code>Dict[str, object]</code> and <code>Dict[str, Any]</code> are compatible. Digging a level deeper, this is because <code>sid: Any</code> holds true for both <code>sid: int</code> and <code>sid: Awaitable[int]</code>—so there's no error to spot here. The <code>Any</code> type is compatible with any other type whatsoever! Mypy uses <code>Any</code> as a way to <a href="https://mypy.readthedocs.io/en/stable/kinds_of_types.html#the-any-type">defer all type checking to runtime</a>; mypy won't (and can't!) statically analyse the usage of an expression of type <code>Any</code>. Indeed, mypy's reports will tell you how many <code>Any</code>s you're working with, and offer a variety of options to <a href="https://mypy.readthedocs.io/en/stable/command_line.html#disallow-dynamic-typing">warn or error on usages of <code>Any</code></a>.</p>
+<p>If we were inserting <code>sid</code> directly into a dictionary, we could do better by annotating the dictionary (or the function's return type) as a <a href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDict</a>. This is a way to specify a dictionary with a fixed set of keys, each with a fixed type. It comes in really handy for Sydent, Sygnal and Synapse—all of <a href="https://matrix.org/docs/spec/">the Matrix APIs</a> exchange JSON dictionaries, so anything we can do to teach mypy about their shape and types is gold dust.</p>
+<p>In short, there were options for detecting this with some code changes, but no magic wand that would have spotted the error in the code as written.</p>
+<h3 id="the-strings-bytes-confusion">The strings/bytes confusion</h3>
+<p>Our <a href="https://github.com/matrix-org/sydent/pull/415/files#diff-4b3e0551612818927c87fe0100262ec230e0342def9d3f09214b93dea3efacb8L103-R107">error</a> was here:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>        headers = dict(resp.headers.getAllRawHeaders())
+</span><span>        request_id = </span><span style="color:#569cd6;">None
+</span><span>        </span><span style="color:#569cd6;">if </span><span style="color:#d69d85;">&quot;X-Request-Id&quot; </span><span style="color:#569cd6;">in </span><span>headers:
+</span><span>            request_id = headers[</span><span style="color:#d69d85;">&quot;X-Request-Id&quot;</span><span>][</span><span style="color:#b5cea8;">0</span><span>]
+</span></code></pre>
+<p>In this sample, <code>resp.headers</code> is a <a href="https://twistedmatrix.com/documents/current/api/twisted.web.http_headers.Headers.html">twisted.web.http_headers.Headers</a> instance. <code>getAllRawHeaders</code> is <a href="https://twistedmatrix.com/documents/current/api/twisted.web.http_headers.Headers.html#getAllRawHeaders">documented</a> as returning an iterable of <code>(bytes, Sequence[bytes])</code> pairs. Even better, mypy can see this because <code>getAllRawHeaders</code> is <a href="https://github.com/twisted/twisted/blob/5c24e99e671c4082a1ddc8dbeb869402294bd0dc/src/twisted/web/http_headers.py#L261">annotated</a> (many thanks to the twisted authors for this). Mypy should be able to deduce that we build a dictionary <code>headers: Dict[bytes, Sequence[bytes]</code>. We can check this using <a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html#when-you-re-puzzled-or-when-things-are-complicated"><code>reveal_type</code></a>:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>        headers = dict(resp.headers.getAllRawHeaders())
+</span><span>        reveal_type(headers)
+</span></code></pre>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>$ mypy
+</span><span>sydent/sms/openmarket.py:110: note: Revealed type is &quot;builtins.dict[builtins.bytes*, typing.Sequence*[builtins.bytes]]&quot;
+</span></code></pre>
+<p>(The <code>*</code> in <code>builtins.bytes*</code> here means mypy has <a href="https://stackoverflow.com/a/50499509/5252017">inferred</a> that the dictionary's keys are bytes, rather than being told explicitly that they must be bytes.)</p>
+<p>That's all fine and dandy. But why didn't we spot this before if the annotations were all in place in twisted? Let's put aside the fact that, erm, we weren't running mypy in Sydent's CI <a href="https://github.com/matrix-org/sydent/pull/416">until the recent sprint</a>, unlike our <a href="https://github.com/matrix-org/synapse/blob/5640992d176a499204a0756b1677c9b1575b0a49/.github/workflows/tests.yml#L21">other</a> <a href="https://github.com/matrix-org/sygnal/blob/4a7367e84476a4b1054b1fe20e9e06f9f66e27f8/.github/workflows/pipeline.yml#L18-L26">projects</a>. Checking out the problematic version, we can run mypy on the file we know to contain the bug.</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>$ git checkout v2.4.0
+</span><span>$ mypy --strict sydent/sms/openmarket.py
+</span><span>sydent/sms/openmarket.py:82: error: Dict entry 0 has incompatible type &quot;str&quot;: &quot;int&quot;; expected &quot;str&quot;: &quot;str&quot;  [dict-item]
+</span></code></pre>
+<p>Huh. Mypy spots something, but not the error we were hoping for. What's going on here? We can ask mypy to show its working with <code>reveal_type</code> again.</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>        resp = </span><span style="color:#569cd6;">await </span><span>self.http_cli.post_json_get_nothing(
+</span><span>            API_BASE_URL, send_body, {</span><span style="color:#d69d85;">&quot;headers&quot;</span><span>: req_headers}
+</span><span>        )
+</span><span>        reveal_type(resp)
+</span><span>        headers = dict(resp.headers.getAllRawHeaders())
+</span><span>        reveal_type(resp.headers)
+</span><span>        reveal_type(resp.headers.getAllwRawHeaders())
+</span><span>        reveal_type(headers)
+</span></code></pre>
+<p>This yields:</p>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>$ mypy sydent/sms/openmarket.py
+</span><span>sydent/sms/openmarket.py:82: error: Dict entry 0 has incompatible type &quot;str&quot;: &quot;int&quot;; expected &quot;str&quot;: &quot;str&quot;  [dict-item]
+</span><span>sydent/sms/openmarket.py:102: note: Revealed type is &quot;twisted.web.iweb.IResponse*&quot;
+</span><span>sydent/sms/openmarket.py:104: note: Revealed type is &quot;Any&quot;
+</span><span>sydent/sms/openmarket.py:105: note: Revealed type is &quot;Any&quot;
+</span><span>sydent/sms/openmarket.py:106: note: Revealed type is &quot;builtins.dict[Any, Any]&quot;
+</span><span>Found 1 error in 1 file (checked 1 source file)
+</span></code></pre>
+<p>Ahh, the <code>Any</code> type. As mentioned above, this represents a value whose type can't be statically determined. We're left to runtime checks to detect the problem. But we won't detect it at runtime, because dictionaries don't enforce any kind of type requirements on their keys and values.</p>
+<p>The problem here is that mypy can't see that <code>resp.headers</code> is a twisted <code>Headers</code> object. If we could inform it of this, mypy would spot our bug:</p>
+<pre data-lang="python" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-python "><code class="language-python" data-lang="python"><span>        </span><span style="color:#9b9b9b;">import </span><span>twisted.web.http_headers
+</span><span>        raw_headers: twisted.web.http_headers.Headers = resp.headers
+</span><span>        reveal_type(resp)
+</span><span>        headers = dict(raw_headers.getAllRawHeaders())
+</span><span>        reveal_type(raw_headers)
+</span><span>        reveal_type(raw_headers.getAllRawHeaders())
+</span><span>        reveal_type(headers)
+</span></code></pre>
+<pre style="background-color:#1e1e1e;color:#dcdcdc;"><code><span>$ mypy sydent/sms/openmarket.py
+</span><span>sydent/sms/openmarket.py:82: error: Dict entry 0 has incompatible type &quot;str&quot;: &quot;int&quot;; expected &quot;str&quot;: &quot;str&quot;  [dict-item]
+</span><span>sydent/sms/openmarket.py:104: note: Revealed type is &quot;twisted.web.iweb.IResponse*&quot;
+</span><span>sydent/sms/openmarket.py:106: note: Revealed type is &quot;twisted.web.http_headers.Headers&quot;
+</span><span>sydent/sms/openmarket.py:107: note: Revealed type is &quot;typing.Iterator[Tuple[builtins.bytes, typing.Sequence[builtins.bytes]]]&quot;
+</span><span>sydent/sms/openmarket.py:108: note: Revealed type is &quot;builtins.dict[builtins.bytes*, typing.Sequence*[builtins.bytes]]&quot;
+</span><span>sydent/sms/openmarket.py:114: error: Invalid index type &quot;str&quot; for &quot;Dict[bytes, Sequence[bytes]]&quot;; expected type &quot;bytes&quot;  [index]
+</span><span>sydent/sms/openmarket.py:114: error: Argument 1 to &quot;split&quot; of &quot;bytes&quot; has incompatible type &quot;str&quot;; expected &quot;Optional[bytes]&quot;  [arg-type]
+</span><span>Found 3 errors in 1 file (checked 1 source file)
+</span></code></pre>
+<p>There it is, on line 114: <code>Invalid index type "str" for "Dict[bytes, Sequence[bytes]]"; expected type "bytes"</code>.</p>
+<p>Unfortunately it'd be a pain to annotate our application code to mark every use of <code>IResponse.headers</code> as a <code>Headers</code> object. We'll see a better way to do things in this <a href="https://matrix.org/blog/2021/12/10/type-coverage-for-sydent-annotation">the next post</a>, which discusses the nitty-gritty details of adding annotations file-by-file.</p>
+<hr />
+<p>Many thanks for reading! If you've got any corrections, comments or queries, I'm available on Matrix at <a href="https://matrix.to/#/@dmrobertson:matrix.org">@dmrobertson:matrix.org</a>.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2021&#x2F;05&#x2F;19&#x2F;how-the-uk-s-online-safety-bill-threatens-matrix&#x2F;" title="How the UK&#x27;s Online Safety Bill threatens Matrix">How the UK&#x27;s Online Safety Bill threatens Matrix</a></h2>
+                <span>
+                    19.05.2021 15:47
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/denise-almeida">
+                        Denise Almeida
+                    </a>
+                </span>
+                <br>
+                <small>Last update: 19.05.2021 14:48</small>
+            </header>
+            <div>
+                
+                <p>Last week the UK government published a <a href="https://www.gov.uk/government/publications/draft-online-safety-bill">draft of the proposed Online Safety
+Bill,</a>
+after having initially introduced <a href="https://www.gov.uk/government/consultations/online-harms-white-paper/public-feedback/online-harms-white-paper-initial-consultation-response">formal proposals for said bill in early
+2020</a>.
+With this post we aim to shed some light on its potential impacts and explain
+why we think that this bill - despite having great intentions - may actually
+be setting a dangerous precedent when it comes to our rights to privacy,
+freedom of expression and self determination.</p>
+<p>The proposed bill aims to provide a legal framework to address illegal and
+harmful content online. This focus on “not illegal, but harmful” content is at
+the centre of our concerns - it puts responsibility on organisations
+themselves to arbitrarily decide what might be harmful, without any legal
+backing. The bill itself does not actually provide a definition of harmful,
+instead relying on service providers to assess and decide on this. This
+requirement to identify what is “likely to be harmful” applies to all users,
+children and adults. Our question here is - would you trust a service provider
+to decide what might be harmful to you and your children, with zero input from
+you as a user?</p>
+<p>Additionally, the bill incentivises the use of privacy-invasive age
+verification processes which come with their own set of problems. This
+complete disregard of people’s right to privacy is a reflection of the
+privileged perspectives of those in charge of the drafting of this bill, which
+fails to acknowledge how <em>actually</em> harmful it would be for certain groups of
+the population to have their real life identity associated with their online
+identity.</p>
+<p>Our view of the world, and of the internet, is largely different from the one
+presented by this bill. Now, this categorically does not mean we don’t care
+about online safety (it is quite literally our bread and butter) - we just
+fundamentally disagree with the approach taken.</p>
+<p>Whilst we sympathise with the government’s desire to show action in this space
+and to do something about children’s safety (everyone’s safety really), we
+cannot possibly agree with the methods.</p>
+<p>Back in October of 2020 we presented <a href="https://matrix.org/blog/2020/10/19/combating-abuse-in-matrix-without-backdoors">our proposed approach to online safety</a> -
+ironically also in response to a government proposal, albeit about encryption
+backdoors. In it, we briefly discussed the dangers of absolute determinations
+of morality from a single cultural perspective:</p>
+<blockquote>
+<p><a href="https://matrix.org/blog/2020/10/19/combating-abuse-in-matrix-without-backdoors">As uncomfortable as it may be, one man’s terrorist is another man’s freedom fighter, and different jurisdictions have different laws - and it’s not up to the Matrix.org Foundation to play God and adjudicate.</a></p>
+</blockquote>
+<p>We now find ourselves reading a piece of legislation that essentially demands
+these determinations from tech companies. The beauty of the human experience
+lies with its diversity and when we force technology companies to make calls
+about what is right or wrong - or what is “likely to have adverse
+psychological or physical impacts” on children - we end up in a dangerous
+place of centralising and regulating relative morals. Worst of all, when the
+consequence of getting it wrong is criminal liability for senior managers what
+do we think will happen?</p>
+<p>Regardless of how omnipresent it is in our daily lives, technology is still
+not a solution for human problems. Forcing organisations to be judge and jury
+of human morals for the sake of “free speech” will, ironically, have severe
+consequences on free speech, as risk profiles will change for fear of
+liability.</p>
+<p>Forcing a “duty of care” responsibility on organisations which operate online
+will not only drown small and medium sized companies in administrative tasks
+and costs, it will further accentuate the existing monopolies by Big Tech.
+Plainly, Big Tech can afford the regulatory burden - small start-ups can’t.
+Future creators will have their wings clipped from the offset and we might
+just miss out on new ideas and projects for fear of legal repercussions. This
+is a threat to the technology sector, particularly those building on emerging
+technologies like Matrix. In some ways, it is a threat to democracy and some
+of the freedoms this bill claims to protect.</p>
+<p>These are, quite frankly, steps towards an authoritarian dystopia. If Trust &amp;
+Safety managers start censoring something as natural as a nipple on the off
+chance it might cause “adverse psychological impacts” on children, whose
+freedom of expression are we actually protecting here?</p>
+<p>More specifically on the issue of content moderation: the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/985283/Draft_Online_Safety_Bill_-_Impact_Assessment_Web_Accessible.pdf">impact assessment
+provided by the government alongside this
+bill</a>
+predicts that the additional costs for companies directly related to the bill
+will be in the billions, over the course of 10 years. The cost for the
+government? £400k, in every proposed policy option. Our question is - why are
+these responsibilities being placed on tech companies, when evidently this is
+a societal problem?</p>
+<p>We are not saying it is up to the government to single-handedly end the
+existence of Child Sexual Abuse and Exploitation (CSAE) or extremist content
+online. What we are saying is that it takes more than content filtering, risk
+assessments and (faulty) age verification processes for it to end. More
+funding for tech literacy organisations and schools, to give children (and
+parents) the tools to stay safe is the first thing that comes to mind. Further
+investment in law enforcement cyber units and the judicial system, improving
+tech companies’ routes for abuse reporting and allowing the actual judges to
+do the judging seems pretty sensible too. What is absolutely egregious is the
+degradation of the digital rights of the majority, due to the wrongdoings of a
+few.</p>
+<p>Our goal with this post is not to be dramatic or alarmist. However, we want to
+add our voices to the countless <a href="https://www.openrightsgroup.org/blog/online-abuse-why-management-liability-isnt-the-answer/">digital rights
+campaigners</a>,
+individuals and organisations that have been raising the alarm since the early
+days of this bill. Just like with coercive control and abuse, the degradation
+of our rights does not happen all at once. It is a slippery slope that starts
+with something as (seemingly) innocuous as <a href="https://twitter.com/matthew_d_green/status/1392823038920564736">mandatory content scanning for
+CSAE content and ends with authoritarian surveillance
+infrastructure</a>.
+It is our duty to put a stop to this before it even begins.</p>
+<small style="display: block; text-align: right">
+Twitter card image credit from <a href="https://film-grab.com/2010/10/04/brazil/#bwg644/39614">Brazil</a>, which feels all too familiar right now.
+</small>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2021&#x2F;05&#x2F;17&#x2F;the-matrix-space-beta&#x2F;" title="The Matrix Space Beta!">The Matrix Space Beta!</a></h2>
+                <span>
+                    17.05.2021 17:50
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/matthew-hodgson">
+                        Matthew Hodgson
+                    </a>
+                </span>
+                <br>
+                <small>Last update: 17.05.2021 17:35</small>
+            </header>
+            <div>
+                
+                <p>Hi all,</p>
+<p>As many know, over the years we've experimented with how to let users locate
+and curate sets of users and rooms in Matrix. <a href="https://medium.com/@RiotChat/communities-aka-groups-are-here-announcing-riot-web-0-13-riot-ios-0-6-and-riot-android-0-7-4-933cb193a28e">Back in Nov
+2017</a>
+we added 'groups' (aka 'communities') as a custom mechanism for this -
+introducing identifiers beginning with a + symbol to represent sets of rooms
+and users, like <a href="https://matrix.to/#/+matrix:matrix.org">+matrix:matrix.org</a>.</p>
+<p>However, it rapidly became obvious that Communities had some major
+shortcomings.  They ended up being an extensive and entirely new API surface
+(designed around letting you dynamically bridge the membership of a group
+through to a single source of truth like LDAP) - while in practice groups
+have enormous overlap with rooms: managing membership, inviting by email,
+access control, power levels, names, topics, avatars, etc.  Meanwhile the
+custom groups API re-invented the wheel for things like pushing updates
+to the client (causing a whole suite of
+<a href="https://github.com/vector-im/element-web/issues/5235">problems</a>).  So clients
+and servers alike ended up reimplementing large chunks of similar
+functionality for both rooms and groups.</p>
+<p>And so almost before Communities were born, we started thinking about whether
+it would make more sense to model them as a special type of room, rather than
+being their own custom primitive.
+<a href="https://github.com/matrix-org/matrix-doc/issues/1215">MSC1215</a> had the first
+thoughts on this in 2017, and then a formal proposal emerged at
+<a href="https://github.com/matrix-org/matrix-doc/pull/1772">MSC1772</a> in Jan 2019. We
+started working on this in earnest at the end of 2020, and christened the new
+way of handling groups of rooms and users as... Spaces!</p>
+<p>Spaces work as follows:</p>
+<ul>
+<li>You can designate specific rooms as 'spaces', which contain other rooms.</li>
+<li>You can have a nested hierarchy of spaces.</li>
+<li>You can rapidly navigate around that hierarchy using the new 'space summary'
+(aka space-nav) API - <a href="https://github.com/matrix-org/matrix-doc/blob/kegan/spaces-summary/proposals/2946-spaces-summary.md">MSC2946</a>.</li>
+<li>Spaces can be shared with other people publicly, or invite-only, or private
+for your own curation purposes.</li>
+<li>Rooms can appear in multiple places in the hierarchy.</li>
+<li>You can have 'secret' spaces where you group your own personal rooms and
+spaces into an existing hierarchy.</li>
+</ul>
+<p>Today, we're ridiculously excited to be launching Space support as a beta in
+matrix-react-sdk and matrix-android-sdk2 (and thus Element Web/Desktop and
+Element Android) and Synapse
+<a href="https://matrix.org/blog/2021/05/17/synapse-1-34-0-released">1.34.0</a> - so head
+over to your nearest Element, make sure it's connected to the latest Synapse
+(and that Synapse has Spaces enabled in its config) and find some Space to
+explore! <a href="https://matrix.to/#/#community:matrix.org">#community:matrix.org</a>
+might be a good start :)</p>
+<p>The beta today gives us the bare essentials: and we haven't yet finished
+space-based access controls such as setting powerlevels in rooms based on
+space membership
+(<a href="https://github.com/matrix-org/matrix-doc/blob/matthew/msc2962/proposals/2962-spaces-access-control.md">MSC2962</a>)
+or limiting who can join a room based on their space membership
+(<a href="https://github.com/matrix-org/matrix-doc/blob/clokep/restricted-rooms/proposals/3083-restricted-rooms.md">MSC3083</a>) -
+but these will be coming asap.  We also need to figure out how to implement
+Flair on top of Spaces rather than Communities.</p>
+<p>This is also a bit of a turning point in Matrix's architecture: we are now
+using rooms more and more as a generic way of modelling new features in
+Matrix.  For instance, rooms could be used as a structured way of storing
+files (<a href="https://github.com/matrix-org/matrix-doc/pull/3089">MSC3089</a>);
+Reputation data
+(<a href="https://github.com/matrix-org/matrix-doc/pull/2313">MSC2313</a>) is stored in
+rooms; Threads can be stored in rooms
+(<a href="https://github.com/matrix-org/matrix-doc/pull/2836">MSC2836</a>); Extensible
+Profiles are proposed as rooms too
+(<a href="https://github.com/matrix-org/matrix-doc/pull/1769">MSC1769</a>).  As such,
+this pushes us towards ensuring rooms are as lightweight as possible in Matrix -
+and that things like sync and changing profile scale independently of the
+number of rooms you're in.  Spaces effectively gives us a way of creating a
+global decentralised filesystem hierarchy on top of Matrix - grouping the
+existing rooms of all flavours into an epic multiplayer tree of realtime data.
+It's like USENET had a baby with the Web!</p>
+<p>For lots more info from the Element perspective, head over to the <a href="https://element.io/blog/p/4ff44807-fe9a-4363-8521-9eab7efd4365/">Element
+blog</a>.
+Finally, the point of the beta is to gather feedback and fix bugs - so please
+go wild in Element reporting your first impressions and help us make Spaces as
+awesome as they deserve to be!</p>
+<p>Thanks for flying Matrix into Space;</p>
+<p>Matthew &amp; the whole Spaces (and Matrix) team.</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2021&#x2F;05&#x2F;06&#x2F;introducing-the-pinecone-overlay-network&#x2F;" title="Introducing the Pinecone overlay network">Introducing the Pinecone overlay network</a></h2>
+                <span>
+                    06.05.2021 00:00
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/neil-alexander">
+                        Neil Alexander
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Since the end of 2019, we have spent quite a bit of time thinking about and exploring different technologies whilst building various demos for P2P Matrix.  Our mission for P2P Matrix is to evolve Matrix into a hybrid between today's server-oriented network and a pure P2P network - empowering users to have <strong>total</strong> autonomy and privacy over their data if they want (by storing it in P2P Matrix, by embedding their server into their Matrix client), while also letting users store their data in serverside nodes if they so desire.</p>
+<p>The goal is to protect metadata much better (as users no longer have to depend on a server run by someone else to communicate), as well as drive new features such as account portability, multi-homed accounts, low-bandwidth Matrix and smarter federation transports - and provide support for internet-less mesh communication via Matrix which can also interoperate with the wider network.  You can read more about it in our <a href="https://matrix.org/blog/2020/06/02/introducing-p-2-p-matrix/">Introducing P2P Matrix</a> blog post from last summer, or watch our <a href="https://fosdem.org/2021/schedule/event/matrix_pinecones/">FOSDEM 2021 talk</a> where we previewed Pinecone.  It's important to note that this has been a small but important long-term project for Matrix, and has been progressing entirely outside our business-as-usual work of improving the core protocol and reference implementations.</p>
+<p>As the project has progressed, we've built a variety of prototypes using existing libraries (<a href="https://github.com/libp2p/go-libp2p">go-libp2p</a>, <a href="https://github.com/libp2p/js-libp2p">js-libp2p</a> and <a href="https://github.com/yggdrasil-network/yggdrasil-go">Yggdrasil</a>), demonstrating what an early P2P Matrix might feel like if it were running on a mobile device, in the web browser and so on using such an overlay network. Each of these demos has taught us something new, and so in October 2020 we decided to take this knowledge to build an experimental new overlay network of our own.</p>
+<p>Pinecone is designed to provide end-to-end encrypted communications between devices, regardless of how they are connected to one another, in a lightweight and self-arranging fashion. The routing protocol is a hybrid, taking inspiration from <a href="https://github.com/yggdrasil-network/yggdrasil-go">Yggdrasil</a> by building a global spanning tree, but rather than forwarding all traffic using the spanning tree topology, we use it as a bootstrap routing mechanism for a line/snake topology, ordered by their ed25519 public keys, which we have affectionately named SNEK (Sequentially Networked Edwards Key) routing.</p>
+<p>Nodes seek out their closest keyspace neighbours on the network and paths are built between these pairs of nodes, similar to how a Chord DHT functions, populating the routing tables of intermediate nodes in the process. These paths are then used to forward traffic without having to perform up-front searches, allowing for very fast connection setups between overlay nodes. These paths are resilient to network topology changes and handle node mobility considerably better than any other name-independent routing scheme that we have seen — early results are very promising so far. We have also been experimenting with a combination of the μTP (Micro Transport Protocol) and TLS to provide stateful connection setup, congestion control and end-to-end encryption for all federation traffic carried over the Pinecone network.</p>
+<p><img src="/blog/img/2021-05-06-pineconesim.png" alt="Pinecone simulator showing line/snake logical network topology" /></p>
+<p>If Pinecone works out, our intention is to collaborate with the libp2p and IPFS team to incorporate Pinecone routing into libp2p (if they'll have us!) while incorporating their gossipsub routing to improve Matrix federation... and get the best of both worlds :)</p>
+<p>Today we're releasing the source code for our current early implementation of Pinecone — you can <a href="https://github.com/matrix-org/pinecone">get it from GitHub</a> right now! It's very experimental still and not very well optimised yet, but it is the foundation of our latest mobile P2P Matrix demos, which support P2P Matrix over both <strong>Bluetooth Low Energy</strong> mesh networks, <strong>multicast DNS</strong> discovery within a LAN, and/or by routing through <strong>static Pinecone peers</strong> on the Internet:</p>
+<ul>
+<li>Android: https://appdistribution.firebase.dev/i/394600067ea8ba37</li>
+<li>iOS: https://testflight.apple.com/join/Tgh2MEk6</li>
+</ul>
+<p>Building a routing overlay is only the first step in the journey towards P2P Matrix. We will also be looking closely in the coming months at improving the Matrix federation protocol to work well in mixed-connectivity scenarios (rather than the full mesh approach used today) as well as decentralised identities, hybrid deployments with existing homeservers and getting Dendrite (the Matrix homeserver which is embedded into the current P2P demos) more stable and feature-complete.</p>
+<p>The long-term plan could look something like this:</p>
+<p><img src="/blog/img/2021-05-06-pinecone.png" alt="Diagram showing possible P2P Matrix stack" /></p>
+<p>Most discussion around P2P Matrix takes place in <a href="http://matrix.to/#/#p2p:matrix.org">#p2p:matrix.org</a>, so if you are interested in what's going on, please join us there!</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;09&#x2F;27&#x2F;privacy-improvements-in-synapse-1-4-and-riot-1-4&#x2F;" title="Privacy improvements in Synapse 1.4 and Riot 1.4">Privacy improvements in Synapse 1.4 and Riot 1.4</a></h2>
+                <span>
+                    27.09.2019 00:00
+                    —
+                    <a href="/category/privacy">
+                        Privacy
+                    </a>
+                    —
+                    <a
+                        href="/author/matthew-hodgson">
+                        Matthew Hodgson
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Hi all,</p>
+<p>Back in June we wrote about our <a href="https://matrix.org/blog/2019/06/30/tightening-up-privacy-in-matrix">plans to tighten up data
+privacy</a>
+in Matrix after some areas for improvement were brought to our attention.  To
+quickly recap: the primary concern was that the default config for Riot
+specifies identity servers and integration managers run by New Vector (the
+company which the original Matrix team set up to build Riot and fund Matrix
+dev) - and so folks using a standalone homeserver may end up using external
+services without realising it.  There were some other legitimate issues raised
+too (e.g. contact information should be obfuscated when checking if your
+contacts are on Matrix; Riot defaulted to using Google for STUN (firewall
+detection) if no TURN server had been set up on their server; Synapse defaults
+to using matrix.org as a key notary server).</p>
+<p>We’ve been working away at this fairly solidly over the last few months.  Some
+of the simpler items shipped quickly (e.g. Riot/Web had a <a href="https://github.com/matrix-org/matrix-react-sdk/pull/3115">stupid
+bug</a> where it kept
+incorrectly loading the integration manager; Riot/Android <a href="https://news.ycombinator.com/item?id=20181515">wasn’t clear
+enough</a> about when contact
+discovery was happening; Riot/Web <a href="https://github.com/vector-im/riot-web/issues/10216">wasn’t clear
+enough</a> about the fact
+device names are publicly visible; etc) - but other bits have turned out to be
+incredibly time-consuming to get right.</p>
+<p>However, we’re in the process today of releasing Synapse 1.4.0 and Riot/Web
+1.4.0 (it’s coincidence the version numbers have lined up!) which resolve the
+majority of the remaining issues.  The main changes are as follows:</p>
+<ol>
+<li>
+<p><strong>Riot no longer automatically uses identity servers by default</strong>.
+Identity servers are only useful when inviting users by email address, or when
+discovering whether your contacts are on Matrix.  Therefore, we now wait until
+the user tries to perform one of these operations before explaining that they
+need an identity server to do so, and we prompt them to select one if they
+want to proceed. This makes it abundantly clear that the user is connecting to
+an independent service, and why.</p>
+</li>
+<li>
+<p><strong>Integration Managers and identity servers now have the ability to force
+users to accept terms of use before using them</strong>.  This means they can
+explicitly spell out the data privacy &amp; usage policy of the server as required
+by GDPR, and it should now be impossible for a user to use these services
+without realising it.  This was particularly fun in the case of identity
+servers, which previously had no concept of users and so couldn’t track
+whether users had agreed to their terms &amp; conditions or not… and because
+homeservers sometimes talk to the identity server on behalf of users rather
+than the user talking direct, the privacy policy flow gets even hairier.  But
+it’s solved now, and a nice side-effect of this is that users can now
+explicitly select their Integration Manager in Riot, in case they want to use
+<a href="https://dimension.t2bot.io">Dimension</a> or similar rather than the default
+provided by <a href="https://modular.im">Modular</a>.</p>
+</li>
+<li>
+<p><strong>Synapse no longer uses identity servers for verifying registrations or
+verifying password reset.</strong> Originally, Synapse made use of the fact that the
+Identity Service contains email/msisdn verification logic to handle identity
+verification in general on behalf of the homeserver. However, in retrospect
+this was a mistake: why should the entity running your identity server have
+the right to verify password resets or registration details on your
+homeserver?  So, we have moved this logic into Synapse.  <strong>This means Synapse
+1.4.0 requires new configuration for email/msisdn verification to work -
+please see the upgrade notes for full details.</strong></p>
+</li>
+<li>
+<p><strong>Sydent now supports discovering contacts based on hashed identifiers.</strong>
+<a href="https://github.com/matrix-org/matrix-doc/blob/hs/hash-identity/proposals/2134-identity-hash-lookup.md">MSC2134</a>
+specifies entirely new IS APIs for discovering contacts using a hash of their
+identifier rather than directly exposing the raw identifiers being searched
+for.  This is implemented in
+<a href="https://github.com/vector-im/riot-ios/issues/2652">Riot/iOS</a> and
+<a href="https://github.com/vector-im/riot-android/issues/3257">Riot/Android</a> and
+should be in the next major release;
+<a href="https://github.com/vector-im/riot-web/issues/10556">Riot/Web</a> 1.4.0 has it
+already.</p>
+</li>
+<li>
+<p>Synapse now <a href="https://github.com/matrix-org/synapse/pull/6090/files">warns in its
+logs</a> if you are using
+matrix.org as a default trusted key server, in case you wish to use a
+different server to help discover other servers’ keys.</p>
+</li>
+<li>
+<p>Synapse now <a href="https://github.com/matrix-org/synapse/issues/1287">garbage collects redacted
+messages</a> after N days (7
+days by default).  (It doesn’t yet garbage collect attachments referenced from
+redacted messages; we’re still working on that).</p>
+</li>
+<li>
+<p>Synapse now <a href="https://github.com/matrix-org/synapse/pull/6098/files">deletes account access
+data</a> (IP addresses and
+User Agent) after N days (28 days by default) of a device being deleted.</p>
+</li>
+<li>
+<p>Riot warns before falling back to using STUN (and defaults to
+turn.matrix.org rather than stun.google.com) for firewall discovery (STUN)
+when placing VoIP calls, and makes it clear that this is an emergency fallback
+for misconfigured servers which are missing TURN support.  (We originally
+deleted the fallback entirely, but this broke things for too many people, so
+we’ve kept it but warn instead).</p>
+</li>
+</ol>
+<p>All of this is implemented in Riot/Web 1.4.0 and Synapse 1.4.0.  Riot/Web
+1.4.0 shipped today (Fri Sept 27th) and we have a release candidate
+for Synapse 1.4 (1.4.0rc1) today which fully ship on Monday.</p>
+<p>For full details please go check out the <a href="https://medium.com/@RiotChat/new-privacy-controls-for-riot-dc3661888563">Riot 1.4.0</a>
+and <a href="https://matrix.org/blog/2019/10/03/synapse-1-4-0-released">Synapse 1.4.0</a> blog posts.</p>
+<p>Riot/Mobile is following fast behind - most of the above has been implemented
+and everything should land in the next release.  RiotX/Android doesn’t really
+have any changes to make given it hadn’t yet implemented Identity Service or
+Integration Manager APIs.</p>
+<p>This has involved a surprisingly large amount of spec work; no fewer than 9
+new Matrix Spec Changes (MSC) have been required as part of the project.  In
+particular, this results in a massive update to the Identity Service API,
+which will be released very shortly with the new MSCs.  You can see the
+upcoming changes on the <a href="https://matrix.org/docs/spec/identity_service/unstable">unstable
+branch</a> and compare
+with the <a href="https://matrix.org/docs/spec/identity_service/r0.2.1">previous 0.2.1 stable
+release</a>, as well as
+checking the detailed MSCs as follows:</p>
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/1961">MSC1961: Integration manager authentication APIs</a></li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2078">MSC2078: Sending Third-Party Request Tokens via the Homeserver</a></li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2134">MSC2134: Identity Hash Lookups</a></li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2140">MSC2140: Terms of Service for ISes and IMs</a></li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2229">MSC2229: Allowing 3PID Owners to Rebind</a></li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2230">MSC2230: Store Identity Server in Account Data</a></li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2263">MSC2263: Give homeservers the ability to handle their own 3PID registrations/password resets</a></li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2264">MSC2264: Add an unstable feature flag to MSC2140 for clients to detect support</a></li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2290">MSC2290: Separate Endpoints for Threepid Binding</a></li>
+</ul>
+<p>This said, there is still some work remaining for us to do here.  The main
+things which haven’t made it into this release are:</p>
+<ul>
+<li>Preferring to get server keys from the source server rather than the notary server by default (<a href="https://github.com/matrix-org/synapse/pull/6110">https://github.com/matrix-org/synapse/pull/6110</a>). This almost made it in, but we need to test it more first - until then, your specified notary server will see roughly what servers your servers are trying to talk to.  In future this will be mitigated properly by <a href="https://github.com/matrix-org/matrix-doc/issues/1228">MSC1228 (removing mxids from events)</a>.</li>
+<li>Configurable data retention periods for rooms.  We are tantalisingly close with this - <a href="https://github.com/matrix-org/synapse/pull/5815">https://github.com/matrix-org/synapse/pull/5815</a> is an implementation that the French Govt deployment is using; we need to port it into mainline Synapse.</li>
+<li>Authenticating access to the media repository - for now, we still rely on media IDs being almost impossible to guess to protect the data rather than authenticating the user.</li>
+<li>Deleting items from the media repository - we still need to hook up deletion APIs.</li>
+<li>Garbage collecting forgotten rooms.  If everyone leaves &amp; forgets a room, we should delete it from the DB.</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/issues/1280">Communicating erasure requests over federation </a></li>
+</ul>
+<p>We’ll continue to work on these as part of our ongoing maintenance backlog.</p>
+<p>Separately to the data privacy concerns, we’ve had a <a href="https://news.ycombinator.com/item?id=20515069">separate wave of
+feedback</a> regarding how we
+handle GDPR Data Subject Access Requests (DSARs). Particularly: whether DSAR
+responses should contain solely the info your have directly keyed by the
+requesting Matrix ID - or if we should provide all the data “visible” to that
+ID (i.e. the history of the conversations they’ve been part of).  We went and
+got professional legal advice on this one, and the conclusion is that we
+should keep our responses to DSARs as tightly scoped as possible. We <a href="https://github.com/vector-im/policies/pull/7/files?short_path=09dc019#diff-09dc019b94b6efb90fa9f6e5c836f310">updated
+Matrix.org’s privacy
+policy</a>
+and DSAR tools to reflect the new legal input.</p>
+<p>Finally, it’s really worth calling out the amount of effort that went into
+this project. Huge huge thanks to everyone involved (given it’s cut across
+pretty much every project &amp; subteam we have working on the core of Matrix) who
+have soldiered through the backlog.  We’ve been tracking progress using our
+<a href="https://github.com/vector-im/feature-dashboard">feature-dashboard</a> tool which
+summarises Github issues based on labels &amp; issue lifecycle, and for better or
+worse it’s ended up being the biggest project board we’ve ever had.  You can
+see the live data
+<a href="https://vector-im.github.io/feature-dashboard/#/plan?label=privacy-sprint&amp;repo=vector-im/riot-web&amp;repo=vector-im/riot-ios&amp;repo=vector-im/riot-android&amp;repo=vector-im/riotX-android&amp;repo=matrix-org/matrix-doc&amp;repo=matrix-org/sydent&amp;repo=matrix-org/synapse">here</a>
+(warning, it takes tens of seconds to spider Github to gather the data) - or,
+for posterity and ease of reference, I’ve included the current issue list
+below.  The issues which are completed have “done” after them; the ones still
+in progress say “in progress”, and ones which haven’t started yet have
+nothing. We split the project into 3 phases - phases 1 and 2 represent the
+items needed to fully solve the privacy concerns, phase 3 is right now a mix
+of "nice to have" polish and some more speculative items.  At this point we’ve
+effectively finished phase 1 on Synapse &amp; Riot/Web, and Riot/Mobile is
+following close behind.  We're continuing to work on phase 2, and we’ll work
+through phase 3 (where appropriate) as part of our general maintenance
+backlog.</p>
+<p>I hope this gives suitable visibility on how we’re considering privacy; after
+all, Matrix is useless as an open communication protocol if the openness comes
+at the expense of user privacy.  We’ll give another update once the remaining
+straggling issues are closed out; and meanwhile, now the bulk of the privacy
+work is out of the way on Riot/Web, we can <strong>finally</strong> get back to
+implementing the UI E2E cross-signing verification and improving first time
+user experience.</p>
+<p>Thanks for your patience and understanding while we’ve sorted this stuff out;
+and thanks once again for flying Matrix :)</p>
+<p><em>In the absence of comments on the current blog, please feel free to discuss
+over at <a href="https://news.ycombinator.com/item?id=21091908">HN</a>, or alternatively come ask stuff in
+our AMA over at
+<a href="https://www.reddit.com/r/privacy/comments/da219t/im_project_lead_for_matrixorg_the_open_protocol/">/r/privacy</a>
+(starting ~5pm GMT+1 (UK) on Friday Sept 27th).</em></p>
+<h3 id="the-privacy-project-dashboard-of-doom">The Privacy Project Dashboard Of Doom</h3>
+<ul>
+<li>phase:1
+<ul>
+<li>vector-im/riot-web
+<ul>
+<li><a href="https://github.com/vector-im/riot-web/issues/5846">5846 Riot duplicates calls to Scalar</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/5921">5921 Ability to disable all identity server functionality via the config file</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/6802">6802 riot shouldn't try to load integrations from an integration manager unless the user has accepted that manager's privacy policies</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10088">10088 Prompt to accept integration manager polices on use</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10090">10090 Make sure there are no ugly edge cases running Riot without an integrations manager</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10091">10091 Decouple setting an email for password reset from publishing your threepid to the identity server and support choice of identity server (on registration)</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10092">10092 Prompt to accept Identity Server policies on registration</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10093">10093 Prompt to accept identity server policies before inviting them to a room</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10094">10094 Store identity server in Account Data and support choosing identity server integration in User Settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10159">10159 Enable toggling a threepid's association with the current IS in User Settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10173">10173 VoIP: Stop falling back to Google for STUN</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10216">10216 We should make it clear in the UI that device names are publicly readable</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10386">10386 Terms modal prompt should appear without a flash of the integration manager portal first</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10408">10408 Identity server v2 API authentication</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10423">10423 Deploy a develop environment for t's and c's flows for IM and IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10424">10424 Remove the bind true flag from 3PID calls on registration</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10425">10425 Ability to disconnect from the identity server by pressing buttons in user settings.</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10452">10452 Test IS v2 access tokens for validity</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10497">10497 Integration manager terms hides terms that need signing</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10510">10510 Remove the bind true flag from 3PID adds in settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10519">10519 Update discovery and account 3PID sections when either changes</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10522">10522 Handle terms agreement in the Discovery section of settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10525">10525 IS interactions proxied through the HS also need terms agreement</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10528">10528 don't try &amp; show threepids in discovery section if we don't have an ID server</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10539">10539 Inline terms agreement on change IS and IM</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10540">10540 When using Riot without an IS, identity requests are sent to server hosting Riot</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10546">10546 Prompt for fallback VOIP should only happen when the user tries to make a call</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10550">10550 warn when disconnecting ID server if there are any current bindings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10552">10552 Allow email registration, password reset &amp; adding 3pids when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10553">10553 Remove the ability to set an IS at login/registration</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10556">10556 Use the hashed v2 lookup API for 3PIDs</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10561">10561 Scalar should serve a .well-known file</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10566">10566 Use nicer APIs for toggling a 3PID's shared status</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10571">10571 Allow email registration when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10572">10572 Allow password reset when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10573">10573 Allow adding 3pids when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10574">10574 Placeholder issue for MSCs that should land prior to the privacy release</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10593">10593 Placeholder issue for privacy migration path</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10597">10597 Ensure IS in account data is read / written as specced</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10599">10599 Send IS for adding MSISDNs only when required by HS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10603">10603 Getting a terms prompt when inviting an email address clears the address picker</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10619">10619 Handle the case of no IS in features that require IS to lookup</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10620">10620 Change auth flows so that you default to no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10634">10634 Changing to vector.im IS in Settings fails because /terms 404s</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10635">10635 Inline terms agreement in Discovery should still show change and do not use</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10636">10636 The UX is a little confusing if you haven't accepted the terms of the default identity server.</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10637">10637 Unable to add email address to HS account without IS set</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10660">10660 Sydent implementation: Unauthed v1, clone all endpoints, auth v2</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10666">10666 In login/register, riot freezes if you go to Advanced, remove the IS url and click next</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10669">10669 Checking email invite account is unclear when no IS set</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10674">10674 Email help text on registration should be updated without binding</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10677">10677 Change text about other users being able to invite you by email on registration page</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10744">10744 Only set terms URLs in the account when they change</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10749">10749 Changing from one IS to another does not trigger bound 3PID warning</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10750">10750 Bound 3PIDs warning should better explain what's being left behind</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10754">10754 Lowercase emails during IS lookup calls</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10755">10755 Terms account data is meant to be additive, but currently sets only new URLs</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10756">10756 After changing IS to termstest.matrix.org the text field isn't cleared and the button remains active</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10757">10757 After changing IS back to vector.im the text field isn't cleared and the button remains active</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10758">10758 Revoke may be too vague for unbinding a 3PID</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10779">10779 When publishing a threepid to an IS, if you click 'continue' before clicking the link in your email, we delete your threepid from the HS.</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10800">10800 Community invite should not talk about ISes at all.</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10823">10823 IS with unagreed terms will block you from adding even unshared 3PIDs to your HS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10839">10839 Use the new backend APIs for adding-3pid-to-homeserver and binding-3pid-on-identity-server when they exist.</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10878">10878 UX regression when trying to invite by email if no IS is configured</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10883">10883 Riot should check for r0.6.0 server support alongside feature flags</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10923">10923 Send validation tokens to submit_url from HS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10933">10933 Do not include ID server or access token when HS supports MSC2290</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10939">10939 Registration with MSISDN needs to use submit_url</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10941">10941 threepid_creds for registration and password reset still include id_server</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10959">10959 Remove id_server from email threepid_creds</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10604">10604 QA: Re-test ALL of the identity server interactions</a> (in progress)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10958">10958 Terms of Service nitpicks</a> (in progress)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10704">10704 We treat an empty string identity server as not having one</a></li>
+</ul>
+</li>
+<li>vector-im/riot-ios
+<ul>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2518">2518 Make sure there are no ugly edge cases running Riot without an integrations manager</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2521">2521 Privacy: Improve wording on contact upload UI</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2532">2532 VoIP: Stop falling back to Google for STUN</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2600">2600 Prompt to accept integration manager polices on use</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2601">2601 Decouple setting an email for password reset from publishing your threepid to the identity server and support choice of identity server (on registration)</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2602">2602 Prompt to accept identity server policies before inviting them to a room</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2603">2603 Identity server v2 API authentication</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2606">2606 Settings: Add a Discovery section</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2608">2608 Registration: Update consents flow</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2643">2643 Ability to disable all identity server functionality via the config file</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2646">2646 VoIP: Fallback to matrix.org STUN server with a confirmation dialog</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2647">2647 MXRestClient: Move IS API to its own</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2648">2648 Remove the bind true flag from 3PID calls on registration</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2650">2650 Remove the bind true flag from 3PID adds in settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2651">2651 Store identity server in Account Data and support choosing identity server integration in User Settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2652">2652 Use the hashed v2 lookup API for 3PIDs</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2653">2653 Allow email registration, password reset &amp; adding 3pids when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2654">2654 Use nicer APIs for toggling a 3PID's shared status</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2657">2657 Allow email registration when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2658">2658 Allow password reset when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2659">2659 Allow adding 3pids when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2660">2660 Handle terms agreement in the Discovery section of settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2661">2661 Remove the ability to set an IS at login/registration</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2662">2662 We should make it clear in the UI that device names are publicly readable</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2664">2664 Placeholder issue for privacy migration path</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2665">2665 Ensure IS in account data is read / written as specced</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2672">2672 Handle the case of no IS in features that require IS to lookup</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2675">2675 Email help text on registration should be updated without binding</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2682">2682 Send IS for adding MSISDNs only when required by HS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2686">2686 Use wellknown to discover the IS of a custom HS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2696">2696 Lowercase emails during IS lookup calls</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2704">2704 Use <code>id_access_token</code> in CS API when required</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2604">2604 Settings: Ability to change the identity server</a> (in progress)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2649">2649 Ability to disconnect from the identity server by pressing buttons in user settings</a> (in progress)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2713">2713 Use the new backend APIs for adding-3pid-to-homeserver and binding-3pid-on-identity-server when they exist.</a> (in progress)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2718">2718 Riot should check for r0.6.0 server support alongside feature flags</a> (in progress)</li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2683">2683 Checking email invite account is unclear when no IS set</a></li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2731">2731 Send validation tokens to submit_url from HS</a></li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2732">2732 Do not include ID server or access token when HS supports MSC2290</a></li>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2736">2736 IS terms cannot be accepted anymore</a></li>
+</ul>
+</li>
+<li>vector-im/riot-android
+<ul>
+<li><a href="https://github.com/vector-im/riot-android/issues/3223">3223 VoIP: Stop falling back to Google for STUN</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3224">3224 Make sure there are no ugly edge cases running Riot without an integrations manager</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3225">3225 Prompt to accept integration manager polices on use </a>(done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3226">3226 Decouple setting an email for password reset from publishing your threepid to the identity server and support choice of identity server (on registration)</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3227">3227 Prompt to accept identity server policies before inviting them to a room</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3228">3228 Identity server v2 API authentication</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3229">3229 Settings: Ability to change the identity server</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3230">3230 Settings: Add a Discovery section</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3231">3231 Registration: Update consents flow</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3252">3252 Remove the bind true flag from 3PID calls on registration</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3253">3253 Ability to disconnect from the identity server by pressing buttons in user settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3254">3254 Remove the bind true flag from 3PID adds in settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3256">3256 Store identity server in Account Data and support choosing identity server integration in User Settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3257">3257 Use the hashed v2 lookup API for 3PIDs</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3258">3258 Allow email registration, password reset &amp; adding 3pids when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3260">3260 Allow email registration when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3261">3261 Allow password reset when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3262">3262 Allow adding 3pids when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3263">3263 Handle terms agreement in the Discovery section of settings</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3264">3264 Remove the ability to set an IS at login/registration</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3265">3265 We should make it clear in the UI that device names are publicly readable</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3268">3268 Placeholder issue for privacy migration path</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3269">3269 Ensure IS in account data is read / written as specced</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3277">3277 Handle the case of no IS in features that require IS to lookup</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3278">3278 Email help text on registration should be updated without binding</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3281">3281 Send IS for adding MSISDNs only when required by HS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3283">3283 Use wellknown to discover the IS of a custom HS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3289">3289 Lowercase emails during IS lookup calls</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3295">3295 Use <code>id_access_token</code> in CS API when required</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3300">3300 Use the new backend APIs for adding-3pid-to-homeserver and binding-3pid-on-identity-server when they exist. </a>(done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3312">3312 Riot should check for r0.6.0 server support alongside feature flags</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3316">3316 Implement MSC2290</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3324">3324 id_server param sent when registering an email on server that does not requires one</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3326">3326 Discovery Settings / infinite loading if terms not signed on existing IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3327">3327 vector.im is seen as having no terms, but it does</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3251">3251 VoIP: Fallback to matrix.org STUN server with a confirmation dialog</a> (in progress)</li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3248">3248 Ability to disable all identity server functionality via the config file</a></li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3318">3318 Send validation tokens to submit_url from HS</a></li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3322">3322 Do not include ID server or access token when HS supports MSC2290</a></li>
+</ul>
+</li>
+<li>vector-im/riotX-android
+<ul>
+<li><a href="https://github.com/vector-im/riotX-android/issues/490">490 Allow email registration, password reset &amp; adding 3pids when no IS</a> (done)</li>
+<li><a href="https://github.com/vector-im/riotX-android/issues/432">432 Prompt to accept integration manager polices on use</a> (in progress)</li>
+<li><a href="https://github.com/vector-im/riotX-android/issues/431">431 Make sure there are no ugly edge cases running Riot without an integrations manager</a></li>
+<li><a href="https://github.com/vector-im/riotX-android/issues/433">433 Decouple setting an email for password reset from publishing your threepid to the identity server and support choice of identity server (on registration)</a></li>
+<li><a href="https://github.com/vector-im/riotX-android/issues/434">434 Prompt to accept identity server policies before inviting them to a room</a></li>
+<li><a href="https://github.com/vector-im/riotX-android/issues/435">435 Identity server v2 API authentication</a></li>
+<li><a href="https://github.com/vector-im/riotX-android/issues/436">436 Settings: Ability to change the identity server</a></li>
+<li><a href="https://github.com/vector-im/riotX-android/issues/438">438 Settings: Add a Discovery section</a></li>
+<li><a href="https://github.com/vector-im/riotX-android/issues/439">439 Registration: Update consents flow</a></li>
+<li><a href="https://github.com/vector-im/riotX-android/issues/489">489 Use the hashed v2 lookup API for 3PIDs</a></li>
+</ul>
+</li>
+<li>matrix-org/matrix-doc
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/1961">1961 MSC1961: Integration manager authentication APIs</a> (done)</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2078">2078 MSC2078: Sending Third-Party Request Tokens via the Homeserver</a> (done)</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/issues/2130">2130 Identity service should do lookups based on hashed 3PIDs, not plaintext ones.</a> (done)</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2134">2134 MSC2134: Identity Hash Lookups</a> (done)</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/issues/2139">2139 Method for ISes and Integration managers to provide terms of service</a> (done)</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2140">2140 MSC2140: Terms of Service for ISes and IMs</a> (done)</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2229">2229 MSC2229: Allowing 3PID Owners to Rebind</a> (done)</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2230">2230 MSC2230: Store Identity Server in Account Data</a> (done)</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2263">2263 MSC2263: Give homeservers the ability to handle their own 3PID registrations/password resets</a> (done)</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2264">2264 MSC2264: Add an unstable feature flag to MSC2140 for clients to detect support</a> (done)</li>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/2290">2290 MSC2290: Separate Endpoints for Threepid Binding</a> (in progress)</li>
+</ul>
+</li>
+<li>matrix-org/sydent
+<ul>
+<li><a href="https://github.com/matrix-org/sydent/issues/178">178 Support for MSC2140</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/179">179 Support testing with matrix-is-tester</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/180">180 Support for MSC2140</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/181">181 Deny bindings to anything other than the mxid you're authed as</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/184">184 Hash 3PID lookups</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/186">186 Don't fail the unbind request if the binding doesn't exist</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/187">187 Add more tweaks to terms branch</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/issues/189">189 Redact looked-up threepids from the application logs.</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/issues/191">191 Add OpenID auth to 3PID hash lookup</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/197">197 Have 'mappings' contain medium as well as address</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/198">198 Throw exception on bad args &amp; catch in wrapper</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/199">199 Return algorithm, lookup_pepper in M_INVALID_PEPPER response</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/200">200 Support MSC2140 register/terms endpoints</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/201">201 Port v1 endpoints to v2</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/202">202 Deny bindings to anything other than the mxid you're authed as</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/204">204 Fix the signing servlet</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/205">205 Correct API v1 path check in get_args</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/206">206 Fix terms POST</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/issues/207">207 Deploy policy file</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/208">208 Remove PII logging from log-level INFO</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/pull/213">213 Delete threepid assocs on unbind and remove existing with migration</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/issues/217">217 Allow non-matrix.org MXIDs via v2 only once terms are enabled</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/issues/218">218 Unbind fails to remove the binding on matrix.org IS</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/issues/220">220 Unbind fails to work for bindings where it was attempted with #213</a> (done)</li>
+<li><a href="https://github.com/matrix-org/sydent/issues/192">192 Sydent doesn't delete 3PIDs from DB on unbind</a> (in progress)</li>
+</ul>
+</li>
+<li>matrix-org/synapse
+<ul>
+<li><a href="https://github.com/matrix-org/synapse/issues/1287">1287 We need to actually censor redactions from the DB (SYN-284)</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/5751">5751 Make homeservers able to handle registration-with-email without depending on an Identity Server</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/5786">5786 Support IS v2 API with authentication for requests proxied to the IS</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/5827">5827 Add 3PID unbind API for MSC2140</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5835">5835 [1/2] Allow homeservers to send registration emails | Sending the email</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/5861">5861 Use the v2 lookup API for 3PID invites</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/5862">5862 Allow account owners to rebind 3PIDs as in MSC2229</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5868">5868 Add flag in /versions for whether clients should send id_server params</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/5874">5874 Placeholder issue for privacy migration path</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5875">5875 Remove trusted_third_party_id_servers functionality</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5876">5876 Replace trust_identity_server_for_password_resets with account_threepid_delegate</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5892">5892 Switch to using v2 Identity Service APIs other than lookup (MSC 2140)</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5897">5897 Use the v2 lookup API for 3PID invites</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/5927">5927 Add a m.id_access_token flag to unstable_features</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/5928">5928 Split account_threepid_handler into a msisdn and email versions</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/5929">5929 Use account_threepid_delegate for sending SMS</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5930">5930 Add m.id_access_token flag</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5934">5934 Censor redactions in DB after a month</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/5935">5935 Use federation blacklist for requests to identity servers</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5937">5937 Revert "Use the v2 lookup API for 3PID invites"</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5940">5940 [2/2] Allow homeservers to send registration emails | Accepting the verification</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5945">5945 Revert "Add m.id_access_token flag"</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5948">5948 Support v2 Identity Server APIs</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5964">5964 Remove bind_email and bind_msisdn</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5968">5968 Set m.require_identity_server to always be False</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5969">5969 Change account_threepid_delegate to a dictionary</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5972">5972 Add m.require_identity_server to /versions unstable_flags</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5974">5974 Add m.id_access_token to /versions unstable_features (MSC2264)</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5976">5976 Use the v2 Identity Service API for lookups (MSC2134 + MSC2140)</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5979">5979 v2 3PID Invites (part of MSC2140)</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5980">5980 Add POST /_matrix/client/r0/account/3pid/unbind (MSC2140)</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5987">5987 Allow Synapse to send registration emails + choose Synapse or an external server to handle 3pid validation</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/5996">5996 Allow users to rebind 3pids they own (MSC2229)</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6000">6000 Use the federation blacklist for requests to untrusted Identity Servers</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6011">6011 Use account_threepid_delegate for 3pid validation</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6013">6013 Fix existing v2 identity server calls (MSC2140)</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6042">6042 Allow HS to send emails when adding an email to the HS</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6043">6043 Implement MSC2290</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6044">6044 Add an unstable feature flag for separate add/bind 3pid APIs</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6062">6062 Use unstable prefix for 3PID unbind API</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6067">6067 Drop support for bind param on POST /account/3pid (MSC2290)</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/6076">6076 Synapse doesn't give clients a submit_url on requestToken breaking msisdn adding</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6078">6078 Add POST submit_token endpoint for MSISDN</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6079">6079 Add submit_url response parameter to msisdn /requestToken</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/6087">6087 Remove hardcoded defaults of matrix.org and vector.im in configuration</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/pull/6090">6090 Explicitly log when a homeserver does not have a trusted key server configured </a>(done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/6096">6096 Riot Web expects the email validation next_link to have the sid appended</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/6100">6100 Remove email from registration flows if it’s unsupported</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/6103">6103 _check_threepid in auth.py incorrect for MSISDN</a> (done)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/6045">6045 Support Client-Server API r0.6.0</a> (in progress)</li>
+<li><a href="https://github.com/matrix-org/synapse/issues/1263">1263 When we redact events, any mxc content they refer to should be redacted too (SYN-216)</a></li>
+<li><a href="https://github.com/matrix-org/synapse/issues/4565">4565 Metadata resistance.</a></li>
+<li><a href="https://github.com/matrix-org/synapse/issues/6086">6086 Fetch signing-keys directly from servers before falling back to the trusted_key_servers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>phase:2
+<ul>
+<li>vector-im/riot-web
+<ul>
+<li><a href="https://github.com/vector-im/riot-web/issues/4913">4913 Option for homeservers to set a default integration manager</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10161">10161 Store Integration Manager preferences in account data and allow user to change them somewhere sensible</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10967">10967 Disconnect from identity server fails</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10443">10443 Remove v1 IS API fallbacks once servers are updated</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10557">10557 Prompt users each time before sending data to an Identity Server that doesn't have a terms of service (unless you have actively set that IS in your account data).</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10696">10696 Allow users to disconnect from an integration manager entirely in the same way that we support doing this for identity servers</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10909">10909 Unable to disconnect from IS if the server is unavailable</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10936">10936 Refine submit_url handling to only activate with separate add and bind</a></li>
+</ul>
+</li>
+<li>vector-im/riot-ios
+<ul>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2711">2711 Provide a better UX for users considering sharing their contact list with an IS to discover people they know already using Matrix</a></li>
+</ul>
+</li>
+<li>vector-im/riot-android
+<ul>
+<li><a href="https://github.com/vector-im/riot-android/issues/3282">3282 Checking email invite account is unclear when no IS set</a></li>
+<li><a href="https://github.com/vector-im/riot-android/issues/3323">3323 Post MSC2290 bug / Clicking on the validation mail link fails registration</a></li>
+</ul>
+</li>
+<li>matrix-org/matrix-doc
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-doc/pull/1957">1957 MSC1957: Integration manager discovery</a> (done)</li>
+</ul>
+</li>
+<li>matrix-org/sydent
+<ul>
+<li><a href="https://github.com/matrix-org/sydent/issues/196">196 Remove the lookup_hash field from local_threepid_associations</a> (in progress)</li>
+</ul>
+</li>
+<li>matrix-org/synapse
+<ul>
+<li><a href="https://github.com/matrix-org/synapse/issues/5881">5881 Remove trust_identity_server_for_password_resets and account_threepid_delegate options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>phase:3
+<ul>
+<li>vector-im/riot-web
+<ul>
+<li><a href="https://github.com/vector-im/riot-web/issues/10563">10563 Add better domain for turn.matrix.org use as STUN server</a> (done)</li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10087">10087 Prompt to accept integration manager policies on registration</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10167">10167 Present an aggregated terms of service dialogue at registration if possible</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10168">10168 If a user has disabled the identity server integration on their account, we should make invite user handle this nicely</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10401">10401 Invite new users to publish their threepids to the identity server</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10422">10422 Use more contextual prompt for integration manager polices on use</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10453">10453 Log out from IM on Riot log out and IM removal</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10455">10455 Log out from IS on Riot log out and IS removal</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10487">10487 Store the date of users having read and accepted the IM policies in the IM db</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10488">10488 Store the date of users having read and accepted the IS policies in the IS db</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10498">10498 Terms test scalar requires the legacy ?v query param on the new account route</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10575">10575 We should show the 'must configure TURN' warning when a call fails, even after using the fallback turn.matrix.org</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10615">10615 Change all IS access token APIs to use getIdentityAccessToken only</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10671">10671 riot submits sign-ed25519 requests as POST requests with params in query string and empty body</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10746">10746 /invite doesn't force terms with older homeservers</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10830">10830 Show IS policy links in user settings somewhere.</a></li>
+<li><a href="https://github.com/vector-im/riot-web/issues/10950">10950 Unhelpful 400 error when adding MSISDN and server doesn’t delegate</a></li>
+</ul>
+</li>
+<li>vector-im/riot-ios
+<ul>
+<li><a href="https://github.com/vector-im/riot-ios/issues/2710">2710 Show IS policy links in user settings somewhere.</a></li>
+</ul>
+</li>
+<li>matrix-org/matrix-doc
+<ul>
+<li><a href="https://github.com/matrix-org/matrix-doc/issues/447">447 We need a way to be able to expire data from a HS. (SPEC-141)</a></li>
+</ul>
+</li>
+<li>matrix-org/synapse
+<ul>
+<li><a href="https://github.com/matrix-org/synapse/issues/5830">5830 <code>pushers</code> table contains user device names, which may include user real names</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2019&#x2F;02&#x2F;15&#x2F;publishing-the-backend-roadmap&#x2F;" title="Publishing the Backend Roadmap">Publishing the Backend Roadmap</a></h2>
+                <span>
+                    15.02.2019 00:00
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/neil-johnson">
+                        Neil Johnson
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Good people,</p>
+<p>2019 is a big year for Matrix, in the next month we will have shipped:</p>
+<ul>
+ 	<li style="font-weight: 400;">Matrix spec 1.0 (including the first stable release of the Server to Server Spec)
+</li>
+ 	<li style="font-weight: 400;">Synapse 1.0
+</li>
+ 	<li style="font-weight: 400;">Riot 1.0
+</li>
+</ul>
+This is huge in itself, but is really only the beginning, and now we want to grow the ecosystem as quickly as possible. This means landing a mix of new features, enhancing existing ones, some big performance improvements as well as generally making life easier for our regular users, homeserver admins and community developers.
+<p>Today we are sharing the Matrix core team's backend roadmap. The idea is that this will make it easier for anyone to understand where the project is going, what we consider to be important, and why.</p>
+<p>To see the roadmap in its full glory, <a href="https://github.com/orgs/matrix-org/projects/9">take a look here</a>.</p>
+<h3 id="what-is-a-roadmap-and-why-is-it-valuable">What is a roadmap and why is it valuable?</h3>
+<p>A roadmap is a set of high level projects that the team intend to work on and a rough sense of the relative priority. It is essential to focus on specific goals, which inevitably means consciously not working on other initiatives.</p>
+<p>Our roadmap is not a delivery plan - there are explicitly no dates. The reason for this is that we know that other projects will emerge, developers will be needed to support other urgent initiatives, matrix.org use continues to grow exponentially and will require performance tweaking.</p>
+<p>So simply, based on what we know now, this is the order we will work on our projects.</p>
+<h3 id="why-are-we-sharing-it">Why are we sharing it?</h3>
+<p>We already share our <a href="https://github.com/orgs/matrix-org/projects/8">day to day todo list</a>, and of course our commit history, but it can be difficult for a casual observer to see the bigger picture from such granular data. The purpose of sharing is that we want anyone from the community to understand where our priorities lie.</p>
+<p>We are often asked ‘Why are you not working on X, it is really important' where the answer is often ‘We agree that X is really important, but A, B and C are more important and must come first'.</p>
+<p>The point of sharing the roadmap is to make that priority trade off more transparent and consumable.</p>
+<h3 id="how-did-we-build-it">How did we build it?</h3>
+<p>The core contributors to Synapse and Dendrite are 6 people, of 5 nationalities spread across 3 locations. After shipping the <a href="/docs/spec/server_server/r0.1.1.html">r0 release of the Server to Server spec</a> last month we took some time to step back and have a think about what to do after Synapse 1.0 lands. This meant getting everyone in one place to talk it through.</p>
+<p>We also had Ben (benpa) contribute from a community perspective and took input from speaking to so many of you at FOSDEM.</p>
+<p>In the end we filled a wall with post-its, each post-it representing a sizeable project. The position of the post-it was significant in that the vertical axis being a sense of how valuable we thought the task would be, and the horizontal axis being a rough guess on how complex we considered it to be.</p>
+<p>We found this sort of grid approach to be really helpful in determining relative priority.</p>
+<p>After many hours and plenty of blood, sweat and tears we ended up with something we could live with and wrote it up in the <a href="https://github.com/orgs/matrix-org/projects/9">shared board</a>.</p>
+<p><a href="/blog/wp-content/uploads/2019/02/IMG_2247.jpg"><img class="alignnone size-medium wp-image-3996" src="/blog/wp-content/uploads/2019/02/IMG_2247-300x225.jpg" alt="" width="300" height="225" /></a><a href="/blog/wp-content/uploads/2019/02/IMG_2245.jpg"><img class="alignnone size-medium wp-image-3990" src="/blog/wp-content/uploads/2019/02/IMG_2245-300x225.jpg" alt="" width="300" height="225" /></a></p>
+<h3 id="and-this-is-written-in-blood-right">And this is written in blood right?</h3>
+<p>Not at all (it's written in board marker). This is simply a way to express our plan of action and we are likely to make changes to it dynamically. However, this means that at any given moment, if someone wants to know what we are working on then the roadmap is the place to go.</p>
+<h3 id="but-wait-i-want-to-know-more">But wait I want to know more!</h3>
+<p>Here is a video of myself and Matthew to talk you through the projects</p>
+<noscript>Today's Matrix Live: <a href="https://youtube.com/watch?v=LfyQ6cNGbLk">https://youtube.com/watch?v=LfyQ6cNGbLk</a></noscript>
+<youtube-player video-id="LfyQ6cNGbLk"></youtube-player>
+<h3 id="interesting-but-i-have-questions">Interesting, but I have questions ...</h3>
+<p>Any feedback gratefully received, come and ask questions in <a href="https://matrix.to/#/#synapse:matrix.org">#synapse</a> or <a href="https://matrix.to/#/#dendrite:matrix.org">#dendrite</a> or feel free to ping me direct at @neilj:matrix.org</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2018&#x2F;12&#x2F;21&#x2F;porting-synapse-to-python-3&#x2F;" title="Porting Synapse to Python 3">Porting Synapse to Python 3</a></h2>
+                <span>
+                    21.12.2018 00:00
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/neil-johnson">
+                        Neil Johnson
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Matrix's reference homeserver, Synapse, is written in Python and uses the Twisted networking framework to power its bitslinging across the Internet. The Python version used has been strictly Python 2.7, the last supported version of Python 2, but as of this week that changes! Since Twisted and our other upstream dependencies now support the newest version of Python, Python 3, we are now able to finish the jump and port Synapse to use it by default. The port has been done in a backwards compatible way, written in a subset of Python that is usable in both Python 2 and Python 3, meaning your existing Synapse installs still work on Python 2, while preparing us for a Python 3 future.</p>
+<h2 id="why-port">Why port?</h2>
+<p>Porting Synapse to Python 3 prepares Synapse for a post-Python 2 world, currently scheduled for 2020. After the 1st of January in 2020, Python 2 will no longer be supported by the core Python developers and no bugfixes (even critical security ones) will be issued. As the security of software depends very much on the runtime and libraries it is running on top of, this means that by then all Python 2 software in use should have moved to Python 3 or other runtimes.</p>
+<p>The Python 3 port has benefits other than just preparing for the End of Life of Python 2.7. Successive versions of Python 3 have improved the standard library, provided newer and clearer syntax for asynchronous code, added opt-in static typing to reduce bugs, and contained incremental performance and memory management improvements. These features, once Synapse stops supporting Python 2, can then be fully utilised to make Synapse's codebase clearer and more performant. One bonus that we get immediately, though, is Python 3's memory compaction of Unicode strings. Rather than storing as UCS-2/UTF-16 or UCS-4/UTF-32, it will instead store it in the smallest possible representation giving a 50%-75% memory improvement for strings only containing Latin-1 characters, such as nearly all dictionary keys, hashes, IDs, and a large proportion of messages being processed from English speaking countries. Non-English text will also see a memory improvement, as it can be commonly stored in only two bytes instead of the four in a UCS-4 “wide” Python 2 build.</p>
+<p><i>Editor's note: If you were wondering how this fits in with Dendrite (the next-gen golang homeserver): our plan is to use Synapse as the reference homeserver for all the current work going on with landing a 1.0 release of the Matrix spec: it makes no sense to try to iterate and converge on 1.0 on both Synapse and Dendrite in parallel. In order to prove that the 1.0 spec is indeed fit for purpose we then also need Synapse to exit beta and hit a 1.0 too, hence the investment to get it there. It's worth noting that over the last year we've been plugging away solidly improving Synapse in general (especially given the increasing number of high-profile deployments out there), so we're committed to getting Synapse to a formal production grade release and supporting it in the long term. Meanwhile, Dendrite development is still progressing - currently acting as a place to experiment with more radical blue-sky architectural changes, especially in low-footprint or even clientside homeservers. We expect it to catch up with Synapse once 1.0 is out the door; and meanwhile Synapse is increasingly benefiting from performance work inspired by Dendrite.
+</i></p>
+<h2 id="when-will-the-port-be-released">When will the port be released?</h2>
+<p>The port is has been released in a “production ready” form in <a href="/blog/2018/12/20/synapse-0-34-0-released/">Synapse 0.34.0</a>, supporting Python 3.5, 3.6, and 3.7. This will work on installations with and without workers.</p>
+<h2 id="what-s-it-like-in-the-real-world">What's it like in the real world?</h2>
+<p>Beta testers of the Python 3 port have reported lower memory usage, including lower memory “spikes” and slower memory growth. You can see this demonstrated on matrix.org:</p>
+<p><a href="/blog/wp-content/uploads/2018/12/image3.png"><img class="alignnone size-large wp-image-3830" src="/blog/wp-content/uploads/2018/12/image3-1024x223.png" alt="" width="1024" height="223" /></a></p>
+<p>See 10/15, ~20:00 for the Python 3 migration. This is on some of the Synchrotrons on matrix.org.</p>
+<p><a href="/blog/wp-content/uploads/2018/12/image1.png"><img class="alignnone size-large wp-image-3824" src="/blog/wp-content/uploads/2018/12/image1-1024x237.png" alt="" width="1024" height="237" /></a></p>
+<p>See ~11/8 for the Python 3 migration. This is on the Synapse master on matrix.org.</p>
+<p>We have also noticed some better CPU utilisation:</p>
+<p><span style="font-weight: 400;"><a href="/blog/wp-content/uploads/2018/12/image2.png"><img class="alignnone size-large wp-image-3822" src="/blog/wp-content/uploads/2018/12/image2-1024x296.png" alt="" width="1024" height="296" /></a>
+</span>
+See 21:30 for the migration of federation reader 1, and 21:55 for the others. The federation reader is a particular pathological case, where the replacement of lists with iterators internally on Python 3 has given us some big boosts.</p>
+<p><a href="/blog/wp-content/uploads/2018/12/image4.png"><img class="alignnone size-large wp-image-3829" src="/blog/wp-content/uploads/2018/12/image4-1024x296.png" alt="" width="1024" height="296" /></a></p>
+<p>See 10/15, 4:00.The CPU utilisation has gone down on synchrotron 1 after the Python 3 migration, but not as dramatically as the federation reader. Synchrotron 3 was migrated a few days later.</p>
+<p>As some extra data-points, my personal HS consumes about 300MB now at initial start, and grows to approximately 800MB -- under Python 2 the growth would be near-immediate to roughly 1.4GB.</p>
+<h2 id="where-to-from-here">Where to from here?</h2>
+<p>Python 2 is still a supported platform for running Synapse for the time being. We plan on ending mainstream support on 1st April 2019, where upon Python 3.5+ will be the only officially supported platform. Additionally, we will give notice ahead of time once we are ready to remove Python 2.7 compatibility from the codebase (which will be no sooner than 1st April). Although slightly inconvenient, we hope that this gives our users and integrators adequate time to migrate, whilst giving us the flexibility to use modern Python features and make Synapse a better piece of software to help power the Matrix community.</p>
+<h2 id="how-can-i-try-it">How can I try it?</h2>
+<p>The port is compatible with existing homeservers and configurations, so if you install Synapse inside a Python 3 virtualenv, you can run it from there. Of course, this differs based on your installation method, operating system, and what version of Python 3 you wish to use. Full upgrade notes live <a href="https://github.com/matrix-org/synapse/blob/release-v0.34.0/UPGRADE.rst#upgrading-to-v0340">here</a> but if you're having problems or want to discuss specific packagings of Synapse please come ask in <a href="https://matrix.to/#/#synapse:matrix.org">#synapse:matrix.org</a>.</p>
+<h2 id="thanks">Thanks</h2>
+<p>Many thanks go to fellow Synapse developers Erik and Rich for code review, as well as community contributors such as notafile and krombel for laying the foundations many months ago allowing this port to happen. Without them, this wouldn't have happened.</p>
+<p>Happy Matrixing,</p>
+<p>Amber Brown (hawkowl)</p>
+
+                
+            </div>
+        </article>
+        
+        <article class="post">
+            <header>
+                <h2><a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2018&#x2F;10&#x2F;25&#x2F;olm-3-0-0-released&#x2F;" title="Olm 3.0.0 released!">Olm 3.0.0 released!</a></h2>
+                <span>
+                    25.10.2018 00:00
+                    —
+                    <a href="/category/tech">
+                        Tech
+                    </a>
+                    —
+                    <a
+                        href="/author/hubert-chathi">
+                        Hubert Chathi
+                    </a>
+                </span>
+                
+            </header>
+            <div>
+                
+                <p>Olm 3.0.0 has been released, which features several big changes. It can be downloaded from <a href="https://git.matrix.org/git/olm/">https://git.matrix.org/git/olm/</a>. The npm package for JavaScript can be downloaded from <a href="/packages/npm/olm/olm-3.0.0.tgz">https://matrix.org/packages/npm/olm/olm-3.0.0.tgz</a></p>
+<h2 id="python">Python</h2>
+<p>The biggest change is the merge of <a href="https://github.com/poljar/">poljar's</a> improved Python bindings. These bindings should be much easier to use for Python programmers, and are used by <a href="https://github.com/Zil0/">Zil0's</a> <a href="https://github.com/Zil0/matrix-python-sdk/tree/e2e_sample">E2E support in the Matrix Python SDK</a>.</p>
+<p>Since the binding API has changed, existing Python code will need to be rewritten in order to work with this release.</p>
+<p>poljar has also included <a href="https://poljar.github.io/python-olm/html/index.html">comprehensive documentation</a> for the new API.</p>
+<h2 id="cmake">CMake</h2>
+<p><a href="https://github.com/mujx/">mujx</a> contributed support for building olm using CMake. This should allow for easier building on different platforms. Currently the library can be built using either make or CMake. In the future, make support may be removed.</p>
+<h2 id="javascript">JavaScript</h2>
+<p>The JavaScript bindings now use <a href="https://webassembly.org/">WebAssembly</a> by default. WebAssembly is much faster than the previous <a href="http://asmjs.org/">asm.js</a> build, and is supported by recent versions of the most popular browsers. For compatibility with browsers that do not support WebAssembly, the asm.js version is still provided.</p>
+<p>Due to adding support for WebAssembly, the API had to be changed slightly.
+There is now an <code>init</code> function that must be called before the library can be used. This function will return a promise that will resolve once the library is ready to be used. The <a href="https://github.com/matrix-org/matrix-js-sdk">matrix-js-sdk</a> has not yet been updated to do this, so users of matrix-js-sdk should continue using olm 2.x until it has been updated.</p>
+<h2 id="key-backups">Key backups</h2>
+<p>The public key API has been updated to support the <a href="https://github.com/matrix-org/matrix-doc/pull/1538">proposal for server-side key backups</a>. More details on how to use these functions will be published in the future.</p>
+
+                
+            </div>
+        </article>
+        
+        <nav class="pagination">
+    <div class="prev">
+        
+    </div>
+    <span class="page-number">1 / 6</span>
+    <div class="prev">
+        
+        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;category&#x2F;tech&#x2F;page&#x2F;2&#x2F;">Next ›</a>
+        
+    </div>
+</nav>
+
+    </div>
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

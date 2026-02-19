@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Matrix.org - Tutorials</title>
+    <subtitle>The Matrix.org Foundation</subtitle>
+    <link href="https://tune-your-chat.github.io/category/tutorials/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tune-your-chat.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2021-06-10T17:08:54+00:00</updated>
+    <id>https://tune-your-chat.github.io/category/tutorials/atom.xml</id>
+    
+    
+    
+<entry xml:lang="en">
+    <title>Low Bandwidth Matrix: An implementation guide</title>
+    <published>2021-06-10T17:08:54+00:00</published>
+    <updated>2021-06-10T11:28:12+00:00</updated>
+    <author>
+      <name>Kegan Dougal</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2021/06/10/low-bandwidth-matrix-an-implementation-guide/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2021/06/10/low-bandwidth-matrix-an-implementation-guide/</id>
+    <content type="html">&lt;p&gt;&lt;em&gt;Disclaimer: Low bandwidth Matrix is experimental, not yet standardised, and subject to change without notice.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This guide is for Matrix developers who want to support
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;pull&#x2F;3079&quot;&gt;MSC3079: Low Bandwidth CS API&lt;&#x2F;a&gt; in their
+clients&#x2F;servers. Please read the experimental MSC if you want to learn more about what is happening
+at a protocol level. If you want a high level overview of low bandwidth Matrix and why you should
+care, watch the &lt;a href=&quot;http:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=_E-J6Hk2dYs&amp;amp;t=14m14s&quot;&gt;12 minute demo on Matrix Live&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Matrix currently uses HTTP APIs with JSON data to communicate from the client to the server. This is
+widely supported but is not very bandwidth efficient. This means that the protocol is slower, more
+costly and less able to be used on low bandwidth links (e.g 2G networks) which are common in certain
+parts of the world. MSC3079 defines a low bandwidth protocol using CoAP and CBOR instead of HTTP and
+JSON respectively. In the future homeservers will natively support some form of low bandwidth
+protocol. However, at present, no homeserver natively supports MSC3079. Therefore, this guide will
+set up a low bandwidth proxy server which can be put in front of any Matrix homeserver
+(Synapse, Dendrite, Conduit, etc) to make it MSC3079-compatible. This guide will also configure an
+Android device to speak MSC3079.&lt;&#x2F;p&gt;
+&lt;p&gt;Low bandwidth Matrix currently does not support web browsers due to their inability to send UDP
+traffic. You do &lt;em&gt;not&lt;&#x2F;em&gt; need to be running a homeserver to follow this tutorial.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;setting-up-a-low-bandwidth-proxy-for-your-homeserver&quot;&gt;Setting up a low bandwidth proxy for your homeserver&lt;&#x2F;h2&gt;
+&lt;p&gt;Prerequisites:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go 1.13+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;openssl&lt;&#x2F;code&gt; to generate a self-signed DTLS certificate, or an existing certificate you want to use.&lt;&#x2F;li&gt;
+&lt;li&gt;Linux or Mac user&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Steps:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clone the repo: &lt;code&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;lb.git&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Build the low bandwidth proxy: &lt;code&gt;go build .&#x2F;cmd&#x2F;proxy&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Generate a elliptic curve DTLS key&#x2F;certificate: (we use curve keys as they are smaller than RSA
+keys, but both work.)&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;openssl ecparam -name prime256v1 -genkey -noout -out private-key.pem
+&lt;&#x2F;span&gt;&lt;span&gt;openssl req -new -x509 -key private-key.pem -out cert.pem -days 365
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;# you now have cert.pem and private-key.pem
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Run it pointing at matrix.org:&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;.&#x2F;proxy -local &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;https:&#x2F;&#x2F;matrix-client.matrix.org&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;--tls-cert cert.pem --tls-key private-key.pem \
+&lt;&#x2F;span&gt;&lt;span&gt;--advertise &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;http:&#x2F;&#x2F;127.0.0.1:8008&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;--dtls-bind-addr :8008
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;You should see something like this:&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;INFO[0000] Listening on :8008&#x2F;tcp to reverse proxy from http:&#x2F;&#x2F;127.0.0.1:8008 to https:&#x2F;&#x2F;matrix-client.matrix.org - HTTPS enabled: false 
+&lt;&#x2F;span&gt;&lt;span&gt;INFO[0000] Listening for DTLS on :8008 - ACK piggyback period: 5s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Mac users: If you are having trouble generating EC certificates, make sure you are using OpenSSL and
+not LibreSSL which comes by default: &lt;code&gt;openssl version&lt;&#x2F;code&gt;. To use OpenSSL, &lt;code&gt;brew install openssl&lt;&#x2F;code&gt; which
+then dumps the binary to &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;opt&#x2F;openssl&#x2F;bin&#x2F;openssl&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;To test it is working correctly:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;# build command line tools we can use to act as a low bandwidth client
+&lt;&#x2F;span&gt;&lt;span&gt;go build .&#x2F;cmd&#x2F;jc
+&lt;&#x2F;span&gt;&lt;span&gt;go build .&#x2F;cmd&#x2F;coap
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;# do a CoAP GET request to matrix.org via the proxy
+&lt;&#x2F;span&gt;&lt;span&gt;.&#x2F;coap -X GET -k &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;http:&#x2F;&#x2F;localhost:8008&#x2F;_matrix&#x2F;client&#x2F;versions&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span&gt;.&#x2F;jc -c2j &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;-&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;unstable_features&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;io.element.e2ee_forced.private&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:false,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;io.element.e2ee_forced.public&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:false,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;io.element.e2ee_forced.trusted_private&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:false,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;org.matrix.e2e_cross_signing&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:true,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;org.matrix.label_based_filtering&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:true,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;org.matrix.msc2432&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:true,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;org.matrix.msc3026.busy_presence&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:false,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;uk.half-shot.msc2666&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:true},&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;versions&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;r0.0.1&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;r0.1.0&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;r0.2.0&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;r0.3.0&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;r0.4.0&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;r0.5.0&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;r0.6.0&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If this doesn&#x27;t work:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Check the proxy logs for errors (e.g bad hostname)&lt;&#x2F;li&gt;
+&lt;li&gt;Try adding &lt;code&gt;-v&lt;&#x2F;code&gt; to &lt;code&gt;.&#x2F;coap&lt;&#x2F;code&gt; (e.g bad method or path)&lt;&#x2F;li&gt;
+&lt;li&gt;Run the proxy with &lt;code&gt;SSLKEYLOGFILE=ssl.log&lt;&#x2F;code&gt; and inspect the decrypted traffic using Wireshark.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Otherwise, congratulations! You now have a low bandwidth proxy! You can connect to your proxy just
+like you would to matrix.org or any other homeserver.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;security-considerations&quot;&gt;Security considerations&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The proxy acts as a man in the middle and can read all non-E2EE traffic, including login
+credentials. DO NOT USE UNTRUSTED LOW BANDWIDTH PROXY SERVERS. Only use proxy servers run by
+yourself or the homeserver admins.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;further-reading&quot;&gt;Further reading&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;proxy&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;lb&#x2F;tree&#x2F;main&#x2F;cmd&#x2F;proxy&quot;&gt;README&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;coap&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;lb&#x2F;tree&#x2F;main&#x2F;cmd&#x2F;coap&quot;&gt;README&lt;&#x2F;a&gt; and &lt;code&gt;jc&lt;&#x2F;code&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;lb&#x2F;tree&#x2F;main&#x2F;cmd&#x2F;jc&quot;&gt;README&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;setting-up-a-custom-element-android&quot;&gt;Setting up a custom Element Android&lt;&#x2F;h2&gt;
+&lt;p&gt;We&#x27;ll add low bandwidth matrix to Element Android and iOS by default once it&#x27;s standardised - but
+while things are still experimental, here&#x27;s a guide for how to build Element Android to do it
+yourself if you feel the urge.  This can be used as inspiration for other Matrix clients too.&lt;&#x2F;p&gt;
+&lt;p&gt;Prerequisites:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Android Studio&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Steps:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clone the repo: &lt;code&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;vector-im&#x2F;element-android.git&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Checkout &lt;code&gt;kegan&#x2F;lb&lt;&#x2F;code&gt;: &lt;code&gt;git checkout kegan&#x2F;lb&lt;&#x2F;code&gt;. This branch replaces all HTTP traffic going to
+&lt;code&gt;&#x2F;_matrix&#x2F;client&#x2F;*&lt;&#x2F;code&gt; with LB traffic. &lt;code&gt;&#x2F;_matrix&#x2F;media&lt;&#x2F;code&gt; traffic is left untouched. This branch also
+disables TLS checks entirely so self-signed certificates will work.&lt;&#x2F;li&gt;
+&lt;li&gt;Clone the low bandwidth repo if you haven&#x27;t already:
+&lt;code&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;lb.git&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;In the low bandwidth repo, build the mobile bindings:&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;go get golang.org&#x2F;x&#x2F;mobile&#x2F;cmd&#x2F;gomobile
+&lt;&#x2F;span&gt;&lt;span&gt;cd mobile
+&lt;&#x2F;span&gt;&lt;span&gt;# if gomobile isn&amp;#39;t on your path, then ~&#x2F;go&#x2F;bin&#x2F;gomobile
+&lt;&#x2F;span&gt;&lt;span&gt;gomobile bind -target=android
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Copy the output files to a directory in the Element Android repo which Gradle will pick up:&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;mkdir $PATH_TO_ELEMENT_ANDROID_REPO&#x2F;matrix-sdk-android&#x2F;libs
+&lt;&#x2F;span&gt;&lt;span&gt;cp mobile-sources.jar $PATH_TO_ELEMENT_ANDROID_REPO&#x2F;matrix-sdk-android&#x2F;libs
+&lt;&#x2F;span&gt;&lt;span&gt;cp mobile.aar $PATH_TO_ELEMENT_ANDROID_REPO&#x2F;matrix-sdk-android&#x2F;libs
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Open the project in Android Studio.&lt;&#x2F;li&gt;
+&lt;li&gt;Build and run on a device&#x2F;emulator.&lt;&#x2F;li&gt;
+&lt;li&gt;Configure the proxy&#x27;s &lt;code&gt;--advertise&lt;&#x2F;code&gt; address. If you are running on a local device, restart the
+proxy with an &lt;code&gt;--advertise&lt;&#x2F;code&gt; of your machines LAN IP e.g 192.168.1.2 instead of 127.0.0.1.
+If you are running on an emulator, restart the proxy with an &lt;code&gt;--advertise&lt;&#x2F;code&gt; of the
+&lt;a href=&quot;https:&#x2F;&#x2F;developer.android.com&#x2F;studio&#x2F;run&#x2F;emulator-networking#networkaddresses&quot;&gt;host IP&lt;&#x2F;a&gt;:
+10.0.2.2. The URL scheme should be &lt;code&gt;https&lt;&#x2F;code&gt; not &lt;code&gt;http&lt;&#x2F;code&gt;, else image loading won&#x27;t work as Element
+Android won&#x27;t download media over &lt;code&gt;http&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Login to your matrix.org account via the proxy with the &lt;code&gt;--advertise&lt;&#x2F;code&gt; address as the HS URL
+e.g &lt;code&gt;https:&#x2F;&#x2F;192.168.1.2:8008&lt;&#x2F;code&gt; or &lt;code&gt;https:&#x2F;&#x2F;10.0.2.2:8008&lt;&#x2F;code&gt;. The port is important.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;To verify it is running via low bandwidth:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Wireshark.&lt;&#x2F;li&gt;
+&lt;li&gt;Restart the proxy with the environment variable &lt;code&gt;SSLKEYLOGFILE=ssl.log&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Run tcpdump on the right interface e.g: &lt;code&gt;sudo tcpdump -i en0 -s 0 -v port 8008 -w lb.pcap&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Force stop the android app to forcibly close any existing DTLS connections.&lt;&#x2F;li&gt;
+&lt;li&gt;Re-open the app.&lt;&#x2F;li&gt;
+&lt;li&gt;Open &lt;code&gt;lb.pcap&lt;&#x2F;code&gt; in Wireshark and set &lt;code&gt;ssl.log&lt;&#x2F;code&gt; as the Pre-Master Secret log filename via
+Preferences -&amp;gt; Protocols -&amp;gt; TLS -&amp;gt; Pre-Master Secret log filename.&lt;&#x2F;li&gt;
+&lt;li&gt;Check there is DTLS&#x2F;CoAP traffic.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;performance&quot;&gt;Performance&lt;&#x2F;h2&gt;
+&lt;p&gt;To send a single &#x27;Hello World&#x27; message to &lt;code&gt;&#x2F;room&#x2F;$room_id&#x2F;send&#x2F;m.room.message&#x2F;$txn_id&lt;&#x2F;code&gt;
+and receive the response, including connection setup:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Protocol&lt;&#x2F;th&gt;&lt;th&gt;Num packets&lt;&#x2F;th&gt;&lt;th&gt;Total bytes&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;HTTP2+JSON&lt;&#x2F;td&gt;&lt;td&gt;43&lt;&#x2F;td&gt;&lt;td&gt;6533&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;CoAP+CBOR&lt;&#x2F;td&gt;&lt;td&gt;6&lt;&#x2F;td&gt;&lt;td&gt;1440&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;limitations&quot;&gt;Limitations&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CoAP &lt;a href=&quot;https:&#x2F;&#x2F;datatracker.ietf.org&#x2F;doc&#x2F;html&#x2F;rfc7641&quot;&gt;OBSERVE&lt;&#x2F;a&gt; is not enabled by default.
+This extension allows the server to push data to the client so the client doesn&#x27;t need to
+long-poll. It is not yet enabled because of the risk of state synchronisation issues between the
+proxy and the client. If the proxy gets restarted, the client will not receive sync updates
+until it refreshes its subscription, which happens infrequently. During this time the client
+is not aware that anything is wrong.&lt;&#x2F;li&gt;
+&lt;li&gt;CoAP uses &lt;a href=&quot;https:&#x2F;&#x2F;datatracker.ietf.org&#x2F;doc&#x2F;html&#x2F;rfc7959&quot;&gt;Blockwise Transfer&lt;&#x2F;a&gt; to download
+large responses. Each block must be ACKed before the next block can be sent. This is less
+efficient than TCP which has a Receive Window which allows multiple in-flight packets at
+once. This means CoAP is worse at downloading large responses, requiring more round trips
+to completely send the data.&lt;&#x2F;li&gt;
+&lt;li&gt;The current version of &lt;code&gt;&#x2F;sync&lt;&#x2F;code&gt; sends back much more data than is strictly necessary. This
+means the initial sync can be slower than expected. On a low kbps link this can flood the
+network with so much data that the sync stream begins to fall behind. Future work will look
+to optimise the sync API.&lt;&#x2F;li&gt;
+&lt;li&gt;The proxy currently doesn&#x27;t implement the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;blob&#x2F;kegan&#x2F;low-bandwidth&#x2F;proposals&#x2F;3079-low-bandwidth-csapi.md#versioning&quot;&gt;low bandwidth response&lt;&#x2F;a&gt; in &lt;code&gt;&#x2F;versions&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Usage of matrix-nio (Python Sans IO)</title>
+    <published>2019-07-03T00:00:00+00:00</published>
+    <updated>2019-07-03T00:00:00+00:00</updated>
+    <author>
+      <name>Ben Parsons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/07/03/usage-of-matrix-nio/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/07/03/usage-of-matrix-nio/</id>
+    <content type="html">&lt;p&gt;&lt;em&gt;Canonical version of this article at &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;guides&#x2F;usage-of-matrix-nio&quot;&gt;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;guides&#x2F;usage-of-matrix-nio&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This article concerns &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;poljar&#x2F;matrix-nio&quot;&gt;matrix-nio&lt;&#x2F;a&gt;, and &lt;a href=&quot;https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;asyncio.html&quot;&gt;asyncio&lt;&#x2F;a&gt;. We&#x27;ll build a simple &quot;echo bot&quot;, meaning a bot which replies to messages with the text it has just read. Note that this article does not cover E2EE with matrix-nio.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;instantiation-and-login&quot;&gt;Instantiation and Login&lt;&#x2F;h2&gt;
+&lt;p&gt;First create a new venv, and install matrix-nio via &lt;code&gt;pip&lt;&#x2F;code&gt;. On the command line, run:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;python3 -m venv env
+&lt;&#x2F;span&gt;&lt;span&gt;source env&#x2F;bin&#x2F;activate
+&lt;&#x2F;span&gt;&lt;span&gt;pip install matrix-nio
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Next, create a new Python file, and open it for editing. We&#x27;ll import everything we require for this tutorial:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#9b9b9b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;importlib &lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b9b9b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;util
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b9b9b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;asyncio
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b9b9b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;nio &lt;&#x2F;span&gt;&lt;span style=&quot;color:#9b9b9b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;(AsyncClient, SyncResponse, RoomMessageText)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We&#x27;re importing asyncio so we can use the &lt;code&gt;AsyncClient&lt;&#x2F;code&gt; class from matrix-nio.&lt;&#x2F;p&gt;
+&lt;p&gt;Create a new instance of &lt;code&gt;AsyncClient&lt;&#x2F;code&gt; by passing the homeserver and username as arguments:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;async_client = AsyncClient(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;matrix.org&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;YOUR-USERNAME-HERE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then login, and await the response:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.login(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;YOUR-PASSWORD-HERE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;print(response)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Of course, we are using an async client, and awaiting the response. Because of this, we must call the &lt;code&gt;async_client.login()&lt;&#x2F;code&gt; from an async method, like so:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;async def &lt;&#x2F;span&gt;&lt;span&gt;main():
+&lt;&#x2F;span&gt;&lt;span&gt;    response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.login(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;YOUR-PASSWORD-HERE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    print(response)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;asyncio.run(main())
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Note that for versions of Python before 3.7 the asyncio syntax must be:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;async def &lt;&#x2F;span&gt;&lt;span&gt;main():
+&lt;&#x2F;span&gt;&lt;span&gt;    response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.login(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;YOUR-PASSWORD-HERE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    print(response)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;loop = asyncio.get_event_loop()
+&lt;&#x2F;span&gt;&lt;span&gt;loop.run_until_complete(main())
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The remainder of this tutorial assumes you are running everything from an &lt;code&gt;async&lt;&#x2F;code&gt; method.&lt;&#x2F;p&gt;
+&lt;p&gt;The response string should look like:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;Logged in as @pyconweb-bot:matrix.org, device id: ZBLAJHLKVP.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;get-into-a-sync-loop&quot;&gt;Get into a &lt;code&gt;&#x2F;sync&lt;&#x2F;code&gt; loop&lt;&#x2F;h2&gt;
+&lt;p&gt;To get updates from a Matrix homeserver to the client, the client makes a request to the &lt;code&gt;&#x2F;sync&lt;&#x2F;code&gt; endpoint. In the matrix-nio AsyncClient, this is wrapped by the &lt;code&gt;sync()&lt;&#x2F;code&gt; method. We can get the latest updates:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;sync_response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.sync(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;30000&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;30000 means we will wait up to 30 seconds before returning. &lt;code&gt;sync_response&lt;&#x2F;code&gt; will now contain a Python object containing a mapping of the (JSON) &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;latest#get-matrix-client-r0-sync&quot;&gt;response from the Matrix homeserver&lt;&#x2F;a&gt;. We&#x27;ll inspect this response in the next section.&lt;&#x2F;p&gt;
+&lt;p&gt;In fact, we expect there to be updates regularly, so let&#x27;s create a very simple loop:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;True&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;    sync_response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.sync(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;30000&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    print(sync_response) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;# note that this could be LARGE!
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;# do some reading from sync_response
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In this way, every time there is a response (i.e. new events) from the homeserver, they are made available in &lt;code&gt;sync_response&lt;&#x2F;code&gt; for processing, and we loop again.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;explore-the-sync-response-object&quot;&gt;Explore the sync response object&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;sync_response&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;latest#get-matrix-client-r0-sync&quot;&gt;can contain multitudes&lt;&#x2F;a&gt;, depending on the rooms this user is part of, or has been part of. &lt;code&gt;sync_response.rooms.join&lt;&#x2F;code&gt; contains updates for the rooms which the current user is &quot;joined to&quot; (meaning, is a member of.)&lt;&#x2F;p&gt;
+&lt;p&gt;Of these joined rooms, we are (perhaps!) most interested in the events on the timeline. These are stored in &lt;code&gt;timeline.events&lt;&#x2F;code&gt;, see below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;len(sync_response.rooms.join) &amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    joins = sync_response.rooms.join
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;room_id &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;joins:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;event &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;joins[room_id].timeline.events:
+&lt;&#x2F;span&gt;&lt;span&gt;            print(event)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;em&gt;Message events&lt;&#x2F;em&gt; are a specific type of event which contain an Instant Messenger message. We can check the type before proceeding:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;event &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;joins[room_id].timeline.events:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;isinstance(event, RoomMessageText):
+&lt;&#x2F;span&gt;&lt;span&gt;        print (event.body)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In these cases, where the event is a message to a room, the &lt;code&gt;body&lt;&#x2F;code&gt; field will contain the message text.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;isolate-specific-message-event-objects&quot;&gt;Isolate specific message event objects&lt;&#x2F;h2&gt;
+&lt;p&gt;Knowing that we can get the message text from an event, we can read it to determine a response. Let&#x27;s make a new variable and have it store some string we&#x27;ll check for:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;response_string = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;!replybot&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now let&#x27;s suppose we&#x27;re in our &lt;code&gt;&#x2F;sync&lt;&#x2F;code&gt; loop, and just received an event. We can filter messages that are meant for our bot as follows:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;len(sync_response.rooms.join) &amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    joins = sync_response.rooms.join
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;room_id &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;joins:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;event &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;joins[room_id].timeline.events:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;hasattr(event, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;body&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;and &lt;&#x2F;span&gt;&lt;span&gt;event.body.startswith(response_string):
+&lt;&#x2F;span&gt;&lt;span&gt;                print(event)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;use-room-send&quot;&gt;Use &lt;code&gt;room_send&lt;&#x2F;code&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;To send messages, matrix-nio provides a &lt;code&gt;room_send()&lt;&#x2F;code&gt; method. There are three arguments:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;the room_id&lt;&#x2F;li&gt;
+&lt;li&gt;the message type, we will use &quot;m.room.message&quot;&lt;&#x2F;li&gt;
+&lt;li&gt;a JSON object representing the content of the message&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Let&#x27;s improve the example above, by sending back a message to echo the ones we isolated above:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;joins = sync_response.rooms.join
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;room_id &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;joins:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;event &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;joins[room_id].timeline.events:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;hasattr(event, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;body&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;and &lt;&#x2F;span&gt;&lt;span&gt;event.body.startswith(response_string):
+&lt;&#x2F;span&gt;&lt;span&gt;            response_body = event.body.replace(response_string, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;).strip()
+&lt;&#x2F;span&gt;&lt;span&gt;            content = {
+&lt;&#x2F;span&gt;&lt;span&gt;               &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;body&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: response_body,
+&lt;&#x2F;span&gt;&lt;span&gt;               &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;msgtype&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;m.text&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;            }
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.room_send(room_id, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;m.room.message&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;, content)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now whenever the bot receives a message &quot;!replybot &lt;em&gt;some message&lt;&#x2F;em&gt;&quot; it will send back &quot;some message&quot;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;use-of-sync-next-batch-tokens&quot;&gt;Use of &#x2F;sync next_batch tokens&lt;&#x2F;h2&gt;
+&lt;p&gt;Finally, let&#x27;s consider the importance of &lt;code&gt;next_batch&lt;&#x2F;code&gt; tokens. Whenever you receive a response from the &lt;code&gt;&#x2F;sync&lt;&#x2F;code&gt; endpoint, the response will contain a &quot;next_batch&quot; field, which you then pass on the next request to ensure you have the latest messages. matrix-nio keeps track of this automatically, so it doesn&#x27;t get repeated messages. However, when you stop the program and call the &lt;code&gt;.sync()&lt;&#x2F;code&gt; method again, how can you tell it where to start from? First let&#x27;s get the latest &lt;code&gt;next_batch&lt;&#x2F;code&gt; token:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;async def &lt;&#x2F;span&gt;&lt;span&gt;main():
+&lt;&#x2F;span&gt;&lt;span&gt;    response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.login(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;YOUR-USERNAME-HERE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;True&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        sync_response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.sync(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;30000&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;        print(sync_response.next_batch) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;# this is the token
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then we&#x27;ll write the token to a file:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;async def &lt;&#x2F;span&gt;&lt;span&gt;main():
+&lt;&#x2F;span&gt;&lt;span&gt;    response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.login(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;YOUR-USERNAME-HERE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;True&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        sync_response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.sync(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;30000&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;# we write the token to a file here
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;with &lt;&#x2F;span&gt;&lt;span&gt;open(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;next_batch&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;w&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;next_batch_token:
+&lt;&#x2F;span&gt;&lt;span&gt;            next_batch_token.write(sync_response.next_batch)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Once that token is written, we know we can re-use it for the first &lt;code&gt;&#x2F;sync&#x2F;&lt;&#x2F;code&gt; request next time:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;async def &lt;&#x2F;span&gt;&lt;span&gt;main():
+&lt;&#x2F;span&gt;&lt;span&gt;    response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.login(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;YOUR-USERNAME-HERE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b4cea8;&quot;&gt;%%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;# we read the previously-written token...
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;with &lt;&#x2F;span&gt;&lt;span&gt;open (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;next_batch&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;r&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;next_batch_token:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;# ... and well async_client to use it
+&lt;&#x2F;span&gt;&lt;span&gt;        async_client.next_batch = next_batch_token.read()
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;True&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        sync_response = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span&gt;async_client.sync(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;30000&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;with &lt;&#x2F;span&gt;&lt;span&gt;open(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;next_batch&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;w&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;next_batch_token:
+&lt;&#x2F;span&gt;&lt;span&gt;            next_batch_token.write(sync_response.next_batch)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;With this, you can see that in very few lines, it&#x27;s possible to write a working Matrix bot in Python, using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;poljar&#x2F;matrix-nio&quot;&gt;matrix-nio&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Bridging Matrix with WhatsApp running on a VM</title>
+    <published>2019-02-26T00:00:00+00:00</published>
+    <updated>2019-02-26T00:00:00+00:00</updated>
+    <author>
+      <name>Ben Parsons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2019/02/26/bridging-matrix-with-whatsapp-running-on-a-vm/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2019/02/26/bridging-matrix-with-whatsapp-running-on-a-vm/</id>
+    <content type="html">&lt;p&gt;This guide will live with the documentation at &lt;a href=&quot;&#x2F;docs&#x2F;guides&#x2F;whatsapp-bridging-mautrix-whatsapp&quot;&gt;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;guides&#x2F;whatsapp-bridging-mautrix-whatsapp&lt;&#x2F;a&gt;, but you can find the text below.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Matrix is:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;an open standard for &lt;em&gt;interoperable&lt;&#x2F;em&gt;, &lt;em&gt;decentralised&lt;&#x2F;em&gt;, &lt;em&gt;real-time communication&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;In this article we&#x27;ll benefit from all three of these attributes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;&lt;em&gt;interoperable:&lt;&#x2F;em&gt; we&#x27;ll see how Matrix can be made to interact with WhatsApp&lt;&#x2F;li&gt;
+ 	&lt;li&gt;&lt;em&gt;decentralised&lt;&#x2F;em&gt;: you can perform this on your own server while still enjoying the benefits of being connected to the rest of the Matrix federation&lt;&#x2F;li&gt;
+ 	&lt;li&gt;&lt;em&gt;real-time communication&lt;&#x2F;em&gt;: we&#x27;ll see how to send and receive messages in real-time&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;install-your-homeserver-and-install-mautrix-whatsapp-the-whatsapp-bridge&quot;&gt;Install your homeserver and install mautrix-whatsapp, the WhatsApp bridge&lt;&#x2F;h2&gt;
+&lt;p&gt;Firstly, you need to have a Matrix homeserver installed. If you don&#x27;t currently have one, take a look at the instructions at &lt;a href=&quot;&#x2F;docs&#x2F;guides&#x2F;installing-synapse&quot;&gt;Installing Synapse&lt;&#x2F;a&gt;, and also in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&quot;&gt;Synapse README&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Next, install &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tulir&#x2F;mautrix-whatsapp&quot;&gt;mautrix-whatsapp&lt;&#x2F;a&gt; by following the instructions at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tulir&#x2F;mautrix-whatsapp&#x2F;wiki&quot;&gt;mautrix-whatsapp&#x2F;wiki&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are starting from scratch, I suggest you take a look at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;spantaleev&#x2F;matrix-docker-ansible-deploy&#x2F;&quot;&gt;matrix-docker-ansible-deploy&lt;&#x2F;a&gt;, as this project will enable you to deploy Synapse, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tulir&#x2F;mautrix-whatsapp&quot;&gt;mautrix-whatsapp&lt;&#x2F;a&gt; and other components easily.&lt;&#x2F;p&gt;
+&lt;p&gt;For example, if you have an existing deployment using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;spantaleev&#x2F;matrix-docker-ansible-deploy&#x2F;&quot;&gt;matrix-docker-ansible-deploy&lt;&#x2F;a&gt;, you can add &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tulir&#x2F;mautrix-whatsapp&quot;&gt;mautrix-whatsapp&lt;&#x2F;a&gt; simply by adding the following line to your configuration file:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code class=&quot;yaml language-yaml&quot;&gt;matrix_mautrix_whatsapp_enabled: true
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;... and re-running the setup:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code class=&quot;unix language-unix&quot;&gt;ansible-playbook -i inventory&#x2F;hosts setup.yml --tags=setup-all
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Either way, you will soon have a functioning Matrix Synapse homeserver and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tulir&#x2F;mautrix-whatsapp&quot;&gt;mautrix-whatsapp&lt;&#x2F;a&gt; installed with it. Next, we will set up an Android VM.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;set-up-an-android-vm&quot;&gt;Set up an Android VM&lt;&#x2F;h2&gt;
+&lt;p&gt;The best way to run an Android Virtual Machine is to use the Android Studio tools from Google. First, &lt;a href=&quot;https:&#x2F;&#x2F;developer.android.com&#x2F;studio&#x2F;install&quot;&gt;install Android Studio&lt;&#x2F;a&gt;, making sure to follow the post-install steps, as they will install additional tools we need, including AVD Manager.&lt;&#x2F;p&gt;
+&lt;p&gt;Once installed, run AVD manager by choosing &lt;code&gt;Tools -&amp;gt; AVD Manager&lt;&#x2F;code&gt; from the menu.&lt;&#x2F;p&gt;
+&lt;p&gt;Follow the steps to create a new virtual machine, in this example I have a Nexus 5X running Android 9, but almost any configuration is fine here. Make sure that you give the device access to the Play Store.&lt;&#x2F;p&gt;
+&lt;img src=&quot;&#x2F;docs&#x2F;img&#x2F;avd.png&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;h2 id=&quot;install-whatsapp-and-sign-in&quot;&gt;Install WhatsApp and sign-in&lt;&#x2F;h2&gt;
+&lt;p&gt;Launch the Virtual Device, the open the Play Store and sign in. Now use the Play Store to install WhatsApp on the Virtual Device.&lt;&#x2F;p&gt;
+&lt;p&gt;You will be asked to verify your phone number, use your number on another device to complete this step.&lt;&#x2F;p&gt;
+&lt;center&gt;
+&lt;img src=&quot;&#x2F;docs&#x2F;img&#x2F;nexus5.png&quot; &#x2F;&gt;&lt;&#x2F;center&gt;
+&lt;h2 id=&quot;setup-mautrix-whatsapp-bridge&quot;&gt;Setup mautrix-whatsapp bridge&lt;&#x2F;h2&gt;
+&lt;p&gt;Now that you have WhatsApp working in a VM, and Matrix working on your server, it&#x27;s time to bridge them together!&lt;&#x2F;p&gt;
+&lt;p&gt;Per the instructions at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tulir&#x2F;mautrix-whatsapp&#x2F;wiki&quot;&gt;mautrix-whatsapp&#x2F;wiki&lt;&#x2F;a&gt;, you must start a new chat with &lt;strong&gt;@whatsappbot:&lt;em&gt;&amp;lt;yourdomain&lt;&#x2F;em&gt;&amp;gt;&lt;&#x2F;strong&gt;. Type &lt;code&gt;login&lt;&#x2F;code&gt; to begin the authentication process.&lt;&#x2F;p&gt;
+&lt;p&gt;mautrix-whatsapp operates by using the WhatsApp Web feature of WhatsApp - which means it uses a QR code that you must now scan on the device running WhatsApp - which in your case is the AVD. In order to scan the presented QR code, set your AVD camera to passthrough the camera device on your host machine - see the images below.&lt;&#x2F;p&gt;
+&lt;img src=&quot;&#x2F;docs&#x2F;img&#x2F;camera1.png&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;docs&#x2F;img&#x2F;camera2.png&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;p&gt;Once this is complete, you can type &lt;code&gt;sync&lt;&#x2F;code&gt;, to start bridging contacts, and &lt;code&gt;sync --create&lt;&#x2F;code&gt; to automatically create room invites.&lt;&#x2F;p&gt;
+&lt;p&gt;And that&#x27;s it! You may need to take a little time to watch the sync happen, particularly if you have a very large number of chats on the WhatsApp side, but there is no further configuration needed.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;demo&quot;&gt;Demo!&lt;&#x2F;h2&gt;
+&lt;noscript&gt;Today&#x27;s Matrix Live: &lt;a href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=edSgP2dEZ1o&quot;&gt;https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=edSgP2dEZ1o&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;
+&lt;youtube-player video-id=&quot;edSgP2dEZ1o&quot;&gt;&lt;&#x2F;youtube-player&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Usage of the matrix-js-sdk</title>
+    <published>2018-10-16T00:00:00+00:00</published>
+    <updated>2018-10-16T00:00:00+00:00</updated>
+    <author>
+      <name>Ben Parsons</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2018/10/16/usage-of-the-matrix-js-sdk/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2018/10/16/usage-of-the-matrix-js-sdk/</id>
+    <content type="html">&lt;p&gt;We have a brand new, exciting guide page offering an introduction to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk&quot;&gt;matrix-js-sdk&lt;&#x2F;a&gt;. This guide will live with the documentation at &lt;a href=&quot;&#x2F;docs&#x2F;guides&#x2F;usage-of-the-matrix-js-sdk&quot;&gt;https:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;guides&#x2F;usage-of-the-matrix-js-sdk&lt;&#x2F;a&gt;,  but you can find the text below.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Matrix allows open real-time communications over the Internet using HTTP and JSON. This makes developing clients to connect to Matrix servers really easy! Because it&#x27;s open, and uses simple syntax for messages, you can connect Matrix to anything that communicates over a standard HTTP interface - later projects in this series will explore ideas such as building bots, performing machine learning on message content, and connecting IoT devices such as Philips Hue lights.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;making-a-matrix-client&quot;&gt;Making a Matrix Client&lt;&#x2F;h2&gt;
+&lt;p&gt;Let&#x27;s explore how we would make a very simple Matrix client, with only the ability to perform an initial sync, and to get member lists and the timeline for rooms of our choice.&lt;&#x2F;p&gt;
+&lt;p&gt;This article will explore the &lt;a href=&quot;&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;latest.html&quot;&gt;Matrix Client-Server API&lt;&#x2F;a&gt;, making use of the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk&#x2F;&quot;&gt;matrix-js-sdk&lt;&#x2F;a&gt;. Later articles may discuss making the underlying calls. Specifically we will cover:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;login&lt;&#x2F;li&gt;
+ 	&lt;li&gt;simple syncing&lt;&#x2F;li&gt;
+ 	&lt;li&gt;listening for timeline events&lt;&#x2F;li&gt;
+ 	&lt;li&gt;access the `MatrixInMemoryStore`&lt;&#x2F;li&gt;
+ 	&lt;li&gt;sending messages to rooms&lt;&#x2F;li&gt;
+ 	&lt;li&gt;how to respond to specific messages, as a bot would&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+We&#x27;ll use Node.js as our environment, though the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk&#x2F;&quot;&gt;matrix-js-sdk&lt;&#x2F;a&gt; can also be used directly in the browser.
+&lt;p&gt;Before we start, make sure you have Node.js and NPM installed: follow instructions at &lt;a href=&quot;https:&#x2F;&#x2F;nodejs.org&#x2F;&quot;&gt;nodejs.org&lt;&#x2F;a&gt; for your platform. Then create a new directory to work in:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;mkdir my-first-matrix-client
+&lt;&#x2F;span&gt;&lt;span&gt;cd my-first-matrix-client
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;let-s-write-javascript&quot;&gt;Let&#x27;s write JavaScript&lt;&#x2F;h2&gt;
+&lt;p&gt;Once you&#x27;re ready, the first thing to do is install the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk&#x2F;&quot;&gt;matrix-js-sdk&lt;&#x2F;a&gt; from NPM:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;npm install matrix-js-sdk
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We include the SDK in our source exactly as expected:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#9b9b9b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;sdk &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;matrix-js-sdk&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;login-with-an-access-token&quot;&gt;Login with an access token&lt;&#x2F;h2&gt;
+&lt;p&gt;Instantiate a new client object and use an &lt;code&gt;access token&lt;&#x2F;code&gt; to login:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;client = sdk.createClient({
+&lt;&#x2F;span&gt;&lt;span&gt;    baseUrl: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;matrix.org&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    accessToken: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;....MDAxM2lkZW50aWZpZXIga2V5CjAwMTBjaWQgZ2Vu....&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    userId: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;@USERID:matrix.org&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; note that we use the full MXID for the userId value
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;small&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;matrix-org.github.io&#x2F;matrix-js-sdk&#x2F;0.11.1&#x2F;global.html#createClient&quot;&gt;jsdoc for &lt;code&gt;createClient&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If you are logged into Riot, you can find an &lt;code&gt;access token&lt;&#x2F;code&gt; for the logged-in user on the Settings page.&lt;&#x2F;p&gt;
+&lt;p&gt;If the homeserver you&#x27;re logging in to supports logging in with a password, you can also retrieve an &lt;code&gt;access token&lt;&#x2F;code&gt; programmatically using the API. To do this, create a new &lt;code&gt;client&lt;&#x2F;code&gt; with no authentication parameters, then call &lt;code&gt;client.login()&lt;&#x2F;code&gt; with &lt;code&gt;&quot;m.login.password&quot;&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;client = sdk.createClient(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;matrix.org&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;client.login(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;m.login.password&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;user&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;USERID&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;password&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;hunter2&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;}).then((response) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    console.log(response.access_token);
+&lt;&#x2F;span&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In any case, once logged in either with a password or an access token, the client can get the current access token via:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span&gt;console.log(client.getAccessToken());
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;&#x2F;strong&gt; it is essential to keep this access token safe, as it allows complete access to your Matrix account!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sync-and-listen&quot;&gt;Sync and Listen&lt;&#x2F;h2&gt;
+&lt;p&gt;Next we start the client, this sets up the connection to the server and allows us to begin syncing:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span&gt;client.startClient();
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Perform a first sync, and listen for the response, to get the latest state from the homeserver:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span&gt;client.once(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;sync&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(state, prevState, res) {
+&lt;&#x2F;span&gt;&lt;span&gt;    console.log(state); &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; state will be &amp;#39;PREPARED&amp;#39; when the client is ready to use
+&lt;&#x2F;span&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Once the sync is complete, we can add listeners for events. We could listen to ALL incoming events, but that would be a lot of traffic, and too much for our simple example. If you want to listen to all events, you can add a listen as follows:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span&gt;client.on(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;event&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(event){
+&lt;&#x2F;span&gt;&lt;span&gt;    console.log(event.getType());
+&lt;&#x2F;span&gt;&lt;span&gt;    console.log(event);
+&lt;&#x2F;span&gt;&lt;span&gt;})
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Instead, let&#x27;s just listen to events happening on the timeline of rooms for which our user is a member:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span&gt;client.on(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;Room.timeline&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(event, room, toStartOfTimeline) {
+&lt;&#x2F;span&gt;&lt;span&gt;    console.log(event.event);
+&lt;&#x2F;span&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;access-the-store&quot;&gt;Access the Store&lt;&#x2F;h2&gt;
+&lt;p&gt;When we created a new client with &lt;code&gt;sdk.createClient()&lt;&#x2F;code&gt;, an instance of the default store, &lt;code&gt;MatrixInMemoryStore&lt;&#x2F;code&gt; was created and enabled. When we sync, or instruct otherwise our client to fetch data, the data is automatically added to the store.&lt;&#x2F;p&gt;
+&lt;p&gt;To access the store, we use accessor methods. For example, to get a list of rooms in which our user is joined:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; client.client.getRooms() returns an array of room objects
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span&gt;rooms = client.getRooms();
+&lt;&#x2F;span&gt;&lt;span&gt;rooms.forEach(room &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    console.log(room.roomId);
+&lt;&#x2F;span&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;small&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;matrix-org.github.io&#x2F;matrix-js-sdk&#x2F;0.11.1&#x2F;module-client-MatrixClient.html#getRooms&quot;&gt;jsdoc for &lt;code&gt;client.getRooms&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;More usefully, we could get a list of members for each of these rooms:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span&gt;rooms = client.getRooms();
+&lt;&#x2F;span&gt;&lt;span&gt;rooms.forEach(room &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span&gt;members = room.getJoinedMembers();
+&lt;&#x2F;span&gt;&lt;span&gt;    members.forEach(member &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        console.log(member.name);
+&lt;&#x2F;span&gt;&lt;span&gt;    });
+&lt;&#x2F;span&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;For each room, we can inspect the timeline in the store:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span&gt;rooms = client.getRooms();
+&lt;&#x2F;span&gt;&lt;span&gt;rooms.forEach(room &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    room.timeline.forEach(t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        console.log(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;JSON&lt;&#x2F;span&gt;&lt;span&gt;.stringify(t.event.content));
+&lt;&#x2F;span&gt;&lt;span&gt;    });
+&lt;&#x2F;span&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;send-messages-to-rooms&quot;&gt;Send messages to rooms&lt;&#x2F;h2&gt;
+&lt;p&gt;To send a message, we create a content object, and specify a room to send to. In this case, I&#x27;ve taken the room ID of &lt;code&gt;#test:matrix.org&lt;&#x2F;code&gt;, and used it as an example:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span&gt;testRoomId = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;!jhpZBTbckszblMYjMK:matrix.org&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span&gt;content = {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;body&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;Hello World&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;msgtype&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;m.text&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;client.sendEvent(testRoomId, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;m.room.message&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, content, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;).then((res) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; message sent successfully
+&lt;&#x2F;span&gt;&lt;span&gt;}).catch((err) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    console.log(err);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;small&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;matrix-org.github.io&#x2F;matrix-js-sdk&#x2F;0.11.1&#x2F;module-client-MatrixClient.html#sendEvent&quot;&gt;jsdoc for &lt;code&gt;client.sendEvent&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Knowing this, we can put together message listening and message sending, to build a bot which just echos back any message starting with a &quot;!&quot;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span&gt;testRoomId = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;!jhpZBTbckszblMYjMK:matrix.org&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;client.on(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;Room.timeline&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(event, room, toStartOfTimeline) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; we know we only want to respond to messages
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(event.getType() !== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;m.room.message&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; we are only interested in messages from the test room, which start with &amp;quot;!&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(event.getRoomId() === testRoomId &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span&gt;event.getContent().body[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;] === &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;#39;!&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        sendNotice(event.event.content.body);
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span&gt;sendNotice(body) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span&gt;content = {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;body&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: body.substring(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b5cea8;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;),
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;msgtype&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;m.notice&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    };
+&lt;&#x2F;span&gt;&lt;span&gt;    client.sendEvent(testRoomId, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;m.room.message&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, content, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d69d85;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, (err, res) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        console.log(err);
+&lt;&#x2F;span&gt;&lt;span&gt;    });
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Take a look at the &lt;code&gt;msgtype&lt;&#x2F;code&gt; in the object above. In the previous example, we used &quot;m.text&quot; for this field, but now we&#x27;re using &quot;m.notice&quot;. Bots will often use &quot;m.notice&quot; to differentiate their messages. This allows the client to render notices differently, for example Riot, the most popular client, renders notices with a more pale text colour.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;further&quot;&gt;Further&lt;&#x2F;h2&gt;
+&lt;p&gt;There is much, much more to Matrix, the Client-Server API and the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk&#x2F;&quot;&gt;matrix-js-sdk&lt;&#x2F;a&gt;, but this guide should give some understanding of simple usage. In subsequent guides we&#x27;ll cover more detail and also explore projects you can build on top, such as IoT controls and chatbot interfaces. For now you can take a look at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk&#x2F;tree&#x2F;master&#x2F;examples&quot;&gt;other examples in the matrix-js-sdk itself&lt;&#x2F;a&gt;, and also the &lt;a href=&quot;&#x2F;docs&#x2F;spec&#x2F;client_server&#x2F;latest.html&quot;&gt;Matrix Client-Server API&lt;&#x2F;a&gt; which it implements.&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>iOS: Welcome to MatrixKit</title>
+    <published>2015-04-24T00:00:00+00:00</published>
+    <updated>2015-04-24T00:00:00+00:00</updated>
+    <author>
+      <name>Emmanuel Rohee</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2015/04/24/ios-welcome-to-matrixkit/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2015/04/24/ios-welcome-to-matrixkit/</id>
+    <content type="html">&lt;p&gt;Historically we&#x27;ve had two projects for iOS:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;MatrixSDK&lt;&#x2F;strong&gt;: a low level library to interact with a Matrix homeserver&lt;&#x2F;li&gt;
+	&lt;li&gt;&lt;strong&gt;Console&lt;&#x2F;strong&gt;: an example Matrix client based on MatrixSDK&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The primary intention of Console was to demonstrate how to use MatrixSDK to write a Matrix client app.
+However, this split isn&#x27;t helpful for developers who want higher level modules that provides UIViewControllers ready to use in an existing app, with no need to manage low level communications with the Matrix homeserver.&lt;&#x2F;p&gt;
+&lt;p&gt;It is where the &lt;strong&gt;MatrixKit&lt;&#x2F;strong&gt; project started. MatrixKit sits between MatrixSDK and your existing iOS app.&lt;&#x2F;p&gt;
+&lt;p&gt;It provides customisable UIViewControllers a developer can integrate in their app.  If you want to add to your app a screen to chat in a room, you just need to use the MXKRoomViewController.&lt;&#x2F;p&gt;
+&lt;p&gt;We made MatrixKit so that the components it provides are &lt;strong&gt;easy to integrate&lt;&#x2F;strong&gt; but also &lt;strong&gt;easy to customise&lt;&#x2F;strong&gt;. We do not have yet full samples of customisation as we&#x27;ve been focused on the library core, but here are a few examples:
+&lt;br&#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;div style=&quot;text-align: center&quot;&gt;
+&lt;img class=&quot;alignnone size-medium wp-image-918&quot; src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;04&#x2F;MXKRoomViewController-169x300.jpeg&quot; alt=&quot;MXKRoomViewController&quot; width=&quot;169&quot; height=&quot;300&quot; &#x2F;&gt;  &lt;img class=&quot;alignnone size-medium wp-image-917&quot; src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;04&#x2F;JSQMessagesViewController-169x300.jpeg&quot; alt=&quot;JSQMessagesViewController&quot; width=&quot;169&quot; height=&quot;300&quot; &#x2F;&gt;
+&lt;&#x2F;div&gt;
+&lt;br&#x2F;&gt;
+You probably recognise the theme of the first one, as it&#x27;s what we use in the Console app today.
+The second one is the iOS7-style look and feel from &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jessesquires&#x2F;JSQMessagesViewController&quot;&gt;JSQMessagesViewController&lt;&#x2F;a&gt;. With few lines of code we connected it to MatrixKit data models. Yes, data models provided by MatrixKit are reusable too.
+&lt;p&gt;MatrixKit is also &lt;strong&gt;highly extensible&lt;&#x2F;strong&gt;. If you want to create new table cells to render messages, new views, new view controllers, etc, you will find a place to hook them into the MatrixKit code.&lt;&#x2F;p&gt;
+&lt;p&gt;MatrixKit repository is here: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-kit&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-kit&lt;&#x2F;a&gt; and it is available via CocoaPods (the MatrixKit pod).&lt;&#x2F;p&gt;
+&lt;p&gt;In parallel of MatrixKit, we did some spring-cleaning - the official Matrix.org iOS offerings are now split into three github repos. One for each deliverable:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-sdk&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-sdk&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+	&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-kit&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-kit&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+	&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-console&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-console&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Other releases:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Today, we released MatrixSDK 0.4.0 (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-sdk&#x2F;blob&#x2F;master&#x2F;CHANGES.rst#changes-in-matrix-ios-sdk-in-040-2015-04-23&quot;&gt;changes&lt;&#x2F;a&gt;). Update your pods :)&lt;&#x2F;p&gt;
+&lt;p&gt;Console 0.4.0 (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-console&#x2F;blob&#x2F;master&#x2F;CHANGES.rst#changes-in-console-in-040-2015-04-23&quot;&gt;changes&lt;&#x2F;a&gt;) is in the Apple submission process. This will be the first version of the app using MatrixKit. Aesthetically, there is no change since the previous version. The app is more stable due to all the data abstractions and management improvements provided by MatrixKit.&lt;&#x2F;p&gt;
+&lt;p&gt;If you&#x27;re an iOS developer, please have a go with MatrixKit and let us know on &lt;a href=&quot;&#x2F;beta&#x2F;#&#x2F;room&#x2F;#ios:matrix.org&quot;&gt;#ios:matrix.org&lt;&#x2F;a&gt; how you get on!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Monitoring Synapse Metrics with Prometheus</title>
+    <published>2015-04-23T00:00:00+00:00</published>
+    <updated>2015-04-23T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2015/04/23/monitoring-synapse-metrics-with-prometheus/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2015/04/23/monitoring-synapse-metrics-with-prometheus/</id>
+    <content type="html">&lt;h2 id=&quot;note-this-blog-post-is-outdated-and-an-up-to-date-tutorial-is-located-on-the-synapse-project-repo&quot;&gt;Note: This blog post is outdated, and an up-to-date tutorial is located &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;master&#x2F;docs&#x2F;metrics-howto.md&quot;&gt;on the synapse project repo&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Synapse has had support for exporting a comprehensive range of metrics via HTTP since 0.8.1 - we added this to help quantify the benefits of all the performance work which is going on currently in advance of Synapse 0.9. If you&#x27;re interested in monitoring your own synapse and seeing what&#x27;s going on using something like Prometheus, Leo just wrote a quick tutorial on getting up and running:&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;how-to-monitor-synapse-metrics-using-prometheus&quot;&gt;How to monitor Synapse metrics using Prometheus&lt;&#x2F;h4&gt;
+&lt;dl&gt;
+&lt;dt&gt;1: Install prometheus:&lt;&#x2F;dt&gt;&lt;dd&gt;Follow instructions at &lt;a href=&quot;http:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;introduction&#x2F;install&#x2F;&quot;&gt;http:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;introduction&#x2F;install&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;dd&gt;
+&lt;dt&gt;2: Enable synapse metrics:&lt;&#x2F;dt&gt;&lt;dd&gt;Simply setting a (local) port number will enable it. Pick a port. prometheus itself defaults to 9090, so starting just above that for locally monitored services seems reasonable. E.g. 9092:
+&lt;p&gt;Add to homeserver.yaml&lt;&#x2F;p&gt;
+&lt;pre&gt;metrics_port: 9092&lt;&#x2F;pre&gt;
+&lt;p&gt;Restart synapse&lt;&#x2F;p&gt;
+&lt;&#x2F;dd&gt;
+&lt;dt&gt;3: Check out synapse-prometheus-config&lt;&#x2F;dt&gt;&lt;dd&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse-prometheus-config&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse-prometheus-config&lt;&#x2F;a&gt;&lt;&#x2F;dd&gt;
+&lt;dt&gt;4: Add &lt;code&gt;synapse.html&lt;&#x2F;code&gt; and &lt;code&gt;synapse.rules&lt;&#x2F;code&gt;&lt;&#x2F;dt&gt;&lt;dd&gt;The &lt;code&gt;.html&lt;&#x2F;code&gt; file needs to appear in prometheus&#x27;s &lt;code&gt;consoles&lt;&#x2F;code&gt; directory, and the &lt;code&gt;.rules&lt;&#x2F;code&gt; file needs to be invoked somewhere in the main config file. A symlink to each from the git checkout into the prometheus directory might be easiest to ensure &lt;code&gt;git pull&lt;&#x2F;code&gt; keeps it updated.&lt;&#x2F;dd&gt;
+&lt;dt&gt;5: Add a prometheus target for synapse&lt;&#x2F;dt&gt;&lt;dd&gt;This is easiest if prometheus runs on the same machine as synapse, as it can then just use localhost:
+&lt;pre&gt;global: {&#x27;{&#x27;}
+  rule_file: &quot;synapse.rules&quot;
+{&#x27;}&#x27;}
+&lt;p&gt;job: {&#x27;{&#x27;}
+name: &quot;synapse&quot;&lt;&#x2F;p&gt;
+&lt;p&gt;target_group: {&#x27;{&#x27;}
+target: &quot;http:&#x2F;&#x2F;localhost:9092&#x2F;&quot;
+{&#x27;}&#x27;}
+{&#x27;}&#x27;}
+&lt;&#x2F;pre&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;dd&gt;
+&lt;dt&gt;6: Start prometheus:&lt;&#x2F;dt&gt;&lt;dd&gt;&lt;pre&gt;.&#x2F;prometheus -config.file=prometheus.conf
+&lt;&#x2F;pre&gt;
+&lt;&#x2F;dd&gt;
+&lt;dt&gt;7: Wait a few seconds for it to start and perform the first scrape,&lt;&#x2F;dt&gt;&lt;dd&gt;then visit the console:
+&lt;pre&gt;&lt;a href=&quot;http:&#x2F;&#x2F;server-where-prometheus-runs:9090&#x2F;consoles&#x2F;synapse.html&quot;&gt;http:&#x2F;&#x2F;server-where-prometheus-runs:9090&#x2F;consoles&#x2F;synapse.html&lt;&#x2F;a&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;dd&gt;&lt;&#x2F;dl&gt;
+&lt;p&gt;And the end result looks something like...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;04&#x2F;Screen-Shot-2015-04-23-at-16.32.01.png&quot;&gt;&lt;img src=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;blog&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;04&#x2F;Screen-Shot-2015-04-23-at-16.32.01-1024x930.png&quot; alt=&quot;Prometheus screenshot&quot; width=&quot;1024&quot; height=&quot;930&quot; class=&quot;aligncenter size-large wp-image-905&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;...amongst many many other system &amp;amp; application metrics.&lt;&#x2F;p&gt;
+&lt;p&gt;You can grab the latest version of the tutorial at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;master&#x2F;docs&#x2F;metrics-howto.md&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;master&#x2F;docs&#x2F;metrics-howto.md&lt;&#x2F;a&gt; - thanks to Leo for writing it up.  Any questions, let us know!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Synapse 0.8.0, Android 0.2.2 SDK &amp; App, iOS 0.3.1 SDK &amp; App, JavaScript SDK 0.0.1 released! (oh my!)</title>
+    <published>2015-03-09T00:00:00+00:00</published>
+    <updated>2015-03-09T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2015/03/09/synapse-0-8-0-android-0-2-2-sdk-app-ios-0-3-1-sdk-app-javascript-sdk-0-0-1-released-oh-my/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2015/03/09/synapse-0-8-0-android-0-2-2-sdk-app-ios-0-3-1-sdk-app-javascript-sdk-0-0-1-released-oh-my/</id>
+    <content type="html">&lt;p&gt;Hi all,&lt;&#x2F;p&gt;
+&lt;p&gt;What with the chaos of Mobile World Congress last week we seem to have been hoarding releases - so here&#x27;s what&#x27;s been happening!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&quot;&gt;Synapse 0.8.0&lt;&#x2F;a&gt; was released this afternoon.  This is a major performance&#x2F;stability release, with lots of good stuff going on - especially adding more customisable push notification support APIs for iOS&#x2F;Android; support for registering accounts from mobile devices; extensions to the new Application Service API and lots of federation improvements and bug fixes.  &lt;b&gt;Please upgrade at your earliest convenience.&lt;&#x2F;b&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Meanwhile, we quietly released the &lt;a href=&quot;https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id=org.matrix.androidsdk.alpha&quot;&gt;Matrix Console&lt;&#x2F;a&gt; Android example app to the Google Play last week, alongside &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-android-sdk&quot;&gt;v0.2.2 of the Android SDK&lt;&#x2F;a&gt; - release notes below.  There&#x27;ll be a new version of the Android Console app out tomorrow, but mentioning here for completeness and to share the release notes.  Also, the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-ios-sdk&quot;&gt;iOS SDK is now on v0.3.1&lt;&#x2F;a&gt;, with lots of performance and usability improvements.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, we have a whole new official &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-js-sdk&quot;&gt;Matrix client SDK for JavaScript&lt;&#x2F;a&gt;, all packaged up ready for use by Node developers and JS purists alike as an NPM with minimal dependencies.  Meanwhile, the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-angular-sdk&quot;&gt;matrix-angular-sdk&lt;&#x2F;a&gt; has been switched to use matrix-js-sdk from now on.  You can use the plain JS API with a &lt;code&gt;npm install matrix-js-sdk&lt;&#x2F;code&gt; and then:&lt;&#x2F;p&gt;
+&lt;pre&gt;
+var sdk = require(&quot;matrix-js-sdk&quot;);
+var client = sdk.createClient(&quot;https:&#x2F;&#x2F;matrix.org&quot;);
+client.publicRooms(function(err, data) {&#x27;{&#x27;}
+    console.log(&quot;Public Rooms: %s&quot;, JSON.stringify(data));
+{&#x27;}&#x27;});
+
+&lt;&#x2F;pre&gt;
+&lt;p&gt;Meanwhile, release notes for all &amp;amp; sundry lie below.&lt;&#x2F;p&gt;
+&lt;pre&gt;
+
+Changes in synapse v0.8.0 (2015-03-06)
+======================================
+
+General:
+
+* Add support for registration fallback. This is a page hosted on the server
+  which allows a user to register for an account, regardless of what client
+  they are using (e.g. mobile devices).
+
+* Added new default push rules and made them configurable by clients:
+
+  * Suppress all notice messages.
+  * Notify when invited to a new room.
+  * Notify for messages that don&#x27;t match any rule.
+  * Notify on incoming call.
+
+Federation:
+
+* Added per host server side rate-limiting of incoming federation requests.
+* Added a ``&#x2F;get_missing_events&#x2F;`` API to federation to reduce number of
+  ``&#x2F;events&#x2F;`` requests.
+
+Configuration:
+
+* Added configuration option to disable registration:
+  ``disable_registration``.
+* Added configuration option to change soft limit of number of open file
+  descriptors: ``soft_file_limit``.
+* Make ``tls_private_key_path`` optional when running with ``no_tls``.
+
+Application services:
+
+* Application services can now poll on the CS API ``&#x2F;events`` for their events,
+  by providing their application service ``access_token``.
+* Added exclusive namespace support to application services API.
+
+
+&lt;&#x2F;pre&gt;
+&lt;pre&gt;
+Changes in Matrix Android SDK in 0.2.2 (2015-02-27)
+===============================================
+
+-----
+ SDK
+-----
+  
+-----------------
+ Matrix Console
+-----------------
+Improvements:
+ * Exif management : the uploaded image is rotated according to the exif metadata
+   (if the device has enough free memory).
+ * Add a piechart while downloading an image 
+ * Add JSON representation of a message (tap on its row, “Message details”
+ * The public rooms list is now sorted according to the number of members.
+
+Features:
+ * Add configuration and skeleton classes for receiving GCM messages
+ * Add REST client for pushers API with add method for HTTP pushers.
+ * Add the account creation.
+
+Bug fixes:
+ * Reset the image thumbnail when a row is reused.
+ * SYAND-30 Notification should be away when entering a room.
+ * Some images thumbnails were downloaded several times.
+ * Restore the foreground service
+ * The medias cache was not cleared after logging out.
+ * The client crashed when joining #anime:matrix.org.
+ * SYAND-29 Messages in delivery status are not seen
+ * Some user display names were their matrix IDs.
+ * The room name&#x2F; topic were invalid when inviting to a room.
+
+
+&lt;&#x2F;pre&gt;
+&lt;pre&gt;
+Changes in Matrix iOS SDK in 0.3.1 (2015-03-03)
+===============================================
+
+-----
+ SDK
+-----
+Improvements:
+ * Improved push notifications documentation.
+ * MXSession: Slightly randomise reconnection times by up to 3s to prevent all
+   Matrix clients from retrying requests to the homeserver at the same time.
+ * Improved logs
+ 
+Bug fixes:
+ * SYIOS-90 - iOS can receive &amp; display messages multiple times when on bad connections
+ 
+-----------------
+ Matrix Console
+-----------------
+Improvements:
+ * Fixed warnings with 64bits builds.
+ * Room history: Improve scrolling handling when keyboard appears.
+ * Contacts: Prompt user when local contacts tab is selected if constact sync is disabled.
+ 
+Bug fixes:
+ * Fix crash when switching rooms while the event stream is resuming.
+ * SYIOS-69 - On Screen Keyboard can end up hiding the most recent messages in a room.
+ * SYIOS-98 - Crash when attempting to attach image on iPad
+ 
+Changes in Matrix iOS SDK in 0.3.0 (2015-02-23)
+===============================================
+
+-----
+ SDK
+-----
+Breaks:
+ * [MXSession initWithMatrixRestClient: andStore: ] and the onStoreDataReady argument in
+   [MXSession start:] has been removed. The SDK client can now use the asynchronous
+   [MXSession setStore:] method to define a store and getting notified when the SDK can
+   read cached data from it. (SYIOS-62)
+ * MXStore implementations must now implement [MXStore openWithCredentials].
+ * All MXRestClient methods now return MXHTTPOperation objects.
+ 
+Improvements:
+ * Created the MXSession.notificationCenter component: it indicates when an event must be
+   notified to the user according to user&#x27;s push rules settings.
+ * MXFileStore: Improved loading performance by 8x.
+ * Added an option (MXSession.loadPresenceBeforeCompletingSessionStart) to refresh presence
+   data in background when starting a session.
+ * Created MXLogger to redirect NSLog to file and to log crashes or uncaught exception.
+ * MXRestClient: Added [MXRestClient registerFallback].
+ * Logs: Make all NSLog calls follows the same format.
+ 
+Features:
+ * SYIOS-40 - Any HTTP request can fail due to rate-limiting on the server, and need to be retried.
+ * SYIOS-81 - Ability to send messages in the background.
+ 
+Bug fixes:
+ * SYIOS-67 - We should synthesise identicons for users with no avatar.
+ * MXSession: Fixed crash when closing the MXSession before the end of initial Sync.
+&lt;&#x2F;pre&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Introduction to Application Services</title>
+    <published>2015-03-02T00:00:00+00:00</published>
+    <updated>2015-03-02T00:00:00+00:00</updated>
+    <author>
+      <name>Kegan Dougal</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2015/03/02/introduction-to-application-services/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2015/03/02/introduction-to-application-services/</id>
+    <content type="html">&lt;p&gt;&lt;strong&gt;This post has now been edited into a guide - you can find &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;blob&#x2F;master&#x2F;supporting-docs&#x2F;guides&#x2F;2015-08-21-application_services.md&quot;&gt;the source in github&lt;&#x2F;a&gt;, and the &lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;guides&#x2F;application-services&quot;&gt;formatted guide on the matrix.org website&lt;&#x2F;a&gt;!&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Hi everyone. I&#x27;m Kegan, one of the core developers on Matrix. I&#x27;d like to explain a bit more about one of the upcoming features in Matrix: Application Services. This is an entirely new component in the Matrix architecture which gives great power (along with great responsibility!) to the wielder.&lt;&#x2F;p&gt;
+&lt;p&gt;Application services are distinct modules which which sit alongside a home server providing arbitrary extensible functionality decoupled from the home server implementation. Just like the rest of Matrix, they communicate via HTTP using JSON. Application services function in a very similar way to traditional clients, but they are given much more power than a normal client. They can reserve entire namespaces of room aliases and user IDs for their own purposes. They can silently monitor events in rooms, or any events directed at any user ID. This power allows application services to have extremely useful abilities which overall enhance the end user experience.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the main use cases for application services is for protocol bridges. As you may know, we have an IRC bridge bot on matrix.org which resides as a user on #matrix, #matrix-dev, #openwebrtc and #vuc which bridges into freenode. There is nothing special about this bot; it is just treated as a client. However, this limits the things the bot can do. For example, the bot cannot reserve the virtual user IDs it creates, and cannot lazily bridge arbitrary IRC rooms on-the-fly. By using application services, the IRC bot can do both of these things. This would allow any Matrix user to join a room alias which doesn&#x27;t exist: say &lt;code&gt;#irc.freenode.python:matrix.org&lt;&#x2F;code&gt;, which would then tell the application service to create a new Matrix room, make the alias for it, join #python on freenode and bridge into it. Any IRC user on #python would then be provisioned as a virtual user e.g. &lt;code&gt;@irc.freenode.alice:matrix.org&lt;&#x2F;code&gt;. This also allows PMs to be sent directly to &lt;code&gt;@irc.freenode.alice:matrix.org&lt;&#x2F;code&gt;, no matter what channel Alice is on.&lt;&#x2F;p&gt;
+&lt;p&gt;Application services have enormous potential for creating new and exciting ways to transform and enhance the core Matrix protocol. For example, you could aggregate information from multiple rooms into a summary room, or create throwaway virtual user accounts to proxy messages for a fixed user ID on-the-fly. As you may expect, all of this power assumes a high degree of trust between application services and home servers. Only home server admins can allow an application service to link up with their home server, and the application service is in no way federated to other home servers. You can think of application services as additional logic on the home server itself, without messing around with the book-keeping that home servers have to do. This makes adding useful functionality very easy.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The application service (AS) API itself uses webhooks to communicate from the home server to the AS:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Room Alias Query API : The home server hits a URL on your application server to see if a room alias exists.&lt;&#x2F;li&gt;
+&lt;li&gt;User Query API : The home server hits a URL on your application server to see if a user ID exists.&lt;&#x2F;li&gt;
+&lt;li&gt;Push API : The home server hits a URL on your application server to notify you of new events for your users and rooms.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;A very basic application service may want to log all messages in rooms which have an alias starting with &quot;#logged_&quot; (side note: logging won&#x27;t work if these rooms are using end-to-end encryption).&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s an example of a very basic application service using Python (with Flask and Requests) which logs room activity:&lt;&#x2F;p&gt;
+&lt;pre&gt;# app_service.py:
+
+import json, requests  # we will use this later
+from flask import Flask, jsonify, request
+app = Flask(__name__)
+
+@app.route(&quot;&#x2F;transactions&#x2F;&amp;lt;transaction&amp;gt;&quot;, methods=[&quot;PUT&quot;])
+def on_receive_events(transaction):
+    events = request.get_json()[&quot;events&quot;]
+    for event in events:
+        print &quot;User: %s Room: %s&quot; % (event[&quot;user_id&quot;], event[&quot;room_id&quot;])
+        print &quot;Event Type: %s&quot; % event[&quot;type&quot;]
+        print &quot;Content: %s&quot; % event[&quot;content&quot;]
+    return jsonify({&#x27;{&#x27;}{&#x27;}&#x27;})
+
+if __name__ == &quot;__main__&quot;:
+    app.run()
+&lt;&#x2F;pre&gt;
+&lt;p&gt;Set your new application service running on port 5000 with:&lt;&#x2F;p&gt;
+&lt;pre&gt;python app_service.py
+&lt;&#x2F;pre&gt;
+&lt;p&gt;The home server needs to know that the application service exists before it will send requests to it. This is done via a registration YAML file which is specified in Synapse&#x27;s main config file e.g. &lt;code&gt;homeserver.yaml&lt;&#x2F;code&gt;. The server admin needs to add the application service registration configuration file as an entry to this file.&lt;&#x2F;p&gt;
+&lt;pre&gt;# homeserver.yaml
+app_service_config_files:
+  - &quot;&#x2F;path&#x2F;to&#x2F;appservice&#x2F;registration.yaml&quot;
+&lt;&#x2F;pre&gt;
+&lt;p&gt;NB: Note the &quot;-&quot; at the start; this indicates a list element. The registration file &lt;code&gt;registration.yaml&lt;&#x2F;code&gt; should look like:&lt;&#x2F;p&gt;
+&lt;pre&gt;# registration.yaml
+
+# this is the base URL of the application service
+url: &quot;http:&#x2F;&#x2F;localhost:5000&quot;
+
+# This is the token that the AS should use as its access_token when using the Client-Server API
+# This can be anything you want.
+as_token: wfghWEGh3wgWHEf3478sHFWE
+
+# This is the token that the HS will use when sending requests to the AS.
+# This can be anything you want.
+hs_token: ugw8243igya57aaABGFfgeyu
+
+# this is the local part of the desired user ID for this AS (in this case @logging:localhost)
+sender_localpart: logging
+namespaces:
+  users: []
+  rooms: []
+  aliases:
+    - exclusive: false
+      regex: &quot;#logged_.*&quot;
+&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;You will need to restart the home server after editing the config file before it will take effect.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;To test everything is working correctly, go ahead and explicitly create a room with the alias &quot;#logged_test:localhost&quot; and send a message into the room: the HS will relay the message to the AS by PUTing to &#x2F;transactions&#x2F;&amp;lt;tid&amp;gt; and you should see your AS print the event on the terminal. This will monitor any room which has an alias prefix of &quot;#logged_&quot;, but it won&#x27;t lazily create room aliases if they don&#x27;t already exist. This means it will only log messages in the room you created before: #logged_test:localhost. Try joining the room &quot;#logged_test2:localhost&quot; without creating it, and it will fail. Let&#x27;s fix that and add in lazy room creation:&lt;&#x2F;p&gt;
+&lt;pre&gt;@app.route(&quot;&#x2F;rooms&#x2F;&amp;lt;alias&amp;gt;&quot;)
+def query_alias(alias):
+    alias_localpart = alias.split(&quot;:&quot;)[0][1:]
+    requests.post(
+        # NB: &quot;TOKEN&quot; is the as_token referred to in registration.yaml
+        &quot;&lt;a href=&quot;http:&#x2F;&#x2F;localhost:8008&#x2F;_matrix&#x2F;client&#x2F;api&#x2F;v1&#x2F;createRoom?access_token=TOKEN&quot; target=&quot;_blank&quot;&gt;http:&#x2F;&#x2F;localhost:8008&#x2F;_matrix&#x2F;client&#x2F;api&#x2F;v1&#x2F;createRoom?access_token=TOKEN&lt;&#x2F;a&gt;&quot;,
+        json.dumps({&#x27;{&#x27;}
+            &quot;room_alias_name&quot;: alias_localpart
+        {&#x27;}&#x27;}),
+        headers={&#x27;{&#x27;}&quot;Content-Type&quot;:&quot;application&#x2F;json&quot;{&#x27;}&#x27;}
+    )
+    return jsonify({&#x27;{&#x27;}{&#x27;}&#x27;})
+&lt;&#x2F;pre&gt;
+&lt;p&gt;This makes the application service lazily create a room with the requested alias whenever the HS queries the AS for the existence of that alias (when users try to join that room), allowing any room with the alias prefix #logged_ to be sent to the AS. Now try joining the room &quot;#logged_test2:localhost&quot; and it will work as you&#x27;d expect.  You can see that if this were a real bridge, the AS would have checked for the existence of #logged_test2 in the remote network, and then lazily-created it in Matrix as required.&lt;&#x2F;p&gt;
+&lt;p&gt;Application services are powerful components which extend the functionality of home servers, but they are limited. They can only ever function in a &quot;passive&quot; way. For example, you cannot implement an application service which censors swear words in rooms, because there is no way to prevent the event from being sent. Aside from the fact that censoring will not work when using end-to-end encryption, all federated home servers would also need to reject the event in order to stop developing an inconsistent event graph. To &quot;actively&quot; monitor events, another component called a &quot;Policy Server&quot; is required, which is beyond the scope of this post.  Also, Application Services can result in a performance bottleneck, as all events on the homeserver must be ordered and sent to the registered application services.  If you are bridging huge amounts of traffic, you may be better off having your bridge directly talk the Server-Server federation API rather than the simpler Application Service API.&lt;&#x2F;p&gt;
+&lt;p&gt;I hope this post demonstrates how easy it is to create an application service, along with a few ideas of the kinds of things you can do with them. Obvious uses include build protocol bridges, search engines, invisible bots, etc. For more information on the AS HTTP API, check out the new &lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;#application-service-api&quot;&gt;Application Service API&lt;&#x2F;a&gt; section in the spec, or the raw drafts and spec in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;&quot; target=&quot;_blank&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix-doc&#x2F;&lt;&#x2F;a&gt;.  The AS API is not yet frozen, so feedback is very welcome!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+<entry xml:lang="en">
+    <title>Bridging Matrix &amp; SIP via Verto</title>
+    <published>2014-11-30T00:00:00+00:00</published>
+    <updated>2014-11-30T00:00:00+00:00</updated>
+    <author>
+      <name>Matthew Hodgson</name>
+    </author>
+    <link rel="alternate" href="https://tune-your-chat.github.io/blog/2014/11/30/bridging-matrix-sip-via-verto/" type="text/html"/>
+    <id>https://tune-your-chat.github.io/blog/2014/11/30/bridging-matrix-sip-via-verto/</id>
+    <content type="html">&lt;p&gt;One of the final remaining missing bits of Matrix today is specifying and implementing the Application Service (AS) APIs which allow you to easily extend Matrix with custom server-side functionality. The AS APIs should let you perform any arbitrary manipulation on chatroom contents, modulo end-to-end encryption constraints - e.g. machine translation; archiving&#x2F;searching contents; interactive automated services; conferencing; firing push notifications and other hooks; etc. If you really want to look behind the curtain, the bug tracking the development (somewhat out-of-date) is at &lt;a href=&quot;&#x2F;jira&#x2F;browse&#x2F;SPEC-34&quot;&gt;SPEC-34&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;However, the most obvious use case for this is gatewaying Matrix rooms through to existing communication platforms (XMPP, SIP, non-standardised systems) - which is obviously key to Matrix&#x27;s overall goal of defragmenting communication.  And the good news is that even though the AS APIs don&#x27;t yet exist, we can still make good progress here through the existing client-server API.  Anyone who&#x27;s hung around chat systems like IRC should be familiar with the idea of bots - non-human users who participate in chatrooms and but perform arbitrary automated functionality - and you can go quite a long way in using the &#x27;bot&#x27; idiom to add automatic functionality to Matrix.&lt;&#x2F;p&gt;
+&lt;p&gt;[In fact the first AS API we&#x27;ll be adding will probably be simply extending the client-server API with some additional privileges to allow homeserver admins to hook up services to their server which are essentially privileged bots (e.g. ability to autojoin rooms created on that server with high power-level; ability to flag themselves as an invisible &#x27;service bot&#x27;; ability to monitor events from rooms without joining them: useful for read-only services such as sending push notifications, adding search&#x2F;archive functionality; etc).  This should also be familiar to IRC users, as it&#x27;s similar to the model that IRC Services uses.]&lt;&#x2F;p&gt;
+&lt;p&gt;So, we already have a few bots hanging around prototyping out bridging to other systems, which hopefully should evolve into full Application Services (where it makes sense; sometimes a bot is good enough).  For instance, we have the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tm604&#x2F;Matrix-IRCBridge&quot;&gt;Matrix&#x2F;IRC Bridge&lt;&#x2F;a&gt; thanks to tm604 and LeoNerd.  The way this works is simply a bot which joins IRC channels and their Matrix room equivalents; watching the messages on both sides of the bridge and relaying them to the other side, creating virtual users as required.  In future we can be smarter about having the bridge talk on behalf of actual users, or letting actual users control their virtual users, but it&#x27;s good enough as a first cut.&lt;&#x2F;p&gt;
+&lt;p&gt;So for Friday&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;www.voipusersconference.org&#x2F;2014&#x2F;vuc517-matrix-org&#x2F;&quot;&gt;VUC 517&lt;&#x2F;a&gt;, we decided at the last minute (on Tuesday) to make as much of VUC accessible via Matrix as possible.  One side of this was hooking up the &lt;a href=&quot;https:&#x2F;&#x2F;jitsi.org&#x2F;Projects&#x2F;JitsiMeet&quot;&gt;Jitsi Video Bridge&lt;&#x2F;a&gt; to be accessible by talking to the underlying XMPP server - the other side was hooking up via SIP to the &lt;a href=&quot;https:&#x2F;&#x2F;www.zipdx.info&quot;&gt;ZipDX audio bridge&lt;&#x2F;a&gt; that is used for audio-only participants in the conference.  Both of these would be done as Matrix bots - a virtual user that you could voice&#x2F;video call 1:1 over Matrix which would then route your call into VUC appropriately.&lt;&#x2F;p&gt;
+&lt;p&gt;By Thursday, the Jitsi bot got to the point of being able to place calls and see a single video stream (picked at random), but the video uplink wasn&#x27;t getting through and actually selecting the right stream to watch (or viewing multiple streams) wasn&#x27;t in place either.  I&#x27;m sure there&#x27;ll be a similar blogpost once it&#x27;s finished, so I&#x27;m not going to talk about it further here.  Meanwhile, on Thursday night we hacked together a separate bot to jack into the ZipDX bridge via SIP.  Tim Panton&#x27;s suggestion was to use &lt;a href=&quot;http:&#x2F;&#x2F;www.freeswitch.org&quot;&gt;FreeSWITCH&lt;&#x2F;a&gt;&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;freeswitch.org&#x2F;confluence&#x2F;display&#x2F;FREESWITCH&#x2F;mod_verto&quot;&gt;mod_verto&lt;&#x2F;a&gt; for this, and after Anthony Minesalle and Mike Jerris from FreeSWITCH had popped up on &lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;beta&quot;&gt;#matrix:matrix.org&lt;&#x2F;a&gt; on Tuesday to find out what we&#x27;re up to, this seemed like serendipity.&lt;&#x2F;p&gt;
+&lt;p&gt;We hadn&#x27;t played with mod_verto before, although had been pointed at it by someone on IRC shortly after we released Matrix - it&#x27;s a cool project from the FreeSWITCH dev team that exposes a simple JSON-RPC interface for call signalling over websockets, providing a much more suitable way for WebRTC developers to get calls in and out of FreeSWITCH than shoehorning a SIP stack into their browser.  In this respect it&#x27;s quite similar to Matrix, but there are some huge differences:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Verto doesn&#x27;t (yet) do federation - either for message-passing (like XMPP) or history-replication (like Matrix or XMPP FMUCs).  In fact, Matrix fundamentally competes more with JSON-RPC at OSI layer 5 by defining a standardised RESTful API for federated state synchronisation - which so happens to define some datatypes for VoIP signalling; whereas Verto currently seems to be focused solely on the application-layer problem of VoIP signalling.&lt;&#x2F;li&gt;
+	&lt;li&gt;Verto is a generic RPC API with method names like verto.invite, verto.answer, verto.media, verto.bye etc. for handling call signalling.  It&#x27;s obviously readily extensible to any other functionality expressed as an RPC invocation.  The Matrix client-server API however passes around event objects within the context of a room - it&#x27;s message passing rather than RPC.&lt;&#x2F;li&gt;
+	&lt;li&gt;Matrix&#x27;s VoIP events support trickle-ICE; announcing ICE candidates from WebRTC as and when they become available.  This good is for speedy call-setup (you don&#x27;t have to wait for all ICE to complete before setting up the call) and to support call continuity when roaming between different IP networks (in theory).  However, Verto currently requires ICE candidates to be presented monolithically - it hasn&#x27;t made sense to implement trickle-ICE as FreeSWITCH&#x27;s core engine doesn&#x27;t support it yet.&lt;&#x2F;li&gt;
+        &lt;li&gt;Verto looks to be wired to speak JSON-RPC over Websockets, whereas Matrix deliberately uses plain old HTTP as its baseline for maximum simplicity and compatibility in PUTting and GETting JSON events around&lt;&#x2F;li&gt;
+	&lt;li&gt;Verto could be an interoperable standard but the API hasn&#x27;t been documented yet (unless I&#x27;ve totally missed it) - to build the bot we looked at the websockets tab in Chrome&#x27;s network inspector and drew some inferences from the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;e43139ac5e1f337d9a82ee16d9a4f15195120ec3&#x2F;contrib&#x2F;vertobot&#x2F;verto-example.json&quot;&gt;JSON seen in a call&lt;&#x2F;a&gt; placed using the &lt;a href=&quot;https:&#x2F;&#x2F;webrtc.freeswitch.org&#x2F;verto&quot;&gt;FreeSWITCH Verto demo site&lt;&#x2F;a&gt;, which was very intuitive and almost self-documenting.  Meanwhile, the (minimal) doc for Matrix&#x27;s events is up at &lt;a href=&quot;http:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;#voice-over-ip&quot;&gt;http:&#x2F;&#x2F;matrix.org&#x2F;docs&#x2F;spec&#x2F;#voice-over-ip&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Verto has a huge advantage however, in that FreeSWITCH has a mod_verto today, and doesn&#x27;t have a mod_matrix - so one can use mod_verto right now as an easy way to get VoIP calls in and out of FreeSWITCH from the web and bridge them to SIP!  So, when writing a Matrix&amp;lt;-&amp;gt;SIP bridging bot for VUC, Verto turned out to be a really nice way to quickly get something up and running.  The end result is at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;e43139ac5e1f337d9a82ee16d9a4f15195120ec3&#x2F;contrib&#x2F;vertobot&#x2F;bot.pl&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse&#x2F;blob&#x2F;develop&#x2F;contrib&#x2F;vertobot&#x2F;bot.pl&lt;&#x2F;a&gt; - a (precisely!) 300 line perl script built on LeoNerd&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;metacpan.org&#x2F;release&#x2F;Net-Async-Matrix&quot;&gt;Net-Async-Matrix&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;metacpan.org&#x2F;release&#x2F;Net::Async::Protocol::WebSocket&quot;&gt;Net::Async::Protocol::WebSocket&lt;&#x2F;a&gt; which logs into Matrix and routes any 1:1 audio calls it receives through to the defined mod_verto service.  Currently it gleefully hardcodes in the destination extension it calls and the caller-ID, but this could trivially be extended.  It also chokes on SSL WebSockets, so your mod_verto needs to be listening unencrypted on port 8081.
+&lt;p&gt;The task of mapping between Matrix m.call.* VoIP events and Verto verto.* RPC methods was almost entirely trivial (although I hasten to add that Matrix&#x27;s and Verto&#x27;s were developed completely independently - it&#x27;s just that there are only so many ways to express VoIP signalling in JSON!)&lt;&#x2F;p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Matrix&#x27;s m.call.invite is equivalent to the combination of verto.invite + verto.media (but may lack ICE candidates)&lt;&#x2F;li&gt;
+	&lt;li&gt;Matrix&#x27;s m.call.candidates has no direct equivalent, so has to be coalesced and merged into verto.media&lt;&#x2F;li&gt;
+	&lt;li&gt;Matrix&#x27;s m.call.answer is equivalent to verto.answer (but may lack ICE candidates)&lt;&#x2F;li&gt;
+	&lt;li&gt;Matrix&#x27;s m.room.displayname is equivalent to verto.display (assuming I understand verto.display)&lt;&#x2F;li&gt;
+	&lt;li&gt;Matrix&#x27;s m.call.hangup is equivalent to verto.bye&lt;&#x2F;li&gt;
+	&lt;li&gt;…and these are the only verto RPCs we mapped.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+For the demo itself, we obviously needed a FreeSWITCH with mod_verto all up and running to hook into the ZipDX bridge: our friends at &lt;a href=&quot;http:&#x2F;&#x2F;truphone.com&quot;&gt;Truphone&lt;&#x2F;a&gt; were good enough to provide one at zero notice (Thanks James, Andy, Giacomo!), and we were up and running.
+&lt;p&gt;Unfortunately we did hit some problems: Net::Async::Matrix has a few quirks which LeoNerd is working out currently; the bot doesn&#x27;t coalesce the trickle-ICE properly currently causing a race-condition that means ICE setup may fail; Matthew&#x27;s use of IO::Async was a bit buggy; and moreover we didn&#x27;t have time to implement DTMF… which was a bit of a shame as you can only unmute yourself on the ZipDX bridge via DTMF *5!&lt;&#x2F;p&gt;
+&lt;p&gt;But in general, the mini-hackathon was a success and it was great fun to be able to listen into VUC via the bridge and demonstrate the first ever Matrix&amp;lt;-&amp;gt;SIP call!  The bot ran as @vucbot:matrix.org, although is turned off now as there&#x27;s no VUC to listen to, and the FreeSWITCH &amp;amp; bot were only deployed temporarily.  Once the kinks mentioned above are sorted out we&#x27;ll hopefully set it running again permanently!  And hopefully this little bot is an exciting precursor to more robust Matrix bridges and application services in the months to come...&lt;&#x2F;p&gt;
+&lt;p&gt;If you&#x27;re crazy enough to want to try to run the bot yourself, then it should actually be quite simple to get up and running:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt; # grab synapse if you don&#x27;t have it already
+git clone https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;synapse.git synapse-develop
+cd synapse-develop&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;you-ll-need-the-develop-branch-as-we-haven-t-released-a-build-with-vertobot-in-it-yet&quot;&gt;you&#x27;ll need the develop branch, as we haven&#x27;t released a build with vertobot in it yet&lt;&#x2F;h1&gt;
+&lt;p&gt;git checkout develop
+cd contrib&#x2F;vertobot&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;you-ll-need-cpanm-to-install-the-perl-dependencies&quot;&gt;you&#x27;ll need cpanm to install the perl dependencies&lt;&#x2F;h1&gt;
+&lt;p&gt;cpan -i App::cpanminus
+cpanm --installdeps .&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;manually-install-a-develop-version-of-net-async-matrix-as-cpanm-can-t-figure-it-out-seemingly&quot;&gt;manually install a develop version of Net::Async::Matrix as cpanm can&#x27;t figure it out, seemingly&lt;&#x2F;h1&gt;
+&lt;p&gt;cpanm --force PEVANS&#x2F;Net-Async-Matrix-0.11_002&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;you-may-need-to-also-replace-the-croak-for-the-already-have-a-room-with-id-error-with-warn-in-net-async-matrix-if-the-bot-crashes-with-this-error&quot;&gt;(you may need to also replace the &#x27;croak&#x27; for the &quot;Already have a room with ID&quot; error with &#x27;warn&#x27; in Net::Async::Matrix if the bot crashes with this error)&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;create-a-username-account-for-your-bot-on-a-matrix-homeserver-somewhere-at-this-point&quot;&gt;create a username account for your bot on a Matrix homeserver somewhere at this point&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;set-up-a-config-file&quot;&gt;set up a config file&lt;&#x2F;h1&gt;
+&lt;p&gt;cp config.yaml mybot.yaml&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;edit-mybot-yaml-to-taste-at-the-least-you-must-specify-the-login-password-homeserver-for-your-bot&quot;&gt;edit mybot.yaml to taste - at the least you must specify the login &amp;amp; password &amp;amp; homeserver for your bot!&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;run-it&quot;&gt;run it!&lt;&#x2F;h1&gt;
+&lt;p&gt;.&#x2F;bot.pl -c mybot.yaml
+&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, huge thanks to everyone to helped make the VUC bridging escapade work out - Emil Ivov at Jitsi, James Body, Andy Smith and Giacomo Vacca at Truphone, Anthony Minesalle &amp;amp; Mike Jerris &amp;amp; Brian West at FreeSWITCH for writing freeswitch and mod_verto, Tim Panton for the VUC intro and suggestion of mod_verto, Randy Resnick &amp;amp; Michael Graves at VUC itself, and of course the Matrix team for glueing our side of it together!&lt;&#x2F;p&gt;
+&lt;p&gt;Looking forward to lots more ambitious cross-protocol gatewaying and federation in future!&lt;&#x2F;p&gt;
+</content>
+</entry>
+
+    
+</feed>

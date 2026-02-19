@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Public Rooms" />
+    
+    
+    
+    <meta property="og:description" content="Matrix is often use for public online discussions. Being an interoperable
+protocol, it allows people using different providers to talk together online,
+safely.
+" />
+    <meta name="description" content="Matrix is often use for public online discussions. Being an interoperable
+protocol, it allows people using different providers to talk together online,
+safely.
+" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Public Rooms</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/d3.v3.min.js"></script>
+<script src="/js/how-it-works.js"></script>
+<script src="/js/docs.js"></script>
+
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            ">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            current">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+
+
+
+
+
+
+
+<div class="docs-body">
+    <div class="docs-menu">
+        <div class="docs-menu-inner">
+            
+            
+            
+            
+            
+            <div>
+                <input id="Chat basics-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" checked>
+                <label for="Chat basics-submenu-checkbox" class="submenu-title">Chat basics
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;chat_basics&#x2F;matrix-for-im&#x2F;" class="toclink">Matrix for Instant Messaging</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;matrix-for-im&#x2F;#what-is-it" class="toclink">
+                                <li>What is it?</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;matrix-for-im&#x2F;#creating-a-matrix-account" class="toclink">
+                                <li>Creating a Matrix account</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;" class="toclink">Private Group Chat</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;#sending-your-first-messages" class="toclink">
+                                <li>Sending your first messages</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;#inviting-people" class="toclink">
+                                <li>Inviting people</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;private-group-chat&#x2F;#keeping-the-group-safe" class="toclink">
+                                <li>Keeping the group safe</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;" class="toclink">Public Rooms</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;#joining-a-specific-room" class="toclink">
+                                <li>Joining a specific room</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;#browsing-the-public-directory" class="toclink">
+                                <li>Browsing the public directory</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;chat_basics&#x2F;public-rooms&#x2F;#spaces" class="toclink">
+                                <li>Spaces</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Communities-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Communities-submenu-checkbox" class="submenu-title">Communities
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;" class="toclink">Getting Started</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#creating-sharing-a-space" class="toclink">
+                                <li>Creating &amp; sharing a Space</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#adding-rooms" class="toclink">
+                                <li>Adding rooms</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#history-visibility" class="toclink">
+                                <li>History visibility</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#basic-moderation" class="toclink">
+                                <li>Basic Moderation</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#advanced-moderation" class="toclink">
+                                <li>Advanced moderation</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;getting-started&#x2F;#moving-to-another-provider" class="toclink">
+                                <li>Moving to another provider</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;" class="toclink">Community Moderation</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#power-levels" class="toclink">
+                                <li>Power levels</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#your-community-s-security-guard" class="toclink">
+                                <li>Your community&#x27;s security guard</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#getting-moderation-reports" class="toclink">
+                                <li>Getting moderation reports</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;moderation&#x2F;#enforcing-moderation" class="toclink">
+                                <li>Enforcing moderation</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;" class="toclink">Switching Providers</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;#why-switching-providers" class="toclink">
+                                <li>Why switching providers?</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;#picking-a-new-provider" class="toclink">
+                                <li>Picking a new provider</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;communities&#x2F;switching-providers&#x2F;#transferring-ownership" class="toclink">
+                                <li>Transferring ownership</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;communities&#x2F;bridging&#x2F;" class="toclink">Bridging</a>
+                        <ul>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Matrix concepts-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Matrix concepts-submenu-checkbox" class="submenu-title">Matrix concepts
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;" class="toclink">Elements of Matrix</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#homeserver" class="toclink">
+                                <li>Homeserver</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#client" class="toclink">
+                                <li>Client</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#appservice-bridges-and-some-bots" class="toclink">
+                                <li>AppService (bridges and some bots)</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;elements-of-matrix&#x2F;#the-specification" class="toclink">
+                                <li>The Specification</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;matrix-concepts&#x2F;rooms_and_events&#x2F;" class="toclink">Rooms &amp; Events</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;rooms_and_events&#x2F;#local-copies" class="toclink">
+                                <li>Local copies</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;rooms_and_events&#x2F;#administration-privileges" class="toclink">
+                                <li>Administration &amp; privileges</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;" class="toclink">End-to-End Encryption implementation guide</a>
+                        <ul>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;#implementing-end-to-end-encryption-in-matrix-clients" class="toclink">
+                                <li>Implementing End-to-End Encryption in Matrix clients</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;#encrypted-attachments" class="toclink">
+                                <li>Encrypted attachments</li>
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;matrix-concepts&#x2F;end-to-end-encryption&#x2F;#key-sharing" class="toclink">
+                                <li>Key sharing</li>
+                            </a>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Spec guides-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Spec guides-submenu-checkbox" class="submenu-title">Spec guides
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    
+                    
+                    <li>
+                        <a href="&#x2F;docs&#x2F;spec-guides&#x2F;authed-media-servers&#x2F;" class="toclink">Authenticated Media for Servers</a>
+                        <ul>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+                <div class="spacer"></div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <div>
+                <input id="Older documentation-submenu-checkbox" type="checkbox" class="submenu-checkbox"
+                    aria-hidden="true" >
+                <label for="Older documentation-submenu-checkbox" class="submenu-title">Older documentation
+                    <div class="arrow"></div>
+                </label>
+                <ul class="section-submenu-wrap">
+                    
+                    <li>
+                        <a href="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;docs&#x2F;older&#x2F;#all-past-documentation" class="toclink">All past documentation</a>
+                        
+                    </li>
+                    
+                    
+                    </li>
+                </ul>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="docs-content">
+        <article class="content">
+            <header>
+                <h1>Public Rooms</h1>
+                
+                <div class="metadata">
+                    Last updated: <time datetime="2022-10-18"> 2022-10-18</time>
+                </div>
+                
+            </header>
+
+            <p>When you want to join larger public conversations, you have three major options
+at hand:</p>
+<ol>
+<li>Joining a specific room from its address / alias or from a <code>matrix.to</code> link</li>
+<li>Browsing a public directory to find rooms of interest</li>
+<li>Joining a room that was listed in a Space</li>
+</ol>
+<h2 id="joining-a-specific-room">Joining a specific room</h2>
+<p>Someone might have shared a link that starts with <code>matrix.to</code> with you, or you
+might have stumbled upon it on a website. Those links will bring you to the
+public conversation you tried to join after asking you what client you want to
+use.</p>
+<p>Clicking a <code>matrix.to</code> link you will open a new tab in your browser, showing you
+a UI that looks like the following.</p>
+<p><img src="https://tune-your-chat.github.io/docs/chat_basics/public-rooms/matrixto-HS.png" alt="" /></p>
+<p>Click on accept, and you will be redirected to a preview of the room you're
+trying to join, containing its name, address (on the format
+<code>#room-name:example.com</code>), and number of people currently in the room. Below
+this preview is a list of clients you can use to join the room.</p>
+<p><img src="https://tune-your-chat.github.io/docs/chat_basics/public-rooms/matrixto-client-choice.png" alt="" /></p>
+<p>Since this documentation started with Element, let's carry on with it. You will
+be able to seamlessly change to another client when you're more used to Matrix.</p>
+<p>Click on "Continue" below Element. If you have installed Element Desktop, your
+browser may ask you if you want to allow this page to open Element. Click on
+Allow. If you haven't installed Element Desktop, you can either click on
+"Download" to get it, or "Continue in your browser" to carry on with the web
+app.</p>
+<p>Depending on the privacy settings set by the administrators of the room, you may
+or may not be able to see a preview of the conversation.</p>
+<p><img src="https://tune-your-chat.github.io/docs/chat_basics/public-rooms/room-preview.png" alt="" /></p>
+<p>Click on "Join the discussion": you can now participate in the room!</p>
+<p><img src="https://tune-your-chat.github.io/docs/chat_basics/public-rooms/room-participate.png" alt="" /></p>
+<h2 id="browsing-the-public-directory">Browsing the public directory</h2>
+<p>Joining a specific room is handy when you know exactly what you want to discuss
+or where, but sometimes you just want to find a casual place to talk of things
+of interest with people on the Internet.</p>
+<p>Matrix has a built-in directory where people can publish their public rooms for
+others to find them. The directory only shows rooms published on a single
+provider at once. If you have created an account on matrix.org, it's going to
+show you only rooms published on matrix.org's directory.</p>
+<p>To access the directory, click on the <code>+</code> in the left bar, and on "Join public
+room".</p>
+<p><img src="https://tune-your-chat.github.io/docs/chat_basics/public-rooms/directory-menu.png" alt="" /></p>
+<p>It will open a list of all the public rooms published in the directory of your
+provider.</p>
+<p><img src="https://tune-your-chat.github.io/docs/chat_basics/public-rooms/directory-list.png" alt="" /></p>
+<p>The directory can be very large sometimes, and the rooms displayed at the top of
+the list may not be of interest to you. You can type a center of interest to see
+if someone has created a room for it already.</p>
+<p><img src="https://tune-your-chat.github.io/docs/chat_basics/public-rooms/directory-filtered.png" alt="" /></p>
+<p>You can click "Join" to join the room, and voilà, you're in!</p>
+<p><img src="https://tune-your-chat.github.io/docs/chat_basics/public-rooms/directory-joined.png" alt="" /></p>
+<h2 id="spaces">Spaces</h2>
+<p>A Space is a way to group several rooms together. If you are familiar with other
+platforms, Matrix Spaces are similar to Slack Workspaces or Discord Servers. It
+looks like the following.</p>
+<p><img src="https://tune-your-chat.github.io/docs/chat_basics/public-rooms/space_home.png" alt="" /></p>
+<p>To join a Space, you need to either know its address, or click on a matrix.to
+link to that space someone would have shared with you. For example, to join the
+Space of the Matrix Community, you can click on
+<a href="https://matrix.to/#/#community:matrix.org">https://matrix.to/#/#community:matrix.org</a></p>
+<p>The process to join a Space is the same as for <a href="https://tune-your-chat.github.io/docs/chat_basics/public-rooms/#joining-a-specific-room">Joining a specific room</a>.</p>
+<p>Once you have joined a Space, clicking on its icon on the leftmost bar will
+bring you to the index view of the space: you will see all the rooms contained
+in this space, and you will be able to join them by clicking on "Join".</p>
+<p>Note that when you join a Space, you are not automatically joining all the rooms
+inside it.</p>
+<p>Here are a few Spaces you might be interested in:</p>
+<ul>
+<li>Matrix Community <a href="https://matrix.to/#/#community:matrix.org">https://matrix.to/#/#community:matrix.org</a></li>
+<li>Science <a href="https://matrix.to/#/#science-space:matrix.org">https://matrix.to/#/#science-space:matrix.org</a></li>
+<li>Libre Gaming <a href="https://matrix.to/#/#libregaming-games:tchncs.de">https://matrix.to/#/#libregaming-games:tchncs.de</a></li>
+<li>Retro Computing &amp; Gaming <a href="https://matrix.to/#/#retro:nil.im">https://matrix.to/#/#retro:nil.im</a></li>
+<li>Mathematics <a href="https://matrix.to/#/#mathematics-on:matrix.org">https://matrix.to/#/#mathematics-on:matrix.org</a></li>
+</ul>
+
+        </article>
+    </div>
+</div>
+<button id="docs-menu-button">Table of Contents</button>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

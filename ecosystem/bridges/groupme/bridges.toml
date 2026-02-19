@@ -1,0 +1,24 @@
+[[bridges]]
+name = " matrix-puppet-groupme"
+maintainer = "kfatehi"
+summary = """
+This is a Matrix bridge for GroupMe
+"""
+maturity = "Beta"
+language = "TypeScript"
+license = "Apache-2.0"
+repo = "https://gitlab.com/robintown/mx-puppet-groupme"
+room = "#mx-puppet-groupme:townsendandsmith.ml"
+featured = false
+privilege.platform = "User" # Free text
+privilege.matrix = "Homeserver Admin" # Any of Homeserver Admin, Room Admin, None
+[bridges.supports]
+dm = true
+channels = true
+formatted_text = true
+message_media = true
+replies = true
+mentions = true
+reactions = false
+read_receipts = false
+typing_notifications = true

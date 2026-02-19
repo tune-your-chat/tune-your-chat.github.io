@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2023&#x2F;11&#x2F;06&#x2F;future-of-synapse-dendrite&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="The future of Synapse and Dendrite" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - The future of Synapse and Dendrite</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "The future of Synapse and Dendrite",
+    "datePublished": "2023-11-06T00:00+00:00",
+    
+    
+    "image": [
+        "https://matrix.org/blog/img/matrix-logo.png"
+    ],
+    
+    "author": [
+    
+    {
+        "@type": "Person",
+        "name": "Josh Simmons",
+        "url": "https://tune-your-chat.github.io/authors/josh-simmons"
+    }
+    
+    ]
+}
+</script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<article class="content post with-sidebar">
+    <header>
+        <h1>The future of Synapse and Dendrite</h1>
+        <span>
+            06.11.2023 00:00
+            
+            —
+            <a href="/category/general">General</a>
+            
+            —
+            <a
+                href="/author/josh-simmons">Josh Simmons</a>
+            
+        </span>
+        
+    </header>
+    <div class="post-main">
+        <div class="post-content">
+            <p>Last week, Element informed the Foundation that it will be forking <a href="https://github.com/matrix-org/synapse/">Synapse</a> and <a href="https://github.com/matrix-org/dendrite/">Dendrite</a>. We’re sharing this news with you, along with some background, and our thoughts about this development.</p>
+<p>We’ll do our best to answer your questions, address concerns, and find a path forward together.</p>
+<span id="continue-reading"></span><h2 id="background">Background</h2>
+<p>Long time community members may know that Synapse and Dendrite predate the Foundation. Indeed, they even predate Element, dating back to 2014 and 2017. The creators of Matrix founded Element, and invested in the development of the projects. When the Foundation formed, Element transferred the projects and copyrights to the Foundation. While individual contributors retained their copyright, Element continued to assign to the Foundation. Both projects are under the permissive <a href="https://opensource.org/license/apache-2-0/">ALv2</a> license, and assigned to the Foundation since 2019 by Element. Future contributions to Element’s forks will use the reciprocal <a href="https://opensource.org/license/agpl-v3/">AGPLv3</a> license, with a <a href="https://en.wikipedia.org/wiki/Contributor_License_Agreement">Contributor License Agreement</a> (CLA).</p>
+<p>Synapse and Dendrite have been under the auspices of the Foundation since 2019. Our role has been to hold the assets and provide some infrastructure. We’ve seen Matrix adoption and use of Synapse and Dendrite skyrocket over the past few years. Sadly, the same isn’t true of the contributor ecosystem for those projects. The vast majority of maintenance and development on these projects comes from folks working at Element.</p>
+<p>This context doesn’t make the changes easier, but it does illuminate how we got here. For more background and information on the projects, we recommend you <a href="https://element.io/blog/element-to-adopt-agplv3/">read Element’s announcement</a>.</p>
+<h2 id="what-s-next">What's next?</h2>
+<p>That was our first question too! This is a transition we want to navigate with care — how we proceed hinges on both what the Foundation can do and what it should do, grounded in <a href="https://matrix.org/about/#mission">our mission</a>.</p>
+<p>As it stands, the Foundation does not plan to begin funding active development of the current Synapse and Dendrite projects. Even if it made sense for us to do so, we don't have the resources.</p>
+<p>With that said, the Foundation has a role in funding research and development of open source software for the Matrix ecosystem. We figure that the most effective way to fulfill that role is to address gaps. With that principle in mind, we guide our scarce resources to things like Trust &amp; Safety, and offering community infrastructure. We'd decline to compete with an actively maintained open source project.</p>
+<p>We expect these forks of Synapse and Dendrite will be widely adopted, and we wish them well!</p>
+<p>Beyond that, we don’t have all the answers yet. This is new territory we will need to navigate as a community. Matrix is bigger than any one or two open source projects – it’s an <a href="https://spec.matrix.org/latest/">open protocol</a> and <a href="https://matrix.org/ecosystem/servers/">a whole ecosystem</a>.</p>
+<h2 id="what-does-this-mean-for-you">What does this mean for you?</h2>
+<p>For most people, including the 115 million plus Matrix users on the open federation, there will be no material changes.</p>
+<p>People who run a Synapse or Dendrite server shouldn’t notice a big change. They’ll need to get their upstream releases from Element’s repositories going forward.</p>
+<p>You are welcome to fork Synapse and Dendrite yourself. Indeed, you’ll also be able to fork Element’s versions, as they remain open source under the new license. Note that if you fork the Foundation versions under the ALv2 license, they won’t receive security updates.</p>
+<p>Of course, folks building on any of these open source projects will have the rights and responsibilities that come with their licenses.</p>
+<p>We’ll share more info as we have it here on the blog, on our social channels, and in the relevant rooms. We are listening, and hope you’ll join us in conversation in the coming months as we work through this.</p>
+
+            <div class="callout">
+                <div class="left-col">
+                    <h2>The Foundation needs you</h2>
+                </div>
+                <div class="right-col">
+                    <p>
+                        The Matrix.org Foundation is a non-profit and only relies
+                        on donations to operate. Its core mission is to maintain
+                        the Matrix Specification, but it does much more than that.
+                    </p>
+                    <p>
+                        It maintains the matrix.org homeserver and hosts several
+                        bridges for free. It fights for our collective rights to
+                        digital privacy and dignity.
+                    </p>
+                    <a class="call-to-action plausible-event-name=BlogPostCtaSupportUs" href="/support">Support us</a>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Post Contents</h3>
+
+            <ul style="list-style: none; padding-left: 0px;">
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/11/06/future-of-synapse-dendrite/#background">Background</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/11/06/future-of-synapse-dendrite/#what-s-next">What&#x27;s next?</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2023/11/06/future-of-synapse-dendrite/#what-does-this-mean-for-you">What does this mean for you?</a>
+                    
+                </li>
+                
+            </ul>
+        </aside>
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>

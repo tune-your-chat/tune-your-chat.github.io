@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="twitter:widgets:csp" content="on" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matrixdotorg" />
+    <meta name="twitter:creator" content="@matrixdotorg" />
+    
+    <meta property="og:url" content="https:&#x2F;&#x2F;tune-your-chat.github.io&#x2F;blog&#x2F;2022&#x2F;04&#x2F;19&#x2F;synapse-1-57-released&#x2F;" />
+    
+    
+    
+    
+    <meta property="og:title" content="Synapse 1.57 released" />
+    
+    
+    
+    <meta property="og:description" content="Matrix, the open protocol for secure decentralised communications" />
+    <meta name="description" content="Matrix, the open protocol for secure decentralised communications" />
+    
+    <meta property="og:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    <meta name="twitter:image" content="https://matrix.org/blog/img/matrix-logo.png" />
+    
+    <title>Matrix.org - Synapse 1.57 released</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href=https://tune-your-chat.github.io/style.css?h=0d1a23c06b707a231261 />
+    <script async src=https://tune-your-chat.github.io/js/components.js?h=ae3cb894d00e16ef08be></script>
+    <script defer data-domain="matrix.org" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Synapse 1.57 released",
+    "datePublished": "2022-04-19T16:28+00:00",
+    
+    
+    "image": [
+        "https://matrix.org/blog/img/matrix-logo.png"
+    ],
+    
+    "author": [
+    
+    {
+        "@type": "Person",
+        "name": "Brendan Abolivier",
+        "url": "https://tune-your-chat.github.io/authors/brendan-abolivier"
+    }
+    
+    ]
+}
+</script>
+</head>
+
+<body>
+    
+    <header class="site-header">
+    <a href="/" class="brand">
+        <img src="/images/matrix-logo-white.svg" alt="Matrix logo">
+    </a>
+    <input id="site-header-dropdown-checkbox" type="checkbox" class="dropdown-checkbox" aria-hidden="true">
+    <label for="site-header-dropdown-checkbox" class="dropdown-button">&#xe602;</label>
+    <label for="site-header-dropdown-checkbox" class="page-overlay"></label>
+    <nav>
+        
+        
+        <a href="https:&#x2F;&#x2F;spec.matrix.org" class="
+            ">
+            Spec
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="foundation-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="foundation-submenu-checkbox" class="submenu-title">Foundation <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;foundation&#x2F;about&#x2F;">About Matrix</a>
+                    
+                    <a href="&#x2F;foundation&#x2F;governing-board-elections&#x2F;">Governing Board Elections 2024</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;blog&#x2F;" class="
+            current">
+            Blog
+        </a>
+        
+        
+        
+        <a href="&#x2F;docs&#x2F;" class="
+            ">
+            Docs
+        </a>
+        
+        
+        
+        
+        
+        <div class="section-wrap">
+            <input id="ecosystem-submenu-checkbox" type="checkbox" class="submenu-checkbox" aria-hidden="true"
+                >
+            <label for="ecosystem-submenu-checkbox" class="submenu-title">Ecosystem <div class="arrow">
+                </div></label>
+
+            <div class="section-submenu-wrap">
+                <div class="section-submenu">
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;clients&#x2F;">Clients</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;bridges&#x2F;">Bridges</a>
+                    
+                    
+                    <a href="&#x2F;ecosystem&#x2F;servers&#x2F;">Servers</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;tune&#x2F;">Tune Your Chat</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;integrations&#x2F;">Integrations</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;sdks&#x2F;">SDKs</a>
+                    
+                    <a href="&#x2F;ecosystem&#x2F;hosting&#x2F;">Hosting</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="&#x2F;support" class="
+            ">
+            Donate
+        </a>
+        
+        
+        
+        <a href="&#x2F;try-matrix&#x2F;" class="primary
+            ">
+            Try Matrix
+        </a>
+        
+        
+    </nav>
+</header>
+
+
+    <main>
+        
+<article class="content post with-sidebar">
+    <header>
+        <h1>Synapse 1.57 released</h1>
+        <span>
+            19.04.2022 16:28
+            
+            —
+            <a href="/category/releases">Releases</a>
+            
+            —
+            <a
+                href="/author/brendan-abolivier">Brendan Abolivier</a>
+            
+        </span>
+        
+    </header>
+    <div class="post-main">
+        <div class="post-content">
+            <p>Hey everyone! Guess what? <a href="https://github.com/matrix-org/synapse/releases/tag/v1.57.0">Synapse
+1.57</a> has just been
+released! Let's see what's new in this version!</p>
+<h2 id="application-services">Application services</h2>
+<p>Application services are piece of software that have privileged access to some
+of the homeserver's features. For example, they can create and manage multiple
+users at the same time, which is especially useful for bridges.</p>
+<p>This release of Synapse changes the way Synapse manually manages transaction
+identifiers when talking to application services (a transaction being a group of
+events the application service should know about). While this doesn't have much
+impact on the everyday life of a server administrator (besides fixing a
+<a href="https://github.com/matrix-org/synapse/pull/12209">bug</a> and paving the way for
+future performance improvements), this change means server admins should take
+extra care when updating Synapse.</p>
+<p>More specifically, if you are running a dedicated Synapse worker for handling
+traffic related to application services, this worker <strong>must</strong> be stopped when
+upgrading the main Synapse process to ensure the update is performed safely. See
+the <a href="https://matrix-org.github.io/synapse/v1.57/upgrade#changes-to-database-schema-for-application-services">upgrade
+notes</a>
+for more information about this change, and instructions on recovering from an
+incorrect upgrade.</p>
+<p>This release of Synapse also continues work on bringing end-to-end capabilities
+to application services, which I was already telling you about in the <a href="https://matrix.org/blog/2022/01/18/synapse-1-50-released">Synapse
+1.50 release blog
+post</a>. More
+specifically, Synapse now supports sending device list updates to applications
+services, as part of implementing
+<a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3202">MSC3202</a>. This
+is still very experimental and definitely not production ready, but also very
+exciting!</p>
+<h2 id="improvements-to-the-module-system">Improvements to the module system</h2>
+<p>Modules allow third-party developers to expand Synapse with extra features that
+wouldn't necessarily fit into the Matrix specification and/or ecosystem. In the
+past release of Synapse, we have been improving this system to add more
+functionality to it, and this one is no exception!</p>
+<p>Synapse modules can now implement new callbacks to <a href="https://matrix-org.github.io/synapse/v1.57/modules/account_data_callbacks.html#on_account_data_updated">react to account data
+updates</a>,
+as well as to <a href="https://matrix-org.github.io/synapse/v1.57/modules/third_party_rules_callbacks.html#on_threepid_bind">react to new 3PID (email address, phone number)
+associations</a>.
+On the latter, note that this callback will only be called after a 3PID has been
+validated on the homeserver, and does not trigger when the validation happens on
+an identity server (e.g. when publishing a 3PID so that other users can look it
+up).</p>
+<p>The <code>ModuleApi</code> (which is the Python class enabling modules to interact with
+Synapse) has also been updated to allow module to read and write global account
+data. This can be done by using the new
+<a href="https://github.com/matrix-org/synapse/blob/e31d06f6f0923d001736f5e6e08616293bd4b120/synapse/module_api/__init__.py#L1401-L1464"><code>AccountDataManager</code></a>
+class, which can be accessed as <code>api.account_data_manager</code> (where <code>api</code> is an
+instance of <code>ModuleApi</code>).</p>
+<p>The module API has also been updated with a <a href="https://github.com/matrix-org/synapse/blob/e31d06f6f0923d001736f5e6e08616293bd4b120/synapse/module_api/__init__.py#L543-L552">new
+method</a>,
+to allow modules to promote an existing user to server administrator (or demote
+a server administrator to a normal user). This follows up on an improvement
+introduced in <a href="https://matrix.org/blog/2022/04/05/synapse-1-56-released">Synapse
+1.56</a> allowing modules
+to promote users to server administrators when registering them.</p>
+<h2 id="everything-else">Everything else</h2>
+<p>This release also includes a performance improvement for workers handling
+<code>/sync</code> requests. While this change makes starting this kind of workers slightly
+more heavy performance-wise, it aims at improving the load associated with the
+first <code>/sync</code> requests hitting it right after starting. See <a href="https://github.com/matrix-org/synapse/pull/12367#issuecomment-1088574192">this
+comment</a>
+for more details.</p>
+<p>Synapse 1.57 also now includes bundled aggregations in message search results by
+default, as
+<a href="https://github.com/matrix-org/matrix-spec-proposals/pull/3666">MSC3666</a> has
+been accepted and has finished its final comment period.</p>
+<p>See the <a href="https://github.com/matrix-org/synapse/releases/tag/v1.57.0">full
+changelog</a> for a
+complete list of changes in this release. Also please have a look at the
+<a href="https://matrix-org.github.io/synapse/v1.57/upgrade#upgrading-to-v1570">upgrade
+notes</a>
+for this version.</p>
+<p>Synapse is a Free and Open Source Software project, and we'd like to extend our
+thanks to everyone who contributed to this release, including (in no particular
+order) <a href="https://www.beeper.com/">Beeper</a>, <a href="https://github.com/dklimpel">Dirk
+Klimpel</a>, <a href="https://famedly.com/">Famedly</a> and
+<a href="https://github.com/watson28">Jorge Florian</a>.</p>
+
+            <div class="callout">
+                <div class="left-col">
+                    <h2>The Foundation needs you</h2>
+                </div>
+                <div class="right-col">
+                    <p>
+                        The Matrix.org Foundation is a non-profit and only relies
+                        on donations to operate. Its core mission is to maintain
+                        the Matrix Specification, but it does much more than that.
+                    </p>
+                    <p>
+                        It maintains the matrix.org homeserver and hosts several
+                        bridges for free. It fights for our collective rights to
+                        digital privacy and dignity.
+                    </p>
+                    <a class="call-to-action plausible-event-name=BlogPostCtaSupportUs" href="/support">Support us</a>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <h3>Post Contents</h3>
+
+            <ul style="list-style: none; padding-left: 0px;">
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2022/04/19/synapse-1-57-released/#application-services">Application services</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2022/04/19/synapse-1-57-released/#improvements-to-the-module-system">Improvements to the module system</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://tune-your-chat.github.io/blog/2022/04/19/synapse-1-57-released/#everything-else">Everything else</a>
+                    
+                </li>
+                
+            </ul>
+        </aside>
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="internal-links">
+        
+        <a href="&#x2F;support">Donate</a>
+        
+        <a href="https:&#x2F;&#x2F;shop.matrix.org">Shop</a>
+        
+        <a href="&#x2F;security-disclosure-policy">Security Disclosure Policy</a>
+        
+        <a href="&#x2F;security-hall-of-fame">Security Hall of Fame</a>
+        
+        <a href="&#x2F;legal&#x2F;code-of-conduct">Code of Conduct</a>
+        
+        <a href="&#x2F;legal">Legal</a>
+        
+        <a href="&#x2F;contact">Contact</a>
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org&#x2F;matrix.org&#x2F;">Site Source</a>
+        
+    </div>
+    <div class="external-links">
+        <div>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;matrix-org" rel="me"><img src="/assets/github.svg" alt="GitHub"></a>
+            
+            <a href="https:&#x2F;&#x2F;gitlab.matrix.org&#x2F;" rel="me"><img src="/assets/gitlab.svg" alt="GitLab"></a>
+            
+            <a href="https:&#x2F;&#x2F;mastodon.matrix.org&#x2F;@matrix" rel="me"><img src="/assets/mastodon.svg" alt="Mastodon"></a>
+            
+            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;matrixdotorg" rel="me"><img src="/assets/twitter.svg" alt="Twitter"></a>
+            
+            <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVFkW-chclhuyYRbmmfwt6w" rel="me"><img src="/assets/youtube.svg" alt="YouTube"></a>
+            
+            <a href="&#x2F;atom.xml" rel="me"><img src="/assets/rss.svg" alt="RSS"></a>
+            
+        </div>
+    </div>
+    <p><a href="/legal/copyright-notice">Copyright Notice</a></p>
+</footer>
+
+</body>
+
+</html>
